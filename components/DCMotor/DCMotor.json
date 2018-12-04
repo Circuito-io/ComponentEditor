@@ -3,7 +3,61 @@
         {
             "name": "DCMotor",
             "symbol": {
-                "ref": "circuito_DCMotor.svg"
+                "ref": "https://ucarecdn.com/b1a16f6a-6e4e-4be6-b719-4c69ebc90785/"
+            },
+            "displayName": "Hobby Motor - Gear",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/74ff60bb-b501-4d77-9430-89938efebb38/",
+                    "link": "https://octopart.com/rob-11696-sparkfun-75277588",
+                    "price": "1.95",
+                    "SKU": "1568-1660-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "DCMotorA",
+            "symbol": {
+                "ref": "https://ucarecdn.com/b1a16f6a-6e4e-4be6-b719-4c69ebc90785/"
+            },
+            "displayName": "Standard Gearmotor - 107 RPM (12V)",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": null,
+                    "link": "https://octopart.com/108990017-seeed+studio-65875788",
+                    "price": "10.15",
+                    "SKU": "1597-1210-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "DCMotorB",
+            "symbol": {
+                "ref": "https://ucarecdn.com/b1a16f6a-6e4e-4be6-b719-4c69ebc90785/"
             },
             "displayName": "Micro Gearmotor - 90 RPM (6-12V)",
             "category": [
@@ -13,7 +67,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "12285.png",
+                    "image": "https://ucarecdn.com/a481ff10-fad3-4903-9d08-724706894758/",
                     "link": "https://octopart.com/rob-12285-sparkfun-66533280",
                     "price": "12.95",
                     "SKU": "1568-1161-ND"

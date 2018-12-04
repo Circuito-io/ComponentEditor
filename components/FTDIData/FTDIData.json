@@ -1,9 +1,36 @@
 {
     "Parts": [
         {
-            "name": "FTDI_DATA",
+            "name": "FTDI3.3v",
             "symbol": {
-                "ref": "circuito_FTDI_Data.svg"
+                "ref": "https://ucarecdn.com/d2dda6a5-db06-4191-8e3e-65db92544d53/"
+            },
+            "displayName": "SparkFun FTDI Basic Breakout - 3.3V",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/3472b491-85d1-486c-8b90-90fd3e5756e5/",
+                    "link": "https://octopart.com/dev-09873-sparkfun-59720087",
+                    "price": "14.95",
+                    "SKU": "1568-1104-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "FTDI5v",
+            "symbol": {
+                "ref": "https://ucarecdn.com/d2dda6a5-db06-4191-8e3e-65db92544d53/"
             },
             "displayName": "SparkFun FTDI Basic Breakout - 5V",
             "category": [
@@ -13,7 +40,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "FTDI5v.png",
+                    "image": "https://ucarecdn.com/420198a8-7146-4932-8fd4-def7dbe66222/",
                     "link": "https://octopart.com/dev-09716-sparkfun-59720086",
                     "price": "14.95",
                     "SKU": "1568-1103-ND"

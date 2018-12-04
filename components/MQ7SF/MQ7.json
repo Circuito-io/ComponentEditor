@@ -3,7 +3,7 @@
         {
             "name": "MQ7SF",
             "symbol": {
-                "ref": "circuito_Gas Sensor Breakout.svg"
+                "ref": "https://ucarecdn.com/5cae5b03-37bc-4c9a-8c88-533219dfe525/"
             },
             "displayName": "Carbon Monoxide Sensor - MQ-7",
             "category": [
@@ -13,7 +13,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "9403.png",
+                    "image": "https://ucarecdn.com/6ca3304f-d5d0-457e-8961-0cd74ee98e9b/",
                     "link": "https://octopart.com/fit0227-dfrobot-77801145?r=sp&s=U5-MXUoKSnmDEo1dPNoYug",
                     "price": "5.99",
                     "SKU": "605-00007-ND"
@@ -31,6 +31,30 @@
                 "onBreadboard": true,
                 "row": 3,
                 "rotation": 0
+            }
+        },
+        {
+            "name": "MQ7_breakout_board",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "Gas Sensor Breakout Board",
+            "category": [
+                "support"
+            ],
+            "desc": "This breakout board help connect the MQ sensors to a breaboard.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/7b3f879a-e713-48cd-9978-9e8ed01347b2/",
+                    "link": "https://octopart.com/bob-08891-sparkfun-22107481",
+                    "price": "0.95",
+                    "SKU": "1568-1378-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

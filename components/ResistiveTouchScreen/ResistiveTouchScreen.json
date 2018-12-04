@@ -3,7 +3,7 @@
         {
             "name": "ResistiveTouchScreen",
             "symbol": {
-                "ref": "circuito_ResistiveTouch.svg"
+                "ref": "https://ucarecdn.com/2bbc0069-e83f-401d-b399-5f1d049ba81d/"
             },
             "displayName": "Resistive Touch screen - 3.7'' Diagonal",
             "category": [
@@ -13,7 +13,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "276649.png",
+                    "image": "https://ucarecdn.com/4576e17c-b845-444e-9c60-e4aaa434b65a/",
                     "link": "https://octopart.com/333-adafruit+industries-32978529",
                     "price": "5.95",
                     "SKU": "1528-1221-ND"
@@ -25,6 +25,30 @@
             },
             "placing": {
                 "onBreadboard": true
+            }
+        },
+        {
+            "name": "ResistiveTouchScreenController",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "The STMPE610 is a Resistive Touch Screen Controller, it allow more elegant interface for a Resistive Touch Screen over I2C and SPI.",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/09f1ef64-9224-42ce-b81e-0b4b0ad25bae/",
+                    "link": "https://octopart.com/1571-adafruit+industries-53099531",
+                    "price": "9.95",
+                    "SKU": "1528-2007-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

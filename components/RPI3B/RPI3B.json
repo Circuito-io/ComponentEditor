@@ -3,7 +3,7 @@
         {
             "name": "RPI3B",
             "symbol": {
-                "ref": "circuito_Raspberry_Pi_3B.svg"
+                "ref": "https://ucarecdn.com/bc516b50-5f13-4999-8939-42dd1f94f2b5/"
             },
             "displayName": "Raspberry Pi 3 - Model B - ARMv8 with 1G RAM",
             "category": [
@@ -13,7 +13,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "200000.png",
+                    "image": "https://ucarecdn.com/d427ba67-2d67-43d8-898c-7f9228df4224/",
                     "link": "https://octopart.com/3055-raspberry+pi-76358699?r=sp&s=hCwoQ7OBThGFf7U2yvgtMg",
                     "price": "40",
                     "SKU": "1690-1000-ND"
@@ -25,6 +25,30 @@
             },
             "placing": {
                 "onBreadboard": false
+            }
+        },
+        {
+            "name": "RPI3B_SDCARD",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "microSD Card and SD Card Adapter (preloaded with NOOBS)",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/d427ba67-2d67-43d8-898c-7f9228df4224/",
+                    "link": "https://octopart.com/raspberry+pi+noobs+16gb-raspberry+pi-74207920",
+                    "price": "15.03",
+                    "SKU": "1690-1002-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

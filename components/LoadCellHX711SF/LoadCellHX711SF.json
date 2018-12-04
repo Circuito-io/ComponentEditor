@@ -3,7 +3,7 @@
         {
             "name": "LoadCellHX711SF",
             "symbol": {
-                "ref": "circuito_SparkFun Load Cell Amplifier - HX711.svg"
+                "ref": "https://ucarecdn.com/b5626739-28cc-4d13-a9fb-eda7664f92cb/"
             },
             "displayName": "SparkFun HX711 - Load Cell Amplifier",
             "category": [
@@ -13,7 +13,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "13879.png",
+                    "image": "https://ucarecdn.com/1c3a0763-2246-4cb2-95ed-03066e24c810/",
                     "link": "https://octopart.com/sen-13879-sparkfun-75533681",
                     "price": "9.95",
                     "SKU": "1568-1436-ND"
@@ -29,6 +29,30 @@
             ],
             "placing": {
                 "onBreadboard": true
+            }
+        },
+        {
+            "name": "LoadCell",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "Load Cell Bar",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/eb684f23-2092-4ed3-a96c-e964da91f73e/",
+                    "link": "https://octopart.com/114990100-seeed+studio-65875897",
+                    "price": "10.15",
+                    "SKU": "1597-1482-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

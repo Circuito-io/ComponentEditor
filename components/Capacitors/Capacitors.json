@@ -1,9 +1,90 @@
 {
     "Parts": [
         {
-            "name": "CapacitorElectro",
+            "name": "CapElectro470uF",
             "symbol": {
-                "ref": "circuito_ElectrolyticCapacitors-470uF25V.svg"
+                "ref": "https://ucarecdn.com/4306a1a0-79ed-4d50-84cb-4b8cf6a900b2/"
+            },
+            "displayName": "Electrolytic Capacitors - 470uF/25V",
+            "category": [
+                "support"
+            ],
+            "desc": "A capacitor is a passive two-terminal electrical component that stores electrical energy.Capacitors are widely used in electronic circuits for blocking direct current while allowing alternating current to pass.In analog filter networks, they smooth the output of power supplies. In resonant circuits they tune radios to particular frequencies. In electric power transmission systems, they stabilize voltage and power flow.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/4cb55cee-2e5c-4667-bb83-b1ab96afa29e/",
+                    "link": "https://octopart.com/upw1e471mpd-nichicon-202833",
+                    "price": "0.44",
+                    "SKU": "493-1826-ND"
+                }
+            ],
+            "info": {
+                "setup": "The polarity of the Electrolytic capacitor matters. The leg closer to light blue strip on the capacitor is the negative pole. Make sure you place it right.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "CapElectro100uF",
+            "symbol": {
+                "ref": "https://ucarecdn.com/4306a1a0-79ed-4d50-84cb-4b8cf6a900b2/"
+            },
+            "displayName": "Electrolytic Decoupling Capacitors - 100uF/25V",
+            "category": [
+                "support"
+            ],
+            "desc": "A capacitor is a passive two-terminal electrical component that stores electrical energy.Capacitors are widely used in electronic circuits for blocking direct current while allowing alternating current to pass.In analog filter networks, they smooth the output of power supplies. In resonant circuits they tune radios to particular frequencies. In electric power transmission systems, they stabilize voltage and power flow.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/ec42b999-ae11-43dc-a393-0119dddf0f58/",
+                    "link": "https://octopart.com/uvz1h101mpd1td-nichicon-12792153",
+                    "price": "0.33",
+                    "SKU": "493-13464-1-ND"
+                }
+            ],
+            "info": {
+                "setup": "The polarity of the Electrolytic capacitor matters. The leg closer to light blue strip on the capacitor is the negative pole. Make sure you place it right.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "CapElectro10uF",
+            "symbol": {
+                "ref": "https://ucarecdn.com/4306a1a0-79ed-4d50-84cb-4b8cf6a900b2/"
+            },
+            "displayName": "Electrolytic Decoupling Capacitors - 10uF/25V",
+            "category": [
+                "support"
+            ],
+            "desc": "A capacitor is a passive two-terminal electrical component that stores electrical energy.Capacitors are widely used in electronic circuits for blocking direct current while allowing alternating current to pass.In analog filter networks, they smooth the output of power supplies. In resonant circuits they tune radios to particular frequencies. In electric power transmission systems, they stabilize voltage and power flow.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/56c3ef89-123f-475c-b5fe-f784fc8a19d6/",
+                    "link": "https://octopart.com/upw1e100mdd1td-nichicon-12791605",
+                    "price": "0.27",
+                    "SKU": "493-11346-1-ND"
+                }
+            ],
+            "info": {
+                "setup": "The polarity of the Electrolytic capacitor matters. The leg closer to light blue strip on the capacitor is the negative pole. Make sure you place it right.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "CapElectro1uF",
+            "symbol": {
+                "ref": "https://ucarecdn.com/4306a1a0-79ed-4d50-84cb-4b8cf6a900b2/"
             },
             "displayName": "Electrolytic Capacitor - 1uF/50V",
             "category": [
@@ -13,7 +94,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "CapElectro1uF.png",
+                    "image": "https://ucarecdn.com/1a7fc22c-419b-4ec7-9ea9-421407960519/",
                     "link": "https://octopart.com/uvk1h010mdd1td-nichicon-30498148",
                     "price": "0.28",
                     "SKU": "493-12567-1-ND"
@@ -28,9 +109,9 @@
             }
         },
         {
-            "name": "CapacitorCeramic",
+            "name": "CapCeramic100nF",
             "symbol": {
-                "ref": "circuito_CapacitorCeramic100nF.svg"
+                "ref": "https://ucarecdn.com/574d54a5-dd4b-4d49-bb51-057cec1dbfb1/"
             },
             "displayName": "Capacitor Ceramic 100nF",
             "category": [
@@ -40,7 +121,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "CapCeramic100nF.png",
+                    "image": "https://ucarecdn.com/405057aa-db6d-45f7-b055-bb12c65d94be/",
                     "link": "https://octopart.com/rder72j104k4m1h03a-murata-38817136",
                     "price": "0.64",
                     "SKU": "490-9258-1-ND"
@@ -52,6 +133,30 @@
             },
             "placing": {
                 "onBreadboard": false
+            }
+        },
+        {
+            "name": "CapCeramic22pF",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "Capacitor Ceramic 22pF",
+            "category": [
+                "support"
+            ],
+            "desc": "A capacitor is a passive two-terminal electrical component that stores electrical energy.Capacitors are widely used in electronic circuits for blocking direct current while allowing alternating current to pass.In analog filter networks, they smooth the output of power supplies. In resonant circuits they tune radios to particular frequencies. In electric power transmission systems, they stabilize voltage and power flow.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/405057aa-db6d-45f7-b055-bb12c65d94be/",
+                    "link": "https://octopart.com/k220j15c0gf5tl2-vishay-39474477?r=sp&s=qW9ehKTxRYeqvM76cednZg",
+                    "price": "0.26",
+                    "SKU": "BC1005CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

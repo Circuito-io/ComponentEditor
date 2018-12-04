@@ -1,15 +1,15 @@
 {
     "Parts": [
         {
-            "name": "USBPowerMiniWithFTDI",
+            "name": "FTDI5v",
             "bomAux": [
                 "FTDI3.3v"
             ]
         },
         {
-            "name": "PowerSupply12v",
+            "name": "PowerSupply12v2A",
             "symbol": {
-                "ref": "circuito_barrel_jack_male.svg"
+                "ref": "https://ucarecdn.com/70986fdb-62b7-4377-af30-f01cdcb4dfbd/"
             },
             "displayName": "Wall Adapter Power Supply - 12VDC 2A",
             "category": [
@@ -19,7 +19,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "9442.png",
+                    "image": "https://ucarecdn.com/013471ed-4c15-4eb4-8068-c784f2d565dc/",
                     "link": "https://octopart.com/psac24a-120l6-phihong-61942151",
                     "price": "15.77",
                     "SKU": "993-1342-ND"
@@ -34,9 +34,9 @@
             }
         },
         {
-            "name": "USBPowerB",
+            "name": "USBCableAB",
             "symbol": {
-                "ref": "circuito_USB type B cable.svg"
+                "ref": "https://ucarecdn.com/fd44e4f7-ef9f-43f6-bd0a-fdf87679c429/"
             },
             "displayName": "USB Cable A to B",
             "category": [
@@ -46,7 +46,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "512.png",
+                    "image": "https://ucarecdn.com/1ae15821-74c5-41ef-a53e-bb963f038a9f/",
                     "link": "https://octopart.com/3021007-06-qualtek-1434101",
                     "price": "3.26",
                     "SKU": "Q364-ND"
@@ -61,9 +61,36 @@
             }
         },
         {
-            "name": "USBPowerMicro",
+            "name": "MicroUsbCable",
             "symbol": {
-                "ref": "circuito_USB micro cable.svg"
+                "ref": "https://ucarecdn.com/788ca63c-7d17-459f-a6ab-11efd1974d46/"
+            },
+            "displayName": "USB micro-B Cable - 6 Foot",
+            "category": [
+                "support"
+            ],
+            "desc": "A standard Micro USB cable.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/08b7e38d-e6f1-435d-8c9b-a8200807968d/",
+                    "link": "https://octopart.com/3025013-06-qualtek-30541311",
+                    "price": "2.98",
+                    "SKU": "Q855-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "PowerSupply5vUSBMicro",
+            "symbol": {
+                "ref": "https://ucarecdn.com/788ca63c-7d17-459f-a6ab-11efd1974d46/"
             },
             "displayName": "Wall Power - 5VDC 2.5A for Raspberry PI",
             "category": [
@@ -73,7 +100,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "9443.png",
+                    "image": "https://ucarecdn.com/0db05fc5-f2ec-4c08-b322-c91661f35ffd/",
                     "link": "https://octopart.com/t5989dv-raspberry+pi-75480606",
                     "price": "14.37",
                     "SKU": "1690-1022-ND"
@@ -88,9 +115,9 @@
             }
         },
         {
-            "name": "USBPowerMini",
+            "name": "MiniUsbCable",
             "symbol": {
-                "ref": "circuito_USB Mini cable.svg"
+                "ref": "https://ucarecdn.com/dca1dff5-ffe4-4e15-9b4d-26e23fae6b66/"
             },
             "displayName": "USB Mini-B Cable - 6 Foot",
             "category": [
@@ -100,7 +127,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "514.png",
+                    "image": "https://ucarecdn.com/8d17be49-af11-432f-852e-3afa0eea289e/",
                     "link": "https://octopart.com/3021009-06-qualtek-861525",
                     "price": "3.11",
                     "SKU": "Q365-ND"
@@ -117,7 +144,7 @@
         {
             "name": "BarrelJack",
             "symbol": {
-                "ref": "circuito_BarrelJackTerminalFemale.svg"
+                "ref": "https://ucarecdn.com/ca5d6d7a-f9a7-470e-a9ab-27df11b45763/"
             },
             "displayName": "Female DC Power adapter - 2.1mm jack to screw terminal block",
             "category": [
@@ -127,7 +154,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "BarrelJackTerminalFemale.png",
+                    "image": "https://ucarecdn.com/8eb6d154-8e4b-4f0f-801e-387ab21d6175/",
                     "link": "https://octopart.com/368-adafruit+industries-32978560?r=sp&s=suQ5EEQ7RgmfJqCzy-ElxQ",
                     "price": "2.00",
                     "SKU": "1528-1386-ND"
@@ -142,9 +169,9 @@
             }
         },
         {
-            "name": "LD1117",
+            "name": "LD11173.3v",
             "symbol": {
-                "ref": "circuito_Voltage Regulator 3.3v.svg"
+                "ref": "https://ucarecdn.com/ab9bad1c-3ee9-4ab6-9a1a-1c278d28ac0a/"
             },
             "displayName": "Voltage Regulator 3.3v",
             "category": [
@@ -154,7 +181,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "LD11173v3.png",
+                    "image": "https://ucarecdn.com/60053581-0cb4-4608-b60f-8b997365f640/",
                     "link": "https://octopart.com/ld1117v33-stmicroelectronics-526800",
                     "price": "0.55",
                     "SKU": "497-1491-5-ND"
@@ -171,7 +198,7 @@
         {
             "name": "L7805",
             "symbol": {
-                "ref": "circuito_Voltage Regulator 5v.svg"
+                "ref": "https://ucarecdn.com/0bb19b95-967c-4069-aac7-819808ecb4f9/"
             },
             "displayName": "Voltage Regulator 5v",
             "category": [
@@ -181,7 +208,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "L7805.png",
+                    "image": "https://ucarecdn.com/4712f949-5243-4582-a060-b610e237864f/",
                     "link": "https://octopart.com/l7805cv-stmicroelectronics-39670767",
                     "price": "0.5",
                     "SKU": "497-1443-5-ND"
@@ -198,7 +225,7 @@
         {
             "name": "LipoBattery7v4",
             "symbol": {
-                "ref": "circuito_Lithium Polymer Battery - 7.4v.svg"
+                "ref": "https://ucarecdn.com/65b7e85b-3672-4b75-b8a2-104fc0f9342f/"
             },
             "displayName": "Lithium Polymer Battery - 7.4v",
             "category": [
@@ -208,7 +235,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "11856.png",
+                    "image": "https://ucarecdn.com/8656096a-829c-48f4-8cf0-3c8f4a6264b8/",
                     "link": "https://octopart.com/search?r=sp&s=LfRvzrKFStGUnzfa9U989w&q=PRT-11856&start=0",
                     "price": "15.95",
                     "SKU": ""
@@ -225,7 +252,7 @@
         {
             "name": "LipoBattery3v7",
             "symbol": {
-                "ref": "circuito_Lithium Polymer Battery - 3.7v.svg"
+                "ref": "https://ucarecdn.com/ca90291a-2569-4638-bb3f-e1b8833e68a9/"
             },
             "displayName": "Lithium Polymer Battery - 3.7v",
             "category": [
@@ -235,7 +262,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "13813.png",
+                    "image": "https://ucarecdn.com/2ce2d7e5-72b7-44ac-957e-2d519adb4816/",
                     "link": "https://octopart.com/prt-13813-sparkfun-76382069",
                     "price": "9.95",
                     "SKU": "1568-1492-ND"
@@ -252,7 +279,7 @@
         {
             "name": "StepUp5v",
             "symbol": {
-                "ref": "circuito_LipoStepUp.svg"
+                "ref": "https://ucarecdn.com/e60970ee-dbd0-46fb-bf84-a56ce90b4104/"
             },
             "displayName": "Lipo Battery Charger Module 3.7v Step Up to 5v",
             "category": [
@@ -262,7 +289,7 @@
             "bom": [
                 {
                     "name": "digikey",
-                    "image": "StepUp5v.png",
+                    "image": "https://ucarecdn.com/995adf4e-a823-428d-ba96-530767d6a863/",
                     "link": "http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H0.Xlipo+battery+step+up+3.7v.TRS0&_nkw=lipo+battery+step+up+3.7v&_sacat=0",
                     "price": "6",
                     "SKU": ""
@@ -279,7 +306,7 @@
         {
             "name": "PowerBankUSB5v",
             "symbol": {
-                "ref": "circuito_PowerBank.svg"
+                "ref": "https://ucarecdn.com/2d97c4ef-3e8c-4445-a45c-d4daa51d8cff/"
             },
             "displayName": "Power Bank USB - 5v 10000mAh",
             "category": [
@@ -289,7 +316,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "783869.png",
+                    "image": null,
                     "link": "https://octopart.com/1566-adafruit+industries-32978430",
                     "price": "39.95",
                     "SKU": "1528-1856-ND"
@@ -306,7 +333,7 @@
         {
             "name": "Battery9v",
             "symbol": {
-                "ref": "circuito_9V.svg"
+                "ref": "https://ucarecdn.com/a15e216b-fadb-4f04-8ea5-22b52d4bad9b/"
             },
             "displayName": "9v Battery",
             "category": [
@@ -316,7 +343,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "10218.png",
+                    "image": "https://ucarecdn.com/be53e20a-9a1b-49ca-9e0e-20757d2498f0/",
                     "link": "https://octopart.com/6lf22xwa%2Fb-panasonic-52855064",
                     "price": "1.88",
                     "SKU": "P687-ND"
@@ -333,7 +360,7 @@
         {
             "name": "Battery4xAA",
             "symbol": {
-                "ref": "circuito_4xAA.svg"
+                "ref": "https://ucarecdn.com/6b1c4be5-3592-413f-8daf-7b613c1b3833/"
             },
             "displayName": "Battery Holder - 4xAA",
             "category": [
@@ -343,7 +370,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "12083.png",
+                    "image": "https://ucarecdn.com/33a463e6-8ce5-4695-857c-a94e5772120c/",
                     "link": "https://octopart.com/sbh341a-mpd-6644376",
                     "price": "1.74",
                     "SKU": "SBH341A-ND"
@@ -360,7 +387,7 @@
         {
             "name": "Battery8xAA",
             "symbol": {
-                "ref": "circuito_8xAA.svg"
+                "ref": "https://ucarecdn.com/1f9da049-6793-4dca-a0d2-c2f7a53beb76/"
             },
             "displayName": "Battery Holder - 8xAA - 12V",
             "category": [
@@ -370,7 +397,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "783868.png",
+                    "image": "https://ucarecdn.com/36d3dbea-5692-464d-be49-d53bb16ce0d4/",
                     "link": "https://octopart.com/875-adafruit+industries-32978951",
                     "price": "5.95",
                     "SKU": "1528-1165-ND"
@@ -382,6 +409,150 @@
             },
             "placing": {
                 "onBreadboard": false
+            }
+        },
+        {
+            "name": "HeatSinkNut",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "M3 Nut for HeatSink",
+            "category": [
+                "support"
+            ],
+            "desc": "Use this nut with a matching bolt to attach the heatsink to the power regulator.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": null,
+                    "link": "https://octopart.com/4708-keystone-27554469",
+                    "price": "0.15",
+                    "SKU": "36-4708-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            }
+        },
+        {
+            "name": "PowerSupply5v2A",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "Wall Adapter Power Supply - 5VDC 2A (Barrel Jack)",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/013471ed-4c15-4eb4-8068-c784f2d565dc/",
+                    "link": "https://octopart.com/psm10r-050a-phihong-71540273",
+                    "price": "10.99",
+                    "SKU": "993-1400-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            }
+        },
+        {
+            "name": "Battery9vConnector",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "9v Battery Connector",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/30728696-7a48-45af-b8f8-bb2092bd0245/",
+                    "link": "https://octopart.com/84-6-keystone-22219?r=sp&s=JilaxKWPT1e57xVq-E-6PA",
+                    "price": "0.66",
+                    "SKU": "BS6I-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            }
+        },
+        {
+            "name": "HeatSinkBolt",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "M3 Bolt for HeatSink",
+            "category": [
+                "support"
+            ],
+            "desc": "Use this bolt with a matching nut to attach the heatsink to the power regulator.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": null,
+                    "link": "https://octopart.com/rm3x8mm+2701-apm+hexseal-24902807",
+                    "price": "0.63",
+                    "SKU": "335-1149-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            }
+        },
+        {
+            "name": "TO220HeatSink",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "HeatSink TO-220",
+            "category": [
+                "support"
+            ],
+            "desc": "This metal piece when attached to a component that generates alot of heat is used as a heat sink and helps in heat dissipation.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/9c4107b9-8c91-414d-a493-c44d16bde23d/",
+                    "link": "https://octopart.com/574102b00000g-aavid+thermalloy-106127",
+                    "price": "0.41",
+                    "SKU": "HS111-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            }
+        },
+        {
+            "name": "PowerSupply5v5A",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "5V 5A Wall Adapter Power Supply",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/013471ed-4c15-4eb4-8068-c784f2d565dc/",
+                    "link": "https://octopart.com/qawa-30-5-us01-qualtek-76581727",
+                    "price": "22.42",
+                    "SKU": "Q980-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

@@ -3,7 +3,7 @@
         {
             "name": "JoystickSF",
             "symbol": {
-                "ref": "circuito_SparkFun Thumb Joystick.svg"
+                "ref": "https://ucarecdn.com/665c3015-de0e-4d3b-9531-293460fcc22a/"
             },
             "displayName": "Thumb Joystick",
             "category": [
@@ -13,7 +13,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "713952.png",
+                    "image": "https://ucarecdn.com/36e79de9-b3be-424c-9fcd-17a38885cb27/",
                     "link": "https://octopart.com/com-09032-sparkfun-76381402",
                     "price": "3.95",
                     "SKU": "1568-1526-ND"
@@ -29,6 +29,30 @@
             ],
             "placing": {
                 "onBreadboard": true
+            }
+        },
+        {
+            "name": "JoystickSFBreakout",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "SparkFun Thumb Joystick Breakout",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/abaf652a-25d8-4b6a-bd87-cc551207e59b/",
+                    "link": "https://octopart.com/bob-09110-sparkfun-22107485",
+                    "price": "1.95",
+                    "SKU": "1568-1791-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         }
     ],

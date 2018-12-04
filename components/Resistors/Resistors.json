@@ -1,9 +1,279 @@
 {
     "Parts": [
         {
-            "name": "Resistor",
+            "name": "Res47O",
             "symbol": {
-                "ref": "circuito_Resistor.svg"
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "47 Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/26a31ec2-f5b9-4eae-88ee-ff9af70b096f/",
+                    "link": "https://octopart.com/fmp200jr-52-47r-yageo-19037918",
+                    "price": "0.19",
+                    "SKU": "47ZCT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res100O",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "100 Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/31a7b046-4038-439e-96e9-5a60afb93829/",
+                    "link": "https://octopart.com/cf14jt100r-stackpole+electronics-19205380",
+                    "price": "0.1",
+                    "SKU": "CF14JT100RCT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res220O",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "220 Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/4605c88c-530e-4d22-9b96-89a3d2eebea0/",
+                    "link": "https://octopart.com/cf14jt220r-stackpole+electronics-19205441",
+                    "price": "0.1",
+                    "SKU": "CF14JT220RCT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res330O",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "330 Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/b8907b73-9f4c-40e6-8605-6894b12ab5a8/",
+                    "link": "https://octopart.com/cf14jt330r-stackpole+electronics-19205470",
+                    "price": "0.1",
+                    "SKU": "CF14JT330RCT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res470O",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "470 Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/06a056c5-46dd-4ba9-b415-2118f790305d/",
+                    "link": "https://octopart.com/cf14jt470r-stackpole+electronics-19205498",
+                    "price": "0.1",
+                    "SKU": "CF14JT470RCT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res1KO",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "1K Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/827ef37e-1f20-4717-aec0-4193128b0076/",
+                    "link": "https://octopart.com/cf14jt1k00-stackpole+electronics-19205414",
+                    "price": "0.1",
+                    "SKU": "CF14JT1K00CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res3K3O",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "3.3K Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/61001d10-bc33-4aa4-b9ac-313d0825d80b/",
+                    "link": "https://octopart.com/cf14jt3k30-stackpole+electronics-19205482",
+                    "price": "0.1",
+                    "SKU": "CF14JT3K30CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res4K7O",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "4.7K Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/d7841675-fcda-494d-a077-9d3b7ca533e6/",
+                    "link": "https://octopart.com/cf14jt4k70-stackpole+electronics-19205502",
+                    "price": "0.1",
+                    "SKU": "CF14JT4K70CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res10KO",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "10K Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/47f42574-6b26-44ca-840b-2f3564af0c4b/",
+                    "link": "https://octopart.com/cf14jt10k0-stackpole+electronics-19205381",
+                    "price": "0.1",
+                    "SKU": "CF14JT10K0CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res22KO",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
+            },
+            "displayName": "22K Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/b0436a08-5caa-477e-94a5-97ba0489724d/",
+                    "link": "https://octopart.com/cf14jt22k0-stackpole+electronics-19205442",
+                    "price": "0.1",
+                    "SKU": "CF14JT22K0CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Res1MO",
+            "symbol": {
+                "ref": "https://ucarecdn.com/f745fe72-4867-4531-9c0a-84752be37edf/"
             },
             "displayName": "1.0M Ohm Resistor",
             "category": [
@@ -13,7 +283,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "Res1MO.png",
+                    "image": "https://ucarecdn.com/c3b5d7ba-fd72-4842-8178-be5514d418fa/",
                     "link": "https://octopart.com/cf14jt1m00-stackpole+electronics-19205421",
                     "price": "0.1",
                     "SKU": "CF14JT1M00CT-ND"
@@ -24,7 +294,7 @@
                 "test": ""
             },
             "placing": {
-                "onBreadboard": true
+                "onBreadboard": false
             }
         }
     ],
