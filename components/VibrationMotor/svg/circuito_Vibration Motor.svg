@@ -1,0 +1,34 @@
+<?xml version="1.0" ?><svg height="29.16mm" viewBox="0 0 31.16 82.65" width="10.99mm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x1="0.75" x2="30.41" y1="19.06" y2="19.06">
+      <stop offset="0" stop-color="#bab9b4"/>
+      <stop offset="0.11" stop-color="#b5b6bb"/>
+      <stop offset="0.18" stop-color="#b3b6bd"/>
+      <stop offset="0.24" stop-color="#a1a5ab"/>
+      <stop offset="0.37" stop-color="#82898d"/>
+      <stop offset="0.44" stop-color="#777e82"/>
+      <stop offset="0.86" stop-color="#b0b9bf"/>
+      <stop offset="1" stop-color="#777e82"/>
+      <stop offset="1" stop-color="#7c7e82"/>
+    </linearGradient>
+    <linearGradient data-name="Silver 01" gradientUnits="userSpaceOnUse" id="Silver_01" x1="9.03" x2="22.13" y1="26.56" y2="3.86">
+      <stop offset="0" stop-color="#ccd1d6"/>
+      <stop offset="0.21" stop-color="#bac0c5"/>
+      <stop offset="0.43" stop-color="#aab1b6"/>
+      <stop offset="0.52" stop-color="#b7bec3"/>
+      <stop offset="0.84" stop-color="#e3eaee"/>
+      <stop offset="1" stop-color="#f4fbfe"/>
+    </linearGradient>
+  </defs>
+  <title>Vibration Motor</title>
+  <g data-name="Layer 1" id="Layer_1">
+    <rect height="54.75" style="fill: #fd4f57" width="2.38" x="18.45" y="27.9"/>
+    <rect height="54.97" style="fill: #39499b" width="2.38" x="11.25" y="27.68"/>
+    <ellipse cx="15.58" cy="19.06" rx="14.83" ry="13.99" style="fill: url(#linear-gradient)"/>
+    <ellipse cx="15.58" cy="15.21" rx="14.83" ry="12.47" style="fill: url(#Silver_01)"/>
+  </g>
+  <g id="Connectors">
+    <rect data-cir-type="male" height="2.3" id="circuitoCon_Coil2" style="fill: none" width="2.38" x="18.45" y="80.35"/>
+    <rect data-cir-type="male" height="2.3" id="circuitoCon_Coil1" style="fill: none" width="2.38" x="11.25" y="80.35"/>
+  </g>
+</svg>

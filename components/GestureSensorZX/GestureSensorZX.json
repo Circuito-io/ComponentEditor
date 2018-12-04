@@ -1,0 +1,193 @@
+{
+    "Parts": [
+        {
+            "name": "GestureSensorZX",
+            "symbol": {
+                "ref": "circuito_ZX Gesture.svg"
+            },
+            "displayName": "ZX Distance and Gesture Sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "416021.png",
+                    "link": "https://octopart.com/sen-13162-sparkfun-82367569",
+                    "price": "24.95",
+                    "SKU": "1568-1632-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "headers": [
+                11,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "GestureSensorZX",
+            "path": "GestureSensorZX",
+            "category": "input",
+            "blockId": "416021",
+            "app": {
+                "appName": "ZX Distance and Gesture Sensor",
+                "numericName": "",
+                "shortName": "Gesture Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>The 'ZX Distance and Gesture Sensor' is a touchless sensor that is capable of detecting simple gestures. It can recognize the distance of an object 30cm away in the Z aixs, and 15cm in the X aixs.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "GestureSensorZX5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "GestureSensorZX3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "GestureSensorZX5v",
+            "path": "GestureSensorZX",
+            "category": "input",
+            "blockId": "!416021",
+            "coders": [
+                "GestureSensorZX"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "GestureSensorZX"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "DA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "CL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GestureSensorZX3v3",
+            "path": "GestureSensorZX",
+            "category": "input",
+            "blockId": "!416021",
+            "coders": [
+                "GestureSensorZX"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "GestureSensorZX"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "DA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "CL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "GestureSensorZX",
+            "supportedControllers": []
+        }
+    ]
+}

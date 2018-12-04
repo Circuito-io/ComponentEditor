@@ -1,0 +1,189 @@
+{
+    "Parts": [
+        {
+            "name": "BMP280",
+            "symbol": {
+                "ref": "circuito_Adafruit BMP280.svg"
+            },
+            "displayName": "Adafruit BMP280 I2C or SPI Barometric Pressure & Altitude Sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "999979.png",
+                    "link": "https://octopart.com/2651-adafruit+industries-64758342",
+                    "price": "9.95",
+                    "SKU": "1528-1358-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "BMP280",
+            "path": "BMP280",
+            "category": "input",
+            "blockId": "999979",
+            "app": {
+                "appName": "Adafruit BMP280 - Barometric Pressure & Altitude Sensor",
+                "numericName": "BMP180",
+                "shortName": "",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>The BMP280 is the successor of the BMP180. It is a high precision, low power digital environmental sensor providing temperature and barometric pressure readings.<br><strong>Returned Values</strong>: Can measure barometric  pressure  with \u00b11 hPa accuracy, temperature with \u00b11.0\u00b0C accuracy, and altitude with \u00b11 meter accuracy.</p>\n<p><strong>Requires</strong>: Soldering 7 pin male header.</p>\n",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "BMP2805v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BMP2803v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "BMP2805v",
+            "path": "BMP280",
+            "category": "input",
+            "blockId": "!999979",
+            "coders": [
+                "BMP280"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BMP280"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDI",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCK",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BMP2803v3",
+            "path": "BMP280",
+            "category": "input",
+            "blockId": "!999979",
+            "coders": [
+                "BMP280"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BMP280"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDI",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCK",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "BMP280",
+            "supportedControllers": []
+        }
+    ]
+}

@@ -1,0 +1,574 @@
+{
+    "Parts": [
+        {
+            "name": "ESP8266",
+            "symbol": {
+                "ref": "circuito_WiFi Module - ESP8266.svg"
+            },
+            "displayName": "ESP8266-01 - Wifi Module",
+            "category": [
+                "iot"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "13678.png",
+                    "link": "https://octopart.com/wrl-13678-sparkfun-66985529",
+                    "price": "6.95",
+                    "SKU": "1568-1235-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "ESP8266",
+            "path": "ESP8266",
+            "category": "iot",
+            "blockId": "13678",
+            "app": {
+                "appName": "ESP8266-01 - Wifi Module",
+                "numericName": "esp8266",
+                "shortName": "WiFi Module",
+                "tags": [
+                    "connectivity"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>The <strong>ESP8266</strong> is a low-cost Wi-Fi board, that you can easily wire to a microcontroller, and connect any project you build to the internet (of things). </p>\n<p>The microcontroller communicates with the module using AT commands, either via Software Serial or Hardware Serial.<br><strong>Returned Values</strong>: from 0 (completely dry) to 1023 (completely moist). (air/soil humidity - ambient conditions).<br><strong>Requires</strong>: Soldering of jumper/regular wires to the sensor board, to fit onto a breadboard.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/esp8266-01-wifi-module/\">Learn More</a></p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "ESP8266_HardwareSerial5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "ESP8266_SoftwareSerial3v3"
+                    ]
+                ],
+                [
+                    100,
+                    [
+                        "ESP8266_SoftwareSerial5v"
+                    ]
+                ],
+                [
+                    101,
+                    [
+                        "ESP8266_HardwareSerial3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "ESP8266_HardwareSerial5v",
+            "path": "ESP8266",
+            "category": "iot",
+            "blockId": "!13678",
+            "coders": [
+                "ESP8266_HardwareSerial"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        "Reg3.3v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "LLC",
+                        "part": "LogicLevelConverter"
+                    },
+                    {
+                        "name": "this",
+                        "part": "ESP8266"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RXD",
+                        "to": "LLC.LV1"
+                    },
+                    {
+                        "from": "this.TXD",
+                        "to": "LLC.LV2"
+                    },
+                    {
+                        "from": "this.VCC",
+                        "to": "LLC.LV"
+                    },
+                    {
+                        "from": "this.GND",
+                        "to": "LLC.GND"
+                    },
+                    {
+                        "from": "this.CH_PD",
+                        "to": "LLC.LV"
+                    },
+                    {
+                        "from": "LLC.HV1",
+                        "to": "Tx"
+                    },
+                    {
+                        "from": "LLC.LV",
+                        "to": "LV"
+                    },
+                    {
+                        "from": "LLC.HV2",
+                        "to": "Rx"
+                    },
+                    {
+                        "from": "LLC.HV",
+                        "to": "HV"
+                    },
+                    {
+                        "from": "LLC.GND",
+                        "to": "Gnd"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "LV",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[0,["RX","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[0,["TX","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "HV",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 1220
+                        }
+                    },
+                    {
+                        "name": "Gnd",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoNano"]],[5,["ArduinoLeonardo"]],[6,["ArduinoMicro"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ESP8266_SoftwareSerial5v",
+            "path": "ESP8266",
+            "category": "iot",
+            "blockId": "!13678",
+            "coders": [
+                "ESP8266_SoftwareSerial5v"
+            ],
+            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ESP8266"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RXD",
+                        "to": "LLC.LV1"
+                    },
+                    {
+                        "from": "this.TXD",
+                        "to": "LLC.LV2"
+                    },
+                    {
+                        "from": "this.VCC",
+                        "to": "LLC.LV"
+                    },
+                    {
+                        "from": "this.GND",
+                        "to": "LLC.GND"
+                    },
+                    {
+                        "from": "this.CH_PD",
+                        "to": "LLC.LV"
+                    },
+                    {
+                        "from": "LLC.HV1",
+                        "to": "Tx"
+                    },
+                    {
+                        "from": "LLC.LV",
+                        "to": "LV"
+                    },
+                    {
+                        "from": "LLC.HV2",
+                        "to": "Rx"
+                    },
+                    {
+                        "from": "LLC.HV",
+                        "to": "HV"
+                    },
+                    {
+                        "from": "LLC.GND",
+                        "to": "Gnd"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "LV",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialTX","5v"]],[10,["ESPSoftwareSerialTX1","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "SerialType",
+                        "interface": {
+                            "requires":[[0,["ESPSoftwareSerialTag"]]]
+                        }
+                    },
+                    {
+                        "name": "HV",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 1220
+                        }
+                    },
+                    {
+                        "name": "Gnd",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoNano"]],[5,["ArduinoLeonardo"]],[6,["ArduinoMicro"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ESP8266_HardwareSerial3v3",
+            "path": "ESP8266",
+            "category": "iot",
+            "blockId": "!13678",
+            "coders": [
+                "ESP8266_HardwareSerial"
+            ],
+            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
+            "supportedControllers": [
+                "ArduinoProMini3v3"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ESP8266"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "TXD",
+                        "interface": {
+                            "requires":[[0,["TX","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "CH_PD",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "RXD",
+                        "interface": {
+                            "requires":[[0,["RX","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 1220
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ESP8266_SoftwareSerial3v3",
+            "path": "ESP8266",
+            "category": "iot",
+            "blockId": "!13678",
+            "coders": [
+                "ESP8266_SoftwareSerial3v3"
+            ],
+            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
+            "supportedControllers": [
+                "ArduinoProMini3v3"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ESP8266"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "TXD",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialTX","3.3v"]],[10,["ESPSoftwareSerialTX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "CH_PD",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "RXD",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialRX","3.3v"]],[10,["ESPSoftwareSerialRX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "SerialType",
+                        "interface": {
+                            "requires":[[0,["ESPSoftwareSerialTag"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 1220
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "ESP8266_HardwareSerial",
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "code": {
+                "globals:": "    // ====================================================================\n    // vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n    //\n    const char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \n    const char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n    //\n    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    // ====================================================================\n    char* const host = \"www.google.com\";\n    int hostPort = 80;\n",
+                "constructors:": "    {{classname}} {{varname}};\n",
+                "setup:": "    {{varname}}.init(SSID, PASSWORD);\n",
+                "snippetCode:": "    //Send request for www.google.com at port 80\n    {{varname}}.httpGet(host, hostPort);\n    // get response buffer. Note that it is set to 250 bytes due to the Arduino low memory\n    char* {{varname}}Buf = {{varname}}.getBuffer();\n    //Comment out to print the buffer to Serial Monitor\n    //for(int i=0; i< MAX_BUFFER_SIZE ; i++)\n    //  Serial.print({{varname}}Buf[i]);\n    //search buffer for the date and time and print it to the serial monitor. This is GMT time!\n    char *{{varname}}DateIdx = strstr ({{varname}}Buf, \"Date\");\n    for (int i = 0; {{varname}}DateIdx[i] != '\\n' ; i++)\n      Serial.print({{varname}}DateIdx[i]);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "ESP8266",
+                "varname": "wifi"
+            },
+            "files": [
+                "lib/ESP8266*.*",
+                "lib/HardwareSerial/ESP8266.h"
+            ],
+            "includeHeaders": [
+                "ESP8266.h"
+            ]
+        },
+        {
+            "name": "ESP8266_SoftwareSerial5v",
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "code": {
+                "globals:": "    // ====================================================================\n    // vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n    //\n    const char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \n    const char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n    //\n    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    // ====================================================================\n    char* const host = \"www.google.com\";\n    int hostPort = 80;\n",
+                "constructors:": "    {{classname}} {{varname}}({{Rx}},{{Tx}});\n",
+                "setup:": "  {{varname}}.init(SSID, PASSWORD);\n",
+                "snippetCode:": "    //Send request for www.google.com at port 80\n    {{varname}}.httpGet(host, hostPort);\n    // get response buffer. Note that it is set to 250 bytes due to the Arduino low memory\n    char* {{varname}}Buf = {{varname}}.getBuffer();\n    //Comment out to print the buffer to Serial Monitor\n    //for(int i=0; i< MAX_BUFFER_SIZE ; i++)\n    //  Serial.print({{varname}}Buf[i]);\n    //search buffer for the date and time and print it to the serial monitor. This is GMT time!\n    char *{{varname}}DateIdx = strstr ({{varname}}Buf, \"Date\");\n    for (int i = 0; {{varname}}DateIdx[i] != '\\n' ; i++)\n      Serial.print({{varname}}DateIdx[i]);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "ESP8266",
+                "ports": [
+                    "Rx",
+                    "Tx"
+                ],
+                "varname": "wifi"
+            },
+            "files": [
+                "lib/ESP8266*.*",
+                "lib/SoftwareSerial/ESP8266.h"
+            ],
+            "includeHeaders": [
+                "ESP8266.h"
+            ]
+        },
+        {
+            "name": "ESP8266_SoftwareSerial3v3",
+            "supportedControllers": [
+                "ArduinoProMini3v3"
+            ],
+            "code": {
+                "globals:": "    // ====================================================================\n    // vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n    //\n    const char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \n    const char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n    //\n    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    // ====================================================================\n    char* const host = \"www.google.com\";\n    int hostPort = 80;\n",
+                "constructors:": "    {{classname}} {{varname}}({{RXD}},{{TXD}});\n",
+                "setup:": "    wifi.init(SSID, PASSWORD);\n",
+                "snippetCode:": "    //Send request for www.google.com at port 80\n    {{varname}}.httpGet(host, hostPort);\n    // get response buffer. Note that it is set to 250 bytes due to the Arduino low memory\n    char* {{varname}}Buf = {{varname}}.getBuffer();\n    //Comment out to print the buffer to Serial Monitor\n    //for(int i=0; i< MAX_BUFFER_SIZE ; i++)\n    //  Serial.print({{varname}}Buf[i]);\n    //search buffer for the date and time and print it to the serial monitor. This is GMT time!\n    char *{{varname}}DateIdx = strstr ({{varname}}Buf, \"Date\");\n    for (int i = 0; {{varname}}DateIdx[i] != '\\n' ; i++)\n      Serial.print({{varname}}DateIdx[i]);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "ESP8266",
+                "ports": [
+                    "RXD",
+                    "TXD"
+                ],
+                "varname": "wifi"
+            },
+            "files": [
+                "lib/ESP8266*.*",
+                "lib/SoftwareSerial/ESP8266.h"
+            ],
+            "includeHeaders": [
+                "ESP8266.h"
+            ]
+        }
+    ]
+}

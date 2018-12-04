@@ -1,0 +1,167 @@
+{
+    "Parts": [
+        {
+            "name": "MPU6050",
+            "symbol": {
+                "ref": "circuito_Triple Axis Accelerometer and Gyro Breakout - MPU-6050.svg"
+            },
+            "displayName": "SparkFun MPU-6050 - Accelerometer and Gyro",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "11028.png",
+                    "link": "https://octopart.com/sen-11028-sparkfun-56250906",
+                    "price": "29.95",
+                    "SKU": "1568-1024-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": "Move the sensor to see the values change"
+            },
+            "headers": [
+                10,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "MPU6050",
+            "path": "MPU6050",
+            "category": "input",
+            "blockId": "11028",
+            "app": {
+                "appName": "SparkFun MPU-6050 - Accelerometer and Gyro",
+                "numericName": "MPU6050",
+                "shortName": "Accelerometer and Gyro",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>The MPU-6050 is a triple axis accelerometer and gyro combined, allowing a very deep motion detection and analysis.</p>\n<p><strong>Returned Values</strong>: I2C Digital-output of 6 or 9-axis MotionFusion data.</p>\n<p><strong>Requires</strong>: Soldering of 8 male header pins to fit onto a breadboard.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Self-Balancing-Robot/\">Self Balancing Robot</a></p>\n",
+                "visible": false
+            },
+            "coders": [
+                "MPU6050"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MPU6050"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.VIO",
+                        "to": "this.VCC"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "isBus": true,
+                            "requires":[[0,["SDA","5v"]],[1,["SDA","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 235
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "isBus": true,
+                            "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "MPU6050",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n    int16_t {{varname}}Gx, {{varname}}Gy, {{varname}}Gz;\n",
+                "setup:": "    Wire.begin();\n    {{varname}}.initialize();\n",
+                "snippetCode:": "    {{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\n    double {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\n    Serial.print(\"a/g-\\t\");\n    Serial.print({{varname}}Ax); Serial.print(\"\\t\");\n    Serial.print({{varname}}Ay); Serial.print(\"\\t\");\n    Serial.print({{varname}}Az); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gx); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gy); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gz); Serial.print(\"\\t\");\n    Serial.print(F(\"Temp- \"));   \n    Serial.println({{varname}}Temp);\n    delay(100);\n"
+            },
+            "license": "MIT",
+            "instantiate": {
+                "classname": "MPU6050",
+                "varname": "mpu6050"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "MPU6050.h",
+                "Wire.h",
+                "I2Cdev.h"
+            ]
+        }
+    ]
+}

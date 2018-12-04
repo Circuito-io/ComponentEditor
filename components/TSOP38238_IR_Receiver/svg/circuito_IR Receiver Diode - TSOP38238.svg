@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><svg height="15.56mm" viewBox="0 0 22.25 44.11" width="7.85mm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x2="22.25" y1="15.51" y2="15.51">
+      <stop offset="0" stop-color="#3b3b3b"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient-2" x1="2.34" x2="19.97" y1="16.9" y2="16.9">
+      <stop offset="0" stop-color="#121212"/>
+      <stop offset="0.57" stop-color="#616161"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient-3" x1="2.06" x2="20.25" y1="16.9" y2="16.9">
+      <stop offset="0.03" stop-color="#171717"/>
+      <stop offset="0.69" stop-color="#616161"/>
+      <stop offset="0.88"/>
+    </linearGradient>
+  </defs>
+  <title>IR Receiver Diode - TSOP38238</title>
+  <g data-name="Layer 2" id="Layer_2">
+    <rect height="13.1" style="fill: #b0acb0" width="2.27" x="2.79" y="31.01"/>
+    <rect height="13.1" style="fill: #b0acb0" width="2.27" x="9.99" y="31.01"/>
+    <rect height="13.1" style="fill: #b0acb0" width="2.27" x="17.19" y="31.01"/>
+    <path d="M22.25,31H0L.14,2.7C.14,1.22-.18,0,1.09,0h18.5c1.46,0,2.66-.27,2.66,1.2Z" style="fill: url(#linear-gradient)" transform="translate(0 0)"/>
+    <path d="M2.34,30.76H20V12.08c0-10.6-16.22-13.41-17.62,0Z" style="stroke-miterlimit: 10;stroke-width: 0.566929161548615px;fill: url(#linear-gradient-2);stroke: url(#linear-gradient-3)" transform="translate(0 0)"/>
+  </g>
+  <g id="Connectors">
+    <rect data-cir-type="male" height="2.27" id="circuitoCon_Out" style="fill: #b0acb0" width="2.27" x="2.79" y="41.84"/>
+    <rect data-cir-type="male" height="2.27" id="circuitoCon_Gnd" style="fill: #b0acb0" width="2.27" x="9.99" y="41.84"/>
+    <rect data-cir-type="male" height="2.27" id="circuitoCon_VCC" style="fill: #b0acb0" width="2.27" x="17.19" y="41.84"/>
+  </g>
+</svg>

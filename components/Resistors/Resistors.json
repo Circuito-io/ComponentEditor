@@ -1,0 +1,33 @@
+{
+    "Parts": [
+        {
+            "name": "Resistor",
+            "symbol": {
+                "ref": "circuito_Resistor.svg"
+            },
+            "displayName": "1.0M Ohm Resistor",
+            "category": [
+                "support"
+            ],
+            "desc": "A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element.In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, terminate transmission lines and much more.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "Res1MO.png",
+                    "link": "https://octopart.com/cf14jt1m00-stackpole+electronics-19205421",
+                    "price": "0.1",
+                    "SKU": "CF14JT1M00CT-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [],
+    "Coders": []
+}

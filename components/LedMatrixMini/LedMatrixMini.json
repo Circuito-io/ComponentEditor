@@ -1,0 +1,212 @@
+{
+    "Parts": [
+        {
+            "name": "LedMatrixMini",
+            "symbol": {
+                "ref": "circuito_Mini 8x8 LED Matrix I2C Backpack - Red.svg"
+            },
+            "displayName": "Adafruit Mini 8x8 LED Matrix with I2C Backpack - Ultra Bright White",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "912191.png",
+                    "link": "https://octopart.com/1080-adafruit+industries-29291372",
+                    "price": "13.5",
+                    "SKU": "1528-1419-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "LedMatrixMini",
+            "path": "LedMatrixMini",
+            "category": "input",
+            "blockId": "912191",
+            "app": {
+                "appName": "Adafruit Mini 8x8 LED Matrix with I2C Backpack - Ultra Bright White",
+                "numericName": "",
+                "shortName": "LED Matrix",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>Control a 8x8 LED matrix display using I2C.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "LedMatrixMini5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "LedMatrixMini3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "LedMatrixMini5v",
+            "path": "LedMatrixMini",
+            "category": "output",
+            "blockId": "!912191",
+            "coders": [
+                "LedMatrixMini"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LedMatrixMini"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "C",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "D",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "LedMatrixMini3v3",
+            "path": "LedMatrixMini",
+            "category": "output",
+            "blockId": "!912191",
+            "coders": [
+                "LedMatrixMini"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LedMatrixMini"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "C",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "D",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[6,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "LedMatrixMini",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {},
+            "license": "MIT",
+            "instantiate": {
+                "classname": "Adafruit_8x8matrix",
+                "ports": [],
+                "varname": "LedMatrixMini"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": []
+        }
+    ]
+}

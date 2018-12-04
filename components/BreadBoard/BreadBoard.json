@@ -1,0 +1,89 @@
+{
+    "Parts": [
+        {
+            "name": "BreadBoard",
+            "symbol": {
+                "ref": "circuito_Breadboard.svg"
+            },
+            "displayName": "BreadBoard",
+            "category": [
+                "support"
+            ],
+            "desc": "Full size solderless breadboard. It has 2 split power buses, 10 columns, and 63 rows. All pins are spaced by a standard 0.1\". It also has a self-adhesive on the back.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "BreadBoard.png",
+                    "link": "https://octopart.com/gs-830-global+specialties-11900592",
+                    "price": "8.25",
+                    "SKU": "BKGS-830-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "BreadBoardHalf",
+            "symbol": {
+                "ref": "circuito_Breadboard_Half.svg"
+            },
+            "displayName": "BreadBoard - Half Size",
+            "category": [
+                "support"
+            ],
+            "desc": "Half size solderless breadboard. It has 2 split power buses, 10 columns, and 30 rows. All pins are spaced by a standard 0.1\". It also has a self-adhesive on the back.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "BreadBoardHalf.png",
+                    "link": "https://octopart.com/bb-32621-bud+industries-29442527",
+                    "price": "4.5",
+                    "SKU": "377-2094-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "BreadBoard",
+            "path": "BreadBoard",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BreadBoard"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BreadBoardHalf",
+            "path": "BreadBoard",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BreadBoardHalf"
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": []
+}

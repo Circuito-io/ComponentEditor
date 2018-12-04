@@ -1,0 +1,190 @@
+{
+    "Parts": [
+        {
+            "name": "MPL3115A2",
+            "symbol": {
+                "ref": "circuito_MPL3115A2 - I2C Barometric Pressure Altitude Temperature Sensor.svg"
+            },
+            "displayName": "Adafruit MPL3115A2 - Barometric Pressure & Altitude Sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "431714.png",
+                    "link": "https://octopart.com/1893-adafruit+industries-50010410?r=sp&s=WFrpSWxqR7W1fQF5i0jxMw",
+                    "price": "9.95",
+                    "SKU": "1528-1034-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "MPL3115A2",
+            "path": "MPL3115A2",
+            "category": "input",
+            "blockId": "431714",
+            "app": {
+                "appName": "Adafruit MPL3115A2 - Barometric Pressure & Altitude Sensor",
+                "numericName": "MPL3115A2",
+                "shortName": "Pressure and Altitude Sensor MPL3115A2",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>A Barometric pressure, Altitude and Temperature Sensor. It is high precision, low cost, low power usage, and a calibration and calculation are not required.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "MPL3115A2-5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "MPL3115A2-3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "MPL3115A2-5v",
+            "path": "MPL3115A2",
+            "category": "input",
+            "blockId": "!431714",
+            "coders": [
+                "MPL3115A2"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MPL3115A2"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "MPL3115A2-3v3",
+            "path": "MPL3115A2",
+            "category": "input",
+            "blockId": "!431714",
+            "coders": [
+                "MPL3115A2"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MPL3115A2"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "MPL3115A2",
+            "supportedControllers": []
+        }
+    ]
+}

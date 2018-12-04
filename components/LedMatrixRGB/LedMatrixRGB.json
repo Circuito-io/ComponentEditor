@@ -1,0 +1,185 @@
+{
+    "Parts": [
+        {
+            "name": "LedMatrixRGB",
+            "symbol": {
+                "ref": "circuito_Adafruit NeoPixel NeoMatrix 8x8 - 64 RGB LED Pixel Matrix.svg"
+            },
+            "displayName": "Adafruit NeoPixel NeoMatrix 8x8 - 64 RGB LED Pixel Matrix",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "763365.png",
+                    "link": "https://octopart.com/1487-adafruit+industries-47006201",
+                    "price": "34.95",
+                    "SKU": "1528-1094-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "LedMatrixRGB",
+            "path": "LedMatrixRGB",
+            "category": "output",
+            "blockId": "763365",
+            "app": {
+                "appName": "Adafruit NeoPixel NeoMatrix 8x8 - 64 RGB LED Pixel Matrix",
+                "numericName": "",
+                "shortName": "RGB LED Matrix",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>This is a NeoPixel 8x8 RGB LED Matrix. It has 64 chained NeoPixel LEDs, meaning that you can control the whole matrix with only 1 data pin. You can chain a few of these matrices to get a bigger one.</p>",
+                "visible": false
+            },
+            "coders": [
+                "LedMatrixRGB"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    5,
+                    [
+                        "Reg5v"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "PowerSupply5v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LedMatrixRGB"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND_IN",
+                        "interface": {
+                            "chainTo": "GND_OUT",
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "5V_IN",
+                        "interface": {
+                            "chainTo": "5V_OUT",
+                            "requires":[[0,["5v"]]],
+                            "requiresLoad": 1000
+                        }
+                    },
+                    {
+                        "name": "DIN",
+                        "interface": {
+                            "chainTo": "DOUT",
+                            "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "DOUT",
+                        "interface": {
+                            "chain": true
+                        }
+                    },
+                    {
+                        "name": "5V_OUT",
+                        "interface": {
+                            "chain": true
+                        }
+                    },
+                    {
+                        "name": "GND_OUT",
+                        "interface": {
+                            "chain": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "LedMatrixRGB",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "    #define {{varname}}_NUM_LEDS 64*{{numOfSameComp}}\n    #define {{varname}}_BRIGHTNESS 10\n",
+                "constructors:": "    {{classname}} {{varname}} = {{classname}}({{varname}}_NUM_LEDS, {{DIN}}, NEO_GRBW + NEO_KHZ800);\n",
+                "setup:": "    {{varname}}.setBrightness({{varname}}_BRIGHTNESS);\n    {{varname}}.begin();\n    {{varname}}.show(); // Initialize all pixels to 'off'\n",
+                "snippetCode:": "    for (uint16_t i = 0; i < {{varname}}.numPixels(); i++) {\n      {{varname}}.setPixelColor(i, 255, 0, 0);\n      {{varname}}.show();\n      delay(100);\n    }\n    for (uint16_t i = 0; i < {{varname}}.numPixels(); i++) {\n      {{varname}}.setPixelColor(i, 0, 255, 0);\n      {{varname}}.show();\n      delay(80);\n    }\n    for (uint16_t i = 0; i < {{varname}}.numPixels(); i++) {\n      {{varname}}.setPixelColor(i, 0, 0, 255);\n      {{varname}}.show();\n      delay(30);\n    }"
+            },
+            "license": "GNU",
+            "instantiate": {
+                "classname": "Adafruit_NeoPixel",
+                "ports": [
+                    "DIN"
+                ],
+                "varname": "LedMatrixRGB"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": []
+        }
+    ]
+}

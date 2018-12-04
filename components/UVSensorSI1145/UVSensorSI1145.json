@@ -1,0 +1,189 @@
+{
+    "Parts": [
+        {
+            "name": "UVSensorSI1145",
+            "symbol": {
+                "ref": "circuito_Adafruit SI1145 Breakout Board - UV index  IR  Visible Sensor.svg"
+            },
+            "displayName": "SI1145 Digital UV Index / IR / Visible Light Sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "534630.png",
+                    "link": "https://octopart.com/1777-adafruit+industries-53099553",
+                    "price": "9.95",
+                    "SKU": "1528-1406-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "UVSensorSI1145",
+            "path": "UVSensorSI1145",
+            "category": "input",
+            "blockId": "534630",
+            "app": {
+                "appName": "SI1145 Digital UV Index / IR / Visible Light Sensor",
+                "numericName": "SI1145",
+                "shortName": "UV Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>The SI1145 is a new sensor from SiLabs with a calibrated light sensing algorithm that can calculate UV Index. It doesn't contain an actual UV sensing element, instead it approximates it based on visible & IR light from the sun. </p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "UVSensorSI1145-5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "UVSensorSI1145-3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "UVSensorSI1145-5v",
+            "path": "UVSensorSI1145",
+            "category": "input",
+            "blockId": "!534630",
+            "coders": [
+                "UVSensorSI1145"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "UVSensorSI1145"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "UVSensorSI1145-3v3",
+            "path": "UVSensorSI1145",
+            "category": "input",
+            "blockId": "!534630",
+            "coders": [
+                "UVSensorSI1145"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "UVSensorSI1145"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "UVSensorSI1145",
+            "supportedControllers": []
+        }
+    ]
+}

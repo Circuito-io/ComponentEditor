@@ -1,0 +1,139 @@
+{
+    "Parts": [
+        {
+            "name": "PIRGeneric",
+            "symbol": {
+                "ref": "circuito_PIR (motion) sensor.svg"
+            },
+            "displayName": "PIR (motion) sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "931983.png",
+                    "link": "https://octopart.com/189-adafruit+industries-32978453",
+                    "price": "9.95",
+                    "SKU": "1528-1991-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": "Cover the PIR sensor & then remove the cover to see if it detects anything."
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "PIRGeneric",
+            "path": "PIRGeneric",
+            "category": "input",
+            "blockId": "931983",
+            "app": {
+                "appName": "Infrared PIR Motion Sensor Module",
+                "numericName": "",
+                "shortName": "PIR motion sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>The passive infrared motion sensor (PIR) allows you to detect movement of a person or animal within a 6 meter range. The sensor is based on infrared radiation returned from people and animals.<br><strong>Returned values</strong>: true - presence detected, false - no presence detected.  - Presence can be detected within a 6-meter range.</p>\n",
+                "visible": false
+            },
+            "coders": [
+                "PIRGeneric"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "PIRGeneric"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VDD",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "SIG",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "PIRGeneric",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "snippetCode:": "    bool {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "PIR",
+                "ports": [
+                    "SIG"
+                ],
+                "varname": "pir"
+            },
+            "files": [
+                "lib/*"
+            ]
+        }
+    ]
+}

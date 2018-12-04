@@ -1,0 +1,472 @@
+{
+    "Parts": [
+        {
+            "name": "NodeMCU1.0",
+            "symbol": {
+                "ref": "circuito_Node MCU 1.0V.svg"
+            },
+            "displayName": "Node MCU 1.0V",
+            "category": [
+                "controller"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "360216.png",
+                    "link": "https://octopart.com/zc654400-yks-80299412?r=sp&s=5RtaCNmkRSeixAK2Szjnlg",
+                    "price": "3.54",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true,
+                "row": 1,
+                "rotation": 180
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "NodeMCU1.0",
+            "path": "NodeMCU1.0",
+            "category": "controller",
+            "blockId": "360216",
+            "app": {
+                "appName": "Node MCU 1.0V",
+                "numericName": "",
+                "shortName": "Node MCU",
+                "tags": [
+                    "connectivity",
+                    "controllers"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>",
+                "visible": false
+            },
+            "coders": [
+                "NodeMCU1.0"
+            ],
+            "requires": [
+                [
+                    1,
+                    [
+                        "NodeMCU1.0_ExPower"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "NodeMCU1.0_USB"
+                    ]
+                ]
+            ],
+            "requiresExpansion": [
+                [
+                    0,
+                    "NONE"
+                ],
+                [
+                    10,
+                    "74HC4051"
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "NodeMCU1.0_USB",
+            "path": "NodeMCU1.0",
+            "category": "controller",
+            "blockId": "!360216",
+            "supportedControllers": [
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "NodeMCU1.0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SerialType",
+                        "interface": {
+                            "provides":[["ESPSoftwareSerialTag"]]
+                        }
+                    },
+                    {
+                        "name": "D1",
+                        "interface": {
+                            "codename": "5",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCL"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D2",
+                        "interface": {
+                            "codename": "4",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","DigitalIn","Int"],["3.3v","PWM"],["3.3v","SDA"],["3.3v","Timer2"],["SoftwareSerial","3.3v"],["3.3v","SS"]]
+                        }
+                    },
+                    {
+                        "name": "D3",
+                        "interface": {
+                            "codename": "0",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D4",
+                        "interface": {
+                            "codename": "2",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","TX"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D5",
+                        "interface": {
+                            "codename": "14",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["3.3v","SCK"]]
+                        }
+                    },
+                    {
+                        "name": "D6",
+                        "interface": {
+                            "codename": "12",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialRX","3.3v"],["3.3v","MISO"]]
+                        }
+                    },
+                    {
+                        "name": "D7",
+                        "interface": {
+                            "codename": "13",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialTX","3.3v"],["3.3v","MOSI"]]
+                        }
+                    },
+                    {
+                        "name": "D8",
+                        "interface": {
+                            "codename": "15",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D0",
+                        "interface": {
+                            "codename": "16",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "provides":[["GND"]]
+                        }
+                    },
+                    {
+                        "name": "GND1",
+                        "interface": {
+                            "provides":[["GND"]]
+                        }
+                    },
+                    {
+                        "name": "GND2",
+                        "interface": {
+                            "requires":[[0,["GND","USB"]]]
+                        }
+                    },
+                    {
+                        "name": "GND3",
+                        "interface": {
+                            "provides":[["GND"]]
+                        }
+                    },
+                    {
+                        "name": "USBPos",
+                        "interface": {
+                            "requires":[[0,["5v","USB"]]],
+                            "requiresLoad": 50
+                        }
+                    },
+                    {
+                        "name": "3V3",
+                        "interface": {
+                            "provides":[["3.3v"]],
+                            "providesLoad": 800
+                        }
+                    },
+                    {
+                        "name": "3V3_1",
+                        "interface": {
+                            "provides":[["3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "3V3_2",
+                        "interface": {
+                            "provides":[["3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "RX",
+                        "interface": {
+                            "codename": "3",
+                            "provides":[["3.3v","RX"]]
+                        }
+                    },
+                    {
+                        "name": "TX",
+                        "interface": {
+                            "codename": "1",
+                            "provides":[["3.3v","TX"]]
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "provides":[["5v"]],
+                            "providesLoad": 500
+                        }
+                    },
+                    {
+                        "name": "SD2",
+                        "interface": {
+                            "codename": "9",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        }
+                    },
+                    {
+                        "name": "SD3",
+                        "interface": {
+                            "codename": "10",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        }
+                    },
+                    {
+                        "name": "A0",
+                        "interface": {
+                            "codename": "A0",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "provides":[["NodeMCU"]]
+                        }
+                    },
+                    {
+                        "name": "USB_MICRO",
+                        "interface": {
+                            "provides":[["USB_MICRO"]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "provides":[["SRAMLoad"]],
+                            "providesLoad": 128000
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "NodeMCU1.0_ExPower",
+            "path": "NodeMCU1.0",
+            "category": "controller",
+            "blockId": "!360216",
+            "requires":[[0,["USBPowerMicro"]],[30,["Reg5v","USBPowerMicro"]]],
+            "supportedControllers": [
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "NodeMCU1.0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SerialType",
+                        "interface": {
+                            "provides":[["ESPSoftwareSerialTag"]]
+                        }
+                    },
+                    {
+                        "name": "D1",
+                        "interface": {
+                            "codename": "5",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCL"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D2",
+                        "interface": {
+                            "codename": "4",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","DigitalIn","Int"],["3.3v","PWM"],["3.3v","SDA"],["3.3v","Timer2"],["SoftwareSerial","3.3v"],["3.3v","SS"]]
+                        }
+                    },
+                    {
+                        "name": "D3",
+                        "interface": {
+                            "codename": "0",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D4",
+                        "interface": {
+                            "codename": "2",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","TX"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D5",
+                        "interface": {
+                            "codename": "14",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["3.3v","SCK"]]
+                        }
+                    },
+                    {
+                        "name": "D6",
+                        "interface": {
+                            "codename": "12",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialRX","3.3v"],["3.3v","MISO"]]
+                        }
+                    },
+                    {
+                        "name": "D7",
+                        "interface": {
+                            "codename": "13",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialTX","3.3v"],["3.3v","MOSI"]]
+                        }
+                    },
+                    {
+                        "name": "D8",
+                        "interface": {
+                            "codename": "15",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "D0",
+                        "interface": {
+                            "codename": "16",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "RX",
+                        "interface": {
+                            "codename": "RX",
+                            "provides":[["3.3v","RX"]]
+                        }
+                    },
+                    {
+                        "name": "TX",
+                        "interface": {
+                            "codename": "TX",
+                            "provides":[["3.3v","TX"]]
+                        }
+                    },
+                    {
+                        "name": "SD2",
+                        "interface": {
+                            "codename": "9",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        }
+                    },
+                    {
+                        "name": "SD3",
+                        "interface": {
+                            "codename": "10",
+                            "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        }
+                    },
+                    {
+                        "name": "A0",
+                        "interface": {
+                            "codename": "A0",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "GND1",
+                        "interface": {
+                            "requires":[[0,["GND"]],[1,["GND","USB"]]]
+                        }
+                    },
+                    {
+                        "name": "GND3",
+                        "interface": {
+                            "provides":[["GND"]]
+                        }
+                    },
+                    {
+                        "name": "3V3",
+                        "interface": {
+                            "provides":[["3.3v"]],
+                            "providesLoad": 800
+                        }
+                    },
+                    {
+                        "name": "3V3_1",
+                        "interface": {
+                            "provides":[["3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "3V3_2",
+                        "interface": {
+                            "provides":[["3.3v"]]
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["6v"]],[1,["7.4v"]],[2,["9v"]],[3,["12v"]]],
+                            "requiresLoad": 50
+                        }
+                    },
+                    {
+                        "name": "USB_MICRO",
+                        "interface": {
+                            "provides":[["USB_MICRO"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "provides":[["NodeMCU"]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "provides":[["SRAMLoad"]],
+                            "providesLoad": 128000
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "NodeMCU1.0",
+            "supportedControllers": []
+        }
+    ]
+}

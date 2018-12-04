@@ -1,0 +1,235 @@
+{
+    "Parts": [
+        {
+            "name": "PushButtonMomentary",
+            "symbol": {
+                "ref": "circuito_Momentary Button - Panel Mount (Red).svg"
+            },
+            "displayName": "Momentary Push Button - Panel Mount (Red)",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "942700.png",
+                    "link": "https://octopart.com/1437568-6-te+connectivity-41490455",
+                    "price": "3.06",
+                    "SKU": "450-1110-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "PushButtonMomentary",
+            "path": "PushButtonMomentary",
+            "category": "input",
+            "blockId": "942700",
+            "app": {
+                "appName": "Momentary Push Button - Panel Mount (Red)",
+                "numericName": "",
+                "shortName": "Momentary Push Button",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>This button is perfect for basic On/Off functions, it's N.O (norammaly open), and can be mounted into a panel easily.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "PushButtonMomentary5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "PushButtonMomentary3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "PushButtonMomentary5v",
+            "path": "PushButtonMomentary",
+            "category": "input",
+            "blockId": "!942700",
+            "coders": [
+                "PushButtonMomentary"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "PushButtonMomentary"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "10k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.2",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "1",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "2",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "PushButtonMomentary3v3",
+            "path": "PushButtonMomentary",
+            "category": "input",
+            "blockId": "!942700",
+            "coders": [
+                "PushButtonMomentary"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "PushButtonMomentary"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.2",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "1",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "2",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "PushButtonMomentary",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "setup:": "    {{varname}}.init();\n",
+                "snippetCode:": "        //Read pushbutton state. \n        //if button is pressed function will return HIGH (1). if not function will return LOW (0). \n        //for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n        //if debounce is not working properly try changing 'debounceDelay' variable in Button.h\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "Button",
+                "ports": [
+                    "2"
+                ],
+                "varname": "pushButtonMomentary"
+            },
+            "files": [
+                "../Global/lib/Button.h",
+                "../Global/lib/Button.cpp",
+                "../Global/lib/Button_license.txt"
+            ]
+        }
+    ]
+}

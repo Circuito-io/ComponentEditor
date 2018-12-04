@@ -1,0 +1,156 @@
+{
+    "Parts": [
+        {
+            "name": "serLCD",
+            "symbol": {
+                "ref": "circuito_Serial Enabled 16x2 LCD.svg"
+            },
+            "displayName": "Serial Enabled 16x2 LCD",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9395.png",
+                    "link": "https://octopart.com/lcd-09395-sparkfun-67069559",
+                    "price": "24.95",
+                    "SKU": "1568-1552-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "headers": [
+                3,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "serLCD",
+            "path": "serLCD",
+            "category": "output",
+            "blockId": "9395",
+            "app": {
+                "appName": "Serial Enabled 16x2 LCD - White on Black 5V",
+                "numericName": "",
+                "shortName": "Serial Enabled 16x2 LCD",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/DIY-Nespresso-Capsule-Detector/\">DIY Nespresso Capsule Detector</a>.</p>\n",
+                "visible": "true"
+            },
+            "coders": [
+                "serLCD"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "serLCD"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 165
+                        }
+                    },
+                    {
+                        "name": "RX",
+                        "interface": {
+                            "requires":[[0,["SoftwareSerial","5v"]],[1,["SoftwareSerial","3.3v"]],[2,["TX","5v"]],[3,["TX","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["Arduino101"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "serLCD",
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "code": {
+                "constructors:": "    SoftwareSerial {{varname}}NSS(0,{{RX}});\n    SerLCD {{varname}}({{varname}}NSS); \n",
+                "setup:": "    {{varname}}NSS.begin(9600); \n    {{varname}}.begin();   \n",
+                "snippetCode:": "    // The LCD Screen will display the text of your choice. For more serLCD functions see https://github.com/scogswell/ArduinoSerLCD/blob/master/examples/SerLCD_Demo_0_Arduino_100/SerLCD_Demo_0_Arduino_100.ino \n    {{varname}}.setPosition(1,2); \n    {{varname}}.print(\"Circuito.io\"); \n    delay(500); \n    {{varname}}.setPosition(2,5); \n    {{varname}}.print(\"Rocks !\"); \n    delay(500); \n    {{varname}}.clear(); "
+            },
+            "license": "GNUL",
+            "instantiate": {
+                "classname": "SerLCD",
+                "ports": [
+                    "RX"
+                ],
+                "varname": "serlcd"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "SoftwareSerial.h",
+                "SerLCD.h"
+            ]
+        }
+    ]
+}

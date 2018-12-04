@@ -1,0 +1,189 @@
+{
+    "Parts": [
+        {
+            "name": "IRPosCamera",
+            "symbol": {
+                "ref": "circuito_Positioning IR Camera.svg"
+            },
+            "displayName": "IR Positioning Camera",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "838186.png",
+                    "link": "https://octopart.com/sen0158-dfrobot-81833633",
+                    "price": "24.26",
+                    "SKU": "1738-1250-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "IRPosCamera",
+            "path": "IRPosCamera",
+            "category": "input",
+            "blockId": "838186",
+            "app": {
+                "appName": "IR Positioning Camera",
+                "numericName": "",
+                "shortName": "IR Positioning Camera",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>This 128x96 pixel IR Positioning Camera can track up to 4 IR objects at the same time. It's good for many applications, from tracking robots with IR transmitters to tracking heat sources.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "IRPosCamera5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "IRPosCamera3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "IRPosCamera5v",
+            "path": "IRPosCamera",
+            "category": "input",
+            "blockId": "!838186",
+            "coders": [
+                "IRPosCamera"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "IRPosCamera"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "IRPosCamera3v3",
+            "path": "IRPosCamera",
+            "category": "input",
+            "blockId": "!838186",
+            "coders": [
+                "IRPosCamera"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "IRPosCamera"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "IRPosCamera",
+            "supportedControllers": []
+        }
+    ]
+}

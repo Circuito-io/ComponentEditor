@@ -1,0 +1,268 @@
+{
+    "Parts": [
+        {
+            "name": "ACS712",
+            "symbol": {
+                "ref": "circuito_Current Sensor Module ACS712.svg"
+            },
+            "displayName": "Current Sensor Module ACS712",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "564923.png",
+                    "link": "https://octopart.com/a14041500ux1200-newegg+business-93711112?r=sp&s=RF_Fj_a3RBa1wzRebKE70Q",
+                    "price": "2.01",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "ACS712",
+            "path": "CurrentSensorACS712",
+            "category": "input",
+            "blockId": "564923",
+            "app": {
+                "appName": "Current Sensor ACS712",
+                "numericName": "ACS712",
+                "shortName": "Current Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>Sense the AC or DC current flowing through it. it has a sensitivity of 185mV/A (equivalent to 26.4mA/Count of ADC). </p>\n<p><strong>Return Value</strong>: mA. Needs to be manually calibrated with zero current.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Simplified-Arduino-AC-Current-Measurement-Using-AC/\">Simplified Arduino AC Current Measurement Using ACS712 Hall Effect Sensor</a></p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    1,
+                    [
+                        "ACS7125v"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "ACS7123v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "ACS7125v",
+            "path": "CurrentSensorACS712",
+            "category": "input",
+            "blockId": "!564923",
+            "coders": [
+                "ACS7125v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ACS712"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "VO",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ACS7123v3",
+            "path": "CurrentSensorACS712",
+            "category": "input",
+            "blockId": "!564923",
+            "coders": [
+                "ACS7123v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ACS712"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "470"
+                    },
+                    {
+                        "name": "r2",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.GND",
+                        "to": "r2.con1"
+                    },
+                    {
+                        "from": "r2.con0",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.VO",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "Vo"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "Vo",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["NodeMCU"]],[1,["ArduinoGemma"]],[2,["ArduinoProMini3v3"]],[6,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "ACS7125v",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "code": {
+                "global:": "    const int {{varname}}calFactor = 513;\n",
+                "setup:": "    //Manually calibarte the ACS712 current sensor.\n    //Connet the ACS to your board, but do not connect the current sensing side.\n    //Follow serial monitor instructions. This needs be done one time only.\n    {{varname}}.calibrate({{varname}}calFactor);\n",
+                "snippetCode:": "    //Get averaged current measurment.\n    float {{varname}}Currrent  = {{varname}}.getCurrent();\n    Serial.print({{varname}}Currrent); Serial.println(F(\" [mA]\"));\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "ACS712",
+                "ports": [
+                    "VO"
+                ],
+                "varname": "acs712"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/AnalogReader.h",
+                "../Global/lib/AnalogReader.cpp"
+            ],
+            "includeHeaders": [
+                "ACS712.h"
+            ]
+        },
+        {
+            "name": "ACS7123v3",
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "    const int {{varname}}calFactor = 513;\n",
+                "setup:": "    //Manually calibarte the ACS712 current sensor.\n    //Connet the ACS to your board, but do not connect the current sensing side.\n    //Follow serial monitor instructions. This needs be done one time only.\n    {{varname}}.calibrate({{varname}}calFactor);\n",
+                "snippetCode:": "    //Get averaged current measurment.\n    float {{varname}}Currrent  = {{varname}}.getCurrent();\n    Serial.print({{varname}}Currrent); Serial.println(F(\" [mA]\"));\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "ACS712",
+                "ports": [
+                    "Vo"
+                ],
+                "varname": "acs712"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/AnalogReader.h",
+                "../Global/lib/AnalogReader.cpp"
+            ],
+            "includeHeaders": [
+                "ACS712.h"
+            ]
+        }
+    ]
+}

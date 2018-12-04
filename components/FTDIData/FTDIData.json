@@ -1,0 +1,174 @@
+{
+    "Parts": [
+        {
+            "name": "FTDI_DATA",
+            "symbol": {
+                "ref": "circuito_FTDI_Data.svg"
+            },
+            "displayName": "SparkFun FTDI Basic Breakout - 5V",
+            "category": [
+                "supprt"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "FTDI5v.png",
+                    "link": "https://octopart.com/dev-09716-sparkfun-59720086",
+                    "price": "14.95",
+                    "SKU": "1568-1103-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "FTDI_DATA",
+            "path": "FTDIData",
+            "category": "support",
+            "blockId": "1514678",
+            "requires": [
+                [
+                    0,
+                    [
+                        "FTDI_DATA5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "FTDI_DATA3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "FTDI_DATA5v",
+            "path": "FTDIData",
+            "category": "support",
+            "blockId": "!1514678",
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ATMega328P"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "FTDI_DATA"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "CTS",
+                        "interface": {
+                            "provides":[["5v","CTS"]]
+                        }
+                    },
+                    {
+                        "name": "RX",
+                        "interface": {
+                            "provides":[["5v","RX"]]
+                        }
+                    },
+                    {
+                        "name": "TX",
+                        "interface": {
+                            "provides":[["5v","TX"]]
+                        }
+                    },
+                    {
+                        "name": "DTR",
+                        "interface": {
+                            "provides":[["5v","DTR"]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "FTDI_DATA3v3",
+            "path": "FTDIData",
+            "category": "support",
+            "blockId": "!1514678",
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ATMega328P"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "FTDI_DATA"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "CTS",
+                        "interface": {
+                            "provides":[["3.3v","CTS"]]
+                        }
+                    },
+                    {
+                        "name": "RX",
+                        "interface": {
+                            "provides":[["3.3v","RX"]]
+                        }
+                    },
+                    {
+                        "name": "TX",
+                        "interface": {
+                            "provides":[["3.3v","TX"]]
+                        }
+                    },
+                    {
+                        "name": "DTR",
+                        "interface": {
+                            "provides":[["3.3v","DTR"]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": []
+}

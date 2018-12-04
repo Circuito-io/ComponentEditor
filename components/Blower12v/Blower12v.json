@@ -1,0 +1,146 @@
+{
+    "Parts": [
+        {
+            "name": "Blower12v",
+            "symbol": {
+                "ref": "circuito_Blower - Squirrel Cage (12V).svg"
+            },
+            "displayName": "Blower - Squirrel Cage (12V)",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "11270.png",
+                    "link": "https://octopart.com/rl48-19%2F12-ebm-papst-43608",
+                    "price": "47.19",
+                    "SKU": "381-1148-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "Blower12v",
+            "path": "Blower12v",
+            "category": "output",
+            "blockId": "11270",
+            "app": {
+                "appName": "Blower - Squirrel Cage (12V)",
+                "numericName": "",
+                "shortName": "Blower",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>DC Blower rates 1Amp @ 12VDC.</p>\n",
+                "visible": false
+            },
+            "coders": [
+                "Blower12v"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "Blower12v"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Coil1",
+                        "interface": {
+                            "requires":[[0,["GndLoadSwitching","PWM"]]],
+                            "requiresLoad": 400,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Coil2",
+                        "interface": {
+                            "requires":[[1,["12v"]]],
+                            "requiresLoad": 400
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "Blower12v",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "snippetCode:": "    // The water pump will turn on and off for 2000ms (4 sec)\n    {{varname}}.on(); // 1. turns on\n    delay(2000);       // 2. waits 500 milliseconds (0.5 sec).\n    {{varname}}.off();// 3. turns off\n    delay(2000);       // 4. waits 500 milliseconds (0.5 sec).\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "Pump",
+                "ports": [
+                    "Coil1"
+                ],
+                "varname": "blower"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/Switchable.h",
+                "../Global/lib/Switchable.cpp"
+            ],
+            "includeHeaders": [
+                "Pump.h"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,274 @@
+{
+    "Parts": [
+        {
+            "name": "BTHC05",
+            "symbol": {
+                "ref": "circuito_HC - 05 Bluetooth Serial Module.svg"
+            },
+            "displayName": "HC - 05 Bluetooth Serial Module",
+            "category": [
+                "iot"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "2631981.png",
+                    "link": "https://octopart.com/755046-generic-90666402?r=sp&s=tsaKelx-SkulDRD3ay5yOg",
+                    "price": "3.76",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "BTHC05",
+            "path": "BTHC05",
+            "category": "input",
+            "blockId": "2631981",
+            "app": {
+                "appName": "HC - 05 Bluetooth Serial Module",
+                "numericName": "HC05",
+                "shortName": "Bluetooth",
+                "tags": [
+                    "connectivity"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>Acts like a bluetooth serial monitor. Enables the arduino to exchange data with other bluetooth devices such as PC or Android smartphone.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "BTHC05_HardwareSerial"
+                    ]
+                ],
+                [
+                    100,
+                    [
+                        "BTHC05_SoftwareSerial"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "BTHC05_HardwareSerial",
+            "path": "BTHC05",
+            "category": "input",
+            "blockId": "!2631981",
+            "coders": [
+                "BTHC05_HardwareSerial"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BTHC05"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RX",
+                        "to": "TXD"
+                    },
+                    {
+                        "from": "this.TX",
+                        "to": "RXD"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "TX",
+                        "interface": {
+                            "requires":[[0,["RX","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "RX",
+                        "interface": {
+                            "requires":[[0,["TX","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BTHC05_SoftwareSerial",
+            "path": "BTHC05",
+            "category": "input",
+            "blockId": "!2631981",
+            "coders": [
+                "BTHC05_SoftwareSerial"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BTHC05"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RX",
+                        "to": "TXD"
+                    },
+                    {
+                        "from": "this.TX",
+                        "to": "RXD"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SerialType",
+                        "interface": {
+                            "requires":[[0,["ESPSoftwareSerialTag"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "TXD",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialTX","5v"]],[10,["ESPSoftwareSerialTX1","5v"]],[2,["ESPSoftwareSerialTX","3.3v"]],[11,["ESPSoftwareSerialTX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "RXD",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]],[2,["ESPSoftwareSerialRX","3.3v"]],[11,["ESPSoftwareSerialRX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoNano"]],[7,["ArduinoGemma"]],[8,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "BTHC05_HardwareSerial",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "code": {
+                "setup:": "    {{varname}}.begin(9600);\n    //This example uses HC-05 Bluetooth to communicate with an Android device.\n    //Download bluetooth terminal from google play store, https://play.google.com/store/apps/details?id=Qwerty.BluetoothTerminal&hl=en\n    //Pair and connect to 'HC-05', the default password for connection is '1234'.\n    //You should see this message from your arduino on your android device\n    {{varname}}.println(\"Bluetooth On....\");\n",
+                "snippetCode:": "    String {{varname}}Str = \"\";\n    //Receive String from bluetooth device\n    if ({{varname}}.available())\n    {\n        //Read a complete line from bluetooth terminal\n        {{varname}}Str = {{varname}}.readStringUntil('\\n');\n        // Print raw data to serial monitor\n        Serial.print(\"BT Raw Data: \");\n        Serial.println({{varname}}Str);\n    }\n    //Send sensor data to Bluetooth device  \n    {{varname}}.println(\"PUT YOUR SENSOR DATA HERE\");"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "HardwareSerial&",
+                "custominit": "Serial1",
+                "varname": "bthc05"
+            }
+        },
+        {
+            "name": "BTHC05_SoftwareSerial",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "NodeMCU"
+            ],
+            "code": {
+                "setup:": "    {{varname}}.begin(9600);\n    //This example uses HC-05 Bluetooth to communicate with an Android device.\n    //Download bluetooth terminal from google play store, https://play.google.com/store/apps/details?id=Qwerty.BluetoothTerminal&hl=en\n    //Pair and connect to 'HC-05', the default password for connection is '1234'.\n    //You should see this message from your arduino on your android device\n    {{varname}}.println(\"Bluetooth On....\");\n",
+                "snippetCode:": "    String {{varname}}Str = \"\";\n    //Receive String from bluetooth device\n    if ({{varname}}.available())\n    {\n        //Read a complete line from bluetooth terminal\n        {{varname}}Str = {{varname}}.readStringUntil('\\n');\n        // Print raw data to serial monitor\n        Serial.print(\"BT Raw Data: \");\n        Serial.println({{varname}}Str);\n    }\n    //Send sensor data to Bluetooth device  \n    {{varname}}.println(\"PUT YOUR SENSOR DATA HERE\");"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "BTHC05",
+                "ports": [
+                    "RXD",
+                    "TXD"
+                ],
+                "varname": "bthc05"
+            },
+            "files": [
+                "lib/*"
+            ]
+        }
+    ]
+}

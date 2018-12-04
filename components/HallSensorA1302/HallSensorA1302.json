@@ -1,0 +1,213 @@
+{
+    "Parts": [
+        {
+            "name": "HallA1302",
+            "symbol": {
+                "ref": "circuito_A1302 Linear Hall Effect Sensor.svg"
+            },
+            "displayName": "A1302 Linear Hall Effect Sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "2331989.png",
+                    "link": "https://octopart.com/a1302kua-t-allegro+microsystems+llc-38944636?r=sp&s=NkZ89hb1QhiGU6ki_Iij5A",
+                    "price": "1.92",
+                    "SKU": "620-1022-ND"
+                }
+            ],
+            "info": {
+                "setup": "Mind the orientation of the hall sensor. The side with the writing on it should face you.",
+                "test": "Bring a magnet close to the sensor to see the readings change"
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "HallA1302",
+            "path": "HallSensorA1302",
+            "category": "input",
+            "blockId": "2331989",
+            "app": {
+                "appName": "Hall Sensor A1302",
+                "numericName": "A1302",
+                "shortName": " ",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>Analog linear hall effect sensor. It outputs voltage that is proportional to an applied magnetic field.</p>\n<p><strong>Returned Value</strong>: Analog values. After calibration, 0 - for no magnetic field. Value decreases with negative field and increases with positive filed present.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "HallA13025v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "HallA13023v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "HallA13025v",
+            "path": "HallSensorA1302",
+            "category": "input",
+            "blockId": "!2331989",
+            "coders": [
+                "HallA1302"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "HallA1302"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Vout",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Vcc",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "Gnd",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "HallA13023v3",
+            "path": "HallSensorA1302",
+            "category": "input",
+            "blockId": "!2331989",
+            "coders": [
+                "HallA1302"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "HallA1302"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Vout",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Vcc",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "Gnd",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "HallA1302",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "setup:": "    //Calibrate sensor\n    {{varname}}.calibrate();\n",
+                "snippetCode:": "    //Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\n    int {{varname}}Val = {{varname}}.getMeasurment();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "HallA1302",
+                "ports": [
+                    "Vout"
+                ],
+                "varname": "hallA"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/AnalogReader.h",
+                "../Global/lib/AnalogReader.cpp"
+            ],
+            "includeHeaders": [
+                "HallA1302.h"
+            ]
+        }
+    ]
+}

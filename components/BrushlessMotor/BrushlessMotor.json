@@ -1,0 +1,163 @@
+{
+    "Parts": [
+        {
+            "name": "BrushlessMotor",
+            "symbol": {
+                "ref": "circuito_A2212 Brushless Motor 1000KV (with 30A ESC).svg"
+            },
+            "displayName": "A2212 Brushless Motor 1000KV (with 30A ESC)",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "digikey",
+                    "image": "250754.png",
+                    "link": "http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313.TR0.TRC0.H0.XA2212+1000KV+Motor+Brushless+w%2F30A+ESC.TRS0&_nkw=A2212+1000KV+Motor+Brushless+w%2F30A+ESC&_sacat=0",
+                    "price": "8.96",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "BrushlessMotor",
+            "path": "BrushlessMotor",
+            "category": "output",
+            "blockId": "250754",
+            "app": {
+                "appName": "A2212 Brushless Motor 1000KV (with 30A ESC)",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>This Brushless Motor is great for R/C projects such as drones, RC car, and more. To run the motor, it needs to be attached to an ESC (electronic speed controller), that converts the servo-style interface into three-phase AC for driving the motor.</p>",
+                "visible": false
+            },
+            "coders": [
+                "BrushlessMotor"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BarrelJack12v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BrushlessMotor"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "+12V",
+                        "interface": {
+                            "requires":[[0,["12v"]]],
+                            "requiresLoad": 550
+                        }
+                    },
+                    {
+                        "name": "DATA",
+                        "interface": {
+                            "requires":[[0,["5v","PWM"]],[1,["3.3v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "GROUND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "BrushlessMotor",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "        const int {{varname}}LowSpeed = 1000;  //Starting speed\n        const int {{varname}}FastSpeed = 2000; //Top speed\n",
+                "constructors:": "        {{classname}} {{varname}};\n",
+                "setup:": "        // WARNING! DO NOT CONNECT THE PROPELLER UNDER TEST!\n        {{varname}}.attach({{DATA}});\n        {{varname}}.writeMicroseconds({{varname}}LowSpeed);\n",
+                "snippetCode:": "        // The motor will rotate, statrting from low speed to high speed gradually.\n        // WARNING! DO NOT CONNECT THE PROPELLER UNDER TEST!\n        // In order to reverse the motor direction disconnect the power from the circuit and replace any 2 of the 3 blue wires between the motor and the ESC (marked: 30A OPTO)\n        for(int {{varname}}RotationSpeed = {{varname}}LowSpeed; {{varname}}RotationSpeed <=  {{varname}}FastSpeed; {{varname}}RotationSpeed += 10)\n        {\n        {{varname}}.writeMicroseconds({{varname}}RotationSpeed);  // 2. spin the motor at the rated speed. This number gradually changes during the 'for' loop\n        Serial.println({{varname}}RotationSpeed);\n        delay(100);                              // 3. waits 100 milliseconds (0.1 sec). change the value in the brackets (100) for a longer or shorter delay in milliseconds.\n        }\n        for(int {{varname}}RotationSpeed = {{varname}}FastSpeed; {{varname}}RotationSpeed >=  {{varname}}LowSpeed; {{varname}}RotationSpeed -= 10)\n        {\n        {{varname}}.writeMicroseconds({{varname}}RotationSpeed);  // 2. spin the motor at the rated speed. This number gradually changes during the 'for' loop\n        Serial.println({{varname}}RotationSpeed);\n        delay(100);                              // 3. waits 100 milliseconds (0.1 sec). change the value in the brackets (100) for a longer or shorter delay in milliseconds.\n        }\n        {{varname}}.detach();                    // 4. release the brushless motor to conserve power and accidental operation."
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "Servo",
+                "ports": [
+                    "DATA"
+                ]
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "Servo.h"
+            ]
+        }
+    ]
+}

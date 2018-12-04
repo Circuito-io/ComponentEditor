@@ -1,0 +1,212 @@
+{
+    "Parts": [
+        {
+            "name": "MQ135",
+            "symbol": {
+                "ref": "circuito_MQ-135.svg"
+            },
+            "displayName": "Hazardous Gas  Sensor - MQ-135",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "digikey",
+                    "image": "398790.png",
+                    "link": "http://www.ebay.com/itm/MQ-2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Detection-Alarm-Sensor-Module-/112271187259?var=&hash=item1a23e25d3b:m:mCvQbSEnBoV7nWc_HNCUgqw",
+                    "price": "1.46",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "The pins order on the breakout might change, follow the pin labels rather than their order.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "MQ135",
+            "path": "MQ135",
+            "category": "input",
+            "blockId": "398790",
+            "app": {
+                "appName": "Hazardous Gas Sensor - MQ-135",
+                "numericName": "MQ135",
+                "shortName": "Hazardous Gas Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>The MQ-135 can detect a wide range of gases, including NH3, NOx, alcohol, benzene, smoke and CO2.</p>",
+                "visible": false
+            },
+            "requires": [
+                [
+                    1,
+                    [
+                        "MQ1355v"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "MQ1353v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "MQ1355v",
+            "path": "MQ135",
+            "category": "input",
+            "blockId": "!398790",
+            "coders": [
+                "MQ135"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ135"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "AOUT",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "MQ1353v3",
+            "path": "MQ135",
+            "category": "input",
+            "blockId": "!398790",
+            "coders": [
+                "MQ1353v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ135"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "470"
+                    },
+                    {
+                        "name": "r2",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.GND",
+                        "to": "r2.con1"
+                    },
+                    {
+                        "from": "r2.con0",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.AOUT",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "Aout"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Aout",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "MQ135",
+            "supportedControllers": []
+        },
+        {
+            "name": "MQ1353v3",
+            "supportedControllers": []
+        }
+    ]
+}

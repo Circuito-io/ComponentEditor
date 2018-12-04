@@ -1,0 +1,234 @@
+{
+    "Parts": [
+        {
+            "name": "SlideSwitch",
+            "symbol": {
+                "ref": "circuito_Breadboard-friendly SPDT Slide Switch.svg"
+            },
+            "displayName": "SPDT Slide Switch (Breadboard-friendly)",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "166716.png",
+                    "link": "https://octopart.com/eg1218-e-switch-1056201",
+                    "price": "0.58",
+                    "SKU": "EG1903-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "SlideSwitch",
+            "path": "SlideSwitch",
+            "category": "input",
+            "blockId": "166716",
+            "app": {
+                "appName": "SPDT Slide Switch (Breadboard-friendly)",
+                "numericName": "",
+                "shortName": "Slide Switch",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>This is a simple SPDT Slide Switch that fits great to a breadboard, it can be used as on/off switches or selector switch.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "SlideSwitch5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "SlideSwitch3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "SlideSwitch5v",
+            "path": "SlideSwitch",
+            "category": "input",
+            "blockId": "!166716",
+            "coders": [
+                "SlideSwitch"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "SlideSwitch"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "10k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.2",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "1",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "2",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "SlideSwitch3v3",
+            "path": "SlideSwitch",
+            "category": "input",
+            "blockId": "!166716",
+            "coders": [
+                "SlideSwitch"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "SlideSwitch"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.2",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "1",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "2",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "SlideSwitch",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "setup:": "    {{varname}}.init();\n",
+                "snippetCode:": "        //read Slide Switch state. \n        //if Switch is open function will return LOW (0). \n        //if it is closed function will return HIGH (1).\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "Button",
+                "ports": [
+                    "2"
+                ],
+                "varname": "switch"
+            },
+            "files": [
+                "../Global/lib/Button.h",
+                "../Global/lib/Button.cpp"
+            ]
+        }
+    ]
+}

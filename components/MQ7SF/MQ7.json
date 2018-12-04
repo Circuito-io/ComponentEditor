@@ -1,0 +1,306 @@
+{
+    "Parts": [
+        {
+            "name": "MQ7SF",
+            "symbol": {
+                "ref": "circuito_Gas Sensor Breakout.svg"
+            },
+            "displayName": "Carbon Monoxide Sensor - MQ-7",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9403.png",
+                    "link": "https://octopart.com/fit0227-dfrobot-77801145?r=sp&s=U5-MXUoKSnmDEo1dPNoYug",
+                    "price": "5.99",
+                    "SKU": "605-00007-ND"
+                }
+            ],
+            "info": {
+                "setup": "The part requires soldering its breakout PCB",
+                "test": ""
+            },
+            "headers": [
+                4,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": true,
+                "row": 3,
+                "rotation": 0
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "MQ7SF",
+            "path": "MQ7SF",
+            "category": "input",
+            "blockId": "9403",
+            "app": {
+                "appName": "Sparkfun Carbon Monoxide Sensor - MQ-7",
+                "numericName": "MQ7",
+                "shortName": "Sparkfun Carbon Monoxide Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>Measures CO levels in the air. It senses anywhere from 20 to 2000 parts per million.<br><strong>Returned values</strong>: from 0 (low levels of CO) to 1023 (high levels of CO).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    1,
+                    [
+                        "MQ7SF5v"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "MQ7SF3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "MQ7SF5v",
+            "path": "MQ7SF",
+            "category": "input",
+            "blockId": "!9403",
+            "coders": [
+                "MQ7SF5v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ7SF"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "10k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.B1",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "this.GND",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.A1",
+                        "to": "this.H1"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "B1",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "H1",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "MQ7SF3v3",
+            "path": "MQ7SF",
+            "category": "input",
+            "blockId": "!9403",
+            "coders": [
+                "MQ7SF3v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ7SF"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "10k"
+                    },
+                    {
+                        "name": "r2",
+                        "part": "Resistor",
+                        "properties": "470"
+                    },
+                    {
+                        "name": "r3",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.B1",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "this.GND",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.A1",
+                        "to": "this.H1"
+                    },
+                    {
+                        "from": "this.GND",
+                        "to": "r3.con1"
+                    },
+                    {
+                        "from": "r3.con0",
+                        "to": "r2.con1"
+                    },
+                    {
+                        "from": "this.B1",
+                        "to": "r2.con0"
+                    },
+                    {
+                        "from": "r2.con1",
+                        "to": "Aout"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Aout",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "H1",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "MQ7SF5v",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "code": {
+                "snippetCode:": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "MQ7",
+                "ports": [
+                    "B1"
+                ],
+                "varname": "mq7"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/AnalogReader.h",
+                "../Global/lib/AnalogReader.cpp"
+            ],
+            "includeHeaders": [
+                "MQ7.h"
+            ]
+        },
+        {
+            "name": "MQ7SF3v3",
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "snippetCode:": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "MQ7",
+                "ports": [
+                    "Aout"
+                ],
+                "varname": "mq7"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/AnalogReader.h",
+                "../Global/lib/AnalogReader.cpp"
+            ],
+            "includeHeaders": [
+                "MQ7.h"
+            ]
+        }
+    ]
+}

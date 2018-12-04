@@ -1,0 +1,360 @@
+{
+    "Parts": [
+        {
+            "name": "RotaryEncoder",
+            "symbol": {
+                "ref": "circuito_Rotary Encoder Module.svg"
+            },
+            "displayName": "Rotary Encoder Module",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "217614.png",
+                    "link": "https://octopart.com/a16040700ux0403-newegg+business-94327012?r=sp&s=4aVaFC6TTR-ZykZswGfXcg",
+                    "price": "4.79",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "RotaryEncoder",
+            "path": "RotaryEncoder",
+            "category": "input",
+            "blockId": "217614",
+            "app": {
+                "appName": "Rotary Encoder",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>Rotary encoders can be used similarly to potentiometers. The difference being that an encoder has full rotation without limits.<br><strong>Returned values</strong>: absolute position (integer).</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "RotaryEncoderInt"
+                    ]
+                ],
+                [
+                    100,
+                    [
+                        "RotaryEncoderDigital"
+                    ]
+                ],
+                [
+                    100,
+                    [
+                        "RotaryEncoderInt3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "RotaryEncoderInt",
+            "path": "RotaryEncoder",
+            "category": "input",
+            "blockId": "!217614",
+            "coders": [
+                "RotaryEncoderInt"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RotaryEncoder"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]],[1,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "CLK",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "D",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S1",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["NodeMCU"]],[7,["ArduinoProMini3v3"]],[8,["ESP32DevKitC"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "RotaryEncoderDigital",
+            "path": "RotaryEncoder",
+            "category": "input",
+            "blockId": "!217614",
+            "coders": [
+                "RotaryEncoderDigital"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RotaryEncoder"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]],[1,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "CLK",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "D",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]],[50,["5v","DigitalIn"]],[1,["3.3v","DigitalIn","Int"]],[51,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S1",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[8,["ESP32DevKitC"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "RotaryEncoderInt3v3",
+            "path": "RotaryEncoder",
+            "category": "input",
+            "blockId": "!217614",
+            "supportedControllers": [
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RotaryEncoder"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "CLK",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "D",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S1",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["RPI3B"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "RotaryEncoderInt",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "code": {
+                "global:": "    long {{varname}}OldPosition  = 0;\n",
+                "constructors:": "    {{classname}} {{varname}}({{D}},{{CLK}});\n    Button {{varname}}Button({{S1}});\n",
+                "setup:": "    {{varname}}Button.init();\n    pinMode({{S1}}, INPUT_PULLUP);\n",
+                "snippetCode:": "    //Read encoder new position\n    long {{varname}}NewPosition = {{varname}}.read();\n    bool {{varname}}ButtonVal = {{varname}}Button.onPress();\n",
+                "": "        {{varname}}OldPosition = {{varname}}NewPosition;\n        Serial.print(F(\"Pos: \"));\n        Serial.print({{varname}}NewPosition);\n        Serial.print(F(\"\\tButton: \"));\n        Serial.println({{varname}}ButtonVal);\n      }\n"
+            },
+            "license": "Free",
+            "instantiate": {
+                "classname": "Encoder",
+                "ports": [
+                    "D",
+                    "CLK",
+                    "S1"
+                ],
+                "varname": "rotaryEncI"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/Button.h",
+                "../Global/lib/Button.cpp",
+                "../Global/lib/Button_license.txt"
+            ],
+            "includeHeaders": [
+                "Encoder.h",
+                "Button.h"
+            ]
+        },
+        {
+            "name": "RotaryEncoderDigital",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "code": {
+                "global:": "    long {{varname}}OldPosition  = 0;\n",
+                "constructors:": "    {{classname}} {{varname}}({{D}},{{CLK}});\n    Button {{varname}}Button({{S1}});\n",
+                "setup:": "    {{varname}}Button.init();\n    pinMode({{S1}}, INPUT_PULLUP);\n",
+                "snippetCode:": "    //Read encoder new position\n    long {{varname}}NewPosition = {{varname}}.read();\n    bool {{varname}}ButtonVal = {{varname}}Button.onPress();\n",
+                "": "        {{varname}}OldPosition = {{varname}}NewPosition;\n        Serial.print(F(\"Pos: \"));\n        Serial.print({{varname}}NewPosition);\n        Serial.print(F(\"\\tButton: \"));\n        Serial.println({{varname}}ButtonVal);\n      }\n"
+            },
+            "license": "Free",
+            "instantiate": {
+                "classname": "Encoder",
+                "ports": [
+                    "D",
+                    "CLK",
+                    "S1"
+                ],
+                "varname": "rotaryEncD"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/Button.h",
+                "../Global/lib/Button.cpp",
+                "../Global/lib/Button_license.txt"
+            ],
+            "includeHeaders": [
+                "Encoder.h",
+                "Button.h"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "Parts": [
+        {
+            "name": "BME680",
+            "symbol": {
+                "ref": "circuito_Adafruit BME680 - Temperature, Humidity, Pressure and Gas Sensor.svg"
+            },
+            "displayName": "BME680 Temperature, Humidity, Pressure and Gas sensor",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "164792.png",
+                    "link": "https://octopart.com/3660-adafruit+industries-87770758?r=sp&s=UNURwetxS2m202dQlKJGWg",
+                    "price": "22.50",
+                    "SKU": "1528-2444-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "BME680",
+            "path": "BME680",
+            "category": "input",
+            "blockId": "164792",
+            "app": {
+                "appName": "BME680 Temperature, Humidity, Pressure and Gas sensor",
+                "numericName": "BME680",
+                "shortName": "BME680-TempHumiPressGas",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>This sensnor can measure Temperature, Humidity, Pressure and Gas. The gas sensor detects the volatile organic compounds (VOC) in the air, but it can not distinguish between different gasses. It is recommended to calibrate it, if you wish to use the gas sensor.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "BME680-5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BME680-3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "BME680-3v3",
+            "path": "BME680",
+            "category": "input",
+            "blockId": "!164792",
+            "coders": [
+                "BME680"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BME680"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SCK",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "SDI",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BME680-5v",
+            "path": "BME680",
+            "category": "input",
+            "blockId": "!164792",
+            "coders": [
+                "BME680"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BME680"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SCK",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "SDI",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "BME680",
+            "supportedControllers": []
+        }
+    ]
+}

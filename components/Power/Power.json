@@ -1,0 +1,1631 @@
+{
+    "Parts": [
+        {
+            "name": "USBPowerMiniWithFTDI",
+            "bomAux": [
+                "FTDI3.3v"
+            ]
+        },
+        {
+            "name": "PowerSupply12v",
+            "symbol": {
+                "ref": "circuito_barrel_jack_male.svg"
+            },
+            "displayName": "Wall Adapter Power Supply - 12VDC 2A",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9442.png",
+                    "link": "https://octopart.com/psac24a-120l6-phihong-61942151",
+                    "price": "15.77",
+                    "SKU": "993-1342-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "USBPowerB",
+            "symbol": {
+                "ref": "circuito_USB type B cable.svg"
+            },
+            "displayName": "USB Cable A to B",
+            "category": [
+                "support"
+            ],
+            "desc": "A standard A to B type USB cable.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "512.png",
+                    "link": "https://octopart.com/3021007-06-qualtek-1434101",
+                    "price": "3.26",
+                    "SKU": "Q364-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "USBPowerMicro",
+            "symbol": {
+                "ref": "circuito_USB micro cable.svg"
+            },
+            "displayName": "Wall Power - 5VDC 2.5A for Raspberry PI",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9443.png",
+                    "link": "https://octopart.com/t5989dv-raspberry+pi-75480606",
+                    "price": "14.37",
+                    "SKU": "1690-1022-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "USBPowerMini",
+            "symbol": {
+                "ref": "circuito_USB Mini cable.svg"
+            },
+            "displayName": "USB Mini-B Cable - 6 Foot",
+            "category": [
+                "support"
+            ],
+            "desc": "A standard Mini USB cable.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "514.png",
+                    "link": "https://octopart.com/3021009-06-qualtek-861525",
+                    "price": "3.11",
+                    "SKU": "Q365-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "BarrelJack",
+            "symbol": {
+                "ref": "circuito_BarrelJackTerminalFemale.svg"
+            },
+            "displayName": "Female DC Power adapter - 2.1mm jack to screw terminal block",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "BarrelJackTerminalFemale.png",
+                    "link": "https://octopart.com/368-adafruit+industries-32978560?r=sp&s=suQ5EEQ7RgmfJqCzy-ElxQ",
+                    "price": "2.00",
+                    "SKU": "1528-1386-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "LD1117",
+            "symbol": {
+                "ref": "circuito_Voltage Regulator 3.3v.svg"
+            },
+            "displayName": "Voltage Regulator 3.3v",
+            "category": [
+                "support"
+            ],
+            "desc": "Voltage regulators get a range of voltages as its input and produces a single and steady voltage as output.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "LD11173v3.png",
+                    "link": "https://octopart.com/ld1117v33-stmicroelectronics-526800",
+                    "price": "0.55",
+                    "SKU": "497-1491-5-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "L7805",
+            "symbol": {
+                "ref": "circuito_Voltage Regulator 5v.svg"
+            },
+            "displayName": "Voltage Regulator 5v",
+            "category": [
+                "support"
+            ],
+            "desc": "Voltage regulators get a range of voltages as its input and produces a single and steady voltage as output.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "L7805.png",
+                    "link": "https://octopart.com/l7805cv-stmicroelectronics-39670767",
+                    "price": "0.5",
+                    "SKU": "497-1443-5-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "LipoBattery7v4",
+            "symbol": {
+                "ref": "circuito_Lithium Polymer Battery - 7.4v.svg"
+            },
+            "displayName": "Lithium Polymer Battery - 7.4v",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "11856.png",
+                    "link": "https://octopart.com/search?r=sp&s=LfRvzrKFStGUnzfa9U989w&q=PRT-11856&start=0",
+                    "price": "15.95",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "LipoBattery3v7",
+            "symbol": {
+                "ref": "circuito_Lithium Polymer Battery - 3.7v.svg"
+            },
+            "displayName": "Lithium Polymer Battery - 3.7v",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "13813.png",
+                    "link": "https://octopart.com/prt-13813-sparkfun-76382069",
+                    "price": "9.95",
+                    "SKU": "1568-1492-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "StepUp5v",
+            "symbol": {
+                "ref": "circuito_LipoStepUp.svg"
+            },
+            "displayName": "Lipo Battery Charger Module 3.7v Step Up to 5v",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "digikey",
+                    "image": "StepUp5v.png",
+                    "link": "http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H0.Xlipo+battery+step+up+3.7v.TRS0&_nkw=lipo+battery+step+up+3.7v&_sacat=0",
+                    "price": "6",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "PowerBankUSB5v",
+            "symbol": {
+                "ref": "circuito_PowerBank.svg"
+            },
+            "displayName": "Power Bank USB - 5v 10000mAh",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "783869.png",
+                    "link": "https://octopart.com/1566-adafruit+industries-32978430",
+                    "price": "39.95",
+                    "SKU": "1528-1856-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Battery9v",
+            "symbol": {
+                "ref": "circuito_9V.svg"
+            },
+            "displayName": "9v Battery",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "10218.png",
+                    "link": "https://octopart.com/6lf22xwa%2Fb-panasonic-52855064",
+                    "price": "1.88",
+                    "SKU": "P687-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Battery4xAA",
+            "symbol": {
+                "ref": "circuito_4xAA.svg"
+            },
+            "displayName": "Battery Holder - 4xAA",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "12083.png",
+                    "link": "https://octopart.com/sbh341a-mpd-6644376",
+                    "price": "1.74",
+                    "SKU": "SBH341A-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Battery8xAA",
+            "symbol": {
+                "ref": "circuito_8xAA.svg"
+            },
+            "displayName": "Battery Holder - 8xAA - 12V",
+            "category": [
+                "power"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "783868.png",
+                    "link": "https://octopart.com/875-adafruit+industries-32978951",
+                    "price": "5.95",
+                    "SKU": "1528-1165-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "PowerBankUSB5v",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "783869",
+            "app": {
+                "appName": "Power Bank USB - 5v 10000mAh",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A large-sized rechargeable battery pack for your Raspberry Pi. Inside is a massive 10,000mAh lithium ion battery, a charging circuit  and two boost converters that provide 5VDC, 1A and 2A each via a USB A port.<br>This part can only be used with Raspberry Pi.</p>",
+                "visible": false
+            },
+            "altComp": [
+                100,
+                "PowerSupply5vUSBMicro"
+            ],
+            "supportedControllers": [
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "PowerBankUSB5v",
+                        "rotation": 90
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v","USB"]],
+                            "providesLoad": 10000
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "USB_MICRO",
+                        "interface": {
+                            "requires":[[0,["USB_MICRO"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["RPI3B"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "NONE",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "StepUp12V",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "Reg3.3v",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LD1117"
+                    },
+                    {
+                        "name": "capin",
+                        "pos": "0,120",
+                        "part": "CapacitorCeramic",
+                        "properties": "100nF"
+                    },
+                    {
+                        "name": "capout",
+                        "pos": "20,80",
+                        "part": "CapacitorElectro",
+                        "properties": "10uF"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.Vin",
+                        "to": "capin.con0"
+                    },
+                    {
+                        "from": "this.0",
+                        "to": "capin.con1"
+                    },
+                    {
+                        "from": "this.Vout",
+                        "to": "capout.pos"
+                    },
+                    {
+                        "from": "this.0",
+                        "to": "capout.neg"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Vout",
+                        "interface": {
+                            "provides":[["3.3v"]],
+                            "providesLoad": 800
+                        }
+                    },
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[1,["6v"]],[2,["5v"]],[4,["9v"]],[5,["12v"]],[6,["7.4v"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Reg5v",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "L7805"
+                    },
+                    {
+                        "name": "capin",
+                        "pos": "0,120",
+                        "part": "CapacitorCeramic",
+                        "properties": "100nF"
+                    },
+                    {
+                        "name": "capout",
+                        "pos": "20,80",
+                        "part": "CapacitorElectro",
+                        "properties": "1uF"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.Vin",
+                        "to": "capin.con0"
+                    },
+                    {
+                        "from": "this.0",
+                        "to": "capin.con1"
+                    },
+                    {
+                        "from": "this.Vout",
+                        "to": "capout.pos"
+                    },
+                    {
+                        "from": "this.0",
+                        "to": "capout.neg"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Vout",
+                        "interface": {
+                            "provides":[["5v"]],
+                            "providesLoad": 1500
+                        }
+                    },
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["9v"]],[1,["12v"]],[2,["7.4v"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Battery4xAA_BarrelJack",
+            "path": "Power",
+            "category": "power",
+            "blockId": "9835",
+            "requires":[[0,["Battery4xAA"]]],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "Battery4xAA",
+            "path": "Power",
+            "category": "power",
+            "blockId": "12083",
+            "app": {
+                "appName": "Battery Holder 4xAA",
+                "numericName": "",
+                "shortName": "4xAA Batteries",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Use for circuits that require porting. Also contains a switch which allows you to turn the circuit power on and off easily..</p>\n",
+                "visible": false
+            },
+            "altComp": [
+                100,
+                "Battery8xAA"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "Battery4xAA"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["6v"]],
+                            "providesLoad": 600
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "PowerType",
+                        "interface": {
+                            "provides":[["Battery"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Battery9v",
+            "path": "Power",
+            "category": "power",
+            "blockId": "10218",
+            "app": {
+                "appName": "9V Alkaline Battery",
+                "numericName": "",
+                "shortName": "9V Battery",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
+                "visible": false
+            },
+            "altComp": [
+                100,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "Battery9v"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["9v"]],
+                            "providesLoad": 1000
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "PowerType",
+                        "interface": {
+                            "provides":[["Battery"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Battery8xAA",
+            "path": "Power",
+            "category": "power",
+            "blockId": "783868",
+            "app": {
+                "appName": "Battery Holder - 8xAA - 12V",
+                "numericName": "",
+                "shortName": "8xAA Batteries",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
+                "visible": false
+            },
+            "requires":[[0,["NONE"]],[1,["BarrelJack12v"]]],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "Battery8xAA"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "POS",
+                        "interface": {
+                            "provides":[["12v"]],
+                            "providesLoad": 2000
+                        }
+                    },
+                    {
+                        "name": "NEG",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "PowerType",
+                        "interface": {
+                            "provides":[["Battery"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "PowerSupply5v",
+            "path": "Power",
+            "category": "power",
+            "requires":[[0,["PowerSupply5v2A"]],[5,["PowerSupply5v5A"]]],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "PowerSupply5v2A",
+            "path": "Power",
+            "category": "power",
+            "requires":[[0,["NONE"]],[1,["BarrelJack5v"]]],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "PowerSupply5v5A",
+            "path": "Power",
+            "category": "power",
+            "requires":[[0,["NONE"]],[1,["BarrelJack5v"]]],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "PowerSupply12v",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "9442",
+            "app": {
+                "appName": "Wall Power - 12VDC 2A",
+                "numericName": "",
+                "shortName": "12V Wall Power",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
+                "visible": false
+            },
+            "requires":[[0,["NONE"]],[1,["BarrelJack12v"]]],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "PowerSupply12v"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["12v","Barrel"]],
+                            "providesLoad": 2000
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","Barrel"]]
+                        }
+                    },
+                    {
+                        "name": "BARREL_JACK",
+                        "interface": {
+                            "requires":[[0,["BARREL_JACK"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "PowerSupply12vExt",
+            "path": "Power",
+            "category": [
+                "powerConnector",
+                "support"
+            ],
+            "blockId": "9444",
+            "app": {
+                "appName": "Wall Power - 12VDC 2A",
+                "numericName": "",
+                "shortName": "12V Wall Power",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
+                "visible": true
+            },
+            "requires":[[0,["NONE"]],[1,["BarrelJack12v"]]],
+            "supportedControllers": [
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "PowerSupply12v"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["12v","Barrel"]],
+                            "providesLoad": 2000
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","Barrel"]]
+                        }
+                    },
+                    {
+                        "name": "BARREL_JACK",
+                        "interface": {
+                            "requires":[[0,["BARREL_JACK"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["RPI3B"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "PowerSupply5vUSBMicro",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "9443",
+            "app": {
+                "appName": "Wall Power - 5VDC 2.5A for Raspberry PI",
+                "numericName": "",
+                "shortName": "5V Wall Power",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A 5V2.5A power supply for your Raspberry PI. Works with 90-264VAC inputs. The most reliable and most likely to work well with Raspberry PI. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.<br>This part can only be used with Raspberry Pi.</p>\n",
+                "visible": false
+            },
+            "supportedControllers": [
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "USBPowerMicro"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v","USB"]],
+                            "providesLoad": 2500
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "USB_MICRO",
+                        "interface": {
+                            "requires":[[0,["USB_MICRO"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["RPI3B"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BarrelJack5v",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BarrelJack",
+                        "rotation": 180
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v"]],
+                            "redirectLoad": "posIn"
+                        }
+                    },
+                    {
+                        "name": "posIn",
+                        "interface": {
+                            "requires":[[0,["5v","Barrel"]]]
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND"]]
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "negIn",
+                        "interface": {
+                            "requires":[[0,["GND","Barrel"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BarrelJack12v",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BarrelJack",
+                        "rotation": 180
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["12v"]],
+                            "providesLoad": 2000
+                        }
+                    },
+                    {
+                        "name": "posIn",
+                        "interface": {
+                            "requires":[[0,["12v","Barrel"]]]
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "negIn",
+                        "interface": {
+                            "requires":[[0,["GND","Barrel"]]]
+                        }
+                    },
+                    {
+                        "name": "BARREL_JACK",
+                        "interface": {
+                            "provides":[["BARREL_JACK"]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "USBPowerB",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "512",
+            "app": {
+                "appName": "USB Cable A to B - 6 Foot",
+                "numericName": "",
+                "shortName": "USB",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A standard USB cable to power your circuit from your computer or a USB socket.</p>\n",
+                "visible": false
+            },
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ArduinoMega",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "USBPowerB"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v","USB"]],
+                            "providesLoad": 400
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "USB_B",
+                        "interface": {
+                            "requires":[[0,["USB_B"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "USBPowerMicro",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "513",
+            "app": {
+                "appName": "Micro USB Cable",
+                "numericName": "",
+                "shortName": "Micro USB",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A standard Micro USB cable to power your circuit from your computer or a USB socket.</p>\n",
+                "visible": false
+            },
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMicro",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "USBPowerMicro"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v","USB"]],
+                            "providesLoad": 400
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "USB_MICRO",
+                        "interface": {
+                            "requires":[[0,["USB_MICRO"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMicro"]],[1,["NodeMCU"]],[2,["ArduinoLeonardo"]],[3,["ArduinoGemma"]],[9,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "USBPowerMiniFirst",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "514",
+            "app": {
+                "appName": "Mini USB Cable",
+                "numericName": "",
+                "shortName": "Mini USB",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A standard Mini USB cable to power your circuit from your computer or a USB socket.</p>\n",
+                "visible": false
+            },
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "requires":[[1,["USBPowerMiniWithFTDI5v"]],[2,["USBPowerMiniWithFTDI3v3"]],[3,["USBPowerMini"]]],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "USBPowerMiniWithFTDI5v",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "!514",
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini5v"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "USBPowerMiniWithFTDI"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v","USB"]],
+                            "providesLoad": 400
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "FTDI",
+                        "interface": {
+                            "requires":[[0,["FTDI"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini5v"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "USBPowerMiniWithFTDI3v3",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "!514",
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "USBPowerMiniWithFTDI"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["3.3v","USB"]],
+                            "providesLoad": 400
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "FTDI",
+                        "interface": {
+                            "requires":[[0,["FTDI"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "USBPowerMini",
+            "path": "Power",
+            "category": "powerConnector",
+            "blockId": "!514",
+            "altComp": [
+                150,
+                "PowerSupply12v"
+            ],
+            "supportedControllers": [
+                "ArduinoNano"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "USBPowerMini"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "pos",
+                        "interface": {
+                            "provides":[["5v","USB"]],
+                            "providesLoad": 400
+                        }
+                    },
+                    {
+                        "name": "neg",
+                        "interface": {
+                            "provides":[["GND","USB"]]
+                        }
+                    },
+                    {
+                        "name": "USB_MINI",
+                        "interface": {
+                            "requires":[[0,["USB_MINI"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoNano"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "LipoBattery7v4",
+            "path": "Power",
+            "category": "power",
+            "blockId": "11856",
+            "app": {
+                "appName": "Lithium Polymer Battery 7.4v",
+                "numericName": "",
+                "shortName": "LiPo Battery 7.4V",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
+                "visible": false
+            },
+            "altComp": [
+                100,
+                "Battery8xAA"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LipoBattery7v4"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "provides":[["7.4v"]],
+                            "providesLoad": 5000
+                        }
+                    },
+                    {
+                        "name": "PowerType",
+                        "interface": {
+                            "provides":[["Battery"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "LipoBattery3v7",
+            "path": "Power",
+            "category": "power",
+            "blockId": "13813",
+            "app": {
+                "appName": "Lithium Polymer Battery 3.7v",
+                "numericName": "",
+                "shortName": "LiPo Battery 3.7V",
+                "tags": [
+                    "powerSupplies"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "none",
+                    "solder": "false"
+                },
+                "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has one cell and outputs 3.7V.\n",
+                "visible": false
+            },
+            "altComp": [
+                100,
+                "LipoBattery7v4"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LipoBattery3v7"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "provides":[["GND","Battery"]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "provides":[["3.7v","Battery"]],
+                            "providesLoad": 5000
+                        }
+                    },
+                    {
+                        "name": "PowerType",
+                        "interface": {
+                            "provides":[["Battery"]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[2,["ArduinoGemma"]],[3,["NodeMCU"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "StepUp5v",
+            "path": "Power",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "StepUp5v"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.OUT5v-",
+                        "to": "this.BAT-"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "OUT5v-",
+                        "interface": {
+                            "requires":[[1,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "OUT5v+",
+                        "interface": {
+                            "provides":[["5v"]],
+                            "providesLoad": 1000
+                        }
+                    },
+                    {
+                        "name": "BAT+",
+                        "interface": {
+                            "requires":[[0,["3.7v","Battery"]],[1,["3.7v"]]]
+                        }
+                    },
+                    {
+                        "name": "BAT-",
+                        "interface": {
+                            "requires":[[0,["GND","Battery"]],[1,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "PowerType",
+                        "interface": {
+                            "requires":[[0,["Battery"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": []
+}

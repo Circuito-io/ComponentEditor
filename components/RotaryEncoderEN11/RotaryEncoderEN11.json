@@ -1,0 +1,220 @@
+{
+    "Parts": [
+        {
+            "name": "RotaryEncoderEN11",
+            "symbol": {
+                "ref": "circuito_RotaryEncoder.svg"
+            },
+            "displayName": "Rotary Encoder",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "860025.png",
+                    "link": "https://octopart.com/en11-hsm1af15-bi+technologies-7730422",
+                    "price": "1.22",
+                    "SKU": "987-1188-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true,
+                "row": 3,
+                "rotation": 0
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "RotaryEncoderEN11",
+            "path": "RotaryEncoderEN11",
+            "category": "input",
+            "blockId": "860025",
+            "app": {
+                "appName": "Rotary Encoder EN11",
+                "numericName": "",
+                "shortName": "Rotary Encoder",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>Rotary encoders can be used similarly to potentiometers. The difference being that an encoder has full rotation without limits.<br><strong>Returned values</strong>: absolute position (integer).</p>\n",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "RotaryEncoderEN11Int"
+                    ]
+                ],
+                [
+                    100,
+                    [
+                        "RotaryEncoderEN11Digital"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "RotaryEncoderEN11Int",
+            "path": "RotaryEncoderEN11",
+            "category": "input",
+            "blockId": "!860025",
+            "coders": [
+                "RotaryEncoderEN11"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RotaryEncoderEN11"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "A",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "B",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "SW",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND2",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["NodeMCU"]],[7,["ArduinoProMini3v3"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "RotaryEncoderEN11Digital",
+            "path": "RotaryEncoderEN11",
+            "category": "input",
+            "blockId": "!860025",
+            "coders": [
+                "RotaryEncoderEN11"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RotaryEncoderEN11"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "A",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "B",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]],[50,["5v","DigitalIn"]],[1,["3.3v","DigitalIn","Int"]],[51,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "SW",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND2",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "RotaryEncoderEN11",
+            "supportedControllers": []
+        }
+    ]
+}

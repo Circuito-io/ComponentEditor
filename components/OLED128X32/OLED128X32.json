@@ -1,0 +1,238 @@
+{
+    "Parts": [
+        {
+            "name": "OLED128X32",
+            "symbol": {
+                "ref": "circuito_I2C OLED.svg"
+            },
+            "displayName": "Monochrome 128x32 I2C OLED graphic display",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "985157.png",
+                    "link": "https://octopart.com/931-adafruit+industries-32978997",
+                    "price": "17.5",
+                    "SKU": "1528-1169-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "OLED128X32",
+            "path": "OLED128X32",
+            "category": "output",
+            "blockId": "985157",
+            "app": {
+                "appName": "Monochrome 128x32 I2C OLED graphic display",
+                "numericName": "",
+                "shortName": "OLED",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>This is a 1-inch diagonal OLED Breakout Board. It communicates via I2C, and altough it's small this OLED is very readable due to the high contrast.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "OLED128X32-5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "OLED128X32-3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "OLED128X32-5v",
+            "path": "OLED128X32",
+            "category": "output",
+            "blockId": "!985157",
+            "coders": [
+                "OLED128X32"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "OLED128X32"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "RST",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "OLED128X32-3v3",
+            "path": "OLED128X32",
+            "category": "output",
+            "blockId": "!985157",
+            "coders": [
+                "OLED128X32"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "OLED128X32"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "RST",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "OLED128X32",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "globals:": "",
+                "constructors:": "    #define SSD1306_LCDHEIGHT 32\n    {{classname}} {{varname}}({{RST}});\n",
+                "setup:": "    {{varname}}.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)\n    {{varname}}.clearDisplay(); // Clear the buffer.\n    {{varname}}.display();\n",
+                "snippetCode:": "    {{varname}}.setTextSize(1);\n    {{varname}}.setTextColor(WHITE);\n    {{varname}}.setCursor(0, 10);\n    {{varname}}.clearDisplay();\n    {{varname}}.println(\"Circuito.io Rocks!\");\n    {{varname}}.display();\n    delay(1);\n    {{varname}}.startscrollright(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();\n    delay(1000);\n    {{varname}}.startscrollleft(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();"
+            },
+            "license": "BSD",
+            "instantiate": {
+                "classname": "Adafruit_SSD1306",
+                "ports": [
+                    "RST"
+                ],
+                "varname": "oLed128x32"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "Wire.h",
+                "SPI.h",
+                "Adafruit_SSD1306.h",
+                "Adafruit_GFX.h"
+            ]
+        }
+    ]
+}

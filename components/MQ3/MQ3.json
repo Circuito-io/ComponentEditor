@@ -1,0 +1,212 @@
+{
+    "Parts": [
+        {
+            "name": "MQ3",
+            "symbol": {
+                "ref": "circuito_MQ3.svg"
+            },
+            "displayName": "Alcohol Gas Sensor - MQ-3",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "digikey",
+                    "image": "398783.png",
+                    "link": "http://www.ebay.com/itm/MQ-2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Detection-Alarm-Sensor-Module-/112271187259?var=&hash=item1a23e25d3b:m:mCvQbSEnBoV7nWc_HNCUgqw",
+                    "price": "1.45",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "The pins order on the breakout might change, follow the pin labels rather than their order.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "MQ3",
+            "path": "MQ3",
+            "category": "input",
+            "blockId": "398783",
+            "app": {
+                "appName": "Alcohol Gas Sensor - MQ-3",
+                "numericName": "MQ3",
+                "shortName": "Alcohol and gas sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>This alcohol sensor is suitable for detecting alcohol concentration on your breath, just like your common breathalyzer.</p>",
+                "visible": false
+            },
+            "requires": [
+                [
+                    1,
+                    [
+                        "MQ35v"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "MQ33v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "MQ35v",
+            "path": "MQ3",
+            "category": "input",
+            "blockId": "!398783",
+            "coders": [
+                "MQ3"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ3"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "AOUT",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "MQ33v3",
+            "path": "MQ3",
+            "category": "input",
+            "blockId": "!398783",
+            "coders": [
+                "MQ33v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ3"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "470"
+                    },
+                    {
+                        "name": "r2",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.GND",
+                        "to": "r2.con1"
+                    },
+                    {
+                        "from": "r2.con0",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.AOUT",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "Aout"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Aout",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "MQ3",
+            "supportedControllers": []
+        },
+        {
+            "name": "MQ33v3",
+            "supportedControllers": []
+        }
+    ]
+}

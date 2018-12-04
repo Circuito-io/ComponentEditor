@@ -1,0 +1,237 @@
+{
+    "Parts": [
+        {
+            "name": "IRBreak",
+            "symbol": {
+                "ref": "circuito_IR Break Beam Sensor - 3mm LEDs.svg"
+            },
+            "displayName": "IR Break Beam Sensor - 3mm LEDs",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "669681.png",
+                    "link": "https://octopart.com/2167-adafruit+industries-54178316",
+                    "price": "1.95",
+                    "SKU": "2167-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "IRBreak",
+            "path": "IRBreak",
+            "category": "input",
+            "blockId": "669681",
+            "app": {
+                "appName": "IR Break Beam Sensor - 3mm LEDs",
+                "numericName": "",
+                "shortName": "IR Break Beam Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>A simple way to detect motion. They work by having an emitting side that sends out an IR beam, then a receiver across the way which is sensitive to that same beam. When something breaks the beam the receiver will output a signal.  It works up to 25cm / 10\".</p>",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "IRBreak5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "IRBreak3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "IRBreak5v",
+            "path": "IRBreak",
+            "category": "input",
+            "blockId": "!669681",
+            "coders": [
+                "IRBreak"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "IRBreak"
+                    },
+                    {
+                        "name": "R_pullup",
+                        "part": "Resistor",
+                        "properties": "10k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.VCCR",
+                        "to": "R_pullup.con0"
+                    },
+                    {
+                        "from": "this.SIG",
+                        "to": "R_pullup.con1"
+                    },
+                    {
+                        "from": "R_pullup.con1",
+                        "to": "sig"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCCT",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GNDR",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "GNDT",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCCR",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "sig",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "IRBreak3v3",
+            "path": "IRBreak",
+            "category": "input",
+            "blockId": "!669681",
+            "coders": [
+                "IRBreak"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "IRBreak"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.VCCR",
+                        "to": "R_pullup.con0"
+                    },
+                    {
+                        "from": "this.SIG",
+                        "to": "R_pullup.con1"
+                    },
+                    {
+                        "from": "R_pullup.con1",
+                        "to": "sig"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCCT",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GNDR",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "GNDT",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCCR",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "sig",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "IRBreak",
+            "supportedControllers": []
+        }
+    ]
+}

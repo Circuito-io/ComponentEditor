@@ -1,0 +1,333 @@
+{
+    "Parts": [
+        {
+            "name": "GPSNeo6M",
+            "symbol": {
+                "ref": "circuito_Ublox NEO-6M GPS Module.svg"
+            },
+            "displayName": "Ublox NEO-6M GPS Module",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "975601.png",
+                    "link": "https://octopart.com/48838-generic-90666298?r=sp&s=2q1ivIeRQ0WDVVBvB66Ohw",
+                    "price": "7.96",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": "The GPS needs to connect to a satellite. Go outside to get a reading of your location"
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "GPSNeo6M",
+            "path": "GPSNeo6M",
+            "category": "input",
+            "blockId": "975601",
+            "app": {
+                "appName": "Ublox NEO-6M GPS Module",
+                "numericName": "Ublox NEO-6M GPS Module",
+                "shortName": "GPS Module",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>This device connects to GPS satellites to retrive its location. Also provides the current time and date.</p>\n<p><strong>Returned Value</strong>: Location - Lat and Long, time and date via serial communication.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "GPSNeo6M_HardwareSerial1"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "GPSNeo6M_HardwareSerial2"
+                    ]
+                ],
+                [
+                    100,
+                    [
+                        "GPSNeo6M_SoftwareSerial"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "GPSNeo6M_HardwareSerial1",
+            "path": "GPSNeo6M",
+            "category": "input",
+            "blockId": "!975601",
+            "coders": [
+                "GPSNeo6M_HardwareSerial1"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "GPSNeo6M"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.TX",
+                        "to": "Rx"
+                    },
+                    {
+                        "from": "this.RX",
+                        "to": "Tx"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]],[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[1,["TX","5v"]],[0,["TX","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 570
+                        }
+                    },
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[1,["RX","5v"]],[0,["RX","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["RPI3B"]],[8,["ESP32DevKitC"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GPSNeo6M_HardwareSerial2",
+            "path": "GPSNeo6M",
+            "category": "input",
+            "blockId": "!975601",
+            "coders": [
+                "GPSNeo6M_HardwareSerial2"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "GPSNeo6M"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.TX",
+                        "to": "Rx"
+                    },
+                    {
+                        "from": "this.RX",
+                        "to": "Tx"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]],[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[0,["TX2","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 570
+                        }
+                    },
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[0,["RX2","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["RPI3B"]],[8,["ESP32DevKitC"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GPSNeo6M_SoftwareSerial",
+            "path": "GPSNeo6M",
+            "category": "input",
+            "blockId": "!975601",
+            "coders": [
+                "GPSNeo6M_SoftwareSerial"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "GPSNeo6M"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.TX",
+                        "to": "Rx"
+                    },
+                    {
+                        "from": "this.RX",
+                        "to": "Tx"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]],[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialTX","5v"]],[10,["ESPSoftwareSerialTX1","5v"]],[2,["ESPSoftwareSerialTX","3.3v"]],[11,["ESPSoftwareSerialTX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]],[2,["ESPSoftwareSerialRX","3.3v"]],[11,["ESPSoftwareSerialRX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "SerialType",
+                        "interface": {
+                            "requires":[[0,["ESPSoftwareSerialTag"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 570
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "GPSNeo6M_HardwareSerial1",
+            "supportedControllers": []
+        },
+        {
+            "name": "GPSNeo6M_HardwareSerial2",
+            "supportedControllers": []
+        },
+        {
+            "name": "GPSNeo6M_SoftwareSerial",
+            "supportedControllers": []
+        }
+    ]
+}

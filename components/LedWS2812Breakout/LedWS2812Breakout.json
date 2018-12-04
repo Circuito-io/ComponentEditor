@@ -1,0 +1,139 @@
+{
+    "Parts": [
+        {
+            "name": "LedWS2812Breakout",
+            "symbol": {
+                "ref": "circuito_WS2812B Breakout-1.svg"
+            },
+            "displayName": "SparkFun RGB LED Breakout - WS2812B",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "758938.png",
+                    "link": "https://octopart.com/bob-13282-sparkfun-75277523",
+                    "price": "2.95",
+                    "SKU": "1568-1530-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "headers": [
+                6,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": true,
+                "row": 2,
+                "rotation": 0
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "LedWS2812Breakout",
+            "path": "LedWS2812Breakout",
+            "category": "output",
+            "blockId": "758938",
+            "app": {
+                "appName": "SparkFun RGB LED Breakout - WS2812B",
+                "numericName": "WS2812B",
+                "shortName": "RGB LED",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>This LED breakout has a WS2812B IC (\u201cNeoPixel\u201d) on it. It is an addressable RGB LED, you can chain many of these and control all of them with only 1 pin.</p>",
+                "visible": "true"
+            },
+            "coders": [
+                "LedWS2812Breakout"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "LedWS2812Breakout"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "5v_I",
+                        "interface": {
+                            "chainTo": "5v_O",
+                            "requires":[[0,["5v"]],[1,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "DI",
+                        "interface": {
+                            "chainTo": "DO",
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND_I",
+                        "interface": {
+                            "chainTo": "GND_O",
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "GND_O",
+                        "interface": {
+                            "chain": true
+                        }
+                    },
+                    {
+                        "name": "5v_O",
+                        "interface": {
+                            "chain": true
+                        }
+                    },
+                    {
+                        "name": "DO",
+                        "interface": {
+                            "chain": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "LedWS2812Breakout",
+            "supportedControllers": []
+        }
+    ]
+}

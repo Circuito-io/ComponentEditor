@@ -1,0 +1,128 @@
+{
+    "Parts": [
+        {
+            "name": "UVSensor",
+            "symbol": {
+                "ref": "circuito_UV Sensor Breakout - ML8511.svg"
+            },
+            "displayName": "UV Sensor Breakout - ML8511",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "digikey",
+                    "image": "934121.png",
+                    "link": "https://www.digikey.com/products/en?keywords=12705&keywords=&pkeyword=12705&v=1568",
+                    "price": "12.95",
+                    "SKU": "1568-1301-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "headers": [
+                4,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "UVSensor",
+            "path": "UVSensor",
+            "category": "input",
+            "blockId": "934121",
+            "app": {
+                "appName": "UV Sensor Breakout - ML8511",
+                "numericName": "ML8511",
+                "shortName": "UV Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>The MP8511 Sensor works by outputing an analog signal in relation to the amount of UV light that\u2019s detected</p>",
+                "visible": false
+            },
+            "coders": [
+                "UVSensor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "UVSensor"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.3.3V",
+                        "to": "this.EN"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "EN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "OUT",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "3.3V",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["NodeMCU"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "UVSensor",
+            "supportedControllers": []
+        }
+    ]
+}

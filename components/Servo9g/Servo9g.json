@@ -1,0 +1,156 @@
+{
+    "Parts": [
+        {
+            "name": "Servo9g",
+            "symbol": {
+                "ref": "circuito_9g Micro Servo.svg"
+            },
+            "displayName": "9g Micro Servo",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "2345678.png",
+                    "link": "https://octopart.com/169-adafruit+industries-28877182",
+                    "price": "5.95",
+                    "SKU": "1528-1076-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "Servo9g",
+            "path": "Servo9g",
+            "category": "output",
+            "blockId": "2345678",
+            "app": {
+                "appName": "9G Micro Servo",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>This is a very simple &amp; small servo, weight only 9g. You can use to rotate an object, or move a robotic arm.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Flying-Manatee/\">Flying Manatee</a>.</p>\n",
+                "visible": false
+            },
+            "coders": [
+                "Servo9g"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    30,
+                    [
+                        "Reg5v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "Servo9g"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["5v"]],[1,["3.3v"]],[2,["6v"]]],
+                            "requiresLoad": 300
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "Servo9g",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "        const int {{varname}}RestPosition   = 20;  //Starting position\n        const int {{varname}}TargetPosition = 150; //Position when event is detected\n",
+                "constructors:": "        {{classname}} {{varname}};\n",
+                "setup:": "        {{varname}}.attach({{Sig}});\n        {{varname}}.write({{varname}}RestPosition);\n        delay(100);\n        {{varname}}.detach();\n",
+                "snippetCode:": "        // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) \n        {{varname}}.attach({{Sig}});         // 1. attach the servo to correct pin to control it.\n        {{varname}}.write({{varname}}TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.\n        delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n        {{varname}}.write({{varname}}RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.\n        delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n        {{varname}}.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress."
+            },
+            "license": "ArduinoIDE",
+            "instantiate": {
+                "classname": "Servo",
+                "ports": [
+                    "Sig"
+                ]
+            },
+            "includeHeaders": [
+                "Servo.h"
+            ]
+        }
+    ]
+}

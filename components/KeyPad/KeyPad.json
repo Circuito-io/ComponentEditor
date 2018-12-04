@@ -1,0 +1,183 @@
+{
+    "Parts": [
+        {
+            "name": "Keypad",
+            "symbol": {
+                "ref": "circuito_Keypad - 12 Button.svg"
+            },
+            "displayName": "Keypad - 12 Button",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "8653.png",
+                    "link": "https://octopart.com/com-08653-sparkfun-76381380?r=sp&s=1blQuPT3QNaSqz7CeU6KMw",
+                    "price": "3.95",
+                    "SKU": "COM-08653-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "headers": [
+                8,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "Keypad",
+            "path": "KeyPad",
+            "category": "input",
+            "blockId": "8653",
+            "app": {
+                "appName": "KeyPad 4x3",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>A simple 4-by-3 keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed keypad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
+                "visible": false
+            },
+            "coders": [
+                "Keypad"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "Keypad"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "row3",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "row1",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "col2",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "col3",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "row2",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "col1",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "row4",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "Keypad",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "    //Use this 2D array to map the keys as you desire\n    char {{varname}}keys[ROWS][COLS] = {\n          {'1','2','3'},\n          {'4','5','6'},\n          {'7','8','9'},\n          {'*','0','#'}\n        };\n",
+                "setup:": "    //Initialize the keypad with selected key map\n    {{varname}}.begin({{varname}}keys);\n",
+                "snippetCode:": "    //Read keypad\n    char {{varname}}Key = {{varname}}.getKey();\n",
+                "": "    {\n    Serial.print({{varname}}Key);\n    }"
+            },
+            "license": "GNU",
+            "instantiate": {
+                "classname": "Keypad",
+                "ports": [
+                    "col1",
+                    "col2",
+                    "col3",
+                    "row1",
+                    "row2",
+                    "row3",
+                    "row4"
+                ],
+                "varname": "keypad"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "Keypad.h"
+            ]
+        }
+    ]
+}

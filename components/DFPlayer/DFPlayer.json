@@ -1,0 +1,148 @@
+{
+    "Parts": [
+        {
+            "name": "DFPlayer",
+            "symbol": {
+                "ref": "circuito_DFPlayer - Mini MP3 Player.svg"
+            },
+            "displayName": "DFPlayer - Mini MP3 Player",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "336411.png",
+                    "link": "https://octopart.com/dfr0299-dfrobot-77801081?r=sp&s=LfRvzrKFStGUnzfa9U989w",
+                    "price": "9.17",
+                    "SKU": "1738-1041-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": "From more reference for DFPlayer go to: https://www.dfrobot.com/wiki/index.php/DFPlayer_Mini_SKU:DFR0299"
+            },
+            "placing": {
+                "onBreadboard": true,
+                "row": 2,
+                "rotation": 0
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "DFPlayer",
+            "path": "DFPlayer",
+            "category": "output",
+            "blockId": "336411",
+            "app": {
+                "appName": "DFPlayer - Mini MP3 Player",
+                "numericName": "",
+                "shortName": "DFPlayer",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>The DFPlayer Mini is a small and low price MP3 module with an simplified output directly to the speaker.<br>The module can be used as a stand alone module with attached battery, speaker and push buttons or used in combination with an Arduino UNO or any other with RX/TX capabilities.</p>",
+                "visible": false
+            },
+            "coders": [
+                "DFPlayer"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "DFPlayer"
+                    },
+                    {
+                        "name": "res",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    },
+                    {
+                        "name": "Speaker",
+                        "part": "Speaker05W"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RX",
+                        "to": "res.con0"
+                    },
+                    {
+                        "from": "this.SPK_1",
+                        "to": "Speaker.POS"
+                    },
+                    {
+                        "from": "this.SPK_2",
+                        "to": "Speaker.NEG"
+                    },
+                    {
+                        "from": "res.con1",
+                        "to": "Rx"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]],[1,["3.3v"]]],
+                            "requiresLoad": 100
+                        }
+                    },
+                    {
+                        "name": "GND-1",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "TX",
+                        "interface": {
+                            "requires":[[0,["RX","5v"]],[1,["RX","3.3v"]],[2,["ESPSoftwareSerialRX","5v"]],[3,["ESPSoftwareSerialRX","3.3v"]],[10,["ESPSoftwareSerialRX1","5v"]],[11,["ESPSoftwareSerialRX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[0,["TX","5v"]],[1,["TX","3.3v"]],[2,["ESPSoftwareSerialTX","5v"]],[3,["ESPSoftwareSerialTX","3.3v"]],[10,["ESPSoftwareSerialTX1","5v"]],[11,["ESPSoftwareSerialTX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "DFPlayer",
+            "supportedControllers": []
+        }
+    ]
+}

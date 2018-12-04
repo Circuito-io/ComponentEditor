@@ -1,0 +1,55 @@
+<?xml version="1.0" ?><svg height="32.6mm" viewBox="0 0 61.49 92.42" width="21.69mm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient data-name="Gold 02" gradientUnits="userSpaceOnUse" id="Gold_02" x2="61.49" y1="30.75" y2="30.75">
+      <stop offset="0" stop-color="#ba7802"/>
+      <stop offset="0.18" stop-color="#d19b2d"/>
+      <stop offset="0.39" stop-color="#ebc15d"/>
+      <stop offset="0.5" stop-color="#f5d06f"/>
+      <stop offset="0.61" stop-color="#ebc15d"/>
+      <stop offset="0.82" stop-color="#d19b2d"/>
+      <stop offset="1" stop-color="#ba7802"/>
+    </linearGradient>
+    <radialGradient cx="30.75" cy="30.75" gradientTransform="translate(0 15.37) scale(1 0.5)" gradientUnits="userSpaceOnUse" id="radial-gradient" r="23.18">
+      <stop offset="0" stop-color="#e5e2df"/>
+      <stop offset="0" stop-color="#f1efee"/>
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.13" stop-color="#f0f0f1"/>
+      <stop offset="0.37" stop-color="#c9cacb"/>
+      <stop offset="0.52" stop-color="#adaeb0"/>
+      <stop offset="0.58" stop-color="#a6a8aa" stop-opacity="0.96"/>
+      <stop offset="0.69" stop-color="#939799" stop-opacity="0.85"/>
+      <stop offset="0.82" stop-color="#757b7e" stop-opacity="0.67"/>
+      <stop offset="0.98" stop-color="#4b5558" stop-opacity="0.43"/>
+      <stop offset="1" stop-color="#465053" stop-opacity="0.4"/>
+    </radialGradient>
+    <radialGradient cx="27.24" cy="46.15" gradientTransform="matrix(0.86, 0.52, -0.62, 1.03, 32.5, -15.34)" gradientUnits="userSpaceOnUse" id="radial-gradient-2" r="2.64">
+      <stop offset="0" stop-color="#e5e2df"/>
+      <stop offset="0" stop-color="#f1efee"/>
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.01" stop-color="#fff" stop-opacity="0.94"/>
+      <stop offset="0.01" stop-color="#fefefe" stop-opacity="0.79"/>
+      <stop offset="0.03" stop-color="#fdfdfd" stop-opacity="0.55"/>
+      <stop offset="0.04" stop-color="#fcfcfc" stop-opacity="0.4"/>
+      <stop offset="0.32" stop-color="#d2d2d4" stop-opacity="0.4"/>
+      <stop offset="0.52" stop-color="#adaeb0" stop-opacity="0.4"/>
+      <stop offset="0.64" stop-color="#9d9fa1" stop-opacity="0.35"/>
+      <stop offset="0.84" stop-color="#72787a" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#465053" stop-opacity="0.1"/>
+    </radialGradient>
+    <radialGradient cx="34.44" cy="57.43" gradientTransform="translate(40.53 -19.37) rotate(31.08) scale(1 1.2)" id="radial-gradient-3" r="2.63" xlink:href="#radial-gradient-2"/>
+  </defs>
+  <title>Piezo Element</title>
+  <g data-name="Layer 2" id="Layer_2">
+    <circle cx="30.75" cy="30.75" r="30.75" style="fill: url(#Gold_02)"/>
+    <circle cx="30.75" cy="30.75" r="23.18" style="fill: url(#radial-gradient)"/>
+    <circle cx="30.75" cy="30.75" r="21.34" style="fill: #fff7ea"/>
+    <path d="M28.43,47V92.42H26V47Zm0,0c0-1.92-2.38-1.92-2.38,0" style="fill: #ff3b3b"/>
+    <path d="M35.63,58V92.42H33.25V58Zm0,0c0-2-2.38-2-2.38,0"/>
+    <circle cx="27.24" cy="46.15" r="2.64" style="fill: url(#radial-gradient-2)" transform="matrix(0.86, -0.52, 0.52, 0.86, -19.92, 20.69)"/>
+    <circle cx="34.44" cy="57.43" r="2.62" style="fill: url(#radial-gradient-3)" transform="matrix(0.86, -0.52, 0.52, 0.86, -24.71, 26.03)"/>
+  </g>
+  <g id="Connectors">
+    <rect data-cir-color="black" data-cir-type="male" height="2.38" id="circuitoCon_neg" style="fill: none" width="2.38" x="33.25" y="90.03"/>
+    <rect data-cir-type="male" height="2.38" id="circuitoCon_pos" style="fill: none" width="2.38" x="26.05" y="90.03"/>
+  </g>
+</svg>

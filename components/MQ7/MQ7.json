@@ -1,0 +1,212 @@
+{
+    "Parts": [
+        {
+            "name": "MQ7",
+            "symbol": {
+                "ref": "circuito_MQ7.svg"
+            },
+            "displayName": "Carbon Monoxide Sensor - MQ-7",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "digikey",
+                    "image": "398787.png",
+                    "link": "http://www.ebay.com/itm/MQ-2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Detection-Alarm-Sensor-Module-/112271187259?var=&hash=item1a23e25d3b:m:mCvQbSEnBoV7nWc_HNCUgqw",
+                    "price": "1.48",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "The pins order on the breakout might change, follow the pin labels rather than their order.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "MQ7",
+            "path": "MQ7",
+            "category": "input",
+            "blockId": "398787",
+            "app": {
+                "appName": "Carbon Monoxide Sensor - MQ-7",
+                "numericName": "MQ7",
+                "shortName": "Carbon Monoxide Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>Measures CO levels in the air. It senses anywhere from 20 to 2000 parts per million.<br><strong>Returned values</strong>: from 0 (low levels of CO) to 1023 (high levels of CO).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    1,
+                    [
+                        "MQ75v"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "MQ73v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "MQ75v",
+            "path": "MQ7",
+            "category": "input",
+            "blockId": "!398787",
+            "coders": [
+                "MQ7"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ7"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "AOUT",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "MQ73v3",
+            "path": "MQ7",
+            "category": "input",
+            "blockId": "!398787",
+            "coders": [
+                "MQ73v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MQ7"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "470"
+                    },
+                    {
+                        "name": "r2",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.GND",
+                        "to": "r2.con1"
+                    },
+                    {
+                        "from": "r2.con0",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.AOUT",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "Aout"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Aout",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "5V",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "MQ7",
+            "supportedControllers": []
+        },
+        {
+            "name": "MQ73v3",
+            "supportedControllers": []
+        }
+    ]
+}

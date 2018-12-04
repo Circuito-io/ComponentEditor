@@ -1,0 +1,220 @@
+{
+    "Parts": [
+        {
+            "name": "ResistiveTouchScreen",
+            "symbol": {
+                "ref": "circuito_ResistiveTouch.svg"
+            },
+            "displayName": "Resistive Touch screen - 3.7'' Diagonal",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "276649.png",
+                    "link": "https://octopart.com/333-adafruit+industries-32978529",
+                    "price": "5.95",
+                    "SKU": "1528-1221-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "ResistiveTouchScreen",
+            "path": "ResistiveTouchScreen",
+            "category": "input",
+            "blockId": "276649",
+            "app": {
+                "appName": "Resistive Touch screen - 3.7'' Diagonal",
+                "numericName": "",
+                "shortName": "Resistive Touch screen",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>This Resistive Touch Screen can be used with a stylus or fingertip and is easy to use with a microcontroller. You can use it as a touch control panel or place it over an LCD display to make a DIY touch screen.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "ResistiveTouchScreen5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "ResistiveTouchScreen3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "ResistiveTouchScreen5v",
+            "path": "ResistiveTouchScreen",
+            "category": "input",
+            "blockId": "!276649",
+            "coders": [
+                "ResistiveTouchScreen"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ResistiveTouchScreen"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ResistiveTouchScreen3v3",
+            "path": "ResistiveTouchScreen",
+            "category": "input",
+            "blockId": "!276649",
+            "coders": [
+                "ResistiveTouchScreen"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "ResistiveTouchScreen"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "ResistiveTouchScreen",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "globals:": "",
+                "constructors:": "    {{classname}} {{varname}} = {{classname}}();\n",
+                "setup:": "    if (! {{varname}}.begin()) Serial.println(\"Touch controller not found!\");\n",
+                "snippetCode:": "    uint16_t x, y;\n    uint8_t z;\n    if ({{varname}}.touched()) {\n      // read x & y & z;\n      while (! {{varname}}.bufferEmpty()) {\n        Serial.print({{varname}}.bufferSize());\n        {{varname}}.readData(&x, &y, &z);\n        Serial.print(\"->(\");\n        Serial.print(x); Serial.print(\", \");\n        Serial.print(y); Serial.print(\", \");\n        Serial.print(z);\n        Serial.println(\")\");\n      }\n      {{varname}}.writeRegister8(STMPE_INT_STA, 0xFF); // reset all ints\n    }\n    delay(10);"
+            },
+            "license": "MIT",
+            "instantiate": {
+                "classname": "Adafruit_STMPE610",
+                "ports": [],
+                "varname": "touch"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "Adafruit_STMPE610.h",
+                "Wire.h"
+            ]
+        }
+    ]
+}

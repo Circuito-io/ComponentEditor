@@ -1,0 +1,277 @@
+{
+    "Parts": [],
+    "Blocks": [
+        {
+            "name": "GndSwitching",
+            "path": "Switching",
+            "category": "support",
+            "requires": [
+                [
+                    1,
+                    [
+                        "GndLoadSwitching"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "GndLoadPWMSwitching"
+                    ]
+                ],
+                [
+                    5,
+                    [
+                        "GndHighLoadSwitching"
+                    ]
+                ],
+                [
+                    6,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "GndLoadSwitching",
+            "path": "Switching",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "TRNPN"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.B",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.E",
+                        "to": "GndIn"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "Sig"
+                    },
+                    {
+                        "from": "this.C",
+                        "to": "GndOut"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GndIn",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GndOut",
+                        "interface": {
+                            "codenameRedirect": "Sig",
+                            "provides":[["GndLoadSwitching"]],
+                            "providesLoad": 3000
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GndLoadPWMSwitching",
+            "path": "Switching",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "TRNPN"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.B",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.E",
+                        "to": "GndIn"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "Sig"
+                    },
+                    {
+                        "from": "this.C",
+                        "to": "GndOut"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GndIn",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GndOut",
+                        "interface": {
+                            "codenameRedirect": "Sig",
+                            "provides":[["GndLoadSwitching","PWM"]],
+                            "providesLoad": 800
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GndHighLoadSwitching",
+            "path": "Switching",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MOSFETN"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "10k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.G",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.S",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "this.S",
+                        "to": "GndIn"
+                    },
+                    {
+                        "from": "this.G",
+                        "to": "Sig"
+                    },
+                    {
+                        "from": "this.D",
+                        "to": "GndOut"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GndIn",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GndOut",
+                        "interface": {
+                            "codenameRedirect": "Sig",
+                            "provides":[["GndLoadSwitching"]],
+                            "providesLoad": 3000
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "GndHighLoadPWMSwitching",
+            "path": "Switching",
+            "category": "support",
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MOSFETN"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.G",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "this.S",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "this.S",
+                        "to": "GndIn"
+                    },
+                    {
+                        "from": "this.G",
+                        "to": "Sig"
+                    },
+                    {
+                        "from": "this.D",
+                        "to": "GndOut"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "GndIn",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GndOut",
+                        "interface": {
+                            "codenameRedirect": "Sig",
+                            "provides":[["GndLoadSwitching","PWM"]],
+                            "providesLoad": 3000
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": []
+}

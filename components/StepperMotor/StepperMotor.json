@@ -1,0 +1,571 @@
+{
+    "Parts": [
+        {
+            "name": "StepperMotor",
+            "symbol": {
+                "ref": "circuito_Stepper Motor.svg"
+            },
+            "displayName": "Stepper Motor",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9238.png",
+                    "link": "https://octopart.com/rob-09238-sparkfun-59720088",
+                    "price": "14.95",
+                    "SKU": "1568-1105-ND"
+                }
+            ],
+            "info": {
+                "setup": "This part requires connecting to a driver, consider soldering them together.",
+                "test": "Put tape on the motor shaft to see it rotating"
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "SmallStepperMotor",
+            "symbol": {
+                "ref": "circuito_Small Stepper.svg"
+            },
+            "displayName": "Small Stepper Motor",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9239.png",
+                    "link": "https://octopart.com/rob-10551-sparkfun-67219293",
+                    "price": "6.95",
+                    "SKU": "1568-1321-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "StepperMotorSmallGeared",
+            "symbol": {
+                "ref": "circuito_Small Reduction Stepper Motor - 5VDC 32-Step 116 Gearing.svg"
+            },
+            "displayName": "Small Reduction Stepper Motor - 5VDC 32-Step 1/16 Gearing",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9240.png",
+                    "link": "https://octopart.com/858-adafruit+industries-28960854",
+                    "price": "4.95",
+                    "SKU": "1528-1366-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "EasyDriver",
+            "symbol": {
+                "ref": "circuito_Easy Driver.svg"
+            },
+            "displayName": "EasyDriver - Stepper Motor Driver",
+            "category": [
+                "support"
+            ],
+            "desc": "A stepper motor driver makes it easy to control a stepper motor using only two pin, the first for direction and the secod for stepping.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "EasyDriver.png",
+                    "link": "https://octopart.com/rob-12779-sparkfun-59720091",
+                    "price": "14.95",
+                    "SKU": "1568-1108-ND"
+                }
+            ],
+            "info": {
+                "setup": "This part requires soldering male pins",
+                "test": ""
+            },
+            "headers": [
+                9,
+                "MaleHeaders"
+            ],
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "StepperMotor",
+            "path": "StepperMotor",
+            "category": "output",
+            "blockId": "9238",
+            "app": {
+                "appName": "Stepper Motor with EasyDriver",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>A stepper motor - rotates in steps of 1.8 degrees each (it does it very fast, you won\u2019t notice :)).<br><strong>Requires</strong>: You will need to strip the motor wires and solder them to the EasyDriver, also 9 male header pins should be soldered to the EasyDriver in order to fit it onto the  breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/How-to-Make-an-Office-Neighbor-Shield-With-Arduino-1/\">Neighbour Shield</a>.</p>\n",
+                "visible": "true"
+            },
+            "coders": [
+                "StepperMotor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "EasyDriver"
+                    },
+                    {
+                        "name": "motor",
+                        "part": "StepperMotor"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.OUT2A",
+                        "to": "motor.D"
+                    },
+                    {
+                        "from": "this.OUT2B",
+                        "to": "motor.B"
+                    },
+                    {
+                        "from": "this.OUT1A",
+                        "to": "motor.C"
+                    },
+                    {
+                        "from": "this.OUT1B",
+                        "to": "motor.A"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Step",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Dir",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "V+",
+                        "interface": {
+                            "requires":[[0,["12v"]]],
+                            "requiresLoad": 330
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "SmallStepperMotor",
+            "path": "StepperMotor",
+            "category": "output",
+            "blockId": "9239",
+            "app": {
+                "appName": "Small Stepper Motor with EasyDriver",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
+                "visible": "true"
+            },
+            "coders": [
+                "SmallStepperMotor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "EasyDriver"
+                    },
+                    {
+                        "name": "motor",
+                        "part": "SmallStepperMotor"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.OUT1A",
+                        "to": "motor.A"
+                    },
+                    {
+                        "from": "this.OUT2A",
+                        "to": "motor.C"
+                    },
+                    {
+                        "from": "this.OUT2B",
+                        "to": "motor.D"
+                    },
+                    {
+                        "from": "this.OUT1B",
+                        "to": "motor.B"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Step",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Dir",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "V+",
+                        "interface": {
+                            "requires":[[0,["12v"]]],
+                            "requiresLoad": 330
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "StepperMotorSmallGeared",
+            "path": "StepperMotor",
+            "category": "output",
+            "blockId": "9240",
+            "app": {
+                "appName": "Small Reduction Stepper Motor with EasyDriver - 5VDC 32-Step 1/16 Gearing",
+                "numericName": "",
+                "shortName": "Small Reduction Stepper Motor with EasyDriver",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "true"
+                },
+                "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
+                "visible": "true"
+            },
+            "coders": [
+                "StepperMotorSmallGeared"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "EasyDriver"
+                    },
+                    {
+                        "name": "motor",
+                        "part": "StepperMotorSmallGeared"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.OUT2A",
+                        "to": "motor.PINK"
+                    },
+                    {
+                        "from": "this.OUT2B",
+                        "to": "motor.YELLOW"
+                    },
+                    {
+                        "from": "this.OUT1A",
+                        "to": "motor.ORANGE"
+                    },
+                    {
+                        "from": "this.OUT1B",
+                        "to": "motor.BLUE"
+                    },
+                    {
+                        "from": "motor.RED",
+                        "to": "RED"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "RED",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Step",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Dir",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "V+",
+                        "interface": {
+                            "requires":[[0,["12v"]]],
+                            "requiresLoad": 330
+                        }
+                    },
+                    {
+                        "name": "MemOverLoad",
+                        "interface": {
+                            "requires":[[0,["SRAMLoad"]]],
+                            "requiresLoad": 200
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "StepperMotor",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "#": "#     {{varname}}.setMaxSpeed(3000);      //set max speed to 3000 steps per second\n#     {{varname}}.setAcceleration(1000);  //set max acceleration to 1000 steps per second^2\n#     //Move stepper motor 250 steps relative to last position\n#     {{varname}}.runToNewPosition(250);\n#     {{varname}}.setCurrentPosition(0);\n",
+                "global:": "    #define {{varname}}DelayTime  1000\n",
+                "constructors:": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",
+                "setup:": "    // enable the stepper motor, use .disable() to disable the motor\n    {{varname}}.enable();\n    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n    {{varname}}.setStepDelay({{varname}}DelayTime);\n",
+                "snippetCode:": "    // the higher the time value the slower the motor will run\n    {{varname}}.step(1, 1000);  // move motor 1000 steps in one direction\n    delay(1000);            // short stop\n    {{varname}}.step(0, 1000);  // move motor 1000 steps in the other dirction\n    delay(1000);            //short stop"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "StepperMotor",
+                "ports": [
+                    "Step",
+                    "Dir"
+                ],
+                "varname": "stepper"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": []
+        },
+        {
+            "name": "SmallStepperMotor",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "#": "#     {{varname}}.setMaxSpeed(3000);      //set max speed to 3000 steps per second\n#     {{varname}}.setAcceleration(1000);  //set max acceleration to 1000 steps per second^2\n#     //Move stepper motor 250 steps relative to last position\n#     {{varname}}.runToNewPosition(250);\n#     {{varname}}.setCurrentPosition(0);\n",
+                "global:": "    #define {{varname}}DelayTime  1000\n",
+                "constructors:": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",
+                "setup:": "    // enable the stepper motor, use .disable() to disable the motor\n    {{varname}}.enable();\n    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n    {{varname}}.setStepDelay({{varname}}DelayTime);\n",
+                "snippetCode:": "    // the higher the time value the slower the motor will run\n    {{varname}}.step(1, 1000);  // move motor 1000 steps in one direction\n    delay(1000);            // short stop\n    {{varname}}.step(0, 1000);  // move motor 1000 steps in the other dirction\n    delay(1000);            //short stop"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "StepperMotor",
+                "ports": [
+                    "Step",
+                    "Dir"
+                ],
+                "varname": "stepperSmall"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": []
+        },
+        {
+            "name": "StepperMotorSmallGeared",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "#": "#     {{varname}}.setMaxSpeed(3000);      //set max speed to 3000 steps per second\n#     {{varname}}.setAcceleration(1000);  //set max acceleration to 1000 steps per second^2\n#     //Move stepper motor 250 steps relative to last position\n#     {{varname}}.runToNewPosition(250);\n#     {{varname}}.setCurrentPosition(0);\n",
+                "global:": "    #define {{varname}}DelayTime  1000\n",
+                "constructors:": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",
+                "setup:": "    // enable the stepper motor, use .disable() to disable the motor\n    {{varname}}.enable();\n    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n    {{varname}}.setStepDelay({{varname}}DelayTime);\n",
+                "snippetCode:": "    // the higher the time value the slower the motor will run\n    {{varname}}.step(1, 1000);  // move motor 1000 steps in one direction\n    delay(1000);            // short stop\n    {{varname}}.step(0, 1000);  // move motor 1000 steps in the other dirction\n    delay(1000);            //short stop"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "StepperMotor",
+                "ports": [
+                    "Step",
+                    "Dir"
+                ],
+                "varname": "stepperGeared"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": []
+        }
+    ]
+}

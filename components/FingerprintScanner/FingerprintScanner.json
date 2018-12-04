@@ -1,0 +1,227 @@
+{
+    "Parts": [
+        {
+            "name": "FingerprintScanner",
+            "symbol": {
+                "ref": "circuito_Fingerprint Scanner - TTL (GT-511C3).svg"
+            },
+            "displayName": "Fingerprint Scanner - TTL (GT-511C3)",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "11792.png",
+                    "link": "https://octopart.com/sen-11792-sparkfun-65743527?r=sp&s=KwxFPDgqS82VlbypNPOjXQ",
+                    "price": "49.95",
+                    "SKU": "1568-1130-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "FingerprintScanner",
+            "path": "FingerprintScanner",
+            "category": "input",
+            "blockId": "11792",
+            "app": {
+                "appName": "Fingerprint Scanner - TTL (GT-511C3)",
+                "numericName": "",
+                "shortName": "Fingerprint Scanner",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>This is a Fingerprint Scanner over TTL communication.<br>The module reads and identifies the fingerprints using an on-board optical sensor and CPU.</p>",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "FingerprintScanner5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "FingerprintScanner3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "FingerprintScanner5v",
+            "path": "FingerprintScanner",
+            "category": "input",
+            "blockId": "!11792",
+            "coders": [
+                "FingerprintScanner"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "FingerprintScanner"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "470"
+                    },
+                    {
+                        "name": "r2",
+                        "part": "Resistor",
+                        "properties": "1k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RX",
+                        "to": "r1.con0"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "r2.con0"
+                    },
+                    {
+                        "from": "r2.con1",
+                        "to": "this.GND"
+                    },
+                    {
+                        "from": "r1.con1",
+                        "to": "Rx"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialRX","5v"]],[2,["RX","5v"]],[3,["RX2","5v"]],[10,["ESPSoftwareSerialRX1","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialTX","5v"]],[2,["TX","5v"]],[3,["TX2","5v"]],[10,["ESPSoftwareSerialTX1","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]],[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "FingerprintScanner3v3",
+            "path": "FingerprintScanner",
+            "category": "input",
+            "blockId": "!11792",
+            "coders": [
+                "FingerprintScanner"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "FingerprintScanner"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.RX",
+                        "to": "Rx"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Rx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialRX","3.3v"]],[2,["RX","3.3v"]],[3,["RX2","3.3v"]],[10,["ESPSoftwareSerialRX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Tx",
+                        "interface": {
+                            "requires":[[1,["ESPSoftwareSerialTX","3.3v"]],[2,["TX","3.3v"]],[3,["TX2","3.3v"]],[10,["ESPSoftwareSerialTX1","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]],[1,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[8,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "FingerprintScanner",
+            "supportedControllers": []
+        }
+    ]
+}

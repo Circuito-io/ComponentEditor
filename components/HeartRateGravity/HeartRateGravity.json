@@ -1,0 +1,180 @@
+{
+    "Parts": [
+        {
+            "name": "HeartRateGravity",
+            "symbol": {
+                "ref": "circuito_Gravity Analog Heart Rate Monitor Sensor (ECG) For Arduino.svg"
+            },
+            "displayName": "Gravity: Analog Heart Rate Monitor Sensor (ECG) For Arduino",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "133979.png",
+                    "link": "https://octopart.com/sen0213-dfrobot-77801258?r=sp&s=ARAPj2L8QvqSaveFqLoXsA",
+                    "price": "20.50",
+                    "SKU": "1738-1195-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "HeartRateGravity",
+            "path": "HeartRateGravity",
+            "category": "input",
+            "blockId": "133979",
+            "app": {
+                "appName": "Gravity: Analog Heart Rate Monitor Sensor (ECG) For Arduino",
+                "numericName": "",
+                "shortName": "Heart Rate  ECG Sensor",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "false",
+                    "solder": "false"
+                },
+                "desc": "<p>This Analog Heart Rate Sensor (ECG) supply a clear measurement of the electrical pulse of the heart. It can be used to measure your heart bpm. Recommend input voltage 5V.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "HeartRateGravity-5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "HeartRateGravity-3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "HeartRateGravity-5v",
+            "path": "HeartRateGravity",
+            "category": "input",
+            "blockId": "!133979",
+            "coders": [
+                "HeartRateGravity"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "HeartRateGravity"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "HeartRateGravity-3v3",
+            "path": "HeartRateGravity",
+            "category": "input",
+            "blockId": "!133979",
+            "coders": [
+                "HeartRateGravity"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "HeartRateGravity"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "Sig",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "HeartRateGravity",
+            "supportedControllers": []
+        }
+    ]
+}

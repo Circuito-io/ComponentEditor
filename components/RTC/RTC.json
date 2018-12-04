@@ -1,0 +1,149 @@
+{
+    "Parts": [
+        {
+            "name": "RTC",
+            "symbol": {
+                "ref": "circuito_DS3231 Precision RTC Breakout.svg"
+            },
+            "displayName": "DS3231 Precision RTC Breakout",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "821989.png",
+                    "link": "https://octopart.com/tc00500-yks-80291378?r=sp&s=UgJAMEPGS6KUBZyHLGEfLw",
+                    "price": "1.16",
+                    "SKU": ""
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "RTC",
+            "path": "RTC",
+            "category": "input",
+            "blockId": "821989",
+            "app": {
+                "appName": "RTC - Real Time Clock",
+                "numericName": "",
+                "shortName": "Real Time Clock",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>Keep track of the current year, month, day as well as the current time.</p>\n<p><strong>Returned Value</strong>: Returns the time and date.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
+                "visible": false
+            },
+            "coders": [
+                "RTC"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RTC"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "isBus": true,
+                            "requires":[[0,["SDA","5v"]],[1,["SDA","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "isBus": true,
+                            "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["Arduino101"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "RTC",
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "code": {
+                "setup:": "    if (! {{varname}}.begin()) {\n        Serial.println(\"Couldn't find RTC\");\n        while (1);\n      }\n      if ({{varname}}.lostPower()) {\n        Serial.println(\"RTC lost power, lets set the time!\");\n        // following line sets the RTC to the date & time this sketch was compiled\n        {{varname}}.adjust(DateTime(F(__DATE__), F(__TIME__)));\n        // This line sets the RTC with an explicit date & time, for example to set\n        // January 21, 2014 at 3am you would call:\n        // {{varname}}.adjust(DateTime(2014, 1, 21, 3, 0, 0));\n      }\n",
+                "snippetCode:": "    //This will display the time and date of the RTC. see RTC.h for more functions such as {{varname}}.hour(), {{varname}}.month() etc.\n    DateTime now = {{varname}}.now();\n    Serial.print(now.month(), DEC);\n    Serial.print('/');\n    Serial.print(now.day(), DEC);\n    Serial.print('/');\n    Serial.print(now.year(), DEC);\n    Serial.print(\"  \");\n    Serial.print(now.hour(), DEC);\n    Serial.print(':');\n    Serial.print(now.minute(), DEC);\n    Serial.print(':');\n    Serial.print(now.second(), DEC);\n    Serial.println();\n    delay(1000);"
+            },
+            "license": "Public Domain",
+            "instantiate": {
+                "classname": "RTC_DS3231",
+                "ports": [],
+                "varname": "rtcDS"
+            },
+            "files": [
+                "lib/*"
+            ],
+            "includeHeaders": [
+                "Wire.h",
+                "RTClib.h"
+            ]
+        }
+    ]
+}

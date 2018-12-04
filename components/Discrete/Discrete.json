@@ -1,0 +1,631 @@
+{
+    "Parts": [
+        {
+            "name": "Diode",
+            "symbol": {
+                "ref": "circuito_Diode Rectifier - 1A 50V.svg"
+            },
+            "displayName": "Diode Rectifier - 1A 50V",
+            "category": [
+                "support"
+            ],
+            "desc": "A diode is a two-terminal electronic component that conducts primarily in one direction.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "DIRect1A50v.png",
+                    "link": "https://octopart.com/1n4001-tp-mcc-730241",
+                    "price": "0.11",
+                    "SKU": "1N4001-TPMSCT-ND"
+                }
+            ],
+            "info": {
+                "setup": "<h3>Pay attention to the orientation of the diode</h3>The white line marks the negative side",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Crystal16MHz",
+            "symbol": {
+                "ref": "circuito_Crystal oscillator 16.svg"
+            },
+            "displayName": "Crystal 16MHz",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "Crystal16MHz.png",
+                    "link": "https://octopart.com/ecs-160-20-4x-ecs+international-316512?r=sp&s=QwUPiYBKQc-x7jrjhhIaWw",
+                    "price": "0.69",
+                    "SKU": "X1103-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "Crystal8MHz",
+            "symbol": {
+                "ref": "circuito_Crystal oscillator 8.svg"
+            },
+            "displayName": "Crystal 8MHz",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "Crystal8MHz.png",
+                    "link": "https://octopart.com/ecs-080-20-4x-du-ecs+international-21219173?r=sp&s=6YssUs_MShq9HrMJaUb8JA",
+                    "price": "0.69",
+                    "SKU": "XC1922-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "TRNPN",
+            "symbol": {
+                "ref": "circuito_Transistor - NPN BC337.svg"
+            },
+            "displayName": "Transistor - NPN BC337",
+            "category": [
+                "support"
+            ],
+            "desc": "BJTs are manufactured in two types, NPN and PNP, and are available as individual components, or fabricated in integrated circuits, often in large numbers.<br>The basic function of a BJT is to amplify current. This allows BJTs to be used as amplifiers or switches, giving them wide applicability in electronic equipment,including computers, televisions, mobile phones, audio amplifiers, industrial control, and radio transmitters.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "TSBC337.png",
+                    "link": "https://octopart.com/bc33725ta-on+semiconductor-84408931",
+                    "price": "0.27",
+                    "SKU": "BC33725TACT-ND"
+                }
+            ],
+            "info": {
+                "setup": "Mind the transistor's orientation. The flat side should face you.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "MOSFETN",
+            "symbol": {
+                "ref": "circuito_N-Channel MOSFET 60V 30A.svg"
+            },
+            "displayName": "N-Channel MOSFET 60V 30A",
+            "category": [
+                "support"
+            ],
+            "desc": "The MOSFET is by far the most common transistor in digital circuits, as hundreds of thousands or millions of them may be included in a memory chip or microprocessor.<br>It has an insulated gate, whose voltage determines the conductivity of the device. This ability to change conductivity with the amount of applied voltage can be used for amplifying or switching electronic signals.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "TNMOSFETFQP.png",
+                    "link": "https://octopart.com/fqp30n06-on+semiconductor-84328004",
+                    "price": "1.46",
+                    "SKU": "FQP30N06FS-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "74HC4051",
+            "symbol": {
+                "ref": "circuito_74HC4051E.svg"
+            },
+            "displayName": "74HC4051 - Analog Multiplexer and Demultiplexer",
+            "category": [
+                "support"
+            ],
+            "desc": "digitally controlled analog switches using CMOS technology.<br>This analog multiplexer and demultiplexer control analog voltages that may vary across the voltage supply range.<br>It consists of bidirectional switches that allow any analog input to be used as an output and vice versa. ",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "74HC4051.png",
+                    "link": "https://octopart.com/cd74hc4051e-texas+instruments-43489",
+                    "price": "0.6",
+                    "SKU": "296-12810-5-ND"
+                }
+            ],
+            "info": {
+                "setup": "The small dot on the chip indicates pin number 1, use it to set the orientation.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "MCP3008",
+            "symbol": {
+                "ref": "circuito_MCP3008.svg"
+            },
+            "displayName": "MCP3008 - 8-Channel 10-Bit ADC With SPI Interface",
+            "category": [
+                "support"
+            ],
+            "desc": "The MCP3008 will add 8 channels of 10-bit analog input to your microcomputer project. It uses SPI - only 4 pins are required.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "MCP3008.png",
+                    "link": "https://octopart.com/mcp3008-i%2Fp-microchip-407339",
+                    "price": "2.26",
+                    "SKU": "MCP3008-I/P-ND"
+                }
+            ],
+            "info": {
+                "setup": "The small dot on the chip indicates pin number 1, use it to set the orientation.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "74HC595",
+            "symbol": {
+                "ref": "circuito_74HC595.svg"
+            },
+            "displayName": "74HC595 - 8-Bit Shift Registers With 3-State Output Registers",
+            "category": [
+                "support"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "74HC595.png",
+                    "link": "https://octopart.com/sn74hc595n-texas+instruments-19771",
+                    "price": "0.53",
+                    "SKU": "296-1600-5-ND"
+                }
+            ],
+            "info": {
+                "setup": "The small dot on the chip indicates pin number 1, use it to set the orientation.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "74HC4051",
+            "path": "Discrete",
+            "category": "support",
+            "requires": [
+                [
+                    0,
+                    [
+                        "74HC4051_3v3"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "74HC4051_5v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "74HC4051_5v",
+            "path": "Discrete",
+            "category": "support",
+            "coders": [
+                "74HC4051"
+            ],
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "74HC4051"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VEE",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Enot",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "S0",
+                        "interface": {
+                            "requires":[[0,["DigitalOut","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S1",
+                        "interface": {
+                            "requires":[[0,["DigitalOut","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S2",
+                        "interface": {
+                            "requires":[[0,["DigitalOut","5v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "A",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "A0",
+                        "interface": {
+                            "codename": "0",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A1",
+                        "interface": {
+                            "codename": "1",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A2",
+                        "interface": {
+                            "codename": "2",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A3",
+                        "interface": {
+                            "codename": "3",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A4",
+                        "interface": {
+                            "codename": "4",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A5",
+                        "interface": {
+                            "codename": "5",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A6",
+                        "interface": {
+                            "codename": "6",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A7",
+                        "interface": {
+                            "codename": "7",
+                            "provides":[["ADC"]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "74HC4051_3v3",
+            "path": "Discrete",
+            "category": "support",
+            "coders": [
+                "74HC4051"
+            ],
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "74HC4051"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VEE",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "Enot",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "S0",
+                        "interface": {
+                            "requires":[[0,["DigitalOut","5v"]],[1,["DigitalOut","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S1",
+                        "interface": {
+                            "requires":[[0,["DigitalOut","5v"]],[1,["DigitalOut","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "S2",
+                        "interface": {
+                            "requires":[[0,["DigitalOut","5v"]],[1,["DigitalOut","3.3v"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "A",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "A0",
+                        "interface": {
+                            "codename": "0",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A1",
+                        "interface": {
+                            "codename": "1",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A2",
+                        "interface": {
+                            "codename": "2",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A3",
+                        "interface": {
+                            "codename": "3",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A4",
+                        "interface": {
+                            "codename": "4",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A5",
+                        "interface": {
+                            "codename": "5",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A6",
+                        "interface": {
+                            "codename": "6",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "A7",
+                        "interface": {
+                            "codename": "7",
+                            "provides":[["ADC"]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "MCP3008",
+            "path": "Discrete",
+            "category": "support",
+            "coders": [
+                "MCP3008"
+            ],
+            "supportedControllers": [],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "MCP3008"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "VCC",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "AGND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "VREF",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "DGND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "DOUT",
+                        "interface": {
+                            "requires":[[0,["MISO","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "DIN",
+                        "interface": {
+                            "requires":[[0,["MOSI","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "CLK",
+                        "interface": {
+                            "requires":[[0,["SCK","3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "CS",
+                        "interface": {
+                            "requires":[[0,["3.3v","SS"]],[1,["3.3v","DigitalOut"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "CH0",
+                        "interface": {
+                            "codename": "0",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH1",
+                        "interface": {
+                            "codename": "1",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH2",
+                        "interface": {
+                            "codename": "2",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH3",
+                        "interface": {
+                            "codename": "3",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH4",
+                        "interface": {
+                            "codename": "4",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH5",
+                        "interface": {
+                            "codename": "5",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH6",
+                        "interface": {
+                            "codename": "6",
+                            "provides":[["ADC"]]
+                        }
+                    },
+                    {
+                        "name": "CH7",
+                        "interface": {
+                            "codename": "7",
+                            "provides":[["ADC"]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "74HC4051",
+            "supportedControllers": []
+        },
+        {
+            "name": "MCP3008",
+            "supportedControllers": []
+        }
+    ]
+}

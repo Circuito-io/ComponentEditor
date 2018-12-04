@@ -1,0 +1,146 @@
+{
+    "Parts": [
+        {
+            "name": "VaccumPump",
+            "symbol": {
+                "ref": "circuito_Vacuum Pump - 12V.svg"
+            },
+            "displayName": "Vacuum Pump - 12V",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "10398.png",
+                    "link": "https://octopart.com/rob-10398-sparkfun-66630273",
+                    "price": "14.95",
+                    "SKU": "1568-1344-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "VaccumPump",
+            "path": "VaccumPump",
+            "category": "output",
+            "blockId": "10398",
+            "app": {
+                "appName": "Vacuum Pump - 12V",
+                "numericName": "",
+                "shortName": "Vacuum Pump",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
+                "visible": false
+            },
+            "coders": [
+                "VaccumPump"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "VaccumPump"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "Coil1",
+                        "interface": {
+                            "requires":[[0,["GndLoadSwitching","PWM"]]],
+                            "requiresLoad": 400,
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Coil2",
+                        "interface": {
+                            "requires":[[1,["12v"]]],
+                            "requiresLoad": 400
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "VaccumPump",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "snippetCode:": "    // The water pump will turn on and off for 2000ms (4 sec)\n    {{varname}}.on(); // 1. turns on\n    delay(2000);       // 2. waits 500 milliseconds (0.5 sec).\n    {{varname}}.off();// 3. turns off\n    delay(2000);       // 4. waits 500 milliseconds (0.5 sec).\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "Pump",
+                "ports": [
+                    "Coil1"
+                ],
+                "varname": "vaccumpump"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/Switchable.h",
+                "../Global/lib/Switchable.cpp"
+            ],
+            "includeHeaders": [
+                "Pump.h"
+            ]
+        }
+    ]
+}

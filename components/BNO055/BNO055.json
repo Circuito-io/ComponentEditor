@@ -1,0 +1,205 @@
+{
+    "Parts": [
+        {
+            "name": "BNO055",
+            "symbol": {
+                "ref": "circuito_Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055.svg"
+            },
+            "displayName": "Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "954493.png",
+                    "link": "https://octopart.com/2472-adafruit+industries-66660310",
+                    "price": "34.95",
+                    "SKU": "1528-1426-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": true,
+                "row": 2,
+                "rotation": 0
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "BNO055",
+            "path": "BNO055",
+            "category": "input",
+            "blockId": "954493",
+            "app": {
+                "appName": "Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055",
+                "numericName": "BNO055",
+                "shortName": "9-DOF IMU",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "false",
+                    "solder": "true"
+                },
+                "desc": "<p>The BNO055 uses three triple-axis sensors simultaneously, the data is analyzed inside the sensor using its ARM Cortex-M0 based processor, giving you a very simple way to get 3D space orientation in real time.</p>",
+                "visible": "true"
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "BNO0555v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BNO0553v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "BNO0555v",
+            "path": "BNO055",
+            "category": "input",
+            "blockId": "!954493",
+            "coders": [
+                "BNO055"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BNO055"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["5v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["5v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "INT",
+                        "interface": {
+                            "requires":[[0,["5v","DigitalIn","Int"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "BNO0553v3",
+            "path": "BNO055",
+            "category": "input",
+            "blockId": "!954493",
+            "coders": [
+                "BNO055"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "BNO055"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "SCL",
+                        "interface": {
+                            "requires":[[0,["3.3v","SCL"]]]
+                        }
+                    },
+                    {
+                        "name": "SDA",
+                        "interface": {
+                            "requires":[[0,["3.3v","SDA"]]]
+                        }
+                    },
+                    {
+                        "name": "VIN",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "GND",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "INT",
+                        "interface": {
+                            "requires":[[0,["3.3v","DigitalIn","Int"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "BNO055",
+            "supportedControllers": []
+        }
+    ]
+}

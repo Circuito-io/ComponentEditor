@@ -1,0 +1,60 @@
+{
+    "Parts": [
+        {
+            "name": "CapacitorElectro",
+            "symbol": {
+                "ref": "circuito_ElectrolyticCapacitors-470uF25V.svg"
+            },
+            "displayName": "Electrolytic Capacitor - 1uF/50V",
+            "category": [
+                "support"
+            ],
+            "desc": "A capacitor is a passive two-terminal electrical component that stores electrical energy.Capacitors are widely used in electronic circuits for blocking direct current while allowing alternating current to pass.In analog filter networks, they smooth the output of power supplies. In resonant circuits they tune radios to particular frequencies. In electric power transmission systems, they stabilize voltage and power flow.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "CapElectro1uF.png",
+                    "link": "https://octopart.com/uvk1h010mdd1td-nichicon-30498148",
+                    "price": "0.28",
+                    "SKU": "493-12567-1-ND"
+                }
+            ],
+            "info": {
+                "setup": "The polarity of the Electrolytic capacitor matters. The leg closer to light blue strip on the capacitor is the negative pole. Make sure you place it right.",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        },
+        {
+            "name": "CapacitorCeramic",
+            "symbol": {
+                "ref": "circuito_CapacitorCeramic100nF.svg"
+            },
+            "displayName": "Capacitor Ceramic 100nF",
+            "category": [
+                "support"
+            ],
+            "desc": "A capacitor is a passive two-terminal electrical component that stores electrical energy.Capacitors are widely used in electronic circuits for blocking direct current while allowing alternating current to pass.In analog filter networks, they smooth the output of power supplies. In resonant circuits they tune radios to particular frequencies. In electric power transmission systems, they stabilize voltage and power flow.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "CapCeramic100nF.png",
+                    "link": "https://octopart.com/rder72j104k4m1h03a-murata-38817136",
+                    "price": "0.64",
+                    "SKU": "490-9258-1-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [],
+    "Coders": []
+}

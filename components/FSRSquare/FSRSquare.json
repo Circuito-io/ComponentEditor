@@ -1,0 +1,237 @@
+{
+    "Parts": [
+        {
+            "name": "FSRSquare",
+            "symbol": {
+                "ref": "circuito_Force Sensitive Resistor - Square.svg"
+            },
+            "displayName": "Force Sensitive Resistor - Square",
+            "category": [
+                "input"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "9376.png",
+                    "link": "https://octopart.com/30-73258-interlink+electronics-19505691",
+                    "price": "12.4",
+                    "SKU": "1027-1002-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "FSRSquare",
+            "path": "FSRSquare",
+            "category": "input",
+            "blockId": "9376",
+            "app": {
+                "appName": "Force Sensitive Resistor - Square",
+                "numericName": "",
+                "shortName": "",
+                "tags": [
+                    "inputs"
+                ],
+                "indicators": {
+                    "verified": "false",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    0,
+                    [
+                        "FSRSquare5v"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "FSRSquare3v3"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "FSRSquare5v",
+            "path": "FSRSquare",
+            "category": "input",
+            "blockId": "!9376",
+            "coders": [
+                "FSRSquare"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "FSRSquare"
+                    },
+                    {
+                        "name": "r1",
+                        "part": "Resistor",
+                        "properties": "3.3k"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.1",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "1",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "2",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "FSRSquare3v3",
+            "path": "FSRSquare",
+            "category": "input",
+            "blockId": "!9376",
+            "coders": [
+                "FSRSquare"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "FSRSquare"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.1",
+                        "to": "r1.con1"
+                    },
+                    {
+                        "from": "r1.con0",
+                        "to": "0"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "0",
+                        "interface": {
+                            "requires":[[0,["GND"]]]
+                        }
+                    },
+                    {
+                        "name": "1",
+                        "interface": {
+                            "requires":[[0,["ADC"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "2",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "FSRSquare",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "snippetCode:": "    // Read FSR resistance value. try also {{varname}}.getResistance()\n    // For more information see Sparkfun website - www.sparkfun.com/products/9375\n    // Note, the default Vcc and external resistor values for FSR calculations are 5V ang 3300Okm, if you are not \n    //       using these default valuse in your circuit go to FSR.cpp and change default values in FSR constructor\n    float {{varname}}Force = {{varname}}.getForce();\n    Serial.print(F(\"Force: \")); Serial.print({{varname}}Force); Serial.println(F(\" [g]\"));\n"
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "FSR",
+                "ports": [
+                    "1"
+                ],
+                "varname": "fsrSquare"
+            },
+            "files": [
+                "lib/*",
+                "../Global/lib/AnalogReader.h",
+                "../Global/lib/AnalogReader.cpp"
+            ],
+            "includeHeaders": [
+                "FSR.h"
+            ]
+        }
+    ]
+}

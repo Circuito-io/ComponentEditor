@@ -1,0 +1,308 @@
+{
+    "Parts": [
+        {
+            "name": "RGBLedAnode",
+            "symbol": {
+                "ref": "circuito_RGB Led Common Anode.svg"
+            },
+            "displayName": "RGB Led Common Anode",
+            "category": [
+                "output"
+            ],
+            "desc": "",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "10820.png",
+                    "link": "https://octopart.com/159-adafruit+industries-32978433?r=sp&s=F24LnHJ_T-ebRi-um-lbWg",
+                    "price": "1.89",
+                    "SKU": "754-1615-ND"
+                }
+            ],
+            "info": {
+                "setup": "The long leg of the RGB LED is positive. (it doesn't connect to a resistor)",
+                "test": ""
+            },
+            "placing": {
+                "onBreadboard": false
+            }
+        }
+    ],
+    "Blocks": [
+        {
+            "name": "RGBLedAnode",
+            "path": "RGBLed",
+            "category": "output",
+            "blockId": "10820",
+            "app": {
+                "appName": "RGB LED Clear Common Anode",
+                "numericName": "",
+                "shortName": "RGB LED",
+                "tags": [
+                    "outputs"
+                ],
+                "indicators": {
+                    "verified": "true",
+                    "code": "true",
+                    "solder": "false"
+                },
+                "desc": "<p>This light emitting diode allows you to control its color by setting the intensity of RED, GREEN and BLUE from 0 (no color) to 255 (max color intensity). Use it for a colorful display or as an indicator that an event has occurred. Luminosity (RGB): (800, 4000, 900)mcd.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
+                "visible": false
+            },
+            "requires": [
+                [
+                    1,
+                    [
+                        "RGBLedAnode5v"
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        "RGBLedAnode3.3v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [],
+            "circuit": {}
+        },
+        {
+            "name": "RGBLedAnode3.3v",
+            "path": "RGBLed",
+            "category": "output",
+            "blockId": "!10820",
+            "coders": [
+                "RGBLedAnode"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RGBLedAnode"
+                    },
+                    {
+                        "name": "Res_R",
+                        "part": "Resistor",
+                        "properties": "100"
+                    },
+                    {
+                        "name": "Res_G",
+                        "part": "Resistor",
+                        "properties": "47"
+                    },
+                    {
+                        "name": "Res_B",
+                        "part": "Resistor",
+                        "properties": "47"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.R",
+                        "to": "Res_R.con0"
+                    },
+                    {
+                        "from": "this.G",
+                        "to": "Res_G.con0"
+                    },
+                    {
+                        "from": "this.B",
+                        "to": "Res_B.con0"
+                    },
+                    {
+                        "from": "Res_B.con1",
+                        "to": "B"
+                    },
+                    {
+                        "from": "Res_R.con1",
+                        "to": "R"
+                    },
+                    {
+                        "from": "Res_G.con1",
+                        "to": "G"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "B",
+                        "interface": {
+                            "requires":[[0,["3.3v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "G",
+                        "interface": {
+                            "requires":[[0,["3.3v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "R",
+                        "interface": {
+                            "requires":[[0,["3.3v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["3.3v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "RGBLedAnode5v",
+            "path": "RGBLed",
+            "category": "output",
+            "blockId": "!10820",
+            "coders": [
+                "RGBLedAnode"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "circuit": {
+                "parts": [
+                    {
+                        "name": "this",
+                        "part": "RGBLedAnode"
+                    },
+                    {
+                        "name": "Res_R",
+                        "part": "Resistor",
+                        "properties": "220"
+                    },
+                    {
+                        "name": "Res_G",
+                        "part": "Resistor",
+                        "properties": "100"
+                    },
+                    {
+                        "name": "Res_B",
+                        "part": "Resistor",
+                        "properties": "100"
+                    }
+                ],
+                "wires": [
+                    {
+                        "from": "this.R",
+                        "to": "Res_R.con0"
+                    },
+                    {
+                        "from": "this.G",
+                        "to": "Res_G.con0"
+                    },
+                    {
+                        "from": "this.B",
+                        "to": "Res_B.con0"
+                    },
+                    {
+                        "from": "Res_B.con1",
+                        "to": "B"
+                    },
+                    {
+                        "from": "Res_R.con1",
+                        "to": "R"
+                    },
+                    {
+                        "from": "Res_G.con1",
+                        "to": "G"
+                    }
+                ],
+                "ports": [
+                    {
+                        "name": "B",
+                        "interface": {
+                            "requires":[[0,["5v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "G",
+                        "interface": {
+                            "requires":[[0,["5v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "R",
+                        "interface": {
+                            "requires":[[0,["5v","PWM"]]],
+                            "unique": true
+                        }
+                    },
+                    {
+                        "name": "Vin",
+                        "interface": {
+                            "requires":[[0,["5v"]]]
+                        }
+                    },
+                    {
+                        "name": "supportedControllers",
+                        "interface": {
+                            "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Coders": [
+        {
+            "name": "RGBLedAnode",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "code": {
+                "global:": "    #define {{varname}}_TYPE COMMON_ANODE\n",
+                "setup:": "    {{varname}}.turnOff();              // Start with  LED Strip RGB turned off\n",
+                "constructors:": "    {{classname}} {{varname}}({{R}},{{G}},{{B}},{{varname}}_TYPE);\n",
+                "snippetCode:": "    // The RGB LED will turn PURPLE for 500ms(half a second) and turn off\n    {{varname}}.setRGB(160, 3, 255);    // 1. sets RGB LED color to purple. Change the values in the brackets to (255,0,0) for pure RED, (0,255,0) for pure GREEN and (0,0,255) for pure BLUE.\n    delay(500);                         // 2. change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n    {{varname}}.setRGB(0, 0, 0);        // 3. turns RGB LED off (showing no color). Change the values in the brackets to alter the color.\n    delay(500);                         // 4. change the value in the brackets (500) for a longer or shorter delay in milliseconds.  "
+            },
+            "license": "circuito",
+            "instantiate": {
+                "classname": "RGBLed",
+                "ports": [
+                    "R",
+                    "G",
+                    "B"
+                ],
+                "varname": "rgbLed"
+            },
+            "files": [
+                "lib/*"
+            ]
+        }
+    ]
+}
