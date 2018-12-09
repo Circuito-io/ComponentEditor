@@ -3,7 +3,8 @@
         {
             "name": "ACS712",
             "symbol": {
-                "ref": "https://ucarecdn.com/db0d606a-8f68-4c6b-a5a6-754cda375c39/"
+                "ref": "circuito_Current Sensor Module ACS712.svg",
+                "URL": "https://ucarecdn.com/4686eac5-2be8-454b-9ee7-0ef3b26e9cc8/"
             },
             "displayName": "Current Sensor Module ACS712",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/ec20b2ee-2274-47d6-b996-ce04518f5a8d/",
+                    "image": "https://ucarecdn.com/e92acaae-ee9a-46a0-a392-6d55e8768ed7/",
                     "link": "https://octopart.com/a14041500ux1200-newegg+business-93711112?r=sp&s=RF_Fj_a3RBa1wzRebKE70Q",
                     "price": "2.01",
                     "SKU": ""
@@ -142,13 +143,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

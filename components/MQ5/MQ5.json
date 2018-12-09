@@ -3,7 +3,8 @@
         {
             "name": "MQ5",
             "symbol": {
-                "ref": "https://ucarecdn.com/7e63f688-774b-4053-8b00-bf8dc54459e6/"
+                "ref": "circuito_MQ-5.svg",
+                "URL": "https://ucarecdn.com/04ec7b57-ee00-4fcb-bc8b-c1d95c857dba/"
             },
             "displayName": "LPG, Natural and Coal Gas Sensor - MQ-5",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "digikey",
-                    "image": "https://ucarecdn.com/40c50ed9-9b6f-4f59-b131-7b98687782ec/",
+                    "image": "https://ucarecdn.com/daf97557-0018-4074-ada7-1823096f5bf7/",
                     "link": "http://www.ebay.com/itm/MQ-2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Detection-Alarm-Sensor-Module-/112271187259?var=&hash=item1a23e25d3b:m:mCvQbSEnBoV7nWc_HNCUgqw",
                     "price": "1.26",
                     "SKU": ""
@@ -142,13 +143,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

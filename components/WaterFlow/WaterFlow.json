@@ -3,7 +3,8 @@
         {
             "name": "WaterFlow",
             "symbol": {
-                "ref": "https://ucarecdn.com/899e8d76-e30d-4bb6-8d66-b4bf51c82fa9/"
+                "ref": "circuito_Water Flow Sensor G12.svg",
+                "URL": "https://ucarecdn.com/057a05da-8b34-42c1-8498-28aa1f6dfdb4/"
             },
             "displayName": "Water Flow Sensor G1/2''",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/531e891b-5465-463a-a0bb-0a04e95b6e00/",
+                    "image": "https://ucarecdn.com/08ad7266-c12c-4c36-947e-1fdbf6629eac/",
                     "link": "https://octopart.com/314150005-seeed+studio-66366838",
                     "price": "",
                     "SKU": "314150005-ND"
@@ -91,8 +92,7 @@
                     },
                     {
                         "name": "res_pullup",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     }
                 ],
                 "wires": [
@@ -160,18 +160,15 @@
                     },
                     {
                         "name": "res2",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "res1",
-                        "part": "Resistor",
-                        "properties": "4.7k"
+                        "part": "Res4K7O"
                     },
                     {
                         "name": "res_pullup",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

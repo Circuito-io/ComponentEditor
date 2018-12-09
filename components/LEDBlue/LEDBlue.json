@@ -3,7 +3,8 @@
         {
             "name": "LEDBlue",
             "symbol": {
-                "ref": "https://ucarecdn.com/1d31730e-d679-4a3e-9b4e-09b3c45007ad/"
+                "ref": "circuito_LEDBlue.svg",
+                "URL": "https://ucarecdn.com/0708744b-4782-4729-a212-10afb12a80d5/"
             },
             "displayName": "LED - Basic Blue 5mm",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/8d1ce84d-55aa-4eeb-901d-61859e75b07f/",
+                    "image": "https://ucarecdn.com/84ba8299-c7c1-414d-ba31-93d89a86d079/",
                     "link": "https://octopart.com/c503b-bcs-cv0z0461-cree-10438824",
                     "price": "0.21",
                     "SKU": "C503B-BCS-CV0Z0461-ND"
@@ -92,8 +93,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "100"
+                        "part": "Res100O"
                     }
                 ],
                 "wires": [
@@ -153,8 +153,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "47"
+                        "part": "Res47O"
                     }
                 ],
                 "wires": [

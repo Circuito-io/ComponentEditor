@@ -3,7 +3,8 @@
         {
             "name": "AM2320",
             "symbol": {
-                "ref": "https://ucarecdn.com/326f2c9e-907d-4b3e-8dd0-213a4ecea52f/"
+                "ref": "circuito_AM2320 Sensor.svg",
+                "URL": "https://ucarecdn.com/c9e5c6e6-76f4-43a4-b4ed-050f98c5a57a/"
             },
             "displayName": "AM2320 Digital Temperature and Humidity Sensor",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/9ccb4bbe-4119-4a96-95d6-f455eb19476f/",
+                    "image": "https://ucarecdn.com/4ca4ef17-f916-4909-8683-b36835909d09/",
                     "link": "https://octopart.com/3721-adafruit+industries-90216287?r=sp&s=xCyglZaPQgeGRP0B0gdhKw",
                     "price": "3.95",
                     "SKU": "1528-2564-ND"
@@ -91,13 +92,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     }
                 ],
                 "wires": [

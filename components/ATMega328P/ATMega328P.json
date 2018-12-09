@@ -3,7 +3,8 @@
         {
             "name": "ATMega328P",
             "symbol": {
-                "ref": "https://ucarecdn.com/ae65e30a-3de8-4c7c-af7d-915ce21da3e5/"
+                "ref": "circuito_ATMEGA328P-PU.svg",
+                "URL": "https://ucarecdn.com/fdfd6770-8227-4a49-aa7d-85466f14e581/"
             },
             "displayName": "Microchip Technology ATMEGA328P-PU",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/0dd60854-2ec6-4779-8f69-40d033015888/",
+                    "image": "https://ucarecdn.com/4b648645-8082-4819-b4da-f1f7e694c3d4/",
                     "link": "https://octopart.com/atmega328p-pu-microchip-77760224?r=sp&s=LJ6vjrEYRLeEp_w1giQzWg",
                     "price": "2.14",
                     "SKU": "ATMEGA328P-PU-ND"
@@ -112,13 +113,11 @@
                 "parts": [
                     {
                         "name": "Cap3",
-                        "part": "CapacitorCeramic",
-                        "properties": "100nF"
+                        "part": "CapCeramic100nF"
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "this",
@@ -126,8 +125,7 @@
                     },
                     {
                         "name": "Cap2",
-                        "part": "CapacitorCeramic",
-                        "properties": "22pF"
+                        "part": "CapCeramic22pF"
                     },
                     {
                         "name": "C1",
@@ -135,8 +133,7 @@
                     },
                     {
                         "name": "Cap1",
-                        "part": "CapacitorCeramic",
-                        "properties": "22pF"
+                        "part": "CapCeramic22pF"
                     }
                 ],
                 "wires": [
@@ -397,13 +394,11 @@
                 "parts": [
                     {
                         "name": "Cap3",
-                        "part": "CapacitorCeramic",
-                        "properties": "100nF"
+                        "part": "CapCeramic100nF"
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "this",
@@ -415,13 +410,11 @@
                     },
                     {
                         "name": "Cap1",
-                        "part": "CapacitorCeramic",
-                        "properties": "22pF"
+                        "part": "CapCeramic22pF"
                     },
                     {
                         "name": "Cap2",
-                        "part": "CapacitorCeramic",
-                        "properties": "22pF"
+                        "part": "CapCeramic22pF"
                     }
                 ],
                 "wires": [

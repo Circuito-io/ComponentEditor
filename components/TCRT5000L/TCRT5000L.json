@@ -3,7 +3,8 @@
         {
             "name": "TCRT5000L",
             "symbol": {
-                "ref": "https://ucarecdn.com/0d921eb8-42be-43f5-adcf-c0978879677e/"
+                "ref": "circuito_TCR5000L.svg",
+                "URL": "https://ucarecdn.com/e8030f9a-5980-4154-a9cc-e1884e0962a3/"
             },
             "displayName": "Reflective IR Sensor TCRT5000L",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/e97a01bb-1221-46de-a527-356f46149630/",
+                    "image": "https://ucarecdn.com/09d6fe2d-8925-47b4-a2fe-3bf77b083168/",
                     "link": "https://octopart.com/tcrt5000l-vishay-39692554",
                     "price": "1.26",
                     "SKU": "751-1034-5-ND"
@@ -93,13 +94,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "220"
+                        "part": "Res220O"
                     }
                 ],
                 "wires": [
@@ -183,13 +182,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "100"
+                        "part": "Res100O"
                     }
                 ],
                 "wires": [

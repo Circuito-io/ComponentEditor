@@ -3,7 +3,8 @@
         {
             "name": "Relay",
             "symbol": {
-                "ref": "https://ucarecdn.com/f6e3f876-7cf9-493f-a272-bccbae1d57e6/"
+                "ref": "circuito_Relay SPDT.svg",
+                "URL": "https://ucarecdn.com/4e7021b2-f568-4224-a58e-9f07396cb213/"
             },
             "displayName": "Relay SPDT",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/57131a7e-ade7-4408-b9c9-4c01af78b902/",
+                    "image": "https://ucarecdn.com/9acf0b0c-d0c5-4128-b227-3b155a522d57/",
                     "link": "https://octopart.com/g5sb-14+dc5-omron-12083290",
                     "price": "2.46",
                     "SKU": "Z1640-ND"
@@ -146,8 +147,7 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

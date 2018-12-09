@@ -3,7 +3,8 @@
         {
             "name": "MQ9",
             "symbol": {
-                "ref": "https://ucarecdn.com/7b4c73da-eaba-4877-abd6-89b128f79de9/"
+                "ref": "circuito_MQ9.svg",
+                "URL": "https://ucarecdn.com/41859c13-44ff-49a5-83ce-12d06ea1b0a8/"
             },
             "displayName": "Carbon Monoxide and Combustible Gas Sensor - MQ-9",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "digikey",
-                    "image": "https://ucarecdn.com/ae82b059-56fe-4eba-950d-d05a4e96d667/",
+                    "image": "https://ucarecdn.com/770d32aa-8fb9-45de-8d1e-aeda6a31899d/",
                     "link": "http://www.ebay.com/itm/MQ-2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Detection-Alarm-Sensor-Module-/112271187259?var=&hash=item1a23e25d3b:m:mCvQbSEnBoV7nWc_HNCUgqw",
                     "price": "1.60",
                     "SKU": ""
@@ -142,13 +143,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

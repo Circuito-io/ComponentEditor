@@ -3,7 +3,8 @@
         {
             "name": "BreadBoard",
             "symbol": {
-                "ref": "https://ucarecdn.com/718fecd2-a19c-4450-ae9a-66d1f186272c/"
+                "ref": "circuito_Breadboard.svg",
+                "URL": "https://ucarecdn.com/11dc3544-f9f5-427b-8ddb-4cbd60e94d3f/"
             },
             "displayName": "BreadBoard",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/bce32072-0ff1-4162-9d68-0f35dc4cc14b/",
+                    "image": "https://ucarecdn.com/29da7211-820d-4d8a-8d01-1a382ff6875b/",
                     "link": "https://octopart.com/gs-830-global+specialties-11900592",
                     "price": "8.25",
                     "SKU": "BKGS-830-ND"
@@ -30,7 +31,8 @@
         {
             "name": "BreadBoardHalf",
             "symbol": {
-                "ref": "https://ucarecdn.com/5d4997af-eda7-4a33-a16b-d1f8ec1613ba/"
+                "ref": "circuito_Breadboard_Half.svg",
+                "URL": "https://ucarecdn.com/4059c58c-1f3b-49b9-b3ba-0a855cf1d8d1/"
             },
             "displayName": "BreadBoard - Half Size",
             "category": [
@@ -52,6 +54,54 @@
             },
             "placing": {
                 "onBreadboard": false
+            }
+        },
+        {
+            "name": "MaleHeadersTall",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "Tall Male Headers Pack- Break-Away",
+            "category": [
+                "support"
+            ],
+            "desc": "A row of 40 tall male header pins that can be broken to any size.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": null,
+                    "link": "https://octopart.com/prpc040sacn-rc-sullins-22058621",
+                    "price": "0.9",
+                    "SKU": "S1131EC-40-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
+            }
+        },
+        {
+            "name": "JumperWiresStd",
+            "symbol": {
+                "ref": ""
+            },
+            "displayName": "Jumper Wires Pack - M/M",
+            "category": [
+                "support"
+            ],
+            "desc": "A pack of 20 standard 7\" male-male Jumper wires. They are used in electrical circuits to connect its various components. They are very comfortable to use with a breadboard.",
+            "bom": [
+                {
+                    "name": "octopart",
+                    "image": "https://ucarecdn.com/00837898-2da6-4254-a0a4-b69c1b19edbb/",
+                    "link": "https://octopart.com/prt-12795-sparkfun-71808629",
+                    "price": "1.95",
+                    "SKU": "1568-1512-ND"
+                }
+            ],
+            "info": {
+                "setup": "",
+                "test": ""
             }
         },
         {
@@ -79,30 +129,6 @@
             }
         },
         {
-            "name": "JumperWiresStd",
-            "symbol": {
-                "ref": ""
-            },
-            "displayName": "Jumper Wires Pack - M/M",
-            "category": [
-                "support"
-            ],
-            "desc": "A pack of 20 standard 7\" male-male Jumper wires. They are used in electrical circuits to connect its various components. They are very comfortable to use with a breadboard.",
-            "bom": [
-                {
-                    "name": "octopart",
-                    "image": "https://ucarecdn.com/b874b398-b9f6-45b4-8b51-58c1fc0d5348/",
-                    "link": "https://octopart.com/prt-12795-sparkfun-71808629",
-                    "price": "1.95",
-                    "SKU": "1568-1512-ND"
-                }
-            ],
-            "info": {
-                "setup": "",
-                "test": ""
-            }
-        },
-        {
             "name": "JumperWiresStdMF",
             "symbol": {
                 "ref": ""
@@ -115,34 +141,10 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/866f3237-bf7c-4fc6-ada7-f96be923582a/",
+                    "image": "https://ucarecdn.com/22dd96fd-0175-4572-bf4c-eaec96ac93d5/",
                     "link": "https://octopart.com/prt-12794-sparkfun-71808628",
                     "price": "1.95",
                     "SKU": "1568-1511-ND"
-                }
-            ],
-            "info": {
-                "setup": "",
-                "test": ""
-            }
-        },
-        {
-            "name": "MaleHeadersTall",
-            "symbol": {
-                "ref": ""
-            },
-            "displayName": "Tall Male Headers Pack- Break-Away",
-            "category": [
-                "support"
-            ],
-            "desc": "A row of 40 tall male header pins that can be broken to any size.",
-            "bom": [
-                {
-                    "name": "octopart",
-                    "image": null,
-                    "link": "https://octopart.com/prpc040sacn-rc-sullins-22058621",
-                    "price": "0.9",
-                    "SKU": "S1131EC-40-ND"
                 }
             ],
             "info": {

@@ -3,7 +3,8 @@
         {
             "name": "LED_IR",
             "symbol": {
-                "ref": "https://ucarecdn.com/6deca6b2-d470-454a-a20e-083952c669e6/"
+                "ref": "circuito_LEDIR.svg",
+                "URL": "https://ucarecdn.com/77138f2a-8c8f-4200-8dc3-2400a435f7db/"
             },
             "displayName": "Infrared (IR) LED 950nm",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/22fafb0c-e785-4bff-a0ac-80c1b8b28fa5/",
+                    "image": "https://ucarecdn.com/53e28f9a-2d89-40ba-84cc-1be42be04206/",
                     "link": "https://octopart.com/sfh+4512-osram+opto-31094091",
                     "price": "0.61",
                     "SKU": "475-2943-ND"
@@ -102,8 +103,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     }
                 ],
                 "wires": [
@@ -185,8 +185,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "220"
+                        "part": "Res220O"
                     }
                 ],
                 "wires": [

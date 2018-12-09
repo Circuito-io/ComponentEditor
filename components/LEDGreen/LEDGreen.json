@@ -3,7 +3,8 @@
         {
             "name": "LEDGreen",
             "symbol": {
-                "ref": "https://ucarecdn.com/f65bf363-6241-4f84-b42b-5a0333ea6783/"
+                "ref": "circuito_LEDGreen.svg",
+                "URL": "https://ucarecdn.com/959d2630-4dbf-4a0b-b5d4-54e08ed23946/"
             },
             "displayName": "LED - Basic Green 5mm",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/85ad6b2a-35e4-437e-a9f5-0be14d499ea8/",
+                    "image": "https://ucarecdn.com/70bb5a71-7454-4f8d-b8a7-6c1a1a97d7f3/",
                     "link": "https://octopart.com/ltl2r3kgd-em-lite-on-20191565",
                     "price": "0.33",
                     "SKU": "160-1852-ND"
@@ -92,8 +93,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "330"
+                        "part": "Res330O"
                     }
                 ],
                 "wires": [
@@ -153,8 +153,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "100"
+                        "part": "Res100O"
                     }
                 ],
                 "wires": [

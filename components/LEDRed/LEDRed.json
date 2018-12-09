@@ -3,7 +3,8 @@
         {
             "name": "LEDRed",
             "symbol": {
-                "ref": "https://ucarecdn.com/0958f698-80c3-4d7a-b90a-91815c5728e0/"
+                "ref": "circuito_LEDRed.svg",
+                "URL": "https://ucarecdn.com/c006563e-4a6b-4010-84cd-80ada747ebb7/"
             },
             "displayName": "LED - Basic Red 5mm",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/b21ae3c1-c5c2-4264-b87d-9d786c0d0548/",
+                    "image": "https://ucarecdn.com/84a2b3b9-4466-4d48-99d8-ba7f3d1661e8/",
                     "link": "https://octopart.com/ltl-4223-lite-on-549786",
                     "price": "0.36",
                     "SKU": "160-1127-ND"
@@ -91,8 +92,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "220"
+                        "part": "Res220O"
                     }
                 ],
                 "wires": [
@@ -151,8 +151,7 @@
                     },
                     {
                         "name": "Res1",
-                        "part": "Resistor",
-                        "properties": "100"
+                        "part": "Res100O"
                     }
                 ],
                 "wires": [

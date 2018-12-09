@@ -3,7 +3,8 @@
         {
             "name": "MQ7SF",
             "symbol": {
-                "ref": "https://ucarecdn.com/5cae5b03-37bc-4c9a-8c88-533219dfe525/"
+                "ref": "circuito_Gas Sensor Breakout.svg",
+                "URL": "https://ucarecdn.com/94677c8d-3194-4ea4-9b30-b7eba4658847/"
             },
             "displayName": "Carbon Monoxide Sensor - MQ-7",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/6ca3304f-d5d0-457e-8961-0cd74ee98e9b/",
+                    "image": "https://ucarecdn.com/b62f7952-b44f-465b-87fd-636febc47724/",
                     "link": "https://octopart.com/fit0227-dfrobot-77801145?r=sp&s=U5-MXUoKSnmDEo1dPNoYug",
                     "price": "5.99",
                     "SKU": "605-00007-ND"
@@ -46,7 +47,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/7b3f879a-e713-48cd-9978-9e8ed01347b2/",
+                    "image": "https://ucarecdn.com/ca916a33-b074-4082-964c-b826a8acde20/",
                     "link": "https://octopart.com/bob-08891-sparkfun-22107481",
                     "price": "0.95",
                     "SKU": "1568-1378-ND"
@@ -121,8 +122,7 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     }
                 ],
                 "wires": [
@@ -191,18 +191,15 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     },
                     {
                         "name": "r3",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

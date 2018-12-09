@@ -3,7 +3,8 @@
         {
             "name": "HCSR04",
             "symbol": {
-                "ref": "https://ucarecdn.com/9d618043-847a-4b1e-95b3-456d34911fec/"
+                "ref": "circuito_Ultrasonic Sensor - HC-SR04.svg",
+                "URL": "https://ucarecdn.com/dbfd8edd-fcbc-494b-8eda-985dac5c6b20/"
             },
             "displayName": "Ultrasonic Sensor - HC-SR04",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/f72a1981-2dff-42c7-9559-2c812f03ca45/",
+                    "image": "https://ucarecdn.com/f8687b68-d122-4013-a3cd-db6bd1487fd8/",
                     "link": "https://octopart.com/hc-sr04-osepp-64751802?r=sp&s=Nlv47kE4QSaxhGOimvemWQ",
                     "price": "3.95",
                     "SKU": "1568-1421-ND"
@@ -154,13 +155,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [
@@ -236,8 +235,7 @@
                     },
                     {
                         "name": "Res",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

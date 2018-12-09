@@ -3,7 +3,8 @@
         {
             "name": "MQ6",
             "symbol": {
-                "ref": "https://ucarecdn.com/be6506ca-f246-4996-b8fe-01078bf39607/"
+                "ref": "circuito_MQ-6.svg",
+                "URL": "https://ucarecdn.com/52519871-4979-43f8-b9f2-e9443c7eddaf/"
             },
             "displayName": "LPG, Butane and Propane Gas Sensor - MQ-6",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "digikey",
-                    "image": "https://ucarecdn.com/ba756fc1-1142-4db4-9ede-4690cc2b7c3f/",
+                    "image": "https://ucarecdn.com/42c3dc5e-14f8-460d-9974-5137371287dd/",
                     "link": "http://www.ebay.com/itm/MQ-2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Detection-Alarm-Sensor-Module-/112271187259?var=&hash=item1a23e25d3b:m:mCvQbSEnBoV7nWc_HNCUgqw",
                     "price": "1.47",
                     "SKU": ""
@@ -142,13 +143,11 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "470"
+                        "part": "Res470O"
                     },
                     {
                         "name": "r2",
-                        "part": "Resistor",
-                        "properties": "1k"
+                        "part": "Res1KO"
                     }
                 ],
                 "wires": [

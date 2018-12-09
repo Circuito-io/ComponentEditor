@@ -3,7 +3,8 @@
         {
             "name": "PushButtonArcadeNoLED",
             "symbol": {
-                "ref": "https://ucarecdn.com/34a1ced5-5b7e-47d0-b20d-c461ca735fd0/"
+                "ref": "circuito_ArcadeButtonNoLED.svg",
+                "URL": "https://ucarecdn.com/d18d1191-7c9f-4e8c-a918-49570a1b0ec5/"
             },
             "displayName": "Concave Arcade Button - Red (without LED)",
             "category": [
@@ -13,7 +14,7 @@
             "bom": [
                 {
                     "name": "octopart",
-                    "image": "https://ucarecdn.com/51f04dd7-e86b-44f4-8be7-b9a31d3a61f1/",
+                    "image": "https://ucarecdn.com/d65a57a0-2cba-4b10-acb2-ba5c25fb1a39/",
                     "link": "https://octopart.com/com-09336-sparkfun-74199780?r=sp&s=ak6krZ-LTjWlfqM6Bv3OTw",
                     "price": "1.95",
                     "SKU": "1568-1476-ND"
@@ -91,8 +92,7 @@
                     },
                     {
                         "name": "r1",
-                        "part": "Resistor",
-                        "properties": "10k"
+                        "part": "Res10KO"
                     }
                 ],
                 "wires": [
