@@ -1,0 +1,24 @@
+{
+    "name": "OLED128X64",
+    "path": "OLED128X64",
+    "category": "input",
+    "blockId": "466193",
+    "app": {
+        "appName": "Monochrome 1.3 inch 128x64 OLED graphic display",
+        "numericName": "",
+        "shortName": "OLED",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This 1.3-inch OLED Breakout Board breaks out a small monochrome, white-on-black OLED. it packs a punch \u2013 the OLED display is crisp, and you can fit a deceivingly large amount of graphics on there.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["OLED128X645v"]],[1,["OLED128X643v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

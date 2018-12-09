@@ -1,0 +1,53 @@
+{
+    "name": "Potentiometer5v",
+    "path": "Potentiometer",
+    "category": "input",
+    "blockId": "!9939",
+    "coders": [
+        "Potentiometer"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "Potentiometer"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

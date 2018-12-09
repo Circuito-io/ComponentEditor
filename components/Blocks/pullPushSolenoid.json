@@ -1,0 +1,132 @@
+{
+    "name": "pullPushSolenoid",
+    "path": "pullPushSolenoid",
+    "category": "output",
+    "blockId": "11015",
+    "app": {
+        "appName": "Solenoid Push-Pull - 5v (Small)",
+        "numericName": "",
+        "shortName": "Solenoid Push-Pull",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Solenoids are a great way to induce linear motion for pushing, pulling or controlling switches and levers.</p>",
+        "visible": false
+    },
+    "coders": [
+        "pullPushSolenoid"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            1,
+            [
+                "Reg5v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "pullPushSolenoid",
+                "rotation": 0
+            },
+            {
+                "name": "nmos",
+                "part": "MOSFETN"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
+            },
+            {
+                "name": "d1",
+                "part": "Diode",
+                "rotation": 180
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.pin2",
+                "to": "nmos.D"
+            },
+            {
+                "from": "nmos.G",
+                "to": "r1.con0"
+            },
+            {
+                "from": "nmos.S",
+                "to": "r1.con1"
+            },
+            {
+                "from": "this.pin1",
+                "to": "d1.neg"
+            },
+            {
+                "from": "this.pin2",
+                "to": "d1.pos"
+            },
+            {
+                "from": "nmos.S",
+                "to": "GND"
+            },
+            {
+                "from": "nmos.G",
+                "to": "SIG"
+            }
+        ],
+        "ports": [
+            {
+                "name": "pin1",
+                "interface": {
+                    "requires":[[0,["5v"]]],
+                    "requiresLoad": 700
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "SIG",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "HallA1302",
+    "path": "HallSensorA1302",
+    "category": "input",
+    "blockId": "2331989",
+    "app": {
+        "appName": "Hall Sensor A1302",
+        "numericName": "A1302",
+        "shortName": " ",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Analog linear hall effect sensor. It outputs voltage that is proportional to an applied magnetic field.</p>\n<p><strong>Returned Value</strong>: Analog values. After calibration, 0 - for no magnetic field. Value decreases with negative field and increases with positive filed present.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["HallA13025v"]],[1,["HallA13023v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Thermistor",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "snippetCode:": "    //Get Measurment from Thermistor temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "Thermistor",
+        "ports": [
+            "con1"
+        ],
+        "varname": "thermistor"
+    },
+    "files": [
+        "lib/*",
+        "../Global/lib/AnalogReader.h",
+        "../Global/lib/AnalogReader.cpp"
+    ],
+    "includeHeaders": [
+        "Thermistor.h"
+    ]
+}

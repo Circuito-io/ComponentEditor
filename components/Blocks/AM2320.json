@@ -1,0 +1,24 @@
+{
+    "name": "AM2320",
+    "path": "AM2320",
+    "category": "input",
+    "blockId": "656839",
+    "app": {
+        "appName": "AM2320 Digital Temperature and Humidity Sensor",
+        "numericName": "AM2320",
+        "shortName": "AM2320 Digital I2C Temperature and Humidity Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 3% humidity accuracy and 0.5C temperature accuracy.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["AM2320-5v"]],[1,["AM2320-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

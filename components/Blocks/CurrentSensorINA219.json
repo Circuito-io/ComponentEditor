@@ -1,0 +1,24 @@
+{
+    "name": "CurrentSensorINA219",
+    "path": "CurrentSensorINA219",
+    "category": "input",
+    "blockId": "979557",
+    "app": {
+        "appName": "INA219 High Side DC Current Sensor Breakout - 26V 3.2A Max",
+        "numericName": "INA219",
+        "shortName": "DC Current Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>The INA219 High Side DC Current Sensor Breakout can help you measure both the high side voltage and DC current draw over I2C with 1% precision (26V 3.2A Max)</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["CurrentSensorINA219-5v"]],[1,["CurrentSensorINA219-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

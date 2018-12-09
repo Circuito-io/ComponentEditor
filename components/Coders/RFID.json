@@ -1,0 +1,32 @@
+{
+    "name": "RFID",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "setup:": "    //initialize RFID module\n    {{varname}}.init();\n",
+        "snippetCode:": "    //Read RFID tag if present\n    String {{varname}}tag = {{varname}}.readTag();\n    //print the tag to serial monitor if one was discovered\n    {{varname}}.printTag({{varname}}tag);\n"
+    },
+    "license": "PublicDomain",
+    "instantiate": {
+        "classname": "RFID",
+        "ports": [
+            "SDA",
+            "RST"
+        ],
+        "varname": "rfid"
+    },
+    "files": [
+        "lib/*"
+    ]
+}

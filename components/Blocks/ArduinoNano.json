@@ -1,0 +1,28 @@
+{
+    "name": "ArduinoNano",
+    "path": "ArduinoNano",
+    "category": "controller",
+    "blockId": "11022",
+    "app": {
+        "appName": "Arduino Nano - R3",
+        "numericName": "",
+        "shortName": "Arduino Nano",
+        "tags": [
+            "controllers"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>The Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328.<br>It lacks only a DC power jack, and works with a Mini-B USB cable instead of a standard one.<p>FYI the on-board 3.3v pin outputs voltage only when powered via USB.</p>\n",
+        "visible": false
+    },
+    "altComp": [
+        1000,
+        "ArduinoUno"
+    ],
+    "requires":[[1,["ArduinoNanoEx"]],[1,["ArduinoNanoUSB"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

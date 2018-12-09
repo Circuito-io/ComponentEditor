@@ -1,0 +1,24 @@
+{
+    "name": "TSOP38238",
+    "path": "TSOP38238_IR_Receiver",
+    "category": "input",
+    "blockId": "10266",
+    "app": {
+        "appName": "IR Receiver Diode - TSOP38238",
+        "numericName": "TSOP38238",
+        "shortName": "IR Receiver",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A diode that can receive an IR code - wire it to your circuit whenever you\u2019d like to control your circuit with an IR remote control (standard or yof your own making).<br><strong>Returned values</strong>: detected IR codes for all major remote providers.<br><strong>Sample Applications</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Remote-controlled-switch-using-Atmega-328p/\">Remote Control Switch</a>.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["TSOP382385v"]],[1,["TSOP382383v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

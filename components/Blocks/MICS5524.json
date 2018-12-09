@@ -1,0 +1,74 @@
+{
+    "name": "MICS5524",
+    "path": "MICS5524",
+    "category": "input",
+    "blockId": "688852",
+    "app": {
+        "appName": "Adafruit MiCS5524 CO, Alcohol and VOC Gas Sensor Breakout",
+        "numericName": "MICS5524",
+        "shortName": "ADAFRUIT MICS5524 CO, ALCOHOL AND VOC GAS SENSOR",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>This sensor can easily detect gas leak indoor. It is sensitive to CO (~ 1 to 1000 ppm), Ammonia (~ 1 to 500 ppm), Ethanol (~ 10 to 500 ppm), H2 (~ 1 - 1000 ppm), and Methane / Propane / Iso-Butane (~ 1,000++ ppm).</p>",
+        "visible": "true"
+    },
+    "coders": [
+        "MICS5524"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "MICS5524"
+            }
+        ],
+        "ports": [
+            {
+                "name": "5V",
+                "interface": {
+                    "requires":[[0,["5v"]]],
+                    "requiresLoad": 35
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Ao",
+                "interface": {
+                    "requires":[[0,["ADC"]],[1,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["RPI3B"]],[1,["ArduinoProMini3v3"]],[2,["ESP32DevKitC"]],[3,["ArduinoMega"]],[4,["ArduinoProMini5v"]],[5,["NodeMCU"]],[6,["ArduinoGemma"]],[7,["ArduinoUno"]],[8,["ArduinoNano"]],[9,["ArduinoMicro"]],[10,["ArduinoLeonardo"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

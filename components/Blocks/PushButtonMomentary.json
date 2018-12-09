@@ -1,0 +1,24 @@
+{
+    "name": "PushButtonMomentary",
+    "path": "PushButtonMomentary",
+    "category": "input",
+    "blockId": "942700",
+    "app": {
+        "appName": "Momentary Push Button - Panel Mount (Red)",
+        "numericName": "",
+        "shortName": "Momentary Push Button",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This button is perfect for basic On/Off functions, it's N.O (norammaly open), and can be mounted into a panel easily.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["PushButtonMomentary5v"]],[1,["PushButtonMomentary3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

@@ -1,0 +1,24 @@
+{
+    "name": "FSR",
+    "path": "FSR",
+    "category": "input",
+    "blockId": "9375",
+    "app": {
+        "appName": "Force Sensitive Resistor 0.5''",
+        "numericName": "",
+        "shortName": "",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["FSR5v"]],[1,["FSR3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

@@ -1,0 +1,24 @@
+{
+    "name": "ArduinoMega",
+    "path": "ArduinoMega",
+    "category": "controller",
+    "blockId": "11061",
+    "app": {
+        "appName": "Arduino Mega 2560 R3",
+        "numericName": "",
+        "shortName": "Arduino Mega",
+        "tags": [
+            "controllers"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Arduino Mega 2560 R3. The MEGA 2560 is designed for more complex projects. With 54 digital I/O pins, 16 analog inputs and a larger space for your sketch it is the recommended board for 3D printers and robotics projects.<br>This gives your projects plenty of room and opportunities. The Mega 2560 is a microcontroller board based on the ATmega2560.<br>It has 54 digital input/output pins (of which 15 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button.<br>It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.<br>The Mega 2560 board is compatible with most shields designed for the Uno and the former boards Duemilanove or Diecimila - <a target=\"_blank\" href=\"https://www.arduino.cc/en/Main/ArduinoBoardMega2560\">More Info</a>.</p>\n<p>This text is provided under the <strong>Creative Commons Attribution ShareAlike 3.0</strong></p>\n",
+        "visible": false
+    },
+    "requires":[[1,["ArduinoMegaBarrelJack12v"]],[2,["ArduinoMega12v"]],[3,["ArduinoMega9v"]],[4,["ArduinoMega6v"]],[5,["ArduinoMegaLipo7v4"]],[10,["ArduinoMegaUSB"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

@@ -1,0 +1,67 @@
+{
+    "name": "TiltSW5v",
+    "path": "TiltSW",
+    "category": "input",
+    "blockId": "!10289",
+    "coders": [
+        "TiltSW"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "TiltSW"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.2",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
+                "to": "0"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "1",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "2",
+                "interface": {
+                    "requires":[[0,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

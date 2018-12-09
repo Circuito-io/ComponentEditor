@@ -1,0 +1,24 @@
+{
+    "name": "WaterPressureSensor",
+    "path": "WaterPressureSensor",
+    "category": "input",
+    "blockId": "267055",
+    "app": {
+        "appName": "Analog Water Pressure Sensor - Gravity",
+        "numericName": "",
+        "shortName": "Water Pressure Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This water pressure sensor can detect presence of water and how strong the water pressure is.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["WaterPressureSensor5v"]],[1,["WaterPressureSensor3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

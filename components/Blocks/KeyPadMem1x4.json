@@ -1,0 +1,88 @@
+{
+    "name": "KeyPadMem1x4",
+    "path": "KeyPadMem1x4",
+    "category": "input",
+    "blockId": "8655",
+    "app": {
+        "appName": "Membrane 1x4 Matrix Keypad",
+        "numericName": "",
+        "shortName": "1x4 Matrix Keypad",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>A simple 1-by-4 membrane Keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed KeyPad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
+        "visible": false
+    },
+    "coders": [
+        "KeyPadMem1x4"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "KeyPadMem1x4"
+            }
+        ],
+        "ports": [
+            {
+                "name": "1",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "2",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "3",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "4",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "5",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

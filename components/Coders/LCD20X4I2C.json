@@ -1,0 +1,27 @@
+{
+    "name": "LCD20X4I2C",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {},
+    "license": "circuito",
+    "instantiate": {
+        "classname": "LiquidCrystal_PCF8574",
+        "ports": [],
+        "varname": "lcd20x4"
+    },
+    "files": [
+        "lib/*"
+    ]
+}

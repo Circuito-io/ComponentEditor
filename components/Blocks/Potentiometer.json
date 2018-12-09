@@ -1,0 +1,24 @@
+{
+    "name": "Potentiometer",
+    "path": "Potentiometer",
+    "category": "input",
+    "blockId": "9939",
+    "app": {
+        "appName": "Rotary Potentiometer - 10k Ohm, Linear",
+        "numericName": "",
+        "shortName": "Rotary Potentiometer 10k ohm",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/How-to-Make-an-Office-Neighbor-Shield-With-Arduino-1/\">Neighbour Shield</a>.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["Potentiometer5v"]],[1,["Potentiometer3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

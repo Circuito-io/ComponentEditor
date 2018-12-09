@@ -1,0 +1,51 @@
+{
+    "name": "HeartRateGravity-3v3",
+    "path": "HeartRateGravity",
+    "category": "input",
+    "blockId": "!133979",
+    "coders": [
+        "HeartRateGravity"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "HeartRateGravity"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

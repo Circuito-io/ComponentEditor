@@ -1,0 +1,61 @@
+{
+    "name": "VibrationSensor3v3",
+    "path": "VibrationSensor",
+    "category": "input",
+    "blockId": "!773723",
+    "coders": [
+        "VibrationSensor"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "VibrationSensor"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.2",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
+                "to": "0"
+            }
+        ],
+        "ports": [
+            {
+                "name": "1",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "2",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

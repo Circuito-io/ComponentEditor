@@ -1,0 +1,73 @@
+{
+    "name": "LipoBattery7v4",
+    "path": "Power",
+    "category": "power",
+    "blockId": "11856",
+    "app": {
+        "appName": "Lithium Polymer Battery 7.4v",
+        "numericName": "",
+        "shortName": "LiPo Battery 7.4V",
+        "tags": [
+            "powerSupplies"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "none",
+            "solder": "false"
+        },
+        "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
+        "visible": false
+    },
+    "altComp": [
+        100,
+        "Battery8xAA"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LipoBattery7v4"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "provides":[["7.4v"]],
+                    "providesLoad": 5000
+                }
+            },
+            {
+                "name": "PowerType",
+                "interface": {
+                    "provides":[["Battery"]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

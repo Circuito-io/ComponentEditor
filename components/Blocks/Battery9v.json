@@ -1,0 +1,73 @@
+{
+    "name": "Battery9v",
+    "path": "Power",
+    "category": "power",
+    "blockId": "10218",
+    "app": {
+        "appName": "9V Alkaline Battery",
+        "numericName": "",
+        "shortName": "9V Battery",
+        "tags": [
+            "powerSupplies"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "none",
+            "solder": "false"
+        },
+        "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
+        "visible": false
+    },
+    "altComp": [
+        100,
+        "PowerSupply12v"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "Battery9v"
+            }
+        ],
+        "ports": [
+            {
+                "name": "pos",
+                "interface": {
+                    "provides":[["9v"]],
+                    "providesLoad": 1000
+                }
+            },
+            {
+                "name": "neg",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "PowerType",
+                "interface": {
+                    "provides":[["Battery"]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

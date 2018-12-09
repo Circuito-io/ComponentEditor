@@ -1,0 +1,48 @@
+{
+    "name": "BarrelJack5v",
+    "path": "Power",
+    "category": "support",
+    "supportedControllers": [],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "BarrelJack",
+                "rotation": 180
+            }
+        ],
+        "ports": [
+            {
+                "name": "pos",
+                "interface": {
+                    "provides":[["5v"]],
+                    "redirectLoad": "posIn"
+                }
+            },
+            {
+                "name": "posIn",
+                "interface": {
+                    "requires":[[0,["5v","Barrel"]]]
+                }
+            },
+            {
+                "name": "neg",
+                "interface": {
+                    "provides":[["GND"]]
+                }
+            },
+            {
+                "name": "neg",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "negIn",
+                "interface": {
+                    "requires":[[0,["GND","Barrel"]]]
+                }
+            }
+        ]
+    }
+}

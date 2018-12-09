@@ -1,0 +1,36 @@
+{
+    "name": "LM35",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "snippetCode:": "    //Get Measurment from LM35 temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "LM35",
+        "ports": [
+            "Vout"
+        ],
+        "varname": "lm35"
+    },
+    "files": [
+        "lib/*",
+        "../Global/lib/AnalogReader.h",
+        "../Global/lib/AnalogReader.cpp"
+    ],
+    "includeHeaders": [
+        "LM35.h"
+    ]
+}

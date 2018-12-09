@@ -1,0 +1,51 @@
+{
+    "name": "CapacitiveTouchMoment3v3",
+    "path": "CapacitiveTouchMoment",
+    "category": "input",
+    "blockId": "!44752",
+    "coders": [
+        "CapacitiveTouchMoment"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "CapacitiveTouchMoment"
+            }
+        ],
+        "ports": [
+            {
+                "name": "OUT",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VDD",
+                "interface": {
+                    "requires":[[1,["3.3v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

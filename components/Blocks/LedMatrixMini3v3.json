@@ -1,0 +1,55 @@
+{
+    "name": "LedMatrixMini3v3",
+    "path": "LedMatrixMini",
+    "category": "output",
+    "blockId": "!912191",
+    "coders": [
+        "LedMatrixMini"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LedMatrixMini"
+            }
+        ],
+        "ports": [
+            {
+                "name": "C",
+                "interface": {
+                    "requires":[[0,["3.3v","SCL"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "D",
+                "interface": {
+                    "requires":[[0,["3.3v","SDA"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[6,["RPI3B"]],[7,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

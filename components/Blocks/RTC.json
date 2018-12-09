@@ -1,0 +1,80 @@
+{
+    "name": "RTC",
+    "path": "RTC",
+    "category": "input",
+    "blockId": "821989",
+    "app": {
+        "appName": "RTC - Real Time Clock",
+        "numericName": "",
+        "shortName": "Real Time Clock",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Keep track of the current year, month, day as well as the current time.</p>\n<p><strong>Returned Value</strong>: Returns the time and date.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
+        "visible": false
+    },
+    "coders": [
+        "RTC"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "RTC"
+            }
+        ],
+        "ports": [
+            {
+                "name": "SDA",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["SDA","5v"]],[1,["SDA","3.3v"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["Arduino101"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

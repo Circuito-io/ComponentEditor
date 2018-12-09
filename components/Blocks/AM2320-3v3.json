@@ -1,0 +1,74 @@
+{
+    "name": "AM2320-3v3",
+    "path": "AM2320",
+    "category": "input",
+    "blockId": "!656839",
+    "coders": [
+        "AM2320"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "AM2320"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.SCL",
+                "to": "r1.con0"
+            },
+            {
+                "from": "this.VDD",
+                "to": "r1.con1"
+            },
+            {
+                "from": "this.SDA",
+                "to": "r2.con0"
+            },
+            {
+                "from": "this.VDD",
+                "to": "r2.con1"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VDD",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "requires":[[0,["3.3v","SCL"]]]
+                }
+            },
+            {
+                "name": "SDA",
+                "interface": {
+                    "requires":[[0,["3.3v","SDA"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

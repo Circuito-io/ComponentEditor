@@ -1,0 +1,24 @@
+{
+    "name": "TiltSW",
+    "path": "TiltSW",
+    "category": "input",
+    "blockId": "10289",
+    "app": {
+        "appName": "Tilt Sensor - AT407",
+        "numericName": "AT407",
+        "shortName": "Tilt Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A basic tilt switch. It can be used to detect if a device is flipped. </p>",
+        "visible": false
+    },
+    "requires":[[0,["TiltSW5v"]],[1,["TiltSW3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

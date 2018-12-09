@@ -1,0 +1,24 @@
+{
+    "name": "ToggleSwitch",
+    "path": "ToggleSwitch",
+    "category": "input",
+    "blockId": "243599",
+    "app": {
+        "appName": "Mini Panel Mount SPDT Toggle Switch",
+        "numericName": "ToggleSwitch",
+        "shortName": "Mini Panel Mount SPDT Toggle Switch",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This is a simple SPDT Slide Switch, it can be used as on/off switches or selector switch. It requires soldering to connect to breadboard.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["ToggleSwitch5v"]],[1,["ToggleSwitch3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

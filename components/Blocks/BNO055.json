@@ -1,0 +1,24 @@
+{
+    "name": "BNO055",
+    "path": "BNO055",
+    "category": "input",
+    "blockId": "954493",
+    "app": {
+        "appName": "Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055",
+        "numericName": "BNO055",
+        "shortName": "9-DOF IMU",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>The BNO055 uses three triple-axis sensors simultaneously, the data is analyzed inside the sensor using its ARM Cortex-M0 based processor, giving you a very simple way to get 3D space orientation in real time.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["BNO0555v"]],[1,["BNO0553v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

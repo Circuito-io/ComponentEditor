@@ -1,0 +1,27 @@
+{
+    "name": "LedMatrixMini",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {},
+    "license": "MIT",
+    "instantiate": {
+        "classname": "Adafruit_8x8matrix",
+        "ports": [],
+        "varname": "LedMatrixMini"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": []
+}

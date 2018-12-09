@@ -1,0 +1,24 @@
+{
+    "name": "HTU21D-F",
+    "path": "HTU21D-F",
+    "category": "input",
+    "blockId": "690029",
+    "app": {
+        "appName": "Adafruit HTU21D-F Temperature & Humidity Sensor Breakout Board",
+        "numericName": "HTU21D-F",
+        "shortName": "HTU21D-F Temperature & Humidity Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>This is a digital humidity & temp sensor. An accurate and intelligent alternative to much simpler sensors. It is connected vua I2C bus & has a typical accuracy of \u00b12%@5%-95% RH while able to measure -30-90\u00b0C with \u00b11\u00b0C accuracy</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["HTU21D-F5v"]],[1,["HTU21D-F3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

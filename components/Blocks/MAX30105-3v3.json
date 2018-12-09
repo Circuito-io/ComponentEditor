@@ -1,0 +1,55 @@
+{
+    "name": "MAX30105-3v3",
+    "path": "MAX30105",
+    "category": "input",
+    "blockId": "!220687",
+    "coders": [
+        "MAX30105"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "MAX30105"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "5v",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "requires":[[0,["3.3v","SCL"]]]
+                }
+            },
+            {
+                "name": "SDA",
+                "interface": {
+                    "requires":[[0,["3.3v","SDA"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

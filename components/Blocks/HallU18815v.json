@@ -1,0 +1,67 @@
+{
+    "name": "HallU18815v",
+    "path": "HallSensorU1881",
+    "category": "input",
+    "blockId": "!9312",
+    "coders": [
+        "HallU1881"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "HallU1881"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.Vout",
+                "to": "r1.con1"
+            },
+            {
+                "from": "this.Vcc",
+                "to": "r1.con0"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Vout",
+                "interface": {
+                    "requires":[[0,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Vcc",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "Gnd",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

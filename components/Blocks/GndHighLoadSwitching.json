@@ -1,0 +1,63 @@
+{
+    "name": "GndHighLoadSwitching",
+    "path": "Switching",
+    "category": "support",
+    "supportedControllers": [],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "MOSFETN"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.G",
+                "to": "r1.con1"
+            },
+            {
+                "from": "this.S",
+                "to": "r1.con0"
+            },
+            {
+                "from": "this.S",
+                "to": "GndIn"
+            },
+            {
+                "from": "this.G",
+                "to": "Sig"
+            },
+            {
+                "from": "this.D",
+                "to": "GndOut"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GndIn",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GndOut",
+                "interface": {
+                    "codenameRedirect": "Sig",
+                    "provides":[["GndLoadSwitching"]],
+                    "providesLoad": 3000
+                }
+            }
+        ]
+    }
+}

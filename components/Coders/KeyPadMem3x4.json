@@ -1,0 +1,37 @@
+{
+    "name": "KeyPadMem3x4",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {},
+    "license": "circuito",
+    "instantiate": {
+        "classname": "Keypad",
+        "ports": [
+            "col1",
+            "col2",
+            "col3",
+            "row1",
+            "row2",
+            "row3",
+            "row4"
+        ],
+        "varname": "keypadmem3x4"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": [
+        "KeyPad.h"
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "name": "PotentiometerSlide3v3",
+    "path": "PotentiometerSlide",
+    "category": "input",
+    "blockId": "!698520",
+    "coders": [
+        "PotentiometerSlide"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "PotentiometerSlide"
+            }
+        ],
+        "ports": [
+            {
+                "name": "leg2",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "wiper",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "leg1",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

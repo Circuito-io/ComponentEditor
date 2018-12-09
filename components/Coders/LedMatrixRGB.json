@@ -1,0 +1,35 @@
+{
+    "name": "LedMatrixRGB",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global:": "    #define {{varname}}_NUM_LEDS 64*{{numOfSameComp}}\n    #define {{varname}}_BRIGHTNESS 10\n",
+        "constructors:": "    {{classname}} {{varname}} = {{classname}}({{varname}}_NUM_LEDS, {{DIN}}, NEO_GRBW + NEO_KHZ800);\n",
+        "setup:": "    {{varname}}.setBrightness({{varname}}_BRIGHTNESS);\n    {{varname}}.begin();\n    {{varname}}.show(); // Initialize all pixels to 'off'\n",
+        "snippetCode:": "    for (uint16_t i = 0; i < {{varname}}.numPixels(); i++) {\n      {{varname}}.setPixelColor(i, 255, 0, 0);\n      {{varname}}.show();\n      delay(100);\n    }\n    for (uint16_t i = 0; i < {{varname}}.numPixels(); i++) {\n      {{varname}}.setPixelColor(i, 0, 255, 0);\n      {{varname}}.show();\n      delay(80);\n    }\n    for (uint16_t i = 0; i < {{varname}}.numPixels(); i++) {\n      {{varname}}.setPixelColor(i, 0, 0, 255);\n      {{varname}}.show();\n      delay(30);\n    }"
+    },
+    "license": "GNU",
+    "instantiate": {
+        "classname": "Adafruit_NeoPixel",
+        "ports": [
+            "DIN"
+        ],
+        "varname": "LedMatrixRGB"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": []
+}

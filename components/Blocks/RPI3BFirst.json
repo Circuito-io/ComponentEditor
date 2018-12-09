@@ -1,0 +1,38 @@
+{
+    "name": "RPI3BFirst",
+    "path": "RPI3B",
+    "category": "controller",
+    "blockId": "200000",
+    "app": {
+        "appName": "Raspberry Pi 3 - Model B - ARMv8 with 1G RAM",
+        "numericName": "RPI3B",
+        "shortName": "Raspberry Pi 3",
+        "tags": [
+            "connectivity",
+            "controllers"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>Raspberry Pi 3 model B</p>",
+        "visible": "true"
+    },
+    "coders": [
+        "RPI3B"
+    ],
+    "requires":[[0,["RPI3B"]]],
+    "requiresExpansion": [
+        [
+            0,
+            "NONE"
+        ],
+        [
+            10,
+            "MCP3008"
+        ]
+    ],
+    "supportedControllers": [],
+    "circuit": {}
+}

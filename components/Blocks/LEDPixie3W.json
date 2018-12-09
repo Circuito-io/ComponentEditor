@@ -1,0 +1,113 @@
+{
+    "name": "LEDPixie3W",
+    "path": "LEDPixie3W",
+    "category": "output",
+    "blockId": "469778",
+    "app": {
+        "appName": "Pixie - 3W Chainable Smart LED Pixel",
+        "numericName": "",
+        "shortName": "Chainable Smart LED Pixel",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The Adafruit Pixie is very bright 3W RGB LED and it is also chainable. It communicates with the MCU over serial at 115200 baud rate.<p> It can be easily manipulated using <a href=\"https://learn.adafruit.com/pixie-3-watt-smart-chainable-led-pixels/wiring-and-test\">Adafruit Pixie library</a></p>",
+        "visible": false
+    },
+    "coders": [
+        "LEDPixie3W"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            10,
+            [
+                "PowerSupply5v"
+            ]
+        ],
+        [
+            10,
+            [
+                "Reg5v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LEDPixie3W"
+            }
+        ],
+        "ports": [
+            {
+                "name": "5V",
+                "interface": {
+                    "chainTo": "5V_Ch",
+                    "requires":[[0,["5v"]]],
+                    "requiresLoad": 500
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "chainTo": "GND_Ch",
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "IN",
+                "interface": {
+                    "chainTo": "OUT",
+                    "requires":[[0,["3.3v","SoftwareSerial"]],[1,["5v","SoftwareSerial"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "OUT",
+                "interface": {
+                    "chain": true
+                }
+            },
+            {
+                "name": "5V_Ch",
+                "interface": {
+                    "chain": true
+                }
+            },
+            {
+                "name": "GND_Ch",
+                "interface": {
+                    "chain": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

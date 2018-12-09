@@ -1,0 +1,24 @@
+{
+    "name": "WaterLevelSensor",
+    "path": "WaterLevelSensor",
+    "category": "input",
+    "blockId": "752394",
+    "app": {
+        "appName": "Water Level Sensor Module",
+        "numericName": "",
+        "shortName": "Water Level Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This is simple and small portable water level/water droplet identification, a series of exposed parallel wires traces droplets/water and converts into analog signal. this sensor have low power consumption and high sensitivity.</p>",
+        "visible": false
+    },
+    "requires":[[0,["WaterLevelSensor5v"]],[1,["WaterLevelSensor3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

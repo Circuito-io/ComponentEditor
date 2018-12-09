@@ -1,0 +1,30 @@
+{
+    "name": "ADXL345",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global:": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n",
+        "setup:": "    {{varname}}.init();\n",
+        "snippetCode:": "    // read raw accel measurements from device\n    {{varname}}.getAcceleration(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az);\n    // display tab-separated accel x/y/z values\n    Serial.print(F(\"{{instname}} accel-\\t\")); \n    Serial.print({{varname}}Ax); Serial.print(F(\"\\t\"));\n    Serial.print({{varname}}Ay); Serial.print(F(\"\\t\"));  \n    Serial.println({{varname}}Az);\n"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "ADXL345",
+        "varname": "adxl"
+    },
+    "files": [
+        "lib/*"
+    ]
+}

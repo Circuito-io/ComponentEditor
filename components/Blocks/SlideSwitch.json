@@ -1,0 +1,24 @@
+{
+    "name": "SlideSwitch",
+    "path": "SlideSwitch",
+    "category": "input",
+    "blockId": "166716",
+    "app": {
+        "appName": "SPDT Slide Switch (Breadboard-friendly)",
+        "numericName": "",
+        "shortName": "Slide Switch",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This is a simple SPDT Slide Switch that fits great to a breadboard, it can be used as on/off switches or selector switch.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["SlideSwitch5v"]],[1,["SlideSwitch3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

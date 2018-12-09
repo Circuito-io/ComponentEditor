@@ -1,0 +1,93 @@
+{
+    "name": "BrushlessMotor",
+    "path": "BrushlessMotor",
+    "category": "output",
+    "blockId": "250754",
+    "app": {
+        "appName": "A2212 Brushless Motor 1000KV (with 30A ESC)",
+        "numericName": "",
+        "shortName": "",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This Brushless Motor is great for R/C projects such as drones, RC car, and more. To run the motor, it needs to be attached to an ESC (electronic speed controller), that converts the servo-style interface into three-phase AC for driving the motor.</p>",
+        "visible": false
+    },
+    "coders": [
+        "BrushlessMotor"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            1,
+            [
+                "BarrelJack12v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "BrushlessMotor"
+            }
+        ],
+        "ports": [
+            {
+                "name": "+12V",
+                "interface": {
+                    "requires":[[0,["12v"]]],
+                    "requiresLoad": 550
+                }
+            },
+            {
+                "name": "DATA",
+                "interface": {
+                    "requires":[[0,["5v","PWM"]],[1,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "GROUND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "name": "OLED128X32-5v",
+    "path": "OLED128X32",
+    "category": "output",
+    "blockId": "!985157",
+    "coders": [
+        "OLED128X32"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "OLED128X32"
+            }
+        ],
+        "ports": [
+            {
+                "name": "VIN",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "requires":[[0,["5v","SCL"]]]
+                }
+            },
+            {
+                "name": "SDA",
+                "interface": {
+                    "requires":[[0,["5v","SDA"]]]
+                }
+            },
+            {
+                "name": "RST",
+                "interface": {
+                    "requires":[[0,["5v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

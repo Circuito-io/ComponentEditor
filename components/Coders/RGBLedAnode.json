@@ -1,0 +1,35 @@
+{
+    "name": "RGBLedAnode",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global:": "    #define {{varname}}_TYPE COMMON_ANODE\n",
+        "setup:": "    {{varname}}.turnOff();              // Start with  LED Strip RGB turned off\n",
+        "constructors:": "    {{classname}} {{varname}}({{R}},{{G}},{{B}},{{varname}}_TYPE);\n",
+        "snippetCode:": "    // The RGB LED will turn PURPLE for 500ms(half a second) and turn off\n    {{varname}}.setRGB(160, 3, 255);    // 1. sets RGB LED color to purple. Change the values in the brackets to (255,0,0) for pure RED, (0,255,0) for pure GREEN and (0,0,255) for pure BLUE.\n    delay(500);                         // 2. change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n    {{varname}}.setRGB(0, 0, 0);        // 3. turns RGB LED off (showing no color). Change the values in the brackets to alter the color.\n    delay(500);                         // 4. change the value in the brackets (500) for a longer or shorter delay in milliseconds.  "
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "RGBLed",
+        "ports": [
+            "R",
+            "G",
+            "B"
+        ],
+        "varname": "rgbLed"
+    },
+    "files": [
+        "lib/*"
+    ]
+}

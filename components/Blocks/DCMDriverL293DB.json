@@ -1,0 +1,151 @@
+{
+    "name": "DCMDriverL293DB",
+    "path": "DCMotorL293D",
+    "category": "output",
+    "blockId": "7654331",
+    "app": {
+        "appName": "L293D Motor Driver with Dual Standard DC Motors (Geared)",
+        "numericName": "",
+        "shortName": "Dual Geared DC Motors with L293D",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A DC motor driver with two Standard Gearmotor. Enables speed and direction control for both DC motor.</p>\n",
+        "visible": "true"
+    },
+    "coders": [
+        "DCMDriverL293DB"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "DCMDriverL293D"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.Out1",
+                "to": "MotorA.Coil1"
+            },
+            {
+                "from": "this.Out2",
+                "to": "MotorA.Coil2"
+            },
+            {
+                "from": "this.Out3",
+                "to": "MotorB.Coil1"
+            },
+            {
+                "from": "this.Out4",
+                "to": "MotorB.Coil2"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Enable1",
+                "interface": {
+                    "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "In1",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND1",
+                "interface": {
+                    "requires":[[1,["GND"]]]
+                }
+            },
+            {
+                "name": "GND2",
+                "interface": {
+                    "requires":[[1,["GND"]]]
+                }
+            },
+            {
+                "name": "In2",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "+Vmotor",
+                "interface": {
+                    "requires":[[8,["3.3v"]],[7,["3.7v"]],[9,["3.7v","Battery"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
+                    "requiresLoad": 400
+                }
+            },
+            {
+                "name": "Enable2",
+                "interface": {
+                    "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "In3",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND3",
+                "interface": {
+                    "requires":[[1,["GND"]]]
+                }
+            },
+            {
+                "name": "GND4",
+                "interface": {
+                    "requires":[[1,["GND"]]]
+                }
+            },
+            {
+                "name": "In4",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "+V",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

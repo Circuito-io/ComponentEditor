@@ -1,0 +1,61 @@
+{
+    "name": "LEDRed5v",
+    "path": "LEDRed",
+    "category": "output",
+    "blockId": "!9590",
+    "coders": [
+        "LEDRed"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LEDRed"
+            },
+            {
+                "name": "Res1",
+                "part": "Res220O"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.Gnd",
+                "to": "Res1.con1"
+            },
+            {
+                "from": "Res1.con0",
+                "to": "Gnd"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["5v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Gnd",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

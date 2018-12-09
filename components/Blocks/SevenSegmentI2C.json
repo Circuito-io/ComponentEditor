@@ -1,0 +1,57 @@
+{
+    "name": "SevenSegmentI2C",
+    "path": "SevenSegment",
+    "category": "output",
+    "blockId": "!11441",
+    "supportedControllers": [
+        "ESP32DevKitC",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "SevenSegment"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 131
+                }
+            },
+            {
+                "name": "SDA",
+                "interface": {
+                    "requires":[[0,["3.3v","SDA"]]]
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "requires":[[0,["3.3v","SCL"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["RPI3B"]],[1,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

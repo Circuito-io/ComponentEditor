@@ -1,0 +1,24 @@
+{
+    "name": "TSL2591",
+    "path": "TSL2591",
+    "category": "input",
+    "blockId": "44359",
+    "app": {
+        "appName": "Adafruit TSL2591 High Dynamic Range Digital Light Sensor (Lux)",
+        "numericName": "TSL2591",
+        "shortName": "Lux Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>The TSL2591 is an ultra-high-range luminosity sensor with an I2C interface, Compared to low cost LDR photoscell this sensor is more precise, and can detect light ranges from 188 uLux up to 88,000 Lux</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["TSL2591-5v"]],[1,["TSL2591-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

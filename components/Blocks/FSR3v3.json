@@ -1,0 +1,61 @@
+{
+    "name": "FSR3v3",
+    "path": "FSR",
+    "category": "input",
+    "blockId": "!9375",
+    "coders": [
+        "FSR"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "FSR"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.1",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
+                "to": "0"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "1",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "2",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

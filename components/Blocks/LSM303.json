@@ -1,0 +1,24 @@
+{
+    "name": "LSM303",
+    "path": "LSM303",
+    "category": "input",
+    "blockId": "597144",
+    "app": {
+        "appName": "Triple-axis Accelerometer+Magnetometer (Compass) Board - LSM303",
+        "numericName": "LSM303",
+        "shortName": "Triple-axis Accelerometer+Magnetometer Compass - LSM303",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The LSM303 breakout board combines a triple-axis accelerometer with a magnetometer (compass) module to create a navigation system and IMU (Inertial Measurement Unit).</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["LSM3035v"]],[1,["LSM3033v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

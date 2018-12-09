@@ -1,0 +1,63 @@
+{
+    "name": "SevenSegmentSWSer",
+    "path": "SevenSegment",
+    "category": "output",
+    "blockId": "!11441",
+    "coders": [
+        "SevenSegment"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "SevenSegment"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[1,["5v"]],[2,["3.3v"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 131
+                }
+            },
+            {
+                "name": "RX",
+                "interface": {
+                    "requires":[[0,["SoftwareSerial","5v"]],[1,["SoftwareSerial","3.3v"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

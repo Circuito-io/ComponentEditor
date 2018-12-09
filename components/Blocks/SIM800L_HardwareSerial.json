@@ -1,0 +1,67 @@
+{
+    "name": "SIM800L_HardwareSerial",
+    "path": "GSM-SIM800L",
+    "category": "input",
+    "blockId": "!316349",
+    "coders": [
+        "SIM800L_HardwareSerial"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "SIM800L"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "RST",
+                "interface": {
+                    "requires":[[0,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "TX",
+                "interface": {
+                    "requires":[[0,["5v","RX"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "5V",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "RX",
+                "interface": {
+                    "requires":[[0,["5v","TX"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

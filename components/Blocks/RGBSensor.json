@@ -1,0 +1,101 @@
+{
+    "name": "RGBSensor",
+    "path": "RGBSensor",
+    "category": "input",
+    "blockId": "12829",
+    "app": {
+        "appName": "SparkFun ISL29125 - RGB Light Sensor",
+        "numericName": "ISL29125",
+        "shortName": "RGB Light Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>A small board that allows you to detect the color in its surrounding.<br><strong>Returned Values</strong>: 0 (no color) to 256 (maximal intensity color) reading for each color: Red, Green, Blue.<br><strong>Requires</strong> : soldering of 5 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/DIY-Nespresso-Capsule-Detector/\">DIY Nespresson Capsule Detector</a>.</p>\n",
+        "visible": false
+    },
+    "coders": [
+        "RGBSensor"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            1,
+            [
+                "LogicLevelConverterI2C-5-3.3"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "RGBSensor"
+            }
+        ],
+        "ports": [
+            {
+                "name": "SDA",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["SDA","3.3v"]]]
+                }
+            },
+            {
+                "name": "Vcc",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 450
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["SCL","3.3v"]]]
+                }
+            },
+            {
+                "name": "Gnd",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

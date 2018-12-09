@@ -1,0 +1,24 @@
+{
+    "name": "RotaryEncoderEN11",
+    "path": "RotaryEncoderEN11",
+    "category": "input",
+    "blockId": "860025",
+    "app": {
+        "appName": "Rotary Encoder EN11",
+        "numericName": "",
+        "shortName": "Rotary Encoder",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>Rotary encoders can be used similarly to potentiometers. The difference being that an encoder has full rotation without limits.<br><strong>Returned values</strong>: absolute position (integer).</p>\n",
+        "visible": "true"
+    },
+    "requires":[[0,["RotaryEncoderEN11Int"]],[100,["RotaryEncoderEN11Digital"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

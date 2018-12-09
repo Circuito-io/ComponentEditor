@@ -1,0 +1,77 @@
+{
+    "name": "IRLineFollow3v3",
+    "path": "IRLineFollow",
+    "category": "input",
+    "blockId": "!485906",
+    "coders": [
+        "IRLineFollow3v3"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "IRLineFollow"
+            },
+            {
+                "name": "r1",
+                "part": "Res470O"
+            },
+            {
+                "name": "r2",
+                "part": "Res1KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.GND",
+                "to": "r2.con1"
+            },
+            {
+                "from": "r2.con0",
+                "to": "r1.con1"
+            },
+            {
+                "from": "this.OUT",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
+                "to": "out"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "out",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

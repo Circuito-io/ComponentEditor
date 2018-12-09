@@ -1,0 +1,33 @@
+{
+    "name": "Servo9g",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global:": "        const int {{varname}}RestPosition   = 20;  //Starting position\n        const int {{varname}}TargetPosition = 150; //Position when event is detected\n",
+        "constructors:": "        {{classname}} {{varname}};\n",
+        "setup:": "        {{varname}}.attach({{Sig}});\n        {{varname}}.write({{varname}}RestPosition);\n        delay(100);\n        {{varname}}.detach();\n",
+        "snippetCode:": "        // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) \n        {{varname}}.attach({{Sig}});         // 1. attach the servo to correct pin to control it.\n        {{varname}}.write({{varname}}TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.\n        delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n        {{varname}}.write({{varname}}RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.\n        delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n        {{varname}}.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress."
+    },
+    "license": "ArduinoIDE",
+    "instantiate": {
+        "classname": "Servo",
+        "ports": [
+            "Sig"
+        ]
+    },
+    "includeHeaders": [
+        "Servo.h"
+    ]
+}

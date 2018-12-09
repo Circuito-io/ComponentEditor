@@ -1,0 +1,96 @@
+{
+    "name": "RGBLedAnode3.3v",
+    "path": "RGBLed",
+    "category": "output",
+    "blockId": "!10820",
+    "coders": [
+        "RGBLedAnode"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "RGBLedAnode"
+            },
+            {
+                "name": "Res_R",
+                "part": "Res100O"
+            },
+            {
+                "name": "Res_G",
+                "part": "Res47O"
+            },
+            {
+                "name": "Res_B",
+                "part": "Res47O"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.R",
+                "to": "Res_R.con0"
+            },
+            {
+                "from": "this.G",
+                "to": "Res_G.con0"
+            },
+            {
+                "from": "this.B",
+                "to": "Res_B.con0"
+            },
+            {
+                "from": "Res_B.con1",
+                "to": "B"
+            },
+            {
+                "from": "Res_R.con1",
+                "to": "R"
+            },
+            {
+                "from": "Res_G.con1",
+                "to": "G"
+            }
+        ],
+        "ports": [
+            {
+                "name": "B",
+                "interface": {
+                    "requires":[[0,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "G",
+                "interface": {
+                    "requires":[[0,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "R",
+                "interface": {
+                    "requires":[[0,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

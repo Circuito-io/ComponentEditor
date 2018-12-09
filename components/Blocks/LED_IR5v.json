@@ -1,0 +1,87 @@
+{
+    "name": "LED_IR5v",
+    "path": "LED_IR",
+    "category": "output",
+    "blockId": "!9349",
+    "coders": [
+        "LED_IR"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LED_IR",
+                "properties": "Infrared (940nm)"
+            },
+            {
+                "name": "BJT",
+                "part": "TRNPN"
+            },
+            {
+                "name": "Res1",
+                "part": "Res470O"
+            }
+        ],
+        "wires": [
+            {
+                "from": "BJT.B",
+                "to": "Res1.con0"
+            },
+            {
+                "from": "BJT.C",
+                "to": "this.Gnd"
+            },
+            {
+                "from": "BJT.E",
+                "to": "0"
+            },
+            {
+                "from": "Res1.con1",
+                "to": "SIG"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 190
+                }
+            },
+            {
+                "name": "SIG",
+                "interface": {
+                    "requires":[[0,["5v","Timer2"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

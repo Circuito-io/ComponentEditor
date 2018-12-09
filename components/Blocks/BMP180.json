@@ -1,0 +1,87 @@
+{
+    "name": "BMP180",
+    "path": "BMP180",
+    "category": "input",
+    "blockId": "11824",
+    "app": {
+        "appName": "BMP180 - Barometric Pressure, Temperature, Altitude Sensor",
+        "numericName": "BMP180",
+        "shortName": "Barometric Pressure Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>High precision, low power digital barometer.<br><strong>Returned Values</strong>: Can measure air pressure from 300-110 hPa with 0.02 hPa accuracy.</p>\n<p><strong>Requires</strong>: Soldering 4 pin male header.</p>\n",
+        "visible": false
+    },
+    "coders": [
+        "BMP180"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "BMP180"
+            }
+        ],
+        "ports": [
+            {
+                "name": "SDA",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["SDA","3.3v"]],[1,["SDA","5v"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[1,["3.3v"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 500
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

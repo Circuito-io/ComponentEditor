@@ -1,0 +1,32 @@
+{
+    "name": "DS18B20WP",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {},
+    "license": "GNU",
+    "instantiate": {
+        "classname": "DS18B20",
+        "ports": [
+            "DQ"
+        ],
+        "varname": "ds18b20wp"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": [
+        "DS18B20.h"
+    ]
+}

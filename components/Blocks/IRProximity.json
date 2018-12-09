@@ -1,0 +1,73 @@
+{
+    "name": "IRProximity",
+    "path": "IRProximity",
+    "category": "input",
+    "blockId": "848753",
+    "app": {
+        "appName": "Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F",
+        "numericName": "GP2Y0A02YK0F",
+        "shortName": "Infrared Proximity Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The Sharp GP2Y0A02YK0F is an Infrared proximity Sensor. It shines a beam of IR light from an LED, and measures the intensity of light that is bounced pack using a phototransistor. This IR sensor is more economical than sonar rangefinders, yet it provides much better performance than other IR alternatives. Interfacing to most microcontrollers is straightforward: the single analog output can be connected to an analog-to-digital converter for taking distance measurements.<br><strong>Returned Values</strong>: 15cm - 150cm detection range.</p><p><strong></p>",
+        "visible": false
+    },
+    "coders": [
+        "IRProximity"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "IRProximity"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Vout",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Vcc",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

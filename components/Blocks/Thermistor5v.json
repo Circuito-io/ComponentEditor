@@ -1,0 +1,67 @@
+{
+    "name": "Thermistor5v",
+    "path": "Thermistor",
+    "category": "input",
+    "blockId": "!149486",
+    "coders": [
+        "Thermistor"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "Thermistor"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.con1",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
+                "to": "VCC"
+            }
+        ],
+        "ports": [
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[1,["5v"]]]
+                }
+            },
+            {
+                "name": "con1",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "con0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "name": "ESP8266_HardwareSerial3v3",
+    "path": "ESP8266",
+    "category": "iot",
+    "blockId": "!13678",
+    "coders": [
+        "ESP8266_HardwareSerial"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            0,
+            [
+                "Reg3.3v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "ESP8266"
+            }
+        ],
+        "ports": [
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["3.3v"]]],
+                    "requiresLoad": 200
+                }
+            },
+            {
+                "name": "TXD",
+                "interface": {
+                    "requires":[[0,["TX","3.3v"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "CH_PD",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "RXD",
+                "interface": {
+                    "requires":[[0,["RX","3.3v"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 1220
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]]]
+                }
+            }
+        ]
+    }
+}

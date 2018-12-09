@@ -1,0 +1,100 @@
+{
+    "name": "NRF24L01",
+    "path": "NRF24L01",
+    "category": "input",
+    "blockId": "748665",
+    "app": {
+        "appName": "NRF24L01 - 2.4G Wireless Transceiver Module",
+        "numericName": "NRF24L01",
+        "shortName": "Wireless transceiver",
+        "tags": [
+            "connectivity"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The NRF24L01 is a low cost, low power 2.4GHz RF wireless transceiver.</p>",
+        "visible": false
+    },
+    "coders": [
+        "NRF24L01"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "NRF24L01"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "CE",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "CS",
+                "interface": {
+                    "requires":[[0,["5v","SS"]],[1,["5v","DigitalOut"]],[2,["3.3v","SS"]],[3,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "SCK",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["5v","SCK"]],[1,["3.3v","SCK"]]]
+                }
+            },
+            {
+                "name": "MOSI",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["5v","MOSI"]],[1,["3.3v","MOSI"]]]
+                }
+            },
+            {
+                "name": "MISO",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["5v","MISO"]],[1,["3.3v","MISO"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

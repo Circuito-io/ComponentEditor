@@ -1,0 +1,141 @@
+{
+    "name": "DCMDriverL298",
+    "path": "DCMDriverL298",
+    "category": "output",
+    "blockId": "7654321",
+    "app": {
+        "appName": "L298N Motor Driver with Dual Hobby DC motors",
+        "numericName": "",
+        "shortName": "Dual Hobby DC Motors with L298D",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A DC motor driver with two DC motor. Enables speed and direction control for both DC motor.</p>\n",
+        "visible": false
+    },
+    "coders": [
+        "DCMDriverL298"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "DCMDriverL298",
+                "rotation": 270
+            },
+            {
+                "name": "MotorA",
+                "part": "DCMotor"
+            },
+            {
+                "name": "MotorB",
+                "part": "DCMotor"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.OUT1",
+                "to": "MotorA.Coil2"
+            },
+            {
+                "from": "this.OUT2",
+                "to": "MotorA.Coil1"
+            },
+            {
+                "from": "this.OUT3",
+                "to": "MotorB.Coil2"
+            },
+            {
+                "from": "this.OUT4",
+                "to": "MotorB.Coil1"
+            }
+        ],
+        "ports": [
+            {
+                "name": "INT1",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "ENB",
+                "interface": {
+                    "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[1,["GND"]]]
+                }
+            },
+            {
+                "name": "12V",
+                "interface": {
+                    "requires":[[8,["3.3v"]],[7,["3.7v"]],[9,["3.7v","Battery"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
+                    "requiresLoad": 400
+                }
+            },
+            {
+                "name": "5V",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "INT2",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "ENA",
+                "interface": {
+                    "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "INT3",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "INT4",
+                "interface": {
+                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

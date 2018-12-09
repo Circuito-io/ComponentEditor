@@ -1,0 +1,24 @@
+{
+    "name": "TCS34725",
+    "path": "TCS34725",
+    "category": "input",
+    "blockId": "268781",
+    "app": {
+        "appName": "RGB Color Sensor with IR filter and White LED - TCS34725",
+        "numericName": "TCS34725",
+        "shortName": "TCS34725 RGB Color Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>Make your electronics see in color with this RGB sensor. It has RGB and Clear light sensing elements and an IR blocking filter. Moreover it has controlled white LED to illuminate the sensed object.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["TCS34725-5v"]],[1,["TCS34725-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

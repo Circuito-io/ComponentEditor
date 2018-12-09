@@ -1,0 +1,81 @@
+{
+    "name": "Relay3v3",
+    "path": "Relay",
+    "category": "output",
+    "blockId": "!100",
+    "coders": [
+        "Relay3v3"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "Relay"
+            },
+            {
+                "name": "BC337",
+                "part": "TRNPN"
+            },
+            {
+                "name": "r1",
+                "part": "Res1KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.Coil1",
+                "to": "BC337.C"
+            },
+            {
+                "from": "BC337.B",
+                "to": "r1.con1"
+            },
+            {
+                "from": "BC337.E",
+                "to": "gnd"
+            },
+            {
+                "from": "this.Coil2",
+                "to": "Vcc"
+            },
+            {
+                "from": "r1.con0",
+                "to": "Sig"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "gnd",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Vcc",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[6,["ArduinoGemma"]],[7,["RPI3B"]],[8,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

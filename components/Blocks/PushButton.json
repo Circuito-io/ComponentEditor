@@ -1,0 +1,24 @@
+{
+    "name": "PushButton",
+    "path": "PushButton",
+    "category": "input",
+    "blockId": "97",
+    "app": {
+        "appName": "Mini Pushbutton Switch",
+        "numericName": "",
+        "shortName": "Mini Pushbutton",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This tiny button allows you to control your circuit with a simple push - push to turn on, push to turn off, or do any other operation :).<br><strong>Returned values</strong>: 0 for no press, 1 for press.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["PushButton5v"]],[1,["PushButton3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

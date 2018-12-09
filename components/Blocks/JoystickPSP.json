@@ -1,0 +1,24 @@
+{
+    "name": "JoystickPSP",
+    "path": "JoystickPSP",
+    "category": "input",
+    "blockId": "476174",
+    "app": {
+        "appName": "PSP 2-Axis Analog Thumb Joystick",
+        "numericName": "",
+        "shortName": "",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>PSP thumb stick. The joystick is a 'self-centering' analog-type. It acts like two 10K potentiometers, one for up/down and another for left/right.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["JoystickPSP5v"]],[1,["JoystickPSP3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

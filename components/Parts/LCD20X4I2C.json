@@ -1,0 +1,28 @@
+{
+    "name": "LCD20X4I2C",
+    "symbol": {
+        "ref": "circuito_LCD20X4.svg",
+        "URL": "https://ucarecdn.com/3a0b06cc-c736-4e83-89f2-5313384e0fbe/"
+    },
+    "displayName": "LCD Display 20x4 I2C",
+    "category": [
+        "output"
+    ],
+    "desc": "",
+    "bom": [
+        {
+            "name": "octopart",
+            "image": "https://ucarecdn.com/350b0b73-60e0-4cf1-a853-f01bee6ac0db/",
+            "link": "https://octopart.com/search?q=DFR0154&oq=DFR0154&start=0",
+            "price": "23.55",
+            "SKU": ""
+        }
+    ],
+    "info": {
+        "setup": "",
+        "test": "If the LCD is on but not showing prints, try turning the trimmer on the I2C backpack."
+    },
+    "placing": {
+        "onBreadboard": false
+    }
+}

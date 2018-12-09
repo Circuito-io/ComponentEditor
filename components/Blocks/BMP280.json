@@ -1,0 +1,24 @@
+{
+    "name": "BMP280",
+    "path": "BMP280",
+    "category": "input",
+    "blockId": "999979",
+    "app": {
+        "appName": "Adafruit BMP280 - Barometric Pressure & Altitude Sensor",
+        "numericName": "BMP180",
+        "shortName": "",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>The BMP280 is the successor of the BMP180. It is a high precision, low power digital environmental sensor providing temperature and barometric pressure readings.<br><strong>Returned Values</strong>: Can measure barometric  pressure  with \u00b11 hPa accuracy, temperature with \u00b11.0\u00b0C accuracy, and altitude with \u00b11 meter accuracy.</p>\n<p><strong>Requires</strong>: Soldering 7 pin male header.</p>\n",
+        "visible": "true"
+    },
+    "requires":[[0,["BMP2805v"]],[1,["BMP2803v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

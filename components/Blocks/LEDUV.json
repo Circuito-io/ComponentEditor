@@ -1,0 +1,24 @@
+{
+    "name": "LEDUV",
+    "path": "LEDUV",
+    "category": "output",
+    "blockId": "8662",
+    "app": {
+        "appName": "Basic Ultraviolet LED 5mm",
+        "numericName": "",
+        "shortName": "",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This is a very basic, small, UV LED. Its Luminous Intensity is 100-180mcd.</p>\n",
+        "visible": false
+    },
+    "requires":[[1,["LEDUV5v"]],[2,["LEDUV3.3v"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

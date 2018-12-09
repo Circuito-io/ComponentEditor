@@ -1,0 +1,35 @@
+{
+    "name": "ResistiveTouchScreen",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "globals:": "",
+        "constructors:": "    {{classname}} {{varname}} = {{classname}}();\n",
+        "setup:": "    if (! {{varname}}.begin()) Serial.println(\"Touch controller not found!\");\n",
+        "snippetCode:": "    uint16_t x, y;\n    uint8_t z;\n    if ({{varname}}.touched()) {\n      // read x & y & z;\n      while (! {{varname}}.bufferEmpty()) {\n        Serial.print({{varname}}.bufferSize());\n        {{varname}}.readData(&x, &y, &z);\n        Serial.print(\"->(\");\n        Serial.print(x); Serial.print(\", \");\n        Serial.print(y); Serial.print(\", \");\n        Serial.print(z);\n        Serial.println(\")\");\n      }\n      {{varname}}.writeRegister8(STMPE_INT_STA, 0xFF); // reset all ints\n    }\n    delay(10);"
+    },
+    "license": "MIT",
+    "instantiate": {
+        "classname": "Adafruit_STMPE610",
+        "ports": [],
+        "varname": "touch"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": [
+        "Adafruit_STMPE610.h",
+        "Wire.h"
+    ]
+}

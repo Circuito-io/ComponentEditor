@@ -1,0 +1,28 @@
+{
+    "name": "PIRGeneric",
+    "symbol": {
+        "ref": "circuito_PIR (motion) sensor.svg",
+        "URL": "https://ucarecdn.com/3bd31ca1-b58d-4f2f-9f6c-677f112deee5/"
+    },
+    "displayName": "PIR (motion) sensor",
+    "category": [
+        "input"
+    ],
+    "desc": "",
+    "bom": [
+        {
+            "name": "octopart",
+            "image": "https://ucarecdn.com/9e9eaeeb-de61-4edc-a4a8-723bb8e120e9/",
+            "link": "https://octopart.com/189-adafruit+industries-32978453",
+            "price": "9.95",
+            "SKU": "1528-1991-ND"
+        }
+    ],
+    "info": {
+        "setup": "",
+        "test": "Cover the PIR sensor & then remove the cover to see if it detects anything."
+    },
+    "placing": {
+        "onBreadboard": false
+    }
+}

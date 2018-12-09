@@ -1,0 +1,24 @@
+{
+    "name": "TMP36",
+    "path": "TMP36",
+    "category": "input",
+    "blockId": "844727",
+    "app": {
+        "appName": "TMP36 Analog Temprature Sensor",
+        "numericName": "TMP36",
+        "shortName": "TMP36",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This Analog Temprature Sensor can measure -40 to 150C. It is very percise and doesn't need calibration</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["TMP36-5v"]],[1,["TMP36-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

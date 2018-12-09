@@ -1,0 +1,24 @@
+{
+    "name": "MPL3115A2",
+    "path": "MPL3115A2",
+    "category": "input",
+    "blockId": "431714",
+    "app": {
+        "appName": "Adafruit MPL3115A2 - Barometric Pressure & Altitude Sensor",
+        "numericName": "MPL3115A2",
+        "shortName": "Pressure and Altitude Sensor MPL3115A2",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>A Barometric pressure, Altitude and Temperature Sensor. It is high precision, low cost, low power usage, and a calibration and calculation are not required.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["MPL3115A2-5v"]],[1,["MPL3115A2-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

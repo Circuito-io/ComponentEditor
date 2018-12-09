@@ -1,0 +1,24 @@
+{
+    "name": "BLEHM10",
+    "path": "BLEHM10",
+    "category": "input",
+    "blockId": "395589",
+    "app": {
+        "appName": "Bluetooth 4 (BLE) HM-10",
+        "numericName": "HM10",
+        "shortName": "BLE",
+        "tags": [
+            "connectivity"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Bluetooth Low Energy (BLE) serial device. Use it to communicate with other BLE devices like other arduino boards or Smartphones which support BLE.<br><strong>Returned Value</strong>: Strings via Serial communication.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"https://evothings.com/control-an-led-using-hm-10-ble-module-an-arduino-and-a-mobile-app/\">Control an Arduino via the HM-10 BLE module, from a mobile app on your smartphone</a></p>\n",
+        "visible": false
+    },
+    "requires":[[0,["BLEHM10_HardwareSerial"]],[100,["BLEHM10_SoftwareSerial"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

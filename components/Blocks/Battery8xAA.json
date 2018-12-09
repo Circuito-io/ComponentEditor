@@ -1,0 +1,83 @@
+{
+    "name": "Battery8xAA",
+    "path": "Power",
+    "category": "power",
+    "blockId": "783868",
+    "app": {
+        "appName": "Battery Holder - 8xAA - 12V",
+        "numericName": "",
+        "shortName": "8xAA Batteries",
+        "tags": [
+            "powerSupplies"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "none",
+            "solder": "false"
+        },
+        "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
+        "visible": false
+    },
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            1,
+            [
+                "BarrelJack12v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "Battery8xAA"
+            }
+        ],
+        "ports": [
+            {
+                "name": "POS",
+                "interface": {
+                    "provides":[["12v"]],
+                    "providesLoad": 2000
+                }
+            },
+            {
+                "name": "NEG",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "PowerType",
+                "interface": {
+                    "provides":[["Battery"]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

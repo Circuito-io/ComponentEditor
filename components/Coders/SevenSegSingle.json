@@ -1,0 +1,40 @@
+{
+    "name": "SevenSegSingle",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global:": "    //define an array for all the segments\n    int {{varname}}Pins[] = { {{DP}}, {{C}}, {{D}}, {{E}}, {{B}}, {{A}}, {{F}}, {{G}} };\n",
+        "constructors:": "",
+        "setup:": "  pinMode({{DP}}, OUTPUT);\n  pinMode({{C}}, OUTPUT);\n  pinMode({{D}}, OUTPUT);\n  pinMode({{E}}, OUTPUT);\n  pinMode({{B}}, OUTPUT);\n  pinMode({{A}}, OUTPUT);\n  pinMode({{F}}, OUTPUT);\n  pinMode({{G}}, OUTPUT);\n  //turn off all segments:\n      for (int i = 0; i < 8; i++) { \n      digitalWrite({{varname}}Pins[i],HIGH);\n    }\n",
+        "snippetCode:": "    //This loop will turn on and off each segment in the array for 0.5 sec\n    for (int i = 0; i < 8; i++) { \n      digitalWrite({{varname}}Pins[i],LOW);\n      delay(500);\n    }\n    for (int i = 0; i < 8; i++) { \n      digitalWrite({{varname}}Pins[i],HIGH);\n    }\n"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "DP",
+            "C",
+            "D",
+            "E",
+            "B",
+            "A",
+            "F",
+            "G"
+        ],
+        "varname": "SevenSegSingle"
+    },
+    "files": [],
+    "includeHeaders": []
+}

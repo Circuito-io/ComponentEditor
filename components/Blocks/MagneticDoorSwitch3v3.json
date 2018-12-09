@@ -1,0 +1,65 @@
+{
+    "name": "MagneticDoorSwitch3v3",
+    "path": "MagneticDoorSwitch",
+    "category": "input",
+    "blockId": "!653574",
+    "coders": [
+        "MagneticDoorSwitch"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "MagneticDoorSwitch"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.leg1",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
+                "to": "0"
+            },
+            {
+                "from": "r1.con0",
+                "to": "Sig"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "leg0",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

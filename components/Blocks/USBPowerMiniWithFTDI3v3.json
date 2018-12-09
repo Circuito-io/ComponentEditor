@@ -1,0 +1,48 @@
+{
+    "name": "USBPowerMiniWithFTDI3v3",
+    "path": "Power",
+    "category": "powerConnector",
+    "blockId": "!514",
+    "altComp": [
+        150,
+        "PowerSupply12v"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "USBPowerMiniWithFTDI"
+            }
+        ],
+        "ports": [
+            {
+                "name": "pos",
+                "interface": {
+                    "provides":[["3.3v","USB"]],
+                    "providesLoad": 400
+                }
+            },
+            {
+                "name": "neg",
+                "interface": {
+                    "provides":[["GND","USB"]]
+                }
+            },
+            {
+                "name": "FTDI",
+                "interface": {
+                    "requires":[[0,["FTDI"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]]]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "name": "ArduinoGemmaLipo3v7",
+    "path": "ArduinoGemma",
+    "category": "controller",
+    "blockId": "!666531",
+    "coders": [
+        "ArduinoGemma"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "USBPowerMicro"
+            ]
+        ],
+        [
+            20,
+            [
+                "USBPowerMicro",
+                "StepUp5v"
+            ]
+        ],
+        [
+            30,
+            [
+                "USBPowerMicro",
+                "Reg5v"
+            ]
+        ],
+        [
+            40,
+            [
+                "USBPowerMicro",
+                "Reg3.3v"
+            ]
+        ],
+        [
+            50,
+            [
+                "USBPowerMicro",
+                "Reg3.3v",
+                "Reg5v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ArduinoGemma"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "ArduinoGemma"
+            }
+        ],
+        "ports": [
+            {
+                "name": "3.3V",
+                "interface": {
+                    "provides":[["3.3v"]]
+                }
+            },
+            {
+                "name": "D0",
+                "interface": {
+                    "codename": "0",
+                    "provides":[["3.3v","DigitalOut"],["3.3v","DigitalIn"],["3.3v","PWM"],["3.3v","SDA"],["3.3v","MISO"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialRX1","3.3v"]]
+                }
+            },
+            {
+                "name": "D1",
+                "interface": {
+                    "codename": "1",
+                    "provides":[["3.3v","DigitalOut"],["3.3v","DigitalIn"],["3.3v","PWM"],["3.3v","MOSI"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialTX1","3.3v"]]
+                }
+            },
+            {
+                "name": "D2",
+                "interface": {
+                    "codename": "2",
+                    "provides":[["3.3v","DigitalOut"],["3.3v","DigitalIn"],["3.3v","SCL"],["3.3v","SCK"],["ADC"]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "provides":[["GND"]]
+                }
+            },
+            {
+                "name": "Vout",
+                "interface": {
+                    "provides":[["3.7v"]]
+                }
+            },
+            {
+                "name": "BAT-",
+                "interface": {
+                    "requires":[[0,["GND","Battery"]]]
+                }
+            },
+            {
+                "name": "BAT+",
+                "interface": {
+                    "requires":[[0,["3.7v","Battery"]]]
+                }
+            },
+            {
+                "name": "USB_MICRO",
+                "interface": {
+                    "provides":[["USB_MICRO"]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "provides":[["SRAMLoad"]],
+                    "providesLoad": 512
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "provides":[["ArduinoGemma"]]
+                }
+            },
+            {
+                "name": "SerialType",
+                "interface": {
+                    "provides":[["ESPSoftwareSerialTag"]]
+                }
+            }
+        ]
+    }
+}

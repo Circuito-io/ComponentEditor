@@ -1,0 +1,59 @@
+{
+    "name": "GPSUltimateADA_HardwareSerial",
+    "path": "GPSUltimateADA",
+    "category": "input",
+    "blockId": "!488167",
+    "coders": [
+        "GPSUltimateADA_HardwareSerial"
+    ],
+    "supportedControllers": [
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ESP32DevKitC",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "GPSUltimateADA"
+            }
+        ],
+        "ports": [
+            {
+                "name": "VIN",
+                "interface": {
+                    "requires":[[0,["3.3v"]],[1,["5v"]]],
+                    "requiresLoad": 25
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "RX",
+                "interface": {
+                    "requires":[[0,["3.3v","TX"]],[1,["5v","TX"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "TX",
+                "interface": {
+                    "requires":[[0,["3.3v","RX"]],[1,["5v","RX"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoMicro"]],[2,["ArduinoLeonardo"]],[3,["RPI3B"]],[4,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

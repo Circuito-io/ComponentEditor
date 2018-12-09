@@ -1,0 +1,67 @@
+{
+    "name": "LipoBattery3v7",
+    "path": "Power",
+    "category": "power",
+    "blockId": "13813",
+    "app": {
+        "appName": "Lithium Polymer Battery 3.7v",
+        "numericName": "",
+        "shortName": "LiPo Battery 3.7V",
+        "tags": [
+            "powerSupplies"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "none",
+            "solder": "false"
+        },
+        "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has one cell and outputs 3.7V.\n",
+        "visible": false
+    },
+    "altComp": [
+        100,
+        "LipoBattery7v4"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LipoBattery3v7"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "provides":[["GND","Battery"]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "provides":[["3.7v","Battery"]],
+                    "providesLoad": 5000
+                }
+            },
+            {
+                "name": "PowerType",
+                "interface": {
+                    "provides":[["Battery"]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[2,["ArduinoGemma"]],[3,["NodeMCU"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

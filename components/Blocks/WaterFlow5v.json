@@ -1,0 +1,71 @@
+{
+    "name": "WaterFlow5v",
+    "path": "WaterFlow",
+    "category": "input",
+    "blockId": "!641455",
+    "coders": [
+        "WaterFlow"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "WaterFlow"
+            },
+            {
+                "name": "res_pullup",
+                "part": "Res10KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.VCC",
+                "to": "res_pullup.con1"
+            },
+            {
+                "from": "this.SIG",
+                "to": "res_pullup.con0"
+            },
+            {
+                "from": "res_pullup.con0",
+                "to": "Sig"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["Int","5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

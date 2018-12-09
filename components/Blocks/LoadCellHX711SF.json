@@ -1,0 +1,24 @@
+{
+    "name": "LoadCellHX711SF",
+    "path": "LoadCellHX711SF",
+    "category": "input",
+    "blockId": "13879",
+    "app": {
+        "appName": "SparkFun HX711 - Load Cell Amplifier",
+        "numericName": "HX711",
+        "shortName": "Load Cell Amplifier",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>The load cell breakout of the HX711 enables reading load cell values and measuring weight.</p>",
+        "visible": false
+    },
+    "requires":[[0,["LoadCellHX711SF5v"]],[1,["LoadCellHX711SF3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

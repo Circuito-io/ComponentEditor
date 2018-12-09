@@ -1,0 +1,24 @@
+{
+    "name": "RGBLedAnode",
+    "path": "RGBLed",
+    "category": "output",
+    "blockId": "10820",
+    "app": {
+        "appName": "RGB LED Clear Common Anode",
+        "numericName": "",
+        "shortName": "RGB LED",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This light emitting diode allows you to control its color by setting the intensity of RED, GREEN and BLUE from 0 (no color) to 255 (max color intensity). Use it for a colorful display or as an indicator that an event has occurred. Luminosity (RGB): (800, 4000, 900)mcd.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
+        "visible": false
+    },
+    "requires":[[1,["RGBLedAnode5v"]],[2,["RGBLedAnode3.3v"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

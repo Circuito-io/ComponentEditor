@@ -1,0 +1,90 @@
+{
+    "name": "SolenoidLock",
+    "path": "SolenoidLock",
+    "category": "output",
+    "blockId": "842876",
+    "app": {
+        "appName": "Lock-style Solenoid 12VDC",
+        "numericName": "",
+        "shortName": "Solenoid Lock",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This solenoid has a slug with a slanted cut and a mounting bracket. It's an electronic lock for cabinet or safe or door. It allows you to hold a door closed without electricity and pulls the slug when current is applied.</p>",
+        "visible": "true"
+    },
+    "coders": [
+        "SolenoidLock"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "GndHighLoadSwitching"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "SolenoidLock"
+            },
+            {
+                "name": "d1",
+                "part": "Diode"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.VCC",
+                "to": "d1.neg"
+            },
+            {
+                "from": "this.GND",
+                "to": "d1.pos"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GndLoadSwitching"]]],
+                    "requiresLoad": 1000,
+                    "unique": true
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["12v"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

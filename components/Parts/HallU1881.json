@@ -1,0 +1,28 @@
+{
+    "name": "HallU1881",
+    "symbol": {
+        "ref": "circuito_Hall Effect Sensor - US1881.svg",
+        "URL": "https://ucarecdn.com/2e2e45df-66c0-4025-aabb-cd3e94d66570/"
+    },
+    "displayName": "Hall Effect Sensor - US1881",
+    "category": [
+        "input"
+    ],
+    "desc": "",
+    "bom": [
+        {
+            "name": "octopart",
+            "image": "https://ucarecdn.com/7850ba0a-69aa-4240-95a8-cb737a7e5421/",
+            "link": "https://octopart.com/us1881eua-aaa-000-bu-melexis-23160924",
+            "price": "1.02",
+            "SKU": "US1881EUA-AAA-000-BU-ND"
+        }
+    ],
+    "info": {
+        "setup": "Mind the orientation of the hall sensor. The side with the writing on it should face you.",
+        "test": "Use the different poles of a magnet to see the readings change"
+    },
+    "placing": {
+        "onBreadboard": false
+    }
+}

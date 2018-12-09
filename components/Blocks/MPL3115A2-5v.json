@@ -1,0 +1,58 @@
+{
+    "name": "MPL3115A2-5v",
+    "path": "MPL3115A2",
+    "category": "input",
+    "blockId": "!431714",
+    "coders": [
+        "MPL3115A2"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "MPL3115A2"
+            }
+        ],
+        "ports": [
+            {
+                "name": "SCL",
+                "interface": {
+                    "requires":[[0,["5v","SCL"]]]
+                }
+            },
+            {
+                "name": "VIN",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "SDA",
+                "interface": {
+                    "requires":[[0,["5v","SDA"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "name": "Keypad",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global:": "    //Use this 2D array to map the keys as you desire\n    char {{varname}}keys[ROWS][COLS] = {\n          {'1','2','3'},\n          {'4','5','6'},\n          {'7','8','9'},\n          {'*','0','#'}\n        };\n",
+        "setup:": "    //Initialize the keypad with selected key map\n    {{varname}}.begin({{varname}}keys);\n",
+        "snippetCode:": "    //Read keypad\n    char {{varname}}Key = {{varname}}.getKey();\n",
+        "": "    {\n    Serial.print({{varname}}Key);\n    }"
+    },
+    "license": "GNU",
+    "instantiate": {
+        "classname": "Keypad",
+        "ports": [
+            "col1",
+            "col2",
+            "col3",
+            "row1",
+            "row2",
+            "row3",
+            "row4"
+        ],
+        "varname": "keypad"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": [
+        "Keypad.h"
+    ]
+}

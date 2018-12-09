@@ -1,0 +1,24 @@
+{
+    "name": "LedMatrixMini",
+    "path": "LedMatrixMini",
+    "category": "input",
+    "blockId": "912191",
+    "app": {
+        "appName": "Adafruit Mini 8x8 LED Matrix with I2C Backpack - Ultra Bright White",
+        "numericName": "",
+        "shortName": "LED Matrix",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>Control a 8x8 LED matrix display using I2C.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["LedMatrixMini5v"]],[1,["LedMatrixMini3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

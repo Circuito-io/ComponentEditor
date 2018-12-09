@@ -1,0 +1,24 @@
+{
+    "name": "MQ3",
+    "path": "MQ3",
+    "category": "input",
+    "blockId": "398783",
+    "app": {
+        "appName": "Alcohol Gas Sensor - MQ-3",
+        "numericName": "MQ3",
+        "shortName": "Alcohol and gas sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This alcohol sensor is suitable for detecting alcohol concentration on your breath, just like your common breathalyzer.</p>",
+        "visible": false
+    },
+    "requires":[[1,["MQ35v"]],[2,["MQ33v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

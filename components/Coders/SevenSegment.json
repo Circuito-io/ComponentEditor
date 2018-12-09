@@ -1,0 +1,31 @@
+{
+    "name": "SevenSegment",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU"
+    ],
+    "code": {
+        "global:": "    unsigned int {{varname}}counter = 0;  // This variable will count up to 65k\n",
+        "setup:": "    {{varname}}.clearDisplay();  // Clears display, resets cursor\n    {{varname}}.writeStr(\"-HI-\");  // Displays -HI- on all digits   \n    {{varname}}.setBrightness(255);  // High brightness\n",
+        "snippetCode:": "    // This will output the counter value to the display\n    {{varname}}.writeInt({{varname}}counter);\n    {{varname}}counter++;  // Increment the counter\n    delay(50);  "
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "S7S",
+        "ports": [
+            "RX"
+        ],
+        "varname": "s7s"
+    },
+    "files": [
+        "lib/*"
+    ]
+}

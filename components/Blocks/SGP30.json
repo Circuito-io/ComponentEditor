@@ -1,0 +1,24 @@
+{
+    "name": "SGP30",
+    "path": "SGP30",
+    "category": "input",
+    "blockId": "35286",
+    "app": {
+        "appName": "Adafruit SGP30 Air Quality Sensor Breakout - VOC and eCO2",
+        "numericName": "SGP30",
+        "shortName": "SGP30 Air Quality Sensor Breakout - VOC and eCO2",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>This is an air quality sensor, for measuring gas and VOCs (Volatile Organic Compounds). It can measure eCO2 (equivalent calculated carbon-dioxide) concentration between 0 to 60,000 ppm (parts per million), and TVOC (Total Volatile Organic Compound) concentration between 0 to 60,000 ppb (parts per billion).</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["SGP30-5v"]],[1,["SGP30-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

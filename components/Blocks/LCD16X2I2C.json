@@ -1,0 +1,81 @@
+{
+    "name": "LCD16X2I2C",
+    "path": "LCD16x2I2C",
+    "category": "output",
+    "blockId": "417986",
+    "app": {
+        "appName": "LCD 16x2 I2C",
+        "numericName": "",
+        "shortName": "",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings via I2C interface.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=kukV4xrqRl4\">Clock using Arduino I2C bus for both RTC and 16x2 LCD display</a></p>\n",
+        "visible": false
+    },
+    "coders": [
+        "LCD16X2I2C"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LCD16X2I2C",
+                "rotation": 180
+            }
+        ],
+        "ports": [
+            {
+                "name": "SDA",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["5v","SDA"]],[1,["3.3v","SDA"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCC",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "SCL",
+                "interface": {
+                    "isBus": true,
+                    "requires":[[0,["5v","SCL"]],[1,["3.3v","SCL"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

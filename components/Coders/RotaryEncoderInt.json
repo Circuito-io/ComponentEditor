@@ -1,0 +1,42 @@
+{
+    "name": "RotaryEncoderInt",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "code": {
+        "global:": "    long {{varname}}OldPosition  = 0;\n",
+        "constructors:": "    {{classname}} {{varname}}({{D}},{{CLK}});\n    Button {{varname}}Button({{S1}});\n",
+        "setup:": "    {{varname}}Button.init();\n    pinMode({{S1}}, INPUT_PULLUP);\n",
+        "snippetCode:": "    //Read encoder new position\n    long {{varname}}NewPosition = {{varname}}.read();\n    bool {{varname}}ButtonVal = {{varname}}Button.onPress();\n",
+        "": "        {{varname}}OldPosition = {{varname}}NewPosition;\n        Serial.print(F(\"Pos: \"));\n        Serial.print({{varname}}NewPosition);\n        Serial.print(F(\"\\tButton: \"));\n        Serial.println({{varname}}ButtonVal);\n      }\n"
+    },
+    "license": "Free",
+    "instantiate": {
+        "classname": "Encoder",
+        "ports": [
+            "D",
+            "CLK",
+            "S1"
+        ],
+        "varname": "rotaryEncI"
+    },
+    "files": [
+        "lib/*",
+        "../Global/lib/Button.h",
+        "../Global/lib/Button.cpp",
+        "../Global/lib/Button_license.txt"
+    ],
+    "includeHeaders": [
+        "Encoder.h",
+        "Button.h"
+    ]
+}

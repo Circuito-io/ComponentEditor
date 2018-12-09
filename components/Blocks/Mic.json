@@ -1,0 +1,24 @@
+{
+    "name": "Mic",
+    "path": "Mic",
+    "category": "input",
+    "blockId": "9964",
+    "app": {
+        "appName": "SparkFun Electret Microphone Breakout",
+        "numericName": "",
+        "shortName": "Electret Microphone",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>Microphone+amplifier allows you to detect standard sounds in your environment like voices, knocks, claps.<br><strong>Returned values</strong>: from 0 (no sound) to 1023 (maximal sound). - Works with regular ambient noises, silence vs. fall or knock, etc\u2026<br><strong>Requires</strong>: soldering 3 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: Detect a knock and perform some action, like open the door, or a secret drawer.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["Mic5v"]],[1,["Mic3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

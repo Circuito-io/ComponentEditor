@@ -1,0 +1,31 @@
+{
+    "name": "MQ7SF5v",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "code": {
+        "snippetCode:": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "MQ7",
+        "ports": [
+            "B1"
+        ],
+        "varname": "mq7"
+    },
+    "files": [
+        "lib/*",
+        "../Global/lib/AnalogReader.h",
+        "../Global/lib/AnalogReader.cpp"
+    ],
+    "includeHeaders": [
+        "MQ7.h"
+    ]
+}

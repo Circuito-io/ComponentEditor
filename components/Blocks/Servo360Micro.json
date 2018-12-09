@@ -1,0 +1,88 @@
+{
+    "name": "Servo360Micro",
+    "path": "Servo360Micro",
+    "category": "output",
+    "blockId": "10190",
+    "app": {
+        "appName": "Continuous Rotation Micro Servo - FS90R",
+        "numericName": "FS90R",
+        "shortName": "Continuous Rotation Micro Servo",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>simple continuous rotation micro size servo motor. It rotates 360 degrees fully forward or backwards, instead of moving to a single position. Great for small robots and projects.</p>\n",
+        "visible": false
+    },
+    "coders": [
+        "Servo360Micro"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            30,
+            [
+                "Reg5v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "Servo360Micro"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["5v"]],[1,["6v"]]],
+                    "requiresLoad": 120
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

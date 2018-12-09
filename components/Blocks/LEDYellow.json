@@ -1,0 +1,24 @@
+{
+    "name": "LEDYellow",
+    "path": "LEDYellow",
+    "category": "output",
+    "blockId": "9594",
+    "app": {
+        "appName": "Basic Yellow LED 5mm",
+        "numericName": "Basic Yellow LED 5mm",
+        "shortName": "yellow LED",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This is a very basic, small, Yellow LED. Control the intensity of the color at a range of 0-255. Its Luminous Intensity is 150-200mcd.</p>\n",
+        "visible": false
+    },
+    "requires":[[1,["LEDYellow5v"]],[2,["LEDYellow3.3v"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

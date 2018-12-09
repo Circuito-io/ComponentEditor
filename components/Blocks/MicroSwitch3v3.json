@@ -1,0 +1,61 @@
+{
+    "name": "MicroSwitch3v3",
+    "path": "MicroSwitch",
+    "category": "input",
+    "blockId": "!305155",
+    "coders": [
+        "MicroSwitch"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "MicroSwitch"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.COM",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
+                "to": "0"
+            }
+        ],
+        "ports": [
+            {
+                "name": "NO",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "COM",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

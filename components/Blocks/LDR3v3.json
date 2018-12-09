@@ -1,0 +1,65 @@
+{
+    "name": "LDR3v3",
+    "path": "LDR",
+    "category": "input",
+    "blockId": "!9088",
+    "coders": [
+        "LDR"
+    ],
+    "supportedControllers": [
+        "ATMega328P"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LDR"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.con1",
+                "to": "R1.con0"
+            },
+            {
+                "from": "R1.con1",
+                "to": "0"
+            },
+            {
+                "from": "this.con0",
+                "to": "5v"
+            },
+            {
+                "from": "this.con1",
+                "to": "Sig"
+            }
+        ],
+        "ports": [
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "5v",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "Sig",
+                "interface": {
+                    "requires":[[0,["ADC"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

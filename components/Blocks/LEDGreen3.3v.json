@@ -1,0 +1,60 @@
+{
+    "name": "LEDGreen3.3v",
+    "path": "LEDGreen",
+    "category": "output",
+    "blockId": "!9591",
+    "coders": [
+        "LEDGreen"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LEDGreen",
+                "properties": "Green (570nm)"
+            },
+            {
+                "name": "Res1",
+                "part": "Res100O"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.Gnd",
+                "to": "Res1.con1"
+            },
+            {
+                "from": "Res1.con0",
+                "to": "Gnd"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[0,["3.3v","PWM"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Gnd",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[4,["NodeMCU"]],[6,["ArduinoGemma"]],[7,["RPI3B"]],[8,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

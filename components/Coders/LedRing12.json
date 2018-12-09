@@ -1,0 +1,30 @@
+{
+    "name": "LedRing12",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {},
+    "license": "GNU",
+    "instantiate": {
+        "classname": "Adafruit_NeoPixel",
+        "ports": [
+            "IN"
+        ],
+        "varname": "NeoPixel_Ring"
+    },
+    "files": [
+        "lib/*"
+    ],
+    "includeHeaders": []
+}

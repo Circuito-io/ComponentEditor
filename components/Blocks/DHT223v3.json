@@ -1,0 +1,61 @@
+{
+    "name": "DHT223v3",
+    "path": "DHT22",
+    "category": "input",
+    "blockId": "!10167",
+    "coders": [
+        "DHT22"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "DHT22"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.DATA",
+                "to": "r1.con0"
+            },
+            {
+                "from": "this.VDD",
+                "to": "r1.con1"
+            }
+        ],
+        "ports": [
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VDD",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "DATA",
+                "interface": {
+                    "requires":[[0,["3.3v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "name": "FTDI_DATA3v3",
+    "path": "FTDIData",
+    "category": "support",
+    "blockId": "!1514678",
+    "altComp": [
+        150,
+        "PowerSupply12v"
+    ],
+    "supportedControllers": [
+        "ATMega328P"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "FTDI_DATA"
+            }
+        ],
+        "ports": [
+            {
+                "name": "CTS",
+                "interface": {
+                    "provides":[["3.3v","CTS"]]
+                }
+            },
+            {
+                "name": "RX",
+                "interface": {
+                    "provides":[["3.3v","RX"]]
+                }
+            },
+            {
+                "name": "TX",
+                "interface": {
+                    "provides":[["3.3v","TX"]]
+                }
+            },
+            {
+                "name": "DTR",
+                "interface": {
+                    "provides":[["3.3v","DTR"]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

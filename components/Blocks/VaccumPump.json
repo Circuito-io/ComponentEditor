@@ -1,0 +1,76 @@
+{
+    "name": "VaccumPump",
+    "path": "VaccumPump",
+    "category": "output",
+    "blockId": "10398",
+    "app": {
+        "appName": "Vacuum Pump - 12V",
+        "numericName": "",
+        "shortName": "Vacuum Pump",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
+        "visible": false
+    },
+    "coders": [
+        "VaccumPump"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "GndHighLoadPWMSwitching"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "VaccumPump"
+            }
+        ],
+        "ports": [
+            {
+                "name": "Coil1",
+                "interface": {
+                    "requires":[[0,["GndLoadSwitching","PWM"]]],
+                    "requiresLoad": 400,
+                    "unique": true
+                }
+            },
+            {
+                "name": "Coil2",
+                "interface": {
+                    "requires":[[1,["12v"]]],
+                    "requiresLoad": 400
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

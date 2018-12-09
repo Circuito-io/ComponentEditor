@@ -1,0 +1,38 @@
+{
+    "name": "NodeMCU1.0",
+    "path": "NodeMCU1.0",
+    "category": "controller",
+    "blockId": "360216",
+    "app": {
+        "appName": "Node MCU 1.0V",
+        "numericName": "",
+        "shortName": "Node MCU",
+        "tags": [
+            "connectivity",
+            "controllers"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>",
+        "visible": false
+    },
+    "coders": [
+        "NodeMCU1.0"
+    ],
+    "requires":[[1,["NodeMCU1.0_ExPower"]],[2,["NodeMCU1.0_USB"]]],
+    "requiresExpansion": [
+        [
+            0,
+            "NONE"
+        ],
+        [
+            10,
+            "74HC4051"
+        ]
+    ],
+    "supportedControllers": [],
+    "circuit": {}
+}

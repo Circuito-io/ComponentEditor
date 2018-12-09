@@ -1,0 +1,83 @@
+{
+    "name": "IRBreak5v",
+    "path": "IRBreak",
+    "category": "input",
+    "blockId": "!669681",
+    "coders": [
+        "IRBreak"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "IRBreak"
+            },
+            {
+                "name": "R_pullup",
+                "part": "Res10KO"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.VCCR",
+                "to": "R_pullup.con0"
+            },
+            {
+                "from": "this.SIG",
+                "to": "R_pullup.con1"
+            },
+            {
+                "from": "R_pullup.con1",
+                "to": "sig"
+            }
+        ],
+        "ports": [
+            {
+                "name": "VCCT",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "GNDR",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "GNDT",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "VCCR",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "sig",
+                "interface": {
+                    "requires":[[0,["5v","DigitalIn"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
+                }
+            }
+        ]
+    }
+}

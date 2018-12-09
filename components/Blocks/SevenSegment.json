@@ -1,0 +1,24 @@
+{
+    "name": "SevenSegment",
+    "path": "SevenSegment",
+    "category": "input",
+    "blockId": "11441",
+    "app": {
+        "appName": "SparkFun 7 - Segment Serial Display - Red",
+        "numericName": "",
+        "shortName": "",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This 7 segment display is able to do show 4 digits, where each one can be controlled separately. It can display numbers, letters and some special characters.<br><strong>Requires</strong>: Soldering of 10 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["SevenSegmentSWSer"]],[1,["SevenSegmentI2C"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

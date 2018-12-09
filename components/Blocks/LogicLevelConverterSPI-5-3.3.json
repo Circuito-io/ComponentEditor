@@ -1,0 +1,90 @@
+{
+    "name": "LogicLevelConverterSPI-5-3.3",
+    "path": "LogicLevelConverter",
+    "category": "support",
+    "supportedControllers": [],
+    "circuit": {
+        "parts": [
+            {
+                "name": "this",
+                "part": "LogicLevelConverter"
+            }
+        ],
+        "ports": [
+            {
+                "name": "HV",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "GND",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "GND1",
+                "interface": {
+                    "provides":[["GND"]]
+                }
+            },
+            {
+                "name": "LV2",
+                "interface": {
+                    "provides":[["MOSI","3.3v"]]
+                }
+            },
+            {
+                "name": "HV2",
+                "interface": {
+                    "requires":[[0,["MOSI","5v"]]]
+                }
+            },
+            {
+                "name": "HV3",
+                "interface": {
+                    "requires":[[0,["SCK","5v"]]]
+                }
+            },
+            {
+                "name": "LV",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "LV3",
+                "interface": {
+                    "provides":[["SCK","3.3v"]]
+                }
+            },
+            {
+                "name": "LV1",
+                "interface": {
+                    "provides":[["MISO","3.3v"]]
+                }
+            },
+            {
+                "name": "HV1",
+                "interface": {
+                    "requires":[[0,["MISO","5v"]]]
+                }
+            },
+            {
+                "name": "HV4",
+                "interface": {
+                    "requires":[[0,["DigitalOut","5v"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "LV4",
+                "interface": {
+                    "codenameRedirect": "HV4",
+                    "provides":[["DigitalOut","3.3v"]]
+                }
+            }
+        ]
+    }
+}

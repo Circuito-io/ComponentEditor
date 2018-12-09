@@ -1,0 +1,24 @@
+{
+    "name": "Flex",
+    "path": "Flex",
+    "category": "input",
+    "blockId": "8606",
+    "app": {
+        "appName": "Flex Sensor 4.5''",
+        "numericName": "",
+        "shortName": "Flex Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>In essence, this is a flex resistor - As the sensor is flexed, its resistance increases.<br><strong>Returned values</strong>: from 0 (no flex) to 1023 (maximal flex).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/3-Cool-Things-Made-With-Circuitoio/step11/Dancing-Robot/\">Dancing Robot</a>.</p>\n",
+        "visible": false
+    },
+    "requires":[[0,["Flex5v"]],[1,["Flex3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

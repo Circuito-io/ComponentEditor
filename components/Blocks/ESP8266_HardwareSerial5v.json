@@ -1,0 +1,133 @@
+{
+    "name": "ESP8266_HardwareSerial5v",
+    "path": "ESP8266",
+    "category": "iot",
+    "blockId": "!13678",
+    "coders": [
+        "ESP8266_HardwareSerial"
+    ],
+    "requires": [
+        [
+            0,
+            [
+                "NONE"
+            ]
+        ],
+        [
+            0,
+            [
+                "Reg3.3v"
+            ]
+        ]
+    ],
+    "supportedControllers": [
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+    ],
+    "circuit": {
+        "parts": [
+            {
+                "name": "LLC",
+                "part": "LogicLevelConverter"
+            },
+            {
+                "name": "this",
+                "part": "ESP8266"
+            }
+        ],
+        "wires": [
+            {
+                "from": "this.RXD",
+                "to": "LLC.LV1"
+            },
+            {
+                "from": "this.TXD",
+                "to": "LLC.LV2"
+            },
+            {
+                "from": "this.VCC",
+                "to": "LLC.LV"
+            },
+            {
+                "from": "this.GND",
+                "to": "LLC.GND"
+            },
+            {
+                "from": "this.CH_PD",
+                "to": "LLC.LV"
+            },
+            {
+                "from": "LLC.HV1",
+                "to": "Tx"
+            },
+            {
+                "from": "LLC.LV",
+                "to": "LV"
+            },
+            {
+                "from": "LLC.HV2",
+                "to": "Rx"
+            },
+            {
+                "from": "LLC.HV",
+                "to": "HV"
+            },
+            {
+                "from": "LLC.GND",
+                "to": "Gnd"
+            }
+        ],
+        "ports": [
+            {
+                "name": "LV",
+                "interface": {
+                    "requires":[[0,["3.3v"]]]
+                }
+            },
+            {
+                "name": "Rx",
+                "interface": {
+                    "requires":[[0,["RX","5v"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "Tx",
+                "interface": {
+                    "requires":[[0,["TX","5v"]]],
+                    "unique": true
+                }
+            },
+            {
+                "name": "HV",
+                "interface": {
+                    "requires":[[0,["5v"]]]
+                }
+            },
+            {
+                "name": "MemOverLoad",
+                "interface": {
+                    "requires":[[0,["SRAMLoad"]]],
+                    "requiresLoad": 1220
+                }
+            },
+            {
+                "name": "Gnd",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "supportedControllers",
+                "interface": {
+                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoNano"]],[5,["ArduinoLeonardo"]],[6,["ArduinoMicro"]]]
+                }
+            }
+        ]
+    }
+}

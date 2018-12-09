@@ -1,0 +1,24 @@
+{
+    "name": "ResistiveTouchScreen",
+    "path": "ResistiveTouchScreen",
+    "category": "input",
+    "blockId": "276649",
+    "app": {
+        "appName": "Resistive Touch screen - 3.7'' Diagonal",
+        "numericName": "",
+        "shortName": "Resistive Touch screen",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This Resistive Touch Screen can be used with a stylus or fingertip and is easy to use with a microcontroller. You can use it as a touch control panel or place it over an LCD display to make a DIY touch screen.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["ResistiveTouchScreen5v"]],[1,["ResistiveTouchScreen3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

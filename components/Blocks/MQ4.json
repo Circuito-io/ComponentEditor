@@ -1,0 +1,24 @@
+{
+    "name": "MQ4",
+    "path": "MQ4",
+    "category": "input",
+    "blockId": "398784",
+    "app": {
+        "appName": "Natural Gas (CNG) Sensor - MQ-4",
+        "numericName": "MQ4",
+        "shortName": "Natural Gas Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This sensor is sensitive for CNG (compressed natural gas) concentrations in the air. Can detect natural gas concentrations anywhere from 200 to 10000ppm.</p>",
+        "visible": false
+    },
+    "requires":[[1,["MQ45v"]],[2,["MQ43v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

@@ -1,0 +1,24 @@
+{
+    "name": "OLED128X32",
+    "path": "OLED128X32",
+    "category": "output",
+    "blockId": "985157",
+    "app": {
+        "appName": "Monochrome 128x32 I2C OLED graphic display",
+        "numericName": "",
+        "shortName": "OLED",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>This is a 1-inch diagonal OLED Breakout Board. It communicates via I2C, and altough it's small this OLED is very readable due to the high contrast.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["OLED128X32-5v"]],[1,["OLED128X32-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

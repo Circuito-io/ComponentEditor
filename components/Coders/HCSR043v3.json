@@ -1,0 +1,24 @@
+{
+    "name": "HCSR043v3",
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "snippetCode:": "    // Read distance measurment from UltraSonic sensor           \n    int {{varname}}Dist = {{varname}}.ping_cm();\n    delay(10);\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+    },
+    "license": "GNU_GPL_v3",
+    "instantiate": {
+        "classname": "NewPing",
+        "ports": [
+            "TRIG",
+            "Echo"
+        ],
+        "varname": "hcsr04"
+    },
+    "files": [
+        "lib/*"
+    ]
+}

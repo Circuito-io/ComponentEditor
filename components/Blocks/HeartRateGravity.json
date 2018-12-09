@@ -1,0 +1,24 @@
+{
+    "name": "HeartRateGravity",
+    "path": "HeartRateGravity",
+    "category": "input",
+    "blockId": "133979",
+    "app": {
+        "appName": "Gravity: Analog Heart Rate Monitor Sensor (ECG) For Arduino",
+        "numericName": "",
+        "shortName": "Heart Rate  ECG Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This Analog Heart Rate Sensor (ECG) supply a clear measurement of the electrical pulse of the heart. It can be used to measure your heart bpm. Recommend input voltage 5V.</p>",
+        "visible": "true"
+    },
+    "requires":[[0,["HeartRateGravity-5v"]],[1,["HeartRateGravity-3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

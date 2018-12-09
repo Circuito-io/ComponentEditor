@@ -1,0 +1,24 @@
+{
+    "name": "PotentiometerTrim",
+    "path": "PotentiometerTrim",
+    "category": "input",
+    "blockId": "172542",
+    "app": {
+        "appName": "Trimmer Potentiometer - 10K",
+        "numericName": "",
+        "shortName": "Trimmer Potentiometer",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).</p>\n",
+        "visible": "true"
+    },
+    "requires":[[0,["PotentiometerTrim5v"]],[1,["PotentiometerTrim3v3"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}

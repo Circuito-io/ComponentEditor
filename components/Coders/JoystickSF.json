@@ -1,0 +1,41 @@
+{
+    "name": "JoystickSF",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "snippetCode:": "    // Read Joystick X,Y axis and press\n    int {{varname}}X =  {{varname}}.getX();\n    int {{varname}}Y =  {{varname}}.getY();\n    int {{varname}}SW =  {{varname}}.getSW();\n    Serial.print(F(\"X: \")); Serial.print({{varname}}X);\n    Serial.print(F(\"\\tY: \")); Serial.print({{varname}}Y);\n    Serial.print(F(\"\\tSW: \")); Serial.println({{varname}}SW);\n"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "Joystick",
+        "ports": [
+            "VERT",
+            "HORZ",
+            "SEL"
+        ],
+        "varname": "joystickSF"
+    },
+    "files": [
+        "lib/*",
+        "../Global/lib/AnalogReader.h",
+        "../Global/lib/AnalogReader.cpp",
+        "../Global/lib/Button.h",
+        "../Global/lib/Button.cpp",
+        "../Joystick/lib/Joystick.h",
+        "../Joystick/lib/Joystick.cpp"
+    ],
+    "includeHeaders": [
+        "Joystick.h"
+    ]
+}
