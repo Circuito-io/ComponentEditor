@@ -15,8 +15,8 @@
         "RPI3B"
     ],
     "code": {
-        "setup:": "    // Set declination angle on your location and fix heading\n    // You can find your declination on: http://magnetic-declination.com/\n    // (+) Positive or (-) for negative\n    // For declination angle 4'36E (positive)\n    {{varname}}.begin(+4,36);\n",
-        "snippetCode:": "    //Read heading value from compass\n    float {{varname}}Heading = {{varname}}.getHeadingDeg();\n    Serial.print(F(\"Heading: \")); Serial.print({{varname}}Heading); Serial.println(F(\"[\u00b0]\"));\n"
+        "setup": "    // Set declination angle on your location and fix heading\n    // You can find your declination on: http://magnetic-declination.com/\n    // (+) Positive or (-) for negative\n    // For declination angle 4'36E (positive)\n    {{varname}}.begin(+4,36);\n",
+        "snippetCode": "    //Read heading value from compass\n    float {{varname}}Heading = {{varname}}.getHeadingDeg();\n    Serial.print(F(\"Heading: \")); Serial.print({{varname}}Heading); Serial.println(F(\"[\u00b0]\"));\n"
     },
     "license": "GNU",
     "instantiate": {
@@ -24,6 +24,8 @@
         "varname": "compass"
     },
     "files": [
-        "lib/*"
+        "HMC5883L.h",
+        "HMC5883L_license.txt",
+        "HMC5883L.cpp"
     ]
 }

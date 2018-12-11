@@ -8,9 +8,9 @@
         "RPI3B"
     ],
     "code": {
-        "global:": "    const int {{varname}}calFactor = 513;\n",
-        "setup:": "    //Manually calibarte the ACS712 current sensor.\n    //Connet the ACS to your board, but do not connect the current sensing side.\n    //Follow serial monitor instructions. This needs be done one time only.\n    {{varname}}.calibrate({{varname}}calFactor);\n",
-        "snippetCode:": "    //Get averaged current measurment.\n    float {{varname}}Currrent  = {{varname}}.getCurrent();\n    Serial.print({{varname}}Currrent); Serial.println(F(\" [mA]\"));\n"
+        "global": "    const int {{varname}}calFactor = 513;\n",
+        "setup": "    //Manually calibarte the ACS712 current sensor.\n    //Connet the ACS to your board, but do not connect the current sensing side.\n    //Follow serial monitor instructions. This needs be done one time only.\n    {{varname}}.calibrate({{varname}}calFactor);\n",
+        "snippetCode": "    //Get averaged current measurment.\n    float {{varname}}Currrent  = {{varname}}.getCurrent();\n    Serial.print({{varname}}Currrent); Serial.println(F(\" [mA]\"));\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -21,9 +21,11 @@
         "varname": "acs712"
     },
     "files": [
-        "lib/*",
-        "../Global/lib/AnalogReader.h",
-        "../Global/lib/AnalogReader.cpp"
+        "ACS712.cpp",
+        "ACS712.h",
+        "ACS712_license.txt",
+        "AnalogReader.h",
+        "AnalogReader.cpp"
     ],
     "includeHeaders": [
         "ACS712.h"

@@ -14,8 +14,8 @@
         "RPI3B"
     ],
     "code": {
-        "setup:": "    // initialize IR device\n    {{varname}}.init();\n",
-        "snippetCode:": "    //Receive IR code into {{varname}}Code\n    long {{varname}}Code =  {{varname}}.detect();\n    // if a code was received print it to serial monitor, note that the code is of type long but printed in HEX\n    // Consider changing the if statment to something like: if({{varname}}Code == \"YOUR IR CODE\")\n    if({{varname}}Code)\n    {\n        Serial.print(\"0x\");\n        Serial.println({{varname}}Code, HEX);\n    }"
+        "setup": "    // initialize IR device\n    {{varname}}.init();\n",
+        "snippetCode": "    //Receive IR code into {{varname}}Code\n    long {{varname}}Code =  {{varname}}.detect();\n    // if a code was received print it to serial monitor, note that the code is of type long but printed in HEX\n    // Consider changing the if statment to something like: if({{varname}}Code == \"YOUR IR CODE\")\n    if({{varname}}Code)\n    {\n        Serial.print(\"0x\");\n        Serial.println({{varname}}Code, HEX);\n    }"
     },
     "license": "GNU",
     "instantiate": {
@@ -26,6 +26,35 @@
         "varname": "ir"
     },
     "files": [
-        "lib/*"
+        "IRremote.cpp",
+        "irSend.cpp",
+        "ir_Panasonic.cpp",
+        "ir_Samsung.cpp",
+        "ir_Dish.cpp",
+        "ir_LG.cpp",
+        "IRremote_Contributors.md",
+        "IRremote_README.md",
+        "ir_Sanyo.cpp",
+        "ir_Template.cpp",
+        "IRremote_changelog.md",
+        "IRremote_Contributing.md",
+        "ir_Lego_PF.cpp",
+        "IRremote_license.txt",
+        "IR.h",
+        "irPronto.cpp",
+        "ir_Whynter.cpp",
+        "IR_license.txt",
+        "IRremoteInt.h",
+        "ir_RC5_RC6.cpp",
+        "ir_Sharp.cpp",
+        "ir_Sony.cpp",
+        "IR.cpp",
+        "ir_Aiwa.cpp",
+        "ir_NEC.cpp",
+        "irRecv.cpp",
+        "ir_Denon.cpp",
+        "IRremote.h",
+        "ir_Mitsubishi.cpp",
+        "ir_JVC.cpp"
     ]
 }

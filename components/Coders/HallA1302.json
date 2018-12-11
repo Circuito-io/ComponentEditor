@@ -15,8 +15,8 @@
         "RPI3B"
     ],
     "code": {
-        "setup:": "    //Calibrate sensor\n    {{varname}}.calibrate();\n",
-        "snippetCode:": "    //Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\n    int {{varname}}Val = {{varname}}.getMeasurment();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
+        "setup": "    //Calibrate sensor\n    {{varname}}.calibrate();\n",
+        "snippetCode": "    //Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\n    int {{varname}}Val = {{varname}}.getMeasurment();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -27,9 +27,11 @@
         "varname": "hallA"
     },
     "files": [
-        "lib/*",
-        "../Global/lib/AnalogReader.h",
-        "../Global/lib/AnalogReader.cpp"
+        "HallA1302.h",
+        "HallA1302.cpp",
+        "HallA1302_license.txt",
+        "AnalogReader.h",
+        "AnalogReader.cpp"
     ],
     "includeHeaders": [
         "HallA1302.h"

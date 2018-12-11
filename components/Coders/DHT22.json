@@ -15,8 +15,8 @@
         "RPI3B"
     ],
     "code": {
-        "setup:": "    {{varname}}.begin();\n",
-        "snippetCode:": "    // Reading humidity in %\n    float {{varname}}Humidity = {{varname}}.readHumidity();\n    // Read temperature in Celsius, for Fahrenheit use .readTempF()\n    float {{varname}}TempC = {{varname}}.readTempC();\n    Serial.print(F(\"Humidity: \")); Serial.print({{varname}}Humidity); Serial.print(F(\" [%]\\t\"));\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
+        "setup": "    {{varname}}.begin();\n",
+        "snippetCode": "    // Reading humidity in %\n    float {{varname}}Humidity = {{varname}}.readHumidity();\n    // Read temperature in Celsius, for Fahrenheit use .readTempF()\n    float {{varname}}TempC = {{varname}}.readTempC();\n    Serial.print(F(\"Humidity: \")); Serial.print({{varname}}Humidity); Serial.print(F(\" [%]\\t\"));\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
     },
     "license": "MIT",
     "instantiate": {
@@ -27,6 +27,8 @@
         "varname": "dht"
     },
     "files": [
-        "lib/*"
+        "DHT.h",
+        "DHT.cpp",
+        "DHT_license.txt"
     ]
 }

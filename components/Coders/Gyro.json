@@ -15,13 +15,14 @@
         "RPI3B"
     ],
     "code": {
-        "snippetCode:": "    // Get gyro readings in three axes.\n    int {{varname}}X = {{varname}}.getX();\n    int {{varname}}Y = {{varname}}.getY();\n    int {{varname}}Z = {{varname}}.getZ();\n    Serial.print(F(\"X: \")); Serial.print({{varname}}X); \n    Serial.print(F(\"\\tY: \")); Serial.print({{varname}}Y); \n    Serial.print(F(\"\\tZ: \")); Serial.println({{varname}}Z);\n"
+        "snippetCode": "    // Get gyro readings in three axes.\n    int {{varname}}X = {{varname}}.getX();\n    int {{varname}}Y = {{varname}}.getY();\n    int {{varname}}Z = {{varname}}.getZ();\n    Serial.print(F(\"X: \")); Serial.print({{varname}}X); \n    Serial.print(F(\"\\tY: \")); Serial.print({{varname}}Y); \n    Serial.print(F(\"\\tZ: \")); Serial.println({{varname}}Z);\n"
     },
     "license": "PublicDomain",
     "instantiate": {
         "classname": "Gyro"
     },
     "files": [
-        "lib/*"
+        "Gyro.cpp",
+        "Gyro.h"
     ]
 }

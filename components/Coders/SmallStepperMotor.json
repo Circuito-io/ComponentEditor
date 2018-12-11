@@ -15,11 +15,12 @@
         "RPI3B"
     ],
     "code": {
-        "#": "#     {{varname}}.setMaxSpeed(3000);      //set max speed to 3000 steps per second\n#     {{varname}}.setAcceleration(1000);  //set max acceleration to 1000 steps per second^2\n#     //Move stepper motor 250 steps relative to last position\n#     {{varname}}.runToNewPosition(250);\n#     {{varname}}.setCurrentPosition(0);\n",
-        "global:": "    #define {{varname}}DelayTime  1000\n",
-        "constructors:": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",
-        "setup:": "    // enable the stepper motor, use .disable() to disable the motor\n    {{varname}}.enable();\n    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n    {{varname}}.setStepDelay({{varname}}DelayTime);\n",
-        "snippetCode:": "    // the higher the time value the slower the motor will run\n    {{varname}}.step(1, 1000);  // move motor 1000 steps in one direction\n    delay(1000);            // short stop\n    {{varname}}.step(0, 1000);  // move motor 1000 steps in the other dirction\n    delay(1000);            //short stop"
+        "# setup": "#     {{varname}}.setMaxSpeed(3000);      //set max speed to 3000 steps per second\n#     {{varname}}.setAcceleration(1000);  //set max acceleration to 1000 steps per second^2\n",
+        "# snippetCode": "#     //Move stepper motor 250 steps relative to last position\n#     {{varname}}.runToNewPosition(250);\n#     {{varname}}.setCurrentPosition(0);\n",
+        "global": "    #define {{varname}}DelayTime  1000\n",
+        "constructors": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",
+        "setup": "    // enable the stepper motor, use .disable() to disable the motor\n    {{varname}}.enable();\n    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n    {{varname}}.setStepDelay({{varname}}DelayTime);\n",
+        "snippetCode": "    // the higher the time value the slower the motor will run\n    {{varname}}.step(1, 1000);  // move motor 1000 steps in one direction\n    delay(1000);            // short stop\n    {{varname}}.step(0, 1000);  // move motor 1000 steps in the other dirction\n    delay(1000);            //short stop"
     },
     "license": "circuito",
     "instantiate": {
@@ -31,7 +32,9 @@
         "varname": "stepperSmall"
     },
     "files": [
-        "lib/*"
+        "StepperMotor_license.txt",
+        "StepperMotor.h",
+        "StepperMotor.cpp"
     ],
     "includeHeaders": []
 }

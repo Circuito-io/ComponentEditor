@@ -15,8 +15,9 @@
         "RPI3B"
     ],
     "code": {
-        "#": "#     // Read Flex sensor value.\n#     {{varname}}.read() < 512\n",
-        "snippetCode:": "    // Read Flex sensor value.\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
+        "# precond": "#     // Read Flex sensor value.\n",
+        "# boolcond": "#     {{varname}}.read() < 512\n",
+        "snippetCode": "    // Read Flex sensor value.\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -26,9 +27,11 @@
         ]
     },
     "files": [
-        "lib/*",
-        "../Global/lib/AnalogReader.h",
-        "../Global/lib/AnalogReader.cpp"
+        "flex_license.txt",
+        "Flex.cpp",
+        "Flex.h",
+        "AnalogReader.h",
+        "AnalogReader.cpp"
     ],
     "includeHeaders": [
         "Flex.h"

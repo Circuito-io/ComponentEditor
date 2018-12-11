@@ -15,7 +15,7 @@
         "RPI3B"
     ],
     "code": {
-        "snippetCode:": "    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
+        "snippetCode": "    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
     },
     "license": "circuito",
     "instantiate": {
@@ -26,9 +26,11 @@
         "varname": "Trimmer"
     },
     "files": [
-        "lib/*",
-        "../Global/lib/AnalogReader.h",
-        "../Global/lib/AnalogReader.cpp"
+        "Potentiometer.h",
+        "Potentiometer.cpp",
+        "Potentiometer_license.txt",
+        "AnalogReader.h",
+        "AnalogReader.cpp"
     ],
     "includeHeaders": [
         "Potentiometer.h"

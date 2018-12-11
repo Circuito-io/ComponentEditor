@@ -15,18 +15,18 @@
             "image": "https://ucarecdn.com/dc39d277-91e8-44fa-8a46-729e73402b5f/",
             "link": "https://octopart.com/sen-13322-sparkfun-67069601",
             "price": "4.95",
-            "SKU": "1568-1360-ND"
+            "SKU": "1568-1360-ND",
+            "headers": [
+                3,
+                "MaleHeaders"
+            ]
         }
     ],
     "info": {
         "setup": "The soil moisture sensor requires soldering, consider soldering wires instead of pins",
         "test": "Touch both pads of the sensor with your finger, you should see the values changing"
     },
-    "headers": [
-        3,
-        "MaleHeaders"
-    ],
     "placing": {
-        "onBreadboard": false
+        "onBreadboard": true
     }
 }
