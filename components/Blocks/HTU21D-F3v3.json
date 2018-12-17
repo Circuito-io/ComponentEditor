@@ -1,7 +1,9 @@
 {
     "name": "HTU21D-F3v3",
     "path": "HTU21D-F",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!690029",
     "coders": [
         "HTU21D-F"
@@ -42,12 +44,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

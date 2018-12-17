@@ -1,11 +1,13 @@
 {
     "name": "MQ2",
     "path": "MQ2",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "398782",
     "app": {
         "appName": "Methane, Butane, LPG and Smoke Gas Sensor - MQ-2",
-        "image": "https://ucarecdn.com/0976580b-3346-4363-940a-939474c51252/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ppjijyv5sog7qwg7tz1v",
         "numericName": "MQ2",
         "shortName": "Smoke and Gas Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This sensor is sensitive for flamable and combustible gasses such as Methane, Butane, LPG, smoke.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["MQ25v"]],[2,["MQ23v3"]]],
     "supportedControllers": [],

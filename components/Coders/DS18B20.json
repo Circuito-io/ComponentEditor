@@ -15,8 +15,6 @@
         "RPI3B"
     ],
     "code": {
-        "# precond": "#     // Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit: {{varname}}.ReadTempF(0) > 80\n",
-        "# boolcond": "#     {{varname}}.readTempC() > 28\n",
         "snippetCode": "    // Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit use {{varname}}.ReadTempF()\n    float {{varname}}TempC = {{varname}}.readTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
     },
     "license": "GNU",

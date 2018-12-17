@@ -1,11 +1,13 @@
 {
     "name": "DCMDriverL298",
     "path": "DCMDriverL298",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "7654321",
     "app": {
         "appName": "L298N Motor Driver with Dual Hobby DC motors",
-        "image": "https://ucarecdn.com/66259708-6600-4bf6-9289-ee7330119613/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ocylg1w2f5ec9sdzwf9x",
         "numericName": "",
         "shortName": "Dual Hobby DC Motors with L298D",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A DC motor driver with two DC motor. Enables speed and direction control for both DC motor.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "DCMDriverL298"
@@ -129,12 +131,6 @@
                 "interface": {
                     "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

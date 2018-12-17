@@ -1,11 +1,13 @@
 {
     "name": "USBPowerMiniWithFTDI5v",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector"
+    ],
     "blockId": "!514",
     "altComp": [
         150,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "supportedControllers": [
         "ArduinoProMini5v"
@@ -35,12 +37,6 @@
                 "name": "FTDI",
                 "interface": {
                     "requires":[[0,["FTDI"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini5v"]]]
                 }
             }
         ]

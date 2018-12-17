@@ -1,11 +1,13 @@
 {
     "name": "Nokia5110LCD",
     "path": "Nokia5110LCD",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "10168",
     "app": {
         "appName": "Graphic LCD 84x48 - Nokia 5110",
-        "image": "https://ucarecdn.com/1ffbf4ce-3186-4dd3-a1b6-36fb4c209389/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/cg6gmqvwuniyczecmv8f",
         "numericName": "Nokia 5110",
         "shortName": "Graphic LCD 84x48",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>The Nokia 5110 is a basic graphic LCD screen for lots of applications.</p>\n<p><strong>Requires</strong>: Soldering 8 pin male header</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"https://www.hackster.io/vandenbrande/arduino-nokia-5110-lcd-temperature-meter-with-the-ds18b20-ad45a2\">Arduino - Nokia 5110 LCD temperature meter with the DS18B20</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "Nokia5110LCD"
@@ -95,12 +97,6 @@
                 "interface": {
                     "requires":[[0,["SRAMLoad"]]],
                     "requiresLoad": 500
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

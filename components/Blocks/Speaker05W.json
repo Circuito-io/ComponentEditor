@@ -1,11 +1,13 @@
 {
     "name": "Speaker05W",
     "path": "Speaker05W",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "197253",
     "app": {
         "appName": "Thin Speaker",
-        "image": "https://ucarecdn.com/e41d71a5-bc22-402e-87e9-7cf5e9b24277/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/grbse3tvsun45qj8ypug",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -55,12 +57,6 @@
                 "name": "NEG",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["Arduino101"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

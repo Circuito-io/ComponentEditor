@@ -1,7 +1,9 @@
 {
     "name": "ArduinoProMini5vUSB",
     "path": "ArduinoProMini5v",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11113",
     "requires": [
         [
@@ -215,12 +217,6 @@
                 "name": "FTDI",
                 "interface": {
                     "provides":[["FTDI"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoProMini5v"]]
                 }
             }
         ]

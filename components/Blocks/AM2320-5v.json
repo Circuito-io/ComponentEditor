@@ -1,7 +1,9 @@
 {
     "name": "AM2320-5v",
     "path": "AM2320",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!656839",
     "coders": [
         "AM2320"
@@ -33,19 +35,19 @@
         "wires": [
             {
                 "from": "this.SCL",
-                "to": "r1.con0"
-            },
-            {
-                "from": "this.VDD",
                 "to": "r1.con1"
             },
             {
+                "from": "this.VDD",
+                "to": "r1.con0"
+            },
+            {
                 "from": "this.SDA",
-                "to": "r2.con0"
+                "to": "r2.con1"
             },
             {
                 "from": "this.VDD",
-                "to": "r2.con1"
+                "to": "r2.con0"
             }
         ],
         "ports": [
@@ -71,12 +73,6 @@
                 "name": "SDA",
                 "interface": {
                     "requires":[[0,["5v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
                 }
             }
         ]

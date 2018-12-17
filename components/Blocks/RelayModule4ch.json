@@ -1,11 +1,13 @@
 {
     "name": "RelayModule4ch",
     "path": "RelayModule4ch",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "442979",
     "app": {
         "appName": "Relay Module 4-Ch",
-        "image": "https://ucarecdn.com/deb4ee76-3693-49f9-a8ad-52bb343f2416/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/buubzdfet1iei6jxhdi4",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>4 channel Relay module with breakout board. It is used to isolate components and create a sub-circuit in your circuit, with a different voltage.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "RelayModule4ch"
@@ -81,12 +83,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,11 +1,13 @@
 {
     "name": "Servo9g",
     "path": "Servo9g",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "2345678",
     "app": {
         "appName": "9G Micro Servo",
-        "image": "https://ucarecdn.com/f25cb5ff-1c5e-478d-a01d-25fb71d90662/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/joo2scbbkokxdfyt8em9",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This is a very simple &amp; small servo, weight only 9g. You can use to rotate an object, or move a robotic arm.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Flying-Manatee/\">Flying Manatee</a>.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "Servo9g"
@@ -76,12 +78,6 @@
                 "interface": {
                     "requires":[[0,["5v"]],[1,["3.3v"]],[2,["6v"]]],
                     "requiresLoad": 300
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "IRBreak3v3",
     "path": "IRBreak",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!669681",
     "coders": [
         "IRBreak"
@@ -64,12 +66,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

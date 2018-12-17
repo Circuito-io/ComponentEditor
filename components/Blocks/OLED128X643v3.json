@@ -1,7 +1,9 @@
 {
     "name": "OLED128X643v3",
     "path": "OLED128X64",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!466193",
     "coders": [
         "OLED128X64"
@@ -63,12 +65,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
                 }
             }
         ]

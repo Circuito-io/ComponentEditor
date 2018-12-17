@@ -1,7 +1,9 @@
 {
     "name": "MPL3115A2-5v",
     "path": "MPL3115A2",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!431714",
     "coders": [
         "MPL3115A2"
@@ -45,12 +47,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
                 }
             }
         ]

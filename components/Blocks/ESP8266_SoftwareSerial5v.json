@@ -1,7 +1,9 @@
 {
     "name": "ESP8266_SoftwareSerial5v",
     "path": "ESP8266",
-    "category": "iot",
+    "category": [
+        "iot"
+    ],
     "blockId": "!13678",
     "coders": [
         "ESP8266_SoftwareSerial5v"
@@ -122,12 +124,6 @@
                 "name": "Gnd",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoNano"]],[5,["ArduinoLeonardo"]],[6,["ArduinoMicro"]]]
                 }
             }
         ]

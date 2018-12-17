@@ -1,11 +1,13 @@
 {
     "name": "USBPowerMini",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector"
+    ],
     "blockId": "!514",
     "altComp": [
         150,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "supportedControllers": [
         "ArduinoNano"
@@ -35,12 +37,6 @@
                 "name": "USB_MINI",
                 "interface": {
                     "requires":[[0,["USB_MINI"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoNano"]]]
                 }
             }
         ]

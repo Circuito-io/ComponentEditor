@@ -15,8 +15,6 @@
         "RPI3B"
     ],
     "code": {
-        "# setup": "#     {{varname}}.setMaxSpeed(3000);      //set max speed to 3000 steps per second\n#     {{varname}}.setAcceleration(1000);  //set max acceleration to 1000 steps per second^2\n",
-        "# snippetCode": "#     //Move stepper motor 250 steps relative to last position\n#     {{varname}}.runToNewPosition(250);\n#     {{varname}}.setCurrentPosition(0);\n",
         "global": "    #define {{varname}}DelayTime  1000\n",
         "constructors": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",
         "setup": "    // enable the stepper motor, use .disable() to disable the motor\n    {{varname}}.enable();\n    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n    {{varname}}.setStepDelay({{varname}}DelayTime);\n",

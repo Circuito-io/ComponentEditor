@@ -1,11 +1,13 @@
 {
     "name": "SevenSegmentBare_Single",
     "path": "SevenSegmentBare_Single",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "375026",
     "app": {
         "appName": "7 - Segment Display (Single Digit)",
-        "image": "https://ucarecdn.com/1876c66d-4be0-4605-9cc3-23424cb29858/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jhyprl4hns2hdufcnbqp",
         "numericName": "",
         "shortName": "7-Segment",
         "tags": [
@@ -50,10 +52,10 @@
         "wires": [
             {
                 "from": "this.Com",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
-                "from": "r1.con1",
+                "from": "r1.con0",
                 "to": "Com"
             }
         ],
@@ -118,12 +120,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

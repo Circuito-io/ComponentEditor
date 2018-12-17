@@ -1,11 +1,13 @@
 {
     "name": "LEDGreen",
     "path": "LEDGreen",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "9591",
     "app": {
         "appName": "Basic Green LED 5mm",
-        "image": "https://ucarecdn.com/70bb5a71-7454-4f8d-b8a7-6c1a1a97d7f3/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/zvnxbcygolx8lbjsijbq",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This is a very basic, small, Green LED. Control the intensity of the color at a range of 0-255. Its Luminous Intensity is 150-200mcd.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["LEDGreen5v"]],[2,["LEDGreen3.3v"]]],
     "supportedControllers": [],

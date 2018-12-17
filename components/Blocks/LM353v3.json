@@ -1,7 +1,9 @@
 {
     "name": "LM353v3",
     "path": "LM35",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!333429",
     "coders": [
         "LM35"
@@ -31,18 +33,18 @@
         "wires": [
             {
                 "from": "this.Gnd",
-                "to": "r2.con1"
+                "to": "r2.con0"
             },
             {
-                "from": "r2.con0",
-                "to": "r1.con1"
-            },
-            {
-                "from": "this.Vout",
+                "from": "r2.con1",
                 "to": "r1.con0"
             },
             {
-                "from": "r1.con1",
+                "from": "this.Vout",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
                 "to": "VOUT"
             }
         ],
@@ -64,12 +66,6 @@
                 "name": "Gnd",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

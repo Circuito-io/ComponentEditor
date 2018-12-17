@@ -1,7 +1,9 @@
 {
     "name": "DHT223v3",
     "path": "DHT22",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!10167",
     "coders": [
         "DHT22"
@@ -48,12 +50,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

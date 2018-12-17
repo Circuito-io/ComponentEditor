@@ -1,11 +1,13 @@
 {
     "name": "BME280SF",
     "path": "BME280SF",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "13676",
     "app": {
         "appName": "SparkFun BME280 - Atmospheric Sensor Breakout",
-        "image": "https://ucarecdn.com/f160b5e1-2b44-44a1-ad84-9bc666a18146/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/f40irfp8rts56ajesire",
         "numericName": "BME280",
         "shortName": "Atmospheric Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>Atmospheric Sensor Breakout is the easy way to measure barometric pressure, humidity, and temperature readings.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "BME280SF"
@@ -68,12 +70,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

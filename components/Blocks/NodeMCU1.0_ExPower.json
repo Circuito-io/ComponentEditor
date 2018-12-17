@@ -1,7 +1,9 @@
 {
     "name": "NodeMCU1.0_ExPower",
     "path": "NodeMCU1.0",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!360216",
     "requires": [
         [
@@ -175,12 +177,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "provides":[["USB_MICRO"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["NodeMCU"]]
                 }
             },
             {

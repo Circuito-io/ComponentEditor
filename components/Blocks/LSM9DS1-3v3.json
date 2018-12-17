@@ -1,7 +1,9 @@
 {
     "name": "LSM9DS1-3v3",
     "path": "LSM9DS1",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!779831",
     "coders": [
         "LSM9DS1"
@@ -43,12 +45,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[4,["ESP32DevKitC"]]]
                 }
             }
         ]

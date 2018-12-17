@@ -1,11 +1,13 @@
 {
     "name": "PiezoSensor",
     "path": "PiezoSensor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "10293",
     "app": {
         "appName": "Piezo Element",
-        "image": "https://ucarecdn.com/64a1fb5e-60bc-4a3c-989d-33d03d4230cf/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ykaggtuuezufipl2togh",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Piezo generates a voltage when it is physically deformed by a vibration, sound wave, or mechanical strain.<br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"https://www.arduino.cc/en/Tutorial/Knock\">Secret Knock</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "PiezoSensor"
@@ -50,11 +52,11 @@
         "wires": [
             {
                 "from": "this.neg",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.pos",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "this.pos",
@@ -77,12 +79,6 @@
                 "name": "neg",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

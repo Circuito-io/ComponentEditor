@@ -1,7 +1,9 @@
 {
     "name": "Thermistor3v3",
     "path": "Thermistor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!149486",
     "coders": [
         "Thermistor"
@@ -47,12 +49,6 @@
                 "name": "con0",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
                 }
             }
         ]

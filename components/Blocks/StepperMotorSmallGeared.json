@@ -1,11 +1,13 @@
 {
     "name": "StepperMotorSmallGeared",
     "path": "StepperMotor",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "9240",
     "app": {
         "appName": "Small Reduction Stepper Motor with EasyDriver - 5VDC 32-Step 1/16 Gearing",
-        "image": "https://ucarecdn.com/6f64af2c-3be1-440f-a1ba-b1416373e31c/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/c8i9tlvjttlhfynta2w0",
         "numericName": "",
         "shortName": "Small Reduction Stepper Motor with EasyDriver",
         "tags": [
@@ -108,12 +110,6 @@
                 "interface": {
                     "requires":[[0,["SRAMLoad"]]],
                     "requiresLoad": 200
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

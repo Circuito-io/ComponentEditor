@@ -1,7 +1,9 @@
 {
     "name": "BLEHM10_HardwareSerial",
     "path": "BLEHM10",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!395589",
     "coders": [
         "BLEHM10_HardwareSerial"
@@ -61,12 +63,6 @@
                 "interface": {
                     "requires":[[0,["TX","5v"]],[1,["TX","3.3v"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["Arduino101"]],[10,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "WaterLevelSensor3v3",
     "path": "WaterLevelSensor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!752394",
     "coders": [
         "WaterLevelSensor"
@@ -37,12 +39,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

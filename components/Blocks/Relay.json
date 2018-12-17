@@ -1,11 +1,13 @@
 {
     "name": "Relay",
     "path": "Relay",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "100",
     "app": {
         "appName": "Relay SPDT Sealed",
-        "image": "https://ucarecdn.com/9acf0b0c-d0c5-4128-b227-3b155a522d57/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/zsigruliw3ab9alm3j17",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Relay SPDT Sealed. A relay is used to isolate components and create a sub-circuit in your circuit, with a different voltage.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["Relay5v"]],[2,["Relay3v3"]]],
     "supportedControllers": [],

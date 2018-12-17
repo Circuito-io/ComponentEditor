@@ -1,7 +1,9 @@
 {
     "name": "GndLoadSwitching",
     "path": "Switching",
-    "category": "support",
+    "category": [
+        "support"
+    ],
     "supportedControllers": [],
     "circuit": {
         "parts": [
@@ -17,14 +19,14 @@
         "wires": [
             {
                 "from": "this.B",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "this.E",
                 "to": "GndIn"
             },
             {
-                "from": "r1.con0",
+                "from": "r1.con1",
                 "to": "Sig"
             },
             {

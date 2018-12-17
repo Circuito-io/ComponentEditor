@@ -1,7 +1,9 @@
 {
     "name": "RGBLedAnode5v",
     "path": "RGBLed",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!10820",
     "coders": [
         "RGBLedAnode"
@@ -37,26 +39,26 @@
         "wires": [
             {
                 "from": "this.R",
-                "to": "Res_R.con0"
+                "to": "Res_R.con1"
             },
             {
                 "from": "this.G",
-                "to": "Res_G.con0"
+                "to": "Res_G.con1"
             },
             {
                 "from": "this.B",
-                "to": "Res_B.con0"
+                "to": "Res_B.con1"
             },
             {
-                "from": "Res_B.con1",
+                "from": "Res_B.con0",
                 "to": "B"
             },
             {
-                "from": "Res_R.con1",
+                "from": "Res_R.con0",
                 "to": "R"
             },
             {
-                "from": "Res_G.con1",
+                "from": "Res_G.con0",
                 "to": "G"
             }
         ],
@@ -86,12 +88,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "BTHC05_SoftwareSerial",
     "path": "BTHC05",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!2631981",
     "coders": [
         "BTHC05_SoftwareSerial"
@@ -66,12 +68,6 @@
                 "interface": {
                     "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]],[2,["ESPSoftwareSerialRX","3.3v"]],[11,["ESPSoftwareSerialRX1","3.3v"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoNano"]],[7,["ArduinoGemma"]],[8,["ATMega328P"]]]
                 }
             }
         ]

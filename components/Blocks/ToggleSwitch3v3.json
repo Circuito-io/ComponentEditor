@@ -1,7 +1,9 @@
 {
     "name": "ToggleSwitch3v3",
     "path": "ToggleSwitch",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!243599",
     "coders": [
         "ToggleSwitch"
@@ -48,12 +50,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

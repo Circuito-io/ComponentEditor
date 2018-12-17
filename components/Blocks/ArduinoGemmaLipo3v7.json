@@ -1,7 +1,9 @@
 {
     "name": "ArduinoGemmaLipo3v7",
     "path": "ArduinoGemma",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!666531",
     "coders": [
         "ArduinoGemma"
@@ -116,12 +118,6 @@
                 "interface": {
                     "provides":[["SRAMLoad"]],
                     "providesLoad": 512
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoGemma"]]
                 }
             },
             {

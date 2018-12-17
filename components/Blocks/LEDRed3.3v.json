@@ -1,7 +1,9 @@
 {
     "name": "LEDRed3.3v",
     "path": "LEDRed",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!9590",
     "coders": [
         "LEDRed"
@@ -31,7 +33,7 @@
             },
             {
                 "from": "Res1.con0",
-                "to": "Gnd"
+                "to": "GND"
             }
         ],
         "ports": [
@@ -43,15 +45,9 @@
                 }
             },
             {
-                "name": "Gnd",
+                "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[4,["NodeMCU"]],[6,["ArduinoGemma"]],[7,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

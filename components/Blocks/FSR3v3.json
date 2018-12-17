@@ -1,7 +1,9 @@
 {
     "name": "FSR3v3",
     "path": "FSR",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9375",
     "coders": [
         "FSR"
@@ -48,12 +50,6 @@
                 "name": "2",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]]]
                 }
             }
         ]

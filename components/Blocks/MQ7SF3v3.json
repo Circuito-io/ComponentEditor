@@ -1,7 +1,9 @@
 {
     "name": "MQ7SF3v3",
     "path": "MQ7SF",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9403",
     "coders": [
         "MQ7SF3v3"
@@ -35,11 +37,11 @@
         "wires": [
             {
                 "from": "this.B1",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.GND",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "this.A1",
@@ -47,18 +49,18 @@
             },
             {
                 "from": "this.GND",
-                "to": "r3.con1"
+                "to": "r3.con0"
             },
             {
-                "from": "r3.con0",
-                "to": "r2.con1"
-            },
-            {
-                "from": "this.B1",
+                "from": "r3.con1",
                 "to": "r2.con0"
             },
             {
-                "from": "r2.con1",
+                "from": "this.B1",
+                "to": "r2.con1"
+            },
+            {
+                "from": "r2.con0",
                 "to": "Aout"
             }
         ],
@@ -80,12 +82,6 @@
                 "name": "H1",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

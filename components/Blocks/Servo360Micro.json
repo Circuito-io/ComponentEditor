@@ -1,11 +1,13 @@
 {
     "name": "Servo360Micro",
     "path": "Servo360Micro",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "10190",
     "app": {
         "appName": "Continuous Rotation Micro Servo - FS90R",
-        "image": "https://ucarecdn.com/ea19dc7e-6805-4865-95b4-3fd729376163/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/xt4gkap9umtzmsqx4mtl",
         "numericName": "FS90R",
         "shortName": "Continuous Rotation Micro Servo",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>simple continuous rotation micro size servo motor. It rotates 360 degrees fully forward or backwards, instead of moving to a single position. Great for small robots and projects.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "Servo360Micro"
@@ -76,12 +78,6 @@
                 "interface": {
                     "requires":[[0,["5v"]],[1,["6v"]]],
                     "requiresLoad": 120
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "PotentiometerSoft3v3",
     "path": "PotentiometerSoft",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!8680",
     "coders": [
         "PotentiometerSoft"
@@ -38,12 +40,6 @@
                 "name": "leg1",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

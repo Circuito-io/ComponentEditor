@@ -1,7 +1,9 @@
 {
     "name": "GPSUltimateADA_SoftwareSerial",
     "path": "GPSUltimateADA",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!488167",
     "coders": [
         "GPSUltimateADA_SoftwareSerial"
@@ -57,12 +59,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","ESPSoftwareSerialRX"]],[1,["5v","ESPSoftwareSerialRX"]],[2,["3.3v","ESPSoftwareSerialRX1"]],[3,["5v","ESPSoftwareSerialRX1"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["ATMega328P"]]]
                 }
             }
         ]

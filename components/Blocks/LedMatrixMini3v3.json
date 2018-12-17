@@ -1,7 +1,9 @@
 {
     "name": "LedMatrixMini3v3",
     "path": "LedMatrixMini",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!912191",
     "coders": [
         "LedMatrixMini"
@@ -42,12 +44,6 @@
                 "name": "D",
                 "interface": {
                     "requires":[[0,["3.3v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[6,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

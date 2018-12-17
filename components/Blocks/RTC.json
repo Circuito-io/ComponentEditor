@@ -1,11 +1,13 @@
 {
     "name": "RTC",
     "path": "RTC",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "821989",
     "app": {
         "appName": "RTC - Real Time Clock",
-        "image": "https://ucarecdn.com/5d8d4b75-e037-4449-999e-72936d0b1a63/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/cykutafc4v7y0hutdi50",
         "numericName": "",
         "shortName": "Real Time Clock",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Keep track of the current year, month, day as well as the current time.</p>\n<p><strong>Returned Value</strong>: Returns the time and date.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "RTC"
@@ -68,12 +70,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["Arduino101"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

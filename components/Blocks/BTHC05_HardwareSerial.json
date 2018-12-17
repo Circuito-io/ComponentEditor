@@ -1,7 +1,9 @@
 {
     "name": "BTHC05_HardwareSerial",
     "path": "BTHC05",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!2631981",
     "coders": [
         "BTHC05_HardwareSerial"
@@ -58,12 +60,6 @@
                 "interface": {
                     "requires":[[0,["TX","5v"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "FloatSwitch3v3",
     "path": "FloatSwitch",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!561143",
     "coders": [
         "FloatSwitch"
@@ -52,12 +54,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

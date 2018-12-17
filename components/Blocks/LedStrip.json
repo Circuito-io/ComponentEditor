@@ -1,11 +1,13 @@
 {
     "name": "LedStrip",
     "path": "LedStrip",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "12027",
     "app": {
         "appName": "RGB LED Strip - Addressable",
-        "image": "https://ucarecdn.com/6d6c248a-3ad4-4c87-a7fe-a2ab7efc0172/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/kcpr7yzqlwdvxqe03wms",
         "numericName": "",
         "shortName": "RGB LED Strip",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This strip allows you to control each RGB LED individually. It is 1-meter long, and also waterproof. It will require it&#39;s own 5V power source, which we specify in the BOM.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "LedStrip"
@@ -103,12 +105,6 @@
                 "name": "DO",
                 "interface": {
                     "chain": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

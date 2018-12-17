@@ -1,7 +1,9 @@
 {
     "name": "HCSR043v3",
     "path": "HC-SR04",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!13959",
     "coders": [
         "HCSR043v3"
@@ -30,18 +32,18 @@
         "wires": [
             {
                 "from": "this.GND",
-                "to": "r2.con1"
+                "to": "r2.con0"
             },
             {
-                "from": "r2.con0",
-                "to": "r1.con1"
-            },
-            {
-                "from": "this.ECHO",
+                "from": "r2.con1",
                 "to": "r1.con0"
             },
             {
-                "from": "r1.con1",
+                "from": "this.ECHO",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
                 "to": "Echo"
             }
         ],
@@ -70,12 +72,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

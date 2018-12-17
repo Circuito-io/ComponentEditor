@@ -1,11 +1,13 @@
 {
     "name": "GUVA-S12SD",
     "path": "GUVA-S12SD",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "134251",
     "app": {
         "appName": "GUVA-S12SD - Analog UV Light Sensor Breakout",
-        "image": "https://ucarecdn.com/0b8ab96b-27fc-4e95-a6c3-88b5dfcdf99d/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/vrzxqbgxdmieowdtwski",
         "numericName": "GUVAS12SD",
         "shortName": "UV Light Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This analog UV sensor module based on a UV photodiode which can detect the 240-370nm range of light. Test is using module by using A UV tanning lamp.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["GUVA-S12SD5v"]],[1,["GUVA-S12SD3v3"]]],
     "supportedControllers": [],

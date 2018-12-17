@@ -1,7 +1,9 @@
 {
     "name": "LoadCellHX711SF3v3",
     "path": "LoadCellHX711SF",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!13879",
     "coders": [
         "LoadCellHX711SF"
@@ -51,12 +53,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

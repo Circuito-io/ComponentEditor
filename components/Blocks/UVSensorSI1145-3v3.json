@@ -1,7 +1,9 @@
 {
     "name": "UVSensorSI1145-3v3",
     "path": "UVSensorSI1145",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!534630",
     "coders": [
         "UVSensorSI1145"
@@ -42,12 +44,6 @@
                 "name": "VIN",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

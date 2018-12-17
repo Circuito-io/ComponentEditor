@@ -1,7 +1,9 @@
 {
     "name": "TCRT5000L3v3",
     "path": "TCRT5000L",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!315997",
     "coders": [
         "TCRT5000L"
@@ -30,18 +32,18 @@
         "wires": [
             {
                 "from": "this.Coll",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.A",
-                "to": "r2.con0"
+                "to": "r2.con1"
             },
             {
-                "from": "r1.con1",
+                "from": "r1.con0",
                 "to": "5v"
             },
             {
-                "from": "r2.con1",
+                "from": "r2.con0",
                 "to": "5v1"
             }
         ],
@@ -75,12 +77,6 @@
                 "name": "E",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

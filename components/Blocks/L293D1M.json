@@ -1,7 +1,9 @@
 {
     "name": "L293D1M",
     "path": "L293D",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "7654340",
     "supportedControllers": [
         "ATMega328P",
@@ -80,12 +82,6 @@
                 "name": "Out2",
                 "interface": {
                     "provides":[["DCMA2"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,11 +1,13 @@
 {
     "name": "SolenoidValve",
     "path": "SolenoidValve",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "10456",
     "app": {
         "appName": "12V Solenoid Valve - 3/4''",
-        "image": "https://ucarecdn.com/43e3739c-e310-4d5e-9d66-af03aaefa76e/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jmkshwynjxq2wk6sipqf",
         "numericName": "",
         "shortName": "Solenoid Valve",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "SolenoidValve"
@@ -80,12 +82,6 @@
                 "name": "Coil2",
                 "interface": {
                     "requires":[[0,["12v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

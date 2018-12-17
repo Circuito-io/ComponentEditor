@@ -1,11 +1,13 @@
 {
     "name": "HCSR04",
     "path": "HC-SR04",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "13959",
     "app": {
         "appName": "Ultrasonic Sensor - HC-SR04",
-        "image": "https://ucarecdn.com/f8687b68-d122-4013-a3cd-db6bd1487fd8/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/hc2bnew6g3ku7cc85osy",
         "numericName": "HCSR04",
         "shortName": "Ultrasonic Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A low cost ultrasonic sensor, for your common range measuring needs.</p>\n<p><strong>Returned Values</strong>: 2cm - 400cm detection range, with an accuracy of 3mm.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Obstacle-Avoider-Using-HC-SR04-Ultrasonic-Sensor/\">Obstacle Avoider</a><br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/hc-sr04/\">Learn More</a></p></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["HCSR043v3"]],[1,["HCSR045v"]],[3,["HCSR04_Gemma"]]],
     "supportedControllers": [],

@@ -1,7 +1,9 @@
 {
     "name": "ArduinoLeonardoUSB",
     "path": "ArduinoLeonardo",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11286",
     "supportedControllers": [
         "ArduinoLeonardo"
@@ -252,12 +254,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "provides":[["USB_MICRO"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoLeonardo"]]
                 }
             }
         ]

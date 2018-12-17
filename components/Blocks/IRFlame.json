@@ -1,11 +1,13 @@
 {
     "name": "IRFlame",
     "path": "IRFlame",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "223347",
     "app": {
         "appName": "Infrared Flame Detection Sensor",
-        "image": "https://ucarecdn.com/fc9b5fb8-00e0-49e8-996e-4603e44bf084/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/fegddzasnww2fal8ywmo",
         "numericName": "",
         "shortName": "Flame Detection Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The sensor can detect flames of wavelength at 760 nm to 1100 nm. It can detect a lighter flame from 80cm, the larger the flame the farther the sensing distance.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["IRFlame5v"]],[1,["IRFlame3v3"]]],
     "supportedControllers": [],

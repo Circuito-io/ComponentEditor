@@ -1,11 +1,13 @@
 {
     "name": "LEDPixie3W",
     "path": "LEDPixie3W",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "469778",
     "app": {
         "appName": "Pixie - 3W Chainable Smart LED Pixel",
-        "image": "https://ucarecdn.com/bb75a2c4-cf06-45a2-ac42-ac492165d16b/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pbmty1bnmuk73pzum53i",
         "numericName": "",
         "shortName": "Chainable Smart LED Pixel",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The Adafruit Pixie is very bright 3W RGB LED and it is also chainable. It communicates with the MCU over serial at 115200 baud rate.<p> It can be easily manipulated using <a href=\"https://learn.adafruit.com/pixie-3-watt-smart-chainable-led-pixels/wiring-and-test\">Adafruit Pixie library</a></p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "LEDPixie3W"
@@ -101,12 +103,6 @@
                 "name": "GND_Ch",
                 "interface": {
                     "chain": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["ATMega328P"]]]
                 }
             }
         ]

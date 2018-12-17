@@ -1,7 +1,9 @@
 {
     "name": "ACS7123v3",
     "path": "CurrentSensorACS712",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!564923",
     "coders": [
         "ACS7123v3"
@@ -31,18 +33,18 @@
         "wires": [
             {
                 "from": "this.GND",
-                "to": "r2.con1"
+                "to": "r2.con0"
             },
             {
-                "from": "r2.con0",
-                "to": "r1.con1"
-            },
-            {
-                "from": "this.VO",
+                "from": "r2.con1",
                 "to": "r1.con0"
             },
             {
-                "from": "r1.con1",
+                "from": "this.VO",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
                 "to": "Vo"
             }
         ],
@@ -64,12 +66,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["NodeMCU"]],[1,["ArduinoGemma"]],[2,["ArduinoProMini3v3"]],[6,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

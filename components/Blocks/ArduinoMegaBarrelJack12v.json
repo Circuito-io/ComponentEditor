@@ -1,7 +1,9 @@
 {
     "name": "ArduinoMegaBarrelJack12v",
     "path": "ArduinoMega",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11061",
     "requires": [
         [
@@ -620,12 +622,6 @@
                 "name": "BARREL_JACK",
                 "interface": {
                     "provides":[["BARREL_JACK"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoMega"]]
                 }
             }
         ]

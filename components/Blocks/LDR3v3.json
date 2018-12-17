@@ -1,7 +1,9 @@
 {
     "name": "LDR3v3",
     "path": "LDR",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9088",
     "coders": [
         "LDR"
@@ -52,12 +54,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ATMega328P"]]]
                 }
             }
         ]

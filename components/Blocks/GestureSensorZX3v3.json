@@ -1,7 +1,9 @@
 {
     "name": "GestureSensorZX3v3",
     "path": "GestureSensorZX",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!416021",
     "coders": [
         "GestureSensorZX"
@@ -42,12 +44,6 @@
                 "name": "CL",
                 "interface": {
                     "requires":[[0,["3.3v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

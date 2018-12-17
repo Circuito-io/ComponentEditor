@@ -1,11 +1,13 @@
 {
     "name": "AdafruitMiniThermalPrinter",
     "path": "AdafruitMiniThermalPrinter",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "947731",
     "app": {
         "appName": "Adafruit Mini Thermal Receipt Printer",
-        "image": "https://ucarecdn.com/8d6ce57a-b6bb-4d2e-95ab-a8bda137013d/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/lud4da20imjuisge1dwg",
         "numericName": "",
         "shortName": "Adafruit Mini Thermal Printer",
         "tags": [
@@ -91,12 +93,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
                 }
             }
         ]

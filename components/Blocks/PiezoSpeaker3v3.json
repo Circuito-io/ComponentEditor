@@ -1,7 +1,9 @@
 {
     "name": "PiezoSpeaker3v3",
     "path": "PiezoSpeaker",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!7950",
     "coders": [
         "PiezoSpeaker"
@@ -62,12 +64,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoLeonardo"]],[3,["ArduinoNano"]],[4,["ArduinoGemma"]],[5,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

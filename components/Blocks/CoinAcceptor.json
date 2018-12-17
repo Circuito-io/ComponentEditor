@@ -1,11 +1,13 @@
 {
     "name": "CoinAcceptor",
     "path": "CoinAcceptor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "11719",
     "app": {
         "appName": "Coin Acceptor - Programmable (3 coin types)",
-        "image": "https://ucarecdn.com/8761357c-d0f1-4521-a19f-09e4e8ce937d/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/mscs9vsobpqhgwmwgru5",
         "numericName": "",
         "shortName": "Coin Acceptor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A 3-type Coin Acceptor. This unit is programmable through the on-board display and buttons. After programming it will send serial data of its coin recognition.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "CoinAcceptor"
@@ -61,12 +63,6 @@
                 "name": "12V",
                 "interface": {
                     "requires":[[0,["12v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

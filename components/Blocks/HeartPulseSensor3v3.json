@@ -1,7 +1,9 @@
 {
     "name": "HeartPulseSensor3v3",
     "path": "HeartPulseSensor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!11574",
     "coders": [
         "HeartPulseSensor"
@@ -38,12 +40,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]]]
                 }
             }
         ]

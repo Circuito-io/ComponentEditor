@@ -1,7 +1,9 @@
 {
     "name": "ESP8266_SoftwareSerial3v3",
     "path": "ESP8266",
-    "category": "iot",
+    "category": [
+        "iot"
+    ],
     "blockId": "!13678",
     "coders": [
         "ESP8266_SoftwareSerial3v3"
@@ -75,12 +77,6 @@
                 "interface": {
                     "requires":[[0,["SRAMLoad"]]],
                     "requiresLoad": 1220
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "ArduinoLeonardo6v",
     "path": "ArduinoLeonardo",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11286",
     "requires": [
         [
@@ -241,12 +243,6 @@
                 "interface": {
                     "provides":[["5v"]],
                     "providesLoad": 400
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoLeonardo"]]
                 }
             },
             {

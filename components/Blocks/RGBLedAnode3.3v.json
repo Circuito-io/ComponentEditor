@@ -1,7 +1,9 @@
 {
     "name": "RGBLedAnode3.3v",
     "path": "RGBLed",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!10820",
     "coders": [
         "RGBLedAnode"
@@ -34,26 +36,26 @@
         "wires": [
             {
                 "from": "this.R",
-                "to": "Res_R.con0"
+                "to": "Res_R.con1"
             },
             {
                 "from": "this.G",
-                "to": "Res_G.con0"
+                "to": "Res_G.con1"
             },
             {
                 "from": "this.B",
-                "to": "Res_B.con0"
+                "to": "Res_B.con1"
             },
             {
-                "from": "Res_B.con1",
+                "from": "Res_B.con0",
                 "to": "B"
             },
             {
-                "from": "Res_R.con1",
+                "from": "Res_R.con0",
                 "to": "R"
             },
             {
-                "from": "Res_G.con1",
+                "from": "Res_G.con0",
                 "to": "G"
             }
         ],
@@ -83,12 +85,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
                 }
             }
         ]

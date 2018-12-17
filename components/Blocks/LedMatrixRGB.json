@@ -1,11 +1,13 @@
 {
     "name": "LedMatrixRGB",
     "path": "LedMatrixRGB",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "763365",
     "app": {
         "appName": "Adafruit NeoPixel NeoMatrix 8x8 - 64 RGB LED Pixel Matrix",
-        "image": "https://ucarecdn.com/28bb776b-fe10-4c59-8827-d4cd8885c81e/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/r8j5xypxm0gzrwgye0re",
         "numericName": "",
         "shortName": "RGB LED Matrix",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>This is a NeoPixel 8x8 RGB LED Matrix. It has 64 chained NeoPixel LEDs, meaning that you can control the whole matrix with only 1 data pin. You can chain a few of these matrices to get a bigger one.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "LedMatrixRGB"
@@ -103,12 +105,6 @@
                 "name": "GND_OUT",
                 "interface": {
                     "chain": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

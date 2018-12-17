@@ -1,7 +1,9 @@
 {
     "name": "IRLineFollowSF3v3",
     "path": "IRLineFollowSF",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!674690",
     "coders": [
         "IRLineFollowSF"
@@ -38,12 +40,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

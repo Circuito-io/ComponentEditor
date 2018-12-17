@@ -1,7 +1,9 @@
 {
     "name": "IRCamera3v3",
     "path": "IRCamera",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!908638",
     "coders": [
         "IRCamera"
@@ -55,12 +57,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
                 }
             }
         ]

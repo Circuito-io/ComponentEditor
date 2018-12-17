@@ -1,11 +1,13 @@
 {
     "name": "MPU6050",
     "path": "MPU6050",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "11028",
     "app": {
         "appName": "SparkFun MPU-6050 - Accelerometer and Gyro",
-        "image": "https://ucarecdn.com/fc69dde5-8407-42a0-95c7-9b6ff91429ed/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/qijrhlsuaujzuqz84efy",
         "numericName": "MPU6050",
         "shortName": "Accelerometer and Gyro",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>The MPU-6050 is a triple axis accelerometer and gyro combined, allowing a very deep motion detection and analysis.</p>\n<p><strong>Returned Values</strong>: I2C Digital-output of 6 or 9-axis MotionFusion data.</p>\n<p><strong>Requires</strong>: Soldering of 8 male header pins to fit onto a breadboard.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Self-Balancing-Robot/\">Self Balancing Robot</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "MPU6050"
@@ -81,12 +83,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]
