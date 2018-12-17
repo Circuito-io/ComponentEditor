@@ -30,19 +30,19 @@
         ],
         "wires": [
             {
-                "from": "this.con0",
-                "to": "R1.con1"
+                "from": "this.con1",
+                "to": "R1.con0"
             },
             {
-                "from": "R1.con0",
+                "from": "R1.con1",
                 "to": "0"
             },
             {
-                "from": "this.con1",
+                "from": "this.con0",
                 "to": "5v"
             },
             {
-                "from": "this.con0",
+                "from": "this.con1",
                 "to": "Sig"
             }
         ],

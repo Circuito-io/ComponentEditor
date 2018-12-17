@@ -25,7 +25,7 @@
             },
             {
                 "name": "BC337",
-                "part": "TRNPN"
+                "part": "TSBC337"
             },
             {
                 "name": "r1",
@@ -39,14 +39,14 @@
             },
             {
                 "from": "BC337.B",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "BC337.E",
                 "to": "0"
             },
             {
-                "from": "r1.con1",
+                "from": "r1.con0",
                 "to": "Sig"
             },
             {

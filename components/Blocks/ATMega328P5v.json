@@ -75,19 +75,19 @@
                 "to": "C1.1"
             },
             {
-                "from": "Cap1.con0",
+                "from": "Cap1.con1",
                 "to": "C1.1"
             },
             {
-                "from": "Cap2.con1",
+                "from": "Cap2.con0",
                 "to": "C1.0"
             },
             {
-                "from": "Cap1.con1",
+                "from": "Cap1.con0",
                 "to": "this.GND"
             },
             {
-                "from": "Cap2.con0",
+                "from": "Cap2.con1",
                 "to": "this.GND"
             },
             {
@@ -95,19 +95,19 @@
                 "to": "this.VCC"
             },
             {
-                "from": "Res1.con1",
-                "to": "Cap3.con0"
-            },
-            {
-                "from": "this.RESET",
+                "from": "Res1.con0",
                 "to": "Cap3.con1"
             },
             {
-                "from": "this.VCC",
-                "to": "Res1.con0"
+                "from": "this.RESET",
+                "to": "Cap3.con0"
             },
             {
-                "from": "Cap3.con0",
+                "from": "this.VCC",
+                "to": "Res1.con1"
+            },
+            {
+                "from": "Cap3.con1",
                 "to": "DTR"
             }
         ],

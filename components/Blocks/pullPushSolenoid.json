@@ -61,7 +61,7 @@
             },
             {
                 "name": "nmos",
-                "part": "MOSFETN"
+                "part": "TNMOSFETFQP"
             },
             {
                 "name": "r1",
@@ -69,7 +69,7 @@
             },
             {
                 "name": "d1",
-                "part": "Diode",
+                "part": "DIRect1A50v",
                 "rotation": 180
             }
         ],
@@ -80,11 +80,11 @@
             },
             {
                 "from": "nmos.G",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "nmos.S",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.pin1",

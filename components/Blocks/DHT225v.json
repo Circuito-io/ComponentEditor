@@ -31,11 +31,11 @@
         "wires": [
             {
                 "from": "this.DATA",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "this.VDD",
-                "to": "r1.con0"
+                "to": "r1.con1"
             }
         ],
         "ports": [

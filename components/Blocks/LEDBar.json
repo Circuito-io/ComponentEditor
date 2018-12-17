@@ -87,82 +87,82 @@
         "wires": [
             {
                 "from": "this.JC",
-                "to": "rA.con1"
+                "to": "rA.con0"
             },
             {
                 "from": "this.IC",
-                "to": "rB.con1"
-            },
-            {
-                "from": "this.HC",
-                "to": "rC.con1"
-            },
-            {
-                "from": "this.GC",
-                "to": "rD.con1"
-            },
-            {
-                "from": "this.FC",
-                "to": "rE.con1"
-            },
-            {
-                "from": "this.EC",
-                "to": "rF.con1"
-            },
-            {
-                "from": "this.DC",
-                "to": "rG.con1"
-            },
-            {
-                "from": "this.CC",
-                "to": "rH.con1"
-            },
-            {
-                "from": "this.BC",
-                "to": "rI.con1"
-            },
-            {
-                "from": "this.AC",
-                "to": "rJ.con1"
-            },
-            {
-                "from": "rA.con0",
                 "to": "rB.con0"
             },
             {
-                "from": "rB.con0",
+                "from": "this.HC",
                 "to": "rC.con0"
             },
             {
-                "from": "rC.con0",
+                "from": "this.GC",
                 "to": "rD.con0"
             },
             {
-                "from": "rD.con0",
+                "from": "this.FC",
                 "to": "rE.con0"
             },
             {
-                "from": "rE.con0",
+                "from": "this.EC",
                 "to": "rF.con0"
             },
             {
-                "from": "rF.con0",
+                "from": "this.DC",
                 "to": "rG.con0"
             },
             {
-                "from": "rG.con0",
+                "from": "this.CC",
                 "to": "rH.con0"
             },
             {
-                "from": "rH.con0",
+                "from": "this.BC",
                 "to": "rI.con0"
             },
             {
-                "from": "rI.con0",
+                "from": "this.AC",
                 "to": "rJ.con0"
             },
             {
-                "from": "rA.con0",
+                "from": "rA.con1",
+                "to": "rB.con1"
+            },
+            {
+                "from": "rB.con1",
+                "to": "rC.con1"
+            },
+            {
+                "from": "rC.con1",
+                "to": "rD.con1"
+            },
+            {
+                "from": "rD.con1",
+                "to": "rE.con1"
+            },
+            {
+                "from": "rE.con1",
+                "to": "rF.con1"
+            },
+            {
+                "from": "rF.con1",
+                "to": "rG.con1"
+            },
+            {
+                "from": "rG.con1",
+                "to": "rH.con1"
+            },
+            {
+                "from": "rH.con1",
+                "to": "rI.con1"
+            },
+            {
+                "from": "rI.con1",
+                "to": "rJ.con1"
+            },
+            {
+                "from": "rA.con1",
                 "to": "GND"
             }
         ],

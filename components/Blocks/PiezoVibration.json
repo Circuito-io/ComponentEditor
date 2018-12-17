@@ -52,14 +52,14 @@
         "wires": [
             {
                 "from": "this.+",
-                "to": "r1.con1"
-            },
-            {
-                "from": "this.-",
                 "to": "r1.con0"
             },
             {
-                "from": "r1.con1",
+                "from": "this.-",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
                 "to": "neg"
             }
         ],

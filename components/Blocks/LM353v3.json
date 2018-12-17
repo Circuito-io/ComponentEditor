@@ -33,18 +33,18 @@
         "wires": [
             {
                 "from": "this.Gnd",
-                "to": "r2.con0"
+                "to": "r2.con1"
             },
             {
-                "from": "r2.con1",
-                "to": "r1.con0"
-            },
-            {
-                "from": "this.Vout",
+                "from": "r2.con0",
                 "to": "r1.con1"
             },
             {
-                "from": "r1.con0",
+                "from": "this.Vout",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
                 "to": "VOUT"
             }
         ],

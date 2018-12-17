@@ -31,14 +31,14 @@
         "wires": [
             {
                 "from": "this.VCCR",
-                "to": "R_pullup.con1"
-            },
-            {
-                "from": "this.SIG",
                 "to": "R_pullup.con0"
             },
             {
-                "from": "R_pullup.con0",
+                "from": "this.SIG",
+                "to": "R_pullup.con1"
+            },
+            {
+                "from": "R_pullup.con1",
                 "to": "sig"
             }
         ],
