@@ -1,7 +1,9 @@
 {
     "name": "FingerprintScanner5v",
     "path": "FingerprintScanner",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!11792",
     "coders": [
         "FingerprintScanner"
@@ -73,12 +75,6 @@
                 "name": "VCC",
                 "interface": {
                     "requires":[[0,["3.3v"]],[1,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
                 }
             }
         ]

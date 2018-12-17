@@ -1,10 +1,13 @@
 {
     "name": "PotentiometerSoft",
     "path": "PotentiometerSoft",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "8680",
     "app": {
         "appName": "SoftPot Membrane Potentiometer - 50mm",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jjwidxd2mhhmdv3q9nsi",
         "numericName": "",
         "shortName": "Membrane Potentiometer",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A linear touch soft membrane potentiometer rated at 10kOhm.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["PotentiometerSoft5v"]],[1,["PotentiometerSoft3v3"]]],
     "supportedControllers": [],

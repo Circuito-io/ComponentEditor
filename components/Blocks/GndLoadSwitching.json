@@ -1,13 +1,15 @@
 {
     "name": "GndLoadSwitching",
     "path": "Switching",
-    "category": "support",
+    "category": [
+        "support"
+    ],
     "supportedControllers": [],
     "circuit": {
         "parts": [
             {
                 "name": "this",
-                "part": "TRNPN"
+                "part": "TSBC337"
             },
             {
                 "name": "r1",

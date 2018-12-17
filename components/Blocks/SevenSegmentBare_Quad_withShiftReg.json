@@ -1,7 +1,9 @@
 {
     "name": "SevenSegmentBare_Quad_withShiftReg",
     "path": "SevenSegmentBare_Quad",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!11409",
     "coders": [
         "SevenSegmentBare_Quad_withShiftReg"
@@ -212,12 +214,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["RPI3B"]],[8,["NodeMCU"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

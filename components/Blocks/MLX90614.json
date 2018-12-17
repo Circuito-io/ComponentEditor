@@ -1,10 +1,13 @@
 {
     "name": "MLX90614",
     "path": "IRTHERMMLX90614",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "9570",
     "app": {
         "appName": "Infrared Thermometer - MLX90614",
+        "image": "http://res.cloudinary.com/circuito/image/upload/eoym2z3pcxayenqqjjle",
         "numericName": "MLX90614",
         "shortName": "Infrared Thermometer",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Infrared thermometer designed for non-contact temperature sensing.<br>It has a huge number of applications including body temperature measurment and movement detection.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "MLX90614"
@@ -105,12 +108,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

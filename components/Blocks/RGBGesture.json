@@ -1,10 +1,13 @@
 {
     "name": "RGBGesture",
     "path": "RGBGesture",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "12787",
     "app": {
         "appName": "SparkFun APDS-9960 - RGB and Gesture Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/b1keuv80hj9qefgfdv1l",
         "numericName": "APDS-9960",
         "shortName": "RGB and Gesture Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>The built in APDS-9960 can measure ambient light and color, proximity and detect touchless gestures.<br> Use this sensor to control your Arduino with a swipe of your hand.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "RGBGesture"
@@ -93,12 +96,6 @@
                 "interface": {
                     "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

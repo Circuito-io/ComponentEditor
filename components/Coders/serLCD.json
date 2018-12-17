@@ -15,9 +15,9 @@
         "NodeMCU"
     ],
     "code": {
-        "constructors:": "    SoftwareSerial {{varname}}NSS(0,{{RX}});\n    SerLCD {{varname}}({{varname}}NSS); \n",
-        "setup:": "    {{varname}}NSS.begin(9600); \n    {{varname}}.begin();   \n",
-        "snippetCode:": "    // The LCD Screen will display the text of your choice. For more serLCD functions see https://github.com/scogswell/ArduinoSerLCD/blob/master/examples/SerLCD_Demo_0_Arduino_100/SerLCD_Demo_0_Arduino_100.ino \n    {{varname}}.setPosition(1,2); \n    {{varname}}.print(\"Circuito.io\"); \n    delay(500); \n    {{varname}}.setPosition(2,5); \n    {{varname}}.print(\"Rocks !\"); \n    delay(500); \n    {{varname}}.clear(); "
+        "constructors": "    SoftwareSerial {{varname}}NSS(0,{{RX}});\n    SerLCD {{varname}}({{varname}}NSS); \n",
+        "setup": "    {{varname}}NSS.begin(9600); \n    {{varname}}.begin();   \n",
+        "snippetCode": "    // The LCD Screen will display the text of your choice. For more serLCD functions see https://github.com/scogswell/ArduinoSerLCD/blob/master/examples/SerLCD_Demo_0_Arduino_100/SerLCD_Demo_0_Arduino_100.ino \n    {{varname}}.setPosition(1,2); \n    {{varname}}.print(\"Circuito.io\"); \n    delay(500); \n    {{varname}}.setPosition(2,5); \n    {{varname}}.print(\"Rocks !\"); \n    delay(500); \n    {{varname}}.clear(); "
     },
     "license": "GNUL",
     "instantiate": {
@@ -28,7 +28,8 @@
         "varname": "serlcd"
     },
     "files": [
-        "lib/*"
+        "SerLCD.h",
+        "SerLCD.cpp"
     ],
     "includeHeaders": [
         "SoftwareSerial.h",

@@ -1,7 +1,9 @@
 {
     "name": "GUVA-S12SD3v3",
     "path": "GUVA-S12SD",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!134251",
     "coders": [
         "GUVA-S12SD3v3"
@@ -37,12 +39,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

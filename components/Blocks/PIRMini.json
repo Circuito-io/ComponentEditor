@@ -1,10 +1,13 @@
 {
     "name": "PIRMini",
     "path": "PIRMini",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "341233",
     "app": {
         "appName": "Mini PIR - HC-SR505",
+        "image": "http://res.cloudinary.com/circuito/image/upload/lmlebus0zjfwajd49kpy",
         "numericName": "HC-SR505",
         "shortName": "Mini PIR",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The passive infrared motion sensor (PIR) allows you to detect movement of a person or animal within a 6 meter range. The sensor is based on infrared radiation returned from people and animals.<br><strong>Returned values</strong>: true - presence detected, false - no presence detected.  - Presence can be detected within a 6-meter range.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "PIRMini"
@@ -60,12 +63,6 @@
                 "interface": {
                     "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

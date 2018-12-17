@@ -1,10 +1,13 @@
 {
     "name": "EthernetModule",
     "path": "EthernetModule",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "299273",
     "app": {
         "appName": "Ethernet LAN Network Module - ENC28J60",
+        "image": "http://res.cloudinary.com/circuito/image/upload/uuel3pyxvdyhe2un6omi",
         "numericName": "ENC28J60",
         "shortName": "Ethernet LAN ",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The ENC28J60 Ethernet  Module allows an Arduino Board to connect to the Internet over SPI communication. It is recommended to add an SD to your project as well to handle the stream of data.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "EthernetModule"
@@ -85,12 +88,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[9,["Arduino101"]],[10,["ATMega328P"]]]
                 }
             }
         ]

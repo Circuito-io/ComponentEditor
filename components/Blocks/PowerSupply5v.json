@@ -1,7 +1,9 @@
 {
     "name": "PowerSupply5v",
     "path": "Power",
-    "category": "power",
+    "category": [
+        "power"
+    ],
     "requires":[[0,["PowerSupply5v2A"]],[5,["PowerSupply5v5A"]]],
     "supportedControllers": [],
     "circuit": {}

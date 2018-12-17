@@ -1,7 +1,9 @@
 {
     "name": "BNO0553v3",
     "path": "BNO055",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!954493",
     "coders": [
         "BNO055"
@@ -49,12 +51,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn","Int"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[3,["ESP32DevKitC"]]]
                 }
             }
         ]

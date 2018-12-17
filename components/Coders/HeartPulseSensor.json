@@ -15,9 +15,9 @@
         "RPI3B"
     ],
     "code": {
-        "constructors:": "    {{classname}} {{varname}};\n",
-        "setup:": "    {{varname}}.begin({{SIG}});\n",
-        "snippetCode:": "    //Measure Heart Rate\n    int {{varname}}BPM = {{varname}}.BPM;\n    Serial.println({{varname}}BPM);\n    if ({{varname}}.QS == true) {\n        Serial.println(\"PULSE\");\n        {{varname}}.QS = false;\n    }"
+        "constructors": "    {{classname}} {{varname}};\n",
+        "setup": "    {{varname}}.begin({{SIG}});\n",
+        "snippetCode": "    //Measure Heart Rate\n    int {{varname}}BPM = {{varname}}.BPM;\n    Serial.println({{varname}}BPM);\n    if ({{varname}}.QS == true) {\n        Serial.println(\"PULSE\");\n        {{varname}}.QS = false;\n    }"
     },
     "license": "MIT",
     "instantiate": {
@@ -28,7 +28,9 @@
         "varname": "heartpulse"
     },
     "files": [
-        "lib/*"
+        "pulse-sensor-arduino.h",
+        "pulse-sensor-arduino_license.txt",
+        "pulse-sensor-arduino.cpp"
     ],
     "includeHeaders": [
         "pulse-sensor-arduino.h"

@@ -1,10 +1,13 @@
 {
     "name": "GPSNeo6M",
     "path": "GPSNeo6M",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "975601",
     "app": {
         "appName": "Ublox NEO-6M GPS Module",
+        "image": "http://res.cloudinary.com/circuito/image/upload/v9l1jbpibwd4ptff0og8",
         "numericName": "Ublox NEO-6M GPS Module",
         "shortName": "GPS Module",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This device connects to GPS satellites to retrive its location. Also provides the current time and date.</p>\n<p><strong>Returned Value</strong>: Location - Lat and Long, time and date via serial communication.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["GPSNeo6M_HardwareSerial1"]],[1,["GPSNeo6M_HardwareSerial2"]],[100,["GPSNeo6M_SoftwareSerial"]]],
     "supportedControllers": [],

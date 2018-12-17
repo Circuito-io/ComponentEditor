@@ -1,10 +1,13 @@
 {
     "name": "UltraSonic",
     "path": "UltraSonic",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "639",
     "app": {
         "appName": "LV-MaxSonar-EZ1 - Ultrasonic Range Finder",
+        "image": "http://res.cloudinary.com/circuito/image/upload/idrr91ra0hvtvgik8gxo",
         "numericName": "LVMaxSonarEZ1",
         "shortName": "Ultrasonic Range Finder",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The ultrasonic sensor measure the proximity of an object.<br><strong>Returned Values</strong>: 0 - 645 centimeters (0 - 254 inches) - Objects not detected beyond this range, and are best detected at a distances higher than 100 centimeters.<br><strong>Requires</strong>: 7 male header pins soldered to fit into the breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["UltraSonic5v"]],[1,["UltraSonic3v3"]]],
     "supportedControllers": [],

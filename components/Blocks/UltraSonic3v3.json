@@ -1,7 +1,9 @@
 {
     "name": "UltraSonic3v3",
     "path": "UltraSonic",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!639",
     "coders": [
         "UltraSonic"
@@ -37,12 +39,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

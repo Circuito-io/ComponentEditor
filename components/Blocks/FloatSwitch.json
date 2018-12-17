@@ -1,10 +1,13 @@
 {
     "name": "FloatSwitch",
     "path": "FloatSwitch",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "561143",
     "app": {
         "appName": "Liquid Level Sensor Float Switch",
+        "image": "http://res.cloudinary.com/circuito/image/upload/nl5pzjfaac7tzp4obj8l",
         "numericName": "",
         "shortName": "Liquid Level Sensor ",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This float switch is great for sensing the level of liquid within a tank. It based on a reed switch that sealed in a stem and a magnet sealed in the float. Once the the liquid level raises  the float the magnet inside the float complete a circuit by the reed switch.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["FloatSwitch5v"]],[1,["FloatSwitch3v3"]]],
     "supportedControllers": [],

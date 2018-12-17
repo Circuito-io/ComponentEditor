@@ -1,7 +1,9 @@
 {
     "name": "MQ7SF3v3",
     "path": "MQ7SF",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9403",
     "coders": [
         "MQ7SF3v3"
@@ -80,12 +82,6 @@
                 "name": "H1",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

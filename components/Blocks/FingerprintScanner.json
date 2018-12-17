@@ -1,10 +1,13 @@
 {
     "name": "FingerprintScanner",
     "path": "FingerprintScanner",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "11792",
     "app": {
         "appName": "Fingerprint Scanner - TTL (GT-511C3)",
+        "image": "http://res.cloudinary.com/circuito/image/upload/kfry7we7nu7wp3odybkh",
         "numericName": "",
         "shortName": "Fingerprint Scanner",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This is a Fingerprint Scanner over TTL communication.<br>The module reads and identifies the fingerprints using an on-board optical sensor and CPU.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["FingerprintScanner5v"]],[1,["FingerprintScanner3v3"]]],
     "supportedControllers": [],

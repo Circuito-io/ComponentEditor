@@ -2,7 +2,7 @@
     "name": "SoilMoisture",
     "symbol": {
         "ref": "circuito_Soil Moisture Sensor.svg",
-        "URL": "https://ucarecdn.com/63d40dc6-e2fa-449b-a9f0-b47d2501c445/"
+        "URL": "http://res.cloudinary.com/circuito/image/upload/jmfyww7iailywqo2p3ee"
     },
     "displayName": "Soil Moisture Sensor",
     "category": [
@@ -12,21 +12,21 @@
     "bom": [
         {
             "name": "octopart",
-            "image": "https://ucarecdn.com/dc39d277-91e8-44fa-8a46-729e73402b5f/",
+            "image": "http://res.cloudinary.com/circuito/image/upload/ni7dsiyc64uguaw3f2me",
             "link": "https://octopart.com/sen-13322-sparkfun-67069601",
             "price": "4.95",
-            "SKU": "1568-1360-ND"
+            "SKU": "1568-1360-ND",
+            "headers": [
+                3,
+                "MaleHeaders"
+            ]
         }
     ],
     "info": {
         "setup": "The soil moisture sensor requires soldering, consider soldering wires instead of pins",
         "test": "Touch both pads of the sensor with your finger, you should see the values changing"
     },
-    "headers": [
-        3,
-        "MaleHeaders"
-    ],
     "placing": {
-        "onBreadboard": false
+        "onBreadboard": true
     }
 }

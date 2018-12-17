@@ -1,10 +1,13 @@
 {
     "name": "TCS230",
     "path": "TCS230",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "55648",
     "app": {
         "appName": "TCS230 Color RGB Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/mb6dahzjphzyem8jr7mz",
         "numericName": "TCS230",
         "shortName": "RGB Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>Color Recognition Sensor RGB Detector Module allows you to detect the color in its surrounding.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "TCS230"
@@ -87,12 +90,6 @@
                 "name": "Vcc",
                 "interface": {
                     "requires":[[0,["3.3v"]],[1,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["Arduino101"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

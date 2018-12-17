@@ -1,10 +1,13 @@
 {
     "name": "LIDARVL53",
     "path": "LIDARVL53",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "219866",
     "app": {
         "appName": "Adafruit VL53L0X Time of Flight Distance Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/a4q2jzoahmbki6cvd5zd",
         "numericName": "VL53L0X",
         "shortName": "time of flight distance sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>The VL53L0X is a Time of Flight distance sensor. It send a laser pulse and measures the time it takes it to get back to the sensor. The VL53LOX can measure distances ~30 to 1000mm.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "LIDARVL53"
@@ -65,12 +68,6 @@
                 "name": "SDA",
                 "interface": {
                     "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

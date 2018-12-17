@@ -15,7 +15,7 @@
         "RPI3B"
     ],
     "code": {
-        "snippetCode:": "    // The laser will turn on and off for 500ms (0.5 sec)\n    {{varname}}.on();       // 1. turns on\n    delay(500);             // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n    {{varname}}.off();      // 3. turns off.\n    delay(500);             // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds."
+        "snippetCode": "    // The laser will turn on and off for 500ms (0.5 sec)\n    {{varname}}.on();       // 1. turns on\n    delay(500);             // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n    {{varname}}.off();      // 3. turns off.\n    delay(500);             // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds."
     },
     "license": "circuito",
     "instantiate": {
@@ -25,9 +25,11 @@
         ]
     },
     "files": [
-        "lib/*",
-        "../Global/lib/Switchable.h",
-        "../Global/lib/Switchable.cpp"
+        "Laser.cpp",
+        "Laser.h",
+        "Laser_license.txt",
+        "Switchable.h",
+        "Switchable.cpp"
     ],
     "includeHeaders": [
         "Laser.h"

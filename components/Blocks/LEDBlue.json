@@ -1,10 +1,13 @@
 {
     "name": "LEDBlue",
     "path": "LEDBlue",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "11372",
     "app": {
         "appName": "Basic Blue LED 5mm",
+        "image": "http://res.cloudinary.com/circuito/image/upload/dcmcbamcmbbeirp0lhtm",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This is a very basic, small, Blue LED. Control the intensity of the color at a range of 0-255.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["LEDBlue5v"]],[2,["LEDBlue3.3v"]]],
     "supportedControllers": [],

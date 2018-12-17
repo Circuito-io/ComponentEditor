@@ -1,10 +1,13 @@
 {
     "name": "Battery9v",
     "path": "Power",
-    "category": "power",
+    "category": [
+        "power"
+    ],
     "blockId": "10218",
     "app": {
         "appName": "9V Alkaline Battery",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jrtjfzlfcq4z9js5oi7k",
         "numericName": "",
         "shortName": "9V Battery",
         "tags": [
@@ -16,11 +19,11 @@
             "solder": "false"
         },
         "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         100,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "supportedControllers": [
         "ATMega328P",
@@ -60,12 +63,6 @@
                 "name": "PowerType",
                 "interface": {
                     "provides":[["Battery"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

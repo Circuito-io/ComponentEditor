@@ -1,7 +1,9 @@
 {
     "name": "HCSR043v3",
     "path": "HC-SR04",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!13959",
     "coders": [
         "HCSR043v3"
@@ -70,12 +72,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "ArduinoUnoLipo7v4",
     "path": "ArduinoUno",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11021",
     "requires": [
         [
@@ -204,12 +206,6 @@
                 "interface": {
                     "requires":[[0,["7.4v"]]],
                     "requiresLoad": 50
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoUno"]]
                 }
             },
             {

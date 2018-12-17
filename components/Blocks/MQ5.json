@@ -1,10 +1,13 @@
 {
     "name": "MQ5",
     "path": "MQ5",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "398785",
     "app": {
         "appName": "LPG, Natural and Coal Gas Sensor - MQ-5",
+        "image": "http://res.cloudinary.com/circuito/image/upload/zixjbjl6f3f9exl7twno",
         "numericName": "MQ5",
         "shortName": "LPG Gas Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This sensor is sensitive for LPG, natural gas and coal gas.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["MQ55v"]],[2,["MQ53v3"]]],
     "supportedControllers": [],

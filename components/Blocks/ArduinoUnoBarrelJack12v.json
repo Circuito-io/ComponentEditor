@@ -1,7 +1,9 @@
 {
     "name": "ArduinoUnoBarrelJack12v",
     "path": "ArduinoUno",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11021",
     "requires": [
         [
@@ -182,7 +184,7 @@
                 "name": "5v",
                 "interface": {
                     "provides":[["5v"]],
-                    "providesLoad": 400
+                    "providesLoad": 800
                 }
             },
             {
@@ -229,12 +231,6 @@
                 "name": "BARREL_JACK",
                 "interface": {
                     "provides":[["BARREL_JACK"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoUno"]]
                 }
             }
         ]

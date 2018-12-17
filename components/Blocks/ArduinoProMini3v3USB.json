@@ -1,7 +1,9 @@
 {
     "name": "ArduinoProMini3v3USB",
     "path": "ArduinoProMini3v3",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11114",
     "requires": [
         [
@@ -234,12 +236,6 @@
                 "name": "FTDI",
                 "interface": {
                     "provides":[["FTDI"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoProMini3v3"]]
                 }
             }
         ]

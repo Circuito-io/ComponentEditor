@@ -1,10 +1,13 @@
 {
     "name": "MQ9",
     "path": "MQ9",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "398789",
     "app": {
         "appName": "Carbon Monoxide and Combustible Gas Sensor - MQ-9",
+        "image": "http://res.cloudinary.com/circuito/image/upload/xuy7cxwsvnkw0wyjjp1v",
         "numericName": "MQ9",
         "shortName": "Carbon Monoxide and Combustible Gas Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This sensor is sensitive for carbon monoxide and combustible gas in the air. The MQ-9 can detect carbon monoxide gas concentrations anywhere from 10-1000ppm.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["MQ95v"]],[2,["MQ93v3"]]],
     "supportedControllers": [],

@@ -1,7 +1,9 @@
 {
     "name": "VibrationSensor5v",
     "path": "VibrationSensor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!773723",
     "coders": [
         "VibrationSensor"
@@ -54,12 +56,6 @@
                 "name": "0",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

@@ -15,9 +15,9 @@
         "RPI3B"
     ],
     "code": {
-        "global:": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n    int16_t {{varname}}Gx, {{varname}}Gy, {{varname}}Gz;\n",
-        "setup:": "    Wire.begin();\n    {{varname}}.initialize();\n",
-        "snippetCode:": "    {{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\n    double {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\n    Serial.print(\"a/g-\\t\");\n    Serial.print({{varname}}Ax); Serial.print(\"\\t\");\n    Serial.print({{varname}}Ay); Serial.print(\"\\t\");\n    Serial.print({{varname}}Az); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gx); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gy); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gz); Serial.print(\"\\t\");\n    Serial.print(F(\"Temp- \"));   \n    Serial.println({{varname}}Temp);\n    delay(100);\n"
+        "global": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n    int16_t {{varname}}Gx, {{varname}}Gy, {{varname}}Gz;\n",
+        "setup": "    Wire.begin();\n    {{varname}}.initialize();\n",
+        "snippetCode": "    {{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\n    double {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\n    Serial.print(\"a/g-\\t\");\n    Serial.print({{varname}}Ax); Serial.print(\"\\t\");\n    Serial.print({{varname}}Ay); Serial.print(\"\\t\");\n    Serial.print({{varname}}Az); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gx); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gy); Serial.print(\"\\t\");\n    Serial.print({{varname}}Gz); Serial.print(\"\\t\");\n    Serial.print(F(\"Temp- \"));   \n    Serial.println({{varname}}Temp);\n    delay(100);\n"
     },
     "license": "MIT",
     "instantiate": {
@@ -25,7 +25,12 @@
         "varname": "mpu6050"
     },
     "files": [
-        "lib/*"
+        "I2Cdev.cpp",
+        "helper_3dmath.h",
+        "MPU6050.cpp",
+        "MPU6050.h",
+        "I2Cdev.h",
+        "MPU6050_license.txt"
     ],
     "includeHeaders": [
         "MPU6050.h",

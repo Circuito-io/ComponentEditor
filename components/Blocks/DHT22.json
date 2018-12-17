@@ -1,10 +1,13 @@
 {
     "name": "DHT22",
     "path": "DHT22",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "10167",
     "app": {
         "appName": "DHT22/11 Humidity and Temperature Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/dbhe5vbq7epmevqu4taf",
         "numericName": "DHT22",
         "shortName": "Temperature and Humidity sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A low cost humidity and temperature sensor.<br><strong>Returned Values</strong>:  Temperature and Humidity through a single wire digital interface.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["DHT225v"]],[1,["DHT223v3"]]],
     "supportedControllers": [],

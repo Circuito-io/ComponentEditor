@@ -1,10 +1,13 @@
 {
     "name": "ESP32DevKitC",
     "path": "ESP32DevKitC",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "360217",
     "app": {
         "appName": "ESP32 - DevKitC",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pnyzx8n98v6tjfhydm0q",
         "numericName": "ESP32",
         "shortName": "ESP-WROOM-32",
         "tags": [
@@ -17,7 +20,7 @@
             "solder": "false"
         },
         "desc": "<p>ESP32-DevKitC is a small-sized ESP32-based development board. Built around the ESP-WROOM-32. It features a Wi-Fi and Bluetooth combo set, alongside optimized pinout to enable prototyping on a breadboard.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "ESP32DevKitC"

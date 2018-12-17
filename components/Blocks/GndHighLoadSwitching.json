@@ -1,13 +1,15 @@
 {
     "name": "GndHighLoadSwitching",
     "path": "Switching",
-    "category": "support",
+    "category": [
+        "support"
+    ],
     "supportedControllers": [],
     "circuit": {
         "parts": [
             {
                 "name": "this",
-                "part": "MOSFETN"
+                "part": "TNMOSFETFQP"
             },
             {
                 "name": "r1",

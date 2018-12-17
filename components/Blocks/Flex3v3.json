@@ -1,7 +1,9 @@
 {
     "name": "Flex3v3",
     "path": "Flex",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!8606",
     "coders": [
         "Flex"
@@ -18,6 +20,10 @@
             {
                 "name": "this",
                 "part": "Flex"
+            },
+            {
+                "name": "r1",
+                "part": "Res22KO"
             }
         ],
         "wires": [
@@ -48,12 +54,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

@@ -1,10 +1,13 @@
 {
     "name": "StepperMotor",
     "path": "StepperMotor",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "9238",
     "app": {
         "appName": "Stepper Motor with EasyDriver",
+        "image": "http://res.cloudinary.com/circuito/image/upload/phyvwbp42lgyvumbe0qq",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -97,12 +100,6 @@
                 "interface": {
                     "requires":[[0,["SRAMLoad"]]],
                     "requiresLoad": 200
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

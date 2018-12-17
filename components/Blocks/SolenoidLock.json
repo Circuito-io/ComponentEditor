@@ -1,10 +1,13 @@
 {
     "name": "SolenoidLock",
     "path": "SolenoidLock",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "842876",
     "app": {
         "appName": "Lock-style Solenoid 12VDC",
+        "image": "http://res.cloudinary.com/circuito/image/upload/k9jztm0rt2mjswnwc6mj",
         "numericName": "",
         "shortName": "Solenoid Lock",
         "tags": [
@@ -51,7 +54,7 @@
             },
             {
                 "name": "d1",
-                "part": "Diode"
+                "part": "DIRect1A50v"
             }
         ],
         "wires": [
@@ -77,12 +80,6 @@
                 "name": "VCC",
                 "interface": {
                     "requires":[[0,["12v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

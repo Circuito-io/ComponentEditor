@@ -1,7 +1,9 @@
 {
     "name": "WaterFlow3v3",
     "path": "WaterFlow",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!641455",
     "coders": [
         "WaterFlow"
@@ -75,12 +77,6 @@
                 "name": "VCC",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["NodeMCU"]],[1,["ArduinoProMini3v3"]],[2,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

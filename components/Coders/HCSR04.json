@@ -11,7 +11,7 @@
         "ArduinoUno"
     ],
     "code": {
-        "snippetCode:": "    // Read distance measurment from UltraSonic sensor           \n    int {{varname}}Dist = {{varname}}.ping_cm();\n    delay(10);\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+        "snippetCode": "    // Read distance measurment from UltraSonic sensor           \n    int {{varname}}Dist = {{varname}}.ping_cm();\n    delay(10);\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
     },
     "license": "GNU_GPL_v3",
     "instantiate": {
@@ -23,6 +23,8 @@
         "varname": "hcsr04"
     },
     "files": [
-        "lib/*"
+        "NewPing.cpp",
+        "NewPing_license.txt",
+        "NewPing.h"
     ]
 }

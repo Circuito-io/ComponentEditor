@@ -1,7 +1,9 @@
 {
     "name": "TCS34725-5v",
     "path": "TCS34725",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!268781",
     "coders": [
         "TCS34725"
@@ -59,12 +61,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

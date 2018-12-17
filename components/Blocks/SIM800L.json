@@ -1,10 +1,13 @@
 {
     "name": "SIM800L",
     "path": "GSM-SIM800L",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "316349",
     "app": {
         "appName": "QuadBand GPRS-GSM SIM800L",
+        "image": "http://res.cloudinary.com/circuito/image/upload/kfv2ydvhe4yixh0ss38g",
         "numericName": "SIM800L",
         "shortName": "GPRS-GSM",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>SIM800L is a small quad-band GSM / GPRS module, equipped with quad-band antenna. Insert a valid SIM card and you can use it for voice calls, sending text messages and accessing the internet.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["SIM800L_HardwareSerial"]],[100,["SIM800L_SoftwareSerial"]]],
     "supportedControllers": [],

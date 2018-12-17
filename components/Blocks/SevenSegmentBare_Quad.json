@@ -1,10 +1,13 @@
 {
     "name": "SevenSegmentBare_Quad",
     "path": "SevenSegmentBare_Quad",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "11409",
     "app": {
         "appName": "7 - Segment Display - 20mm",
+        "image": "http://res.cloudinary.com/circuito/image/upload/tqx4xb3r8icmmgfzfpkz",
         "numericName": "",
         "shortName": "7-Segment Display",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A common-cathode Seven Segment display It feature 4 x 7-segment digits and one decimal point per digit. The LEDs have a forward voltage of 1.9VDC and a max forward current of 20mA.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["SevenSegmentBare_Quad_woShiftReg"]],[100,["SevenSegmentBare_Quad_withShiftReg"]]],
     "supportedControllers": [],

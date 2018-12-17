@@ -1,7 +1,9 @@
 {
     "name": "LM353v3",
     "path": "LM35",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!333429",
     "coders": [
         "LM35"
@@ -64,12 +66,6 @@
                 "name": "Gnd",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

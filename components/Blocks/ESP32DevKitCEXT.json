@@ -1,7 +1,9 @@
 {
     "name": "ESP32DevKitCEXT",
     "path": "ESP32DevKitC",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!360217",
     "requires": [
         [
@@ -291,12 +293,6 @@
                 "interface": {
                     "requires":[[0,["5v"]]],
                     "requiresLoad": 1000
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ESP32DevKitC"]]
                 }
             },
             {

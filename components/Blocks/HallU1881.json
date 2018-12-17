@@ -1,10 +1,13 @@
 {
     "name": "HallU1881",
     "path": "HallSensorU1881",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "9312",
     "app": {
         "appName": "Hall Sensor U1881",
+        "image": "http://res.cloudinary.com/circuito/image/upload/u8ph3z6jtqarmdcdqjpy",
         "numericName": "U1881",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Hall effect latched sensor. Holding alternating magnet poles near the sensor will cause the output pin to toggle.</p>\n<p><strong>Returned Values</strong>: The output pin will toggle from digital &#39;1&#39; and &#39;0&#39;.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["HallU18815v"]],[1,["HallU18813v3"]]],
     "supportedControllers": [],

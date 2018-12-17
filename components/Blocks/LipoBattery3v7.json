@@ -1,10 +1,13 @@
 {
     "name": "LipoBattery3v7",
     "path": "Power",
-    "category": "power",
+    "category": [
+        "power"
+    ],
     "blockId": "13813",
     "app": {
         "appName": "Lithium Polymer Battery 3.7v",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jzwisln2qzhry99iwzor",
         "numericName": "",
         "shortName": "LiPo Battery 3.7V",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has one cell and outputs 3.7V.\n",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         100,
@@ -54,12 +57,6 @@
                 "name": "PowerType",
                 "interface": {
                     "provides":[["Battery"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[2,["ArduinoGemma"]],[3,["NodeMCU"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

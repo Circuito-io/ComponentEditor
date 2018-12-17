@@ -1,7 +1,9 @@
 {
     "name": "ArduinoNanoUSB",
     "path": "ArduinoNano",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11022",
     "supportedControllers": [
         "ArduinoNano"
@@ -210,12 +212,6 @@
                 "interface": {
                     "provides":[["SRAMLoad"]],
                     "providesLoad": 1850
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoNano"]]
                 }
             },
             {

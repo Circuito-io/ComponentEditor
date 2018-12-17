@@ -1,7 +1,9 @@
 {
     "name": "TiltSW3v3",
     "path": "TiltSW",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!10289",
     "coders": [
         "TiltSW"
@@ -17,6 +19,10 @@
             {
                 "name": "this",
                 "part": "TiltSW"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
             }
         ],
         "wires": [
@@ -47,12 +53,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

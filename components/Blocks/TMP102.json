@@ -1,10 +1,13 @@
 {
     "name": "TMP102",
     "path": "TMP102",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "11931",
     "app": {
         "appName": "SparkFun TMP102 - Digital Temperature Sensor Breakout",
+        "image": "http://res.cloudinary.com/circuito/image/upload/rmcdu0fpz260w46ydy28",
         "numericName": "TMP102",
         "shortName": "Digital Temperature Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>A breakout board for the TMP102 temperature sensor - a digital sensor, ideal for projects where high accuracy is required.<br><strong>Returned Values</strong>: from -25\u00b0C to +85\u00b0C, with an accuracy of 0.5\u00b0C.(Can also return Fahrenheit).<br><strong>Requires</strong>: Soldering of 6 male pins to fit onto a breadboard.<br><strong>Sample applications</strong>: (1) Measure and show temperature on a screen, (2) If temperature is higher than a certain threshold, turn on a fan.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "TMP102"
@@ -80,12 +83,6 @@
                 "interface": {
                     "requires":[[0,["SRAMLoad"]]],
                     "requiresLoad": 176
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,10 +1,13 @@
 {
     "name": "LED_IR",
     "path": "LED_IR",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "9349",
     "app": {
         "appName": "Infrared (IR) LED 950nm",
+        "image": "http://res.cloudinary.com/circuito/image/upload/gs4219wlunn7lrzz7bbn",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This is a very simple IR emitter, that allows you to build your own IR remote control for devices that can receive an IR signal \u2026 replace a lost air-conditioner remote, or control a custom device you\u2019ve built from afar. Works for most known system. For more details, check the code library you\u2019ll receive with the circuit.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["LED_IR5v"]],[1,["LED_IR3v3"]],[2,["LED_IR_RPI"]]],
     "supportedControllers": [],

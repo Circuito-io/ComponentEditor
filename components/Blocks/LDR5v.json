@@ -1,7 +1,9 @@
 {
     "name": "LDR5v",
     "path": "LDR",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9088",
     "coders": [
         "LDR"
@@ -62,12 +64,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
                 }
             }
         ]

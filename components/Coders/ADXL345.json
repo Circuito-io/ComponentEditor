@@ -15,9 +15,9 @@
         "RPI3B"
     ],
     "code": {
-        "global:": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n",
-        "setup:": "    {{varname}}.init();\n",
-        "snippetCode:": "    // read raw accel measurements from device\n    {{varname}}.getAcceleration(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az);\n    // display tab-separated accel x/y/z values\n    Serial.print(F(\"{{instname}} accel-\\t\")); \n    Serial.print({{varname}}Ax); Serial.print(F(\"\\t\"));\n    Serial.print({{varname}}Ay); Serial.print(F(\"\\t\"));  \n    Serial.println({{varname}}Az);\n"
+        "global": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n",
+        "setup": "    {{varname}}.init();\n",
+        "snippetCode": "    // read raw accel measurements from device\n    {{varname}}.getAcceleration(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az);\n    // display tab-separated accel x/y/z values\n    Serial.print(F(\"{{instname}} accel-\\t\")); \n    Serial.print({{varname}}Ax); Serial.print(F(\"\\t\"));\n    Serial.print({{varname}}Ay); Serial.print(F(\"\\t\"));  \n    Serial.println({{varname}}Az);\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -25,6 +25,10 @@
         "varname": "adxl"
     },
     "files": [
-        "lib/*"
+        "I2Cdev.cpp",
+        "ADXL345.h",
+        "ADXL345_license.txt",
+        "ADXL345.cpp",
+        "I2Cdev.h"
     ]
 }

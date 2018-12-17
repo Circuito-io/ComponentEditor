@@ -1,10 +1,13 @@
 {
     "name": "LM35",
     "path": "LM35",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "333429",
     "app": {
         "appName": "LM35",
+        "image": "http://res.cloudinary.com/circuito/image/upload/qbhpjqu0wjji210r0jbu",
         "numericName": "LM35",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Precision integrated-circuit temperature sensor. Output is linearly proportional to the centegrade temperature.</p>\n<p><strong>Returned Value</strong>: Returns the temperature in Celsius or Fahrenheit.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/lm35-temperature-sensor/\">Learn More</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["LM355v"]],[1,["LM353v3"]]],
     "supportedControllers": [],

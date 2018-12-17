@@ -14,10 +14,10 @@
         "RPI3B"
     ],
     "code": {
-        "globals:": "",
-        "constructors:": "    #define SSD1306_LCDHEIGHT 32\n    {{classname}} {{varname}}({{RST}});\n",
-        "setup:": "    {{varname}}.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)\n    {{varname}}.clearDisplay(); // Clear the buffer.\n    {{varname}}.display();\n",
-        "snippetCode:": "    {{varname}}.setTextSize(1);\n    {{varname}}.setTextColor(WHITE);\n    {{varname}}.setCursor(0, 10);\n    {{varname}}.clearDisplay();\n    {{varname}}.println(\"Circuito.io Rocks!\");\n    {{varname}}.display();\n    delay(1);\n    {{varname}}.startscrollright(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();\n    delay(1000);\n    {{varname}}.startscrollleft(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();"
+        "global": "",
+        "constructors": "    #define SSD1306_LCDHEIGHT 32\n    {{classname}} {{varname}}({{RST}});\n",
+        "setup": "    {{varname}}.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)\n    {{varname}}.clearDisplay(); // Clear the buffer.\n    {{varname}}.display();\n",
+        "snippetCode": "    {{varname}}.setTextSize(1);\n    {{varname}}.setTextColor(WHITE);\n    {{varname}}.setCursor(0, 10);\n    {{varname}}.clearDisplay();\n    {{varname}}.println(\"Circuito.io Rocks!\");\n    {{varname}}.display();\n    delay(1);\n    {{varname}}.startscrollright(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();\n    delay(1000);\n    {{varname}}.startscrollleft(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();"
     },
     "license": "BSD",
     "instantiate": {
@@ -28,7 +28,13 @@
         "varname": "oLed128x32"
     },
     "files": [
-        "lib/*"
+        "gfxfont.h",
+        "Adafruit_SSD1306.h",
+        "Adafruit_SSD1306_license.txt",
+        "glcdfont.c",
+        "Adafruit_GFX.cpp",
+        "Adafruit_SSD1306.cpp",
+        "Adafruit_GFX.h"
     ],
     "includeHeaders": [
         "Wire.h",

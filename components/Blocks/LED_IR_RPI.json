@@ -1,7 +1,9 @@
 {
     "name": "LED_IR_RPI",
     "path": "LED_IR",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!9349",
     "coders": [
         "LED_IR"
@@ -15,6 +17,14 @@
                 "name": "this",
                 "part": "LED_IR",
                 "properties": "Infrared (940nm)"
+            },
+            {
+                "name": "BJT",
+                "part": "TSBC337"
+            },
+            {
+                "name": "Res1",
+                "part": "Res220O"
             }
         ],
         "wires": [
@@ -53,12 +63,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["RPI3B"]]]
                 }
             }
         ]

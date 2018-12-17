@@ -1,7 +1,9 @@
 {
     "name": "FloatSwitch5v",
     "path": "FloatSwitch",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!561143",
     "coders": [
         "FloatSwitch"
@@ -58,12 +60,6 @@
                 "interface": {
                     "requires":[[0,["5v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
                 }
             }
         ]

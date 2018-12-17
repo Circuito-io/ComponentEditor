@@ -1,7 +1,9 @@
 {
     "name": "MQ1353v3",
     "path": "MQ135",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!398790",
     "coders": [
         "MQ1353v3"
@@ -64,12 +66,6 @@
                 "name": "5V",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

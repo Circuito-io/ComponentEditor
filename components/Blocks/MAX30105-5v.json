@@ -1,7 +1,9 @@
 {
     "name": "MAX30105-5v",
     "path": "MAX30105",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!220687",
     "coders": [
         "MAX30105"
@@ -45,12 +47,6 @@
                 "name": "SDA",
                 "interface": {
                     "requires":[[0,["5v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

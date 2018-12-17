@@ -10,7 +10,7 @@
         "ArduinoUno"
     ],
     "code": {
-        "snippetCode:": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+        "snippetCode": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -21,9 +21,11 @@
         "varname": "mq7"
     },
     "files": [
-        "lib/*",
-        "../Global/lib/AnalogReader.h",
-        "../Global/lib/AnalogReader.cpp"
+        "MQ7.cpp",
+        "MQ7_license.txt",
+        "MQ7.h",
+        "AnalogReader.h",
+        "AnalogReader.cpp"
     ],
     "includeHeaders": [
         "MQ7.h"

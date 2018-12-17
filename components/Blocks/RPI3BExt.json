@@ -1,7 +1,9 @@
 {
     "name": "RPI3BExt",
     "path": "RPI3B",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!200000",
     "requires": [
         [
@@ -297,12 +299,6 @@
                 "interface": {
                     "codename": "21",
                     "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCK1"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["RPI3B"]]
                 }
             },
             {
