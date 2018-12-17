@@ -1,7 +1,9 @@
 {
     "name": "LEDBarI2C3v3",
     "path": "LEDBarI2C",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!901920",
     "coders": [
         "LEDBarI2C"
@@ -43,12 +45,6 @@
                 "name": "SCL",
                 "interface": {
                     "requires":[[0,["3.3v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

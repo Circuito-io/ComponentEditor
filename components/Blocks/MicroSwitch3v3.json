@@ -1,7 +1,9 @@
 {
     "name": "MicroSwitch3v3",
     "path": "MicroSwitch",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!305155",
     "coders": [
         "MicroSwitch"
@@ -18,6 +20,10 @@
             {
                 "name": "this",
                 "part": "MicroSwitch"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
             }
         ],
         "wires": [
@@ -48,12 +54,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

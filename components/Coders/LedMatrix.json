@@ -14,9 +14,9 @@
         "RPI3B"
     ],
     "code": {
-        "global:": "  byte {{varname}}inUse = {{numOfSameComp}};                      //Specify how many Max7219 led matrices are chained\n  int {{varname}}textScrollingSpeed = 50;        //Specify the scrolling speed\n  char {{varname}}Str[] = \"Hello World!    \";     //Specify the string to be displayed\n",
-        "setup:": "    {{varname}}.init({{varname}}inUse);       //Initialize Led Matrices\n    {{varname}}.setIntensity(5);            //LED Intensity 0-15\n",
-        "snippetCode:": "    //Note that this function is blocking the loop until the end of the scrolling\n    {{varname}}.printStringWithShift({{varname}}Str, {{varname}}textScrollingSpeed);  // Send scrolling Text"
+        "global": "  byte {{varname}}inUse = {{numOfSameComp}};                      //Specify how many Max7219 led matrices are chained\n  int {{varname}}textScrollingSpeed = 50;        //Specify the scrolling speed\n  char {{varname}}Str[] = \"Hello World!    \";     //Specify the string to be displayed\n",
+        "setup": "    {{varname}}.init({{varname}}inUse);       //Initialize Led Matrices\n    {{varname}}.setIntensity(5);            //LED Intensity 0-15\n",
+        "snippetCode": "    //Note that this function is blocking the loop until the end of the scrolling\n    {{varname}}.printStringWithShift({{varname}}Str, {{varname}}textScrollingSpeed);  // Send scrolling Text"
     },
     "license": "GNU_GPL",
     "instantiate": {
@@ -29,6 +29,8 @@
         "varname": "ledMatrix"
     },
     "files": [
-        "lib/*"
+        "MaxMatrix_license.txt",
+        "MaxMatrix.h",
+        "MaxMatrix.cpp"
     ]
 }

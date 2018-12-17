@@ -1,7 +1,9 @@
 {
     "name": "ArduinoNanoEx",
     "path": "ArduinoNano",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11022",
     "requires": [
         [
@@ -236,12 +238,6 @@
                 "name": "USB_MINI",
                 "interface": {
                     "provides":[["USB_MINI"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoNano"]]
                 }
             }
         ]

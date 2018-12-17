@@ -1,7 +1,9 @@
 {
     "name": "ATMega328P5v",
     "path": "ATMega328P",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!1000328",
     "requires": [
         [
@@ -297,12 +299,6 @@
                 "interface": {
                     "codename": "A5",
                     "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"],["SCL","5v"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ATMega328P"]]
                 }
             }
         ]

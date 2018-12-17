@@ -1,7 +1,9 @@
 {
     "name": "LEDRed5v",
     "path": "LEDRed",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!9590",
     "coders": [
         "LEDRed"
@@ -33,7 +35,7 @@
             },
             {
                 "from": "Res1.con0",
-                "to": "Gnd"
+                "to": "GND"
             }
         ],
         "ports": [
@@ -45,15 +47,9 @@
                 }
             },
             {
-                "name": "Gnd",
+                "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

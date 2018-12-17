@@ -1,7 +1,9 @@
 {
     "name": "HeartRateGravity-3v3",
     "path": "HeartRateGravity",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!133979",
     "coders": [
         "HeartRateGravity"
@@ -38,12 +40,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

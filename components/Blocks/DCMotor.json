@@ -1,10 +1,13 @@
 {
     "name": "DCMotor",
     "path": "DCMotor",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "11696",
     "app": {
         "appName": "DC Motor - Hobby Motor Gear",
+        "image": "http://res.cloudinary.com/circuito/image/upload/todtoqw0pbjslkj8nno3",
         "numericName": "",
         "shortName": "DC Motor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A simple rotation motor, rotating 360 degrees, operating without a load at ~6000 RPM.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "DCMotor"
@@ -46,7 +49,7 @@
         "parts": [
             {
                 "name": "d1",
-                "part": "Diode",
+                "part": "DIRect1A50v",
                 "rotation": 180
             },
             {
@@ -78,12 +81,6 @@
                 "interface": {
                     "requires":[[8,["3.3v"]],[7,["3.7v"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
                     "requiresLoad": 400
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

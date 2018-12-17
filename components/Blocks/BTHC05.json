@@ -1,10 +1,13 @@
 {
     "name": "BTHC05",
     "path": "BTHC05",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "2631981",
     "app": {
         "appName": "HC - 05 Bluetooth Serial Module",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ddsimv6epfofcnhtisxn",
         "numericName": "HC05",
         "shortName": "Bluetooth",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Acts like a bluetooth serial monitor. Enables the arduino to exchange data with other bluetooth devices such as PC or Android smartphone.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["BTHC05_HardwareSerial"]],[100,["BTHC05_SoftwareSerial"]]],
     "supportedControllers": [],

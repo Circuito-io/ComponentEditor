@@ -1,10 +1,13 @@
 {
     "name": "ESP8266",
     "path": "ESP8266",
-    "category": "iot",
+    "category": [
+        "iot"
+    ],
     "blockId": "13678",
     "app": {
         "appName": "ESP8266-01 - Wifi Module",
+        "image": "http://res.cloudinary.com/circuito/image/upload/sete1lzghxcrjcdpmdeg",
         "numericName": "esp8266",
         "shortName": "WiFi Module",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The <strong>ESP8266</strong> is a low-cost Wi-Fi board, that you can easily wire to a microcontroller, and connect any project you build to the internet (of things). </p>\n<p>The microcontroller communicates with the module using AT commands, either via Software Serial or Hardware Serial.<br><strong>Returned Values</strong>: from 0 (completely dry) to 1023 (completely moist). (air/soil humidity - ambient conditions).<br><strong>Requires</strong>: Soldering of jumper/regular wires to the sensor board, to fit onto a breadboard.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/esp8266-01-wifi-module/\">Learn More</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["ESP8266_HardwareSerial5v"]],[1,["ESP8266_SoftwareSerial3v3"]],[100,["ESP8266_SoftwareSerial5v"]],[101,["ESP8266_HardwareSerial3v3"]]],
     "supportedControllers": [],

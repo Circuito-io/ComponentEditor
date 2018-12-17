@@ -1,10 +1,13 @@
 {
     "name": "PotentiometerSlide",
     "path": "PotentiometerSlide",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "698520",
     "app": {
         "appName": "Slide Pot - X-Large (10k Linear Taper)",
+        "image": "http://res.cloudinary.com/circuito/image/upload/mbs3ajbpzlhqxj69sbfh",
         "numericName": "",
         "shortName": "Slide Pot",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A slide potentiometer rated at 10kOhm and 0.5W.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["PotentiometerSlide5v"]],[1,["PotentiometerSlide3v3"]]],
     "supportedControllers": [],

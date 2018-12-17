@@ -1,7 +1,9 @@
 {
     "name": "HallA13023v3",
     "path": "HallSensorA1302",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!2331989",
     "coders": [
         "HallA1302"
@@ -38,12 +40,6 @@
                 "name": "Gnd",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

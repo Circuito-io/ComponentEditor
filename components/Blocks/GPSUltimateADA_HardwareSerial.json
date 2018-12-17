@@ -1,7 +1,9 @@
 {
     "name": "GPSUltimateADA_HardwareSerial",
     "path": "GPSUltimateADA",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!488167",
     "coders": [
         "GPSUltimateADA_HardwareSerial"
@@ -46,12 +48,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","RX"]],[1,["5v","RX"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoMicro"]],[2,["ArduinoLeonardo"]],[3,["RPI3B"]],[4,["ESP32DevKitC"]]]
                 }
             }
         ]

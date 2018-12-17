@@ -1,7 +1,9 @@
 {
     "name": "ArduinoMicro6v",
     "path": "ArduinoMicro",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!891983",
     "requires": [
         [
@@ -261,12 +263,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "provides":[["USB_MICRO"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoMicro"]]
                 }
             }
         ]

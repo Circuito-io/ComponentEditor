@@ -14,7 +14,7 @@
         "RPI3B"
     ],
     "code": {
-        "snippetCode:": "    //Get distance measurement in cm. see also {{varname}}.getInches()\n    float {{varname}}Dist = {{varname}}.getCms();\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+        "snippetCode": "    //Get distance measurement in cm. see also {{varname}}.getInches()\n    float {{varname}}Dist = {{varname}}.getCms();\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -24,6 +24,8 @@
         ]
     },
     "files": [
-        "lib/*"
+        "UltraSonic.h",
+        "UltraSonic_license.txt",
+        "UltraSonic.cpp"
     ]
 }

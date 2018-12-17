@@ -1,10 +1,13 @@
 {
     "name": "FSRSquare",
     "path": "FSRSquare",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "9376",
     "app": {
         "appName": "Force Sensitive Resistor - Square",
+        "image": "http://res.cloudinary.com/circuito/image/upload/miq1kou92hy7veshagrj",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["FSRSquare5v"]],[1,["FSRSquare3v3"]]],
     "supportedControllers": [],

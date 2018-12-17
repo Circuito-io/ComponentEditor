@@ -1,10 +1,13 @@
 {
     "name": "MQ6",
     "path": "MQ6",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "398786",
     "app": {
         "appName": "LPG, Butane and Propane Gas Sensor - MQ-6",
+        "image": "http://res.cloudinary.com/circuito/image/upload/s4htfpyin7hzecjqfyzu",
         "numericName": "MQ6",
         "shortName": "LPG, Butane and Propane Gas Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This sensor is sensitive for LPG, Butane and Propane Gas.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["MQ65v"]],[2,["MQ63v3"]]],
     "supportedControllers": [],

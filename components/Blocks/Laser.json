@@ -1,10 +1,13 @@
 {
     "name": "Laser",
     "path": "Laser",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "193622",
     "app": {
         "appName": "650nm Red Laser Diode",
+        "image": "http://res.cloudinary.com/circuito/image/upload/v2cjdp03enej4shxfsz3",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This Red Laser transmitter module gives a small intense beam. Take care of your eyes, do not look direct into the beam.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "Laser"
@@ -54,12 +57,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

@@ -1,10 +1,13 @@
 {
     "name": "USBPowerB",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector"
+    ],
     "blockId": "512",
     "app": {
         "appName": "USB Cable A to B - 6 Foot",
+        "image": "http://res.cloudinary.com/circuito/image/upload/l2cblyri9f4haosunwdn",
         "numericName": "",
         "shortName": "USB",
         "tags": [
@@ -16,11 +19,11 @@
             "solder": "false"
         },
         "desc": "<p>A standard USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         150,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "supportedControllers": [
         "ArduinoMega",
@@ -51,12 +54,6 @@
                 "name": "USB_B",
                 "interface": {
                     "requires":[[0,["USB_B"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]]]
                 }
             }
         ]

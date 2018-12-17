@@ -1,10 +1,13 @@
 {
     "name": "LCD16X2",
     "path": "LCD16x2",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "341099",
     "app": {
         "appName": "LCD 16x2",
+        "image": "http://res.cloudinary.com/circuito/image/upload/st9eaifr2logxoyvvfrm",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -155,12 +158,6 @@
                 "name": "K",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

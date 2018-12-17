@@ -1,7 +1,9 @@
 {
     "name": "ArduinoUnoUSB",
     "path": "ArduinoUno",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11021",
     "supportedControllers": [
         "ArduinoUno"
@@ -202,12 +204,6 @@
                 "interface": {
                     "codename": "A2",
                     "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoUno"]]
                 }
             },
             {

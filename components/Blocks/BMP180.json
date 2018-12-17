@@ -1,10 +1,13 @@
 {
     "name": "BMP180",
     "path": "BMP180",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "11824",
     "app": {
         "appName": "BMP180 - Barometric Pressure, Temperature, Altitude Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/rj9o9spmbsyli5v3mqyx",
         "numericName": "BMP180",
         "shortName": "Barometric Pressure Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>High precision, low power digital barometer.<br><strong>Returned Values</strong>: Can measure air pressure from 300-110 hPa with 0.02 hPa accuracy.</p>\n<p><strong>Requires</strong>: Soldering 4 pin male header.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "BMP180"
@@ -74,12 +77,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

@@ -15,7 +15,7 @@
         "RPI3B"
     ],
     "code": {
-        "snippetCode:": "    float {{varname}}TempC = {{varname}}.readCelsius();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"
+        "snippetCode": "    float {{varname}}TempC = {{varname}}.readCelsius();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -23,6 +23,8 @@
         "varname": "tmp102"
     },
     "files": [
-        "lib/*"
+        "TMP102.cpp",
+        "TMP102_license.txt",
+        "TMP102.h"
     ]
 }

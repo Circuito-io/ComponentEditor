@@ -15,7 +15,7 @@
         "RPI3B"
     ],
     "code": {
-        "snippetCode:": "    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+        "snippetCode": "    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -25,6 +25,8 @@
         ]
     },
     "files": [
-        "lib/*"
+        "Mic_license.txt",
+        "Mic.cpp",
+        "Mic.h"
     ]
 }

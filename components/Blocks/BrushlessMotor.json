@@ -1,10 +1,13 @@
 {
     "name": "BrushlessMotor",
     "path": "BrushlessMotor",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "250754",
     "app": {
         "appName": "A2212 Brushless Motor 1000KV (with 30A ESC)",
+        "image": "http://res.cloudinary.com/circuito/image/upload/oiqdk163gqsgfjkpmlzp",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>This Brushless Motor is great for R/C projects such as drones, RC car, and more. To run the motor, it needs to be attached to an ESC (electronic speed controller), that converts the servo-style interface into three-phase AC for driving the motor.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "BrushlessMotor"
@@ -80,12 +83,6 @@
                 "name": "GROUND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

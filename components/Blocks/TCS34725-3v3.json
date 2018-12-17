@@ -1,7 +1,9 @@
 {
     "name": "TCS34725-3v3",
     "path": "TCS34725",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!268781",
     "coders": [
         "TCS34725"
@@ -56,12 +58,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

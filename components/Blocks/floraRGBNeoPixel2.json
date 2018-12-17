@@ -1,10 +1,13 @@
 {
     "name": "floraRGBNeoPixel2",
     "path": "floraRGBNeoPixel2",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "214077",
     "app": {
         "appName": "Flora RGB Smart NeoPixel version 2",
+        "image": "http://res.cloudinary.com/circuito/image/upload/hcatijixfmyknxi8esba",
         "numericName": "FloraNeoPixelV2",
         "shortName": "Flora NeoPixel v2",
         "tags": [
@@ -62,12 +65,6 @@
                 "name": "DOUT",
                 "interface": {
                     "chain": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ATMega328P"]]]
                 }
             }
         ]

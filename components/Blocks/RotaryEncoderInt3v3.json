@@ -1,7 +1,9 @@
 {
     "name": "RotaryEncoderInt3v3",
     "path": "RotaryEncoder",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!217614",
     "supportedControllers": [
         "RPI3B"
@@ -45,12 +47,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["RPI3B"]]]
                 }
             }
         ]

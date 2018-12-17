@@ -1,7 +1,9 @@
 {
     "name": "HCSR04_Gemma",
     "path": "HC-SR04",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!13959",
     "coders": [
         "HCSR04"
@@ -55,12 +57,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoGemma"]]]
                 }
             }
         ]

@@ -1,7 +1,9 @@
 {
     "name": "BMP2805v",
     "path": "BMP280",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!999979",
     "coders": [
         "BMP280"
@@ -45,12 +47,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

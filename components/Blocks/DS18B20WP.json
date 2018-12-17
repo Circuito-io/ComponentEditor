@@ -1,10 +1,13 @@
 {
     "name": "DS18B20WP",
     "path": "DS18B20WP",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "11050",
     "app": {
         "appName": "DS18B20 1-Wire Temperature Sensor - Waterproof",
+        "image": "http://res.cloudinary.com/circuito/image/upload/xcthgr6n3ajjht7wjerm",
         "numericName": "DS18B20",
         "shortName": "1-Wire Waterproof Temperature Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A very simple sensor to wire - measuring temperature in a huge range, with high accuracy.<br><strong>Returned values</strong>: \u201355\u00b0C to +125\u00b0C (\u201367\u00b0F to +257\u00b0F) - with an accuracy of (+/-0.5C).</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "DS18B20WP"
@@ -85,12 +88,6 @@
                 "interface": {
                     "requires":[[1,["3.3v","DigitalIn"]],[0,["5v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

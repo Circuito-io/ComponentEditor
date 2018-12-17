@@ -15,9 +15,9 @@
         "RPI3B"
     ],
     "code": {
-        "global:": "    #define NUMOFPIXEL 60 * {{numOfSameComp}}\n",
-        "setup:": "    {{varname}}.begin(); // This initializes the NeoPixel library.\n    {{varname}}.show(); // Initialize all pixels to 'off'\n",
-        "snippetCode:": "    for(int i=0 ; i <= NUMOFPIXEL ; i++){\n            // set pixels Color to RGB values, from 0,0,0 up to 255,255,255\n            {{varname}}.setPixelColor(i, {{varname}}.Color(0,150,0)); // turn on green color on led #i.\n            if (i > 0)\n                    {{varname}}.setPixelColor(i-1, {{varname}}.Color(0,0,0)); // turn off last led\n            {{varname}}.show(); //update pixel color to the hardware.\n            delay(50);\n    }"
+        "global": "    #define NUMOFPIXEL 60 * {{numOfSameComp}}\n",
+        "setup": "    {{varname}}.begin(); // This initializes the NeoPixel library.\n    {{varname}}.show(); // Initialize all pixels to 'off'\n",
+        "snippetCode": "    for(int i=0 ; i <= NUMOFPIXEL ; i++){\n            // set pixels Color to RGB values, from 0,0,0 up to 255,255,255\n            {{varname}}.setPixelColor(i, {{varname}}.Color(0,150,0)); // turn on green color on led #i.\n            if (i > 0)\n                    {{varname}}.setPixelColor(i-1, {{varname}}.Color(0,0,0)); // turn off last led\n            {{varname}}.show(); //update pixel color to the hardware.\n            delay(50);\n    }"
     },
     "license": "GNU",
     "instantiate": {
@@ -28,6 +28,8 @@
         "varname": "ledStrip"
     },
     "files": [
-        "lib/*"
+        "Adafruit_NeoPixel_license.txt",
+        "Adafruit_NeoPixel.h",
+        "Adafruit_NeoPixel.cpp"
     ]
 }

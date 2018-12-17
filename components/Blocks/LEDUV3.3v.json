@@ -1,7 +1,9 @@
 {
     "name": "LEDUV3.3v",
     "path": "LEDUV",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!8662",
     "coders": [
         "LEDUV"
@@ -47,12 +49,6 @@
                 "name": "Gnd",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

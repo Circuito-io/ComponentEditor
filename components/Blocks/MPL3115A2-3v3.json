@@ -1,7 +1,9 @@
 {
     "name": "MPL3115A2-3v3",
     "path": "MPL3115A2",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!431714",
     "coders": [
         "MPL3115A2"
@@ -43,12 +45,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

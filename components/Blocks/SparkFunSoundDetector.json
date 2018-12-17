@@ -1,10 +1,13 @@
 {
     "name": "SparkFunSoundDetector",
     "path": "SparkFunSoundDetector",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "93712",
     "app": {
         "appName": "SparkFun Sound Detector",
+        "image": "http://res.cloudinary.com/circuito/image/upload/enajyskg5jznkjdmpuzr",
         "numericName": "SparkFunSoundDetector",
         "shortName": "SparkFun Sound Detector",
         "tags": [
@@ -74,12 +77,6 @@
                 "name": "VCC",
                 "interface": {
                     "requires":[[0,["5v"]],[1,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["RPI3B"]],[1,["ArduinoProMini3v3"]],[2,["ESP32DevKitC"]],[3,["ArduinoMega"]],[4,["ArduinoProMini5v"]],[5,["NodeMCU"]],[6,["ArduinoGemma"]],[7,["ArduinoUno"]],[8,["ArduinoNano"]],[9,["ArduinoMicro"]],[10,["ArduinoLeonardo"]],[11,["ATMega328P"]]]
                 }
             }
         ]

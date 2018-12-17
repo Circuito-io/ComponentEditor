@@ -1,7 +1,9 @@
 {
     "name": "PushButton3v3",
     "path": "PushButton",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!97",
     "coders": [
         "PushButton"
@@ -18,6 +20,10 @@
             {
                 "name": "this",
                 "part": "PushButton"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
             }
         ],
         "wires": [
@@ -48,12 +54,6 @@
                 "name": "4",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

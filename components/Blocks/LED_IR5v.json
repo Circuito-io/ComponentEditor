@@ -1,7 +1,9 @@
 {
     "name": "LED_IR5v",
     "path": "LED_IR",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!9349",
     "coders": [
         "LED_IR"
@@ -24,7 +26,7 @@
             },
             {
                 "name": "BJT",
-                "part": "TRNPN"
+                "part": "TSBC337"
             },
             {
                 "name": "Res1",
@@ -74,12 +76,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

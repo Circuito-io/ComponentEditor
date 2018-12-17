@@ -2,7 +2,7 @@
     "name": "SevenSegment",
     "symbol": {
         "ref": "circuito_7-Segment Serial Display.svg",
-        "URL": "https://ucarecdn.com/ecfd746a-00bb-4d48-b17d-b278df1d52a9/"
+        "URL": "http://res.cloudinary.com/circuito/image/upload/vdcvhqxdtfjtzltcpfsg"
     },
     "displayName": "7 - Segment Serial Display",
     "category": [
@@ -12,21 +12,21 @@
     "bom": [
         {
             "name": "octopart",
-            "image": "https://ucarecdn.com/0c72a86e-c5ef-4073-b820-272148e40ad0/",
+            "image": "http://res.cloudinary.com/circuito/image/upload/e5o3is7ilwmlgrnpdfq5",
             "link": "https://octopart.com/com-11441-sparkfun-68039942",
             "price": "12.95",
-            "SKU": "1568-1533-ND"
+            "SKU": "1568-1533-ND",
+            "headers": [
+                10,
+                "MaleHeaders"
+            ]
         }
     ],
     "info": {
         "setup": "",
         "test": ""
     },
-    "headers": [
-        10,
-        "MaleHeaders"
-    ],
     "placing": {
-        "onBreadboard": false
+        "onBreadboard": true
     }
 }

@@ -1,7 +1,9 @@
 {
     "name": "LSM3033v3",
     "path": "LSM303",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!597144",
     "coders": [
         "LSM303"
@@ -42,12 +44,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

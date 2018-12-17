@@ -1,7 +1,9 @@
 {
     "name": "Battery4xAA_BarrelJack",
     "path": "Power",
-    "category": "power",
+    "category": [
+        "power"
+    ],
     "blockId": "9835",
     "requires":[[0,["Battery4xAA"]]],
     "supportedControllers": [],

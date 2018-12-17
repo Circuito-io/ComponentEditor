@@ -15,8 +15,8 @@
         "RPI3B"
     ],
     "code": {
-        "setup:": "    {{varname}}.init();\n",
-        "snippetCode:": "        //Read pushbutton state. \n        //if button is pressed function will return HIGH (1). if not function will return LOW (0). \n        //for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n        //if debounce is not working properly try changing 'debounceDelay' variable in Button.h\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+        "setup": "    {{varname}}.init();\n",
+        "snippetCode": "        //Read pushbutton state. \n        //if button is pressed function will return HIGH (1). if not function will return LOW (0). \n        //for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n        //if debounce is not working properly try changing 'debounceDelay' variable in Button.h\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {
@@ -27,8 +27,8 @@
         "varname": "pushButton"
     },
     "files": [
-        "../Global/lib/Button.h",
-        "../Global/lib/Button.cpp",
-        "../Global/lib/Button_license.txt"
+        "Button.h",
+        "Button.cpp",
+        "Button_license.txt"
     ]
 }

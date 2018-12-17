@@ -1,7 +1,9 @@
 {
     "name": "ArduinoMicroUSB",
     "path": "ArduinoMicro",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!891983",
     "supportedControllers": [
         "ArduinoMicro"
@@ -259,12 +261,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "provides":[["USB_MICRO"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoMicro"]]
                 }
             }
         ]

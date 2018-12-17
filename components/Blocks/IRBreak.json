@@ -1,10 +1,13 @@
 {
     "name": "IRBreak",
     "path": "IRBreak",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "669681",
     "app": {
         "appName": "IR Break Beam Sensor - 3mm LEDs",
+        "image": "http://res.cloudinary.com/circuito/image/upload/g0lm5mair4249xo8vegy",
         "numericName": "",
         "shortName": "IR Break Beam Sensor",
         "tags": [
@@ -16,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A simple way to detect motion. They work by having an emitting side that sends out an IR beam, then a receiver across the way which is sensitive to that same beam. When something breaks the beam the receiver will output a signal.  It works up to 25cm / 10\".</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["IRBreak5v"]],[1,["IRBreak3v3"]]],
     "supportedControllers": [],

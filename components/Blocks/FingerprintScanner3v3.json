@@ -1,7 +1,9 @@
 {
     "name": "FingerprintScanner3v3",
     "path": "FingerprintScanner",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!11792",
     "coders": [
         "FingerprintScanner"
@@ -50,12 +52,6 @@
                 "name": "VCC",
                 "interface": {
                     "requires":[[0,["3.3v"]],[1,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

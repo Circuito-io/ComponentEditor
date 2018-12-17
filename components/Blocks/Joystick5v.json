@@ -1,7 +1,9 @@
 {
     "name": "Joystick5v",
     "path": "Joystick",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!611984",
     "coders": [
         "Joystick"
@@ -54,12 +56,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
                 }
             }
         ]

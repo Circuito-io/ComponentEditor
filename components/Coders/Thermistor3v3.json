@@ -2,7 +2,7 @@
     "name": "Thermistor3v3",
     "supportedControllers": [],
     "code": {
-        "snippetCode:": "    //Get Measurment from Thermistor temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));"
+        "snippetCode": "    //Get Measurment from Thermistor temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));"
     },
     "license": "circuito",
     "instantiate": {
@@ -13,9 +13,11 @@
         "varname": "thermistor"
     },
     "files": [
-        "lib/*",
-        "../Global/lib/AnalogReader.h",
-        "../Global/lib/AnalogReader.cpp"
+        "Thermistor.h",
+        "Thermistor.cpp",
+        "Thermistor_license.txt",
+        "AnalogReader.h",
+        "AnalogReader.cpp"
     ],
     "includeHeaders": [
         "Thermistor.h"

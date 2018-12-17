@@ -1,13 +1,19 @@
 {
     "name": "GndHighLoadPWMSwitching",
     "path": "Switching",
-    "category": "support",
+    "category": [
+        "support"
+    ],
     "supportedControllers": [],
     "circuit": {
         "parts": [
             {
                 "name": "this",
-                "part": "MOSFETN"
+                "part": "TNMOSFETFQP"
+            },
+            {
+                "name": "r1",
+                "part": "Res10KO"
             }
         ],
         "wires": [

@@ -1,7 +1,9 @@
 {
     "name": "LED_IR3v3",
     "path": "LED_IR",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!9349",
     "coders": [
         "LED_IR"
@@ -19,7 +21,7 @@
             },
             {
                 "name": "BJT",
-                "part": "TRNPN"
+                "part": "TSBC337"
             },
             {
                 "name": "Res1",
@@ -69,12 +71,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]]]
                 }
             }
         ]

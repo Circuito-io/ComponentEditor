@@ -1,10 +1,14 @@
 {
-    "name": "PowerSupply12v",
+    "name": "PowerSupply12v2A",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector",
+        "support"
+    ],
     "blockId": "9442",
     "app": {
         "appName": "Wall Power - 12VDC 2A",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pc1ki1ihyz0rugls8djb",
         "numericName": "",
         "shortName": "12V Wall Power",
         "tags": [
@@ -16,7 +20,7 @@
             "solder": "false"
         },
         "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires": [
         [
@@ -49,7 +53,7 @@
         "parts": [
             {
                 "name": "this",
-                "part": "PowerSupply12v"
+                "part": "PowerSupply12v2A"
             }
         ],
         "ports": [
@@ -70,12 +74,6 @@
                 "name": "BARREL_JACK",
                 "interface": {
                     "requires":[[0,["BARREL_JACK"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

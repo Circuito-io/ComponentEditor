@@ -1,7 +1,9 @@
 {
     "name": "LDR3v3",
     "path": "LDR",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9088",
     "coders": [
         "LDR"
@@ -14,6 +16,10 @@
             {
                 "name": "this",
                 "part": "LDR"
+            },
+            {
+                "name": "R1",
+                "part": "Res10KO"
             }
         ],
         "wires": [
@@ -52,12 +58,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ATMega328P"]]]
                 }
             }
         ]

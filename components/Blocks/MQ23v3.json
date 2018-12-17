@@ -1,7 +1,9 @@
 {
     "name": "MQ23v3",
     "path": "MQ2",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!398782",
     "coders": [
         "MQ23v3"
@@ -64,12 +66,6 @@
                 "name": "5V",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]
