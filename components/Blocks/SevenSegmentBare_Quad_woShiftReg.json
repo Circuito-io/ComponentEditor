@@ -47,34 +47,34 @@
         "wires": [
             {
                 "from": "this.DIG1",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "this.DIG2",
-                "to": "r2.con1"
+                "to": "r2.con0"
             },
             {
                 "from": "this.DIG3",
-                "to": "r3.con1"
+                "to": "r3.con0"
             },
             {
                 "from": "this.DIG4",
-                "to": "r4.con1"
+                "to": "r4.con0"
             },
             {
-                "from": "r1.con0",
+                "from": "r1.con1",
                 "to": "Dig1"
             },
             {
-                "from": "r2.con0",
+                "from": "r2.con1",
                 "to": "Dig2"
             },
             {
-                "from": "r3.con0",
+                "from": "r3.con1",
                 "to": "Dig3"
             },
             {
-                "from": "r4.con0",
+                "from": "r4.con1",
                 "to": "Dig4"
             }
         ],

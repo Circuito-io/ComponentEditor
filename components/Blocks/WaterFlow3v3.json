@@ -36,26 +36,26 @@
         "wires": [
             {
                 "from": "this.VCC",
-                "to": "res_pullup.con0"
-            },
-            {
-                "from": "this.SIG",
                 "to": "res_pullup.con1"
             },
             {
                 "from": "this.SIG",
-                "to": "res1.con0"
+                "to": "res_pullup.con0"
             },
             {
-                "from": "res1.con1",
-                "to": "res2.con1"
+                "from": "this.SIG",
+                "to": "res1.con1"
             },
             {
-                "from": "res2.con0",
-                "to": "this.GND"
+                "from": "res1.con0",
+                "to": "res2.con0"
             },
             {
                 "from": "res2.con1",
+                "to": "this.GND"
+            },
+            {
+                "from": "res2.con0",
                 "to": "Sig"
             }
         ],

@@ -31,14 +31,14 @@
         "wires": [
             {
                 "from": "this.leg0",
-                "to": "r1.con1"
-            },
-            {
-                "from": "r1.con0",
-                "to": "0"
+                "to": "r1.con0"
             },
             {
                 "from": "r1.con1",
+                "to": "0"
+            },
+            {
+                "from": "r1.con0",
                 "to": "Sig"
             }
         ],

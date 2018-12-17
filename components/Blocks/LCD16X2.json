@@ -56,14 +56,14 @@
         "wires": [
             {
                 "from": "this.A",
-                "to": "Res1.con0"
+                "to": "Res1.con1"
             },
             {
                 "from": "this.VO",
                 "to": "Pot.Sig"
             },
             {
-                "from": "Res1.con1",
+                "from": "Res1.con0",
                 "to": "A"
             },
             {

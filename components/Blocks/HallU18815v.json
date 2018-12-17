@@ -31,11 +31,11 @@
         "wires": [
             {
                 "from": "this.Vout",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.Vcc",
-                "to": "r1.con1"
+                "to": "r1.con0"
             }
         ],
         "ports": [

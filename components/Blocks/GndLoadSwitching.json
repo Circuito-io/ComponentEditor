@@ -9,7 +9,7 @@
         "parts": [
             {
                 "name": "this",
-                "part": "TRNPN"
+                "part": "TSBC337"
             },
             {
                 "name": "r1",
@@ -19,14 +19,14 @@
         "wires": [
             {
                 "from": "this.B",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.E",
                 "to": "GndIn"
             },
             {
-                "from": "r1.con1",
+                "from": "r1.con0",
                 "to": "Sig"
             },
             {

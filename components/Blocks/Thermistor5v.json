@@ -30,11 +30,11 @@
         ],
         "wires": [
             {
-                "from": "this.con0",
-                "to": "r1.con1"
+                "from": "this.con1",
+                "to": "r1.con0"
             },
             {
-                "from": "r1.con0",
+                "from": "r1.con1",
                 "to": "VCC"
             }
         ],

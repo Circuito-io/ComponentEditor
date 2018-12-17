@@ -60,27 +60,27 @@
         "wires": [
             {
                 "from": "this.VCC",
-                "to": "cap.con1"
-            },
-            {
-                "from": "this.GND",
                 "to": "cap.con0"
             },
             {
+                "from": "this.GND",
+                "to": "cap.con1"
+            },
+            {
                 "from": "this.SDA",
-                "to": "rSDA.con1"
-            },
-            {
-                "from": "this.SCL",
-                "to": "rSCL.con1"
-            },
-            {
-                "from": "this.VCC",
                 "to": "rSDA.con0"
             },
             {
-                "from": "this.VCC",
+                "from": "this.SCL",
                 "to": "rSCL.con0"
+            },
+            {
+                "from": "this.VCC",
+                "to": "rSDA.con1"
+            },
+            {
+                "from": "this.VCC",
+                "to": "rSCL.con1"
             }
         ],
         "ports": [

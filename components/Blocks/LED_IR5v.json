@@ -26,7 +26,7 @@
             },
             {
                 "name": "BJT",
-                "part": "TRNPN"
+                "part": "TSBC337"
             },
             {
                 "name": "Res1",
@@ -36,7 +36,7 @@
         "wires": [
             {
                 "from": "BJT.B",
-                "to": "Res1.con1"
+                "to": "Res1.con0"
             },
             {
                 "from": "BJT.C",
@@ -47,7 +47,7 @@
                 "to": "0"
             },
             {
-                "from": "Res1.con0",
+                "from": "Res1.con1",
                 "to": "SIG"
             }
         ],

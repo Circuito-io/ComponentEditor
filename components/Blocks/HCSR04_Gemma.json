@@ -25,11 +25,11 @@
         "wires": [
             {
                 "from": "this.TRIG",
-                "to": "Res.con1"
+                "to": "Res.con0"
             },
             {
                 "from": "this.GND",
-                "to": "Res.con0"
+                "to": "Res.con1"
             }
         ],
         "ports": [

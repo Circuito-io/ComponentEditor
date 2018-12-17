@@ -35,18 +35,18 @@
         "wires": [
             {
                 "from": "this.RX",
-                "to": "r1.con1"
-            },
-            {
-                "from": "r1.con1",
-                "to": "r2.con1"
-            },
-            {
-                "from": "r2.con0",
-                "to": "this.GND"
+                "to": "r1.con0"
             },
             {
                 "from": "r1.con0",
+                "to": "r2.con0"
+            },
+            {
+                "from": "r2.con1",
+                "to": "this.GND"
+            },
+            {
+                "from": "r1.con1",
                 "to": "Rx"
             }
         ],

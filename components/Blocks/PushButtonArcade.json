@@ -47,10 +47,10 @@
         "wires": [
             {
                 "from": "this.BUTTON_SIG",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
-                "from": "r1.con1",
+                "from": "r1.con0",
                 "to": "0"
             }
         ],

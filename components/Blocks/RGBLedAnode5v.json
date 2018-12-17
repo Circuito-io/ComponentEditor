@@ -21,7 +21,7 @@
         "parts": [
             {
                 "name": "this",
-                "part": "RGBLedAnode"
+                "part": "RGBLedCommonAnode"
             },
             {
                 "name": "Res_R",
@@ -39,26 +39,26 @@
         "wires": [
             {
                 "from": "this.R",
-                "to": "Res_R.con1"
+                "to": "Res_R.con0"
             },
             {
                 "from": "this.G",
-                "to": "Res_G.con1"
+                "to": "Res_G.con0"
             },
             {
                 "from": "this.B",
-                "to": "Res_B.con1"
+                "to": "Res_B.con0"
             },
             {
-                "from": "Res_B.con0",
+                "from": "Res_B.con1",
                 "to": "B"
             },
             {
-                "from": "Res_R.con0",
+                "from": "Res_R.con1",
                 "to": "R"
             },
             {
-                "from": "Res_G.con0",
+                "from": "Res_G.con1",
                 "to": "G"
             }
         ],

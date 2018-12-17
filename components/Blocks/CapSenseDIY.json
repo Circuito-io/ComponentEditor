@@ -52,14 +52,14 @@
         "wires": [
             {
                 "from": "this.PinA",
-                "to": "r1.con0"
-            },
-            {
-                "from": "r1.con1",
-                "to": "SendPin"
+                "to": "r1.con1"
             },
             {
                 "from": "r1.con0",
+                "to": "SendPin"
+            },
+            {
+                "from": "r1.con1",
                 "to": "RcevPin"
             }
         ],

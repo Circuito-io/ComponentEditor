@@ -37,11 +37,11 @@
         "wires": [
             {
                 "from": "this.B1",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "this.GND",
-                "to": "r1.con0"
+                "to": "r1.con1"
             },
             {
                 "from": "this.A1",
@@ -49,18 +49,18 @@
             },
             {
                 "from": "this.GND",
-                "to": "r3.con0"
+                "to": "r3.con1"
             },
             {
-                "from": "r3.con1",
-                "to": "r2.con0"
-            },
-            {
-                "from": "this.B1",
+                "from": "r3.con0",
                 "to": "r2.con1"
             },
             {
-                "from": "r2.con0",
+                "from": "this.B1",
+                "to": "r2.con0"
+            },
+            {
+                "from": "r2.con1",
                 "to": "Aout"
             }
         ],
