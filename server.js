@@ -1,5 +1,5 @@
 global.dataFolder = __dirname + '/components';
-global.previewServer = "https://circuito-ci-staging-pr-317.herokuapp.com/save_components/testid";
+global.previewServer = "http://localhost:3000/save_components/testid";
 
 var express = require('express');
 var app = express();
