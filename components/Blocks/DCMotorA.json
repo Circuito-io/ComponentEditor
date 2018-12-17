@@ -1,11 +1,13 @@
 {
     "name": "DCMotorA",
     "path": "DCMotor",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "12288",
     "app": {
         "appName": "Standard Gearmotor - 107 RPM (12V)",
-        "image": null,
+        "image": "",
         "numericName": "",
         "shortName": "Standard Gearmotor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A full metal geared DC motor. It has a ratio of 56:1 and has a max speed of 107 RPM.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "DCMotor"
@@ -79,12 +81,6 @@
                 "interface": {
                     "requires":[[8,["3.3v"]],[7,["3.7v"]],[9,["3.7v","Battery"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
                     "requiresLoad": 400
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

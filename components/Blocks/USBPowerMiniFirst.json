@@ -1,11 +1,13 @@
 {
     "name": "USBPowerMiniFirst",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector"
+    ],
     "blockId": "514",
     "app": {
         "appName": "Mini USB Cable",
-        "image": "https://ucarecdn.com/60b32547-4305-4e35-97eb-2f4fee8c3af0/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/a9enhdowwykxyguiumlf",
         "numericName": "",
         "shortName": "Mini USB",
         "tags": [
@@ -17,11 +19,11 @@
             "solder": "false"
         },
         "desc": "<p>A standard Mini USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         150,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "requires":[[1,["USBPowerMiniWithFTDI5v"]],[2,["USBPowerMiniWithFTDI3v3"]],[3,["USBPowerMini"]]],
     "supportedControllers": [],

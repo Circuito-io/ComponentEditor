@@ -1,7 +1,9 @@
 {
     "name": "Mic3v3",
     "path": "Mic",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9964",
     "coders": [
         "Mic"
@@ -38,12 +40,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

@@ -1,11 +1,13 @@
 {
     "name": "pullPushSolenoidLarge",
     "path": "pullPushSolenoidLarge",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "10457",
     "app": {
         "appName": "Large Push-Pull Solenoid",
-        "image": "https://ucarecdn.com/7104717f-75c7-4d24-9e88-e47c9b21b7e3/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/osbtnvb5jzdlujv2ifa3",
         "numericName": "",
         "shortName": "Solenoid",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "pullPushSolenoidLarge"
@@ -78,12 +80,6 @@
                 "name": "Coil2",
                 "interface": {
                     "requires":[[0,["12v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

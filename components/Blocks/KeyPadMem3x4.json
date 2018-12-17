@@ -1,11 +1,13 @@
 {
     "name": "KeyPadMem3x4",
     "path": "KeyPadMem3x4",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "8654",
     "app": {
         "appName": "Membrane 3x4 Matrix Keypad",
-        "image": "https://ucarecdn.com/a18ce00d-31c3-4ecf-9213-33aa3eec132c/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ornp1mzmxe1daanr4ab0",
         "numericName": "",
         "shortName": "3x4 Matrix Keypad",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A simple 4-by-3 membrane Keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed KeyPad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "KeyPadMem3x4"
@@ -90,12 +92,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

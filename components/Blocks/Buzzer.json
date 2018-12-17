@@ -1,11 +1,13 @@
 {
     "name": "Buzzer",
     "path": "Buzzer",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "956215",
     "app": {
         "appName": "Buzzer",
-        "image": "https://ucarecdn.com/16787255-de91-4401-84b6-59e2d143aede/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/nguqhwfilt6ncwlgerlh",
         "numericName": "",
         "shortName": "Buzzer",
         "tags": [
@@ -58,14 +60,14 @@
             },
             {
                 "from": "BC337.B",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "BC337.E",
                 "to": "0"
             },
             {
-                "from": "r1.con0",
+                "from": "r1.con1",
                 "to": "Sig"
             },
             {
@@ -91,12 +93,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[1,["5v"]],[2,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

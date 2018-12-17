@@ -1,7 +1,9 @@
 {
     "name": "ESP32DevKitCUSB",
     "path": "ESP32DevKitC",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!360217",
     "supportedControllers": [
         "ESP32DevKitC"
@@ -276,12 +278,6 @@
                 "interface": {
                     "requires":[[0,["5v","USB"]]],
                     "requiresLoad": 50
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ESP32DevKitC"]]
                 }
             },
             {

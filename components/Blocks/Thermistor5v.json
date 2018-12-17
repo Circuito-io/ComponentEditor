@@ -1,7 +1,9 @@
 {
     "name": "Thermistor5v",
     "path": "Thermistor",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!149486",
     "coders": [
         "Thermistor"
@@ -28,11 +30,11 @@
         ],
         "wires": [
             {
-                "from": "this.con1",
-                "to": "r1.con0"
+                "from": "this.con0",
+                "to": "r1.con1"
             },
             {
-                "from": "r1.con1",
+                "from": "r1.con0",
                 "to": "VCC"
             }
         ],
@@ -54,12 +56,6 @@
                 "name": "con0",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ATMega328P"]]]
                 }
             }
         ]

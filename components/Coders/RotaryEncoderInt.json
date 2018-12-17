@@ -16,8 +16,7 @@
         "global": "    long {{varname}}OldPosition  = 0;\n",
         "constructors": "    {{classname}} {{varname}}({{D}},{{CLK}});\n    Button {{varname}}Button({{S1}});\n",
         "setup": "    {{varname}}Button.init();\n    pinMode({{S1}}, INPUT_PULLUP);\n",
-        "snippetCode": "    //Read encoder new position\n    long {{varname}}NewPosition = {{varname}}.read();\n    bool {{varname}}ButtonVal = {{varname}}Button.onPress();\n",
-        "    if ({{varname}}NewPosition != {{varname}}OldPosition || {{varname}}ButtonVal) {\n": "        {{varname}}OldPosition = {{varname}}NewPosition;\n        Serial.print(F(\"Pos: \"));\n        Serial.print({{varname}}NewPosition);\n        Serial.print(F(\"\\tButton: \"));\n        Serial.println({{varname}}ButtonVal);\n      }\n"
+        "snippetCode": "    //Read encoder new position\n    long {{varname}}NewPosition = {{varname}}.read();\n    bool {{varname}}ButtonVal = {{varname}}Button.onPress();\n    if ({{varname}}NewPosition != {{varname}}OldPosition || {{varname}}ButtonVal) {\n        {{varname}}OldPosition = {{varname}}NewPosition;\n        Serial.print(F(\"Pos: \"));\n        Serial.print({{varname}}NewPosition);\n        Serial.print(F(\"\\tButton: \"));\n        Serial.println({{varname}}ButtonVal);\n      }\n"
     },
     "license": "Free",
     "instantiate": {

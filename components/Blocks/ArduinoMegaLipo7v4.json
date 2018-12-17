@@ -1,7 +1,9 @@
 {
     "name": "ArduinoMegaLipo7v4",
     "path": "ArduinoMega",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11061",
     "requires": [
         [
@@ -601,12 +603,6 @@
                 "name": "USB_B",
                 "interface": {
                     "provides":[["USB_B"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoMega"]]
                 }
             }
         ]

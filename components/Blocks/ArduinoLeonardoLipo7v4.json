@@ -1,7 +1,9 @@
 {
     "name": "ArduinoLeonardoLipo7v4",
     "path": "ArduinoLeonardo",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!11286",
     "requires": [
         [
@@ -254,12 +256,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "provides":[["USB_MICRO"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["ArduinoLeonardo"]]
                 }
             }
         ]

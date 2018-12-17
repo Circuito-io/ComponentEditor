@@ -1,11 +1,13 @@
 {
     "name": "FTDI_DATA5v",
     "path": "FTDIData",
-    "category": "support",
+    "category": [
+        "support"
+    ],
     "blockId": "!1514678",
     "altComp": [
         150,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "supportedControllers": [
         "ATMega328P"
@@ -46,12 +48,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ATMega328P"]]]
                 }
             }
         ]

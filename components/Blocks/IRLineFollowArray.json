@@ -1,11 +1,13 @@
 {
     "name": "IRLineFollowArray",
     "path": "IRLineFollowArray",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "615959",
     "app": {
         "appName": "SparkFun Line Follower Array",
-        "image": "https://ucarecdn.com/086a80ac-c3c3-4b3a-9088-41fc6409cd67/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/vfiqziyjftlm0zzlpi2j",
         "numericName": "",
         "shortName": "Line Follower Array",
         "tags": [
@@ -61,12 +63,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
                 }
             }
         ]

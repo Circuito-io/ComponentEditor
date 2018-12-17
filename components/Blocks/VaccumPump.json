@@ -1,11 +1,13 @@
 {
     "name": "VaccumPump",
     "path": "VaccumPump",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "10398",
     "app": {
         "appName": "Vacuum Pump - 12V",
-        "image": "https://ucarecdn.com/58284b23-5509-4f1f-8443-66e8468e5d1c/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/uftakxmjwnh5ngb5zvmg",
         "numericName": "",
         "shortName": "Vacuum Pump",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "VaccumPump"
@@ -64,12 +66,6 @@
                 "interface": {
                     "requires":[[1,["12v"]]],
                     "requiresLoad": 400
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

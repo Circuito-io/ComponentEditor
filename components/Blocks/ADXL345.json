@@ -1,11 +1,13 @@
 {
     "name": "ADXL345",
     "path": "ADXL345",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "9836",
     "app": {
         "appName": "SparkFun ADXL345 - Triple Axis Accelerometer Breakout",
-        "image": "https://ucarecdn.com/bf24de74-81e8-4559-ae8b-19ed29bc9426/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pd49wdojw9mpsbbrovzy",
         "numericName": "ADXL345",
         "shortName": "Triple Axis Accelerometer ADXL345",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>This accelerometer measures the acceleration of an object in 3 axes - x-y-z. Acceleration is a change in rate, speed, etc.. If an object start moving faster or slower - it is detected by the accelerometer.<br><strong>Range</strong>: +-16 g.<br><strong>Requires</strong>: soldering 8 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/34five-Arduino-Pet/\">34five Arduino Pet</a>.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "ADXL345"
@@ -81,12 +83,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

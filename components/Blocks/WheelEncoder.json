@@ -1,11 +1,13 @@
 {
     "name": "WheelEncoder",
     "path": "WheelEncoder",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "774824",
     "app": {
         "appName": "Photoelectric Speed Wheel Encoder",
-        "image": "https://ucarecdn.com/19e58b54-5a28-4fa8-927f-de6aef4690a3/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/rfpkzhawgvwlcy3kaull",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Use the wheel encoder to measure shaft speed or location. Popular in wheeled robotics. Connect the wheel to the motor shaft and the sensor to your Arduino.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[3,["WheelEncoderInt"]],[5,["WheelEncoderDigital"]]],
     "supportedControllers": [],

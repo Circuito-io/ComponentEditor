@@ -1,11 +1,13 @@
 {
     "name": "WaterFlow",
     "path": "WaterFlow",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "641455",
     "app": {
         "appName": "Water Flow Sensor G1/2''",
-        "image": "https://ucarecdn.com/08ad7266-c12c-4c36-947e-1fdbf6629eac/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/vvaw0nnwmgbn6pfj5zqh",
         "numericName": "",
         "shortName": "Water Flow Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The water flow sensor based on a water rotor and a hall-effect sensor.<br> When the water flows through the rotor, the rotor rolls and the speed of it changes with a different rate of flow. The hall-effect sensor outputs the corresponding pulse signal.<br><strong>Returned Value</strong>: RPM calculated from the built-in hall effect sensor</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["WaterFlow5v"]],[1,["WaterFlow3v3"]]],
     "supportedControllers": [],

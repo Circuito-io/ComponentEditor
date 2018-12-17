@@ -1,7 +1,9 @@
 {
     "name": "FingerprintScanner5v",
     "path": "FingerprintScanner",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!11792",
     "coders": [
         "FingerprintScanner"
@@ -33,18 +35,18 @@
         "wires": [
             {
                 "from": "this.RX",
-                "to": "r1.con0"
-            },
-            {
-                "from": "r1.con0",
-                "to": "r2.con0"
-            },
-            {
-                "from": "r2.con1",
-                "to": "this.GND"
+                "to": "r1.con1"
             },
             {
                 "from": "r1.con1",
+                "to": "r2.con1"
+            },
+            {
+                "from": "r2.con0",
+                "to": "this.GND"
+            },
+            {
+                "from": "r1.con0",
                 "to": "Rx"
             }
         ],
@@ -73,12 +75,6 @@
                 "name": "VCC",
                 "interface": {
                     "requires":[[0,["3.3v"]],[1,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ATMega328P"]]]
                 }
             }
         ]

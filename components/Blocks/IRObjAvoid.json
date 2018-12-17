@@ -1,11 +1,13 @@
 {
     "name": "IRObjAvoid",
     "path": "IRObjAvoid",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "811437",
     "app": {
         "appName": "IR Obstacle Avoidance sensor",
-        "image": "https://ucarecdn.com/faf9c30a-5aef-4a9b-b3ea-226151a7d7ee/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/nkztjsx6h9uq7rezdabf",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This sensor can detect the presence of an obstacle in front of it.<br>The discovery distance can be adjusted using the on board trimmer.<br><strong>Returned values</strong>: digital '1' or '0'.<br></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["IRObjAvoid5v"]],[1,["IRObjAvoid3v3"]]],
     "supportedControllers": [],

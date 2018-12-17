@@ -1,7 +1,9 @@
 {
     "name": "IRPosCamera3v3",
     "path": "IRPosCamera",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!838186",
     "coders": [
         "IRPosCamera"
@@ -42,12 +44,6 @@
                 "name": "SCL",
                 "interface": {
                     "requires":[[0,["3.3v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

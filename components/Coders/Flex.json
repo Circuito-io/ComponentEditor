@@ -15,8 +15,6 @@
         "RPI3B"
     ],
     "code": {
-        "# precond": "#     // Read Flex sensor value.\n",
-        "# boolcond": "#     {{varname}}.read() < 512\n",
         "snippetCode": "    // Read Flex sensor value.\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",

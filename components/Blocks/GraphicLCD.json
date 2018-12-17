@@ -1,11 +1,13 @@
 {
     "name": "GraphicLCD",
     "path": "GraphicLCD",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "8799",
     "app": {
         "appName": "Graphic LCD 160x128 Huge",
-        "image": "https://ucarecdn.com/c850d0e8-9566-49d0-bd68-5404030b4c1b/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pwbeovatluc0uwehggza",
         "numericName": "",
         "shortName": "Graphic LCD 160x128",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A huge LCD screen, allowing you to display long messages, or complex drawings. It\u2019s background is blue with a white font. The  screen may be sensitive to very low or very high temperature.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "GraphicLCD"
@@ -77,12 +79,6 @@
                 "name": "Gnd",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["Arduino101"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

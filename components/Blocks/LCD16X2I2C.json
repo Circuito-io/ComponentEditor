@@ -1,11 +1,13 @@
 {
     "name": "LCD16X2I2C",
     "path": "LCD16x2I2C",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "417986",
     "app": {
         "appName": "LCD 16x2 I2C",
-        "image": "https://ucarecdn.com/1f0b8a93-5946-40d9-8a5d-13c047c32370/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/coxoyaydelyqmxfo0k0g",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings via I2C interface.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=kukV4xrqRl4\">Clock using Arduino I2C bus for both RTC and 16x2 LCD display</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "LCD16X2I2C"
@@ -69,12 +71,6 @@
                 "interface": {
                     "isBus": true,
                     "requires":[[0,["5v","SCL"]],[1,["3.3v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

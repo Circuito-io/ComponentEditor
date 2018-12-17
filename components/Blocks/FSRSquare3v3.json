@@ -1,7 +1,9 @@
 {
     "name": "FSRSquare3v3",
     "path": "FSRSquare",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!9376",
     "coders": [
         "FSRSquare"
@@ -48,12 +50,6 @@
                 "name": "2",
                 "interface": {
                     "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

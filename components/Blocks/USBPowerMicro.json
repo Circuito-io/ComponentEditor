@@ -1,11 +1,13 @@
 {
     "name": "USBPowerMicro",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector"
+    ],
     "blockId": "513",
     "app": {
         "appName": "Micro USB Cable",
-        "image": "https://ucarecdn.com/0cbc4d52-97b0-4107-b84d-9932f7242976/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/qxxcep3aniqsvt4ktrcl",
         "numericName": "",
         "shortName": "Micro USB",
         "tags": [
@@ -17,11 +19,11 @@
             "solder": "false"
         },
         "desc": "<p>A standard Micro USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         150,
-        "PowerSupply12v"
+        "PowerSupply12v2A"
     ],
     "supportedControllers": [
         "ArduinoGemma",
@@ -55,12 +57,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "requires":[[0,["USB_MICRO"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMicro"]],[1,["NodeMCU"]],[2,["ArduinoLeonardo"]],[3,["ArduinoGemma"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

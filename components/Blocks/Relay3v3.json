@@ -1,7 +1,9 @@
 {
     "name": "Relay3v3",
     "path": "Relay",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!100",
     "coders": [
         "Relay3v3"
@@ -35,7 +37,7 @@
             },
             {
                 "from": "BC337.B",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
                 "from": "BC337.E",
@@ -46,7 +48,7 @@
                 "to": "Vcc"
             },
             {
-                "from": "r1.con0",
+                "from": "r1.con1",
                 "to": "Sig"
             }
         ],
@@ -68,12 +70,6 @@
                 "name": "Vcc",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[6,["ArduinoGemma"]],[7,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

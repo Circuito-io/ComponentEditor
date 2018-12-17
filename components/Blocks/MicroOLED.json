@@ -1,11 +1,13 @@
 {
     "name": "MicroOLED",
     "path": "MicroOLED",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "460448",
     "app": {
         "appName": "SparkFun Micro OLED Breakout",
-        "image": "https://ucarecdn.com/db730ffe-8904-4610-8a84-dd20530663c4/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ayu0kh64lyhwwgp9mrpp",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "true"
         },
         "desc": "<p>The SparkFun Micro OLED Breakout Board breaks out a small monochrome, blue-on-black OLED. It\u2019s \u201cmicro\u201d, but it still packs a punch \u2013 the OLED display is crisp, and you can fit a deceivingly large amount of graphics on there.</p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "MicroOLED"
@@ -95,12 +97,6 @@
                 "interface": {
                     "requires":[[1,["5v","DigitalOut"]],[0,["3.3v","DigitalOut"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

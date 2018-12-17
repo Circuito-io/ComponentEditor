@@ -1,11 +1,13 @@
 {
     "name": "LedRGBWS2812",
     "path": "LedRGBWS2812",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "855863",
     "app": {
         "appName": "LED - RGB Addressable, PTH, 5mm Diffused (5 Pack)",
-        "image": "https://ucarecdn.com/db02c233-e923-449b-8573-e10ec73d4cb4/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/y6hf6glzzlghuksc5ffa",
         "numericName": "WS2812",
         "shortName": "Addressable RGB LED",
         "tags": [
@@ -68,12 +70,6 @@
                 "name": "DOUT",
                 "interface": {
                     "chain": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

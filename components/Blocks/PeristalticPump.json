@@ -1,11 +1,13 @@
 {
     "name": "PeristalticPump",
     "path": "PeristalticPump",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "898128",
     "app": {
         "appName": "Peristaltic Liquid Pump with Silicone Tubing",
-        "image": "https://ucarecdn.com/bdb4ee2f-b092-48fd-b7db-66da923e9b21/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/l7vazn8eteouip0bbyzi",
         "numericName": "",
         "shortName": "Liquid Pump",
         "tags": [
@@ -64,12 +66,6 @@
                 "interface": {
                     "requires":[[1,["12v"]]],
                     "requiresLoad": 300
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

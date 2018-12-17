@@ -1,11 +1,13 @@
 {
     "name": "LedMatrix",
     "path": "LedMatrix",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "281909",
     "app": {
         "appName": "8x8 LED display Matrix - MAX7219",
-        "image": "https://ucarecdn.com/d58026af-18fe-401e-99ff-0d918acc08fc/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/uksoxl14hwp5jfoepn74",
         "numericName": "MAX7219",
         "shortName": "8x8 LED display Matrix",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Control a 8x8 LED matrix display using the MAX7219. Up to 8 modules can be chained for a longer display.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/LED-Matrix-with-Arduino/\">LED Matrix with Arduino</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "LedMatrix"
@@ -137,12 +139,6 @@
                 "name": "CS_PT",
                 "interface": {
                     "chain": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoLeonardo"]],[5,["ArduinoNano"]],[6,["ArduinoProMini3v3"]],[7,["NodeMCU"]],[8,["RPI3B"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

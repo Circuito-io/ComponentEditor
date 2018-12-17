@@ -1,11 +1,13 @@
 {
     "name": "MQ135",
     "path": "MQ135",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "398790",
     "app": {
         "appName": "Hazardous Gas Sensor - MQ-135",
-        "image": "https://ucarecdn.com/e291c518-5e0a-4ede-a24f-af1199eed833/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/w2epykpbxvhhaupy5y3e",
         "numericName": "MQ135",
         "shortName": "Hazardous Gas Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>The MQ-135 can detect a wide range of gases, including NH3, NOx, alcohol, benzene, smoke and CO2.</p>",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["MQ1355v"]],[2,["MQ1353v3"]]],
     "supportedControllers": [],

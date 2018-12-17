@@ -1,7 +1,9 @@
 {
     "name": "IRObjAvoid3v3",
     "path": "IRObjAvoid",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!811437",
     "coders": [
         "IRObjAvoid3v3"
@@ -31,18 +33,18 @@
         "wires": [
             {
                 "from": "this.GND",
-                "to": "r2.con1"
+                "to": "r2.con0"
             },
             {
-                "from": "r2.con0",
-                "to": "r1.con1"
-            },
-            {
-                "from": "this.OUT",
+                "from": "r2.con1",
                 "to": "r1.con0"
             },
             {
-                "from": "r1.con1",
+                "from": "this.OUT",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
                 "to": "out"
             }
         ],
@@ -64,12 +66,6 @@
                 "interface": {
                     "requires":[[0,["3.3v","DigitalIn"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[9,["ESP32DevKitC"]]]
                 }
             }
         ]

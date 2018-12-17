@@ -1,7 +1,9 @@
 {
     "name": "NodeMCU1.0_USB",
     "path": "NodeMCU1.0",
-    "category": "controller",
+    "category": [
+        "controller"
+    ],
     "blockId": "!360216",
     "supportedControllers": [
         "NodeMCU"
@@ -173,12 +175,6 @@
                 "interface": {
                     "codename": "A0",
                     "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "provides":[["NodeMCU"]]
                 }
             },
             {

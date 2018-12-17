@@ -1,11 +1,13 @@
 {
     "name": "ReedSwitch",
     "path": "ReedSwitch",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "8642",
     "app": {
         "appName": "Reed Switch",
-        "image": "https://ucarecdn.com/78053f5d-4268-4b72-8f73-228dea293c00/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/htaqbvtozf9t7kv2cmcf",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A neat magnetic switch, that closes a circuit in present of a magnet and disconnects when the magnet is removed.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["ReedSwitch5v"]],[1,["ReedSwitch3v3"]]],
     "supportedControllers": [],

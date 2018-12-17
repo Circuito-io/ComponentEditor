@@ -1,7 +1,9 @@
 {
     "name": "MAX30105-3v3",
     "path": "MAX30105",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!220687",
     "coders": [
         "MAX30105"
@@ -42,12 +44,6 @@
                 "name": "SDA",
                 "interface": {
                     "requires":[[0,["3.3v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[6,["ESP32DevKitC"]]]
                 }
             }
         ]

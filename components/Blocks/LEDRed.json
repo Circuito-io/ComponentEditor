@@ -1,11 +1,13 @@
 {
     "name": "LEDRed",
     "path": "LEDRed",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "9590",
     "app": {
         "appName": "Basic Red LED 5mm",
-        "image": "https://ucarecdn.com/84a2b3b9-4466-4d48-99d8-ba7f3d1661e8/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/fciu7ko9cvpktztsbjsg",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This is a very basic, small, Red LED. Control the intensity of the color at a range of 0-255. Its Luminous Intensity is 150-200mcd.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[1,["LEDRed5v"]],[2,["LEDRed3.3v"]]],
     "supportedControllers": [],

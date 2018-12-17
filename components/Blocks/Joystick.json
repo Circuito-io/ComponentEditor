@@ -1,11 +1,13 @@
 {
     "name": "Joystick",
     "path": "Joystick",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "611984",
     "app": {
         "appName": "PS2 Joystick two axis module",
-        "image": "https://ucarecdn.com/6e84158a-54bf-4f44-80bc-e2ce47db99f5/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/k6guurszijibgwhxdaqx",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>This Joystick is simply two 10Kohm potentiometers - one for each axis. The module also has a pushbutton for press functionality.</p>\n<p><strong>Returned Values</strong>: &#39;0 - 1023&#39; analog input value per direction and logical &#39;0&#39; or &#39;1&#39; for press.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://blog.arduino.cc/2012/12/23/xbee-controlled-4wd-wireless-robot/\">XBEE-CONTROLLED 4WD WIRELESS ROBOT</a></p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["Joystick5v"]],[1,["Joystick3v3"]]],
     "supportedControllers": [],

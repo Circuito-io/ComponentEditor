@@ -1,11 +1,13 @@
 {
     "name": "PiezoSpeaker",
     "path": "PiezoSpeaker",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "7950",
     "app": {
         "appName": "Piezo Speaker - PC Mount 12mm 2.048kHz",
-        "image": "https://ucarecdn.com/b49b1410-0b0e-4787-b1fa-baeb8db83c3f/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/z2hfiw8pu2vn9oog4ccc",
         "numericName": "",
         "shortName": "Piezo Speaker",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A very small vibration speaker, that allows you to play simple tones and basic melodies.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Piezo-Tunes/\">Piezo Tunes</a>.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "requires":[[0,["PiezoSpeaker5v"]],[1,["PiezoSpeaker3v3"]]],
     "supportedControllers": [],

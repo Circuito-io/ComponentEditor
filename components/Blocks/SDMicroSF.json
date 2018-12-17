@@ -1,11 +1,13 @@
 {
     "name": "SDMicroSF",
     "path": "SDMicroSF",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "520501",
     "app": {
         "appName": "SparkFun Level Shifting microSD Breakout",
-        "image": "https://ucarecdn.com/dfd63b02-2081-4c50-acb5-a76ed62d9fbc/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/buhf1xqjx5rlgv4kwyiw",
         "numericName": "",
         "shortName": "microSD",
         "tags": [
@@ -85,12 +87,6 @@
                 "name": "GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["NodeMCU"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]

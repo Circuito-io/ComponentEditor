@@ -1,7 +1,9 @@
 {
     "name": "SevenSegmentI2C",
     "path": "SevenSegment",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "!11441",
     "supportedControllers": [
         "ESP32DevKitC",
@@ -44,12 +46,6 @@
                 "name": "SCL",
                 "interface": {
                     "requires":[[0,["3.3v","SCL"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["RPI3B"]],[1,["ESP32DevKitC"]]]
                 }
             }
         ]

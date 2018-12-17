@@ -1,7 +1,9 @@
 {
     "name": "AM2320-3v3",
     "path": "AM2320",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!656839",
     "coders": [
         "AM2320"
@@ -61,12 +63,6 @@
                 "name": "SDA",
                 "interface": {
                     "requires":[[0,["3.3v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[8,["ESP32DevKitC"]]]
                 }
             }
         ]

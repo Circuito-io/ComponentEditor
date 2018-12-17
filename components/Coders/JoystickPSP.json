@@ -14,7 +14,6 @@
         "RPI3B"
     ],
     "code": {
-        "#snippetCode": "#    // Read Joystick X,Y axis\n#    int {{varname}}X =  {{varname}}.getX();\n#    int {{varname}}Y =  {{varname}}.getY();\n#    Serial.print(F(\"X: \")); Serial.print({{varname}}X);\n#    Serial.print(F(\"\\tY: \")); Serial.print({{varname}}Y);\n",
         "snippetCode": "    // Read Joystick X,Y axis\n    int {{varname}}X = analogRead({{X}});\n    int {{varname}}Y = analogRead({{Y}});\n    Serial.print({{varname}}X); Serial.print(\"\\t\");\n    Serial.println({{varname}}Y);\n"
     },
     "license": "ArduinoIDE",

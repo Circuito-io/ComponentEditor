@@ -1,11 +1,13 @@
 {
     "name": "PowerBankUSB5v",
     "path": "Power",
-    "category": "powerConnector",
+    "category": [
+        "powerConnector"
+    ],
     "blockId": "783869",
     "app": {
         "appName": "Power Bank USB - 5v 10000mAh",
-        "image": null,
+        "image": "",
         "numericName": "",
         "shortName": "",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A large-sized rechargeable battery pack for your Raspberry Pi. Inside is a massive 10,000mAh lithium ion battery, a charging circuit  and two boost converters that provide 5VDC, 1A and 2A each via a USB A port.<br>This part can only be used with Raspberry Pi.</p>",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         100,
@@ -52,12 +54,6 @@
                 "name": "USB_MICRO",
                 "interface": {
                     "requires":[[0,["USB_MICRO"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["RPI3B"]]]
                 }
             }
         ]

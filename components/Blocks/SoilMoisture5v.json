@@ -1,7 +1,9 @@
 {
     "name": "SoilMoisture5v",
     "path": "SoilMoisture",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!13322",
     "coders": [
         "SoilMoisture"
@@ -41,12 +43,6 @@
                 "name": "Vin",
                 "interface": {
                     "requires":[[1,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[9,["ArduinoGemma"]],[10,["ATMega328P"]]]
                 }
             }
         ]

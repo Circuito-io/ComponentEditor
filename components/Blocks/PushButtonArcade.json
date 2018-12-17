@@ -1,11 +1,13 @@
 {
     "name": "PushButtonArcade",
     "path": "PushButtonArcade",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "62012",
     "app": {
         "appName": "Arcade Button with LED - 30mm Translucent Red",
-        "image": "https://ucarecdn.com/2fb965a1-f81f-4b0d-8e1f-1dc4578d93fa/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pisyjvyvi0db5ti1qeqg",
         "numericName": "",
         "shortName": "Arcade Button",
         "tags": [
@@ -45,10 +47,10 @@
         "wires": [
             {
                 "from": "this.BUTTON_SIG",
-                "to": "r1.con1"
+                "to": "r1.con0"
             },
             {
-                "from": "r1.con0",
+                "from": "r1.con1",
                 "to": "0"
             }
         ],
@@ -83,12 +85,6 @@
                 "name": "LED_GND",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoUno"]],[1,["ArduinoMega"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoLeonardo"]],[6,["ArduinoNano"]],[7,["ATMega328P"]]]
                 }
             }
         ]

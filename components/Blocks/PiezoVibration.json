@@ -1,11 +1,13 @@
 {
     "name": "PiezoVibration",
     "path": "PiezoVibration",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "117693",
     "app": {
         "appName": "Piezo Vibration Sensor - Large with Mass",
-        "image": "https://ucarecdn.com/cca48e27-652d-4b93-84ee-b11d4be5daf1/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/j7kpxdfxhxwfaupre72c",
         "numericName": "",
         "shortName": "Piezo Vibration Sensor",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>Piezo Vibration Sensor is suitable for measurements of flexibility, vibration, impact and touch. When the sensor moves back and forth, a certain voltage will be created by the voltage comparator inside of it. <br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong></p>",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "PiezoVibration"
@@ -50,14 +52,14 @@
         "wires": [
             {
                 "from": "this.+",
-                "to": "r1.con0"
-            },
-            {
-                "from": "this.-",
                 "to": "r1.con1"
             },
             {
-                "from": "r1.con0",
+                "from": "this.-",
+                "to": "r1.con0"
+            },
+            {
+                "from": "r1.con1",
                 "to": "neg"
             }
         ],
@@ -73,12 +75,6 @@
                 "name": "-",
                 "interface": {
                     "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["RPI3B"]],[10,["ESP32DevKitC"]],[11,["ATMega328P"]]]
                 }
             }
         ]

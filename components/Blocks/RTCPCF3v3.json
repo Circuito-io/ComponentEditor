@@ -1,7 +1,9 @@
 {
     "name": "RTCPCF3v3",
     "path": "RTCPCF",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!113323",
     "coders": [
         "RTCPCF"
@@ -42,12 +44,6 @@
                 "name": "SDA",
                 "interface": {
                     "requires":[[0,["3.3v","SDA"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[6,["Arduino101"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

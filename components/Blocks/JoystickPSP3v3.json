@@ -1,7 +1,9 @@
 {
     "name": "JoystickPSP3v3",
     "path": "JoystickPSP",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!476174",
     "coders": [
         "JoystickPSP"
@@ -44,12 +46,6 @@
                 "interface": {
                     "requires":[[0,["ADC"]]],
                     "unique": true
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

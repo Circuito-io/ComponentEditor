@@ -1,7 +1,9 @@
 {
     "name": "MQ83v3",
     "path": "MQ8",
-    "category": "input",
+    "category": [
+        "input"
+    ],
     "blockId": "!398788",
     "coders": [
         "MQ83v3"
@@ -31,18 +33,18 @@
         "wires": [
             {
                 "from": "this.GND",
-                "to": "r2.con1"
+                "to": "r2.con0"
             },
             {
-                "from": "r2.con0",
-                "to": "r1.con1"
-            },
-            {
-                "from": "this.AOUT",
+                "from": "r2.con1",
                 "to": "r1.con0"
             },
             {
-                "from": "r1.con1",
+                "from": "this.AOUT",
+                "to": "r1.con1"
+            },
+            {
+                "from": "r1.con0",
                 "to": "Aout"
             }
         ],
@@ -64,12 +66,6 @@
                 "name": "5V",
                 "interface": {
                     "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoProMini3v3"]],[1,["NodeMCU"]],[2,["ArduinoGemma"]],[3,["RPI3B"]],[7,["ESP32DevKitC"]]]
                 }
             }
         ]

@@ -1,11 +1,13 @@
 {
     "name": "SubWaterPump",
     "path": "SubmersibleWaterPump",
-    "category": "output",
+    "category": [
+        "output"
+    ],
     "blockId": "987654",
     "app": {
         "appName": "Submersible Pool Water Pump",
-        "image": "https://ucarecdn.com/136aa2ea-a9c5-48f6-913e-f2341623f8e4/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/lygabzvew9s3zft1uneg",
         "numericName": " ",
         "shortName": "Water Pump",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A simple 12 VDC submersible water pump.<br>Use this pump to make a fountain or waterfall, even water your plants!<br>Specifications:<br><li>Rated voltage: 12V DC.<br><li>Max rated current: 350mA.<br><li>Max flow rate: 240L/H.<br><li>Max Head(lift height): 3M.<br><li>Submersible installation and entirely waterproof.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "coders": [
         "SubWaterPump"
@@ -65,12 +67,6 @@
                 "interface": {
                     "requires":[[1,["12v"]]],
                     "requiresLoad": 400
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[5,["ArduinoProMini3v3"]],[6,["NodeMCU"]],[7,["ArduinoLeonardo"]],[8,["ArduinoNano"]],[10,["RPI3B"]],[11,["ESP32DevKitC"]],[12,["ATMega328P"]]]
                 }
             }
         ]

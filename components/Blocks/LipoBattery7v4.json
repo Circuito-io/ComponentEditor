@@ -1,11 +1,13 @@
 {
     "name": "LipoBattery7v4",
     "path": "Power",
-    "category": "power",
+    "category": [
+        "power"
+    ],
     "blockId": "11856",
     "app": {
         "appName": "Lithium Polymer Battery 7.4v",
-        "image": "https://ucarecdn.com/53dfff05-bf4a-443d-be26-9a49ae319cda/",
+        "image": "http://res.cloudinary.com/circuito/image/upload/bpaxgam0z62jjbjlv9xx",
         "numericName": "",
         "shortName": "LiPo Battery 7.4V",
         "tags": [
@@ -17,7 +19,7 @@
             "solder": "false"
         },
         "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
-        "visible": false
+        "visible": "False"
     },
     "altComp": [
         100,
@@ -61,12 +63,6 @@
                 "name": "PowerType",
                 "interface": {
                     "provides":[["Battery"]]
-                }
-            },
-            {
-                "name": "supportedControllers",
-                "interface": {
-                    "requires":[[0,["ArduinoMega"]],[1,["ArduinoUno"]],[2,["ArduinoMicro"]],[3,["ArduinoProMini5v"]],[4,["ArduinoProMini3v3"]],[5,["NodeMCU"]],[6,["ArduinoLeonardo"]],[7,["ArduinoNano"]],[8,["ArduinoGemma"]],[9,["ESP32DevKitC"]],[10,["ATMega328P"]]]
                 }
             }
         ]
