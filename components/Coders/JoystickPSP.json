@@ -1,18 +1,6 @@
 {
     "name": "JoystickPSP",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "snippetCode": "    // Read Joystick X,Y axis\n    int {{varname}}X = analogRead({{X}});\n    int {{varname}}Y = analogRead({{Y}});\n    Serial.print({{varname}}X); Serial.print(\"\\t\");\n    Serial.println({{varname}}Y);\n"
     },

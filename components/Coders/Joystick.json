@@ -1,18 +1,6 @@
 {
     "name": "Joystick",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "snippetCode": "    // Read Joystick X,Y axis and press\n    int {{varname}}X =  {{varname}}.getX();\n    int {{varname}}Y =  {{varname}}.getY();\n    int {{varname}}SW =  {{varname}}.getSW();\n    Serial.print(F(\"X: \")); Serial.print({{varname}}X);\n    Serial.print(F(\"\\tY: \")); Serial.print({{varname}}Y);\n    Serial.print(F(\"\\tSW: \")); Serial.println({{varname}}SW);\n"
     },

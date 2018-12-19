@@ -1,18 +1,6 @@
 {
     "name": "LedMatrix",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "  byte {{varname}}inUse = {{numOfSameComp}};                      //Specify how many Max7219 led matrices are chained\n  int {{varname}}textScrollingSpeed = 50;        //Specify the scrolling speed\n  char {{varname}}Str[] = \"Hello World!    \";     //Specify the string to be displayed\n",
         "setup": "    {{varname}}.init({{varname}}inUse);       //Initialize Led Matrices\n    {{varname}}.setIntensity(5);            //LED Intensity 0-15\n",

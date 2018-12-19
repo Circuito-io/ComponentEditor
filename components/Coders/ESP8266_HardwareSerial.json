@@ -1,14 +1,6 @@
 {
     "name": "ESP8266_HardwareSerial",
-    "supportedControllers": [
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    // ====================================================================\n    // vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n    //\n    const char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \n    const char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n    //\n    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    // ====================================================================\n    char* const host = \"www.google.com\";\n    int hostPort = 80;\n",
         "constructors": "    {{classname}} {{varname}};\n",
@@ -21,8 +13,6 @@
         "varname": "wifi"
     },
     "files": [
-        "ESP8266h.h",
-        "ESP8266cpp.cpp",
         "ESP8266.h"
     ],
     "includeHeaders": [

@@ -1,19 +1,6 @@
 {
     "name": "serLCD",
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU"
-    ],
+    "supportedControllers": [],
     "code": {
         "constructors": "    SoftwareSerial {{varname}}NSS(0,{{RX}});\n    SerLCD {{varname}}({{varname}}NSS); \n",
         "setup": "    {{varname}}NSS.begin(9600); \n    {{varname}}.begin();   \n",

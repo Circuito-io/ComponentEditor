@@ -1,18 +1,6 @@
 {
     "name": "VaccumPump",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "snippetCode": "    // The water pump will turn on and off for 2000ms (4 sec)\n    {{varname}}.on(); // 1. turns on\n    delay(2000);       // 2. waits 500 milliseconds (0.5 sec).\n    {{varname}}.off();// 3. turns off\n    delay(2000);       // 4. waits 500 milliseconds (0.5 sec).\n"
     },
