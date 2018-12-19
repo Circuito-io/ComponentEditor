@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const oboe = require("oboe");
 
-const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: []}, type = null) => {
+const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}, type = null) => {
 	if (fs.statSync(d).isDirectory()) {
 		if (type == null) {
 			if (d.includes('/Parts')) {
@@ -28,7 +28,15 @@ const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: []}, type = null) 
 			res[type].push(data);
 		}
 		else {
-				res[type].push({name: d, content: encodeURIComponent(data)});
+			let path = d.split('\\').pop().split('/');
+			let filename = path.pop();
+			let curDir = path.pop();
+			// It's a code file belonging to a coder
+			res['CodeFiles'].push({
+				name: filename,
+				coder: curDir,
+				content: encodeURIComponent(data)
+			});
 		}
 	}
 
@@ -38,6 +46,7 @@ const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: []}, type = null) 
 exports.preview = function(req, res) {
 
   var files = walkDirSync(global.dataFolder);
+  console.log(files);
   
   request({
   	url: global.previewServer,
