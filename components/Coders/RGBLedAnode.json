@@ -1,18 +1,6 @@
 {
     "name": "RGBLedAnode",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    #define {{varname}}_TYPE COMMON_ANODE\n",
         "setup": "    {{varname}}.turnOff();              // Start with  LED Strip RGB turned off\n",
@@ -23,9 +11,9 @@
     "instantiate": {
         "classname": "RGBLed",
         "ports": [
-            "R",
-            "G",
-            "B"
+            "r",
+            "g",
+            "b"
         ],
         "varname": "rgbLed"
     },

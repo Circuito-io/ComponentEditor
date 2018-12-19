@@ -1,19 +1,6 @@
 {
     "name": "LedMatrixRGB",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    #define {{varname}}_NUM_LEDS 64*{{numOfSameComp}}\n    #define {{varname}}_BRIGHTNESS 10\n",
         "constructors": "    {{classname}} {{varname}} = {{classname}}({{varname}}_NUM_LEDS, {{DIN}}, NEO_GRBW + NEO_KHZ800);\n",

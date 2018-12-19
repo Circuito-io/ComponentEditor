@@ -1,19 +1,6 @@
 {
     "name": "SevenSegSingle",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    //define an array for all the segments\n    int {{varname}}Pins[] = { {{DP}}, {{C}}, {{D}}, {{E}}, {{B}}, {{A}}, {{F}}, {{G}} };\n",
         "constructors": "",

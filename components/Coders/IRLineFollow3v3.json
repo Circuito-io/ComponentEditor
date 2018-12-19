@@ -1,12 +1,6 @@
 {
     "name": "IRLineFollow3v3",
-    "supportedControllers": [
-        "ArduinoGemma",
-        "ArduinoProMini3v3",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "setup": "    pinMode({{OUT}}, INPUT);\n",
         "snippetCode": "    //Read IR Line Follower Sensor. {{varname}}Var will be '0' if a black line was detected\n    bool {{varname}}Var = digitalRead({{OUT}});\n    Serial.print(F(\"LineFollow: \")); Serial.println({{varname}}Var);\n"

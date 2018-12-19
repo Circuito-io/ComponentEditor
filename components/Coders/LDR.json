@@ -1,14 +1,6 @@
 {
     "name": "LDR",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    #define THRESHOLD_{{varname}}   100\n    int {{varname}}AverageLight;\n",
         "setup": "    {{varname}}AverageLight = {{varname}}.readAverage();\n",
