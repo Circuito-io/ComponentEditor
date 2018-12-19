@@ -48,34 +48,34 @@
             },
             {
                 "from": "Res_B.con1",
-                "to": "B"
+                "to": "b"
             },
             {
                 "from": "Res_R.con1",
-                "to": "R"
+                "to": "r"
             },
             {
                 "from": "Res_G.con1",
-                "to": "G"
+                "to": "g"
             }
         ],
         "ports": [
             {
-                "name": "B",
+                "name": "b",
                 "interface": {
                     "requires":[[0,["3.3v","PWM"]]],
                     "unique": true
                 }
             },
             {
-                "name": "G",
+                "name": "g",
                 "interface": {
                     "requires":[[0,["3.3v","PWM"]]],
                     "unique": true
                 }
             },
             {
-                "name": "R",
+                "name": "r",
                 "interface": {
                     "requires":[[0,["3.3v","PWM"]]],
                     "unique": true

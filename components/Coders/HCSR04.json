@@ -1,15 +1,6 @@
 {
     "name": "HCSR04",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno"
-    ],
+    "supportedControllers": [],
     "code": {
         "snippetCode": "    // Read distance measurment from UltraSonic sensor           \n    int {{varname}}Dist = {{varname}}.ping_cm();\n    delay(10);\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
     },
