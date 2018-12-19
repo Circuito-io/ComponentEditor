@@ -1,18 +1,6 @@
 {
     "name": "DCMotor",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "snippetCode": "    // The DC motor will turn on and off for 4000ms (4 sec)\n    {{varname}}.on(200);                        // 1. turns on\n    delay(4000);                             // 2. waits 4000 milliseconds (4 sec). change the value in the brackets (4000) for a longer or shorter delay.\n    {{varname}}.off();                       // 3. turns off\n    delay(4000);                             // 4. waits 4000 milliseconds (4 sec). change the value in the brackets (4000) for a longer or shorter delay.\n"
     },

@@ -1,19 +1,6 @@
 {
     "name": "DCMDriverL293D",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "snippetCode": "    //Start both motors. note that rotation direction is determined by the motors connection to the driver.\n    //You can change the speed by setting a value between 0-255, and set the direction by changing between 1 and 0.\n    {{varname}}.setMotorA(200,1);\n    {{varname}}.setMotorB(200,0);\n    delay(2000);\n    //Stop both motors\n    {{varname}}.stopMotors();\n    delay(2000);\n"
     },

@@ -1,18 +1,6 @@
 {
     "name": "TCRT5000L",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "setup": "    {{varname}}.init();\n",
         "snippetCode": "        //read Reflective IR Sensor. \n        //if the sensor detects an echo function will return LOW (0). \n        //if it is not detect an echo function will return HIGH (1).\n        bool {{varname}}_Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}_Val);"

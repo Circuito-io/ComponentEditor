@@ -1,19 +1,6 @@
 {
     "name": "HeartPulseSensor",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "constructors": "    {{classname}} {{varname}};\n",
         "setup": "    {{varname}}.begin({{SIG}});\n",

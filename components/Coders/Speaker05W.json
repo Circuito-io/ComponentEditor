@@ -1,19 +1,6 @@
 {
     "name": "Speaker05W",
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    unsigned int {{varname}}HoorayLength          = 6;                                                      // amount of notes in melody\n    unsigned int {{varname}}HoorayMelody[]        = {NOTE_C4, NOTE_E4, NOTE_G4, NOTE_C5, NOTE_G4, NOTE_C5}; // list of notes. List length must match HoorayLength!\n    unsigned int {{varname}}HoorayNoteDurations[] = {8      , 8      , 8      , 4      , 8      , 4      }; // note durations; 4 = quarter note, 8 = eighth note, etc. List length must match HoorayLength!\n",
         "snippetCode": "    // The Speaker will play the Hooray tune\n    {{varname}}.playMelody({{varname}}HoorayLength, {{varname}}HoorayMelody, {{varname}}HoorayNoteDurations); \n    delay(500);   "
@@ -30,8 +17,9 @@
         "PiezoSpeaker.cpp",
         "PiezoSpeaker_license.txt",
         "PiezoSpeaker.h",
-        "Speakerh.h",
-        "Speakercpp.cpp",
+        "Speaker.h",
+        "Speaker.cpp",
+        "Speaker_license.txt",
         "TimerFreeTone.h",
         "TimerFreeTone.cpp"
     ],

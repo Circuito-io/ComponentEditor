@@ -1,19 +1,6 @@
 {
     "name": "LedRGBWS2812",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    #define {{varname}}_NUMOFLEDS {{numOfSameComp}}\n",
         "setup": "    {{varname}}.begin(); // This initializes the NeoPixel library.\n    {{varname}}.show(); // Initialize all leds to 'off'\n",

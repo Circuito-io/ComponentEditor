@@ -1,17 +1,6 @@
 {
     "name": "SevenSegment",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "NodeMCU"
-    ],
+    "supportedControllers": [],
     "code": {
         "global": "    unsigned int {{varname}}counter = 0;  // This variable will count up to 65k\n",
         "setup": "    {{varname}}.clearDisplay();  // Clears display, resets cursor\n    {{varname}}.writeStr(\"-HI-\");  // Displays -HI- on all digits   \n    {{varname}}.setBrightness(255);  // High brightness\n",
