@@ -1,5 +1,5 @@
 global.dataFolder = __dirname + '/components';
-global.previewServer = "***REMOVED***
+global.previewServer = "http://localhost:3000/save_components/testid";
 
 var express = require('express');
 var app = express();
