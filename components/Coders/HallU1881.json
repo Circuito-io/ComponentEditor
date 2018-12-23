@@ -1,6 +1,19 @@
 {
     "name": "HallU1881",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "snippetCode": "    //Read hall sensor state\n    //Switch between the U1881 states by placing different poles of a magnet next to it.\n    bool {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
     },

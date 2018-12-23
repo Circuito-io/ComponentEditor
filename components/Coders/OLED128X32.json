@@ -1,6 +1,18 @@
 {
     "name": "OLED128X32",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "",
         "constructors": "    #define SSD1306_LCDHEIGHT 32\n    {{classname}} {{varname}}({{RST}});\n",

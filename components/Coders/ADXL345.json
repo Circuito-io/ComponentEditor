@@ -1,6 +1,19 @@
 {
     "name": "ADXL345",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "    int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n",
         "setup": "    {{varname}}.init();\n",

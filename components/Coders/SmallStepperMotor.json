@@ -1,6 +1,19 @@
 {
     "name": "SmallStepperMotor",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "    #define {{varname}}DelayTime  1000\n",
         "constructors": "    {{classname}} {{varname}}({{Step}},{{Dir}});\n",

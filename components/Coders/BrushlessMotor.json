@@ -1,6 +1,18 @@
 {
     "name": "BrushlessMotor",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "        const int {{varname}}LowSpeed = 1000;  //Starting speed\n        const int {{varname}}FastSpeed = 2000; //Top speed\n",
         "constructors": "        {{classname}} {{varname}};\n",

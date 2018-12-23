@@ -1,6 +1,19 @@
 {
     "name": "PushButton",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "setup": "    {{varname}}.init();\n",
         "snippetCode": "        //Read pushbutton state. \n        //if button is pressed function will return HIGH (1). if not function will return LOW (0). \n        //for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n        //if debounce is not working properly try changing 'debounceDelay' variable in Button.h\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"

@@ -1,6 +1,19 @@
 {
     "name": "RGBSensor",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "    uint16_t {{varname}}R,{{varname}}G,{{varname}}B;\n",
         "setup": "    // Initialize the {{varname}}\n    if ({{varname}}.init())\n        Serial.println(\"{{varname}} Init OK!\");\n    else\n        Serial.println(\"{{varname}} Init Failed! Check your wiring.\");\n",
