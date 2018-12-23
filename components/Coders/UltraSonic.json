@@ -1,6 +1,18 @@
 {
     "name": "UltraSonic",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "snippetCode": "    //Get distance measurement in cm. see also {{varname}}.getInches()\n    float {{varname}}Dist = {{varname}}.getCms();\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
     },

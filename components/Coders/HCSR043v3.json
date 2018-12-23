@@ -1,6 +1,11 @@
 {
     "name": "HCSR043v3",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "snippetCode": "    // Read distance measurment from UltraSonic sensor           \n    int {{varname}}Dist = {{varname}}.ping_cm();\n    delay(10);\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
     },

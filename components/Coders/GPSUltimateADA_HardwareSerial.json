@@ -1,6 +1,12 @@
 {
     "name": "GPSUltimateADA_HardwareSerial",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ESP32DevKitC",
+        "RPI3B"
+    ],
     "code": {
         "global": "    #define GPSECHO  true\n    uint32_t timer = millis(); //timer to read & print out the current stats\n    boolean usingInterrupt = false; // off by default! this keeps track of whether we're using the interrupt\n",
         "constructors": "    HardwareSerial& gpsSerial(Serial1);\n    {{classname}} {{varname}}(&gpsSerial);\n",
