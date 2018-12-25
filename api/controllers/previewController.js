@@ -46,7 +46,7 @@ const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}
 exports.preview = function(req, res) {
 
   var files = walkDirSync(global.dataFolder);
-  console.log(files);
+  //console.log(files);
   
   request({
   	url: global.previewServer,

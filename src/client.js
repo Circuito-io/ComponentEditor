@@ -1,5 +1,3 @@
-var $ = require('jquery');
-window.$ = $;
 require('bootstrap');
 
 import React from "react";
@@ -58,4 +56,3 @@ ReactDOM.render(
   document.getElementById("app")
 );
 
-module.hot.accept();
