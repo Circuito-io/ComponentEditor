@@ -1,3 +1,5 @@
+import {supportedControllersUISchema} from "./commonfields"
+
 export const circuitInfoSchema = {
 	type: "object",
 	properties: {
@@ -15,20 +17,7 @@ export const circuitInfoSchema = {
 };
 
 export const circuitInfouiSchema = {
-	supportedControllers: {
-		"ui:field": "typeahead",
-		typeahead: {
-			options: [
-				"ArduinoUno",
-				"ArduinoMicro",
-				"ArduinoMaxi",
-				"ArduinoPico",
-				"ArduinoTera"
-			],
-			multiple: true,
-			minLength: 0
-		}
-	}
+	supportedControllers: supportedControllersUISchema
 };
 
 export const circuitPartuiSchema = {

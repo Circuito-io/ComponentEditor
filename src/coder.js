@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-jsonschema-form";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
+import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
@@ -39,25 +40,18 @@ export class Coder extends React.Component {
 						<Modal.Title>Coder Name</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<Form schema={coderSchema} uiSchema={coderuiSchema} />
-						<Tabs defaultActiveKey={1} id="coders-tab">
-							<Tab eventKey={1} title="section1">
-								<AceEditor
-									mode="java"
-									theme="monokai"
-									name="UNIQUE_ID_OF_DIV"
-									editorProps={{ $blockScrolling: true }}
-								/>
-							</Tab>
-							<Tab eventKey={2} title="section2">
-								<AceEditor
-									mode="java"
-									theme="monokai"
-									name="UNIQUE_ID_OF_DIV"
-									editorProps={{ $blockScrolling: true }}
-								/>
-							</Tab>
-						</Tabs>
+						<Form 
+							schema={coderSchema}
+							uiSchema={coderuiSchema}
+							fields={{ typeahead: TypeaheadField }}
+						/>
+						Preview
+						<AceEditor
+							mode="java"
+							theme="monokai"
+							name="UNIQUE_ID_OF_DIV"
+							editorProps={{ $blockScrolling: true }}
+						/>
 					</Modal.Body>
 					<Modal.Footer>
 						<Button onClick={this.handleClose}>Close</Button>

@@ -4,6 +4,7 @@ const request = require('request');
 const fs = require('fs');
 const path = require('path');
 const oboe = require("oboe");
+const urlJoin = require("proper-url-join");
 
 const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}, type = null) => {
 	if (fs.statSync(d).isDirectory()) {
@@ -46,14 +47,20 @@ const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}
 exports.preview = function(req, res) {
 
   var files = walkDirSync(global.dataFolder);
-  //console.log(files);
-  
+	const endPoint = urlJoin(global.previewServer, global.userid, { trailingSlash: true });
+	
+	console.log("Sending to", endPoint)
+	
+	
   request({
-  	url: global.previewServer,
+  	url: endPoint,
   	method: 'post',
   	body: files,
   	json: true,
-  })
+  }, function (error, response, body) {
+  		console.log("Got status code", response.statusCode);
+    }
+  )
   .on('done', function(res) {
   	console.log('resp: ', res);
   })

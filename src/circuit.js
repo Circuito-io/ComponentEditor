@@ -4,7 +4,7 @@ import { Well, Tab, Row, Col, Nav, NavItem, Button } from "react-bootstrap";
 import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
 import { Part } from "./part.js";
 import { Coder } from "./coder.js";
-import { ListArrayField } from "./ListArrayField.js";
+import { ListArrayField } from "./listarrayfield.js";
 
 import {
   circuitInfoSchema,

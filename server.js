@@ -1,5 +1,9 @@
 global.dataFolder = __dirname + '/components';
-global.previewServer = "http://localhost:3000/save_components/testid";
+global.previewServer = "***REMOVED***
+
+// Generate unique user uuid
+const uuidv4 = require('uuid/v4');
+global.userid = uuidv4();
 
 var express = require('express');
 var app = express();
