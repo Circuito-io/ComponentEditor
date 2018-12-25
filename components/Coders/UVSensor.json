@@ -1,5 +1,13 @@
 {
     "name": "UVSensor",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "OUT",
+            "3.3V"
+        ],
+        "varname": ""
+    }
 }

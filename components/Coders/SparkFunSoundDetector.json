@@ -1,5 +1,14 @@
 {
     "name": "SparkFunSoundDetector",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "GATE",
+            "AUDIO",
+            "ENVELOPE"
+        ],
+        "varname": "SND_Detector"
+    }
 }

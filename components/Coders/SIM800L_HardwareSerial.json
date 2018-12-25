@@ -1,5 +1,10 @@
 {
     "name": "SIM800L_HardwareSerial",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "HardwareSerial&",
+        "custominit": "Serial1",
+        "varname": "sim800"
+    }
 }

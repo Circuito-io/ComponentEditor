@@ -1,5 +1,12 @@
 {
     "name": "WaterPressureSensor",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "SIG"
+        ],
+        "varname": ""
+    }
 }

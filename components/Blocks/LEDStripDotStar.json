@@ -38,7 +38,7 @@
             ]
         ],
         [
-            10,
+            2,
             [
                 "PowerSupply5v"
             ]
@@ -71,7 +71,7 @@
                 "interface": {
                     "chainTo": "VCC_OUT",
                     "requires":[[0,["5v"]]],
-                    "requiresLoad": 2000
+                    "requiresLoad": 1700
                 }
             },
             {

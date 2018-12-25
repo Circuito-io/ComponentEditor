@@ -1,5 +1,13 @@
 {
     "name": "SIM800L_SoftwareSerial",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "RX",
+            "TX"
+        ],
+        "varname": ""
+    }
 }
