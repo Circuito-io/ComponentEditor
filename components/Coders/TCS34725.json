@@ -1,5 +1,13 @@
 {
     "name": "TCS34725",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "LED",
+            "INT"
+        ],
+        "varname": "TCS34725"
+    }
 }

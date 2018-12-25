@@ -1,6 +1,19 @@
 {
     "name": "Servo9g",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "        const int {{varname}}RestPosition   = 20;  //Starting position\n        const int {{varname}}TargetPosition = 150; //Position when event is detected\n",
         "constructors": "        {{classname}} {{varname}};\n",

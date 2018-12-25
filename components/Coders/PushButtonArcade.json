@@ -1,5 +1,13 @@
 {
     "name": "PushButtonArcade",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "LED_VCC",
+            "BUTTON_SIG"
+        ],
+        "varname": "LEDARCADEBUTTON"
+    }
 }

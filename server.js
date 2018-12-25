@@ -1,5 +1,5 @@
 global.dataFolder = __dirname + '/components';
-global.previewServer = "http://localhost:3000/save_components/main";
+global.previewServer = "http://localhost:3000/save_components/testid3";
 
 var express = require('express');
 var app = express();
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'))
 
-var partsRoutes = require('./api/routes/partsRoutes');
+var partsRoutes = require('./api/routes/partsblocksRoutes');
 var previewRoutes = require('./api/routes/previewRoutes');
 partsRoutes(app);
 previewRoutes(app);

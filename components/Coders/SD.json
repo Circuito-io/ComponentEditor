@@ -1,6 +1,18 @@
 {
     "name": "SD",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
     "code": {
         "constructors": "    {{classname}} {{varname}};\n",
         "setup": "    // Set SPI SS pin to output otherwise the SD library functions will not work.\n    // The SD is set to use SPI SS Arduino pin 10 as chip select(CS) by default.\n    // To change the pin use SD.begin(SD_CS_PIN)\n    pinMode({{CS}}, OUTPUT);\n    // Check if the card is present and can be initialized\n    if (!SD.begin()) {\n        Serial.println(F(\"Card failed, or not present\"));\n        while(1);\n    }\n    Serial.println(F(\"card initialized.\"));\n",

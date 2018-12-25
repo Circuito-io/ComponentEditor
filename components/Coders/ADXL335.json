@@ -1,5 +1,14 @@
 {
     "name": "ADXL335",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "XOUT",
+            "YOUT",
+            "ZOUT"
+        ],
+        "varname": ""
+    }
 }

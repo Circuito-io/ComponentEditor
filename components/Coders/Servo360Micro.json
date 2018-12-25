@@ -1,7 +1,23 @@
 {
     "name": "Servo360Micro",
-    "supportedControllers": [],
-    "code": {},
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "constructors": "{{classname}} {{varname}};\n",
+        "snippetCode": "// The servo will rotate CW in full speed, CCW in full speed, and will stop  with an interval of 2000 milliseconds (2 seconds) \n{{varname}}.attach({{Sig}});         // 1. attach the servo to correct pin to control it.\n{{varname}}.write(180);  // 2. turns servo CW in full speed. change the value in the brackets (180) to change the speed. As these numbers move closer to 90, the servo will move slower in that direction.\ndelay(2000);                              // 3. waits 2000 milliseconds (2 sec). change the value in the brackets (2000) for a longer or shorter delay in milliseconds.\n{{varname}}.write(0);    // 4. turns servo CCW in full speed. change the value in the brackets (0) to change the speed. As these numbers move closer to 90, the servo will move slower in that direction.\ndelay(2000);                              // 5. waits 2000 milliseconds (2 sec). change the value in the brackets (2000) for a longer or shorter delay in milliseconds.\n{{varname}}.write(90);    // 6. sending 90 stops the servo \ndelay(2000);                              // 7. waits 2000 milliseconds (2 sec). change the value in the brackets (2000) for a longer or shorter delay in milliseconds.\n{{varname}}.detach();                    // 8. release the servo to conserve power. When detached the servo will NOT hold it's position under stress."
+    },
     "license": "circuito",
     "instantiate": {
         "classname": "Servo",

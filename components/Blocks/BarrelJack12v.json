@@ -24,7 +24,8 @@
             {
                 "name": "posIn",
                 "interface": {
-                    "requires":[[0,["12v","Barrel"]]]
+                    "requires":[[0,["12v","Barrel"]]],
+                    "unique": true
                 }
             },
             {
@@ -36,7 +37,8 @@
             {
                 "name": "negIn",
                 "interface": {
-                    "requires":[[0,["GND","Barrel"]]]
+                    "requires":[[0,["GND","Barrel"]]],
+                    "unique": true
                 }
             },
             {
