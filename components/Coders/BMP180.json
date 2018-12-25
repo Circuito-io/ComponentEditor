@@ -1,6 +1,19 @@
 {
     "name": "BMP180",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "setup": "    //Initialize I2C device\n    {{varname}}.begin();\n",
         "snippetCode": "    // Read Altitude from barometric sensor, note that the sensor is 1m accurate\n    double {{varname}}Alt = {{varname}}.altitude();\n    double {{varname}}Pressure = {{varname}}.getPressure();\n    double {{varname}}TempC = {{varname}}.getTemperatureC();     //See also {{varname}}.getTemperatureF() for Fahrenheit\n    Serial.print(F(\"Altitude: \")); Serial.print({{varname}}Alt,1); Serial.print(F(\" [m]\"));\n    Serial.print(F(\"\\tpressure: \")); Serial.print({{varname}}Pressure,1); Serial.print(F(\" [hPa]\"));\n    Serial.print(F(\"\\tTemperature: \")); Serial.print({{varname}}TempC,1); Serial.println(F(\" [\u00b0C]\"));\n"

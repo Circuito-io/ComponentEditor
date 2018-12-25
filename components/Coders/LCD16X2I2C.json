@@ -1,6 +1,19 @@
 {
     "name": "LCD16X2I2C",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "    // There are several different versions of the LCD I2C adapter, each might have a different address.\n    // Try the given addresses by Un/commenting the following rows until LCD works follow the serial monitor prints. \n    // To find your LCD address go to: http://playground.arduino.cc/Main/I2cScanner and run example.\n    #define LCD_ADDRESS 0x3F\n    //#define LCD_ADDRESS 0x27\n    // Define LCD characteristics\n    #define LCD_ROWS 2\n    #define LCD_COLUMNS 16\n    #define SCROLL_DELAY 150\n    #define BACKLIGHT 255\n",
         "setup": "    // initialize the lcd\n    {{varname}}.begin(LCD_COLUMNS, LCD_ROWS, LCD_ADDRESS, BACKLIGHT); \n",

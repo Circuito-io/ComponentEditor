@@ -1,5 +1,16 @@
 {
     "name": "TCS230",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "S1",
+            "S0",
+            "S3",
+            "S2",
+            "Out"
+        ],
+        "varname": ""
+    }
 }

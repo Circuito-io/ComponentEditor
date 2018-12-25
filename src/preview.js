@@ -1,19 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { NavItem , Glyphicon} from "react-bootstrap";
 import 'whatwg-fetch';
 
-var preview = function(evt) {
-  console.log(evt);
-  fetch('/preview')
+export class Preview extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.previewsetForm = this.preview.bind(this);
+  }
+
+  
+  preview() {
+    console.log('preview');
+    fetch('/preview')
         .catch((ex) => {
             console.log('preview failed', ex);
         });
-}
-
-export default class Preview extends React.Component {
+  }
+  
   render() {
     return (
-        <a href="#" onClick={preview}><span class="glyphicon glyphicon-refresh"></span> Preview</a>
+      <NavItem onClick={this.preview}><Glyphicon glyph="glyphicon-refresh" /> Preview</NavItem>
     );
   }
-}
+};
+

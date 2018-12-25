@@ -1,6 +1,19 @@
 {
     "name": "LoadCellHX711SF",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "global": "",
         "constructors": "    {{classname}} {{varname}}({{DAT}}, {{CLK}});\n    #define calibration_factor 2280 //This value is obtained using the SparkFun_HX711_Calibration sketch https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide?_ga=2.77038550.2126325781.1526891300-303225217.1493631967\n",

@@ -1,5 +1,13 @@
 {
     "name": "FingerprintScanner",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "Rx",
+            "Tx"
+        ],
+        "varname": ""
+    }
 }

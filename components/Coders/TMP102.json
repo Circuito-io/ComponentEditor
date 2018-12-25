@@ -1,6 +1,19 @@
 {
     "name": "TMP102",
-    "supportedControllers": [],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
     "code": {
         "snippetCode": "    float {{varname}}TempC = {{varname}}.readCelsius();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"
     },
