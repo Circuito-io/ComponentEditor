@@ -23,7 +23,12 @@
     "files": [
         "Adafruit_LEDBackpack.h",
         "Adafruit_LEDBackpack_license.txt",
-        "Adafruit_LEDBackpack.cpp"
+        "Adafruit_LEDBackpack.cpp",
+        "gfxfont.h",
+        "glcdfont.c",
+        "Adafruit_GFX.cpp",
+        "Adafruit_GFX_license.txt",
+        "Adafruit_GFX.h"
     ],
-    "includeHeaders": []
+    "includeHeaders": ["Adafruit_LEDBackpack.h"]
 }
