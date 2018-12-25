@@ -20,7 +20,9 @@ module.exports = {
   output: {
     path: __dirname + "/public",
     publicPath: "/",
-    filename: "bundle.js"
+    filename: "bundle.js",
+    hotUpdateChunkFilename: 'hot/hot-update.js',
+    hotUpdateMainFilename: 'hot/hot-update.json'
   },
   plugins: [
     new NodemonPlugin({
