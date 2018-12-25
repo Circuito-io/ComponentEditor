@@ -5,5 +5,26 @@
         "support"
     ],
     "supportedControllers": [],
-    "circuit": {}
+    "circuit": {
+        "ports": [
+            {
+                "name": "Vout",
+                "interface": {
+                    "provides":[["12v"]]
+                }
+            },
+            {
+                "name": "0",
+                "interface": {
+                    "requires":[[0,["GND"]]]
+                }
+            },
+            {
+                "name": "Vin",
+                "interface": {
+                    "requires":[[1,["3.3v"]],[2,["5v"]],[4,["9v"]]]
+                }
+            }
+        ]
+    }
 }

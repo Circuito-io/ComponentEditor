@@ -1,5 +1,18 @@
 {
     "name": "SevenSegmentBare_Quad_withShiftReg",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "SERDATA",
+            "LATCH",
+            "CLOCK",
+            "Dig1",
+            "Dig2",
+            "Dig3",
+            "Dig4"
+        ],
+        "varname": "s7Seg"
+    }
 }

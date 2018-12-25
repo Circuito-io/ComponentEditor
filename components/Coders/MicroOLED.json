@@ -1,5 +1,14 @@
 {
     "name": "MicroOLED",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "CS",
+            "RESET",
+            "DC"
+        ],
+        "varname": ""
+    }
 }

@@ -8,8 +8,8 @@
     "app": {
         "appName": "DotStar APA102 LED Strip",
         "image": "http://res.cloudinary.com/circuito/image/upload/vt7ule7e4cbbxkwqcc4y",
-        "numericName": "LEDStripDotStar",
-        "shortName": "Adafruit DotStar APA102 Digital LED Strip",
+        "numericName": "APA102",
+        "shortName": "DotStar LED Strip",
         "tags": [
             "outputs"
         ],
@@ -38,7 +38,7 @@
             ]
         ],
         [
-            10,
+            2,
             [
                 "PowerSupply5v"
             ]
@@ -71,7 +71,7 @@
                 "interface": {
                     "chainTo": "VCC_OUT",
                     "requires":[[0,["5v"]]],
-                    "requiresLoad": 2000
+                    "requiresLoad": 1700
                 }
             },
             {

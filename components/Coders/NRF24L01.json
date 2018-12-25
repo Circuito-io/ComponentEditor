@@ -1,5 +1,13 @@
 {
     "name": "NRF24L01",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "CS",
+            "CE"
+        ],
+        "varname": ""
+    }
 }
