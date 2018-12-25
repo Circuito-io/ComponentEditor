@@ -3,8 +3,10 @@ import { Panel, PanelGroup, Tabs, Tab, Button } from "react-bootstrap";
 import Form from "react-jsonschema-form";
 import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
 import RTEField from "react-jsonschema-form-extras/lib/RTEField";
+import urlJoin from 'proper-url-join';
 import { Circuit } from "./circuit.js";
 import { blockSchema, blockuiSchema } from "./blockSchema.js";
+
 
 export class Block extends React.Component {
   constructor(props) {
@@ -35,7 +37,7 @@ export class Block extends React.Component {
          return
        }
        
-       fetch('/blocks/' + block)
+       fetch(urlJoin('/blocks/' + block))
         .then((response) => response.json())
         .then((blockData) => {
             console.log("Got", blockData);
