@@ -1,5 +1,13 @@
 {
     "name": "LEDStripDotStar",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "DI",
+            "CI"
+        ],
+        "varname": ""
+    }
 }

@@ -1,5 +1,11 @@
 {
     "name": "IRLineFollowSF",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "ports": [
+            "OUT"
+        ],
+        "varname": "irLineFollowSF"
+    }
 }

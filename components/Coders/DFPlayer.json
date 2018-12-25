@@ -1,5 +1,13 @@
 {
     "name": "DFPlayer",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "Rx",
+            "TX"
+        ],
+        "varname": ""
+    }
 }

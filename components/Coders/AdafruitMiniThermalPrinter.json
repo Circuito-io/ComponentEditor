@@ -1,5 +1,13 @@
 {
     "name": "AdafruitMiniThermalPrinter",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "DIN",
+            "DOUT"
+        ],
+        "varname": ""
+    }
 }

@@ -1,5 +1,12 @@
 {
     "name": "RelayModuleGravity",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "Relay",
+        "ports": [
+            "Sig"
+        ],
+        "varname": "relayGravity"
+    }
 }

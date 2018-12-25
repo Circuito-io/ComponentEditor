@@ -1,5 +1,13 @@
 {
     "name": "CapSenseDIY",
     "supportedControllers": [],
-    "license": "rapid"
+    "license": "rapid",
+    "instantiate": {
+        "classname": "",
+        "ports": [
+            "RcevPin",
+            "SendPin"
+        ],
+        "varname": ""
+    }
 }

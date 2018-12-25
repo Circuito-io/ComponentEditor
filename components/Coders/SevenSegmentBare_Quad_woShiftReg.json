@@ -13,7 +13,12 @@
         "NodeMCU",
         "RPI3B"
     ],
-    "code": {},
+    "code": {
+        "global": "int {{varname}}Counter = 0; \nunsigned long {{varname}}Timer = millis();\nbyte {{varname}}DigitPins[] = { {{Dig1}}, {{Dig2}}, {{Dig3}}, {{Dig4}} };\nbyte {{varname}}SegmentPins[] = { {{A}}, {{B}}, {{C}}, {{D}}, {{E}}, {{F}} ,{{G}}, {{DECIMAL}} };\n",
+        "constructors": "{{classname}} {{varname}}({{varname}}DigitPins, {{varname}}SegmentPins);\n",
+        "setup": "{{varname}}.setBrightness(90);      //Seven-Segment LED brightness 0 - 100\n",
+        "snippetCode": "if (millis() - {{varname}}Timer >= 50) \n{\n{{varname}}Timer = millis();\n{{varname}}Counter++;                           //increment counter\n{{varname}}.setNumber({{varname}}Counter, 1);   //set display value\n}\n{{varname}}.refreshDisplay(); // Must run repeatedly"
+    },
     "license": "Apache 2.0",
     "instantiate": {
         "classname": "SevSeg",
