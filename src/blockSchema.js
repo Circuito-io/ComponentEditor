@@ -1,4 +1,4 @@
-import { ImageWidget } from "./ImageWidget";
+import { ImageWidget } from "./image-widget";
 
 // Using FireReaderInput instead of cloudinary:
 // import FileReaderInput from "react-file-reader-input";
@@ -14,27 +14,31 @@ import { ImageWidget } from "./ImageWidget";
 // </FileReaderInput>
 
 export const blockuiSchema = {
-  visible: {
-    "ui:help": "List block in circuito app"
+  name: {
+    "ui:readonly": true
   },
-  desc: {
-    "ui:field": "rte",
-    rte: {
-      format: "html"
-    }
-  },
-  buildSetupText: {
-    "ui:widget": "textarea"
-  },
-  buildTestText: {
-    "ui:widget": "textarea"
-  },
-  tags: {
-    "ui:field": "typeahead",
-    typeahead: {
-      options: ["Controller", "Power supply", "Support"],
-      minLength: 0,
-      multiple: true
+  app: {
+    tags: {
+      "ui:field": "typeahead",
+      typeahead: {
+        options: ["Controller", "Power supply", "Support"],
+        minLength: 0,
+        multiple: true
+      }
+    },
+    image: {
+      "ui:widget": ImageWidget
+    },
+    indicators: {
+      verified: {
+        "ui:widget": "hidden"
+      }
+    },
+    desc: {
+      "ui:widget": "textarea",
+      "ui:options": {
+        rows: 7
+      }
     }
   },
   notes: {
@@ -44,9 +48,6 @@ export const blockuiSchema = {
     "ui:options": {
       rows: 7
     }
-  },
-  img: {
-    "ui:widget": ImageWidget
   }
 };
 
@@ -54,26 +55,66 @@ export const blockSchema = {
   type: "object",
   properties: {
     name: {
-      type: "string"
+      type: "string",
+      title: "Name"
     },
-    blockid: {
-      type: "string"
-    },
-    visible: {
-      type: "boolean"
+    blockId: {
+      type: "string",
+      title: "Block ID"
     },
     category: {
       type: "string",
+      title: "Category",
       enum: ["output", "input", "controller", "power", "support"]
     },
-    desc: {
-      type: "string"
-    },
-    tags: {
-      type: "string"
-    },
-    img: {
-      type: "string"
+    app: {
+      type: "object",
+      title: "Appearance",
+      properties: {
+        appName: {
+          type: "string",
+        },
+        numericName: {
+          type: "string",
+        },
+        shortName: {
+          type: "string",
+        },
+        image: {
+          type: "string"
+        },
+        tags: {
+          type: "string"
+        },
+        visible: {
+          type: "boolean",
+          title: "List in application"
+        },
+        indicators: {
+          type: "object",
+          title: "Indicators",
+          properties: {
+            "verified": {
+              type: "boolean",
+              default: false
+            },
+            "code": {
+              type: "boolean",
+              title: "Has coder support",
+              default: false
+            },
+            "solder": {
+              type: "boolean",
+              title: "Requires soldering",
+              default: false
+            },
+          }
+        },
+        desc: {
+          type: "string",
+          title: "Description"
+        },
+      }
     },
     notes: {
       type: "string"

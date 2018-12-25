@@ -1,5 +1,9 @@
 global.dataFolder = __dirname + '/components';
-global.previewServer = "http://localhost:3000/save_components/testid";
+global.previewServer = "https://circuito-ci-staging-pr-319.herokuapp.com/save_components/";
+
+// Generate unique user uuid
+const uuidv4 = require('uuid/v4');
+global.userid = uuidv4();
 
 var express = require('express');
 var app = express();

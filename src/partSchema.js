@@ -1,4 +1,4 @@
-import { ImageWidget } from "./ImageWidget";
+import { ImageWidget } from "./image-widget";
 
 export const partuiSchema = {
   desc: {
