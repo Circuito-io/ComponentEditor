@@ -6,6 +6,14 @@ import { SVGCreator } from "./svg-creator";
 import { ImageWidget } from "./image-widget";
 
 export class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      imgURL: ''
+    };
+  }
+  
   render() {
     return (
       <Grid>
@@ -28,7 +36,7 @@ export class Home extends React.Component {
                 <SVGCreator/>
                 Upload images
                 <br/>
-                <ImageWidget/>
+                <ImageWidget onChange={(url) => {this.setState({imgURL: url})}} value={this.state.imgURL}/>
               </Well>
             </Col>
           </Row>
