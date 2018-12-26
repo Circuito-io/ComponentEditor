@@ -1,0 +1,33 @@
+{
+    "name": "VoiceRecorder",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global": "",
+        "constructors": "",
+        "setup": "pinMode({{Sig}}, OUTPUT);\n",
+        "snippetCode": "digitalWrite({{Sig}}, HIGH); //play button is on. \ndelay(10);  //short signal is enough.\ndigitalWrite({{Sig}}, LOW); //play button is off. \ndelay(10);  //waits only 10 milliseconds (0.01 sec) to push the button again. change the value in the brackets (10) for a longer or shorter delay in milliseconds."
+    },
+    "license": "circuito",
+    "instantiate": {
+        "varname": "VoiceRecorder",
+        "classname": "",
+        "ports": [
+            "Sig"
+        ]
+    },
+    "files": [],
+    "includeHeaders": []
+}
