@@ -31,7 +31,7 @@ export class Home extends React.Component {
                 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.  
                 <br/>
                 <br/>
-                <Image src="https://res.cloudinary.com/circuito/image/upload/v1545819424/Circuito_4_Entities.png" responsive />
+                <Image src="https://res.cloudinary.com/circuito/image/upload/v1545820007/Circuito_4_Entities_1.png" responsive />
                 <br/>
                 <br/>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
