@@ -7,9 +7,11 @@
     "start": "webpack --config ./webpack.config.js --watch"
   },
   "dependencies": {
+    "@app-masters/react-cloudinary-uploader": "0.1.41",
     "bootstrap": "^4.1.3",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
+    "proper-url-join": "*",
     "react": "16.6.3",
     "react-ace": "6.2.0",
     "react-bootstrap": "0.32.4",
@@ -18,11 +20,8 @@
     "react-jsonschema-form": "1.0.6",
     "react-jsonschema-form-extras": "0.9.28",
     "request": "^2.88.0",
-    "oboe": "2.1.4",
-    "whatwg-fetch": "^3.0.0",
-    "@app-masters/react-cloudinary-uploader": "0.1.41",
-    "proper-url-join": "*",
-    "uuid": "^3"
+    "uuid": "^3",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
