@@ -1,10 +1,35 @@
 {
     "name": "BMP280",
-    "supportedControllers": [],
-    "license": "rapid",
+    "supportedControllers": [
+        "ATMega328P",
+        "ATTiny85",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global": "",
+        "constructors": "{{classname}} {{varname}}; // I2C\n",
+        "setup": "if (!{{varname}}.begin()) {\nSerial.println(\"Could not find a valid BMP280 sensor, check wiring!\");\nwhile (1);\n}\n",
+        "snippetCode": "Serial.print(\"Temperature = \");\nSerial.print({{varname}}.readTemperature());\nSerial.println(\" *C\");\nSerial.print(\"Pressure = \");\nSerial.print({{varname}}.readPressure());\nSerial.println(\" Pa\");\nSerial.print(\"Approx altitude = \");\nSerial.print({{varname}}.readAltitude(1013.25)); // this should be adjusted to your local forcase\nSerial.println(\" m\");"
+    },
+    "license": "BSD",
     "instantiate": {
-        "classname": "",
+        "classname": "Adafruit_BMP280",
         "ports": [],
-        "varname": ""
-    }
+        "varname": "bmp280"
+    },
+    "files": [
+        "Adafruit_BMP280.h",
+        "BMP280_license.md",
+        "Adafruit_BMP280.cpp"
+    ],
+    "includeHeaders": []
 }
