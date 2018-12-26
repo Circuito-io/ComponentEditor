@@ -1,0 +1,31 @@
+{
+    "name": "Teensy32",
+    "path": "Teensy32",
+    "category": [
+        "controller"
+    ],
+    "blockId": "771055",
+    "app": {
+        "appName": "Pjrc Teensy 3.2 - R3",
+        "image": "http://res.cloudinary.com/circuito/image/upload/gnm7n2cprfly8vk1cxch",
+        "numericName": "",
+        "shortName": "PJRC Teensy 3.2",
+        "tags": [
+            "controllers"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>The PJRC Teensy 3.2 is a small, complete, and breadboard-friendly board based on the Freescale MK20DX256 32 bit ARM Cortex-M4.<br> developed in conjunction with Arduino, </p>\n<p>It has 24 5V tolerance digital input/output pins for breadboard use (of which 10 can be used as PWM outputs and 10 as analog inputs), a 72 MHz crystal oscillator (Can be overclocked to 96MHz).</p>\n<p>It sports 256K Flash Memory, 64K RAM, 2K EEPROM.</p>\n<p>In order to program the teensy through the Arduino IDE, all you have to do is to download & install the <a target=\"_blank\" href=\"https://www.pjrc.com/teensy/td_download.html\">Teensyduino add-on</a>.",
+        "visible": "False"
+    },
+    "altComp": [
+        1000,
+        "ArduinoUno"
+    ],
+    "requires":[[1,["Teensy326v"]],[2,["Teensy32USB"]],[3,["Teensy32Lipo3v7"]]],
+    "supportedControllers": [],
+    "circuit": {}
+}
