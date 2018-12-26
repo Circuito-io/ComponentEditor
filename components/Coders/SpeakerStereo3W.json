@@ -1,0 +1,40 @@
+{
+    "name": "SpeakerStereo3W",
+    "supportedControllers": [
+        "ATMega328P",
+        "ATTiny85",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU"
+    ],
+    "code": {
+        "global": "unsigned int {{varname}}HoorayLength          = 6;                                                      // amount of notes in melody\nunsigned int {{varname}}HoorayMelody[]        = {NOTE_C4, NOTE_E4, NOTE_G4, NOTE_C5, NOTE_G4, NOTE_C5}; // list of notes. List length must match HoorayLength!\nunsigned int {{varname}}HoorayNoteDurations[] = {8      , 8      , 8      , 4      , 8      , 4      }; // note durations; 4 = quarter note, 8 = eighth note, etc. List length must match HoorayLength!\n",
+        "snippetCode": "// The Speaker will play the Hooray tune\n{{varname}}.playMelody({{varname}}HoorayLength, {{varname}}HoorayMelody, {{varname}}HoorayNoteDurations); \ndelay(500);   "
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "SpeakerStereo3W",
+        "ports": [
+            "POS"
+        ],
+        "varname": "StereoSpeaker"
+    },
+    "files": [
+        "SpeakerStereo3W_license.txt",
+        "SpeakerStereo3W.cpp",
+        "SpeakerStereo3W.h",
+        "TimerFreeTone.h",
+        "TimerFreeTone.cpp"
+    ],
+    "includeHeaders": [
+        "SpeakerStereo3W.h"
+    ]
+}
