@@ -9,7 +9,6 @@ export class Upload extends React.Component {
     this.upload = this.upload.bind(this);
   }
 
-  
   upload() {
     console.log('upload');
     fetch('/upload')
