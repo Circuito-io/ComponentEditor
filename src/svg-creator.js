@@ -15,7 +15,7 @@ export class SVGCreator extends React.Component {
         this.createSVG = this.createSVG.bind(this);
 
         this.state = {
-            show: true,
+            show: false,
             resSVG: '',
             defaultSVG: {
                 name: "Demo",
