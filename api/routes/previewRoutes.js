@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(app) {
-  var preview = require('../controllers/previewController');
+  var previewController = require('../controllers/previewController');
 
   app.route('/preview')
-    .get(preview.preview);
+    .get(previewController.preview);
 };

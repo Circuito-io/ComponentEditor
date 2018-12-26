@@ -1,27 +1,38 @@
 import React from 'react';
-import { NavItem , Glyphicon} from "react-bootstrap";
+import { NavItem, Glyphicon } from "react-bootstrap";
 import 'whatwg-fetch';
 
 export class Preview extends React.Component {
   constructor(props) {
     super(props);
 
-    this.previewsetForm = this.preview.bind(this);
+    this.state = {previewURL: ''};
+    
+    this.getPreviewURL = this.getPreviewURL.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
-  
-  preview() {
-    console.log('preview');
-    fetch('/preview')
-        .catch((ex) => {
-            console.log('preview failed', ex);
-        });
+  componentDidMount() {
+    this.getPreviewURL();
   }
-  
+
+  getPreviewURL() {
+    console.log('Getting previewURL');
+    fetch('/preview')
+      .then(res => {
+        res.text().then(data => { 
+          console.log("Got preview url", data);
+          this.setState({previewURL: data});
+          });
+      })
+      .catch((ex) => {
+        console.log('getPreviewURL failed', ex);
+      });
+  }
+
   render() {
     return (
-      <NavItem onClick={this.preview}><Glyphicon glyph="glyphicon-refresh" /> Preview</NavItem>
+      <NavItem href={this.state.previewURL} target="_blank"><Glyphicon glyph="glyphicon-refresh" /> Preview</NavItem>
     );
   }
 };
-

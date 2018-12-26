@@ -1,5 +1,7 @@
 global.dataFolder = __dirname + '/components';
-global.previewServer = "***REMOVED***
+global.circuitoServer = "***REMOVED***
+global.uploadEndpoint = "save_components";
+global.previewEndpoint = "app?u=";
 
 // Generate unique user uuid
 const uuidv4 = require('uuid/v4');
@@ -17,8 +19,10 @@ app.use(express.static('public'))
 
 var partsRoutes = require('./api/routes/partsblocksRoutes');
 var previewRoutes = require('./api/routes/previewRoutes');
+var uploadRoutes = require('./api/routes/uploadRoutes');
 partsRoutes(app);
 previewRoutes(app);
+uploadRoutes(app);
 
 app.listen(port, hostname);
 
