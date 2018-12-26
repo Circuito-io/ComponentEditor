@@ -1,0 +1,33 @@
+{
+    "name": "WaterLevelSNC",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32",
+        "ATTiny85"
+    ],
+    "code": {},
+    "license": "circuito",
+    "instantiate": {
+        "classname": "Button",
+        "ports": [
+            "SIG"
+        ],
+        "varname": "WaterLevelSensor"
+    },
+    "files": [
+        "Button.h",
+        "Button.cpp",
+        "Button_license.txt"
+    ],
+    "includeHeaders": []
+}
