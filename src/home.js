@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Row, Col, Well, Button, Image } from "react-bootstrap";
 import { BlocksList } from "./blocks-list";
 import { NewComponent } from "./newcomponent";
+import { SVGCreator } from "./svg-creator";
 
 export class Home extends React.Component {
   render() {
@@ -20,9 +21,11 @@ export class Home extends React.Component {
                 <h2>Create</h2>
                 <br/>
                 <NewComponent/>
+                <SVGCreator/>
               </Well>
             </Col>
           </Row>
+          
           
           <Row>
             <Col xs={12}>
