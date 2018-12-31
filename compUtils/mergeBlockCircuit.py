@@ -111,7 +111,10 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                 data['circuit'] = []
                 if 'path' in data:
                         del data['path']
-                        
+                
+                if 'coder' in data:
+                    import pdb; pdb.set_trace() 
+                
                 print(filename)
                 for reqPr, reqNames in data.get('requires'):
                     for reqName in reqNames:
@@ -125,6 +128,8 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                             for key in ['category', 'blockId']:
                                 if key in reqData:
                                     del reqData[key]
+                            
+                            
                             
                             
                             data['circuit'].append(reqData)
