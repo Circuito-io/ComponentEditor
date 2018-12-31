@@ -27,7 +27,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
             
             print(filename)
             sideDict = {}
-            # move supportedcontrollers, coders, name into circuit
+            # move supportedControllers, coders, name into circuit
             for key in data:
                 if key in ['path', 'circuit']:
                     continue
@@ -37,7 +37,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
             
             # blocksByName['circuit'][data['name']] = sideDict
             
-            if 'supportedcontrollers' in data:
+            if 'supportedControllers' in data:
                 del data['supportedControllers']
             
             
@@ -47,7 +47,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
             
             os.remove(dirpath + '/' + filename)
             
-import pdb; pdb.set_trace() 
+# import pdb; pdb.set_trace() 
                 
 # catch residue of circuits
 print('~~~~~~~~~~~~~~other circuits')
@@ -69,7 +69,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                 continue
             print(filename)    
             sideDict = {}
-            # move supportedcontrollers, coders, name into circuit
+            # move supportedControllers, coders, name into circuit
             for key in data:
                 if key in ['path', 'circuit']:
                     continue
@@ -79,7 +79,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
             
             # blocksByName['circuit'][data['name']] = sideDict
             
-            if 'supportedcontrollers' in data:
+            if 'supportedControllers' in data:
                 del data['supportedControllers']
             
             f = open(dstpath2 + '/' + filename, 'w')
@@ -92,7 +92,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
 
 
 
-import pdb; pdb.set_trace() 
+# import pdb; pdb.set_trace() 
 
 
 print('~~~~~~~~~~~~~~blocks with requires')
@@ -132,7 +132,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                 del data['requires']
                 # check about supportet controllers - delete?
                 
-                if 'supportedcontrollers' in data:
+                if 'supportedControllers' in data:
                     del data['supportedControllers'] 
                 
                 f = open(dstpath3 + '/' + filename, 'w')
@@ -141,7 +141,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                 
                 os.remove(dirpath + '/' + filename)
 
-import pdb; pdb.set_trace()
+# import pdb; pdb.set_trace()
 
 print('~~~~~~~~~~~~~~blocks without requires')
 for (dirpath, dirnames, filenames) in os.walk(path):
@@ -171,7 +171,7 @@ for (dirpath, dirnames, filenames) in os.walk(path):
             data['circuit'] = [sideDict]
             # import pdb; pdb.set_trace()    
             
-            if 'supportedcontrollers' in data:
+            if 'supportedControllers' in data:
                 del data['supportedControllers']
                 
             f = open(dstpath3 + '/' + filename, 'w')
