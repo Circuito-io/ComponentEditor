@@ -1,0 +1,139 @@
+{
+    "name": "MQ6",
+    "category": [
+        "input"
+    ],
+    "blockId": "398786",
+    "app": {
+        "appName": "LPG, Butane and Propane Gas Sensor - MQ-6",
+        "image": "http://res.cloudinary.com/circuito/image/upload/s4htfpyin7hzecjqfyzu",
+        "numericName": "MQ6",
+        "shortName": "LPG, Butane and Propane Gas Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This sensor is sensitive for LPG, Butane and Propane Gas.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "MQ65v",
+            "coders": [
+                "MQ6"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ6"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "AOUT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "MQ63v3",
+            "coders": [
+                "MQ63v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ6"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res470O"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.GND",
+                    "to": "r2.con1"
+                },
+                {
+                    "from": "r2.con0",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.AOUT",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Aout"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Aout",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 2
+        }
+    ]
+}

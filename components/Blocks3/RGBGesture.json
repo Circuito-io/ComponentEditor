@@ -1,0 +1,106 @@
+{
+    "name": "RGBGesture",
+    "category": [
+        "input"
+    ],
+    "blockId": "12787",
+    "app": {
+        "appName": "SparkFun APDS-9960 - RGB and Gesture Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/b1keuv80hj9qefgfdv1l",
+        "numericName": "APDS-9960",
+        "shortName": "RGB and Gesture Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>The built in APDS-9960 can measure ambient light and color, proximity and detect touchless gestures.<br> Use this sensor to control your Arduino with a swipe of your hand.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "RGBGesture",
+            "coders": [
+                "RGBGesture"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "LogicLevelConverterI2C-5-3.3"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "RGBGesture"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VL",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "INT",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
+                        "unique": true
+                    }
+                }
+            ]
+        }
+    ]
+}

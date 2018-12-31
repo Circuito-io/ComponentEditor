@@ -1,0 +1,51 @@
+{
+    "name": "BMP2803v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!999979",
+    "coders": [
+        "BMP280"
+    ],
+    "supportedControllers": [
+        "ATTiny85",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "BMP280"
+        }
+    ],
+    "ports": [
+        {
+            "name": "SDI",
+            "interface": {
+                "requires":[[0,["3.3v","SDA"]]]
+            }
+        },
+        {
+            "name": "SCK",
+            "interface": {
+                "requires":[[0,["3.3v","SCL"]]]
+            }
+        },
+        {
+            "name": "VIN",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "name": "Speaker05W",
+    "category": [
+        "output"
+    ],
+    "blockId": "197253",
+    "app": {
+        "appName": "Thin Speaker",
+        "image": "http://res.cloudinary.com/circuito/image/upload/grbse3tvsun45qj8ypug",
+        "numericName": "",
+        "shortName": "Thin Speaker",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This 0.25W, 8Ohm speaker is a great is great start to get some sound out of your project, it's 40mm in diameter and about 4mm thick.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "Speaker05W",
+            "coders": [
+                "Speaker05W"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Speaker05W"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "POS",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "NEG",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

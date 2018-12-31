@@ -1,0 +1,96 @@
+{
+    "name": "PushButtonArcade",
+    "category": [
+        "input"
+    ],
+    "blockId": "62012",
+    "app": {
+        "appName": "Arcade Button with LED - 30mm Translucent Red",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pisyjvyvi0db5ti1qeqg",
+        "numericName": "",
+        "shortName": "Arcade Button",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This is an Translucent Red Arcade Button with 2 built-in LED that are connected in series with a 1K resistor, so you can power it directly from a 5v pin. it can be mounted easily to a panel since it have screwing around it (requires 30mm diameter hole for mounting).</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "PushButtonArcade",
+            "coders": [
+                "PushButtonArcade"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PushButtonArcade"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.BUTTON_SIG",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "0"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "BUTTON_SIG",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "BUTTON_VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "LED_VCC",
+                    "interface": {
+                        "requires":[[0,["5v","PWM"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "LED_GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

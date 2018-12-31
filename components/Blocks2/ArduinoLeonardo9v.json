@@ -1,0 +1,253 @@
+{
+    "name": "ArduinoLeonardo9v",
+    "category": [
+        "controller"
+    ],
+    "blockId": "!11286",
+    "requires":[[0,["USBPowerMicro"]]],
+    "supportedControllers": [
+        "ArduinoLeonardo"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "ArduinoLeonardo"
+        }
+    ],
+    "ports": [
+        {
+            "name": "2",
+            "interface": {
+                "codename": 2,
+                "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["5v","DigitalOut"],["SDA","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "3",
+            "interface": {
+                "codename": 3,
+                "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["5v","DigitalOut"],["5v","PWM"],["SCL","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "4",
+            "interface": {
+                "codename": 4,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "5",
+            "interface": {
+                "codename": 5,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "6",
+            "interface": {
+                "codename": 6,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "7",
+            "interface": {
+                "codename": 7,
+                "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["5v","DigitalOut"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "8",
+            "interface": {
+                "codename": 8,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "9",
+            "interface": {
+                "codename": 9,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "10",
+            "interface": {
+                "codename": 10,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["ESPSoftwareSerialRX","5v"],["5v","SS"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "11",
+            "interface": {
+                "codename": 11,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["ESPSoftwareSerialTX","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "12",
+            "interface": {
+                "codename": 12,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "13",
+            "interface": {
+                "codename": 13,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["5v","Timer2"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "3.3v",
+            "interface": {
+                "provides":[["3.3v"]],
+                "providesLoad": 150
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "provides":[["GND"]]
+            }
+        },
+        {
+            "name": "SCK",
+            "interface": {
+                "codename": "SCK",
+                "provides":[["5v","SCK"]]
+            }
+        },
+        {
+            "name": "TX",
+            "interface": {
+                "codename": "1",
+                "provides":[["TX","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "RX",
+            "interface": {
+                "codename": "0",
+                "provides":[["RX","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "A0",
+            "interface": {
+                "codename": "A0",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
+            }
+        },
+        {
+            "name": "A1",
+            "interface": {
+                "codename": "A1",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
+            }
+        },
+        {
+            "name": "A2",
+            "interface": {
+                "codename": "A2",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
+            }
+        },
+        {
+            "name": "A3",
+            "interface": {
+                "codename": "A3",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
+            }
+        },
+        {
+            "name": "A4",
+            "interface": {
+                "codename": "A4",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
+            }
+        },
+        {
+            "name": "A5",
+            "interface": {
+                "codename": "A5",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalOut"]]
+            }
+        },
+        {
+            "name": "MemOverLoad",
+            "interface": {
+                "provides":[["SRAMLoad"]],
+                "providesLoad": 2560
+            }
+        },
+        {
+            "name": "SerialType",
+            "interface": {
+                "provides":[["ESPSoftwareSerialTag"]]
+            }
+        },
+        {
+            "name": "RESET",
+            "interface": {
+                "codename": "RESET",
+                "provides":[["DigitalIn"]]
+            }
+        },
+        {
+            "name": "MISO",
+            "interface": {
+                "codename": "MISO",
+                "provides":[["5v","MISO"],["SoftwareSerial","5v"]]
+            }
+        },
+        {
+            "name": "MOSI",
+            "interface": {
+                "codename": "MOSI",
+                "provides":[["5v","MOSI"],["SoftwareSerial","5v"]]
+            }
+        },
+        {
+            "name": "ARef",
+            "interface": {
+                "provides":[["IORef"]]
+            }
+        },
+        {
+            "name": "5v",
+            "interface": {
+                "provides":[["5v"]],
+                "providesLoad": 400
+            }
+        },
+        {
+            "name": "USB_MICRO",
+            "interface": {
+                "provides":[["USB_MICRO"]]
+            }
+        },
+        {
+            "name": "Vin",
+            "interface": {
+                "requires":[[0,["9v"]]],
+                "requiresLoad": 50
+            }
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "name": "RFID",
+    "category": [
+        "input"
+    ],
+    "blockId": "761981",
+    "app": {
+        "appName": "RFID Card Reader - RC522",
+        "image": "http://res.cloudinary.com/circuito/image/upload/nuqtt1aib3sia118u6wn",
+        "numericName": "RC522",
+        "shortName": "RFID Card Reader",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>The RFID module allows reading/writing RFID card/Tags.<br><strong>Returned Value</strong>: Card tag ID via SPI</p>\n<p><strong>Requires</strong>: Soldering 8 pin male header</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Security-System-and-Access-Control-with-Arduino-an/?ALLSTEPS\">Security System and Access Control with Arduino and RFID</a></p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "RFID",
+            "coders": [
+                "RFID"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "RFID"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "RST",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "MISO",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","MISO"]],[1,["5v","MISO"]]]
+                    }
+                },
+                {
+                    "name": "SCK",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SCK"]],[1,["5v","SCK"]]]
+                    }
+                },
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["3.3v","SS"]],[1,["5v","SS"]],[2,["5v","DigitalOut"]],[3,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "3.3v",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "MOSI",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","MOSI"]],[1,["5v","MOSI"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,404 @@
+{
+    "name": "SevenSegmentBare_Quad",
+    "category": [
+        "output"
+    ],
+    "blockId": "11409",
+    "app": {
+        "appName": "7 - Segment Display - 20mm",
+        "image": "http://res.cloudinary.com/circuito/image/upload/tqx4xb3r8icmmgfzfpkz",
+        "numericName": "LTC-5723HR",
+        "shortName": "7-Segment Display",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A common-cathode Seven Segment display It feature 4 x 7-segment digits and one decimal point per digit. The LEDs have a forward voltage of 1.9VDC and a max forward current of 20mA.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "SevenSegmentBare_Quad_woShiftReg",
+            "coders": [
+                "SevenSegmentBare_Quad_woShiftReg"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SevenSegmentBare_Quad"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1KO"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                },
+                {
+                    "name": "r3",
+                    "part": "Res1KO"
+                },
+                {
+                    "name": "r4",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.DIG1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "this.DIG2",
+                    "to": "r2.con0"
+                },
+                {
+                    "from": "this.DIG3",
+                    "to": "r3.con0"
+                },
+                {
+                    "from": "this.DIG4",
+                    "to": "r4.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Dig1"
+                },
+                {
+                    "from": "r2.con1",
+                    "to": "Dig2"
+                },
+                {
+                    "from": "r3.con1",
+                    "to": "Dig3"
+                },
+                {
+                    "from": "r4.con1",
+                    "to": "Dig4"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Dig1",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig2",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig3",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig4",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "A",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "B",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "C",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "D",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "E",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "F",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "G",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DECIMAL",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "SevenSegmentBare_Quad_withShiftReg",
+            "coders": [
+                "SevenSegmentBare_Quad_withShiftReg"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SevenSegmentBare_Quad"
+                },
+                {
+                    "name": "shiftReg",
+                    "part": "74HC595"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1KO"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                },
+                {
+                    "name": "r3",
+                    "part": "Res1KO"
+                },
+                {
+                    "name": "r4",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.DIG1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "this.DIG2",
+                    "to": "r2.con0"
+                },
+                {
+                    "from": "this.DIG3",
+                    "to": "r3.con0"
+                },
+                {
+                    "from": "this.DIG4",
+                    "to": "r4.con0"
+                },
+                {
+                    "from": "this.B",
+                    "to": "shiftReg.QA"
+                },
+                {
+                    "from": "this.C",
+                    "to": "shiftReg.QB"
+                },
+                {
+                    "from": "this.D",
+                    "to": "shiftReg.QC"
+                },
+                {
+                    "from": "this.E",
+                    "to": "shiftReg.QD"
+                },
+                {
+                    "from": "this.F",
+                    "to": "shiftReg.QE"
+                },
+                {
+                    "from": "this.G",
+                    "to": "shiftReg.QF"
+                },
+                {
+                    "from": "this.G",
+                    "to": "shiftReg.QG"
+                },
+                {
+                    "from": "this.DECIMAL",
+                    "to": "shiftReg.QH"
+                },
+                {
+                    "from": "shiftReg.SER",
+                    "to": "SERDATA"
+                },
+                {
+                    "from": "shiftReg.SRCLK",
+                    "to": "CLOCK"
+                },
+                {
+                    "from": "shiftReg.RCLK",
+                    "to": "LATCH"
+                },
+                {
+                    "from": "shiftReg.VCC",
+                    "to": "VCC"
+                },
+                {
+                    "from": "shiftReg.GND",
+                    "to": "GND"
+                },
+                {
+                    "from": "shiftReg.OEnot",
+                    "to": "OEnot"
+                },
+                {
+                    "from": "shiftReg.SRCLRnot",
+                    "to": "SRCLRnot"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Dig1"
+                },
+                {
+                    "from": "r2.con1",
+                    "to": "Dig2"
+                },
+                {
+                    "from": "r3.con1",
+                    "to": "Dig3"
+                },
+                {
+                    "from": "r4.con1",
+                    "to": "Dig4"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]],[1,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SRCLRnot",
+                    "interface": {
+                        "requires":[[0,["5v"]],[1,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "OEnot",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SERDATA",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CLOCK",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "LATCH",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig1",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig2",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig3",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Dig4",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 100
+        }
+    ]
+}

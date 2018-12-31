@@ -1,0 +1,139 @@
+{
+    "name": "IRObjAvoid",
+    "category": [
+        "input"
+    ],
+    "blockId": "811437",
+    "app": {
+        "appName": "IR Obstacle Avoidance sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/nkztjsx6h9uq7rezdabf",
+        "numericName": "",
+        "shortName": "IR Obstacle Avoidance Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This sensor can detect the presence of an obstacle in front of it.<br>The discovery distance can be adjusted using the on board trimmer.<br><strong>Returned values</strong>: digital '1' or '0'.<br></p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "IRObjAvoid5v",
+            "coders": [
+                "IRObjAvoid"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRObjAvoid"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "OUT",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "IRObjAvoid3v3",
+            "coders": [
+                "IRObjAvoid3v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRObjAvoid"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res470O"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.GND",
+                    "to": "r2.con1"
+                },
+                {
+                    "from": "r2.con0",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.OUT",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "out"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "out",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

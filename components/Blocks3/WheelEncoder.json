@@ -1,0 +1,138 @@
+{
+    "name": "WheelEncoder",
+    "category": [
+        "input"
+    ],
+    "blockId": "774824",
+    "app": {
+        "appName": "Photoelectric Speed Wheel Encoder",
+        "image": "http://res.cloudinary.com/circuito/image/upload/rfpkzhawgvwlcy3kaull",
+        "numericName": "",
+        "shortName": "Speed Wheel Encoder",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>Use the wheel encoder to measure shaft speed or location. Popular in wheeled robotics. Connect the wheel to the motor shaft and the sensor to your Arduino.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "WheelEncoderInt",
+            "coders": [
+                "WheelEncoder"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WheelEncoder"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "CH_A",
+                    "interface": {
+                        "requires":[[1,["3.3v","DigitalIn","Int"]],[0,["5v","DigitalIn","Int"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CH_B",
+                    "interface": {
+                        "requires":[[1,["3.3v","DigitalIn","Int"]],[0,["5v","DigitalIn","Int"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[1,["3.3v"]],[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 3
+        },
+        {
+            "name": "WheelEncoderDigital",
+            "coders": [
+                "WheelEncoder"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WheelEncoder"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "CH_A",
+                    "interface": {
+                        "requires":[[1,["3.3v","DigitalIn"]],[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CH_B",
+                    "interface": {
+                        "requires":[[1,["3.3v","DigitalIn","Int"]],[0,["5v","DigitalIn","Int"]],[51,["3.3v","DigitalIn"]],[50,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[1,["3.3v"]],[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 5
+        }
+    ]
+}

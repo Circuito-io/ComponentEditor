@@ -1,0 +1,60 @@
+{
+    "name": "PushButtonArcadeNoLED3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!689245",
+    "coders": [
+        "PushButtonRcadeNLED"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "PushButtonArcadeNoLED"
+        },
+        {
+            "name": "r1",
+            "part": "Res10KO"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.NO",
+            "to": "r1.con1"
+        },
+        {
+            "from": "r1.con0",
+            "to": "0"
+        }
+    ],
+    "ports": [
+        {
+            "name": "0",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "COM",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "NO",
+            "interface": {
+                "requires":[[0,["3.3v","DigitalIn"]]],
+                "unique": true
+            }
+        }
+    ]
+}

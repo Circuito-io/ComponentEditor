@@ -1,0 +1,74 @@
+{
+    "name": "IRLineFollowArray",
+    "category": [
+        "input"
+    ],
+    "blockId": "615959",
+    "app": {
+        "appName": "SparkFun Line Follower Array",
+        "image": "http://res.cloudinary.com/circuito/image/upload/vfiqziyjftlm0zzlpi2j",
+        "numericName": "QRE1113",
+        "shortName": "Line Follower Array",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>The Line Follower array conatins eight IR sensors that have been configured to read as digital bits over I2C, it gives you the ability to detect lines or nearby objects. The sensor works by detecting reflected light emitted from its on board infrared LED. By measuring the amount of reflected infrared light, it can detect transitions from light to dark (lines) or even objects directly in front of it.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "IRLineFollowArray",
+            "coders": [
+                "IRLineFollowArray"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRLineFollowArray"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["5v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

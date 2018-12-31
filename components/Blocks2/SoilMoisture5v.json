@@ -1,0 +1,49 @@
+{
+    "name": "SoilMoisture5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!13322",
+    "coders": [
+        "SoilMoisture"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "SoilMoisture"
+        }
+    ],
+    "ports": [
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "Sig",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "Vin",
+            "interface": {
+                "requires":[[1,["5v"]]]
+            }
+        }
+    ]
+}

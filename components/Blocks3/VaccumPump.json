@@ -1,0 +1,77 @@
+{
+    "name": "VaccumPump",
+    "category": [
+        "output"
+    ],
+    "blockId": "10398",
+    "app": {
+        "appName": "Vacuum Pump - 12V",
+        "image": "http://res.cloudinary.com/circuito/image/upload/uftakxmjwnh5ngb5zvmg",
+        "numericName": "D2028",
+        "shortName": "Vacuum Pump",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "VaccumPump",
+            "coders": [
+                "VaccumPump"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "VaccumPump"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requiresLoad": 400,
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[1,["12v"]]],
+                        "requiresLoad": 400
+                    }
+                }
+            ]
+        }
+    ]
+}

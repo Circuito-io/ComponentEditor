@@ -1,0 +1,50 @@
+{
+    "name": "RTCPCF3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!113323",
+    "coders": [
+        "RTCPCF"
+    ],
+    "supportedControllers": [
+        "Arduino101",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "RTCPCF"
+        }
+    ],
+    "ports": [
+        {
+            "name": "SCL",
+            "interface": {
+                "requires":[[0,["3.3v","SCL"]]]
+            }
+        },
+        {
+            "name": "VCC",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["3.3v","SDA"]]]
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "name": "StepperMotorSmallGeared",
+    "category": [
+        "output"
+    ],
+    "blockId": "9240",
+    "app": {
+        "appName": "Small Reduction Stepper Motor with EasyDriver - 5VDC 32-Step 1/16 Gearing",
+        "image": "http://res.cloudinary.com/circuito/image/upload/c8i9tlvjttlhfynta2w0",
+        "numericName": "28BYJ-48",
+        "shortName": "Small 5V Stepper Motor",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "StepperMotorSmallGeared",
+            "coders": [
+                "StepperMotorSmallGeared"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "EasyDriver"
+                },
+                {
+                    "name": "motor",
+                    "part": "StepperMotorSmallGeared"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.OUT2A",
+                    "to": "motor.PINK"
+                },
+                {
+                    "from": "this.OUT2B",
+                    "to": "motor.YELLOW"
+                },
+                {
+                    "from": "this.OUT1A",
+                    "to": "motor.ORANGE"
+                },
+                {
+                    "from": "this.OUT1B",
+                    "to": "motor.BLUE"
+                },
+                {
+                    "from": "motor.RED",
+                    "to": "red"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "red",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Step",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Dir",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "V+",
+                    "interface": {
+                        "requires":[[0,["12v"]]],
+                        "requiresLoad": 330
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 200
+                    }
+                }
+            ]
+        }
+    ]
+}

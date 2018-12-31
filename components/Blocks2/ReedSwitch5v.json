@@ -1,0 +1,62 @@
+{
+    "name": "ReedSwitch5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!8642",
+    "coders": [
+        "ReedSwitch"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "ReedSwitch"
+        },
+        {
+            "name": "r1",
+            "part": "Res10KO"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.2",
+            "to": "r1.con0"
+        },
+        {
+            "from": "r1.con1",
+            "to": "0"
+        }
+    ],
+    "ports": [
+        {
+            "name": "0",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "2",
+            "interface": {
+                "requires":[[0,["5v","DigitalIn"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "1",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        }
+    ]
+}

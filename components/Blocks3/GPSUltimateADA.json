@@ -1,0 +1,137 @@
+{
+    "name": "GPSUltimateADA",
+    "category": [
+        "input"
+    ],
+    "blockId": "488167",
+    "app": {
+        "appName": "Adafruit Ultimate GPS Breakout - 66 channel w/10 Hz updates - Version 3",
+        "image": "http://res.cloudinary.com/circuito/image/upload/scrh4hywavxcrlvpich8",
+        "numericName": "",
+        "shortName": "Ultimate GPS",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>A high-quality GPS module that can track up to 22 satellites on 66 channels. It has an excellent high-sensitivity receiver (-165 dB ) and a built in antenna. It can do up to 10 location updates a second for high speed, high sensitivity logging or tracking. The module has low power consumption, to save some more power use the ENABLE pin to disable the module.Thanks to the on-board voltage level shifter the module is 5v tolerant.It also has an on board coin cell slot for the RTC to run and allow warm starts, an external antenna connector and a built in data logger.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "GPSUltimateADA_HardwareSerial",
+            "coders": [
+                "GPSUltimateADA_HardwareSerial"
+            ],
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ESP32DevKitC",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "GPSUltimateADA"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["3.3v"]],[1,["5v"]]],
+                        "requiresLoad": 25
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "requires":[[0,["3.3v","TX"]],[1,["5v","TX"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "requires":[[0,["3.3v","RX"]],[1,["5v","RX"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "GPSUltimateADA_SoftwareSerial",
+            "coders": [
+                "GPSUltimateADA_SoftwareSerial"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "GPSUltimateADA"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SerialType",
+                    "interface": {
+                        "requires":[[0,["ESPSoftwareSerialTag"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["3.3v"]],[1,["5v"]]],
+                        "requiresLoad": 25
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "requires":[[0,["3.3v","ESPSoftwareSerialTX"]],[1,["5v","ESPSoftwareSerialTX"]],[2,["3.3v","ESPSoftwareSerialTX1"]],[3,["5v","ESPSoftwareSerialTX1"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "requires":[[0,["3.3v","ESPSoftwareSerialRX"]],[1,["5v","ESPSoftwareSerialRX"]],[2,["3.3v","ESPSoftwareSerialRX1"]],[3,["5v","ESPSoftwareSerialRX1"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 100
+        }
+    ]
+}

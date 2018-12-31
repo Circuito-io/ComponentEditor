@@ -1,0 +1,140 @@
+{
+    "name": "Thermistor",
+    "category": [
+        "input"
+    ],
+    "blockId": "149486",
+    "app": {
+        "appName": "NTC Thermistor 10k",
+        "image": "http://res.cloudinary.com/circuito/image/upload/rgxsi1omllfhbuwuskih",
+        "numericName": "",
+        "shortName": "Thermistor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A thermistor is a thermal resistor - a resistor that changes its resistance with temperature. it\u2019s a simple, inexpensive, and accurate component that makes it easy to get temperature data for your projects. It can be used in many applications including temperature measurement, compensation and control.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "Thermistor5v",
+            "coders": [
+                "Thermistor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Thermistor"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.con1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "VCC"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[1,["5v"]]]
+                    }
+                },
+                {
+                    "name": "con1",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "con0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "Thermistor3v3",
+            "coders": [
+                "Thermistor"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Thermistor"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.con1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "VCC"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[1,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "con1",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "con0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

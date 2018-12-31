@@ -1,0 +1,274 @@
+{
+    "name": "ATMega328P5v",
+    "category": [
+        "controller"
+    ],
+    "blockId": "!1000328",
+    "requires":[[0,["FTDI_DATA5v"]],[10,["Reg5v","FTDI_DATA5v"]],[20,["Reg5v","Reg3.3v","FTDI_DATA5v"]],[30,["StepUp5v","FTDI_DATA5v"]]],
+    "supportedControllers": [
+        "ATMega328P"
+    ],
+    "parts": [
+        {
+            "name": "Cap3",
+            "part": "CapCeramic100nF"
+        },
+        {
+            "name": "Res1",
+            "part": "Res10KO"
+        },
+        {
+            "name": "this",
+            "part": "ATMega328P"
+        },
+        {
+            "name": "Cap2",
+            "part": "CapCeramic22pF"
+        },
+        {
+            "name": "C1",
+            "part": "Crystal16MHz"
+        },
+        {
+            "name": "Cap1",
+            "part": "CapCeramic22pF"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.XTAL1",
+            "to": "C1.0"
+        },
+        {
+            "from": "this.XTAL2",
+            "to": "C1.1"
+        },
+        {
+            "from": "Cap1.con1",
+            "to": "C1.1"
+        },
+        {
+            "from": "Cap2.con0",
+            "to": "C1.0"
+        },
+        {
+            "from": "Cap1.con0",
+            "to": "this.GND"
+        },
+        {
+            "from": "Cap2.con1",
+            "to": "this.GND"
+        },
+        {
+            "from": "this.AVCC",
+            "to": "this.VCC"
+        },
+        {
+            "from": "Res1.con0",
+            "to": "Cap3.con1"
+        },
+        {
+            "from": "this.RESET",
+            "to": "Cap3.con0"
+        },
+        {
+            "from": "this.VCC",
+            "to": "Res1.con1"
+        },
+        {
+            "from": "Cap3.con1",
+            "to": "DTR"
+        }
+    ],
+    "ports": [
+        {
+            "name": "RXD",
+            "interface": {
+                "requires":[[0,["5v","TX"]]]
+            }
+        },
+        {
+            "name": "TXD",
+            "interface": {
+                "requires":[[0,["5v","RX"]]]
+            }
+        },
+        {
+            "name": "DTR",
+            "interface": {
+                "requires":[[0,["5v","DTR"]]]
+            }
+        },
+        {
+            "name": "2",
+            "interface": {
+                "codename": 2,
+                "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["5v","DigitalOut"],["SoftwareSerial","5v"],["ESPSoftwareSerialRX1","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "3",
+            "interface": {
+                "codename": 3,
+                "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["5v","DigitalOut"],["5v","PWM"],["5v","Timer2"],["SoftwareSerial","5v"],["ESPSoftwareSerialTX1","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "4",
+            "interface": {
+                "codename": 4,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "5",
+            "interface": {
+                "codename": 5,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "6",
+            "interface": {
+                "codename": 6,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "7",
+            "interface": {
+                "codename": 7,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "8",
+            "interface": {
+                "codename": 8,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "10",
+            "interface": {
+                "codename": 10,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["ESPSoftwareSerialRX","5v"],["5v","SS"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "11",
+            "interface": {
+                "codename": 11,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["5v","MOSI"],["ESPSoftwareSerialTX","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "12",
+            "interface": {
+                "codename": 12,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","MISO"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "13",
+            "interface": {
+                "codename": 13,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","SCK"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "provides":[["GND"]]
+            }
+        },
+        {
+            "name": "VCC",
+            "interface": {
+                "provides":[["5v"]],
+                "providesLoad": 400
+            }
+        },
+        {
+            "name": "AVCC",
+            "interface": {
+                "requires":[[1,["5v"]]],
+                "requiresLoad": 400
+            }
+        },
+        {
+            "name": "SerialType",
+            "interface": {
+                "provides":[["ESPSoftwareSerialTag"]]
+            }
+        },
+        {
+            "name": "9",
+            "interface": {
+                "codename": 9,
+                "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"]],
+                "providesLoad": 20
+            }
+        },
+        {
+            "name": "MemOverLoad",
+            "interface": {
+                "provides":[["SRAMLoad"]],
+                "providesLoad": 2048
+            }
+        },
+        {
+            "name": "A0",
+            "interface": {
+                "codename": "A0",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"]]
+            }
+        },
+        {
+            "name": "A1",
+            "interface": {
+                "codename": "A1",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"]]
+            }
+        },
+        {
+            "name": "A2",
+            "interface": {
+                "codename": "A2",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"]]
+            }
+        },
+        {
+            "name": "A3",
+            "interface": {
+                "codename": "A3",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"]]
+            }
+        },
+        {
+            "name": "A4",
+            "interface": {
+                "codename": "A4",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"],["SDA","5v"]]
+            }
+        },
+        {
+            "name": "A5",
+            "interface": {
+                "codename": "A5",
+                "provides":[["ADC"],["5v","DigitalIn"],["5v","DigitalIn","Int"],["SCL","5v"]]
+            }
+        }
+    ]
+}

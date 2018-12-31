@@ -1,0 +1,113 @@
+{
+    "name": "WaterPressureSensor",
+    "category": [
+        "input"
+    ],
+    "blockId": "267055",
+    "app": {
+        "appName": "Analog Water Pressure Sensor - Gravity",
+        "image": "http://res.cloudinary.com/circuito/image/upload/dcpnxc1spww3ulupxdse",
+        "numericName": "",
+        "shortName": "Water Pressure Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This water pressure sensor can detect presence of water and how strong the water pressure is.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "WaterPressureSensor5v",
+            "coders": [
+                "WaterPressureSensor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WaterPressureSensor"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "WaterPressureSensor3v3",
+            "coders": [
+                "WaterPressureSensor"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WaterPressureSensor"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

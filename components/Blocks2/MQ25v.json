@@ -1,0 +1,48 @@
+{
+    "name": "MQ25v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!398782",
+    "coders": [
+        "MQ2"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "MQ2"
+        }
+    ],
+    "ports": [
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "AOUT",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "5V",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        }
+    ]
+}

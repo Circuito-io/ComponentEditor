@@ -1,0 +1,53 @@
+{
+    "name": "RTCPCF5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!113323",
+    "coders": [
+        "RTCPCF"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "RTCPCF"
+        }
+    ],
+    "ports": [
+        {
+            "name": "SCL",
+            "interface": {
+                "requires":[[0,["5v","SCL"]]]
+            }
+        },
+        {
+            "name": "VCC",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["5v","SDA"]]]
+            }
+        }
+    ]
+}

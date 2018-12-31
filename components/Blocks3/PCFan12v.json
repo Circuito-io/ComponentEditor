@@ -1,0 +1,75 @@
+{
+    "name": "PCFan12v",
+    "category": [
+        "output"
+    ],
+    "blockId": "11285",
+    "app": {
+        "appName": "PC Fan 12V",
+        "image": "",
+        "numericName": "",
+        "shortName": "PC Fan 12V",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>12V PC Fan 8cm square,operating speed of 2000 RPM.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "PCFan12v",
+            "coders": [
+                "PCFan12v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PCFan12v"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requiresLoad": 80,
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[1,["12v"]]],
+                        "requiresLoad": 80
+                    }
+                }
+            ]
+        }
+    ]
+}

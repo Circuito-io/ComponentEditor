@@ -1,0 +1,175 @@
+{
+    "name": "PiezoSpeaker",
+    "category": [
+        "input"
+    ],
+    "blockId": "7950",
+    "app": {
+        "appName": "Piezo Speaker - PC Mount 12mm 2.048kHz",
+        "image": "http://res.cloudinary.com/circuito/image/upload/z2hfiw8pu2vn9oog4ccc",
+        "numericName": "",
+        "shortName": "Piezo Speaker",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>A very small vibration speaker, that allows you to play simple tones and basic melodies.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Piezo-Tunes/\">Piezo Tunes</a>.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "PiezoSpeaker5v",
+            "coders": [
+                "PiezoSpeaker"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PiezoSpeaker"
+                },
+                {
+                    "name": "BC337",
+                    "part": "TSBC337"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.neg",
+                    "to": "BC337.C"
+                },
+                {
+                    "from": "BC337.B",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "BC337.E",
+                    "to": "0"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "Sig"
+                },
+                {
+                    "from": "this.pos",
+                    "to": "Vin"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["5v","PWM"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "PiezoSpeaker3v3",
+            "coders": [
+                "PiezoSpeaker"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PiezoSpeaker"
+                },
+                {
+                    "name": "BC337",
+                    "part": "TSBC337"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.neg",
+                    "to": "BC337.C"
+                },
+                {
+                    "from": "BC337.B",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "BC337.E",
+                    "to": "0"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "Sig"
+                },
+                {
+                    "from": "this.pos",
+                    "to": "Vin"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["3.3v","PWM"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "name": "BLEHM10_HardwareSerial",
+    "category": [
+        "input"
+    ],
+    "blockId": "!395589",
+    "coders": [
+        "BLEHM10_HardwareSerial"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "BLEHM10"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.RX",
+            "to": "TXD"
+        },
+        {
+            "from": "this.TX",
+            "to": "RXD"
+        }
+    ],
+    "ports": [
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "VCC",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        },
+        {
+            "name": "TX",
+            "interface": {
+                "requires":[[0,["RX","5v"]],[1,["RX","3.3v"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "RX",
+            "interface": {
+                "requires":[[0,["TX","5v"]],[1,["TX","3.3v"]]],
+                "unique": true
+            }
+        }
+    ]
+}

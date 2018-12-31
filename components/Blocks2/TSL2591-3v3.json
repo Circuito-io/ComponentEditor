@@ -1,0 +1,49 @@
+{
+    "name": "TSL2591-3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!44359",
+    "coders": [
+        "TSL2591"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "TSL2591"
+        }
+    ],
+    "ports": [
+        {
+            "name": "SCL",
+            "interface": {
+                "requires":[[0,["3.3v","SCL"]]]
+            }
+        },
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["3.3v","SDA"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "VIN",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        }
+    ]
+}

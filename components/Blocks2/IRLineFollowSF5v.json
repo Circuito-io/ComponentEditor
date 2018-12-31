@@ -1,0 +1,48 @@
+{
+    "name": "IRLineFollowSF5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!674690",
+    "coders": [
+        "IRLineFollowSF"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "IRLineFollowSF"
+        }
+    ],
+    "ports": [
+        {
+            "name": "VCC",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "OUT",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        }
+    ]
+}
