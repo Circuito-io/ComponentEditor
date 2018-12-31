@@ -1,6 +1,5 @@
 {
     "name": "GraphicLCD",
-    "path": "GraphicLCD",
     "category": [
         "output"
     ],
@@ -21,67 +20,70 @@
         "desc": "<p>A huge LCD screen, allowing you to display long messages, or complex drawings. It\u2019s background is blue with a white font. The  screen may be sensitive to very low or very high temperature.</p>\n",
         "visible": "False"
     },
-    "coders": [
-        "GraphicLCD"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "GraphicLCD",
-                "rotation": 180
-            }
-        ],
-        "ports": [
-            {
-                "name": "Vin",
-                "interface": {
-                    "requires":[[0,["5v"]]],
-                    "requiresLoad": 200
+    "circuit": [
+        {
+            "name": "GraphicLCD",
+            "coders": [
+                "GraphicLCD"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "GraphicLCD",
+                    "rotation": 180
                 }
-            },
-            {
-                "name": "TX",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalOut"]]],
-                    "unique": true
+            ],
+            "ports": [
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[0,["5v"]]],
+                        "requiresLoad": 200
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 113
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
                 }
-            },
-            {
-                "name": "MemOverLoad",
-                "interface": {
-                    "requires":[[0,["SRAMLoad"]]],
-                    "requiresLoad": 113
-                }
-            },
-            {
-                "name": "RX",
-                "interface": {
-                    "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "Gnd",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

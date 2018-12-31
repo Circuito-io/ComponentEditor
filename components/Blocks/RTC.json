@@ -1,6 +1,5 @@
 {
     "name": "RTC",
-    "path": "RTC",
     "category": [
         "input"
     ],
@@ -21,59 +20,62 @@
         "desc": "<p>Keep track of the current year, month, day as well as the current time.</p>\n<p><strong>Returned Value</strong>: Returns the time and date.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
         "visible": "False"
     },
-    "coders": [
-        "RTC"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "RTC"
-            }
-        ],
-        "ports": [
-            {
-                "name": "SDA",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["SDA","5v"]],[1,["SDA","3.3v"]]]
+    "circuit": [
+        {
+            "name": "RTC",
+            "coders": [
+                "RTC"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "RTC"
                 }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SDA","5v"]],[1,["SDA","3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
+                    }
                 }
-            },
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "SCL",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

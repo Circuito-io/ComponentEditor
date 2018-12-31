@@ -1,6 +1,5 @@
 {
     "name": "Battery4xAA",
-    "path": "Power",
     "category": [
         "power"
     ],
@@ -25,47 +24,50 @@
         100,
         "Battery8xAA"
     ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "Battery4xAA"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["6v"]],
-                    "providesLoad": 600
+    "circuit": [
+        {
+            "name": "Battery4xAA",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Battery4xAA"
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["6v"]],
+                        "providesLoad": 600
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "PowerType",
+                    "interface": {
+                        "provides":[["Battery"]]
+                    }
                 }
-            },
-            {
-                "name": "PowerType",
-                "interface": {
-                    "provides":[["Battery"]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

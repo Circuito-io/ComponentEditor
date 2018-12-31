@@ -1,6 +1,5 @@
 {
     "name": "FSR",
-    "path": "FSR",
     "category": [
         "input"
     ],
@@ -21,7 +20,122 @@
         "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
         "visible": "False"
     },
-    "requires":[[0,["FSR5v"]],[1,["FSR3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "FSR5v",
+            "coders": [
+                "FSR"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "FSR"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res3K3O"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.1",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "0"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "1",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "2",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "FSR3v3",
+            "coders": [
+                "FSR"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "FSR"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res3K3O"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.1",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "0"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "1",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "2",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

@@ -1,6 +1,5 @@
 {
     "name": "LedMatrix",
-    "path": "LedMatrix",
     "category": [
         "output"
     ],
@@ -21,127 +20,130 @@
         "desc": "<p>Control a 8x8 LED matrix display using the MAX7219. Up to 8 modules can be chained for a longer display.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/LED-Matrix-with-Arduino/\">LED Matrix with Arduino</a></p>\n",
         "visible": "False"
     },
-    "coders": [
-        "LedMatrix"
-    ],
-    "requires": [
-        [
-            0,
-            [
-                "NONE"
+    "circuit": [
+        {
+            "name": "LedMatrix",
+            "coders": [
+                "LedMatrix"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "LogicLevelConverterSPI-3.3-5"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "Reg5v"
+                    ]
+                ],
+                [
+                    11,
+                    [
+                        "Reg5v",
+                        "LogicLevelConverterSPI-3.3-5"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LedMatrix"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "chainTo": "VCC_PT",
+                        "requires":[[0,["5v"]]],
+                        "requiresLoad": 300
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "chainTo": "GND_PT",
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "DIN",
+                    "interface": {
+                        "chainTo": "DIN_CHN",
+                        "requires":[[50,["5v","MISO"]],[1000,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CLK",
+                    "interface": {
+                        "chainTo": "CLK_PT",
+                        "requires":[[50,["5v","MOSI"]],[1000,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CS",
+                    "interface": {
+                        "chainTo": "CS_PT",
+                        "requires":[[50,["5v","SS"]],[1000,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "GND_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "DIN_CHN",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "CLK_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "CS_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                }
             ]
-        ],
-        [
-            1,
-            [
-                "LogicLevelConverterSPI-3.3-5"
-            ]
-        ],
-        [
-            10,
-            [
-                "Reg5v"
-            ]
-        ],
-        [
-            11,
-            [
-                "Reg5v",
-                "LogicLevelConverterSPI-3.3-5"
-            ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "LedMatrix"
-            }
-        ],
-        "ports": [
-            {
-                "name": "VCC",
-                "interface": {
-                    "chainTo": "VCC_PT",
-                    "requires":[[0,["5v"]]],
-                    "requiresLoad": 300
-                }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "chainTo": "GND_PT",
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "DIN",
-                "interface": {
-                    "chainTo": "DIN_CHN",
-                    "requires":[[50,["5v","MISO"]],[1000,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "CLK",
-                "interface": {
-                    "chainTo": "CLK_PT",
-                    "requires":[[50,["5v","MOSI"]],[1000,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "CS",
-                "interface": {
-                    "chainTo": "CS_PT",
-                    "requires":[[50,["5v","SS"]],[1000,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "VCC_PT",
-                "interface": {
-                    "chain": true
-                }
-            },
-            {
-                "name": "GND_PT",
-                "interface": {
-                    "chain": true
-                }
-            },
-            {
-                "name": "DIN_CHN",
-                "interface": {
-                    "chain": true
-                }
-            },
-            {
-                "name": "CLK_PT",
-                "interface": {
-                    "chain": true
-                }
-            },
-            {
-                "name": "CS_PT",
-                "interface": {
-                    "chain": true
-                }
-            }
-        ]
-    }
+        }
+    ]
 }
