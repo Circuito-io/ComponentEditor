@@ -148,7 +148,8 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                             
                             
                             data['circuit'].append(reqData)
-                
+                            os.remove(dstpath2 + '/' + reqName + '.json')
+                            
                 if 'coders' in data:
                     del data['coders']
                 
