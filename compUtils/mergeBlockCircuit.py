@@ -115,10 +115,21 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                 if 'coder' in data:
                     import pdb; pdb.set_trace() 
                 
+                # if 'USBPowerMini' in filename:
+                #     import pdb; pdb.set_trace() 
+
+                
                 print(filename)
                 for reqPr, reqNames in data.get('requires'):
                     for reqName in reqNames:
-                        if data['name'] in reqName:
+                        
+                        
+                        if 'First' in data['name']:
+                            tmpName = data['name'].split('First')[0]    
+                        else:
+                            tmpName = data['name']
+                        
+                        if tmpName in reqName:
                             blocksByName.setdefault(data['name'],{'data': data, 'reqs':[]})['reqs'].append((reqPr,reqName))
                             
                             json_data=open(dstpath2 + '/' + reqName + '.json').read()
