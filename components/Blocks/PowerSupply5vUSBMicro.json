@@ -1,6 +1,5 @@
 {
     "name": "PowerSupply5vUSBMicro",
-    "path": "Power",
     "category": [
         "powerConnector"
     ],
@@ -21,38 +20,41 @@
         "desc": "<p>A 5V2.5A power supply for your Raspberry PI. Works with 90-264VAC inputs. The most reliable and most likely to work well with Raspberry PI. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.<br>This part can only be used with Raspberry Pi.</p>\n",
         "visible": "False"
     },
-    "supportedControllers": [
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "USBPowerMicro"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["5v","USB"]],
-                    "providesLoad": 2500
+    "circuit": [
+        {
+            "name": "PowerSupply5vUSBMicro",
+            "supportedControllers": [
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerMicro"
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "provides":[["GND","USB"]]
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 2500
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "USB_MICRO",
+                    "interface": {
+                        "requires":[[0,["USB_MICRO"]]]
+                    }
                 }
-            },
-            {
-                "name": "USB_MICRO",
-                "interface": {
-                    "requires":[[0,["USB_MICRO"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

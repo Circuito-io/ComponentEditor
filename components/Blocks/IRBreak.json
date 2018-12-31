@@ -1,6 +1,5 @@
 {
     "name": "IRBreak",
-    "path": "IRBreak",
     "category": [
         "input"
     ],
@@ -21,7 +20,154 @@
         "desc": "<p>A simple way to detect motion. They work by having an emitting side that sends out an IR beam, then a receiver across the way which is sensitive to that same beam. When something breaks the beam the receiver will output a signal.  It works up to 25cm / 10\".</p>",
         "visible": "False"
     },
-    "requires":[[0,["IRBreak5v"]],[1,["IRBreak3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "IRBreak5v",
+            "coders": [
+                "IRBreak"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRBreak"
+                },
+                {
+                    "name": "R_pullup",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.VCCR",
+                    "to": "R_pullup.con0"
+                },
+                {
+                    "from": "this.SIG",
+                    "to": "R_pullup.con1"
+                },
+                {
+                    "from": "R_pullup.con1",
+                    "to": "sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCCT",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GNDR",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "GNDT",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCCR",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "sig",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "IRBreak3v3",
+            "coders": [
+                "IRBreak"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRBreak"
+                },
+                {
+                    "name": "R_pullup",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.VCCR",
+                    "to": "R_pullup.con0"
+                },
+                {
+                    "from": "this.SIG",
+                    "to": "R_pullup.con1"
+                },
+                {
+                    "from": "R_pullup.con1",
+                    "to": "sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCCT",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GNDR",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "GNDT",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCCR",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "sig",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

@@ -1,6 +1,5 @@
 {
     "name": "SIM800L",
-    "path": "GSM-SIM800L",
     "category": [
         "input"
     ],
@@ -21,7 +20,128 @@
         "desc": "<p>SIM800L is a small quad-band GSM / GPRS module, equipped with quad-band antenna. Insert a valid SIM card and you can use it for voice calls, sending text messages and accessing the internet.</p>",
         "visible": "False"
     },
-    "requires":[[0,["SIM800L_HardwareSerial"]],[100,["SIM800L_SoftwareSerial"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "SIM800L_HardwareSerial",
+            "coders": [
+                "SIM800L_HardwareSerial"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SIM800L"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "RST",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "requires":[[0,["5v","RX"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "requires":[[0,["5v","TX"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "SIM800L_SoftwareSerial",
+            "coders": [
+                "SIM800L_SoftwareSerial"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SIM800L"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "RST",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "requires":[[1,["ESPSoftwareSerialTX","5v"]],[10,["ESPSoftwareSerialTX1","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "SerialType",
+                    "interface": {
+                        "requires":[[0,["ESPSoftwareSerialTag"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 100
+        }
+    ]
 }
