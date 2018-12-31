@@ -1,0 +1,62 @@
+{
+    "name": "IRCamera3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!908638",
+    "coders": [
+        "IRCamera"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "IRCamera"
+        }
+    ],
+    "ports": [
+        {
+            "name": "INT",
+            "interface": {
+                "requires":[[0,["3.3v","DigitalIn","Int"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "SCL",
+            "interface": {
+                "requires":[[0,["3.3v","SCL"]]]
+            }
+        },
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["3.3v","SDA"]]]
+            }
+        },
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["3.3v","SDA"]]]
+            }
+        },
+        {
+            "name": "VIN",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "ACS7125v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!564923",
+    "coders": [
+        "ACS7125v"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "ACS712"
+        }
+    ],
+    "ports": [
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "5V",
+            "interface": {
+                "requires":[[1,["5v"]]]
+            }
+        },
+        {
+            "name": "VO",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        }
+    ]
+}

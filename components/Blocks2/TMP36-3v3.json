@@ -1,0 +1,46 @@
+{
+    "name": "TMP36-3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!844727",
+    "coders": [
+        "TMP36"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "TMP36"
+        }
+    ],
+    "ports": [
+        {
+            "name": "Vcc",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "Gnd",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "Vout",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        }
+    ]
+}

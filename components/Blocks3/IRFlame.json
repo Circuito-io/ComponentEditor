@@ -1,0 +1,113 @@
+{
+    "name": "IRFlame",
+    "category": [
+        "input"
+    ],
+    "blockId": "223347",
+    "app": {
+        "appName": "Infrared Flame Detection Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/fegddzasnww2fal8ywmo",
+        "numericName": "",
+        "shortName": "Flame Detection Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The sensor can detect flames of wavelength at 760 nm to 1100 nm. It can detect a lighter flame from 80cm, the larger the flame the farther the sensing distance.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "IRFlame5v",
+            "coders": [
+                "IRFlame"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRFlame"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "AOUT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "IRFlame3v3",
+            "coders": [
+                "IRFlame"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRFlame"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "AOUT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

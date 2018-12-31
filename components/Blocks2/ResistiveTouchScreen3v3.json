@@ -1,0 +1,50 @@
+{
+    "name": "ResistiveTouchScreen3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!276649",
+    "coders": [
+        "ResistiveTouchScreen"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "ResistiveTouchScreen"
+        }
+    ],
+    "ports": [
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["3.3v","SDA"]]]
+            }
+        },
+        {
+            "name": "SCL",
+            "interface": {
+                "requires":[[0,["3.3v","SCL"]]]
+            }
+        },
+        {
+            "name": "VIN",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

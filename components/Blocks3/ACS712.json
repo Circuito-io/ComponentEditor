@@ -1,0 +1,139 @@
+{
+    "name": "ACS712",
+    "category": [
+        "input"
+    ],
+    "blockId": "564923",
+    "app": {
+        "appName": "Current Sensor ACS712",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ob5151tubdlojhzh4kop",
+        "numericName": "ACS712",
+        "shortName": "Current Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Sense the AC or DC current flowing through it. it has a sensitivity of 185mV/A (equivalent to 26.4mA/Count of ADC). </p>\n<p><strong>Return Value</strong>: mA. Needs to be manually calibrated with zero current.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Simplified-Arduino-AC-Current-Measurement-Using-AC/\">Simplified Arduino AC Current Measurement Using ACS712 Hall Effect Sensor</a></p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "ACS7125v",
+            "coders": [
+                "ACS7125v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "ACS712"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[1,["5v"]]]
+                    }
+                },
+                {
+                    "name": "VO",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "ACS7123v3",
+            "coders": [
+                "ACS7123v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "ACS712"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res470O"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.GND",
+                    "to": "r2.con1"
+                },
+                {
+                    "from": "r2.con0",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.VO",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Vo"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[1,["5v"]]]
+                    }
+                },
+                {
+                    "name": "Vo",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 2
+        }
+    ]
+}

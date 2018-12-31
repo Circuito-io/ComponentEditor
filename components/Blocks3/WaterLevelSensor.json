@@ -1,0 +1,112 @@
+{
+    "name": "WaterLevelSensor",
+    "category": [
+        "input"
+    ],
+    "blockId": "752394",
+    "app": {
+        "appName": "Water Level Sensor Module",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ol03uay202rq0b69qevm",
+        "numericName": "",
+        "shortName": "Water Level Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This is simple and small portable water level/water droplet identification, a series of exposed parallel wires traces droplets/water and converts into analog signal. this sensor have low power consumption and high sensitivity.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "WaterLevelSensor5v",
+            "coders": [
+                "WaterLevelSensor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WaterLevelSensor"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "WaterLevelSensor3v3",
+            "coders": [
+                "WaterLevelSensor"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WaterLevelSensor"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "name": "PowerSupply5vUSBMicro",
+    "category": [
+        "powerConnector"
+    ],
+    "blockId": "9443",
+    "app": {
+        "appName": "Wall Power - 5VDC 2.5A for Raspberry PI",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jmbdpxugxoxa6udpze04",
+        "numericName": "",
+        "shortName": "5V Wall Power",
+        "tags": [
+            "powerSupplies"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "none",
+            "solder": "false"
+        },
+        "desc": "<p>A 5V2.5A power supply for your Raspberry PI. Works with 90-264VAC inputs. The most reliable and most likely to work well with Raspberry PI. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.<br>This part can only be used with Raspberry Pi.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "PowerSupply5vUSBMicro",
+            "supportedControllers": [
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerMicro"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 2500
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "USB_MICRO",
+                    "interface": {
+                        "requires":[[0,["USB_MICRO"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

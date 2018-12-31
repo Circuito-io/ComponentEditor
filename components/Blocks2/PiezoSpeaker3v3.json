@@ -1,0 +1,78 @@
+{
+    "name": "PiezoSpeaker3v3",
+    "category": [
+        "output"
+    ],
+    "blockId": "!7950",
+    "coders": [
+        "PiezoSpeaker"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "PiezoSpeaker"
+        },
+        {
+            "name": "BC337",
+            "part": "TSBC337"
+        },
+        {
+            "name": "r1",
+            "part": "Res1KO"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.neg",
+            "to": "BC337.C"
+        },
+        {
+            "from": "BC337.B",
+            "to": "r1.con1"
+        },
+        {
+            "from": "BC337.E",
+            "to": "0"
+        },
+        {
+            "from": "r1.con0",
+            "to": "Sig"
+        },
+        {
+            "from": "this.pos",
+            "to": "Vin"
+        }
+    ],
+    "ports": [
+        {
+            "name": "0",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "Sig",
+            "interface": {
+                "requires":[[0,["3.3v","PWM"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "Vin",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        }
+    ]
+}

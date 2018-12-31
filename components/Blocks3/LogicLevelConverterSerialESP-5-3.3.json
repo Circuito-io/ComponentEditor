@@ -1,0 +1,66 @@
+{
+    "name": "LogicLevelConverterSerialESP-5-3.3",
+    "category": [
+        "support"
+    ],
+    "circuit": [
+        {
+            "name": "LogicLevelConverterSerialESP-5-3.3",
+            "supportedControllers": [],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LogicLevelConverter"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "LV",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "HV1",
+                    "interface": {
+                        "requires":[[0,["TX","5v"]],[1,["ESPSoftwareSerialTX","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "LV1",
+                    "interface": {
+                        "codenameRedirect": "HV2",
+                        "provides":[["RX","3.3v"]]
+                    }
+                },
+                {
+                    "name": "LV2",
+                    "interface": {
+                        "codenameRedirect": "HV1",
+                        "provides":[["TX","3.3v"]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "HV",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "HV2",
+                    "interface": {
+                        "requires":[[0,["RX","5v"]],[1,["ESPSoftwareSerialRX","5v"]]],
+                        "unique": true
+                    }
+                }
+            ]
+        }
+    ]
+}

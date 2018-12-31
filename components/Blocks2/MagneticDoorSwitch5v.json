@@ -1,0 +1,66 @@
+{
+    "name": "MagneticDoorSwitch5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!653574",
+    "coders": [
+        "MagneticDoorSwitch"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "r1",
+            "part": "Res10KO"
+        },
+        {
+            "name": "this",
+            "part": "MagneticDoorSwitch"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.leg1",
+            "to": "r1.con0"
+        },
+        {
+            "from": "r1.con1",
+            "to": "0"
+        },
+        {
+            "from": "r1.con0",
+            "to": "Sig"
+        }
+    ],
+    "ports": [
+        {
+            "name": "0",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "leg0",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        },
+        {
+            "name": "Sig",
+            "interface": {
+                "requires":[[0,["5v","DigitalIn"]]],
+                "unique": true
+            }
+        }
+    ]
+}

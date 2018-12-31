@@ -1,0 +1,122 @@
+{
+    "name": "SGP30",
+    "category": [
+        "input"
+    ],
+    "blockId": "35286",
+    "app": {
+        "appName": "Adafruit SGP30 Air Quality Sensor Breakout - VOC and eCO2",
+        "image": "http://res.cloudinary.com/circuito/image/upload/fytg6miau1brzbyazvxl",
+        "numericName": "SGP30",
+        "shortName": "Air Quality Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "true"
+        },
+        "desc": "<p>This is an air quality sensor, for measuring gas and VOCs (Volatile Organic Compounds). It can measure eCO2 (equivalent calculated carbon-dioxide) concentration between 0 to 60,000 ppm (parts per million), and TVOC (Total Volatile Organic Compound) concentration between 0 to 60,000 ppb (parts per billion).</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "SGP30-5v",
+            "coders": [
+                "SGP30"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SGP30"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["5v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "SGP30-3v3",
+            "coders": [
+                "SGP30"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SGP30"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["3.3v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["3.3v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "PotentiometerSlide5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!698520",
+    "coders": [
+        "PotentiometerSlide"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "PotentiometerSlide"
+        }
+    ],
+    "ports": [
+        {
+            "name": "leg2",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "wiper",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "leg1",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        }
+    ]
+}

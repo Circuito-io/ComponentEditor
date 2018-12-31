@@ -1,0 +1,46 @@
+{
+    "name": "PotentiometerSoft3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!8680",
+    "coders": [
+        "PotentiometerSoft"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "PotentiometerSoft"
+        }
+    ],
+    "ports": [
+        {
+            "name": "leg2",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "wiper",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "leg1",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        }
+    ]
+}

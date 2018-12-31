@@ -1,0 +1,113 @@
+{
+    "name": "TMP36",
+    "category": [
+        "input"
+    ],
+    "blockId": "844727",
+    "app": {
+        "appName": "TMP36 Analog Temprature Sensor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ixaxk8f3xgowixujgmsl",
+        "numericName": "TMP36",
+        "shortName": "Temperature Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This Analog Temprature Sensor can measure -40 to 150C. It is very percise and doesn't need calibration</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "TMP36-5v",
+            "coders": [
+                "TMP36"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "TMP36"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Vcc",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Vout",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "TMP36-3v3",
+            "coders": [
+                "TMP36"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "TMP36"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Vcc",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Vout",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

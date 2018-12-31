@@ -1,0 +1,94 @@
+{
+    "name": "MPU6050",
+    "category": [
+        "input"
+    ],
+    "blockId": "11028",
+    "app": {
+        "appName": "SparkFun MPU-6050 - Accelerometer and Gyro",
+        "image": "http://res.cloudinary.com/circuito/image/upload/qijrhlsuaujzuqz84efy",
+        "numericName": "MPU6050",
+        "shortName": "Accelerometer and Gyro",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>The MPU-6050 is a triple axis accelerometer and gyro combined, allowing a very deep motion detection and analysis.</p>\n<p><strong>Returned Values</strong>: I2C Digital-output of 6 or 9-axis MotionFusion data.</p>\n<p><strong>Requires</strong>: Soldering of 8 male header pins to fit onto a breadboard.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Self-Balancing-Robot/\">Self Balancing Robot</a></p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "MPU6050",
+            "coders": [
+                "MPU6050"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MPU6050"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.VIO",
+                    "to": "this.VCC"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SDA","5v"]],[1,["SDA","3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 235
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SCL","5v"]],[1,["SCL","3.3v"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

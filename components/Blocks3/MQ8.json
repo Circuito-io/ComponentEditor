@@ -1,0 +1,139 @@
+{
+    "name": "MQ8",
+    "category": [
+        "input"
+    ],
+    "blockId": "398788",
+    "app": {
+        "appName": "Hydrogen Gas Sensor - MQ-8",
+        "image": "http://res.cloudinary.com/circuito/image/upload/pdhjxmvtm3suyjn4w2hd",
+        "numericName": "MQ8",
+        "shortName": "Hydrogen Gas Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This sensor is sensitive for hydrogen concentrations in the air. The MQ-8 can detect hydrogen gas concentrations anywhere from 100-10000ppm.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "MQ85v",
+            "coders": [
+                "MQ8"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ8"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "AOUT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "MQ83v3",
+            "coders": [
+                "MQ83v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ8"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res470O"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.GND",
+                    "to": "r2.con1"
+                },
+                {
+                    "from": "r2.con0",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.AOUT",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Aout"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Aout",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 2
+        }
+    ]
+}

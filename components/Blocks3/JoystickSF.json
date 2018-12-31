@@ -1,0 +1,140 @@
+{
+    "name": "JoystickSF",
+    "category": [
+        "input"
+    ],
+    "blockId": "713952",
+    "app": {
+        "appName": "Thumb Joystick",
+        "image": "http://res.cloudinary.com/circuito/image/upload/xo9kuwhjyidyyqrvwxtl",
+        "numericName": "",
+        "shortName": "Thumb Joystick",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>This Joystick is simply two 10Kohm potentiometers - one for each axis. The module also has a pushbutton for press functionality.</p>\n<p><strong>Returned Values</strong>: &#39;0 - 1023&#39; analog input value per direction and logical &#39;0&#39; or &#39;1&#39; for press.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://blog.arduino.cc/2012/12/23/xbee-controlled-4wd-wireless-robot/\">XBEE-CONTROLLED 4WD WIRELESS ROBOT</a></p>\n",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "JoystickSF5v",
+            "coders": [
+                "JoystickSF"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "JoystickSF"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SEL",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "VERT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "HORZ",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "JoystickSF3v3",
+            "coders": [
+                "JoystickSF"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "JoystickSF"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SEL",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "VERT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "HORZ",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

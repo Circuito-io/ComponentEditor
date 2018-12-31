@@ -1,0 +1,54 @@
+{
+    "name": "LEDRed3.3v",
+    "category": [
+        "output"
+    ],
+    "blockId": "!9590",
+    "coders": [
+        "LEDRed"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "LEDRed"
+        },
+        {
+            "name": "Res1",
+            "part": "Res100O"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.Gnd",
+            "to": "Res1.con0"
+        },
+        {
+            "from": "Res1.con1",
+            "to": "GND"
+        }
+    ],
+    "ports": [
+        {
+            "name": "Vin",
+            "interface": {
+                "requires":[[0,["3.3v","PWM"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

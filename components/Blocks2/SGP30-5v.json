@@ -1,0 +1,53 @@
+{
+    "name": "SGP30-5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!35286",
+    "coders": [
+        "SGP30"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "SGP30"
+        }
+    ],
+    "ports": [
+        {
+            "name": "SDA",
+            "interface": {
+                "requires":[[0,["5v","SDA"]]]
+            }
+        },
+        {
+            "name": "SCL",
+            "interface": {
+                "requires":[[0,["5v","SCL"]]]
+            }
+        },
+        {
+            "name": "VIN",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

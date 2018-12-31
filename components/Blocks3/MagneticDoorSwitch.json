@@ -1,0 +1,149 @@
+{
+    "name": "MagneticDoorSwitch",
+    "category": [
+        "input"
+    ],
+    "blockId": "653574",
+    "app": {
+        "appName": "Magnetic Door Switch Set",
+        "image": "http://res.cloudinary.com/circuito/image/upload/u1jehaxaewedsks3sjeu",
+        "numericName": "",
+        "shortName": "Magnetic Door Switch",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The Magnetic Door Switch Set is based on a small reed switch. It designed to alert you when doors, drawers, or any other aperture opens. When the two parts of the switch are separated from each other the circuit is broken and the value is changed from 1 to 0.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "MagneticDoorSwitch5v",
+            "coders": [
+                "MagneticDoorSwitch"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                },
+                {
+                    "name": "this",
+                    "part": "MagneticDoorSwitch"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.leg1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "0"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "Sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "leg0",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "MagneticDoorSwitch3v3",
+            "coders": [
+                "MagneticDoorSwitch"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MagneticDoorSwitch"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.leg1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "0"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "Sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "leg0",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

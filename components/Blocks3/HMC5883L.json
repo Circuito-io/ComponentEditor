@@ -1,0 +1,81 @@
+{
+    "name": "HMC5883L",
+    "category": [
+        "input"
+    ],
+    "blockId": "1234567",
+    "app": {
+        "appName": "HMC5883L - Magnetometer (Compass)",
+        "image": "http://res.cloudinary.com/circuito/image/upload/nyahhxtttzomt0misg9z",
+        "numericName": "HMC5883L",
+        "shortName": "Magnetometer",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Low-field magnetic sensing over digital interface for applications such as lowcost compassing and magnetometry.</p>\n<p><strong>Returned Values</strong>: Three axis heading via I2C bus.</p>\n<p><strong>Requires</strong>: soldering 5 pin male header</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "HMC5883L",
+            "coders": [
+                "HMC5883L"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "HMC5883L"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SDA","3.3v"]],[1,["SDA","5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

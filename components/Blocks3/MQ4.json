@@ -1,0 +1,139 @@
+{
+    "name": "MQ4",
+    "category": [
+        "input"
+    ],
+    "blockId": "398784",
+    "app": {
+        "appName": "Natural Gas (CNG) Sensor - MQ-4",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ulcocy4wgvem0r9wlrwh",
+        "numericName": "MQ4",
+        "shortName": "Natural Gas Sensor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>This sensor is sensitive for CNG (compressed natural gas) concentrations in the air. Can detect natural gas concentrations anywhere from 200 to 10000ppm.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "MQ45v",
+            "coders": [
+                "MQ4"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ4"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "AOUT",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "MQ43v3",
+            "coders": [
+                "MQ43v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ4"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res470O"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.GND",
+                    "to": "r2.con1"
+                },
+                {
+                    "from": "r2.con0",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.AOUT",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Aout"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Aout",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 2
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "name": "HallA13023v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!2331989",
+    "coders": [
+        "HallA1302"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "HallA1302"
+        }
+    ],
+    "ports": [
+        {
+            "name": "Vout",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "Vcc",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "Gnd",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

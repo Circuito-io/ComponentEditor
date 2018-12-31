@@ -1,0 +1,65 @@
+{
+    "name": "BTHC05_HardwareSerial",
+    "category": [
+        "input"
+    ],
+    "blockId": "!2631981",
+    "coders": [
+        "BTHC05_HardwareSerial"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "BTHC05"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.RX",
+            "to": "TXD"
+        },
+        {
+            "from": "this.TX",
+            "to": "RXD"
+        }
+    ],
+    "ports": [
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "VCC",
+            "interface": {
+                "requires":[[0,["5v"]]],
+                "requiresLoad": 200
+            }
+        },
+        {
+            "name": "TX",
+            "interface": {
+                "requires":[[0,["RX","5v"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "RX",
+            "interface": {
+                "requires":[[0,["TX","5v"]]],
+                "unique": true
+            }
+        }
+    ]
+}

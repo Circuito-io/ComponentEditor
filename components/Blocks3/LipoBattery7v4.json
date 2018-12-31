@@ -1,0 +1,74 @@
+{
+    "name": "LipoBattery7v4",
+    "category": [
+        "power"
+    ],
+    "blockId": "11856",
+    "app": {
+        "appName": "Lithium Polymer Battery 7.4v",
+        "image": "http://res.cloudinary.com/circuito/image/upload/bpaxgam0z62jjbjlv9xx",
+        "numericName": "",
+        "shortName": "LiPo Battery 7.4V",
+        "tags": [
+            "powerSupplies"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "none",
+            "solder": "false"
+        },
+        "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
+        "visible": "False"
+    },
+    "altComp": [
+        100,
+        "Battery8xAA"
+    ],
+    "circuit": [
+        {
+            "name": "LipoBattery7v4",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LipoBattery7v4"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "provides":[["7.4v"]],
+                        "providesLoad": 5000
+                    }
+                },
+                {
+                    "name": "PowerType",
+                    "interface": {
+                        "provides":[["Battery"]]
+                    }
+                }
+            ]
+        }
+    ]
+}

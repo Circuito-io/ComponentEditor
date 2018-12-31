@@ -1,6 +1,5 @@
 {
-    "name": "RPI3B",
-    "path": "RPI3B",
+    "name": "RPI3BFirst",
     "category": [
         "controller"
     ],
@@ -25,7 +24,6 @@
     "coders": [
         "RPI3B"
     ],
-    "requires":[[0,["RPI3BUSB"]],[1,["RPI3BExt"]]],
     "requiresExpansion": [
         [
             0,
@@ -36,6 +34,5 @@
             "MCP3008"
         ]
     ],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": []
 }

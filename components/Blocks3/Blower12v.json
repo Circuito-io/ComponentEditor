@@ -1,0 +1,77 @@
+{
+    "name": "Blower12v",
+    "category": [
+        "output"
+    ],
+    "blockId": "11270",
+    "app": {
+        "appName": "Blower - Squirrel Cage (12V)",
+        "image": "http://res.cloudinary.com/circuito/image/upload/yhs0dqdcgcmvvyleau6x",
+        "numericName": "",
+        "shortName": "Blower",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>DC Blower rates 1Amp @ 12VDC.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "Blower12v",
+            "coders": [
+                "Blower12v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Blower12v"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requiresLoad": 400,
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[1,["12v"]]],
+                        "requiresLoad": 400
+                    }
+                }
+            ]
+        }
+    ]
+}

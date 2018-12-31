@@ -1,0 +1,122 @@
+{
+    "name": "LSM303",
+    "category": [
+        "input"
+    ],
+    "blockId": "597144",
+    "app": {
+        "appName": "Triple-axis Accelerometer+Magnetometer (Compass) Board - LSM303",
+        "image": "http://res.cloudinary.com/circuito/image/upload/isvqzd6kfujp1s1ded1l",
+        "numericName": "LSM303",
+        "shortName": "Triple-axis Accelerometer+Magnetometer",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>The LSM303 breakout board combines a triple-axis accelerometer with a magnetometer (compass) module to create a navigation system and IMU (Inertial Measurement Unit).</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "LSM3035v",
+            "coders": [
+                "LSM303"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LSM303"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["5v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "LSM3033v3",
+            "coders": [
+                "LSM303"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LSM303"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["3.3v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["3.3v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

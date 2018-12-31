@@ -1,0 +1,46 @@
+{
+    "name": "CapacitiveTouchToggle3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!926213",
+    "coders": [
+        "CapacitiveTouchToggle"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "CapacitiveTouchToggle"
+        }
+    ],
+    "ports": [
+        {
+            "name": "OUT",
+            "interface": {
+                "requires":[[0,["3.3v","DigitalIn"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "VDD",
+            "interface": {
+                "requires":[[1,["3.3v"]]]
+            }
+        }
+    ]
+}

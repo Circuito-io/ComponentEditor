@@ -1,0 +1,89 @@
+{
+    "name": "Servo9g",
+    "category": [
+        "output"
+    ],
+    "blockId": "2345678",
+    "app": {
+        "appName": "9G Micro Servo",
+        "image": "http://res.cloudinary.com/circuito/image/upload/joo2scbbkokxdfyt8em9",
+        "numericName": "",
+        "shortName": "9G Micro Servo",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This is a very simple &amp; small servo, weight only 9g. You can use to rotate an object, or move a robotic arm.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Flying-Manatee/\">Flying Manatee</a>.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "Servo9g",
+            "coders": [
+                "Servo9g"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    30,
+                    [
+                        "Reg5v"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Servo9g"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[0,["5v"]],[1,["3.3v"]],[2,["6v"]]],
+                        "requiresLoad": 300
+                    }
+                }
+            ]
+        }
+    ]
+}

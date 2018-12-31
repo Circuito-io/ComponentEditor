@@ -1,0 +1,83 @@
+{
+    "name": "TCRT5000L3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!315997",
+    "coders": [
+        "TCRT5000L"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "TCRT5000L"
+        },
+        {
+            "name": "r1",
+            "part": "Res10KO"
+        },
+        {
+            "name": "r2",
+            "part": "Res100O"
+        }
+    ],
+    "wires": [
+        {
+            "from": "this.Coll",
+            "to": "r1.con0"
+        },
+        {
+            "from": "this.A",
+            "to": "r2.con0"
+        },
+        {
+            "from": "r1.con1",
+            "to": "5v"
+        },
+        {
+            "from": "r2.con1",
+            "to": "5v1"
+        }
+    ],
+    "ports": [
+        {
+            "name": "5v",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "5v1",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "Coll",
+            "interface": {
+                "requires":[[0,["3.3v","DigitalIn"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "Cath",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "E",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

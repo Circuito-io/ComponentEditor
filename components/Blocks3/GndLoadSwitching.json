@@ -1,0 +1,63 @@
+{
+    "name": "GndLoadSwitching",
+    "category": [
+        "support"
+    ],
+    "circuit": [
+        {
+            "name": "GndLoadSwitching",
+            "supportedControllers": [],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "TSBC337"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.B",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.E",
+                    "to": "GndIn"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "Sig"
+                },
+                {
+                    "from": "this.C",
+                    "to": "GndOut"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GndIn",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GndOut",
+                    "interface": {
+                        "codenameRedirect": "Sig",
+                        "provides":[["GndLoadSwitching"]],
+                        "providesLoad": 3000
+                    }
+                }
+            ]
+        }
+    ]
+}

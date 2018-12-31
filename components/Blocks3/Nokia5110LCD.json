@@ -1,0 +1,107 @@
+{
+    "name": "Nokia5110LCD",
+    "category": [
+        "output"
+    ],
+    "blockId": "10168",
+    "app": {
+        "appName": "Graphic LCD 84x48 - Nokia 5110",
+        "image": "http://res.cloudinary.com/circuito/image/upload/cg6gmqvwuniyczecmv8f",
+        "numericName": "Nokia 5110",
+        "shortName": "Graphic LCD 84x48",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>The Nokia 5110 is a basic graphic LCD screen for lots of applications.</p>\n<p><strong>Requires</strong>: Soldering 8 pin male header</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"https://www.hackster.io/vandenbrande/arduino-nokia-5110-lcd-temperature-meter-with-the-ds18b20-ad45a2\">Arduino - Nokia 5110 LCD temperature meter with the DS18B20</a></p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "Nokia5110LCD",
+            "coders": [
+                "Nokia5110LCD"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Nokia5110LCD"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "CS",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DN",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["5v","MOSI"]],[1,["3.3v","MOSI"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SCLK",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["5v","SCK"]],[1,["3.3v","SCK"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "RST",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DC",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 500
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "name": "PotentiometerTrim3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!172542",
+    "coders": [
+        "PotentiometerTrim"
+    ],
+    "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "PotentiometerTrim"
+        }
+    ],
+    "ports": [
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "SIG",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "VDD",
+            "interface": {
+                "requires":[[1,["3.3v"]]]
+            }
+        }
+    ]
+}

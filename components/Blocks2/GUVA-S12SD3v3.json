@@ -1,0 +1,45 @@
+{
+    "name": "GUVA-S12SD3v3",
+    "category": [
+        "input"
+    ],
+    "blockId": "!134251",
+    "coders": [
+        "GUVA-S12SD3v3"
+    ],
+    "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "GUVA-S12SD"
+        }
+    ],
+    "ports": [
+        {
+            "name": "VCC",
+            "interface": {
+                "requires":[[0,["3.3v"]]]
+            }
+        },
+        {
+            "name": "Out",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        }
+    ]
+}

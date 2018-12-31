@@ -1,0 +1,48 @@
+{
+    "name": "UltraSonic5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!639",
+    "coders": [
+        "UltraSonic"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "UltraSonic"
+        }
+    ],
+    "ports": [
+        {
+            "name": "PW",
+            "interface": {
+                "requires":[[0,["5v","DigitalIn"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "GND",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "Vin",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        }
+    ]
+}

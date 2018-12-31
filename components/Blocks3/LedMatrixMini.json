@@ -1,0 +1,120 @@
+{
+    "name": "LedMatrixMini",
+    "category": [
+        "input"
+    ],
+    "blockId": "912191",
+    "app": {
+        "appName": "Adafruit Mini 8x8 LED Matrix with I2C Backpack - Ultra Bright White",
+        "image": "http://res.cloudinary.com/circuito/image/upload/vuoubrdl32clmzd4x8bx",
+        "numericName": "",
+        "shortName": "8x8 LED Matrix",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "true"
+        },
+        "desc": "<p>Control a 8x8 LED matrix display using I2C.</p>",
+        "visible": "true"
+    },
+    "circuit": [
+        {
+            "name": "LedMatrixMini5v",
+            "coders": [
+                "LedMatrixMini"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LedMatrixMini"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "C",
+                    "interface": {
+                        "requires":[[0,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "D",
+                    "interface": {
+                        "requires":[[0,["5v","SDA"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "LedMatrixMini3v3",
+            "coders": [
+                "LedMatrixMini"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LedMatrixMini"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "C",
+                    "interface": {
+                        "requires":[[0,["3.3v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "D",
+                    "interface": {
+                        "requires":[[0,["3.3v","SDA"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

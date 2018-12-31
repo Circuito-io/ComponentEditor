@@ -1,0 +1,154 @@
+{
+    "name": "LDR",
+    "category": [
+        "input"
+    ],
+    "blockId": "9088",
+    "app": {
+        "appName": "LDR - Mini Photocell",
+        "image": "http://res.cloudinary.com/circuito/image/upload/x8pzop9ftagchdrvgzmi",
+        "numericName": "",
+        "shortName": "LDR",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>This is a very small light sensor that reacts to changes in ambient light. (turned out light bulb, sun light).<br><strong>Returned values</strong>: from 0 (no light) to 1023 (maximal light). - Works in ambient Light, regular daylight.<br><strong>Sample applications</strong>: Detect that light has been turned out and perform some action, like say \u201cHello\u201d.</p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "LDR5v",
+            "coders": [
+                "LDR"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LDR"
+                },
+                {
+                    "name": "R1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.con1",
+                    "to": "R1.con0"
+                },
+                {
+                    "from": "R1.con1",
+                    "to": "0"
+                },
+                {
+                    "from": "this.con0",
+                    "to": "5v"
+                },
+                {
+                    "from": "this.con1",
+                    "to": "Sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "5v",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "LDR3v3",
+            "coders": [
+                "LDR"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoProMini3v3",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LDR"
+                },
+                {
+                    "name": "R1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.con1",
+                    "to": "R1.con0"
+                },
+                {
+                    "from": "R1.con1",
+                    "to": "0"
+                },
+                {
+                    "from": "this.con0",
+                    "to": "5v"
+                },
+                {
+                    "from": "this.con1",
+                    "to": "Sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "5v",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Mic5v",
+    "category": [
+        "input"
+    ],
+    "blockId": "!9964",
+    "coders": [
+        "Mic"
+    ],
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+    ],
+    "parts": [
+        {
+            "name": "this",
+            "part": "Mic"
+        }
+    ],
+    "ports": [
+        {
+            "name": "0",
+            "interface": {
+                "requires":[[0,["GND"]]]
+            }
+        },
+        {
+            "name": "Sig",
+            "interface": {
+                "requires":[[0,["ADC"]]],
+                "unique": true
+            }
+        },
+        {
+            "name": "Vin",
+            "interface": {
+                "requires":[[0,["5v"]]]
+            }
+        }
+    ]
+}

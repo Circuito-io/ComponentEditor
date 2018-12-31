@@ -1,0 +1,90 @@
+{
+    "name": "PiezoSensor",
+    "category": [
+        "input"
+    ],
+    "blockId": "10293",
+    "app": {
+        "appName": "Piezo Element",
+        "image": "http://res.cloudinary.com/circuito/image/upload/ykaggtuuezufipl2togh",
+        "numericName": "",
+        "shortName": "Piezo",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": "true",
+            "code": "true",
+            "solder": "false"
+        },
+        "desc": "<p>Piezo generates a voltage when it is physically deformed by a vibration, sound wave, or mechanical strain.<br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"https://www.arduino.cc/en/Tutorial/Knock\">Secret Knock</a></p>\n",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "PiezoSensor",
+            "coders": [
+                "PiezoSensor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PiezoSensor"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1MO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.neg",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "this.pos",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.pos",
+                    "to": "pos"
+                },
+                {
+                    "from": "this.neg",
+                    "to": "neg"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "name": "LedStick",
+    "category": [
+        "output"
+    ],
+    "blockId": "216577",
+    "app": {
+        "appName": "NeoPixel Stick - 8 x 5050 RGB LED",
+        "image": "http://res.cloudinary.com/circuito/image/upload/upkpifqpnk6apidld0f0",
+        "numericName": "WS2812",
+        "shortName": "NeoPixel Stick",
+        "tags": [
+            "outputs"
+        ],
+        "indicators": {
+            "verified": "false",
+            "code": "false",
+            "solder": "false"
+        },
+        "desc": "<p>An 8 addressable RGB LED stick. It has a single data line for control. You can chain these units by connecting the output of one stick to the input of another.</p>",
+        "visible": "False"
+    },
+    "circuit": [
+        {
+            "name": "LedStick",
+            "coders": [
+                "LedStick"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "PowerSupply5v"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "Reg5v"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LedStick"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "+5VB",
+                    "interface": {
+                        "chainTo": "+5VA",
+                        "requires":[[0,["5v"]]],
+                        "requiresLoad": 200
+                    }
+                },
+                {
+                    "name": "DATAIN",
+                    "interface": {
+                        "chainTo": "DATAOUT",
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GNDC",
+                    "interface": {
+                        "chainTo": "GNDA",
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "+5VA",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "DATAOUT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "GNDA",
+                    "interface": {
+                        "chain": true
+                    }
+                }
+            ]
+        }
+    ]
+}
