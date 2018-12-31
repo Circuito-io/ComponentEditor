@@ -112,13 +112,11 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                 if 'path' in data:
                         del data['path']
                 
-                if 'coder' in data:
-                    import pdb; pdb.set_trace() 
                 
                 # if 'USBPowerMini' in filename:
                 #     import pdb; pdb.set_trace() 
 
-                
+                references = []
                 print(filename)
                 for reqPr, reqNames in data.get('requires'):
                     for reqName in reqNames:
@@ -140,10 +138,22 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                                 if key in reqData:
                                     del reqData[key]
                             
+                            if 'coders' in data:
+                                reqData['coders'] = data['coders']
                             
+                            if 'references' in reqData:
+                                references = reqData['references']
+                                
+                                # import pdb; pdb.set_trace() 
                             
                             
                             data['circuit'].append(reqData)
+                
+                if 'coders' in data:
+                    del data['coders']
+                
+                if references:
+                    data['references'] = references
                             
                 del data['requires']
                 # check about supportet controllers - delete?
