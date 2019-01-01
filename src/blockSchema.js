@@ -1,5 +1,3 @@
-
-
 // Using FireReaderInput instead of cloudinary:
 // import FileReaderInput from "react-file-reader-input";
 // <FileReaderInput
@@ -48,9 +46,6 @@ export const blockuiSchema = {
     "ui:options": {
       rows: 7
     }
-  },
-  circuits: {
-    "ui:field": "tabbedarray"
   }
 };
 
@@ -121,20 +116,6 @@ export const blockSchema = {
     },
     notes: {
       type: "string"
-    },
-    circuits: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          name: {
-            type: "string"
-          },
-          desc: {
-            type: "string"
-          }
-        }
-      }
     }
   }
 };
