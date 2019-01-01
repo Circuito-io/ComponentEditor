@@ -1,6 +1,5 @@
 {
     "name": "Buzzer",
-    "path": "Buzzer",
     "category": [
         "output"
     ],
@@ -21,82 +20,85 @@
         "desc": "<p>This is a very small buzzer that produce a loud 2KHz beep tone.</p>",
         "visible": "true"
     },
-    "coders": [
-        "Buzzer"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "Buzzer"
-            },
-            {
-                "name": "BC337",
-                "part": "TSBC337"
-            },
-            {
-                "name": "r1",
-                "part": "Res1KO"
-            }
-        ],
-        "wires": [
-            {
-                "from": "this.neg",
-                "to": "BC337.C"
-            },
-            {
-                "from": "BC337.B",
-                "to": "r1.con1"
-            },
-            {
-                "from": "BC337.E",
-                "to": "0"
-            },
-            {
-                "from": "r1.con0",
-                "to": "Sig"
-            },
-            {
-                "from": "this.pos",
-                "to": "Vin"
-            }
-        ],
-        "ports": [
-            {
-                "name": "0",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+    "circuit": [
+        {
+            "name": "Buzzer",
+            "coders": [
+                "Buzzer"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Buzzer"
+                },
+                {
+                    "name": "BC337",
+                    "part": "TSBC337"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res1KO"
                 }
-            },
-            {
-                "name": "Sig",
-                "interface": {
-                    "requires":[[0,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
-                    "unique": true
+            ],
+            "wires": [
+                {
+                    "from": "this.neg",
+                    "to": "BC337.C"
+                },
+                {
+                    "from": "BC337.B",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "BC337.E",
+                    "to": "0"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "Sig"
+                },
+                {
+                    "from": "this.pos",
+                    "to": "Vin"
                 }
-            },
-            {
-                "name": "Vin",
-                "interface": {
-                    "requires":[[1,["5v"]],[2,["3.3v"]]]
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[1,["5v"]],[2,["3.3v"]]]
+                    }
                 }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

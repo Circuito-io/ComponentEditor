@@ -1,6 +1,5 @@
 {
     "name": "Battery9v",
-    "path": "Power",
     "category": [
         "power"
     ],
@@ -25,48 +24,51 @@
         100,
         "PowerSupply12v2A"
     ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "Battery9v"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["9v"]],
-                    "providesLoad": 1000
+    "circuit": [
+        {
+            "name": "Battery9v",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Battery9v"
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["9v"]],
+                        "providesLoad": 1000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "PowerType",
+                    "interface": {
+                        "provides":[["Battery"]]
+                    }
                 }
-            },
-            {
-                "name": "PowerType",
-                "interface": {
-                    "provides":[["Battery"]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

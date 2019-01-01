@@ -1,6 +1,5 @@
 {
     "name": "BMP280",
-    "path": "BMP280",
     "category": [
         "input"
     ],
@@ -21,7 +20,105 @@
         "desc": "<p>The BMP280 is the successor of the BMP180. It is a high precision, low power digital environmental sensor providing temperature and barometric pressure readings.<br><strong>Returned Values</strong>: Can measure barometric  pressure  with \u00b11 hPa accuracy, temperature with \u00b11.0\u00b0C accuracy, and altitude with \u00b11 meter accuracy.</p>\n<p><strong>Requires</strong>: Soldering 7 pin male header.</p>\n",
         "visible": "true"
     },
-    "requires":[[0,["BMP2805v"]],[1,["BMP2803v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "BMP2805v",
+            "coders": [
+                "BMP280"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ATTiny85",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "BMP280"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDI",
+                    "interface": {
+                        "requires":[[0,["5v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCK",
+                    "interface": {
+                        "requires":[[0,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "BMP2803v3",
+            "coders": [
+                "BMP280"
+            ],
+            "supportedControllers": [
+                "ATTiny85",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "BMP280"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDI",
+                    "interface": {
+                        "requires":[[0,["3.3v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCK",
+                    "interface": {
+                        "requires":[[0,["3.3v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

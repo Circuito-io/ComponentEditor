@@ -1,6 +1,5 @@
 {
     "name": "WaterLevelSNC",
-    "path": "WaterLevelSNC",
     "category": [
         "input"
     ],
@@ -21,52 +20,55 @@
         "desc": "<p>The Liquid Level Sensor provides single point liquid detection via a TTL compatible push/pull output.</p>",
         "visible": "False"
     },
-    "coders": [
-        "WaterLevelSNC"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "WaterLevelSNC"
-            }
-        ],
-        "ports": [
-            {
-                "name": "SIG",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "WaterLevelSNC",
+            "coders": [
+                "WaterLevelSNC"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "WaterLevelSNC"
                 }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
                 }
-            },
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["5v"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

@@ -1,6 +1,5 @@
 {
     "name": "LCD16X2",
-    "path": "LCD16x2",
     "category": [
         "output"
     ],
@@ -21,146 +20,149 @@
         "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings.</p>\n<p><strong>Contribution</strong>: This component is introduced into circuito.io with the help of members of our community: <strong>maheswar.nani, paeric & adarmaori</strong>.</p>\n<p><strong>Disclaimer</strong>: This component is <strong>in testing</strong>, therefore it may be buggy. Please be kind and report any bugs you may find.</p>\n<strong>Requires</strong>: Soldering 16 pin male header</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/My-First-Project-Arduino-LCD-16x2-Display/?ALLSTEPS#intro\">My First Project: Arduino LCD 16x2 Display</a></p>\n",
         "visible": "true"
     },
-    "coders": [
-        "LCD16X2"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "LCD16X2"
-            },
-            {
-                "name": "Res1",
-                "part": "Res220O"
-            },
-            {
-                "name": "Pot",
-                "part": "Potentiometer"
-            }
-        ],
-        "wires": [
-            {
-                "from": "this.A",
-                "to": "Res1.con1"
-            },
-            {
-                "from": "this.VO",
-                "to": "Pot.Sig"
-            },
-            {
-                "from": "Res1.con0",
-                "to": "A"
-            },
-            {
-                "from": "Pot.0",
-                "to": "PotGND"
-            },
-            {
-                "from": "Pot.Vin",
-                "to": "PotVCC"
-            }
-        ],
-        "ports": [
-            {
-                "name": "PotVCC",
-                "interface": {
-                    "requires":[[0,["5v"]],[1,["3.3v"]]]
+    "circuit": [
+        {
+            "name": "LCD16X2",
+            "coders": [
+                "LCD16X2"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LCD16X2"
+                },
+                {
+                    "name": "Res1",
+                    "part": "Res220O"
+                },
+                {
+                    "name": "Pot",
+                    "part": "Potentiometer"
                 }
-            },
-            {
-                "name": "PotGND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "wires": [
+                {
+                    "from": "this.A",
+                    "to": "Res1.con1"
+                },
+                {
+                    "from": "this.VO",
+                    "to": "Pot.Sig"
+                },
+                {
+                    "from": "Res1.con0",
+                    "to": "A"
+                },
+                {
+                    "from": "Pot.0",
+                    "to": "PotGND"
+                },
+                {
+                    "from": "Pot.Vin",
+                    "to": "PotVCC"
                 }
-            },
-            {
-                "name": "VSS",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "PotVCC",
+                    "interface": {
+                        "requires":[[0,["5v"]],[1,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "PotGND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VSS",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VDD",
+                    "interface": {
+                        "requires":[[0,["5v"]],[1,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "RS",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "R_W",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "E",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DB4",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DB5",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DB6",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "DB7",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "A",
+                    "interface": {
+                        "requires":[[0,["5v"]],[1,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "K",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
                 }
-            },
-            {
-                "name": "VDD",
-                "interface": {
-                    "requires":[[0,["5v"]],[1,["3.3v"]]]
-                }
-            },
-            {
-                "name": "RS",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "R_W",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "E",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "DB4",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "DB5",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "DB6",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "DB7",
-                "interface": {
-                    "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "A",
-                "interface": {
-                    "requires":[[0,["5v"]],[1,["3.3v"]]]
-                }
-            },
-            {
-                "name": "K",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

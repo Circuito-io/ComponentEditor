@@ -1,6 +1,5 @@
 {
     "name": "HallU1881",
-    "path": "HallSensorU1881",
     "category": [
         "input"
     ],
@@ -21,7 +20,122 @@
         "desc": "<p>Hall effect latched sensor. Holding alternating magnet poles near the sensor will cause the output pin to toggle.</p>\n<p><strong>Returned Values</strong>: The output pin will toggle from digital &#39;1&#39; and &#39;0&#39;.</p>\n",
         "visible": "False"
     },
-    "requires":[[0,["HallU18815v"]],[1,["HallU18813v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "HallU18815v",
+            "coders": [
+                "HallU1881"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "HallU1881"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.Vout",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.Vcc",
+                    "to": "r1.con0"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Vout",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vcc",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "HallU18813v3",
+            "coders": [
+                "HallU1881"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "HallU1881"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.Vout",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.Vcc",
+                    "to": "r1.con0"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Vout",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vcc",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

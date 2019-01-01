@@ -1,6 +1,5 @@
 {
     "name": "DCMotorB",
-    "path": "DCMotor",
     "category": [
         "output"
     ],
@@ -21,70 +20,73 @@
         "desc": "<p>A micro metal geared DC motor. It has a ratio of 298:1 and has a max speed of 90 RPM @ voltage up to 12V.</p>\n",
         "visible": "False"
     },
-    "coders": [
-        "DCMotor"
-    ],
-    "requires": [
-        [
-            0,
-            [
-                "GndHighLoadPWMSwitching"
+    "circuit": [
+        {
+            "name": "DCMotorB",
+            "coders": [
+                "DCMotor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "d1",
+                    "part": "DIRect1A50v",
+                    "rotation": 180
+                },
+                {
+                    "name": "this",
+                    "part": "DCMotor"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.Coil1",
+                    "to": "d1.pos"
+                },
+                {
+                    "from": "this.Coil2",
+                    "to": "d1.neg"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requiresLoad": 400,
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
+                        "requiresLoad": 400
+                    }
+                }
             ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "d1",
-                "part": "DIRect1A50v",
-                "rotation": 180
-            },
-            {
-                "name": "this",
-                "part": "DCMotor"
-            }
-        ],
-        "wires": [
-            {
-                "from": "this.Coil1",
-                "to": "d1.pos"
-            },
-            {
-                "from": "this.Coil2",
-                "to": "d1.neg"
-            }
-        ],
-        "ports": [
-            {
-                "name": "Coil1",
-                "interface": {
-                    "requires":[[0,["GndLoadSwitching","PWM"]]],
-                    "requiresLoad": 400,
-                    "unique": true
-                }
-            },
-            {
-                "name": "Coil2",
-                "interface": {
-                    "requires":[[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
-                    "requiresLoad": 400
-                }
-            }
-        ]
-    }
+        }
+    ]
 }
