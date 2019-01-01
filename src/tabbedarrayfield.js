@@ -66,30 +66,7 @@ function TabbedArrayItem(props) {
               display: "flex",
               justifyContent: "space-around",
             }}>
-            {(props.hasMoveUp || props.hasMoveDown) && (
-              <IconBtn
-                icon="arrow-up"
-                className="array-item-move-up"
-                tabIndex="-1"
-                style={btnStyle}
-                disabled={props.disabled || props.readonly || !props.hasMoveUp}
-                onClick={props.onReorderClick(props.index, props.index - 1)}
-              />
-            )}
-
-            {(props.hasMoveUp || props.hasMoveDown) && (
-              <IconBtn
-                icon="arrow-down"
-                className="array-item-move-down"
-                tabIndex="-1"
-                style={btnStyle}
-                disabled={
-                  props.disabled || props.readonly || !props.hasMoveDown
-                }
-                onClick={props.onReorderClick(props.index, props.index + 1)}
-              />
-            )}
-
+            
             {props.hasRemove && (
               <IconBtn
                 type="danger"
@@ -132,10 +109,15 @@ function TabbedArrayFieldTemplate(props) {
                 />
             )}
       
-            <Tabs defaultActiveKey={0} key={`array-item-list-${props.idSchema.$id}`} onSelect={eventKey => {
-                if (eventKey == '+') {
-                    props.onAddClick(document.createEvent('Event'));
-                }
+            <Tabs 
+                defaultActiveKey={0}
+                key={`array-item-list-${props.idSchema.$id}`}
+                id={`array-item-list-${props.idSchema.$id}`}
+                onSelect={
+                    eventKey => {
+                        if (eventKey == '+') {
+                        props.onAddClick(document.createEvent('Event'));
+                        }
             }}>
             
                 {props.items && props.items.map(p => TabbedArrayItem(p))}
@@ -431,8 +413,6 @@ export class TabbedArrayField extends React.Component {
             className: "array-item",
             disabled,
             hasToolbar: has.toolbar,
-            hasMoveUp: has.moveUp,
-            hasMoveDown: has.moveDown,
             hasRemove: has.remove,
             index,
             onDropIndexClick: this.onDropIndexClick,

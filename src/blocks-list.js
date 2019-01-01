@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'whatwg-fetch';
 import { Typeahead } from "react-bootstrap-typeahead";
+import { list_all_blocks } from "./controller.js";
 
 //import "react-bootstrap-typeahead/css/Typeahead.css";
 //import "react-bootstrap-typeahead/css/Typeahead-bs4.css";
@@ -12,19 +12,15 @@ export class BlocksList extends React.Component {
     this.state = {
       blocks: [],
     };
-    
+
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
-      fetch('/blocks')
-        .then((response) => response.json())
-        .then((blocks) => {
-            this.setState({ blocks });
-        })
-        .catch((ex) => {
-            console.log('parsing failed', ex);
-        })
+    list_all_blocks()
+      .then((blocks) => {
+        this.setState({ blocks });
+      })
   };
 
   render() {

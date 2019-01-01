@@ -2,7 +2,7 @@ require('bootstrap');
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Grid, Row, Col, Well , Button} from "react-bootstrap";
+import { Grid, Row, Col, Well, Button } from "react-bootstrap";
 import { Header } from "./header"
 import { Block } from "./block.js";
 import { Home } from "./home.js";
@@ -11,20 +11,17 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.forms = {};
+    this.blockSaveFunc = null;
 
     this.state = {
-      activeBlock: '74HC4051',
+      activeBlock: null
     };
 
-    this.setForm = this.setForm.bind(this);
     this.blockSelected = this.blockSelected.bind(this);
     this.onSave = this.onSave.bind(this);
+    this.setSave = this.setSave.bind(this);
     this.goHome = this.goHome.bind(this);
-  }
-
-  setForm(id, form) {
-    this.forms[id] = form;
+    this.updateData = this.updateData.bind(this);
   }
 
   blockSelected(block) {
@@ -33,12 +30,19 @@ export default class App extends React.Component {
   }
 
   onSave(event) {
-    console.log("save", this.forms);
+    this.blockSaveFunc();
   }
-  
-  goHome()
-  {
-    this.setState({ activeBlock: null});
+
+  setSave(savefunc) {
+    this.blockSaveFunc = savefunc;
+  }
+
+  updateData(data) {
+    this.currentData = data;
+  }
+
+  goHome() {
+    this.setState({ activeBlock: null });
   }
 
   render() {
@@ -49,7 +53,7 @@ export default class App extends React.Component {
         {
           (this.state.activeBlock == null) ? 
           <Home blockSelected = {this.blockSelected} /> : 
-          <Block id="block" block={this.state.activeBlock} setForm={this.setForm} />
+          <Block id="block" block={this.state.activeBlock} setSave={this.setSave} updateData={this.updateData}/>
         }
         
       </React.Fragment>

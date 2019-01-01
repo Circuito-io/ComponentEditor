@@ -1,183 +1,180 @@
-import {supportedControllersUISchema} from "./commonfields"
+import { supportedControllersUISchema } from "./commonfields"
 
-export const circuitInfoSchema = {
-	type: "object",
-	properties: {
-		name: {
-			type: "string"
-		},
-		cost: {
-			type: "integer",
-			default: 0
-		},
-		supportedControllers: {
-			type: "string"
-		}
-	}
-};
-
-export const circuitInfouiSchema = {
-	supportedControllers: supportedControllersUISchema
-};
-
-export const circuitPartuiSchema = {
-	partlist: {
+export const circuitsuiSchema = {
+	circuit: {
+		"ui:field": "tabbedarray",
 		items: {
-			"ui:readonly": true
-		}
-	},
-	addPart: {
-		"ui:field": "typeahead",
-		typeahead: {
-			options: ["ADXL345", "ADXL335", "Resistor"],
-			allowNew: true,
-			minLength: 0,
-			newSelectionPrefix: "Create new part:"
-		}
-	}
-};
-
-export const circuitPartsSchema = {
-	type: "object",
-	properties: {
-		partlist: {
-			type: "array",
-			items: { type: "string" }
-		}
-	}
-};
-
-export const circuitCodersSchema = {
-	type: "array",
-	items: {
-		type: "string",
-		default: "",
-		enum: ["ADXL345", "ADXL335", "Resistor", "Create New..."]
-	}
-};
-
-export const circuitBlocksuiSchema = {
-	"ui:options": {
-		orderable: false
-	},
-	items: {
-		blocks: {
-			"ui:field": "typeahead",
-			typeahead: {
-				options: ["ADXL345", "ADXL335", "Resistor"],
-				minLength: 0,
-				multiple: true
-			}
-		}
-	}
-};
-
-export const circuitBlocksSchema = {
-	type: "array",
-	title: "SupportBlocks [list only support and power blocks]",
-	items: {
-		type: "object",
-		properties: {
-			cost: {
-				type: "integer",
-				default: 0
+			"ui:field": "tabbedobject",
+			"ui:options": {
+				tabs: {
+					Info: ['name', 'cost', 'supportedControllers'],
+					Parts: ['partlist'],
+					Blocks: ['blocks'],
+					Coders: ['coders'],
+					Wiring: ['ports', 'wires']
+				}
+			},
+			supportedControllers: supportedControllersUISchema,
+			partlist: {
+				items: {
+					"ui:readonly": true
+				}
 			},
 			blocks: {
-				type: "string"
-			}
-		}
-	}
-};
-
-export const circuitWiringSchema = {
-	type: "object",
-	properties: {
-		wires: {
-			type: "array",
-			items: {
-				type: "object",
-				properties: {
-					from: {
-						type: "string",
-						default: ""
-					},
-					to: {
-						type: "string",
-						default: ""
+				"ui:options": {
+					orderable: false
+				},
+				items: {
+					blocks: {
+						"ui:field": "typeahead",
+						typeahead: {
+							options: ["ADXL345", "ADXL335", "Resistor"],
+							minLength: 0,
+							multiple: true
+						}
 					}
 				}
-			}
-		},
-		ports: {
+			},
+		}
+	}
+}
+
+export const circuitsSchema = {
+	type: "object",
+	properties: {
+		circuit: {
 			type: "array",
+			title: "",
 			items: {
-				type: "object",
-				properties: {
+				"type": "object",
+				"properties": {
 					name: {
-						type: "string",
-						default: ""
+						type: "string"
 					},
-					codename: {
-						title: "codename [show for category controller only]",
-						type: "string",
-						default: ""
+					cost: {
+						type: "integer",
+						default: 0
 					},
-					unique: {
-						type: "boolean"
+					supportedControllers: {
+						type: "string"
 					},
-					includeInFirmware: {
-						type: "boolean"
-					},
-					type: {
-						type: "string",
-						title: "type [toggles requiresSpecs or provdesSpecs]",
-						enum: ["requires", "provides"]
-					},
-					requiresSpecs: {
+					partlist: {
 						type: "array",
+						items: { type: "string" }
+					},
+					blocks: {
+						type: "array",
+						title: "SupportBlocks [list only support and power blocks]",
 						items: {
 							type: "object",
 							properties: {
-								priority: {
+								cost: {
 									type: "integer",
 									default: 0
 								},
-								specs: {
-									type: "string",
-									enum: ["VCC", "GND", "SDA", "SCL", "SCK", "MISO", "MOSI"]
-								},
-								voltage: {
-									type: "string",
-									enum: ["3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
+								blocks: {
+									type: "string"
 								}
 							}
 						}
 					},
-					providesSpecs: {
+					coders: {
+						type: "array",
+						items: {
+							type: "string",
+							default: "",
+							enum: ["ADXL345", "ADXL335", "Resistor", "Create New..."]
+						}
+					},
+					wires: {
 						type: "array",
 						items: {
 							type: "object",
 							properties: {
-								specs: {
+								from: {
 									type: "string",
-									enum: ["VCC", "GND", "SDA", "SCL", "SCK", "MISO", "MOSI"]
+									default: ""
 								},
-								voltages: {
-									type: "array",
-									items: {
-										type: "string",
-										enum: ["3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
-									},
-									uniqueItems: true
+								to: {
+									type: "string",
+									default: ""
 								}
 							}
 						}
 					},
-					load: {
-						type: "integer"
+					ports: {
+						type: "array",
+						items: {
+							type: "object",
+							properties: {
+								name: {
+									type: "string",
+									default: ""
+								},
+								codename: {
+									title: "codename [show for category controller only]",
+									type: "string",
+									default: ""
+								},
+								unique: {
+									type: "boolean"
+								},
+								includeInFirmware: {
+									type: "boolean"
+								},
+								type: {
+									type: "string",
+									title: "type [toggles requiresSpecs or provdesSpecs]",
+									enum: ["requires", "provides"]
+								},
+								requiresSpecs: {
+									type: "array",
+									items: {
+										type: "object",
+										properties: {
+											priority: {
+												type: "integer",
+												default: 0
+											},
+											specs: {
+												type: "string",
+												enum: ["VCC", "GND", "SDA", "SCL", "SCK", "MISO", "MOSI"]
+											},
+											voltage: {
+												type: "string",
+												enum: ["3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
+											}
+										}
+									}
+								},
+								providesSpecs: {
+									type: "array",
+									items: {
+										type: "object",
+										properties: {
+											specs: {
+												type: "string",
+												enum: ["VCC", "GND", "SDA", "SCL", "SCK", "MISO", "MOSI"]
+											},
+											voltages: {
+												type: "array",
+												items: {
+													type: "string",
+													enum: ["3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
+												},
+												uniqueItems: true
+											}
+										}
+									}
+								},
+								load: {
+									type: "integer"
+								}
+							},
+							depenedencies: {}
+						}
 					}
-				},
-				depenedencies: {}
+				}
 			}
 		}
 	}
