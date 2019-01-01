@@ -1,10 +1,89 @@
 {
     "name": "PowerSupply5v",
-    "path": "Power",
     "category": [
         "power"
     ],
-    "requires":[[0,["PowerSupply5v2A"]],[5,["PowerSupply5v5A"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "PowerSupply5v2A",
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BarrelJack5v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","Barrel"]],
+                        "providesLoad": 2000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","Barrel"]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "PowerSupply5v5A",
+            "requires":[[0,["NONE"]],[1,["BarrelJack5v"]]],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","Barrel"]],
+                        "providesLoad": 5000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","Barrel"]]
+                    }
+                }
+            ],
+            "priority": 5
+        }
+    ]
 }

@@ -1,6 +1,5 @@
 {
     "name": "TCS230",
-    "path": "TCS230",
     "category": [
         "input"
     ],
@@ -21,78 +20,81 @@
         "desc": "<p>Color Recognition Sensor RGB Detector Module allows you to detect the color in its surrounding.</p>",
         "visible": "False"
     },
-    "coders": [
-        "TCS230"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "TCS230"
-            }
-        ],
-        "ports": [
-            {
-                "name": "S1",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "TCS230",
+            "coders": [
+                "TCS230"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "TCS230"
                 }
-            },
-            {
-                "name": "S0",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
+            ],
+            "ports": [
+                {
+                    "name": "S1",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "S0",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "S3",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "S2",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Out",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Vcc",
+                    "interface": {
+                        "requires":[[0,["3.3v"]],[1,["5v"]]]
+                    }
                 }
-            },
-            {
-                "name": "S3",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "S2",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "Out",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "Gnd",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "Vcc",
-                "interface": {
-                    "requires":[[0,["3.3v"]],[1,["5v"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

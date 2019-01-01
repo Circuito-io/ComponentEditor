@@ -1,6 +1,5 @@
 {
     "name": "SubWaterPump",
-    "path": "SubmersibleWaterPump",
     "category": [
         "output"
     ],
@@ -21,56 +20,59 @@
         "desc": "<p>A simple 12 VDC submersible water pump.<br>Use this pump to make a fountain or waterfall, even water your plants!<br>Specifications:<br><li>Rated voltage: 12V DC.<br><li>Max rated current: 350mA.<br><li>Max flow rate: 240L/H.<br><li>Max Head(lift height): 3M.<br><li>Submersible installation and entirely waterproof.</p>\n",
         "visible": "False"
     },
-    "coders": [
-        "SubWaterPump"
-    ],
-    "requires": [
-        [
-            0,
-            [
-                "GndHighLoadPWMSwitching"
+    "circuit": [
+        {
+            "name": "SubWaterPump",
+            "coders": [
+                "SubWaterPump"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SubWaterPump",
+                    "rotation": 90
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requiresLoad": 400,
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[1,["12v"]]],
+                        "requiresLoad": 400
+                    }
+                }
             ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "SubWaterPump",
-                "rotation": 90
-            }
-        ],
-        "ports": [
-            {
-                "name": "Coil1",
-                "interface": {
-                    "requires":[[0,["GndLoadSwitching","PWM"]]],
-                    "requiresLoad": 400,
-                    "unique": true
-                }
-            },
-            {
-                "name": "Coil2",
-                "interface": {
-                    "requires":[[1,["12v"]]],
-                    "requiresLoad": 400
-                }
-            }
-        ]
-    }
+        }
+    ]
 }

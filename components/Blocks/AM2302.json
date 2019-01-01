@@ -1,6 +1,5 @@
 {
     "name": "AM2302",
-    "path": "AM2302",
     "category": [
         "input"
     ],
@@ -21,7 +20,92 @@
         "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 2-5% humidity accuracy and 0.5C temperature accuracy.</p>",
         "visible": "true"
     },
-    "requires":[[0,["AM2302-5v"]],[1,["AM2302-3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "AM2302-5v",
+            "coders": [
+                "AM2302"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "AM2320"
+                }
+            ],
+            "wires": [],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "AM2302-3v3",
+            "coders": [
+                "AM2302"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "AM2320"
+                }
+            ],
+            "wires": [],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SIG",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

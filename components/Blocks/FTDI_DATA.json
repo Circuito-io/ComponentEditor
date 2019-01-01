@@ -1,11 +1,107 @@
 {
     "name": "FTDI_DATA",
-    "path": "FTDIData",
     "category": [
         "support"
     ],
     "blockId": "1514678",
-    "requires":[[0,["FTDI_DATA5v"]],[1,["FTDI_DATA3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "FTDI_DATA5v",
+            "altComp": [
+                150,
+                "PowerSupply12v2A"
+            ],
+            "supportedControllers": [
+                "ATMega328P"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "FTDI5v"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "CTS",
+                    "interface": {
+                        "provides":[["5v","CTS"]]
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "provides":[["5v","RX"]]
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "provides":[["5v","TX"]]
+                    }
+                },
+                {
+                    "name": "DTR",
+                    "interface": {
+                        "provides":[["5v","DTR"]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "FTDI_DATA3v3",
+            "altComp": [
+                150,
+                "PowerSupply12v2A"
+            ],
+            "supportedControllers": [
+                "ATMega328P"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "FTDI3.3v"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "CTS",
+                    "interface": {
+                        "provides":[["3.3v","CTS"]]
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "provides":[["3.3v","RX"]]
+                    }
+                },
+                {
+                    "name": "TX",
+                    "interface": {
+                        "provides":[["3.3v","TX"]]
+                    }
+                },
+                {
+                    "name": "DTR",
+                    "interface": {
+                        "provides":[["3.3v","DTR"]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

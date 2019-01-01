@@ -1,6 +1,5 @@
 {
     "name": "SevenSegmentBare_Single",
-    "path": "SevenSegmentBare_Single",
     "category": [
         "output"
     ],
@@ -21,108 +20,111 @@
         "desc": "<p>A common-cathode Seven Segment display It feature one 7-segment digit and one decimal point. The LEDs have a forward voltage of 1.9VDC and a max forward current of 20mA.</p>",
         "visible": "true"
     },
-    "coders": [
-        "SevenSegSingle"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "SevenSegmentBare_Single"
-            },
-            {
-                "name": "r1",
-                "part": "Res220O"
-            }
-        ],
-        "wires": [
-            {
-                "from": "this.Com",
-                "to": "r1.con0"
-            },
-            {
-                "from": "r1.con1",
-                "to": "Com"
-            }
-        ],
-        "ports": [
-            {
-                "name": "DP",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "SevenSegmentBare_Single",
+            "coders": [
+                "SevenSegSingle"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SevenSegmentBare_Single"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res220O"
                 }
-            },
-            {
-                "name": "C",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
+            ],
+            "wires": [
+                {
+                    "from": "this.Com",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "r1.con1",
+                    "to": "Com"
                 }
-            },
-            {
-                "name": "Com",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "DP",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "C",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Com",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "D",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "E",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "B",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "A",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "F",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "G",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
                 }
-            },
-            {
-                "name": "D",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "E",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "B",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "A",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "F",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "G",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

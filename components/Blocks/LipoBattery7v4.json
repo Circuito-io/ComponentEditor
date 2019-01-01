@@ -1,6 +1,5 @@
 {
     "name": "LipoBattery7v4",
-    "path": "Power",
     "category": [
         "power"
     ],
@@ -25,48 +24,51 @@
         100,
         "Battery8xAA"
     ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "LipoBattery7v4"
-            }
-        ],
-        "ports": [
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+    "circuit": [
+        {
+            "name": "LipoBattery7v4",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LipoBattery7v4"
                 }
-            },
-            {
-                "name": "VCC",
-                "interface": {
-                    "provides":[["7.4v"]],
-                    "providesLoad": 5000
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "provides":[["7.4v"]],
+                        "providesLoad": 5000
+                    }
+                },
+                {
+                    "name": "PowerType",
+                    "interface": {
+                        "provides":[["Battery"]]
+                    }
                 }
-            },
-            {
-                "name": "PowerType",
-                "interface": {
-                    "provides":[["Battery"]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }
