@@ -1,0 +1,34 @@
+{
+    "name": "AM2302",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "setup": "    {{varname}}.begin();\n",
+        "snippetCode": "    // Reading humidity in %\n    float {{varname}}Humidity = {{varname}}.readHumidity();\n    // Read temperature in Celsius, for Fahrenheit use .readTempF()\n    float {{varname}}TempC = {{varname}}.readTempC();\n    Serial.print(F(\"Humidity: \")); Serial.print({{varname}}Humidity); Serial.print(F(\" [%]\\t\"));\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
+    },
+    "license": "MIT",
+    "instantiate": {
+        "classname": "DHT",
+        "ports": [
+            "SIG"
+        ],
+        "varname": "am2302"
+    },
+    "files": [
+        "DHT.h",
+        "DHT.cpp",
+        "DHT_license.txt"
+    ]
+}
