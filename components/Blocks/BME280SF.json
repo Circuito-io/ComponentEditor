@@ -1,6 +1,5 @@
 {
     "name": "BME280SF",
-    "path": "BME280SF",
     "category": [
         "input"
     ],
@@ -21,59 +20,62 @@
         "desc": "<p>Atmospheric Sensor Breakout is the easy way to measure barometric pressure, humidity, and temperature readings.</p>",
         "visible": "False"
     },
-    "coders": [
-        "BME280SF"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "BME280SF"
-            }
-        ],
-        "ports": [
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+    "circuit": [
+        {
+            "name": "BME280SF",
+            "coders": [
+                "BME280SF"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "BME280SF"
                 }
-            },
-            {
-                "name": "3.3V",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "3.3V",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SDI_SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "SCK_SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
+                    }
                 }
-            },
-            {
-                "name": "SDI_SDA",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
-                }
-            },
-            {
-                "name": "SCK_SCL",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

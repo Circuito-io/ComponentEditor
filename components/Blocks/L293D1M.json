@@ -1,90 +1,92 @@
 {
     "name": "L293D1M",
-    "path": "L293D",
     "category": [
         "output"
     ],
     "blockId": "7654340",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "DCMDriverL293D"
-            }
-        ],
-        "ports": [
-            {
-                "name": "Enable1",
-                "interface": {
-                    "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "L293D1M",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "DCMDriverL293D"
                 }
-            },
-            {
-                "name": "In1",
-                "interface": {
-                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
-                    "unique": true
+            ],
+            "ports": [
+                {
+                    "name": "Enable1",
+                    "interface": {
+                        "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "In1",
+                    "interface": {
+                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND1",
+                    "interface": {
+                        "requires":[[1,["GND"]]]
+                    }
+                },
+                {
+                    "name": "GND2",
+                    "interface": {
+                        "requires":[[1,["GND"]]]
+                    }
+                },
+                {
+                    "name": "In2",
+                    "interface": {
+                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "+Vmotor",
+                    "interface": {
+                        "requires":[[8,["3.3v"]],[7,["3.7v"]],[9,["3.7v","Battery"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
+                        "requiresLoad": 400
+                    }
+                },
+                {
+                    "name": "+V",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "Out1",
+                    "interface": {
+                        "provides":[["DCMA1"]]
+                    }
+                },
+                {
+                    "name": "Out2",
+                    "interface": {
+                        "provides":[["DCMA2"]]
+                    }
                 }
-            },
-            {
-                "name": "GND1",
-                "interface": {
-                    "requires":[[1,["GND"]]]
-                }
-            },
-            {
-                "name": "GND2",
-                "interface": {
-                    "requires":[[1,["GND"]]]
-                }
-            },
-            {
-                "name": "In2",
-                "interface": {
-                    "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "+Vmotor",
-                "interface": {
-                    "requires":[[8,["3.3v"]],[7,["3.7v"]],[9,["3.7v","Battery"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
-                    "requiresLoad": 400
-                }
-            },
-            {
-                "name": "+V",
-                "interface": {
-                    "requires":[[0,["5v"]]]
-                }
-            },
-            {
-                "name": "Out1",
-                "interface": {
-                    "provides":[["DCMA1"]]
-                }
-            },
-            {
-                "name": "Out2",
-                "interface": {
-                    "provides":[["DCMA2"]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

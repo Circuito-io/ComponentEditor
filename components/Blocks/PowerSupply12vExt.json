@@ -1,9 +1,8 @@
 {
     "name": "PowerSupply12vExt",
-    "path": "Power",
     "category": [
         "powerConnector",
-        "support"
+        "power"
     ],
     "blockId": "9444",
     "app": {
@@ -22,52 +21,55 @@
         "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
         "visible": "True"
     },
-    "requires": [
-        [
-            0,
-            [
-                "NONE"
+    "circuit": [
+        {
+            "name": "PowerSupply12vExt",
+            "supportedControllers": [
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BarrelJack12v"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PowerSupply12v2A"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["12v","Barrel"]],
+                        "providesLoad": 2000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","Barrel"]]
+                    }
+                },
+                {
+                    "name": "BARREL_JACK",
+                    "interface": {
+                        "requires":[[0,["BARREL_JACK"]]]
+                    }
+                }
             ]
-        ],
-        [
-            1,
-            [
-                "BarrelJack12v"
-            ]
-        ]
-    ],
-    "supportedControllers": [
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "PowerSupply12v2A"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["12v","Barrel"]],
-                    "providesLoad": 2000
-                }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "provides":[["GND","Barrel"]]
-                }
-            },
-            {
-                "name": "BARREL_JACK",
-                "interface": {
-                    "requires":[[0,["BARREL_JACK"]]]
-                }
-            }
-        ]
-    }
+        }
+    ]
 }

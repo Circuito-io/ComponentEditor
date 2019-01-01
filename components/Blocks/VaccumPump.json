@@ -1,6 +1,5 @@
 {
     "name": "VaccumPump",
-    "path": "VaccumPump",
     "category": [
         "output"
     ],
@@ -21,55 +20,58 @@
         "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
         "visible": "False"
     },
-    "coders": [
-        "VaccumPump"
-    ],
-    "requires": [
-        [
-            0,
-            [
-                "GndHighLoadPWMSwitching"
+    "circuit": [
+        {
+            "name": "VaccumPump",
+            "coders": [
+                "VaccumPump"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "GndHighLoadPWMSwitching"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "VaccumPump"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requiresLoad": 400,
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[1,["12v"]]],
+                        "requiresLoad": 400
+                    }
+                }
             ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "VaccumPump"
-            }
-        ],
-        "ports": [
-            {
-                "name": "Coil1",
-                "interface": {
-                    "requires":[[0,["GndLoadSwitching","PWM"]]],
-                    "requiresLoad": 400,
-                    "unique": true
-                }
-            },
-            {
-                "name": "Coil2",
-                "interface": {
-                    "requires":[[1,["12v"]]],
-                    "requiresLoad": 400
-                }
-            }
-        ]
-    }
+        }
+    ]
 }

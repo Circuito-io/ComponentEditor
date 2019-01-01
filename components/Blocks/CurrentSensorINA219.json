@@ -1,6 +1,5 @@
 {
     "name": "CurrentSensorINA219",
-    "path": "CurrentSensorINA219",
     "category": [
         "input"
     ],
@@ -21,7 +20,103 @@
         "desc": "<p>The INA219 High Side DC Current Sensor Breakout can help you measure both the high side voltage and DC current draw over I2C with 1% precision (26V 3.2A Max)</p>",
         "visible": "true"
     },
-    "requires":[[0,["CurrentSensorINA219-5v"]],[1,["CurrentSensorINA219-3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "CurrentSensorINA219-5v",
+            "coders": [
+                "CurrentSensorINA219"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "CurrentSensorINA219"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["5v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["5v","SCL"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "CurrentSensorINA219-3v3",
+            "coders": [
+                "CurrentSensorINA219"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "CurrentSensorINA219"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["3.3v","SDA"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["3.3v","SCL"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

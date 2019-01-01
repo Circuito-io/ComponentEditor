@@ -1,6 +1,5 @@
 {
     "name": "Keypad",
-    "path": "KeyPad",
     "category": [
         "input"
     ],
@@ -21,80 +20,83 @@
         "desc": "<p>A simple 4-by-3 keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed keypad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
         "visible": "False"
     },
-    "coders": [
-        "Keypad"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "Keypad"
-            }
-        ],
-        "ports": [
-            {
-                "name": "row3",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "Keypad",
+            "coders": [
+                "Keypad"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Keypad"
                 }
-            },
-            {
-                "name": "row1",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
+            ],
+            "ports": [
+                {
+                    "name": "row3",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "row1",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "col2",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "col3",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "row2",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "col1",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "row4",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
                 }
-            },
-            {
-                "name": "col2",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "col3",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "row2",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "col1",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "row4",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

@@ -1,8 +1,8 @@
 {
     "name": "PowerBankUSB5v",
-    "path": "Power",
     "category": [
-        "powerConnector"
+        "powerConnector",
+        "power"
     ],
     "blockId": "783869",
     "app": {
@@ -25,39 +25,42 @@
         100,
         "PowerSupply5vUSBMicro"
     ],
-    "supportedControllers": [
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "PowerBankUSB5v",
-                "rotation": 90
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["5v","USB"]],
-                    "providesLoad": 10000
+    "circuit": [
+        {
+            "name": "PowerBankUSB5v",
+            "supportedControllers": [
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PowerBankUSB5v",
+                    "rotation": 90
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "provides":[["GND","USB"]]
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 10000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "USB_MICRO",
+                    "interface": {
+                        "requires":[[0,["USB_MICRO"]]]
+                    }
                 }
-            },
-            {
-                "name": "USB_MICRO",
-                "interface": {
-                    "requires":[[0,["USB_MICRO"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

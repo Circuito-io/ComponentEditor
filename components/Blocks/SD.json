@@ -1,6 +1,5 @@
 {
     "name": "SD",
-    "path": "SD",
     "category": [
         "output"
     ],
@@ -21,92 +20,95 @@
         "desc": "<p>Enables transferring data to and from a standard micro SD card.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
         "visible": "False"
     },
-    "coders": [
-        "SD"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "SD"
-            },
-            {
-                "name": "r1",
-                "part": "Res330O"
-            }
-        ],
-        "wires": [
-            {
-                "from": "this.MISO",
-                "to": "r1.con1"
-            },
-            {
-                "from": "r1.con0",
-                "to": "MISOR"
-            }
-        ],
-        "ports": [
-            {
-                "name": "CS",
-                "interface": {
-                    "requires":[[0,["5v","SS"]],[1,["3.3v","SS"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "SD",
+            "coders": [
+                "SD"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SD"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res330O"
                 }
-            },
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[1,["5v"]],[2,["3.3v"]]]
+            ],
+            "wires": [
+                {
+                    "from": "this.MISO",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "r1.con0",
+                    "to": "MISOR"
                 }
-            },
-            {
-                "name": "SCK",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["5v","SCK"]],[1,["3.3v","SCK"]]]
+            ],
+            "ports": [
+                {
+                    "name": "CS",
+                    "interface": {
+                        "requires":[[0,["5v","SS"]],[1,["3.3v","SS"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[1,["5v"]],[2,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "SCK",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["5v","SCK"]],[1,["3.3v","SCK"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "MOSI",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["5v","MOSI"]],[1,["3.3v","MOSI"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 930
+                    }
+                },
+                {
+                    "name": "MISOR",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["5v","MISO"]],[1,["3.3v","MISO"]]]
+                    }
                 }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "MOSI",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["5v","MOSI"]],[1,["3.3v","MOSI"]]]
-                }
-            },
-            {
-                "name": "MemOverLoad",
-                "interface": {
-                    "requires":[[0,["SRAMLoad"]]],
-                    "requiresLoad": 930
-                }
-            },
-            {
-                "name": "MISOR",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["5v","MISO"]],[1,["3.3v","MISO"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }
