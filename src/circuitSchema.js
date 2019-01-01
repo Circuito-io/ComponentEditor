@@ -1,7 +1,7 @@
 import { supportedControllersUISchema } from "./commonfields"
 
 export const circuitsuiSchema = {
-	circuit: {
+	circuits: {
 		"ui:field": "tabbedarray",
 		items: {
 			"ui:field": "tabbedobject",
@@ -42,7 +42,7 @@ export const circuitsuiSchema = {
 export const circuitsSchema = {
 	type: "object",
 	properties: {
-		circuit: {
+		circuits: {
 			type: "array",
 			title: "",
 			items: {

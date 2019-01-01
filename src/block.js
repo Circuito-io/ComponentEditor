@@ -37,6 +37,7 @@ export class Block extends React.Component {
 
       read_a_block(block)
         .then((blockData) => {
+          console.log("setting", blockData);
           this.setState({ formSrcData: blockData });
         })
     }

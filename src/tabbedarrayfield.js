@@ -423,19 +423,15 @@ export class TabbedArrayField extends React.Component {
     }
 };
 
-function AddButton({ onClick, disabled }) {
-    return (
-        <div className="row">
-      <p className="col-xs-3 col-xs-offset-9 array-item-add text-right">
-        <IconBtn
-          type="info"
-          icon="plus"
-          className="btn-add col-xs-12"
-          tabIndex="0"
-          onClick={onClick}
-          disabled={disabled}
-        />
-      </p>
-    </div>
-    );
+if (process.env.NODE_ENV !== "production") {
+    TabbedArrayField.propTypes = {
+        schema: PropTypes.object.isRequired,
+        uiSchema: PropTypes.object,
+        errorSchema: PropTypes.object,
+        idSchema: PropTypes.object,
+        formData: PropTypes.array.isRequired,
+        required: PropTypes.bool,
+        disabled: PropTypes.bool,
+        readonly: PropTypes.bool,
+    };
 }
