@@ -1,8 +1,7 @@
 import React from "react";
 import { Panel, PanelGroup, Tabs, Tab, Button } from "react-bootstrap";
-import Form from "react-jsonschema-form";
-import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
 import urlJoin from 'proper-url-join';
+import { EditorForm } from "./editorform.js"
 import { Circuit } from "./circuit.js";
 import { blockSchema, blockuiSchema } from "./blockSchema.js";
 
@@ -59,17 +58,16 @@ export class Block extends React.Component {
               <Panel.Title toggle>Block Info</Panel.Title>
             </Panel.Heading>
             <Panel.Body collapsible>
-              <Form
+              <EditorForm
                 schema={blockSchema}
                 uiSchema={blockuiSchema}
-                fields={{ typeahead: TypeaheadField }}
                 ref={this.updateFormRef}
                 formData={this.state.formSrcData}
               >
                 <Button type="submit" style={{ display: "none" }}>
                   Submit
                 </Button>
-              </Form>
+              </EditorForm>
             </Panel.Body>
           </Panel>
           <Panel eventKey="2">
