@@ -14,7 +14,7 @@ export default class App extends React.Component {
     this.forms = {};
 
     this.state = {
-      activeBlock: null,
+      activeBlock: '74HC4051',
     };
 
     this.setForm = this.setForm.bind(this);

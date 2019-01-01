@@ -1,7 +1,6 @@
 import React from "react";
-import Form from "react-jsonschema-form";
 import { Well, Tab, Row, Col, Nav, NavItem, Button } from "react-bootstrap";
-import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
+import { EditorForm } from "./editorform.js"
 import { Part } from "./part.js";
 import { Coder } from "./coder.js";
 import { ListArrayField } from "./listarrayfield.js";
@@ -47,44 +46,39 @@ export class Circuit extends React.Component {
               <Well>
                 <Tab.Content animation>
                   <Tab.Pane eventKey="info">
-                    <Form
+                    <EditorForm
                       schema={circuitInfoSchema}
                       uiSchema={circuitInfouiSchema}
-                      fields={{ typeahead: TypeaheadField }}
                       ref={this.updateFormRefGen("info")}
                     />
                     <Button> Delete this circuit </Button>
                   </Tab.Pane>
                   <Tab.Pane eventKey="parts">
-                    <Form
+                    <EditorForm
                       schema={circuitPartsSchema}
                       uiSchema={circuitPartuiSchema}
                       formData={{ partlist: ["RES10k", "Cap10uF"] }}
                       ArrayFieldTemplate={ListArrayField}
-                      fields={{
-                        typeahead: TypeaheadField
-                      }}
                       ref={this.updateFormRefGen("parts")}
                     />
                     <Part />
                   </Tab.Pane>
                   <Tab.Pane eventKey="blocks">
-                    <Form
+                    <EditorForm
                       schema={circuitBlocksSchema}
                       uiSchema={circuitBlocksuiSchema}
-                      fields={{ typeahead: TypeaheadField }}
                       ref={this.updateFormRefGen("blocks")}
                     />
                   </Tab.Pane>
                   <Tab.Pane eventKey="coders">
-                    <Form
+                    <EditorForm
                       schema={circuitCodersSchema}
                       ref={this.updateFormRefGen("coders")}
                     />
                     <Coder />
                   </Tab.Pane>
                   <Tab.Pane eventKey="wiring">
-                    <Form
+                    <EditorForm
                       schema={circuitWiringSchema}
                       ref={this.updateFormRefGen("wiring")}
                     />

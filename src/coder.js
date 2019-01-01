@@ -1,7 +1,6 @@
 import React from "react";
-import Form from "react-jsonschema-form";
-import { Button, Modal, Tabs, Tab } from "react-bootstrap";
-import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
+import { Button, Modal } from "react-bootstrap";
+import { EditorForm } from "./editorform.js"
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
@@ -40,10 +39,9 @@ export class Coder extends React.Component {
 						<Modal.Title>Coder Name</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<Form 
+						<EditorForm 
 							schema={coderSchema}
 							uiSchema={coderuiSchema}
-							fields={{ typeahead: TypeaheadField }}
 						/>
 						Preview
 						<AceEditor
