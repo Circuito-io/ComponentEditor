@@ -1,52 +1,54 @@
 {
     "name": "BarrelJack12v",
-    "path": "Power",
     "category": [
         "support"
     ],
-    "supportedControllers": [],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "BarrelJack",
-                "rotation": 180
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["12v"]],
-                    "providesLoad": 2000
+    "circuit": [
+        {
+            "name": "BarrelJack12v",
+            "supportedControllers": [],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "BarrelJack",
+                    "rotation": 180
                 }
-            },
-            {
-                "name": "posIn",
-                "interface": {
-                    "requires":[[0,["12v","Barrel"]]],
-                    "unique": true
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["12v"]],
+                        "providesLoad": 2000
+                    }
+                },
+                {
+                    "name": "posIn",
+                    "interface": {
+                        "requires":[[0,["12v","Barrel"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "negIn",
+                    "interface": {
+                        "requires":[[0,["GND","Barrel"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "BARREL_JACK",
+                    "interface": {
+                        "provides":[["BARREL_JACK"]]
+                    }
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "negIn",
-                "interface": {
-                    "requires":[[0,["GND","Barrel"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "BARREL_JACK",
-                "interface": {
-                    "provides":[["BARREL_JACK"]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

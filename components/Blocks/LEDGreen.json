@@ -1,6 +1,5 @@
 {
     "name": "LEDGreen",
-    "path": "LEDGreen",
     "category": [
         "output"
     ],
@@ -21,7 +20,112 @@
         "desc": "<p>This is a very basic, small, Green LED. Control the intensity of the color at a range of 0-255. Its Luminous Intensity is 150-200mcd.</p>\n",
         "visible": "False"
     },
-    "requires":[[1,["LEDGreen5v"]],[2,["LEDGreen3.3v"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "LEDGreen5v",
+            "coders": [
+                "LEDGreen"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LEDGreen",
+                    "properties": "Green (570nm)"
+                },
+                {
+                    "name": "Res1",
+                    "part": "Res330O"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.Gnd",
+                    "to": "Res1.con1"
+                },
+                {
+                    "from": "Res1.con0",
+                    "to": "GND"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[0,["5v","PWM"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "LEDGreen3.3v",
+            "coders": [
+                "LEDGreen"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LEDGreen",
+                    "properties": "Green (570nm)"
+                },
+                {
+                    "name": "Res1",
+                    "part": "Res100O"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.Gnd",
+                    "to": "Res1.con1"
+                },
+                {
+                    "from": "Res1.con0",
+                    "to": "GND"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[0,["3.3v","PWM"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 2
+        }
+    ]
 }

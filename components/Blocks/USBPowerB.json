@@ -1,6 +1,5 @@
 {
     "name": "USBPowerB",
-    "path": "Power",
     "category": [
         "powerConnector"
     ],
@@ -25,37 +24,40 @@
         150,
         "PowerSupply12v2A"
     ],
-    "supportedControllers": [
-        "ArduinoMega",
-        "ArduinoUno"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "USBPowerB"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["5v","USB"]],
-                    "providesLoad": 400
+    "circuit": [
+        {
+            "name": "USBPowerB",
+            "supportedControllers": [
+                "ArduinoMega",
+                "ArduinoUno"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerB"
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "provides":[["GND","USB"]]
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 400
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "USB_B",
+                    "interface": {
+                        "requires":[[0,["USB_B"]]]
+                    }
                 }
-            },
-            {
-                "name": "USB_B",
-                "interface": {
-                    "requires":[[0,["USB_B"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

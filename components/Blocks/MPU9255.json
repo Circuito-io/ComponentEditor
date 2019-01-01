@@ -1,6 +1,5 @@
 {
     "name": "MPU9255",
-    "path": "MPU9255",
     "category": [
         "input"
     ],
@@ -21,58 +20,61 @@
         "desc": "<p>The MPU-9255 is a triple axis accelerometer ,gyro and magnetometer combined, allowing a very deep motion detection and analysis.</p>",
         "visible": "False"
     },
-    "coders": [
-        "MPU9255"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "MPU9255"
-            }
-        ],
-        "ports": [
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
+    "circuit": [
+        {
+            "name": "MPU9255",
+            "coders": [
+                "MPU9255"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MPU9255"
                 }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
+                    }
                 }
-            },
-            {
-                "name": "SCL",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
-                }
-            },
-            {
-                "name": "SDA",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

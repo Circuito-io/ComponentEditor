@@ -1,65 +1,67 @@
 {
     "name": "Reg3.3v",
-    "path": "Power",
     "category": [
         "support"
     ],
-    "supportedControllers": [],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "LD11173.3v"
-            },
-            {
-                "name": "capin",
-                "pos": "0,120",
-                "part": "CapCeramic100nF"
-            },
-            {
-                "name": "capout",
-                "pos": "20,80",
-                "part": "CapElectro10uF"
-            }
-        ],
-        "wires": [
-            {
-                "from": "this.Vin",
-                "to": "capin.con0"
-            },
-            {
-                "from": "this.0",
-                "to": "capin.con1"
-            },
-            {
-                "from": "this.Vout",
-                "to": "capout.pos"
-            },
-            {
-                "from": "this.0",
-                "to": "capout.neg"
-            }
-        ],
-        "ports": [
-            {
-                "name": "Vout",
-                "interface": {
-                    "provides":[["3.3v"]],
-                    "providesLoad": 800
+    "circuit": [
+        {
+            "name": "Reg3.3v",
+            "supportedControllers": [],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LD11173.3v"
+                },
+                {
+                    "name": "capin",
+                    "pos": "0,120",
+                    "part": "CapCeramic100nF"
+                },
+                {
+                    "name": "capout",
+                    "pos": "20,80",
+                    "part": "CapElectro10uF"
                 }
-            },
-            {
-                "name": "0",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "wires": [
+                {
+                    "from": "this.Vin",
+                    "to": "capin.con0"
+                },
+                {
+                    "from": "this.0",
+                    "to": "capin.con1"
+                },
+                {
+                    "from": "this.Vout",
+                    "to": "capout.pos"
+                },
+                {
+                    "from": "this.0",
+                    "to": "capout.neg"
                 }
-            },
-            {
-                "name": "Vin",
-                "interface": {
-                    "requires":[[1,["6v"]],[2,["5v"]],[4,["9v"]],[5,["12v"]],[6,["7.4v"]]]
+            ],
+            "ports": [
+                {
+                    "name": "Vout",
+                    "interface": {
+                        "provides":[["3.3v"]],
+                        "providesLoad": 800
+                    }
+                },
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[1,["6v"]],[2,["5v"]],[4,["9v"]],[5,["12v"]],[6,["7.4v"]]]
+                    }
                 }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

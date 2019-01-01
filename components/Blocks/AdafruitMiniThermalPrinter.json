@@ -1,6 +1,5 @@
 {
     "name": "AdafruitMiniThermalPrinter",
-    "path": "AdafruitMiniThermalPrinter",
     "category": [
         "output"
     ],
@@ -21,81 +20,84 @@
         "desc": "<p>This thermal printer can print pictures, text and QR codes. Thermal paper not included!</p>",
         "visible": "true"
     },
-    "coders": [
-        "AdafruitMiniThermalPrinter"
-    ],
-    "requires": [
-        [
-            0,
-            [
-                "NONE"
+    "circuit": [
+        {
+            "name": "AdafruitMiniThermalPrinter",
+            "coders": [
+                "AdafruitMiniThermalPrinter"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    5,
+                    [
+                        "Reg5v"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "PowerSupply5v"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "AdafruitMiniThermalPrinter",
+                    "rotation": 180
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND_COM",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "DIN",
+                    "interface": {
+                        "requires":[[0,["5v","SoftwareSerial"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["5v"]]],
+                        "requiresLoad": 2000
+                    }
+                },
+                {
+                    "name": "DOUT",
+                    "interface": {
+                        "requires":[[0,["5v","SoftwareSerial"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
             ]
-        ],
-        [
-            5,
-            [
-                "Reg5v"
-            ]
-        ],
-        [
-            10,
-            [
-                "PowerSupply5v"
-            ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "AdafruitMiniThermalPrinter",
-                "rotation": 180
-            }
-        ],
-        "ports": [
-            {
-                "name": "GND_COM",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "DIN",
-                "interface": {
-                    "requires":[[0,["5v","SoftwareSerial"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["5v"]]],
-                    "requiresLoad": 2000
-                }
-            },
-            {
-                "name": "DOUT",
-                "interface": {
-                    "requires":[[0,["5v","SoftwareSerial"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            }
-        ]
-    }
+        }
+    ]
 }

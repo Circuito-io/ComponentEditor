@@ -1,52 +1,54 @@
 {
     "name": "DCMotorL",
-    "path": "L293D",
     "category": [
         "output"
     ],
     "blockId": "11698",
-    "requires": [
-        [
-            0,
-            [
-                "NONE"
-            ]
-        ],
-        [
-            7,
-            [
-                "L293D1M"
-            ]
-        ],
-        [
-            10,
-            [
-                "L293D2M"
-            ]
-        ]
-    ],
-    "supportedControllers": [],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "DCMotor"
-            }
-        ],
-        "ports": [
-            {
-                "name": "Coil1",
-                "interface": {
-                    "requires":[[0,["DCMA1"]],[5,["DCMB1"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "DCMotorL",
+            "supportedControllers": [],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    7,
+                    [
+                        "L293D1M"
+                    ]
+                ],
+                [
+                    10,
+                    [
+                        "L293D2M"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "DCMotor"
                 }
-            },
-            {
-                "name": "Coil2",
-                "interface": {
-                    "requires":[[0,["DCMA2"]],[5,["DCMB2"]]]
+            ],
+            "ports": [
+                {
+                    "name": "Coil1",
+                    "interface": {
+                        "requires":[[0,["DCMA1"]],[5,["DCMB1"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Coil2",
+                    "interface": {
+                        "requires":[[0,["DCMA2"]],[5,["DCMB2"]]]
+                    }
                 }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

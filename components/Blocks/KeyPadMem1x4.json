@@ -1,6 +1,5 @@
 {
     "name": "KeyPadMem1x4",
-    "path": "KeyPadMem1x4",
     "category": [
         "input"
     ],
@@ -21,66 +20,69 @@
         "desc": "<p>A simple 1-by-4 membrane Keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed KeyPad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
         "visible": "False"
     },
-    "coders": [
-        "KeyPadMem1x4"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "KeyPadMem1x4"
-            }
-        ],
-        "ports": [
-            {
-                "name": "1",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
+    "circuit": [
+        {
+            "name": "KeyPadMem1x4",
+            "coders": [
+                "KeyPadMem1x4"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "KeyPadMem1x4"
                 }
-            },
-            {
-                "name": "2",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
+            ],
+            "ports": [
+                {
+                    "name": "1",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "2",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "3",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "4",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "5",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "unique": true
+                    }
                 }
-            },
-            {
-                "name": "3",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "4",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "5",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
-                    "unique": true
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }
