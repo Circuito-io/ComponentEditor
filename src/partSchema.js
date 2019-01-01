@@ -1,5 +1,3 @@
-import { ImageWidget } from "./image-widget";
-
 export const partuiSchema = {
   desc: {
     "ui:widget": "textarea"
@@ -11,11 +9,11 @@ export const partuiSchema = {
     "ui:widget": "textarea"
   },
   symbol: {
-    "ui:widget": ImageWidget,
+    "ui:widget": "imagewidget",
     "ui:help": "SVG must follow circuito.io/blog/SVG-Guidelines"
   },
   img: {
-    "ui:widget": ImageWidget
+    "ui:widget": "imagewidget"
   },
   headers: {
     headersQty: {
