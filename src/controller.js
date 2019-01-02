@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
 import urlJoin from 'proper-url-join';
+import { ToastContainer, toast } from 'react-toastify';
 
 function list_all_factory(objPrefix) {
     return function() {
@@ -33,21 +34,41 @@ export function cacheData() {
     });
 }
 
-export function read_a_block(name) {
-    return fetch(urlJoin('/blocks/' + name))
-        .then((response) => response.json())
-        .catch((ex) => {
-            console.log('parsing failed', ex);
-        })
-};
+function read_a_factory(objPrefix) {
+    return function(name) {
+        return window.fetch(urlJoin(objPrefix, name))
+            .then((response) => response.json())
+            .catch((ex) => {
+                console.log('parsing failed', ex);
+            })
+    }
+}
 
-export function update_a_block(name, data) {
-    return fetch(urlJoin('/blocks/' + name), {
-            method: 'put',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        })
+export const read_a_block = read_a_factory('blocks');
+export const read_a_part  = read_a_factory('parts');
+export const read_a_coder = read_a_factory('coders');
+
+function update_a_factory(objPrefix) {
+    return function(name, data) {
+        return window.fetch(urlJoin(objPrefix, name), {
+                method: 'put',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .catch((ex) => {
+                console.log('parsing failed', ex);
+            })
+    }
+}
+
+export const update_a_block = update_a_factory('blocks');
+export const update_a_part  = update_a_factory('parts');
+export const update_a_coder  = update_a_factory('coders');
+
+
+export function invoke_upload() {
+    return window.fetch('/upload')
         .catch((ex) => {
-            console.log('parsing failed', ex);
-        })
+            console.log('upload failed', ex);
+        });
 }

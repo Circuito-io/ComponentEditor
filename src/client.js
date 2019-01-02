@@ -2,9 +2,13 @@ require('bootstrap');
 
 import React from "react";
 import ReactDOM from "react-dom";
+import { ToastContainer } from 'react-toastify';
 import { Header } from "./header"
 import { Block } from "./block.js";
 import { Home } from "./home.js";
+
+import style from 'react-toastify/dist/ReactToastify.css';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -54,6 +58,10 @@ export default class App extends React.Component {
           <Home blockSelected = {this.blockSelected} /> : 
           <Block id="block" block={this.state.activeBlock} setSave={this.setSave} updateData={this.updateData}/>
         }
+        
+        <ToastContainer 
+          hideProgressBar={true}
+        />
         
       </React.Fragment>
     );

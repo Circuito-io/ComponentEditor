@@ -1,9 +1,9 @@
 import React from "react";
-import { Grid, Row, Col, Well, Button, Image } from "react-bootstrap";
+import { Grid, Row, Col, Well, Image } from "react-bootstrap";
 import { BlocksList } from "./blocks-list";
 import { NewComponent } from "./newcomponent";
 import { SVGCreator } from "./svg-creator";
-import { ImageWidget } from "./image-widget";
+import { ImageWidget } from "./form/imagewidget";
 
 export class Home extends React.Component {
   constructor(props) {

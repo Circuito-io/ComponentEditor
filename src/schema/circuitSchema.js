@@ -1,5 +1,5 @@
-import { supportedControllersUISchema } from "./commonfields"
-import { all_parts_cached } from "./controller"
+import { supportedControllersUISchema } from "../form/commonfields"
+import { all_parts_cached } from "../controller"
 
 export const circuitsuiSchema = {
 	circuit: {
@@ -17,23 +17,31 @@ export const circuitsuiSchema = {
 			},
 			supportedControllers: supportedControllersUISchema,
 			parts: {
+				"ui:options": {
+					orderable: false
+				},
 				items: {
 					part: {
-						"ui:field": "typeahead",
-						typeahead: {
-							options: ['res 10k', 'cap 5F'], // BUG: should be all_parts_cached, but resolve execution order
-							minLength: 0
-						}
+						"ui:field": "partfield"
 					}
 				}
 			},
 			coders: {
+				"ui:options": {
+					orderable: false
+				},
 				items: {
-					"ui:field": "typeahead",
-					typeahead: {
-						options: ['coderA', 'coderB'], // BUG: should be all_coders_cached, but resolve execution order
-						minLength: 0
-					}
+					"ui:field": "coderfield",
+				}
+			},
+			wires: {
+				"ui:options": {
+					orderable: false
+				}
+			},
+			ports: {
+				"ui:options": {
+					orderable: false
 				}
 			},
 			blocks: {

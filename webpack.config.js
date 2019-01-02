@@ -1,16 +1,22 @@
 const webpack = require("webpack");
-const NodemonPlugin = require( 'nodemon-webpack-plugin' )
+const NodemonPlugin = require('nodemon-webpack-plugin')
 
 module.exports = {
   mode: "development",
   entry: "./src/client.js",
   devtool: 'source-map',
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+        ]
       }
     ]
   },
@@ -33,7 +39,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin({
       debug: true
     })
-    ],
+  ],
   devServer: {
     contentBase: "./dist",
     hot: true
