@@ -80,6 +80,30 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "CapSenseDIYTeensy",
+            "coders": [
+                "CapSenseDIYTeensy"
+            ],
+            "supportedControllers": [
+                "Teensy32
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "CapSenseDIY"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "PinA",
+                    "interface": {
+                        "requires":[["Touch"]],
+                        "unique": true
+                    }
+                }
+            ]
         }
     ]
 }
