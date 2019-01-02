@@ -9,7 +9,7 @@ global.userid = 'main'//uuidv4();
 
 var express = require('express');
 var app = express();
-var port = 8080;
+var port = process.env.PORT || 8080;
 var hostname = "0.0.0.0";
 var bodyParser = require('body-parser');
 
