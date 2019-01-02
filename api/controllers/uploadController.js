@@ -1,11 +1,11 @@
 'use strict';
 
-const request = require('request');
+const rp = require('request-promise');
 const fs = require('fs');
 const path = require('path');
 const urlJoin = require("proper-url-join");
 
-const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}, type = null) => {
+const walkDirSync = (d, res = { Parts: [], Coders: [], Blocks: [], CodeFiles: [] }, type = null) => {
 	if (fs.statSync(d).isDirectory()) {
 		if (type == null) {
 			if (d.includes('/Parts')) {
@@ -19,7 +19,7 @@ const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}
 			}
 		}
 
-		return fs.readdirSync(d).reduce((res, f)=> walkDirSync(path.join(d, f), res, type), res);
+		return fs.readdirSync(d).reduce((res, f) => walkDirSync(path.join(d, f), res, type), res);
 	}
 	else {
 		let data = fs.readFileSync(d, 'utf8');
@@ -45,26 +45,22 @@ const walkDirSync = (d, res = {Parts: [], Coders: [], Blocks: [], CodeFiles: []}
 
 exports.upload = function(req, res) {
 
-  var files = walkDirSync(global.dataFolder);
+	var files = walkDirSync(global.dataFolder);
 	const endPoint = urlJoin(global.circuitoServer, global.uploadEndpoint, global.userid, { trailingSlash: true });
-	
+
 	console.log("Sending to", endPoint)
-	
-  request({
-  	url: endPoint,
-  	method: 'post',
-  	body: files,
-  	json: true,
-  }, function (error, response, body) {
-  		console.log("Got status code", response.statusCode);
-    }
-  )
-  .on('done', function(res) {
-  	console.log('resp: ', res);
-  })
-  .on('error', function(err) {
-    console.log(err)
-  })
-  
-  res.send('Upload');
+
+	rp({
+			url: endPoint,
+			method: 'post',
+			body: files,
+			json: true,
+		})
+		.then(body => {
+			res.send('OK');
+		})
+		.catch(err => {
+			console.log(err)
+			res.status(404).send(err.message);
+		})
 };

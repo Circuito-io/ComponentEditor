@@ -14,6 +14,13 @@ export class Header extends React.Component {
             <NavItem onClick={this.props.goHome}>
               Home
             </NavItem>
+            {
+              this.props.activeBlock && (
+              <NavItem >
+                {this.props.activeBlock}
+              </NavItem>
+              )
+            }
             </Nav>
             <Nav pullRight>
               <NavItem href="https://talk.circuito.io"  target="_blank">

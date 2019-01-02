@@ -1,8 +1,8 @@
 import React from "react";
 import { Panel, PanelGroup, Button } from "react-bootstrap";
-import { EditorForm } from "./editorform.js";
-import { blockSchema, blockuiSchema } from "./blockSchema.js";
-import { circuitsSchema, circuitsuiSchema } from "./circuitSchema.js";
+import { EditorForm } from "./form/editorform.js";
+import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
+import { circuitsSchema, circuitsuiSchema } from "./schema/circuitSchema.js";
 import { read_a_block, update_a_block } from "./controller.js";
 
 export class Block extends React.Component {
