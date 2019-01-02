@@ -1,23 +1,39 @@
 import { supportedControllersUISchema } from "./commonfields"
+import { all_parts_cached } from "./controller"
 
 export const circuitsuiSchema = {
-	circuits: {
+	circuit: {
 		"ui:field": "tabbedarray",
 		items: {
 			"ui:field": "tabbedobject",
 			"ui:options": {
 				tabs: {
-					Info: ['name', 'cost', 'supportedControllers'],
-					Parts: ['partlist'],
+					Info: ['name', 'priority', 'supportedControllers'],
+					Parts: ['parts'],
 					Blocks: ['blocks'],
 					Coders: ['coders'],
 					Wiring: ['ports', 'wires']
 				}
 			},
 			supportedControllers: supportedControllersUISchema,
-			partlist: {
+			parts: {
 				items: {
-					"ui:readonly": true
+					part: {
+						"ui:field": "typeahead",
+						typeahead: {
+							options: ['res 10k', 'cap 5F'], // BUG: should be all_parts_cached, but resolve execution order
+							minLength: 0
+						}
+					}
+				}
+			},
+			coders: {
+				items: {
+					"ui:field": "typeahead",
+					typeahead: {
+						options: ['coderA', 'coderB'], // BUG: should be all_coders_cached, but resolve execution order
+						minLength: 0
+					}
 				}
 			},
 			blocks: {
@@ -42,7 +58,7 @@ export const circuitsuiSchema = {
 export const circuitsSchema = {
 	type: "object",
 	properties: {
-		circuits: {
+		circuit: {
 			type: "array",
 			title: "",
 			items: {
@@ -51,16 +67,26 @@ export const circuitsSchema = {
 					name: {
 						type: "string"
 					},
-					cost: {
+					priority: {
 						type: "integer",
 						default: 0
 					},
 					supportedControllers: {
 						type: "string"
 					},
-					partlist: {
+					parts: {
 						type: "array",
-						items: { type: "string" }
+						items: {
+							type: "object",
+							properties: {
+								name: {
+									type: "string"
+								},
+								part: {
+									type: "string"
+								}
+							}
+						}
 					},
 					blocks: {
 						type: "array",
@@ -82,8 +108,6 @@ export const circuitsSchema = {
 						type: "array",
 						items: {
 							type: "string",
-							default: "",
-							enum: ["ADXL345", "ADXL335", "Resistor", "Create New..."]
 						}
 					},
 					wires: {

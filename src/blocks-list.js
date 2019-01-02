@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Typeahead } from "react-bootstrap-typeahead";
 import { list_all_blocks } from "./controller.js";
-
 //import "react-bootstrap-typeahead/css/Typeahead.css";
 //import "react-bootstrap-typeahead/css/Typeahead-bs4.css";
 
