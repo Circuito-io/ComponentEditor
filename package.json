@@ -4,7 +4,9 @@
   "description": "circuito.io Component Editor",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack --config ./webpack.config.js --watch"
+    "dev": "webpack --config ./webpack.config.js --watch",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
     "@app-masters/react-cloudinary-uploader": "0.1.41",
