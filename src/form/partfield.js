@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { EditorForm } from "./editorform";
 import { partSchema, partuiSchema } from "../schema/partSchema.js";
 import { read_a_part, update_a_part } from "../controller.js";
+import { SVGCreator } from "../svg-creator";
 
 export class PartField extends React.Component {
     constructor(props) {
@@ -85,6 +86,8 @@ export class PartField extends React.Component {
                       Submit
                     </Button>
                 </EditorForm>
+                
+                <SVGCreator/>
               </Modal.Body>
               <Modal.Footer>
                 <Button onClick={this.save}>Save</Button>
