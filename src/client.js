@@ -2,7 +2,6 @@ require('bootstrap');
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Grid, Row, Col, Well, Button } from "react-bootstrap";
 import { Header } from "./header"
 import { Block } from "./block.js";
 import { Home } from "./home.js";
