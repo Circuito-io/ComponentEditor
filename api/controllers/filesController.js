@@ -25,6 +25,7 @@ exports.list_all_files_factory = function(objPrefix) {
 
 exports.read_a_file_factory = function(objPrefix) {
     return function(req, res) {
+        console.log('read_a_file', objPrefix, req.params);
         fs.readFile(objFile(objPrefix, req.params.name), 'utf8', (err, data) => {
             if (err) {
                 console.log(err);
@@ -52,6 +53,7 @@ exports.read_a_file_factory = function(objPrefix) {
 
 exports.update_a_file_factory = function(objPrefix) {
     return function(req, res) {
+        console.log("update", req.body);
         try {
             var data = JSON.stringify(req.body, null, 2)
         }
@@ -65,6 +67,7 @@ exports.update_a_file_factory = function(objPrefix) {
             return;
         }
         fs.writeFileSync(objFile(objPrefix, req.params.name), data);
+        res.send('OK');
     };
 };
 

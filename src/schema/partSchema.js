@@ -1,19 +1,28 @@
 export const partuiSchema = {
+  name: {
+    "ui:readonly": true
+  },
   desc: {
     "ui:widget": "textarea"
   },
-  buildSetupText: {
-    "ui:widget": "textarea"
-  },
-  buildTestText: {
-    "ui:widget": "textarea"
+  info: {
+    setup: {
+      "ui:widget": "textarea"
+    },
+    test: {
+      "ui:widget": "textarea"
+    },
   },
   symbol: {
-    "ui:widget": "imagewidget",
-    "ui:help": "SVG must follow circuito.io/blog/SVG-Guidelines"
+    URL: {
+      "ui:widget": "imagewidget",
+      "ui:help": "SVG must follow circuito.io/blog/SVG-Guidelines"
+    }
   },
-  img: {
-    "ui:widget": "imagewidget"
+  bom: {
+    items: {
+      image: { "ui:widget": "imagewidget" }
+    }
   },
   headers: {
     headersQty: {
@@ -54,25 +63,34 @@ export const partSchema = {
       title: "Description"
     },
     symbol: {
-      type: "string",
-      title: "Symbol (SVG)"
+      type: "object",
+      properties: {
+        URL: {
+          type: "string",
+          title: "Symbol (SVG)"
+        },
+        ref: {
+          type: "string"
+        }
+      }
     },
     symbolParam: {
       type: "string",
       title: "Symbol parameter",
       default: ""
     },
-    img: {
-      type: "string",
-      title: "Image"
-    },
     category: {
       type: "string",
       enum: ["output", "input", "controller", "power", "support"]
     },
-    placeOnBreadboard: {
-      type: "boolean",
-      title: "Place on breadboard"
+    placing: {
+      type: "object",
+      properties: {
+        onBreadboard: {
+          type: "boolean",
+          title: "Place on breadboard"
+        }
+      }
     },
     headers: {
       type: "object",
@@ -93,30 +111,42 @@ export const partSchema = {
         }
       }
     },
-    bomData: {
-      type: "object",
-      title: "BoM data",
-      properties: {
-        supplier: {
-          type: "string",
-          title: "Supplier",
-          default: "",
-          enum: ["octopart", "digikey", "other"]
-        },
-        SKU: { type: "string", default: "" },
-        link: { type: "string", title: "Link", default: "" },
-        price: { type: "string", title: "Price (USD)", default: "" }
+    bom: {
+      type: "array",
+      items: {
+        type: "object",
+        title: "BoM data",
+        properties: {
+          name: {
+            type: "string",
+            title: "Supplier",
+            default: "",
+            enum: ["octopart", "digikey", "other"]
+          },
+          image: {
+            type: "string",
+            title: "Image"
+          },
+          SKU: { type: "string", default: "" },
+          link: { type: "string", title: "Link", default: "" },
+          price: { type: "string", title: "Price (USD)", default: "" }
+        }
       }
     },
-    buildSetupText: {
-      type: "string",
-      title: "Setup info",
-      default: ""
-    },
-    buildTestText: {
-      type: "string",
-      title: "Test info",
-      default: ""
+    info: {
+      type: "object",
+      properties: {
+        setup: {
+          type: "string",
+          title: "Setup info",
+          default: ""
+        },
+        test: {
+          type: "string",
+          title: "Test info",
+          default: ""
+        },
+      }
     },
     auxParts: {
       type: "string",

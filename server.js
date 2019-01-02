@@ -9,7 +9,7 @@ global.userid = 'main'//uuidv4();
 
 var express = require('express');
 var app = express();
-var port = 8080;
+var port = process.env.PORT || 8080;
 var hostname = "0.0.0.0";
 var bodyParser = require('body-parser');
 
@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'))
 
-var partsRoutes = require('./api/routes/partsblocksRoutes');
+var partsBlocksCodersRoutes = require('./api/routes/partsblockscodersRoutes');
 var previewRoutes = require('./api/routes/previewRoutes');
 var uploadRoutes = require('./api/routes/uploadRoutes');
-partsRoutes(app);
+partsBlocksCodersRoutes(app);
 previewRoutes(app);
 uploadRoutes(app);
 

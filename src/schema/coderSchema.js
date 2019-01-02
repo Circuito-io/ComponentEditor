@@ -1,16 +1,13 @@
-import { supportedControllersUISchema } from "./commonfields"
+import { supportedControllersUISchema } from "../form/commonfields"
 
 export const coderuiSchema = {
   desc: {
     "ui:widget": "textarea"
   },
   supportedControllers: supportedControllersUISchema,
-  libraryFiles: {
-    "ui:field": "typeahead",
-    typeahead: {
-      options: ["File1.h", "File2.cpp", "File3.h"],
-      multiple: true,
-      minLength: 0
+  files: {
+    "ui:options": {
+      orderable: false
     }
   },
   license: {
@@ -50,9 +47,12 @@ export const coderSchema = {
       type: "string",
       title: "Supported controllers"
     },
-    libraryFiles: {
-      type: "string",
-      title: "Library files"
+    files: {
+      type: "array",
+      title: "Library files",
+      items: {
+        type: "string"
+      }
     },
     uploadFiles: {
       type: "array",
@@ -71,11 +71,11 @@ export const coderSchema = {
       type: "object",
       title: "Variable generation settings",
       properties: {
-        className: {
+        classname: {
           type: "string",
           title: "Class name"
         },
-        varName: {
+        varname: {
           type: "string",
           title: "Variable name"
         },

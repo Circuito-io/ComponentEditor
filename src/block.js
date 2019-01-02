@@ -1,53 +1,71 @@
 import React from "react";
-import { Panel, PanelGroup, Tabs, Tab, Button } from "react-bootstrap";
-import urlJoin from 'proper-url-join';
-import { EditorForm } from "./editorform.js"
-import { Circuit } from "./circuit.js";
-import { blockSchema, blockuiSchema } from "./blockSchema.js";
-
+import { Panel, PanelGroup, Button } from "react-bootstrap";
+import { EditorForm } from "./form/editorform.js";
+import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
+import { circuitsSchema, circuitsuiSchema } from "./schema/circuitSchema.js";
+import { read_a_block, update_a_block } from "./controller.js";
 
 export class Block extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      formSrcData : {},
+      formSrcData: {},
     };
-    
-    this.updateFormRef = this.updateFormRef.bind(this);
+
+    this.modified = false;
+    this.currentData = {};
+
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.updateCombineData = this.updateCombineData.bind(this);
+    this.save = this.save.bind(this);
+
+    this.props.setSave(this.save);
   }
 
-  updateFormRef(form) {
-    this.props.setForm(this.props.id, form);
-  }
-  
   componentDidMount() {
     console.log('block update');
-     if (this.props.block != null)
-     {
-       // update block
-       var block = this.props.block
-       console.log("Update form", block);
-       
-       if (block == undefined)
-       {
-         this.setState({formSrcData: {}});
-         return
-       }
-       
-       fetch(urlJoin('/blocks/' + block))
-        .then((response) => response.json())
+    if (this.props.block != null) {
+      // update block
+      var block = this.props.block
+      console.log("Update form", block);
+
+      if (block == undefined) {
+        this.setState({ formSrcData: {} });
+        return
+      }
+
+      read_a_block(block)
         .then((blockData) => {
-            console.log("Got", blockData);
-            this.setState({formSrcData: blockData});
+          console.log("setting", blockData);
+          this.setState({ formSrcData: blockData });
         })
-        .catch((ex) => {
-            console.log('parsing failed', ex);
-        })
-       
-     }
-   }
+    }
+  }
+
+  updateCombineData(data) {
+    // omit fileds which are not represented in form, like circuits field from the info form
+    this.modified = true;
+
+    Object.keys(data.formData).map(key => {
+      if (key in data.schema.properties)
+        this.currentData[key] = data.formData[key];
+    });
+    this.props.updateData(this.currentData);
+  }
+
+  save() {
+    if (!(this.modified))
+    {
+      console.log("unmodified, ignoring save")
+      return;
+    }
+      
+    update_a_block(this.props.block, this.currentData)
+      .then((json) => {
+        console.log("Update response:", json);
+      })
+  }
 
   render() {
     return (
@@ -61,8 +79,8 @@ export class Block extends React.Component {
               <EditorForm
                 schema={blockSchema}
                 uiSchema={blockuiSchema}
-                ref={this.updateFormRef}
                 formData={this.state.formSrcData}
+                onChange={data => this.updateCombineData(data)}
               >
                 <Button type="submit" style={{ display: "none" }}>
                   Submit
@@ -75,23 +93,16 @@ export class Block extends React.Component {
               <Panel.Title toggle>Circuits</Panel.Title>
             </Panel.Heading>
             <Panel.Body collapsible>
-              <Tabs defaultActiveKey={1} id="circuits-tabs">
-                <Tab eventKey={1} title="Circuit1">
-                  <Circuit
-                    id="circuit1"
-                    handleChange={this.props.handleChange}
-                    setForm={this.props.setForm}
-                  />
-                </Tab>
-                <Tab eventKey={2} title="Circuit2">
-                  <Circuit
-                    id="circuit2"
-                    handleChange={this.props.handleChange}
-                    setForm={this.props.setForm}
-                  />
-                </Tab>
-                <Tab eventKey={3} title="Create New..." />
-              </Tabs>
+              <EditorForm
+                schema={circuitsSchema}
+                uiSchema={circuitsuiSchema}
+                formData={this.state.formSrcData}
+                onChange={data => this.updateCombineData(data)}
+              >
+              <Button type="submit" style={{ display: "none" }}>
+                  Submit
+                </Button>
+              </EditorForm>
             </Panel.Body>
           </Panel>
         </PanelGroup>
