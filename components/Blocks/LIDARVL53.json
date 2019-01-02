@@ -1,6 +1,5 @@
 {
     "name": "LIDARVL53",
-    "path": "LIDARVL53",
     "category": [
         "input"
     ],
@@ -21,56 +20,59 @@
         "desc": "<p>The VL53L0X is a Time of Flight distance sensor. It send a laser pulse and measures the time it takes it to get back to the sensor. The VL53LOX can measure distances ~30 to 1000mm.</p>",
         "visible": "False"
     },
-    "coders": [
-        "LIDARVL53"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "LIDARVL53"
-            }
-        ],
-        "ports": [
-            {
-                "name": "VIN",
-                "interface": {
-                    "requires":[[0,["3.3v"]],[1,["5v"]]]
+    "circuit": [
+        {
+            "name": "LIDARVL53",
+            "coders": [
+                "LIDARVL53"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "LIDARVL53"
                 }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "VIN",
+                    "interface": {
+                        "requires":[[0,["3.3v"]],[1,["5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
+                    }
+                },
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
+                    }
                 }
-            },
-            {
-                "name": "SCL",
-                "interface": {
-                    "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
-                }
-            },
-            {
-                "name": "SDA",
-                "interface": {
-                    "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

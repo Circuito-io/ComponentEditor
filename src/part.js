@@ -1,8 +1,6 @@
 import React from "react";
-import Form from "react-jsonschema-form";
 import { Button, Modal } from "react-bootstrap";
-import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
-
+import { EditorForm } from "./editorform";
 import { partSchema, partuiSchema } from "./partSchema.js";
 
 export class Part extends React.Component {
@@ -37,10 +35,9 @@ export class Part extends React.Component {
             <Modal.Title>Part Name</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form
+            <EditorForm
               schema={partSchema}
               uiSchema={partuiSchema}
-              fields={{ typeahead: TypeaheadField }}
             />
           </Modal.Body>
           <Modal.Footer>

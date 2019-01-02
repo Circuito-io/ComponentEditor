@@ -1,6 +1,5 @@
 {
     "name": "EthernetModule",
-    "path": "EthernetModule",
     "category": [
         "input"
     ],
@@ -21,76 +20,79 @@
         "desc": "<p>The ENC28J60 Ethernet  Module allows an Arduino Board to connect to the Internet over SPI communication. It is recommended to add an SD to your project as well to handle the stream of data.</p>",
         "visible": "False"
     },
-    "coders": [
-        "EthernetModule"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "EthernetModule"
-            }
-        ],
-        "ports": [
-            {
-                "name": "SCK",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","SCK"]],[1,["5v","SCK"]]]
+    "circuit": [
+        {
+            "name": "EthernetModule",
+            "coders": [
+                "EthernetModule"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "Arduino101",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "EthernetModule"
                 }
-            },
-            {
-                "name": "SO",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","MISO"]],[1,["5v","MISO"]]]
+            ],
+            "ports": [
+                {
+                    "name": "SCK",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","SCK"]],[1,["5v","SCK"]]]
+                    }
+                },
+                {
+                    "name": "SO",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","MISO"]],[1,["5v","MISO"]]]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SI",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["3.3v","MOSI"]],[1,["5v","MOSI"]]]
+                    }
+                },
+                {
+                    "name": "CS",
+                    "interface": {
+                        "requires":[[0,["3.3v","SS"]],[1,["5v","SS"]],[2,["3.3v","DigitalOut"]],[3,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "INT",
+                    "interface": {
+                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "unique": true
+                    }
                 }
-            },
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "SI",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["3.3v","MOSI"]],[1,["5v","MOSI"]]]
-                }
-            },
-            {
-                "name": "CS",
-                "interface": {
-                    "requires":[[0,["3.3v","SS"]],[1,["5v","SS"]],[2,["3.3v","DigitalOut"]],[3,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "INT",
-                "interface": {
-                    "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
-                    "unique": true
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

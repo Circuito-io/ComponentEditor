@@ -1,6 +1,5 @@
 {
     "name": "MQ7SF",
-    "path": "MQ7SF",
     "category": [
         "input"
     ],
@@ -21,7 +20,154 @@
         "desc": "<p>Measures CO levels in the air. It senses anywhere from 20 to 2000 parts per million.<br><strong>Returned values</strong>: from 0 (low levels of CO) to 1023 (high levels of CO).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
         "visible": "False"
     },
-    "requires":[[1,["MQ7SF5v"]],[2,["MQ7SF3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "MQ7SF5v",
+            "coders": [
+                "MQ7SF5v"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ7SF"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.B1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "this.GND",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.A1",
+                    "to": "this.H1"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "B1",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "H1",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "MQ7SF3v3",
+            "coders": [
+                "MQ7SF3v3"
+            ],
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MQ7SF"
+                },
+                {
+                    "name": "r1",
+                    "part": "Res10KO"
+                },
+                {
+                    "name": "r2",
+                    "part": "Res470O"
+                },
+                {
+                    "name": "r3",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.B1",
+                    "to": "r1.con0"
+                },
+                {
+                    "from": "this.GND",
+                    "to": "r1.con1"
+                },
+                {
+                    "from": "this.A1",
+                    "to": "this.H1"
+                },
+                {
+                    "from": "this.GND",
+                    "to": "r3.con1"
+                },
+                {
+                    "from": "r3.con0",
+                    "to": "r2.con1"
+                },
+                {
+                    "from": "this.B1",
+                    "to": "r2.con0"
+                },
+                {
+                    "from": "r2.con1",
+                    "to": "Aout"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Aout",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "H1",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 2
+        }
+    ]
 }

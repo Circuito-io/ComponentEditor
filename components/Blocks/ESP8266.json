@@ -1,6 +1,5 @@
 {
     "name": "ESP8266",
-    "path": "ESP8266",
     "category": [
         "iot"
     ],
@@ -21,7 +20,369 @@
         "desc": "<p>The <strong>ESP8266</strong> is a low-cost Wi-Fi board, that you can easily wire to a microcontroller, and connect any project you build to the internet (of things). </p>\n<p>The microcontroller communicates with the module using AT commands, either via Software Serial or Hardware Serial.<br><strong>Returned Values</strong>: from 0 (completely dry) to 1023 (completely moist). (air/soil humidity - ambient conditions).<br><strong>Requires</strong>: Soldering of jumper/regular wires to the sensor board, to fit onto a breadboard.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/esp8266-01-wifi-module/\">Learn More</a></p>\n",
         "visible": "False"
     },
-    "requires":[[0,["ESP8266_HardwareSerial5v"]],[1,["ESP8266_SoftwareSerial3v3"]],[100,["ESP8266_SoftwareSerial5v"]],[101,["ESP8266_HardwareSerial3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "ESP8266_HardwareSerial5v",
+            "coders": [
+                "ESP8266_HardwareSerial"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        "Reg3.3v"
+                    ]
+                ]
+            ],
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "parts": [
+                {
+                    "name": "LLC",
+                    "part": "LogicLevelConverter"
+                },
+                {
+                    "name": "this",
+                    "part": "ESP8266"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.RXD",
+                    "to": "LLC.LV1"
+                },
+                {
+                    "from": "this.TXD",
+                    "to": "LLC.LV2"
+                },
+                {
+                    "from": "this.VCC",
+                    "to": "LLC.LV"
+                },
+                {
+                    "from": "this.GND",
+                    "to": "LLC.GND"
+                },
+                {
+                    "from": "this.CH_PD",
+                    "to": "LLC.LV"
+                },
+                {
+                    "from": "LLC.HV1",
+                    "to": "Tx"
+                },
+                {
+                    "from": "LLC.LV",
+                    "to": "LV"
+                },
+                {
+                    "from": "LLC.HV2",
+                    "to": "Rx"
+                },
+                {
+                    "from": "LLC.HV",
+                    "to": "HV"
+                },
+                {
+                    "from": "LLC.GND",
+                    "to": "Gnd"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "LV",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "Rx",
+                    "interface": {
+                        "requires":[[0,["RX","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Tx",
+                    "interface": {
+                        "requires":[[0,["TX","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "HV",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 1220
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "ESP8266_SoftwareSerial3v3",
+            "coders": [
+                "ESP8266_SoftwareSerial3v3"
+            ],
+            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
+            "supportedControllers": [
+                "ArduinoProMini3v3"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "ESP8266"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]],
+                        "requiresLoad": 200
+                    }
+                },
+                {
+                    "name": "TXD",
+                    "interface": {
+                        "requires":[[1,["ESPSoftwareSerialTX","3.3v"]],[10,["ESPSoftwareSerialTX1","3.3v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CH_PD",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "RXD",
+                    "interface": {
+                        "requires":[[1,["ESPSoftwareSerialRX","3.3v"]],[10,["ESPSoftwareSerialRX1","3.3v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "SerialType",
+                    "interface": {
+                        "requires":[[0,["ESPSoftwareSerialTag"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 1220
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "ESP8266_SoftwareSerial5v",
+            "coders": [
+                "ESP8266_SoftwareSerial5v"
+            ],
+            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "ESP8266"
+                },
+                {
+                    "name": "LLC",
+                    "part": "LogicLevelConverter"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.RXD",
+                    "to": "LLC.LV1"
+                },
+                {
+                    "from": "this.TXD",
+                    "to": "LLC.LV2"
+                },
+                {
+                    "from": "this.VCC",
+                    "to": "LLC.LV"
+                },
+                {
+                    "from": "this.GND",
+                    "to": "LLC.GND"
+                },
+                {
+                    "from": "this.CH_PD",
+                    "to": "LLC.LV"
+                },
+                {
+                    "from": "LLC.HV1",
+                    "to": "Tx"
+                },
+                {
+                    "from": "LLC.LV",
+                    "to": "LV"
+                },
+                {
+                    "from": "LLC.HV2",
+                    "to": "Rx"
+                },
+                {
+                    "from": "LLC.HV",
+                    "to": "HV"
+                },
+                {
+                    "from": "LLC.GND",
+                    "to": "Gnd"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "LV",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "Tx",
+                    "interface": {
+                        "requires":[[1,["ESPSoftwareSerialTX","5v"]],[10,["ESPSoftwareSerialTX1","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Rx",
+                    "interface": {
+                        "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "SerialType",
+                    "interface": {
+                        "requires":[[0,["ESPSoftwareSerialTag"]]]
+                    }
+                },
+                {
+                    "name": "HV",
+                    "interface": {
+                        "requires":[[0,["5v"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 1220
+                    }
+                },
+                {
+                    "name": "Gnd",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                }
+            ],
+            "priority": 100
+        },
+        {
+            "name": "ESP8266_HardwareSerial3v3",
+            "coders": [
+                "ESP8266_HardwareSerial"
+            ],
+            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
+            "supportedControllers": [
+                "ArduinoProMini3v3"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "ESP8266"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]],
+                        "requiresLoad": 200
+                    }
+                },
+                {
+                    "name": "TXD",
+                    "interface": {
+                        "requires":[[0,["TX","3.3v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CH_PD",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "RXD",
+                    "interface": {
+                        "requires":[[0,["RX","3.3v"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 1220
+                    }
+                }
+            ],
+            "priority": 101
+        }
+    ]
 }

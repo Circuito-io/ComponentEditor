@@ -1,16 +1,18 @@
 {
     "name": "BreadBoard",
-    "path": "BreadBoard",
     "category": [
         "support"
     ],
-    "supportedControllers": [],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "BreadBoard"
-            }
-        ]
-    }
+    "circuit": [
+        {
+            "name": "BreadBoard",
+            "supportedControllers": [],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "BreadBoard"
+                }
+            ]
+        }
+    ]
 }

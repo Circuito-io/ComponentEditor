@@ -1,6 +1,5 @@
 {
     "name": "TMP102",
-    "path": "TMP102",
     "category": [
         "input"
     ],
@@ -21,72 +20,75 @@
         "desc": "<p>A breakout board for the TMP102 temperature sensor - a digital sensor, ideal for projects where high accuracy is required.<br><strong>Returned Values</strong>: from -25\u00b0C to +85\u00b0C, with an accuracy of 0.5\u00b0C.(Can also return Fahrenheit).<br><strong>Requires</strong>: Soldering of 6 male pins to fit onto a breadboard.<br><strong>Sample applications</strong>: (1) Measure and show temperature on a screen, (2) If temperature is higher than a certain threshold, turn on a fan.</p>\n",
         "visible": "False"
     },
-    "coders": [
-        "TMP102"
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "TMP102"
-            }
-        ],
-        "ports": [
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
+    "circuit": [
+        {
+            "name": "TMP102",
+            "coders": [
+                "TMP102"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "TMP102"
                 }
-            },
-            {
-                "name": "ADD0",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "ADD0",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SDA",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SDA","3.3v"]],[1,["SDA","5v"]]]
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "SCL",
+                    "interface": {
+                        "isBus": true,
+                        "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[[0,["SRAMLoad"]]],
+                        "requiresLoad": 176
+                    }
                 }
-            },
-            {
-                "name": "SDA",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["SDA","3.3v"]],[1,["SDA","5v"]]]
-                }
-            },
-            {
-                "name": "GND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "SCL",
-                "interface": {
-                    "isBus": true,
-                    "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
-                }
-            },
-            {
-                "name": "MemOverLoad",
-                "interface": {
-                    "requires":[[0,["SRAMLoad"]]],
-                    "requiresLoad": 176
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }
