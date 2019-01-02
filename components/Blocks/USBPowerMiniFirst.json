@@ -1,8 +1,8 @@
 {
     "name": "USBPowerMiniFirst",
-    "path": "Power",
     "category": [
-        "powerConnector"
+        "powerConnector",
+        "power"
     ],
     "blockId": "514",
     "app": {
@@ -25,7 +25,122 @@
         150,
         "PowerSupply12v2A"
     ],
-    "requires":[[1,["USBPowerMiniWithFTDI5v"]],[2,["USBPowerMiniWithFTDI3v3"]],[3,["USBPowerMini"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "USBPowerMiniWithFTDI5v",
+            "altComp": [
+                150,
+                "PowerSupply12v2A"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini5v",
+                "ATTiny85"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerMiniWithFTDI"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 400
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "FTDI",
+                    "interface": {
+                        "requires":[[0,["FTDI"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
+            "name": "USBPowerMiniWithFTDI3v3",
+            "altComp": [
+                150,
+                "PowerSupply12v2A"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ATTiny85"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerMiniWithFTDI"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["3.3v","USB"]],
+                        "providesLoad": 400
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "FTDI",
+                    "interface": {
+                        "requires":[[0,["FTDI"]]]
+                    }
+                }
+            ],
+            "priority": 2
+        },
+        {
+            "name": "USBPowerMini",
+            "altComp": [
+                150,
+                "PowerSupply12v2A"
+            ],
+            "supportedControllers": [
+                "ArduinoNano"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerMini"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 400
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "USB_MINI",
+                    "interface": {
+                        "requires":[[0,["USB_MINI"]]]
+                    }
+                }
+            ],
+            "priority": 3
+        }
+    ]
 }

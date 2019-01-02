@@ -1,9 +1,8 @@
 {
     "name": "PowerSupply12v2A",
-    "path": "Power",
     "category": [
         "powerConnector",
-        "support"
+        "power"
     ],
     "blockId": "9442",
     "app": {
@@ -22,60 +21,63 @@
         "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
         "visible": "False"
     },
-    "requires": [
-        [
-            0,
-            [
-                "NONE"
+    "circuit": [
+        {
+            "name": "PowerSupply12v2A",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BarrelJack12v"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "PowerSupply12v2A"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["12v","Barrel"]],
+                        "providesLoad": 2000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","Barrel"]]
+                    }
+                },
+                {
+                    "name": "BARREL_JACK",
+                    "interface": {
+                        "requires":[[0,["BARREL_JACK"]]]
+                    }
+                }
             ]
-        ],
-        [
-            1,
-            [
-                "BarrelJack12v"
-            ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "PowerSupply12v2A"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["12v","Barrel"]],
-                    "providesLoad": 2000
-                }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "provides":[["GND","Barrel"]]
-                }
-            },
-            {
-                "name": "BARREL_JACK",
-                "interface": {
-                    "requires":[[0,["BARREL_JACK"]]]
-                }
-            }
-        ]
-    }
+        }
+    ]
 }

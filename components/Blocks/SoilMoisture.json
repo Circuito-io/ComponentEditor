@@ -1,6 +1,5 @@
 {
     "name": "SoilMoisture",
-    "path": "SoilMoisture",
     "category": [
         "input"
     ],
@@ -21,7 +20,94 @@
         "desc": "<p>A cool moisture breakout from Sparkfun. It measures moisture in soil, water, air.<br><strong>Returned Values</strong>: from 0 (completely dry) to 1023 (completely moist). (air/soil humidity - ambient conditions).<br><strong>Requires</strong>: Soldering of jumper/regular wires to the sensor board, to fit onto a breadboard.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Thirsty-Flamingo/\">Thirsty Flamingo</a></p>\n",
         "visible": "False"
     },
-    "requires":[[0,["SoilMoisture5v"]],[1,["SoilMoisture3v3"]]],
-    "supportedControllers": [],
-    "circuit": {}
+    "circuit": [
+        {
+            "name": "SoilMoisture5v",
+            "coders": [
+                "SoilMoisture"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SoilMoisture"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[1,["5v"]]]
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "SoilMoisture3v3",
+            "coders": [
+                "SoilMoisture"
+            ],
+            "supportedControllers": [
+                "ArduinoProMini3v3",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SoilMoisture"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[[0,["ADC"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "Vin",
+                    "interface": {
+                        "requires":[[1,["3.3v"]]]
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
 }

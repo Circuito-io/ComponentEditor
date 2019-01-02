@@ -1,8 +1,8 @@
 {
     "name": "USBPowerMicro",
-    "path": "Power",
     "category": [
-        "powerConnector"
+        "powerConnector",
+        "power"
     ],
     "blockId": "513",
     "app": {
@@ -25,42 +25,45 @@
         150,
         "PowerSupply12v2A"
     ],
-    "supportedControllers": [
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMicro",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "USBPowerMicro"
-            }
-        ],
-        "ports": [
-            {
-                "name": "pos",
-                "interface": {
-                    "provides":[["5v","USB"]],
-                    "providesLoad": 400
+    "circuit": [
+        {
+            "name": "USBPowerMicro",
+            "supportedControllers": [
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMicro",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "USBPowerMicro"
                 }
-            },
-            {
-                "name": "neg",
-                "interface": {
-                    "provides":[["GND","USB"]]
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides":[["5v","USB"]],
+                        "providesLoad": 400
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "provides":[["GND","USB"]]
+                    }
+                },
+                {
+                    "name": "USB_MICRO",
+                    "interface": {
+                        "requires":[[0,["USB_MICRO"]]]
+                    }
                 }
-            },
-            {
-                "name": "USB_MICRO",
-                "interface": {
-                    "requires":[[0,["USB_MICRO"]]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

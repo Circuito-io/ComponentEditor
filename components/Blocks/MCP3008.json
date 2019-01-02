@@ -1,126 +1,128 @@
 {
     "name": "MCP3008",
-    "path": "Discrete",
     "category": [
         "support"
     ],
-    "coders": [
-        "MCP3008"
-    ],
-    "supportedControllers": [],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "MCP3008"
-            }
-        ],
-        "ports": [
-            {
-                "name": "VCC",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
+    "circuit": [
+        {
+            "name": "MCP3008",
+            "coders": [
+                "MCP3008"
+            ],
+            "supportedControllers": [],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "MCP3008"
                 }
-            },
-            {
-                "name": "AGND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "AGND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "VREF",
+                    "interface": {
+                        "requires":[[0,["3.3v"]]]
+                    }
+                },
+                {
+                    "name": "DGND",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "DOUT",
+                    "interface": {
+                        "requires":[[0,["MISO","3.3v"]]]
+                    }
+                },
+                {
+                    "name": "DIN",
+                    "interface": {
+                        "requires":[[0,["MOSI","3.3v"]]]
+                    }
+                },
+                {
+                    "name": "CLK",
+                    "interface": {
+                        "requires":[[0,["SCK","3.3v"]]]
+                    }
+                },
+                {
+                    "name": "CS",
+                    "interface": {
+                        "requires":[[0,["3.3v","SS"]],[1,["3.3v","DigitalOut"]]],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CH0",
+                    "interface": {
+                        "codename": "0",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH1",
+                    "interface": {
+                        "codename": "1",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH2",
+                    "interface": {
+                        "codename": "2",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH3",
+                    "interface": {
+                        "codename": "3",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH4",
+                    "interface": {
+                        "codename": "4",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH5",
+                    "interface": {
+                        "codename": "5",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH6",
+                    "interface": {
+                        "codename": "6",
+                        "provides":[["ADC"]]
+                    }
+                },
+                {
+                    "name": "CH7",
+                    "interface": {
+                        "codename": "7",
+                        "provides":[["ADC"]]
+                    }
                 }
-            },
-            {
-                "name": "VREF",
-                "interface": {
-                    "requires":[[0,["3.3v"]]]
-                }
-            },
-            {
-                "name": "DGND",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "DOUT",
-                "interface": {
-                    "requires":[[0,["MISO","3.3v"]]]
-                }
-            },
-            {
-                "name": "DIN",
-                "interface": {
-                    "requires":[[0,["MOSI","3.3v"]]]
-                }
-            },
-            {
-                "name": "CLK",
-                "interface": {
-                    "requires":[[0,["SCK","3.3v"]]]
-                }
-            },
-            {
-                "name": "CS",
-                "interface": {
-                    "requires":[[0,["3.3v","SS"]],[1,["3.3v","DigitalOut"]]],
-                    "unique": true
-                }
-            },
-            {
-                "name": "CH0",
-                "interface": {
-                    "codename": "0",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH1",
-                "interface": {
-                    "codename": "1",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH2",
-                "interface": {
-                    "codename": "2",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH3",
-                "interface": {
-                    "codename": "3",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH4",
-                "interface": {
-                    "codename": "4",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH5",
-                "interface": {
-                    "codename": "5",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH6",
-                "interface": {
-                    "codename": "6",
-                    "provides":[["ADC"]]
-                }
-            },
-            {
-                "name": "CH7",
-                "interface": {
-                    "codename": "7",
-                    "provides":[["ADC"]]
-                }
-            }
-        ]
-    }
+            ]
+        }
+    ]
 }

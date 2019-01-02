@@ -1,6 +1,5 @@
 {
     "name": "Battery8xAA",
-    "path": "Power",
     "category": [
         "power"
     ],
@@ -21,62 +20,65 @@
         "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
         "visible": "False"
     },
-    "requires": [
-        [
-            0,
-            [
-                "NONE"
+    "circuit": [
+        {
+            "name": "Battery8xAA",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "requires": [
+                [
+                    0,
+                    [
+                        "NONE"
+                    ]
+                ],
+                [
+                    1,
+                    [
+                        "BarrelJack12v"
+                    ]
+                ]
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Battery8xAA"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "POS",
+                    "interface": {
+                        "provides":[["12v"]],
+                        "providesLoad": 2000
+                    }
+                },
+                {
+                    "name": "NEG",
+                    "interface": {
+                        "requires":[[0,["GND"]]]
+                    }
+                },
+                {
+                    "name": "PowerType",
+                    "interface": {
+                        "provides":[["Battery"]]
+                    }
+                }
             ]
-        ],
-        [
-            1,
-            [
-                "BarrelJack12v"
-            ]
-        ]
-    ],
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-    ],
-    "circuit": {
-        "parts": [
-            {
-                "name": "this",
-                "part": "Battery8xAA"
-            }
-        ],
-        "ports": [
-            {
-                "name": "POS",
-                "interface": {
-                    "provides":[["12v"]],
-                    "providesLoad": 2000
-                }
-            },
-            {
-                "name": "NEG",
-                "interface": {
-                    "requires":[[0,["GND"]]]
-                }
-            },
-            {
-                "name": "PowerType",
-                "interface": {
-                    "provides":[["Battery"]]
-                }
-            }
-        ]
-    }
+        }
+    ]
 }
