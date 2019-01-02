@@ -17,11 +17,9 @@ export class Preview extends React.Component {
   }
 
   getPreviewURL() {
-    console.log('Getting previewURL');
     fetch('/preview')
       .then(res => {
         res.text().then(data => { 
-          console.log("Got preview url", data);
           this.setState({previewURL: data});
           });
       })

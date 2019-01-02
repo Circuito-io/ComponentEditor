@@ -1,26 +1,19 @@
-import React from 'react';
-import { NavItem , Glyphicon} from "react-bootstrap";
-import 'whatwg-fetch';
+import React from "react";
+import { NavItem, Glyphicon } from "react-bootstrap";
+import { invoke_upload } from "./controller.js";
+import { toast } from 'react-toastify';
 
-export class Upload extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.upload = this.upload.bind(this);
-  }
-
-  upload() {
-    console.log('upload');
-    fetch('/upload')
-        .catch((ex) => {
-            console.log('upload failed', ex);
-        });
-  }
-  
-  render() {
-    return (
-      <NavItem onClick={this.upload}><Glyphicon glyph="glyphicon-refresh" /> Upload</NavItem>
-    );
-  }
-};
-
+export function Upload() {
+  return (
+    <NavItem onClick={event => invoke_upload().then(response => {
+      if (!response.ok)
+      {
+        console.log(response);
+        toast.error('Upload failed:' + response.statusText);
+      }
+      else {
+        toast.success("Upload successful");
+      }
+      })}><Glyphicon glyph="glyphicon-refresh" /> Upload</NavItem>
+  );
+}

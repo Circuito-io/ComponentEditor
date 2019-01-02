@@ -4,7 +4,9 @@
   "description": "circuito.io Component Editor",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack --config ./webpack.config.js --watch"
+    "dev": "webpack --config ./webpack.config.js --watch",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
     "@app-masters/react-cloudinary-uploader": "0.1.41",
@@ -19,7 +21,9 @@
     "react-dom": "16.6.3",
     "react-jsonschema-form": "1.0.6",
     "react-jsonschema-form-extras": "0.9.28",
+    "react-toastify": "^4.5.1",
     "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "uuid": "^3",
     "whatwg-fetch": "^3.0.0"
   },
@@ -29,8 +33,13 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "css-loader": "^2.1.0",
     "nodemon-webpack-plugin": "^4.0.6",
+    "style-loader": "^0.23.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
+  },
+  "engines": {
+    "node": "11.x"
   }
 }

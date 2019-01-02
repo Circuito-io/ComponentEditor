@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
-import { EditorForm } from "./editorform.js"
+import { EditorForm } from "./form/editorform.js"
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
 
-import { coderSchema, coderuiSchema } from "./coderSchema.js";
+import { coderSchema, coderuiSchema } from "./schema/coderSchema.js";
 
 export class Coder extends React.Component {
 	constructor(props, context) {
