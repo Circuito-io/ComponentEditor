@@ -4,8 +4,8 @@ global.uploadEndpoint = "save_components";
 global.previewEndpoint = "app?u=";
 
 // Generate unique user uuid
-// const uuidv4 = require('uuid/v4');
-global.userid = 'main'//uuidv4();
+const uuidv4 = require('uuid/v4');
+global.userid = uuidv4();
 
 var express = require('express');
 var app = express();

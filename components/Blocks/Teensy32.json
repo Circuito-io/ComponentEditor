@@ -162,7 +162,7 @@
                     "name": "15",
                     "interface": {
                         "codename": 15,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -170,7 +170,7 @@
                     "name": "16",
                     "interface": {
                         "codename": 16,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -178,7 +178,7 @@
                     "name": "17",
                     "interface": {
                         "codename": 17,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -186,7 +186,7 @@
                     "name": "18",
                     "interface": {
                         "codename": 18,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SDA"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SDA"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -194,7 +194,7 @@
                     "name": "19",
                     "interface": {
                         "codename": 19,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SCL"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SCL"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -218,7 +218,7 @@
                     "name": "22",
                     "interface": {
                         "codename": 22,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -226,7 +226,7 @@
                     "name": "23",
                     "interface": {
                         "codename": 23,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -328,7 +328,7 @@
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["RX","3.3v"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["RX","3.3v"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -336,7 +336,7 @@
                     "name": "1",
                     "interface": {
                         "codename": 1,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["TX","3.3v"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["TX","3.3v"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -448,7 +448,7 @@
                     "name": "15",
                     "interface": {
                         "codename": 15,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -456,7 +456,7 @@
                     "name": "16",
                     "interface": {
                         "codename": 16,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -464,7 +464,7 @@
                     "name": "17",
                     "interface": {
                         "codename": 17,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -472,7 +472,7 @@
                     "name": "18",
                     "interface": {
                         "codename": 18,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SDA"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SDA"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -480,7 +480,7 @@
                     "name": "19",
                     "interface": {
                         "codename": 19,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SCL"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SCL"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -504,7 +504,7 @@
                     "name": "22",
                     "interface": {
                         "codename": 22,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -512,7 +512,7 @@
                     "name": "23",
                     "interface": {
                         "codename": 23,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -614,7 +614,7 @@
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["RX","3.3v"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["RX","3.3v"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -622,7 +622,7 @@
                     "name": "1",
                     "interface": {
                         "codename": 1,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["TX","3.3v"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["TX","3.3v"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -726,7 +726,7 @@
                     "name": "14",
                     "interface": {
                         "codename": 14,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -734,7 +734,7 @@
                     "name": "15",
                     "interface": {
                         "codename": 15,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -742,7 +742,7 @@
                     "name": "16",
                     "interface": {
                         "codename": 16,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -750,7 +750,7 @@
                     "name": "17",
                     "interface": {
                         "codename": 17,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -758,7 +758,7 @@
                     "name": "18",
                     "interface": {
                         "codename": 18,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SDA"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SDA"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -766,7 +766,7 @@
                     "name": "19",
                     "interface": {
                         "codename": 19,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SCL"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","SCL"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -790,7 +790,7 @@
                     "name": "22",
                     "interface": {
                         "codename": 22,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
@@ -798,7 +798,7 @@
                     "name": "23",
                     "interface": {
                         "codename": 23,
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["Touch"]],
+                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["ADC"],["3.3v","PWM"],["CapTouch"]],
                         "providesLoad": 10
                     }
                 },
