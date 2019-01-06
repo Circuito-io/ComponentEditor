@@ -20,7 +20,7 @@
         "desc": "<p>This strip allows you to control each RGB LED individually. It is 1-meter long, and also waterproof. It will require it&#39;s own 5V power source, which we specify in the BOM.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "LedStrip",
             "coders": [
@@ -42,26 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    5,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "PowerSupply5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[5,["Reg5v"]],[10,["PowerSupply5v"]]],
             "parts": [
                 {
                     "name": "this",

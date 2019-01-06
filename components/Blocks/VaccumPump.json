@@ -20,7 +20,7 @@
         "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "VaccumPump",
             "coders": [
@@ -41,14 +41,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndHighLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "this",

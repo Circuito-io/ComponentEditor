@@ -24,20 +24,13 @@
         1000,
         "ArduinoUno"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "Teensy32USB",
             "supportedControllers": [
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMicro"
-                    ]
-                ]
-            ],
+            "requires":[[0,["USBPowerMicro"]]],
             "parts": [
                 {
                     "name": "this",
@@ -320,14 +313,7 @@
         },
         {
             "name": "Teensy326v",
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMicro"
-                    ]
-                ]
-            ],
+            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "Teensy32"
             ],

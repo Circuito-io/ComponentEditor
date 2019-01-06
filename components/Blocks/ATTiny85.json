@@ -5,36 +5,15 @@
     ],
     "blockId": "8300591",
     "references": [
-                "https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256",
-                "http://highlowtech.org/?p=1695",
-                "http://digistump.com/wiki/digispark/tutorials/connecting",
-                "http://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf"
-            ],
-    "circuit": [
+        "https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256",
+        "http://highlowtech.org/?p=1695",
+        "http://digistump.com/wiki/digispark/tutorials/connecting",
+        "http://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf"
+    ],
+    "circuits": [
         {
             "name": "ATTiny853v3",
-            "requires": [
-                [
-                    10,
-                    [
-                        "Reg3.3v"
-                    ]
-                ],
-                [
-                    20,
-                    [
-                        "Reg3.3v",
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "StepUp5v"
-                    ]
-                ]
-            ],
-            
+            "requires":[[10,["Reg3.3v"]],[20,["Reg3.3v","Reg5v"]],[30,["StepUp5v"]]],
             "supportedControllers": [
                 "ATTiny85"
             ],
@@ -196,11 +175,5 @@
             ],
             "priority": 3
         }
-    ],
-    "references": [
-        "https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256",
-        "http://highlowtech.org/?p=1695",
-        "http://digistump.com/wiki/digispark/tutorials/connecting",
-        "http://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf"
     ]
 }

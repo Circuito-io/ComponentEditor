@@ -4,30 +4,11 @@
         "output"
     ],
     "blockId": "11698",
-    "circuit": [
+    "circuits": [
         {
             "name": "DCMotorL",
             "supportedControllers": [],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    7,
-                    [
-                        "L293D1M"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "L293D2M"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[7,["L293D1M"]],[10,["L293D2M"]]],
             "parts": [
                 {
                     "name": "this",

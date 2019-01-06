@@ -20,7 +20,7 @@
         "desc": "<p>The vibration motor simply vibrates at a predefined strength, alerting you inaudibly that some event has occurred in the circuit.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "VibrationMotor",
             "coders": [
@@ -42,14 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "this",

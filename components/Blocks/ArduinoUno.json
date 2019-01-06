@@ -24,17 +24,10 @@
         1000,
         "ArduinoMega"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ArduinoUnoBarrelJack12v",
-            "requires": [
-                [
-                    1,
-                    [
-                        "USBPowerB"
-                    ]
-                ]
-            ],
+            "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
             ],

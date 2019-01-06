@@ -31,23 +31,10 @@
             "MCP3008"
         ]
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "RPI3BUSB",
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "PowerSupply12vExt"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[1,["PowerSupply12vExt"]]],
             "supportedControllers": [
                 "RPI3B"
             ],

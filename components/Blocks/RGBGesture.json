@@ -20,7 +20,7 @@
         "desc": "<p>The built in APDS-9960 can measure ambient light and color, proximity and detect touchless gestures.<br> Use this sensor to control your Arduino with a swipe of your hand.</p>",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "RGBGesture",
             "coders": [
@@ -40,20 +40,7 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "LogicLevelConverterI2C-5-3.3"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[10,["LogicLevelConverterI2C-5-3.3"]]],
             "parts": [
                 {
                     "name": "this",

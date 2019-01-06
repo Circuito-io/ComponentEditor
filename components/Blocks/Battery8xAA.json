@@ -20,7 +20,7 @@
         "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "Battery8xAA",
             "supportedControllers": [
@@ -38,20 +38,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "BarrelJack12v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[1,["BarrelJack12v"]]],
             "parts": [
                 {
                     "name": "this",

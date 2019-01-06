@@ -20,7 +20,7 @@
         "desc": "<p>This thermal printer can print pictures, text and QR codes. Thermal paper not included!</p>",
         "visible": "true"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "AdafruitMiniThermalPrinter",
             "coders": [
@@ -36,26 +36,7 @@
                 "ArduinoUno",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    5,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "PowerSupply5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[5,["Reg5v"]],[10,["PowerSupply5v"]]],
             "parts": [
                 {
                     "name": "this",

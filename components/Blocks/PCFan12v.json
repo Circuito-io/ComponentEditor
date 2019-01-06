@@ -20,7 +20,7 @@
         "desc": "<p>12V PC Fan 8cm square,operating speed of 2000 RPM.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "PCFan12v",
             "coders": [
@@ -40,14 +40,7 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndHighLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "this",

@@ -20,7 +20,7 @@
         "desc": "<p>A simple rotation motor, rotating 360 degrees, operating without a load at ~6000 RPM.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "DCMotor",
             "coders": [
@@ -41,14 +41,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndHighLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "d1",

@@ -20,7 +20,7 @@
         "desc": "<p>DC Blower rates 1Amp @ 12VDC.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "Blower12v",
             "coders": [
@@ -41,14 +41,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndHighLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "this",

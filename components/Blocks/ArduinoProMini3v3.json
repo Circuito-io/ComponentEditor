@@ -24,42 +24,10 @@
         1000,
         "ArduinoMicro"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ArduinoProMini3v3USB",
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    20,
-                    [
-                        "StepUp5v"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    40,
-                    [
-                        "Reg3.3v"
-                    ]
-                ],
-                [
-                    70,
-                    [
-                        "Reg5v",
-                        "Reg3.3v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[20,["StepUp5v"]],[30,["Reg5v"]],[40,["Reg3.3v"]],[70,["Reg5v","Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"
             ],

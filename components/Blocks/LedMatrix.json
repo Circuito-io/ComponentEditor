@@ -20,7 +20,7 @@
         "desc": "<p>Control a 8x8 LED matrix display using the MAX7219. Up to 8 modules can be chained for a longer display.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/LED-Matrix-with-Arduino/\">LED Matrix with Arduino</a></p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "LedMatrix",
             "coders": [
@@ -40,33 +40,7 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "LogicLevelConverterSPI-3.3-5"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    11,
-                    [
-                        "Reg5v",
-                        "LogicLevelConverterSPI-3.3-5"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[1,["LogicLevelConverterSPI-3.3-5"]],[10,["Reg5v"]],[11,["Reg5v","LogicLevelConverterSPI-3.3-5"]]],
             "parts": [
                 {
                     "name": "this",

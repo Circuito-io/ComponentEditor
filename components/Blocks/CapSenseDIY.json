@@ -20,7 +20,7 @@
         "desc": "<p>A DIY Capacitive sensor using a 1MOhm resistor and some metal object. read more at: <a href=\"http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense\">arduino.cc</a></p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "CapSenseDIY",
             "coders": [
@@ -87,7 +87,7 @@
                 "CapSenseDIYTeensy"
             ],
             "supportedControllers": [
-                "Teensy32
+                "Teensy32"
             ],
             "parts": [
                 {
@@ -99,7 +99,7 @@
                 {
                     "name": "PinA",
                     "interface": {
-                        "requires":[["Touch"]],
+                        "requires":[[0,["Touch"]]],
                         "unique": true
                     }
                 }

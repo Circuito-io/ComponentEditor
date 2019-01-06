@@ -20,7 +20,7 @@
         "desc": "<p>simple, high quality continuous rotation servo motor. This servo is able to take in 6 volts and deliver 30.6 oz-in. of maximum torque at 0.14 sec/60\u00b0</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "Servo360",
             "coders": [
@@ -42,20 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "Reg5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[30,["Reg5v"]]],
             "parts": [
                 {
                     "name": "this",

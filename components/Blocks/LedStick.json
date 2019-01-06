@@ -20,7 +20,7 @@
         "desc": "<p>An 8 addressable RGB LED stick. It has a single data line for control. You can chain these units by connecting the output of one stick to the input of another.</p>",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "LedStick",
             "coders": [
@@ -42,26 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "PowerSupply5v"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "Reg5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[10,["PowerSupply5v"]],[10,["Reg5v"]]],
             "parts": [
                 {
                     "name": "this",

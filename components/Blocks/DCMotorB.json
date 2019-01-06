@@ -20,7 +20,7 @@
         "desc": "<p>A micro metal geared DC motor. It has a ratio of 298:1 and has a max speed of 90 RPM @ voltage up to 12V.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "DCMotorB",
             "coders": [
@@ -41,14 +41,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndHighLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "d1",
