@@ -87,7 +87,7 @@
                 "CapSenseDIYTeensy"
             ],
             "supportedControllers": [
-                "Teensy32
+                "Teensy32"
             ],
             "parts": [
                 {
@@ -99,7 +99,7 @@
                 {
                     "name": "PinA",
                     "interface": {
-                        "requires":[["Touch"]],
+                        "requires":[[0,["CapTouch"]]],
                         "unique": true
                     }
                 }
