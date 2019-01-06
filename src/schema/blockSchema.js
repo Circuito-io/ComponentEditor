@@ -1,16 +1,3 @@
-// Using FireReaderInput instead of cloudinary:
-// import FileReaderInput from "react-file-reader-input";
-// <FileReaderInput
-// as="url"
-// id="img-file-input"
-// onChange={(e, results) => {
-// 	var filename = results[0][1].name;
-// 	props.onChange(filename);
-// }}
-// >
-// <Button>Upload...</Button>
-// </FileReaderInput>
-
 export const blockuiSchema = {
   name: {
     "ui:readonly": true
