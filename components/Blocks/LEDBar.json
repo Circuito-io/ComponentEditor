@@ -172,76 +172,76 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "JA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "IA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "HA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "FA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "EA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "DA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "CA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "BA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "AA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]],[1,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 }

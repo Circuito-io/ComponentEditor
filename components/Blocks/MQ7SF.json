@@ -65,20 +65,20 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "B1",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "H1",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
@@ -150,20 +150,20 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Aout",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "H1",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],

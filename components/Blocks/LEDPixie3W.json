@@ -52,7 +52,7 @@
                     "name": "5V",
                     "interface": {
                         "chainTo": "5V_Ch",
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 500
                     }
                 },
@@ -60,14 +60,14 @@
                     "name": "GND",
                     "interface": {
                         "chainTo": "GND_Ch",
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "IN",
                     "interface": {
                         "chainTo": "OUT",
-                        "requires":[[0,["3.3v","SoftwareSerial"]],[1,["5v","SoftwareSerial"]]],
+                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"3.3v"},{"cost":1,"spec":"SoftwareSerial","voltage":"5v"}],
                         "unique": true
                     }
                 },

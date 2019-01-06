@@ -61,20 +61,20 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "con1",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "con0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
@@ -117,20 +117,20 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["3.3v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "con1",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "con0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],

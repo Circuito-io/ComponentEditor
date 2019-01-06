@@ -49,20 +49,20 @@
                 {
                     "name": "POS",
                     "interface": {
-                        "provides":[["12v"]],
+                        "provides":[{"spec":"","voltage":"12v"}],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "NEG",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[["Battery"]]
+                        "provides":[{"spec":"Battery","voltage":""}]
                     }
                 }
             ]

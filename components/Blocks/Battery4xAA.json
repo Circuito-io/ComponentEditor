@@ -51,20 +51,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["6v"]],
+                        "provides":[{"spec":"","voltage":"6v"}],
                         "providesLoad": 600
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[["Battery"]]
+                        "provides":[{"spec":"Battery","voltage":""}]
                     }
                 }
             ]

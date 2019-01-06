@@ -77,61 +77,61 @@
                 {
                     "name": "INT1",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "ENB",
                     "interface": {
-                        "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                        "requires":[{"cost":1,"spec":"PWM","voltage":"5v"},{"cost":2,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[1,["GND"]],[2,["GND","Battery"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"GND"},{"cost":2,"spec":"Battery","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "12V",
                     "interface": {
-                        "requires":[[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
+                        "requires":[{"cost":5,"spec":"","voltage":"6v"},{"cost":3,"spec":"","voltage":"7.4v"},{"cost":2,"spec":"","voltage":"9v"},{"cost":1,"spec":"","voltage":"12v"}],
                         "requiresLoad": 400
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "INT2",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "ENA",
                     "interface": {
-                        "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                        "requires":[{"cost":1,"spec":"PWM","voltage":"5v"},{"cost":2,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "INT3",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "INT4",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

@@ -24,31 +24,31 @@
                 {
                     "name": "CTS",
                     "interface": {
-                        "provides":[["5v","CTS"]]
+                        "provides":[{"spec":"CTS","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "provides":[["5v","RX"]]
+                        "provides":[{"spec":"RX","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "provides":[["5v","TX"]]
+                        "provides":[{"spec":"TX","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "DTR",
                     "interface": {
-                        "provides":[["5v","DTR"]]
+                        "provides":[{"spec":"DTR","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
@@ -73,31 +73,31 @@
                 {
                     "name": "CTS",
                     "interface": {
-                        "provides":[["3.3v","CTS"]]
+                        "provides":[{"spec":"CTS","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "provides":[["3.3v","RX"]]
+                        "provides":[{"spec":"RX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "provides":[["3.3v","TX"]]
+                        "provides":[{"spec":"TX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "DTR",
                     "interface": {
-                        "provides":[["3.3v","DTR"]]
+                        "provides":[{"spec":"DTR","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],

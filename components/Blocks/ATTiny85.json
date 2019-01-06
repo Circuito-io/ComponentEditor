@@ -28,7 +28,7 @@
                     "name": "PB0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["3.3v","MISO"],["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["SDA","3.3v"]],
+                        "provides":[{"spec":"MISO","voltage":"3.3v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"SDA","voltage":"3.3v"}],
                         "providesLoad": 20
                     }
                 },
@@ -36,7 +36,7 @@
                     "name": "PB1",
                     "interface": {
                         "codename": "1",
-                        "provides":[["3.3v","MOSI"],["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"]],
+                        "provides":[{"spec":"MOSI","voltage":"3.3v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}],
                         "providesLoad": 20
                     }
                 },
@@ -44,7 +44,7 @@
                     "name": "PB2",
                     "interface": {
                         "codename": "2",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCL"],["3.3v","SCK"],["SoftwareSerial","3.3v"],["ADC"]],
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCL","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ADC","voltage":""}],
                         "providesLoad": 20
                     }
                 },
@@ -52,7 +52,7 @@
                     "name": "PB3",
                     "interface": {
                         "codename": "3",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["ADC"]],
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ADC","voltage":""}],
                         "providesLoad": 20
                     }
                 },
@@ -60,33 +60,33 @@
                     "name": "PB4",
                     "interface": {
                         "codename": "4",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["ADC"]],
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ADC","voltage":""}],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["3.3v"]]],
+                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}],
                         "requiresLoad": 200
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[["ESPSoftwareSerialTag"]]
+                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[["SRAMLoad"]],
+                        "provides":[{"spec":"SRAMLoad","voltage":""}],
                         "providesLoad": 512
                     }
                 }
@@ -110,7 +110,7 @@
                     "name": "PB0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["5v","MISO"],["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"],["SDA","5v"]],
+                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
                         "providesLoad": 20
                     }
                 },
@@ -118,7 +118,7 @@
                     "name": "PB1",
                     "interface": {
                         "codename": "1",
-                        "provides":[["5v","MOSI"],["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"],["ESPSoftwareSerialRX","5v"]],
+                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"}],
                         "providesLoad": 20
                     }
                 },
@@ -126,7 +126,7 @@
                     "name": "PB2",
                     "interface": {
                         "codename": "2",
-                        "provides":[["5v","DigitalIn"],["5v","DigitalIn","Int"],["5v","DigitalOut"],["5v","SCL"],["5v","SCK"],["SoftwareSerial","5v"],["ADC"],["ESPSoftwareSerialTX","5v"]],
+                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SCL","voltage":"5v"},{"spec":"SCK","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"},{"spec":"ADC","voltage":""},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
                         "providesLoad": 20
                     }
                 },
@@ -134,7 +134,7 @@
                     "name": "PB3",
                     "interface": {
                         "codename": "3",
-                        "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"],["ADC"]],
+                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"},{"spec":"ADC","voltage":""}],
                         "providesLoad": 20
                     }
                 },
@@ -142,33 +142,33 @@
                     "name": "PB4",
                     "interface": {
                         "codename": "4",
-                        "provides":[["5v","DigitalIn"],["5v","DigitalOut"],["5v","PWM"],["SoftwareSerial","5v"],["ADC"]],
+                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"},{"spec":"ADC","voltage":""}],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["5v"]]],
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}],
                         "requiresLoad": 200
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[["ESPSoftwareSerialTag"]]
+                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[["SRAMLoad"]],
+                        "provides":[{"spec":"SRAMLoad","voltage":""}],
                         "providesLoad": 512
                     }
                 }

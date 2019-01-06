@@ -47,19 +47,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "OUT",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 }
@@ -116,19 +116,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "out",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

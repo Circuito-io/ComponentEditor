@@ -18,33 +18,33 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v"]],
+                        "provides":[{"spec":"","voltage":"5v"}],
                         "redirectLoad": "posIn"
                     }
                 },
                 {
                     "name": "posIn",
                     "interface": {
-                        "requires":[[0,["5v","Barrel"]]],
+                        "requires":[{"cost":0,"spec":"Barrel","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "negIn",
                     "interface": {
-                        "requires":[[0,["GND","Barrel"]]],
+                        "requires":[{"cost":0,"spec":"Barrel","voltage":"GND"}],
                         "unique": true
                     }
                 }

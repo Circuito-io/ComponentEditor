@@ -50,7 +50,7 @@
                 {
                     "name": "RST",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -58,40 +58,40 @@
                     "name": "MISO",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["3.3v","MISO"]],[1,["5v","MISO"]]]
+                        "requires":[{"cost":0,"spec":"MISO","voltage":"3.3v"},{"cost":1,"spec":"MISO","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["3.3v","SCK"]],[1,["5v","SCK"]]]
+                        "requires":[{"cost":0,"spec":"SCK","voltage":"3.3v"},{"cost":1,"spec":"SCK","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["3.3v","SS"]],[1,["5v","SS"]],[2,["5v","DigitalOut"]],[3,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"SS","voltage":"3.3v"},{"cost":1,"spec":"SS","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"5v"},{"cost":3,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["3.3v","MOSI"]],[1,["5v","MOSI"]]]
+                        "requires":[{"cost":0,"spec":"MOSI","voltage":"3.3v"},{"cost":1,"spec":"MOSI","voltage":"5v"}]
                     }
                 }
             ]

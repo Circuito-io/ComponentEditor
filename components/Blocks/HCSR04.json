@@ -70,27 +70,27 @@
                 {
                     "name": "TRIG",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "Echo",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
@@ -122,27 +122,27 @@
                 {
                     "name": "TRIG",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "ECHO",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
@@ -182,27 +182,27 @@
                 {
                     "name": "TRIG",
                     "interface": {
-                        "requires":[[1,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "ECHO",
                     "interface": {
-                        "requires":[[1,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],

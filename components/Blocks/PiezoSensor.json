@@ -74,14 +74,14 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ]

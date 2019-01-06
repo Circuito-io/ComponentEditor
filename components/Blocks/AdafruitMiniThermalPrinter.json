@@ -48,34 +48,34 @@
                 {
                     "name": "GND_COM",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "DIN",
                     "interface": {
-                        "requires":[[0,["5v","SoftwareSerial"]]],
+                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 2000
                     }
                 },
                 {
                     "name": "DOUT",
                     "interface": {
-                        "requires":[[0,["5v","SoftwareSerial"]]],
+                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ]

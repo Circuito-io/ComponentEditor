@@ -53,7 +53,7 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[[0,["GndLoadSwitching","PWM"]]],
+                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":""}],
                         "requiresLoad": 400,
                         "unique": true
                     }
@@ -61,7 +61,7 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[[1,["12v"]]],
+                        "requires":[{"cost":1,"spec":"","voltage":"12v"}],
                         "requiresLoad": 400
                     }
                 }

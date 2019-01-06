@@ -55,79 +55,128 @@ filesToAdd = []
             
 
 # 3. req and prov expantion to object
-for (dirpath, dirnames, filenames) in os.walk(path):
+# for (dirpath, dirnames, filenames) in os.walk(path):
     
-    for filename in filenames:
-        if filename.endswith('.json'): 
+#     for filename in filenames:
+#         if filename.endswith('.json'): 
             
-            print(filename)
+#             print(filename)
 
-            json_data=open(dirpath + '/' + filename).read()
-            data = json.loads(json_data)
+#             json_data=open(dirpath + '/' + filename).read()
+#             data = json.loads(json_data)
             
             
-            if data.get('circuits'):
-                for circuit in data.get('circuits'):
-                    if 'ports' in circuit:
-                        for port in circuit['ports']:
-                            if 'requires' in port['interface']:
-                                newRequires = []
-                                for pr,req in port['interface']['requires']:
+#             if data.get('circuits'):
+#                 for circuit in data.get('circuits'):
+#                     if 'ports' in circuit:
+#                         for port in circuit['ports']:
+#                             if 'requires' in port['interface']:
+#                                 newRequires = []
+#                                 for pr,req in port['interface']['requires']:
                                     
-                                    newReq = {'cost': pr, 'spec': '', 'voltage' :''}
+#                                     newReq = {'cost': pr, 'spec': '', 'voltage' :''}
                                     
-                                    if len(req) > 2:
-                                        if len(set(req).intersection(['DigitalIn', 'Int'])) == 2:
-                                            req.remove('Int')
-                                            req.remove('DigitalIn')
-                                            req.append('DigitalIn-Int')
-                                        else:
-                                            print('3 element req : {}'.format(req))
-                                            import pdb; pdb.set_trace() 
+#                                     if len(req) > 2:
+#                                         if len(set(req).intersection(['DigitalIn', 'Int'])) == 2:
+#                                             req.remove('Int')
+#                                             req.remove('DigitalIn')
+#                                             req.append('DigitalIn-Int')
+#                                         else:
+#                                             print('3 element req : {}'.format(req))
+#                                             import pdb; pdb.set_trace() 
                                     
-                                    for re in req:
-                                        if re in ["12v","9v","7.2v","7.4v","6v","5v","3.7v","3.3v","GND"]:
-                                            newReq['voltage'] = re
-                                        else:
-                                            newReq['spec'] = re
+#                                     count = 0
                                     
-                                    newRequires.append(newReq)
-                                port['interface']['requires'] = newRequires
+#                                     for re in req:
+#                                         if re in ["12v","9v","7.2v","7.4v","6v","5v","3.7v","3.3v","GND"]:
+#                                             newReq['voltage'] = re
+#                                         else:
+#                                             count += 1
+#                                             newReq['spec'] = re
+                                    
+#                                     if count > 1:
+#                                         # import pdb; pdb.set_trace() 
+#                                         newReq['spec'] = '-'.join(req)
+                                        
+                                        
+                                        
+                                        
+#                                     newRequires.append(newReq)
+#                                 port['interface']['requires'] = newRequires
                             
-                            if 'provides' in port['interface']:
+#                             if 'provides' in port['interface']:
                                 
-                                newProvides = []
-                                for prov in port['interface']['provides']:
+#                                 newProvides = []
+#                                 for prov in port['interface']['provides']:
                                     
-                                    newProv = { 'spec': '', 'voltage' :''}
+#                                     newProv = { 'spec': '', 'voltage' :''}
                                     
-                                    if len(prov) > 2:
-                                        if len(set(prov).intersection(['DigitalIn', 'Int'])) == 2:
-                                            prov.remove('Int')
-                                            prov.remove('DigitalIn')
-                                            prov.append('DigitalIn-Int')
-                                        else:
-                                            print('3 element req : {}'.format(req))
-                                            import pdb; pdb.set_trace() 
+#                                     if len(prov) > 2:
+#                                         if len(set(prov).intersection(['DigitalIn', 'Int'])) == 2:
+#                                             prov.remove('Int')
+#                                             prov.remove('DigitalIn')
+#                                             prov.append('DigitalIn-Int')
+#                                         else:
+#                                             print('3 element req : {}'.format(req))
+#                                             import pdb; pdb.set_trace() 
                                     
-                                    for pr in prov:
-                                        if pr in ["12v","9v","7.2v","7.4v","6v","5v","3.7v","3.3v","GND"]:
-                                            newProv['voltage'] = pr
-                                        else:
-                                            newProv['spec'] = pr
+#                                     for pr in prov:
+#                                         if pr in ["12v","9v","7.2v","7.4v","6v","5v","3.7v","3.3v","GND"]:
+#                                             newProv['voltage'] = pr
+#                                         else:
+#                                             newProv['spec'] = pr
                                     
-                                    newProvides.append(newProv)
+#                                     newProvides.append(newProv)
                                     
-                                port['interface']['provides'] = newProvides
-                                
-                                
-                                import pdb; pdb.set_trace() 
+#                                 port['interface']['provides'] = newProvides
                                 
                                 
+#                                 # import pdb; pdb.set_trace() 
+                                
+                                
+#                 f = open(dirpath + '/' + filename, 'w')
+#                 f.write(newOrginizeJson(data))
+#                 f.close()
+            
+            
+
+#     # import pdb; pdb.set_trace() 
+
+
+# 4. change requires to requiredBlock
+# for (dirpath, dirnames, filenames) in os.walk(path):
+    
+#     for filename in filenames:
+#         if filename.endswith('.json'): 
+            
+#             print(filename)
+
+#             json_data=open(dirpath + '/' + filename).read()
+#             data = json.loads(json_data)
+            
+            
+#             if 'circuits' in data:
+#                 for circuit in data.get('circuits'):
+#                     if 'requires' in circuit:
+#                         requiredBlocks = []
+#                         for pr, req in circuit['requires']:
+#                             # remove NONE elements from data, they will be added dynamically
+#                             if 'NONE' in req:
+#                                 continue
+#                             newReq = {}
+#                             newReq['cost'] = pr
+#                             newReq['blocks'] = req
+                        
+#                             requiredBlocks.append(newReq)
+                        
+                        
+#                         circuit['requiredBlocks'] = requiredBlocks
+#                         import pdb; pdb.set_trace() 
                 # f = open(dirpath + '/' + filename, 'w')
                 # f.write(newOrginizeJson(data))
                 # f.close()
             
             
-
-    import pdb; pdb.set_trace() 
+            
+            
+            

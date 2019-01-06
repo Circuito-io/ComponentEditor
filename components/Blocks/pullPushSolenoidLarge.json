@@ -67,7 +67,7 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[[0,["GndLoadSwitching"]]],
+                        "requires":[{"cost":0,"spec":"GndLoadSwitching","voltage":""}],
                         "requiresLoad": 250,
                         "unique": true
                     }
@@ -75,7 +75,7 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[[0,["12v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
                     }
                 }
             ]

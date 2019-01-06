@@ -50,33 +50,33 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "XOUT",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "YOUT",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "ZOUT",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }

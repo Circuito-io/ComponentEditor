@@ -67,7 +67,7 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GndLoadSwitching"]]],
+                        "requires":[{"cost":0,"spec":"GndLoadSwitching","voltage":""}],
                         "requiresLoad": 1000,
                         "unique": true
                     }
@@ -75,7 +75,7 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["12v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
                     }
                 }
             ]

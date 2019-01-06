@@ -19,14 +19,14 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[[0,["DCMA1"]],[5,["DCMB1"]]],
+                        "requires":[{"cost":0,"spec":"DCMA1","voltage":""},{"cost":5,"spec":"DCMB1","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[[0,["DCMA2"]],[5,["DCMB2"]]]
+                        "requires":[{"cost":0,"spec":"DCMA2","voltage":""},{"cost":5,"spec":"DCMB2","voltage":""}]
                     }
                 }
             ]

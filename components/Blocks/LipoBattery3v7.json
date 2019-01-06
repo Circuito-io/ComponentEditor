@@ -46,20 +46,20 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND","Battery"]]
+                        "provides":[{"spec":"Battery","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "provides":[["3.7v","Battery"]],
+                        "provides":[{"spec":"Battery","voltage":"3.7v"}],
                         "providesLoad": 5000
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[["Battery"]]
+                        "provides":[{"spec":"Battery","voltage":""}]
                     }
                 }
             ]

@@ -25,14 +25,14 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","Barrel"]],
+                        "provides":[{"spec":"Barrel","voltage":"5v"}],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","Barrel"]]
+                        "provides":[{"spec":"Barrel","voltage":"GND"}]
                     }
                 }
             ],
@@ -59,14 +59,14 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","Barrel"]],
+                        "provides":[{"spec":"Barrel","voltage":"5v"}],
                         "providesLoad": 5000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","Barrel"]]
+                        "provides":[{"spec":"Barrel","voltage":"GND"}]
                     }
                 }
             ],
