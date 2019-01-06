@@ -20,7 +20,7 @@
         "desc": "<p>An addressable LED strip shaped like a ring with 12 5050 RGBW LED's. It allows you to control each RGB LED individually.</p>",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "LedRing12",
             "coders": [
@@ -42,26 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    5,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "PowerSupply5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[5,["Reg5v"]],[10,["PowerSupply5v"]]],
             "parts": [
                 {
                     "name": "this",

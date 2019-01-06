@@ -24,17 +24,10 @@
         1000,
         "ArduinoMega"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ArduinoLeonardo12vBarrel",
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMicro"
-                    ]
-                ]
-            ],
+            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],

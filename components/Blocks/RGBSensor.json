@@ -20,7 +20,7 @@
         "desc": "<p>A small board that allows you to detect the color in its surrounding.<br><strong>Returned Values</strong>: 0 (no color) to 256 (maximal intensity color) reading for each color: Red, Green, Blue.<br><strong>Requires</strong> : soldering of 5 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/DIY-Nespresso-Capsule-Detector/\">DIY Nespresson Capsule Detector</a>.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "RGBSensor",
             "coders": [
@@ -42,20 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "LogicLevelConverterI2C-5-3.3"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[1,["LogicLevelConverterI2C-5-3.3"]]],
             "parts": [
                 {
                     "name": "this",

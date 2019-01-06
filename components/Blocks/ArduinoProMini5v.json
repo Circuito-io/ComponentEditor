@@ -24,23 +24,10 @@
         1000,
         "ArduinoMicro"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ArduinoProMini5vUSB",
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    50,
-                    [
-                        "Reg3.3v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[50,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini5v"
             ],

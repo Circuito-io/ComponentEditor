@@ -24,39 +24,10 @@
         1000,
         "ArduinoUno"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ATMega328P5v",
-            "requires": [
-                [
-                    0,
-                    [
-                        "FTDI_DATA5v"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "Reg5v",
-                        "FTDI_DATA5v"
-                    ]
-                ],
-                [
-                    20,
-                    [
-                        "Reg5v",
-                        "Reg3.3v",
-                        "FTDI_DATA5v"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "StepUp5v",
-                        "FTDI_DATA5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["FTDI_DATA5v"]],[10,["Reg5v","FTDI_DATA5v"]],[20,["Reg5v","Reg3.3v","FTDI_DATA5v"]],[30,["StepUp5v","FTDI_DATA5v"]]],
             "supportedControllers": [
                 "ATMega328P"
             ],

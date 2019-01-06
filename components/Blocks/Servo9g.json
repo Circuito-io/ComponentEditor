@@ -20,7 +20,7 @@
         "desc": "<p>This is a very simple &amp; small servo, weight only 9g. You can use to rotate an object, or move a robotic arm.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Flying-Manatee/\">Flying Manatee</a>.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "Servo9g",
             "coders": [
@@ -42,20 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "Reg5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[30,["Reg5v"]]],
             "parts": [
                 {
                     "name": "this",

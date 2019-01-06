@@ -24,17 +24,10 @@
         1000,
         "ArduinoUno"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ArduinoMicro9v",
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMicro"
-                    ]
-                ]
-            ],
+            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoMicro"
             ],

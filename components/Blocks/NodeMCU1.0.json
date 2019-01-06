@@ -31,24 +31,10 @@
             "74HC4051"
         ]
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "NodeMCU1.0_ExPower",
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMicro"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "Reg5v",
-                        "USBPowerMicro"
-                    ]
-                ]
-            ],
+            "requires":[[0,["USBPowerMicro"]],[30,["Reg5v","USBPowerMicro"]]],
             "supportedControllers": [
                 "NodeMCU"
             ],

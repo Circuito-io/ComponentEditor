@@ -24,24 +24,10 @@
         1000,
         "ArduinoUno"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "ArduinoNanoEx",
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMini"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "Reg3.3v",
-                        "USBPowerMini"
-                    ]
-                ]
-            ],
+            "requires":[[0,["USBPowerMini"]],[30,["Reg3.3v","USBPowerMini"]]],
             "supportedControllers": [
                 "ArduinoNano"
             ],

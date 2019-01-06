@@ -20,7 +20,7 @@
         "desc": "<p>A full metal geared DC motor. It has a ratio of 56:1 and has a max speed of 107 RPM.</p>\n",
         "visible": "False"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "DCMotorA",
             "coders": [
@@ -41,14 +41,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                ]
-            ],
+            "requires":[[0,["GndHighLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "d1",

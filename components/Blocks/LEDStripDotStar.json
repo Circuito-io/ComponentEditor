@@ -20,7 +20,7 @@
         "desc": "<p>Dot Star (Generic SPI) Adressable LED Strip, fast and fancy, 60 LED-per-meter. since it's APA102 you don't have to keep refreshing the strip as it keeps the PWM values for each led</p>",
         "visible": "true"
     },
-    "circuit": [
+    "circuits": [
         {
             "name": "LEDStripDotStar",
             "coders": [
@@ -42,26 +42,7 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    5,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    2,
-                    [
-                        "PowerSupply5v"
-                    ]
-                ]
-            ],
+            "requires":[[0,["NONE"]],[5,["Reg5v"]],[2,["PowerSupply5v"]]],
             "parts": [
                 {
                     "name": "this",
