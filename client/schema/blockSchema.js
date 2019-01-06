@@ -44,6 +44,7 @@ export const blockuiSchema = {
 
 export const blockSchema = {
   type: "object",
+  required: ["name", "blockId","category"],
   properties: {
     name: {
       type: "string",
@@ -61,6 +62,7 @@ export const blockSchema = {
     app: {
       type: "object",
       title: "Appearance",
+      required: ["appName", "tags", "desc"],
       properties: {
         appName: {
           type: "string",

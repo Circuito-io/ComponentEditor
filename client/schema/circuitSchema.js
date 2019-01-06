@@ -73,6 +73,7 @@ export const circuitsSchema = {
 		title: "",
 		items: {
 			"type": "object",
+			required: ["name", "priority"],
 			"properties": {
 				name: {
 					type: "string"
@@ -88,6 +89,7 @@ export const circuitsSchema = {
 					type: "array",
 					items: {
 						type: "object",
+						required: ["name", "part"],
 						properties: {
 							name: {
 								type: "string"
@@ -143,6 +145,7 @@ export const circuitsSchema = {
 					type: "array",
 					items: {
 						type: "object",
+						required: ["name"],
 						properties: {
 							name: {
 								type: "string",
