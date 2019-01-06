@@ -39,7 +39,7 @@ export class Home extends React.Component {
                 <Image src="https://res.cloudinary.com/circuito/image/upload/v1545820007/Circuito_4_Entities_1.png" responsive />
                 <br/>
                 <br/>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </Well>
             </Col>
           </Row>
