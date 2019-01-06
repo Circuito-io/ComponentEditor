@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import { Preview } from './preview';
-import { Upload } from './upload';
+import { SaveUpload } from './saveupload';
+import { Publish } from './publish';
 
 export class Header extends React.Component {
   render() {
@@ -26,9 +27,9 @@ export class Header extends React.Component {
               <NavItem href="https://talk.circuito.io"  target="_blank">
                 Help
               </NavItem>
-              <NavItem onClick={this.props.onSave}>Save</NavItem>
-              <Upload />
+              <SaveUpload onSave={this.props.onSave}/>
               <Preview />
+              <Publish />
             </Nav>
         </Navbar>
     );

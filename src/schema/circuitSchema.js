@@ -96,7 +96,7 @@ export const circuitsSchema = {
 							}
 						}
 					},
-					blocks: {
+					requires: {
 						type: "array",
 						title: "SupportBlocks [list only support and power blocks]",
 						items: {
@@ -107,7 +107,10 @@ export const circuitsSchema = {
 									default: 0
 								},
 								blocks: {
-									type: "string"
+									type: "array",
+									items: {
+										type: "string"
+									}
 								}
 							}
 						}
@@ -148,60 +151,65 @@ export const circuitsSchema = {
 									type: "string",
 									default: ""
 								},
-								unique: {
-									type: "boolean"
-								},
-								includeInFirmware: {
-									type: "boolean"
-								},
-								type: {
-									type: "string",
-									title: "type [toggles requiresSpecs or provdesSpecs]",
-									enum: ["requires", "provides"]
-								},
-								requiresSpecs: {
-									type: "array",
-									items: {
-										type: "object",
+								interface: {
+									type: "object",
 										properties: {
-											priority: {
-												type: "integer",
-												default: 0
-											},
-											specs: {
-												type: "string",
-												enum: ["VCC", "GND", "SDA", "SCL", "SCK", "MISO", "MOSI"]
-											},
-											voltage: {
-												type: "string",
-												enum: ["3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
-											}
-										}
-									}
-								},
-								providesSpecs: {
-									type: "array",
-									items: {
-										type: "object",
-										properties: {
-											specs: {
-												type: "string",
-												enum: ["VCC", "GND", "SDA", "SCL", "SCK", "MISO", "MOSI"]
-											},
-											voltages: {
+											requires: {
 												type: "array",
 												items: {
-													type: "string",
-													enum: ["3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
-												},
-												uniqueItems: true
+													type: "object",
+													properties: {
+														cost: {
+															type: "integer",
+															default: 0
+														},
+														spec: {
+															type: "string",
+															default: "",
+															enum: ["", "SDA", "SCL", "SCK", "MISO", "MOSI", "ADC", "DigitalIn", "DigitalIn-Int", "DigitalOut", "PWM"]
+														},
+														voltage: {
+															type: "string",
+															enum: ["GND", "3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
+														}
+													}
+												}
+											},
+											provides: {
+												type: "array",
+												items: {
+													type: "object",
+													properties: {
+														spec: {
+															type: "string",
+															enum: ["", "SDA", "SCL", "SCK", "MISO", "MOSI", "ADC", "DigitalIn", "DigitalIn-Int", "DigitalOut", "PWM"]
+														},
+														voltage: {
+															type: "string",
+															enum: ["GND", "3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"]
+														}
+													}
+												}
+											},
+											requiresLoad: {
+												type: "integer"
+											},
+											providesLoad: {
+												type: "integer"
+											},
+											unique: {
+												type: "boolean"
+											},
+											isBus: {
+												type: "boolean"
+											},
+											includeInFirmware: {
+												type: "boolean"
 											}
 										}
-									}
-								},
-								load: {
-									type: "integer"
 								}
+
+
 							},
 							depenedencies: {}
 						}
