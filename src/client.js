@@ -33,7 +33,8 @@ export default class App extends React.Component {
   }
 
   onSave(event) {
-    this.blockSaveFunc();
+    if (this.activeBlock)
+      this.blockSaveFunc();
   }
 
   setSave(savefunc) {
