@@ -40,20 +40,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["12v","Barrel"]],
+                        "provides":[{"spec":"Barrel","voltage":"12v"}],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","Barrel"]]
+                        "provides":[{"spec":"Barrel","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "BARREL_JACK",
                     "interface": {
-                        "requires":[[0,["BARREL_JACK"]]]
+                        "requires":[{"cost":0,"spec":"BARREL_JACK","voltage":""}]
                     }
                 }
             ]

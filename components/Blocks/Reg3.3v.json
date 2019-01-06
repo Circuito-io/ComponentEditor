@@ -45,20 +45,20 @@
                 {
                     "name": "Vout",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 800
                     }
                 },
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[1,["6v"]],[2,["5v"]],[4,["9v"]],[5,["12v"]],[6,["7.4v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"6v"},{"cost":2,"spec":"","voltage":"5v"},{"cost":4,"spec":"","voltage":"9v"},{"cost":5,"spec":"","voltage":"12v"},{"cost":6,"spec":"","voltage":"7.4v"}]
                     }
                 }
             ]

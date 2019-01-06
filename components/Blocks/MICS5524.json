@@ -52,20 +52,20 @@
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 35
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Ao",
                     "interface": {
-                        "requires":[[0,["ADC"]],[1,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""},{"cost":1,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }

@@ -47,20 +47,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","USB"]],
+                        "provides":[{"spec":"USB","voltage":"5v"}],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","USB"]]
+                        "provides":[{"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "requires":[[0,["USB_MICRO"]]]
+                        "requires":[{"cost":0,"spec":"USB_MICRO","voltage":""}]
                     }
                 }
             ]

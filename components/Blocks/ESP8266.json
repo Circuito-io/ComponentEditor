@@ -92,40 +92,40 @@
                 {
                     "name": "LV",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "Rx",
                     "interface": {
-                        "requires":[[0,["RX","5v"]]],
+                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Tx",
                     "interface": {
-                        "requires":[[0,["TX","5v"]]],
+                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "HV",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 1220
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
@@ -150,46 +150,46 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}],
                         "requiresLoad": 200
                     }
                 },
                 {
                     "name": "TXD",
                     "interface": {
-                        "requires":[[1,["ESPSoftwareSerialTX","3.3v"]],[10,["ESPSoftwareSerialTX1","3.3v"]]],
+                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "CH_PD",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "RXD",
                     "interface": {
-                        "requires":[[1,["ESPSoftwareSerialRX","3.3v"]],[10,["ESPSoftwareSerialRX1","3.3v"]]],
+                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "requires":[[0,["ESPSoftwareSerialTag"]]]
+                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 1220
                     }
                 }
@@ -267,46 +267,46 @@
                 {
                     "name": "LV",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "Tx",
                     "interface": {
-                        "requires":[[1,["ESPSoftwareSerialTX","5v"]],[10,["ESPSoftwareSerialTX1","5v"]]],
+                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Rx",
                     "interface": {
-                        "requires":[[1,["ESPSoftwareSerialRX","5v"]],[10,["ESPSoftwareSerialRX1","5v"]]],
+                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "requires":[[0,["ESPSoftwareSerialTag"]]]
+                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 },
                 {
                     "name": "HV",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 1220
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
@@ -331,40 +331,40 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}],
                         "requiresLoad": 200
                     }
                 },
                 {
                     "name": "TXD",
                     "interface": {
-                        "requires":[[0,["TX","3.3v"]]],
+                        "requires":[{"cost":0,"spec":"TX","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "CH_PD",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "RXD",
                     "interface": {
-                        "requires":[[0,["RX","3.3v"]]],
+                        "requires":[{"cost":0,"spec":"RX","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 1220
                     }
                 }

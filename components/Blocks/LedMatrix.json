@@ -52,7 +52,7 @@
                     "name": "VCC",
                     "interface": {
                         "chainTo": "VCC_PT",
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 300
                     }
                 },
@@ -60,14 +60,14 @@
                     "name": "GND",
                     "interface": {
                         "chainTo": "GND_PT",
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "DIN",
                     "interface": {
                         "chainTo": "DIN_CHN",
-                        "requires":[[50,["5v","MISO"]],[1000,["5v","DigitalOut"]]],
+                        "requires":[{"cost":50,"spec":"MISO","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -75,7 +75,7 @@
                     "name": "CLK",
                     "interface": {
                         "chainTo": "CLK_PT",
-                        "requires":[[50,["5v","MOSI"]],[1000,["5v","DigitalOut"]]],
+                        "requires":[{"cost":50,"spec":"MOSI","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -83,7 +83,7 @@
                     "name": "CS",
                     "interface": {
                         "chainTo": "CS_PT",
-                        "requires":[[50,["5v","SS"]],[1000,["5v","DigitalOut"]]],
+                        "requires":[{"cost":50,"spec":"SS","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },

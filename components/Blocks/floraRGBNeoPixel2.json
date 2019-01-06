@@ -47,20 +47,20 @@
                     "name": "DIN",
                     "interface": {
                         "chainTo": "DOUT",
-                        "requires":[[0,["5v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {

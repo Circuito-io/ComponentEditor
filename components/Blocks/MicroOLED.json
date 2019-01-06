@@ -50,54 +50,54 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D1_MOSI",
                     "interface": {
                         "isBus": true,
-                        "requires":[[1,["5v","MOSI"]],[0,["3.3v","MOSI"]]]
+                        "requires":[{"cost":1,"spec":"MOSI","voltage":"5v"},{"cost":0,"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D0_SCK",
                     "interface": {
                         "isBus": true,
-                        "requires":[[1,["5v","SCK"]],[0,["3.3v","SCK"]]]
+                        "requires":[{"cost":1,"spec":"SCK","voltage":"5v"},{"cost":0,"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D2",
                     "interface": {
                         "isBus": true,
-                        "requires":[[1,["5v","MISO"]],[0,["3.3v","MISO"]]]
+                        "requires":[{"cost":1,"spec":"MISO","voltage":"5v"},{"cost":0,"spec":"MISO","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "DC",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[0,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[0,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "CS",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[0,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

@@ -85,28 +85,28 @@
                 {
                     "name": "b",
                     "interface": {
-                        "requires":[[0,["5v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "g",
                     "interface": {
-                        "requires":[[0,["5v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "r",
                     "interface": {
-                        "requires":[[0,["5v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
@@ -173,28 +173,28 @@
                 {
                     "name": "b",
                     "interface": {
-                        "requires":[[0,["3.3v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "g",
                     "interface": {
-                        "requires":[[0,["3.3v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "r",
                     "interface": {
-                        "requires":[[0,["3.3v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

@@ -18,34 +18,34 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["12v"]],
+                        "provides":[{"spec":"","voltage":"12v"}],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "posIn",
                     "interface": {
-                        "requires":[[0,["12v","Barrel"]]],
+                        "requires":[{"cost":0,"spec":"Barrel","voltage":"12v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "negIn",
                     "interface": {
-                        "requires":[[0,["GND","Barrel"]]],
+                        "requires":[{"cost":0,"spec":"Barrel","voltage":"GND"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "BARREL_JACK",
                     "interface": {
-                        "provides":[["BARREL_JACK"]]
+                        "provides":[{"spec":"BARREL_JACK","voltage":""}]
                     }
                 }
             ]
