@@ -42,7 +42,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[5,["Reg5v"]],[10,["PowerSupply5v"]]],
             "parts": [
                 {
                     "name": "this",
@@ -90,6 +89,20 @@
                     "interface": {
                         "chain": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 5,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "PowerSupply5v"
+                    ]
                 }
             ]
         }

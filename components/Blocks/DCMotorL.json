@@ -8,7 +8,6 @@
         {
             "name": "",
             "supportedControllers": [],
-            "requires":[[0,["NONE"]],[7,["L293D1M"]],[10,["L293D2M"]]],
             "parts": [
                 {
                     "name": "this",
@@ -28,6 +27,20 @@
                     "interface": {
                         "requires":[{"cost":0,"spec":"DCMA2","voltage":""},{"cost":5,"spec":"DCMB2","voltage":""}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 7,
+                    "blocks": [
+                        "L293D1M"
+                    ]
+                },
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "L293D2M"
+                    ]
                 }
             ]
         }

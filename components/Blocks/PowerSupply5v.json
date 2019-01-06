@@ -6,7 +6,6 @@
     "circuits": [
         {
             "name": "2A",
-            "requires":[[0,["NONE"]],[1,["BarrelJack5v"]]],
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoLeonardo",
@@ -36,11 +35,18 @@
                     }
                 }
             ],
-            "priority": 0
+            "priority": 0,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "BarrelJack5v"
+                    ]
+                }
+            ]
         },
         {
             "name": "5A",
-            "requires":[[0,["NONE"]],[1,["BarrelJack5v"]]],
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoLeonardo",
@@ -70,7 +76,15 @@
                     }
                 }
             ],
-            "priority": 5
+            "priority": 5,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "BarrelJack5v"
+                    ]
+                }
+            ]
         }
     ]
 }

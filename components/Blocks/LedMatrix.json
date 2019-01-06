@@ -40,7 +40,6 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[1,["LogicLevelConverterSPI-3.3-5"]],[10,["Reg5v"]],[11,["Reg5v","LogicLevelConverterSPI-3.3-5"]]],
             "parts": [
                 {
                     "name": "this",
@@ -116,6 +115,27 @@
                     "interface": {
                         "chain": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "LogicLevelConverterSPI-3.3-5"
+                    ]
+                },
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 11,
+                    "blocks": [
+                        "Reg5v",
+                        "LogicLevelConverterSPI-3.3-5"
+                    ]
                 }
             ]
         }

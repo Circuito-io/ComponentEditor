@@ -34,7 +34,6 @@
     "circuits": [
         {
             "name": "USB",
-            "requires":[[0,["NONE"]],[1,["PowerSupply12vExt"]]],
             "supportedControllers": [
                 "RPI3B"
             ],
@@ -347,11 +346,18 @@
                     }
                 }
             ],
-            "priority": 0
+            "priority": 0,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "PowerSupply12vExt"
+                    ]
+                }
+            ]
         },
         {
             "name": "Ext",
-            "requires":[[0,["Reg5v"]],[1,["StepUp5v"]]],
             "supportedControllers": [
                 "RPI3B"
             ],
@@ -650,7 +656,21 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "StepUp5v"
+                    ]
+                }
+            ]
         }
     ]
 }

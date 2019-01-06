@@ -40,7 +40,6 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[10,["LogicLevelConverterI2C-5-3.3"]]],
             "parts": [
                 {
                     "name": "this",
@@ -86,6 +85,14 @@
                         "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
                         "unique": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "LogicLevelConverterI2C-5-3.3"
+                    ]
                 }
             ]
         }

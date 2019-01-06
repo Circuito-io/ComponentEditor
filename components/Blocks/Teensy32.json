@@ -30,7 +30,6 @@
             "supportedControllers": [
                 "Teensy32"
             ],
-            "requires":[[0,["USBPowerMicro"]]],
             "parts": [
                 {
                     "name": "this",
@@ -309,11 +308,18 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         },
         {
             "name": "6v",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "Teensy32"
             ],
@@ -595,11 +601,18 @@
                     }
                 }
             ],
-            "priority": 2
+            "priority": 2,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         },
         {
             "name": "Lipo3v7",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "Teensy32"
             ],
@@ -894,7 +907,15 @@
                     }
                 }
             ],
-            "priority": 3
+            "priority": 3,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         }
     ]
 }

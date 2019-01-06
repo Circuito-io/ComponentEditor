@@ -34,7 +34,6 @@
     "circuits": [
         {
             "name": "_ExPower",
-            "requires":[[0,["USBPowerMicro"]],[30,["Reg5v","USBPowerMicro"]]],
             "supportedControllers": [
                 "NodeMCU"
             ],
@@ -204,6 +203,21 @@
             "priority": 1,
             "coders": [
                 "NodeMCU1.0"
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg5v",
+                        "USBPowerMicro"
+                    ]
+                }
             ]
         },
         {

@@ -42,7 +42,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires":[[0,["GndLoadPWMSwitching"]]],
             "parts": [
                 {
                     "name": "this",
@@ -79,6 +78,14 @@
                         "requires":[{"cost":1,"spec":"","voltage":"3.3v"},{"cost":2,"spec":"","voltage":"5v"}],
                         "requiresLoad": 85
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "GndLoadPWMSwitching"
+                    ]
                 }
             ]
         }

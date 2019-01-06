@@ -27,7 +27,6 @@
     "circuits": [
         {
             "name": "USB",
-            "requires":[[0,["NONE"]],[20,["StepUp5v"]],[30,["Reg5v"]],[40,["Reg3.3v"]],[70,["Reg5v","Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"
             ],
@@ -228,11 +227,37 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "StepUp5v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                },
+                {
+                    "cost": 70,
+                    "blocks": [
+                        "Reg5v",
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         },
         {
             "name": "EXT",
-            "requires":[[0,["USBPowerMiniWithFTDI3v3"]],[20,["StepUp5v","USBPowerMiniWithFTDI3v3"]],[30,["Reg5v","USBPowerMiniWithFTDI3v3"]],[40,["Reg3.3v","USBPowerMiniWithFTDI3v3"]],[50,["Reg5v","Reg3.3v","USBPowerMiniWithFTDI3v3"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"
             ],
@@ -440,7 +465,44 @@
                     }
                 }
             ],
-            "priority": 2
+            "priority": 2,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMiniWithFTDI3v3"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "StepUp5v",
+                        "USBPowerMiniWithFTDI3v3"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg5v",
+                        "USBPowerMiniWithFTDI3v3"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "Reg3.3v",
+                        "USBPowerMiniWithFTDI3v3"
+                    ]
+                },
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "Reg5v",
+                        "Reg3.3v",
+                        "USBPowerMiniWithFTDI3v3"
+                    ]
+                }
+            ]
         }
     ]
 }

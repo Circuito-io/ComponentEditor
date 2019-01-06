@@ -27,7 +27,6 @@
     "circuits": [
         {
             "name": "BarrelJack12v",
-            "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
             ],
@@ -248,11 +247,18 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "USBPowerB"
+                    ]
+                }
+            ]
         },
         {
             "name": "12v",
-            "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
             ],
@@ -454,11 +460,18 @@
                     }
                 }
             ],
-            "priority": 2
+            "priority": 2,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "USBPowerB"
+                    ]
+                }
+            ]
         },
         {
             "name": "9v",
-            "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
             ],
@@ -660,11 +673,18 @@
                     }
                 }
             ],
-            "priority": 3
+            "priority": 3,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "USBPowerB"
+                    ]
+                }
+            ]
         },
         {
             "name": "6v",
-            "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
             ],
@@ -866,11 +886,18 @@
                     }
                 }
             ],
-            "priority": 4
+            "priority": 4,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "USBPowerB"
+                    ]
+                }
+            ]
         },
         {
             "name": "Lipo7v4",
-            "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
             ],
@@ -1072,7 +1099,15 @@
                     }
                 }
             ],
-            "priority": 6
+            "priority": 6,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "USBPowerB"
+                    ]
+                }
+            ]
         },
         {
             "name": "USB",
