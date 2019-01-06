@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ArduinoUnoBarrelJack12v",
+            "name": "BarrelJack12v",
             "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
@@ -251,7 +251,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoUno12v",
+            "name": "12v",
             "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
@@ -457,7 +457,7 @@
             "priority": 2
         },
         {
-            "name": "ArduinoUno9v",
+            "name": "9v",
             "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
@@ -663,7 +663,7 @@
             "priority": 3
         },
         {
-            "name": "ArduinoUno6v",
+            "name": "6v",
             "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
@@ -869,7 +869,7 @@
             "priority": 4
         },
         {
-            "name": "ArduinoUnoLipo7v4",
+            "name": "Lipo7v4",
             "requires":[[1,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoUno"
@@ -1075,7 +1075,7 @@
             "priority": 6
         },
         {
-            "name": "ArduinoUnoUSB",
+            "name": "USB",
             "supportedControllers": [
                 "ArduinoUno"
             ],

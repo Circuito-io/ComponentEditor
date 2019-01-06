@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ATMega328P5v",
+            "name": "5v",
             "requires":[[0,["FTDI_DATA5v"]],[10,["Reg5v","FTDI_DATA5v"]],[20,["Reg5v","Reg3.3v","FTDI_DATA5v"]],[30,["StepUp5v","FTDI_DATA5v"]]],
             "supportedControllers": [
                 "ATMega328P"
@@ -297,7 +297,7 @@
             "priority": 1
         },
         {
-            "name": "ATMega328P3v3",
+            "name": "3v3",
             "requires":[[0,["FTDI_DATA3v3"]],[10,["Reg3.3v","FTDI_DATA3v3"]],[20,["Reg3.3v","Reg5v","FTDI_DATA3v3"]],[30,["StepUp5v","FTDI_DATA3v3"]]],
             "supportedControllers": [
                 "ATMega328P"

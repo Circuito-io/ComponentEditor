@@ -22,7 +22,7 @@
     },
     "circuits": [
         {
-            "name": "RotaryEncoderInt",
+            "name": "Int",
             "coders": [
                 "RotaryEncoderInt"
             ],
@@ -84,7 +84,7 @@
             "priority": 0
         },
         {
-            "name": "RotaryEncoderDigital",
+            "name": "Digital",
             "coders": [
                 "RotaryEncoderDigital"
             ],
@@ -146,7 +146,7 @@
             "priority": 100
         },
         {
-            "name": "RotaryEncoderInt3v3",
+            "name": "Int3v3",
             "supportedControllers": [
                 "RPI3B",
                 "ATTiny85",

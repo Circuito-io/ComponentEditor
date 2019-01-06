@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ArduinoLeonardo12vBarrel",
+            "name": "12vBarrel",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
@@ -295,7 +295,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoLeonardo6v",
+            "name": "6v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
@@ -545,7 +545,7 @@
             "priority": 2
         },
         {
-            "name": "ArduinoLeonardoUSB",
+            "name": "USB",
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],
@@ -800,7 +800,7 @@
             "priority": 3
         },
         {
-            "name": "ArduinoLeonardo9v",
+            "name": "9v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
@@ -1050,7 +1050,7 @@
             "priority": 4
         },
         {
-            "name": "ArduinoLeonardoLipo7v4",
+            "name": "Lipo7v4",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
@@ -1300,7 +1300,7 @@
             "priority": 5
         },
         {
-            "name": "ArduinoLeonardo12v",
+            "name": "12v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"

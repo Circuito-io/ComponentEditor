@@ -33,7 +33,7 @@
     ],
     "circuits": [
         {
-            "name": "RPI3BUSB",
+            "name": "USB",
             "requires":[[0,["NONE"]],[1,["PowerSupply12vExt"]]],
             "supportedControllers": [
                 "RPI3B"
@@ -350,7 +350,7 @@
             "priority": 0
         },
         {
-            "name": "RPI3BExt",
+            "name": "Ext",
             "requires":[[0,["Reg5v"]],[1,["StepUp5v"]]],
             "supportedControllers": [
                 "RPI3B"
