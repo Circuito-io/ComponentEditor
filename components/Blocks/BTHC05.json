@@ -69,14 +69,14 @@
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[[0,["RX","5v"]]],
+                        "requires":[[0,["RX","5v"]],[1,["RX","3.3v"]]],
                         "unique": true
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[[0,["TX","5v"]]],
+                        "requires":[[0,["TX","5v"]],[1,["TX","3.3v"]]],
                         "unique": true
                     }
                 }
