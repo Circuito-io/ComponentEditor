@@ -17,7 +17,6 @@ export class Block extends React.Component {
     this.currentData = {};
 
     this.componentDidMount = this.componentDidMount.bind(this);
-    this.updateCombineData = this.updateCombineData.bind(this);
     this.save = this.save.bind(this);
 
     this.props.setSave(this.save);
@@ -41,17 +40,6 @@ export class Block extends React.Component {
           this.setState({ formSrcData: blockData });
         })
     }
-  }
-
-  updateCombineData(data) {
-    // omit fileds which are not represented in form, like circuits field from the info form
-    this.modified = true;
-
-    Object.keys(data.formData).map(key => {
-      if (key in data.schema.properties)
-        this.currentData[key] = data.formData[key];
-    });
-    this.props.updateData(this.currentData);
   }
 
   save() {
@@ -80,7 +68,10 @@ export class Block extends React.Component {
                 schema={blockSchema}
                 uiSchema={blockuiSchema}
                 formData={this.state.formSrcData}
-                onChange={data => this.updateCombineData(data)}
+                onChange={data => {
+                  this.modified=true; 
+                  this.props.updateData(data);
+                }}
               >
                 <Button type="submit" style={{ display: "none" }}>
                   Submit
@@ -93,16 +84,6 @@ export class Block extends React.Component {
               <Panel.Title toggle>Circuits</Panel.Title>
             </Panel.Heading>
             <Panel.Body collapsible>
-              <EditorForm
-                schema={circuitsSchema}
-                uiSchema={circuitsuiSchema}
-                formData={this.state.formSrcData}
-                onChange={data => this.updateCombineData(data)}
-              >
-              <Button type="submit" style={{ display: "none" }}>
-                  Submit
-                </Button>
-              </EditorForm>
             </Panel.Body>
           </Panel>
         </PanelGroup>
