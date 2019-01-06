@@ -12,7 +12,7 @@
     ],
     "circuits": [
         {
-            "name": "ATTiny853v3",
+            "name": "3v3",
             "requires":[[10,["Reg3.3v"]],[20,["Reg3.3v","Reg5v"]],[30,["StepUp5v"]]],
             "supportedControllers": [
                 "ATTiny85"
@@ -94,7 +94,7 @@
             "priority": 1
         },
         {
-            "name": "ATTiny855v",
+            "name": "5v",
             "requires":[[10,["Reg5v"]],[20,["Reg5v","Reg3.3v"]],[30,["StepUp5v"]]],
             "supportedControllers": [
                 "ATTiny85"

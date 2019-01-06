@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ArduinoNanoEx",
+            "name": "Ex",
             "requires":[[0,["USBPowerMini"]],[30,["Reg3.3v","USBPowerMini"]]],
             "supportedControllers": [
                 "ArduinoNano"
@@ -251,7 +251,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoNanoUSB",
+            "name": "USB",
             "supportedControllers": [
                 "ArduinoNano"
             ],

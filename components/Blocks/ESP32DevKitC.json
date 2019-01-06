@@ -23,7 +23,7 @@
     },
     "circuits": [
         {
-            "name": "ESP32DevKitCUSB",
+            "name": "USB",
             "supportedControllers": [
                 "ESP32DevKitC"
             ],
@@ -318,7 +318,7 @@
             "priority": 1
         },
         {
-            "name": "ESP32DevKitCEXT",
+            "name": "EXT",
             "requires":[[0,["USBPowerMicro"]],[20,["Reg5v","USBPowerMicro"]],[30,["StepUp5v","USBPowerMicro"]]],
             "supportedControllers": [
                 "ESP32DevKitC"

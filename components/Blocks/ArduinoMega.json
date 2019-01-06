@@ -22,7 +22,7 @@
     },
     "circuits": [
         {
-            "name": "ArduinoMegaBarrelJack12v",
+            "name": "BarrelJack12v",
             "requires":[[0,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoMega"
@@ -638,7 +638,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoMega12v",
+            "name": "12v",
             "requires":[[0,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoMega"
@@ -1235,7 +1235,7 @@
             "priority": 2
         },
         {
-            "name": "ArduinoMega9v",
+            "name": "9v",
             "requires":[[0,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoMega"
@@ -1832,7 +1832,7 @@
             "priority": 3
         },
         {
-            "name": "ArduinoMega6v",
+            "name": "6v",
             "requires":[[0,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoMega"
@@ -2429,7 +2429,7 @@
             "priority": 4
         },
         {
-            "name": "ArduinoMegaLipo7v4",
+            "name": "Lipo7v4",
             "requires":[[0,["USBPowerB"]]],
             "supportedControllers": [
                 "ArduinoMega"
@@ -3026,7 +3026,7 @@
             "priority": 5
         },
         {
-            "name": "ArduinoMegaUSB",
+            "name": "USB",
             "supportedControllers": [
                 "ArduinoMega"
             ],

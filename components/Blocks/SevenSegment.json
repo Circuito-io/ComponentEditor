@@ -22,7 +22,7 @@
     },
     "circuits": [
         {
-            "name": "SevenSegmentSWSer",
+            "name": "SWSer",
             "coders": [
                 "SevenSegment"
             ],
@@ -77,7 +77,7 @@
             "priority": 0
         },
         {
-            "name": "SevenSegmentI2C",
+            "name": "I2C",
             "supportedControllers": [
                 "ESP32DevKitC",
                 "RPI3B",

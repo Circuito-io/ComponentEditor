@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ArduinoProMini3v3USB",
+            "name": "USB",
             "requires":[[0,["NONE"]],[20,["StepUp5v"]],[30,["Reg5v"]],[40,["Reg3.3v"]],[70,["Reg5v","Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"
@@ -231,7 +231,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoProMini3v3EXT",
+            "name": "EXT",
             "requires":[[0,["USBPowerMiniWithFTDI3v3"]],[20,["StepUp5v","USBPowerMiniWithFTDI3v3"]],[30,["Reg5v","USBPowerMiniWithFTDI3v3"]],[40,["Reg3.3v","USBPowerMiniWithFTDI3v3"]],[50,["Reg5v","Reg3.3v","USBPowerMiniWithFTDI3v3"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"

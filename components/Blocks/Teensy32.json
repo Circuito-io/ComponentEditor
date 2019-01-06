@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "Teensy32USB",
+            "name": "USB",
             "supportedControllers": [
                 "Teensy32"
             ],
@@ -312,7 +312,7 @@
             "priority": 1
         },
         {
-            "name": "Teensy326v",
+            "name": "6v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "Teensy32"
@@ -598,7 +598,7 @@
             "priority": 2
         },
         {
-            "name": "Teensy32Lipo3v7",
+            "name": "Lipo3v7",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "Teensy32"

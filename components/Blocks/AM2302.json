@@ -23,7 +23,7 @@
     "requires":[[0,["AM2302-5v"]],[1,["AM2302-3v3"]]],
     "circuits": [
         {
-            "name": "AM2302-5v",
+            "name": "-5v",
             "coders": [
                 "AM2302"
             ],
@@ -67,7 +67,7 @@
             "priority": 0
         },
         {
-            "name": "AM2302-3v3",
+            "name": "-3v3",
             "coders": [
                 "AM2302"
             ],

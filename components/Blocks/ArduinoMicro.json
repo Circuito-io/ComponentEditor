@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ArduinoMicro9v",
+            "name": "9v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoMicro"
@@ -283,7 +283,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoMicro6v",
+            "name": "6v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoMicro"
@@ -540,7 +540,7 @@
             "priority": 2
         },
         {
-            "name": "ArduinoMicroUSB",
+            "name": "USB",
             "supportedControllers": [
                 "ArduinoMicro"
             ],
@@ -802,7 +802,7 @@
             "priority": 3
         },
         {
-            "name": "ArduinoMicro12v",
+            "name": "12v",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoMicro"
@@ -1059,7 +1059,7 @@
             "priority": 4
         },
         {
-            "name": "ArduinoMicroLipo7v4",
+            "name": "Lipo7v4",
             "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoMicro"

@@ -26,7 +26,7 @@
     ],
     "circuits": [
         {
-            "name": "ArduinoProMini5vUSB",
+            "name": "USB",
             "requires":[[0,["NONE"]],[50,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini5v"
@@ -231,7 +231,7 @@
             "priority": 1
         },
         {
-            "name": "ArduinoProMini5vEXT",
+            "name": "EXT",
             "requires":[[0,["USBPowerMiniWithFTDI5v"]],[50,["Reg3.3v","USBPowerMiniWithFTDI5v"]]],
             "supportedControllers": [
                 "ArduinoProMini5v"
