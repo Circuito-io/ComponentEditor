@@ -319,7 +319,6 @@
         },
         {
             "name": "EXT",
-            "requires":[[0,["USBPowerMicro"]],[20,["Reg5v","USBPowerMicro"]],[30,["StepUp5v","USBPowerMicro"]]],
             "supportedControllers": [
                 "ESP32DevKitC"
             ],
@@ -604,7 +603,29 @@
                     }
                 }
             ],
-            "priority": 3
+            "priority": 3,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "Reg5v",
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "StepUp5v",
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         }
     ]
 }

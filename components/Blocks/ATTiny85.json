@@ -13,7 +13,6 @@
     "circuits": [
         {
             "name": "3v3",
-            "requires":[[10,["Reg3.3v"]],[20,["Reg3.3v","Reg5v"]],[30,["StepUp5v"]]],
             "supportedControllers": [
                 "ATTiny85"
             ],
@@ -91,11 +90,31 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "Reg3.3v",
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "StepUp5v"
+                    ]
+                }
+            ]
         },
         {
             "name": "5v",
-            "requires":[[10,["Reg5v"]],[20,["Reg5v","Reg3.3v"]],[30,["StepUp5v"]]],
             "supportedControllers": [
                 "ATTiny85"
             ],
@@ -173,7 +192,28 @@
                     }
                 }
             ],
-            "priority": 3
+            "priority": 3,
+            "requiredBlocks": [
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "Reg5v",
+                        "Reg3.3v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "StepUp5v"
+                    ]
+                }
+            ]
         }
     ]
 }

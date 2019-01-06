@@ -38,7 +38,6 @@
                 "NodeMCU",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[1,["BarrelJack12v"]]],
             "parts": [
                 {
                     "name": "this",
@@ -64,6 +63,14 @@
                     "interface": {
                         "requires":[{"cost":0,"spec":"BARREL_JACK","voltage":""}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "BarrelJack12v"
+                    ]
                 }
             ]
         }

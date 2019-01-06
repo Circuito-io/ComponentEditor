@@ -27,7 +27,6 @@
     "circuits": [
         {
             "name": "Ex",
-            "requires":[[0,["USBPowerMini"]],[30,["Reg3.3v","USBPowerMini"]]],
             "supportedControllers": [
                 "ArduinoNano"
             ],
@@ -248,7 +247,22 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMini"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg3.3v",
+                        "USBPowerMini"
+                    ]
+                }
+            ]
         },
         {
             "name": "USB",

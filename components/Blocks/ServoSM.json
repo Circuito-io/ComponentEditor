@@ -42,7 +42,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[30,["Reg5v"]]],
             "parts": [
                 {
                     "name": "this",
@@ -69,6 +68,14 @@
                         "requires":[{"cost":0,"spec":"","voltage":"5v"},{"cost":1,"spec":"","voltage":"6v"}],
                         "requiresLoad": 500
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg5v"
+                    ]
                 }
             ]
         }

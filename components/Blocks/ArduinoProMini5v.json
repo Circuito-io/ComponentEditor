@@ -27,7 +27,6 @@
     "circuits": [
         {
             "name": "USB",
-            "requires":[[0,["NONE"]],[50,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini5v"
             ],
@@ -228,11 +227,18 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         },
         {
             "name": "EXT",
-            "requires":[[0,["USBPowerMiniWithFTDI5v"]],[50,["Reg3.3v","USBPowerMiniWithFTDI5v"]]],
             "supportedControllers": [
                 "ArduinoProMini5v"
             ],
@@ -440,7 +446,22 @@
                     }
                 }
             ],
-            "priority": 2
+            "priority": 2,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMiniWithFTDI5v"
+                    ]
+                },
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "Reg3.3v",
+                        "USBPowerMiniWithFTDI5v"
+                    ]
+                }
+            ]
         }
     ]
 }

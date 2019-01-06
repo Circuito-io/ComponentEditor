@@ -42,7 +42,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[1,["LogicLevelConverterI2C-5-3.3"]]],
             "parts": [
                 {
                     "name": "this",
@@ -82,6 +81,14 @@
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "LogicLevelConverterI2C-5-3.3"
+                    ]
                 }
             ]
         }

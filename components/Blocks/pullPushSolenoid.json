@@ -42,7 +42,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[1,["Reg5v"]]],
             "parts": [
                 {
                     "name": "this",
@@ -113,6 +112,14 @@
                         "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "Reg5v"
+                    ]
                 }
             ]
         }

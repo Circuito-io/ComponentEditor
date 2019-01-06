@@ -42,7 +42,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires":[[0,["GndHighLoadSwitching"]]],
             "parts": [
                 {
                     "name": "this",
@@ -77,6 +76,14 @@
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"12v"}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "GndHighLoadSwitching"
+                    ]
                 }
             ]
         }

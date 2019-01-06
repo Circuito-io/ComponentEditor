@@ -26,7 +26,6 @@
             "coders": [
                 "ArduinoGemma"
             ],
-            "requires":[[0,["NONE"]],[20,["StepUp5v"]],[30,["Reg5v"]],[40,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoGemma"
             ],
@@ -108,14 +107,33 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "StepUp5v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         },
         {
             "name": "Barrel12v",
             "coders": [
                 "ArduinoGemma"
             ],
-            "requires":[[0,["USBPowerMicro"]],[20,["USBPowerMicro","StepUp5v"]],[30,["USBPowerMicro","Reg5v"]],[40,["USBPowerMicro","Reg3.3v"]],[50,["USBPowerMicro","Reg3.3v","Reg5v"]]],
             "supportedControllers": [
                 "ArduinoGemma"
             ],
@@ -185,14 +203,50 @@
                     }
                 }
             ],
-            "priority": 2
+            "priority": 2,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "StepUp5v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg3.3v"
+                    ]
+                },
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg3.3v",
+                        "Reg5v"
+                    ]
+                }
+            ]
         },
         {
             "name": "BatteryEx",
             "coders": [
                 "ArduinoGemma"
             ],
-            "requires":[[0,["USBPowerMicro"]],[20,["USBPowerMicro","StepUp5v"]],[30,["USBPowerMicro","Reg5v"]],[40,["USBPowerMicro","Reg3.3v"]],[50,["USBPowerMicro","Reg3.3v","Reg5v"]]],
             "supportedControllers": [
                 "ArduinoGemma"
             ],
@@ -262,14 +316,50 @@
                     }
                 }
             ],
-            "priority": 3
+            "priority": 3,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "StepUp5v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg3.3v"
+                    ]
+                },
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg3.3v",
+                        "Reg5v"
+                    ]
+                }
+            ]
         },
         {
             "name": "Lipo3v7",
             "coders": [
                 "ArduinoGemma"
             ],
-            "requires":[[0,["USBPowerMicro"]],[20,["USBPowerMicro","StepUp5v"]],[30,["USBPowerMicro","Reg5v"]],[40,["USBPowerMicro","Reg3.3v"]],[50,["USBPowerMicro","Reg3.3v","Reg5v"]]],
             "supportedControllers": [
                 "ArduinoGemma"
             ],
@@ -351,7 +441,44 @@
                     }
                 }
             ],
-            "priority": 4
+            "priority": 4,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "StepUp5v"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg3.3v"
+                    ]
+                },
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg3.3v",
+                        "Reg5v"
+                    ]
+                }
+            ]
         }
     ]
 }

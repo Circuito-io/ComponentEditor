@@ -27,7 +27,6 @@
     "circuits": [
         {
             "name": "12vBarrel",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],
@@ -292,11 +291,18 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         },
         {
             "name": "6v",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],
@@ -542,7 +548,15 @@
                     }
                 }
             ],
-            "priority": 2
+            "priority": 2,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         },
         {
             "name": "USB",
@@ -801,7 +815,6 @@
         },
         {
             "name": "9v",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],
@@ -1047,11 +1060,18 @@
                     }
                 }
             ],
-            "priority": 4
+            "priority": 4,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         },
         {
             "name": "Lipo7v4",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],
@@ -1297,11 +1317,18 @@
                     }
                 }
             ],
-            "priority": 5
+            "priority": 5,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         },
         {
             "name": "12v",
-            "requires":[[0,["USBPowerMicro"]]],
             "supportedControllers": [
                 "ArduinoLeonardo"
             ],
@@ -1547,7 +1574,15 @@
                     }
                 }
             ],
-            "priority": 6
+            "priority": 6,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                }
+            ]
         }
     ]
 }

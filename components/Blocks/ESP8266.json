@@ -26,7 +26,6 @@
             "coders": [
                 "ESP8266_HardwareSerial"
             ],
-            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoLeonardo",
                 "ArduinoMega",
@@ -129,14 +128,21 @@
                     }
                 }
             ],
-            "priority": 0
+            "priority": 0,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         },
         {
             "name": "_SoftwareSerial3v3",
             "coders": [
                 "ESP8266_SoftwareSerial3v3"
             ],
-            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"
             ],
@@ -194,14 +200,21 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         },
         {
             "name": "_SoftwareSerial5v",
             "coders": [
                 "ESP8266_SoftwareSerial5v"
             ],
-            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoLeonardo",
                 "ArduinoMega",
@@ -310,14 +323,21 @@
                     }
                 }
             ],
-            "priority": 100
+            "priority": 100,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         },
         {
             "name": "_HardwareSerial3v3",
             "coders": [
                 "ESP8266_HardwareSerial"
             ],
-            "requires":[[0,["NONE"]],[0,["Reg3.3v"]]],
             "supportedControllers": [
                 "ArduinoProMini3v3"
             ],
@@ -369,7 +389,15 @@
                     }
                 }
             ],
-            "priority": 101
+            "priority": 101,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "Reg3.3v"
+                    ]
+                }
+            ]
         }
     ]
 }

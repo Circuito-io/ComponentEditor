@@ -36,7 +36,6 @@
                 "ArduinoUno",
                 "Teensy32"
             ],
-            "requires":[[0,["NONE"]],[5,["Reg5v"]],[10,["PowerSupply5v"]]],
             "parts": [
                 {
                     "name": "this",
@@ -77,6 +76,20 @@
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 5,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "PowerSupply5v"
+                    ]
                 }
             ]
         }

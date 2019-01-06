@@ -171,7 +171,8 @@ for (dirpath, dirnames, filenames) in os.walk(path):
                         
                         
                         circuit['requiredBlocks'] = requiredBlocks
-                        import pdb; pdb.set_trace() 
+                        del circuit['requires']
+                        # import pdb; pdb.set_trace() 
                         
                 f = open(dirpath + '/' + filename, 'w')
                 f.write(newOrginizeJson(data))
