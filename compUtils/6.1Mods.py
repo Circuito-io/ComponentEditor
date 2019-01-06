@@ -144,37 +144,38 @@ filesToAdd = []
 
 
 # 4. change requires to requiredBlock
-# for (dirpath, dirnames, filenames) in os.walk(path):
+for (dirpath, dirnames, filenames) in os.walk(path):
     
-#     for filename in filenames:
-#         if filename.endswith('.json'): 
+    for filename in filenames:
+        if filename.endswith('.json'): 
             
-#             print(filename)
+            print(filename)
 
-#             json_data=open(dirpath + '/' + filename).read()
-#             data = json.loads(json_data)
+            json_data=open(dirpath + '/' + filename).read()
+            data = json.loads(json_data)
             
             
-#             if 'circuits' in data:
-#                 for circuit in data.get('circuits'):
-#                     if 'requires' in circuit:
-#                         requiredBlocks = []
-#                         for pr, req in circuit['requires']:
-#                             # remove NONE elements from data, they will be added dynamically
-#                             if 'NONE' in req:
-#                                 continue
-#                             newReq = {}
-#                             newReq['cost'] = pr
-#                             newReq['blocks'] = req
+            if 'circuits' in data:
+                for circuit in data.get('circuits'):
+                    if 'requires' in circuit:
+                        requiredBlocks = []
+                        for pr, req in circuit['requires']:
+                            # remove NONE elements from data, they will be added dynamically
+                            if 'NONE' in req:
+                                continue
+                            newReq = {}
+                            newReq['cost'] = pr
+                            newReq['blocks'] = req
                         
-#                             requiredBlocks.append(newReq)
+                            requiredBlocks.append(newReq)
                         
                         
-#                         circuit['requiredBlocks'] = requiredBlocks
-#                         import pdb; pdb.set_trace() 
-                # f = open(dirpath + '/' + filename, 'w')
-                # f.write(newOrginizeJson(data))
-                # f.close()
+                        circuit['requiredBlocks'] = requiredBlocks
+                        import pdb; pdb.set_trace() 
+                        
+                f = open(dirpath + '/' + filename, 'w')
+                f.write(newOrginizeJson(data))
+                f.close()
             
             
             
