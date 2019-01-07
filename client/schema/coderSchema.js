@@ -1,4 +1,7 @@
-import { supportedControllersUISchema } from "../form/commonfields"
+import {
+  supportedControllersSchema,
+  supportedControllersUISchema
+} from "../form/commonfields";
 
 export const coderuiSchema = {
   desc: {
@@ -43,10 +46,7 @@ export const coderSchema = {
       type: "string",
       title: "Name"
     },
-    supportedControllers: {
-      type: "string",
-      title: "Supported controllers"
-    },
+    supportedControllers: supportedControllersSchema,
     files: {
       type: "array",
       title: "Library files",
@@ -59,7 +59,7 @@ export const coderSchema = {
       title: "Upload library files",
       items: {
         type: "string",
-        format: "data-url",
+        format: "data-url"
       }
     },
     license: {

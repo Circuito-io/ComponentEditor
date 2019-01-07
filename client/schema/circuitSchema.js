@@ -1,4 +1,5 @@
 import {
+	supportedControllersSchema,
 	supportedControllersUISchema
 } from "../form/commonfields"
 import {
@@ -76,15 +77,15 @@ export const circuitsSchema = {
 			required: ["name", "priority"],
 			"properties": {
 				name: {
-					type: "string"
+					type: "string",
+					title: "Name"
 				},
 				priority: {
 					type: "integer",
+					title: "Priority",
 					default: 0
 				},
-				supportedControllers: {
-					type: "string"
-				},
+				supportedControllers: supportedControllersSchema,
 				parts: {
 					type: "array",
 					items: {
