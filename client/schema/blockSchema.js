@@ -1,7 +1,6 @@
-import {
-  circuitsSchema,
-  circuitsuiSchema
-} from "./circuitSchema";
+import { circuitsSchema, circuitsuiSchema } from "./circuitSchema";
+
+var tagsEnum =  ["Controller", "Power supply", "Support"];
 
 export const blockuiSchema = {
   name: {
@@ -11,7 +10,7 @@ export const blockuiSchema = {
     tags: {
       "ui:field": "typeahead",
       typeahead: {
-        options: ["Controller", "Power supply", "Support"],
+        options: tagsEnum,
         minLength: 0,
         multiple: true
       }
@@ -44,7 +43,7 @@ export const blockuiSchema = {
 
 export const blockSchema = {
   type: "object",
-  required: ["name", "blockId","category"],
+  required: ["name", "blockId", "category"],
   properties: {
     name: {
       type: "string",
@@ -66,18 +65,28 @@ export const blockSchema = {
       properties: {
         appName: {
           type: "string",
+          title: "Application name"
         },
         numericName: {
           type: "string",
+          title: "Numeric name"
         },
         shortName: {
           type: "string",
+          title: "Short name"
         },
         image: {
-          type: "string"
+          type: "string",
+          title: "Image"
         },
         tags: {
-          type: "string"
+          title: "Tags",
+          type: "array",
+          items: {
+            type: "string",
+            enum: tagsEnum
+          },
+          uniqueItems: true
         },
         visible: {
           type: "boolean",
@@ -87,26 +96,26 @@ export const blockSchema = {
           type: "object",
           title: "Indicators",
           properties: {
-            "verified": {
+            verified: {
               type: "boolean",
               default: false
             },
-            "code": {
+            code: {
               type: "boolean",
               title: "Has coder support",
               default: false
             },
-            "solder": {
+            solder: {
               type: "boolean",
               title: "Requires soldering",
               default: false
-            },
+            }
           }
         },
         desc: {
           type: "string",
           title: "Description"
-        },
+        }
       }
     },
     notes: {
