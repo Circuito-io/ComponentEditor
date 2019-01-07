@@ -5,6 +5,20 @@ import {
 import { all_parts_cached } from "../controller";
 
 const blockListEnum = ["ADXL345", "ADXL335", "Resistor"];
+const voltageEnum = ["GND", "3.3v", "3.7v", "5v", "6v", "7.4", "9v", "12v"];
+const specEnum = [
+  "",
+  "SDA",
+  "SCL",
+  "SCK",
+  "MISO",
+  "MOSI",
+  "ADC",
+  "DigitalIn",
+  "DigitalIn-Int",
+  "DigitalOut",
+  "PWM"
+];
 
 export const circuitsuiSchema = {
   circuits: {
@@ -65,6 +79,58 @@ export const circuitsuiSchema = {
       ports: {
         "ui:options": {
           orderable: false
+        },
+        items: {
+          classNames: "well",
+          codename: {
+            "ui:help":
+              "For controllers only: port name in coder, <blank> for default name"
+          },
+          interface: {
+            requires: {
+              "ui:options": {
+                orderable: false
+              },
+              items: {
+                spec: {
+                  classNames: "two-coloumn-field",
+                  "ui:emptyValue": ""
+                },
+                voltage: {
+                  classNames: "two-coloumn-field"
+                }
+              }
+            },
+            provides: {
+              "ui:options": {
+                orderable: false
+              },
+              items: {
+                spec: {
+                  classNames: "two-coloumn-field",
+                  "ui:emptyValue": ""
+                },
+                voltage: {
+                  classNames: "two-coloumn-field"
+                }
+              }
+            },
+            requiresLoad: {
+              classNames: "two-coloumn-field"
+            },
+            providesLoad: {
+              classNames: "two-coloumn-field"
+            },
+            unique: {
+              classNames: "two-coloumn-field"
+            },
+            includeInFirmware: {
+              classNames: "two-coloumn-field"
+            },
+            isBus: {
+              "ui:widget": "hidden"
+            }
+          }
         }
       },
       requiredBlocks: {
@@ -132,13 +198,13 @@ export const circuitsSchema = {
             type: "object",
             properties: {
               cost: {
-				type: "integer",
-				title: "Cost",
+                type: "integer",
+                title: "Cost",
                 default: 0
               },
               blocks: {
-				type: "array",
-				title: "Blocks",
+                type: "array",
+                title: "Blocks",
                 items: {
                   type: "string",
                   enum: blockListEnum
@@ -178,10 +244,11 @@ export const circuitsSchema = {
             properties: {
               name: {
                 type: "string",
+                title: "Port name",
                 default: ""
               },
               codename: {
-                title: "codename [show for category controller only]",
+                title: "Port codename [show for category controller only]",
                 type: "string",
                 default: ""
               },
@@ -190,6 +257,7 @@ export const circuitsSchema = {
                 properties: {
                   requires: {
                     type: "array",
+                    title: "Requires",
                     items: {
                       type: "object",
                       properties: {
@@ -200,69 +268,28 @@ export const circuitsSchema = {
                         spec: {
                           type: "string",
                           default: "",
-                          enum: [
-                            "",
-                            "SDA",
-                            "SCL",
-                            "SCK",
-                            "MISO",
-                            "MOSI",
-                            "ADC",
-                            "DigitalIn",
-                            "DigitalIn-Int",
-                            "DigitalOut",
-                            "PWM"
-                          ]
+                          enum: specEnum
                         },
                         voltage: {
                           type: "string",
-                          enum: [
-                            "GND",
-                            "3.3v",
-                            "3.7v",
-                            "5v",
-                            "6v",
-                            "7.4",
-                            "9v",
-                            "12v"
-                          ]
+                          enum: voltageEnum
                         }
                       }
                     }
                   },
                   provides: {
                     type: "array",
+                    title: "Provides",
                     items: {
                       type: "object",
                       properties: {
                         spec: {
                           type: "string",
-                          enum: [
-                            "",
-                            "SDA",
-                            "SCL",
-                            "SCK",
-                            "MISO",
-                            "MOSI",
-                            "ADC",
-                            "DigitalIn",
-                            "DigitalIn-Int",
-                            "DigitalOut",
-                            "PWM"
-                          ]
+                          enum: specEnum
                         },
                         voltage: {
                           type: "string",
-                          enum: [
-                            "GND",
-                            "3.3v",
-                            "3.7v",
-                            "5v",
-                            "6v",
-                            "7.4",
-                            "9v",
-                            "12v"
-                          ]
+                          enum: voltageEnum
                         }
                       }
                     }
@@ -276,10 +303,10 @@ export const circuitsSchema = {
                   unique: {
                     type: "boolean"
                   },
-                  isBus: {
+                  includeInFirmware: {
                     type: "boolean"
                   },
-                  includeInFirmware: {
+                  isBus: {
                     type: "boolean"
                   }
                 }
