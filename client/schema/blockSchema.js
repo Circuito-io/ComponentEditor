@@ -1,21 +1,30 @@
 import { circuitsSchema, circuitsuiSchema } from "./circuitSchema";
 
-var tagsEnum = ["Controller", "Power supply", "Support"];
+const tagsEnum = ["Controller", "Power supply", "Support"];
+const categoryEnum = ["Controller", "Power supply", "Support"];
 
 export const blockuiSchema = {
   name: {
     "ui:readonly": true,
-    "classNames": "two-coloumn-field"
+    classNames: "two-coloumn-field"
   },
   blockId: {
-    "classNames": "two-coloumn-field"
+    classNames: "two-coloumn-field"
+  },
+  category: {
+    "ui:field": "typeahead",
+    typeahead: {
+      options: categoryEnum,
+      minLength: 0,
+      multiple: true
+    }
   },
   app: {
     numericName: {
-      "classNames": "two-coloumn-field"
+      classNames: "two-coloumn-field"
     },
     shortName: {
-      "classNames": "two-coloumn-field"
+      classNames: "two-coloumn-field"
     },
     tags: {
       "ui:field": "typeahead",
@@ -33,11 +42,11 @@ export const blockuiSchema = {
         "ui:widget": "hidden"
       },
       code: {
-        "classNames": "two-coloumn-field"
+        classNames: "two-coloumn-field"
       },
       solder: {
-        "classNames": "two-coloumn-field"
-      },
+        classNames: "two-coloumn-field"
+      }
     },
     desc: {
       "ui:widget": "textarea",
@@ -70,9 +79,13 @@ export const blockSchema = {
       title: "Block ID"
     },
     category: {
-      type: "string",
       title: "Category",
-      enum: ["output", "input", "controller", "power", "support"]
+      type: "array",
+      items: {
+        type: "string",
+        enum: categoryEnum
+      },
+      uniqueItems: true
     },
     app: {
       type: "object",

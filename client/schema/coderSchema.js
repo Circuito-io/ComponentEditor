@@ -13,6 +13,11 @@ export const coderuiSchema = {
       orderable: false
     }
   },
+  includeHeaders: {
+    "ui:options": {
+      orderable: false
+    }
+  },
   license: {
     "ui:field": "typeahead",
     typeahead: {
@@ -51,15 +56,7 @@ export const coderSchema = {
       type: "array",
       title: "Library files",
       items: {
-        type: "string"
-      }
-    },
-    uploadFiles: {
-      type: "array",
-      title: "Upload library files",
-      items: {
         type: "string",
-        format: "data-url"
       }
     },
     license: {
@@ -80,14 +77,16 @@ export const coderSchema = {
           title: "Variable name"
         },
         ports: {
-          type: "string",
-          title: "Ports"
+          type: "array",
+          title: "Ports",
+          items: { type: "string" }
         }
       }
     },
     includeHeaders: {
-      type: "string",
-      title: "Include header files"
+      type: "array",
+      title: "Include header files",
+      items: {type: "string"}
     },
     code: {
       type: "object",
