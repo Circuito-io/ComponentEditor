@@ -3,7 +3,7 @@ import { Panel, PanelGroup, Button } from "react-bootstrap";
 import { EditorForm } from "./form/editorform.js";
 import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
 import { circuitsSchema, circuitsuiSchema } from "./schema/circuitSchema.js";
-import { read_a_block, update_a_block } from "./controller.js";
+import { read_a_block, update_a_block, read_a_part, read_a_svgdata } from "./controller.js";
 
 export class Block extends React.Component {
   constructor(props) {
@@ -17,6 +17,8 @@ export class Block extends React.Component {
     this.currentData = {};
 
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.updateConnectors = this.updateConnectors.bind(this);
+
     this.save = this.save.bind(this);
 
     this.props.setSave(this.save);
@@ -35,8 +37,32 @@ export class Block extends React.Component {
       read_a_block(block)
         .then((blockData) => {
           this.setState({ formSrcData: blockData });
+
+          updateConnectors()
         })
     }
+  }
+
+  updateConnectors() {
+
+    var parts = this.state.formSrcData.circuits && this.state.formSrcData.circuits.map (circuit => {
+      return circuit.parts && circuit.parts.map (part => {
+        read_a_part(part.part).then(partData => {
+          var symbolurl = partData.symbol && partData.symbol.URL;
+
+          if (symbolurl)
+            var imgid = symbolurl.split('/').pop()
+          else {
+            console.error("Mising symbol for", part.part);
+            return;
+          }
+
+          read_a_svgdata(imgid).then(svgdata => {
+            console.log(part.name, svgdata.ConnectorsNames);
+            // TODO: USE THIS DATA...
+          })
+        }) })
+    });
   }
 
   save() {
@@ -83,7 +109,7 @@ export class Block extends React.Component {
             </Panel.Heading>
             <Panel.Body collapsible>
             </Panel.Body>
-          </Panel>
+          </Panel> 
         </PanelGroup>
       </div>
     );
