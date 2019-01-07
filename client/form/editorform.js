@@ -13,5 +13,5 @@ const editorFields = { typeahead: TypeaheadField, listarray: ListArrayField, tab
 const editorWidgets = { imagewidget: ImageWidget };
 
 export const EditorForm = React.forwardRef((props, ref) => {
-    return <Form fields={editorFields} widgets={editorWidgets} ref={ref} {...props} />;
+    return <Form fields={editorFields} widgets={editorWidgets} ref={ref} {...props} liveValidate/>;
 });
