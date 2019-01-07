@@ -1,12 +1,22 @@
 import { circuitsSchema, circuitsuiSchema } from "./circuitSchema";
 
-var tagsEnum =  ["Controller", "Power supply", "Support"];
+var tagsEnum = ["Controller", "Power supply", "Support"];
 
 export const blockuiSchema = {
   name: {
-    "ui:readonly": true
+    "ui:readonly": true,
+    "classNames": "two-coloumn-field"
+  },
+  blockId: {
+    "classNames": "two-coloumn-field"
   },
   app: {
+    numericName: {
+      "classNames": "two-coloumn-field"
+    },
+    shortName: {
+      "classNames": "two-coloumn-field"
+    },
     tags: {
       "ui:field": "typeahead",
       typeahead: {
@@ -21,7 +31,13 @@ export const blockuiSchema = {
     indicators: {
       verified: {
         "ui:widget": "hidden"
-      }
+      },
+      code: {
+        "classNames": "two-coloumn-field"
+      },
+      solder: {
+        "classNames": "two-coloumn-field"
+      },
     },
     desc: {
       "ui:widget": "textarea",
@@ -90,7 +106,7 @@ export const blockSchema = {
         },
         visible: {
           type: "boolean",
-          title: "List in application"
+          title: "Visible in application"
         },
         indicators: {
           type: "object",
