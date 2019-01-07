@@ -13,12 +13,12 @@
             "controllers"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "true",
-            "solder": "false"
+            "verified": false,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>The ATMega328P is a great way to migrate your circuit from Arduino board to a standalone microcontroller on a breadboard. please note that you will need to burn the bootloader for the chip, and install the MiniCore package on your Arduino IDE board manager.<br><br><a href=https://www.circuito.io/blog/atmega328p-bootloader/ class=\"text-app-info\" target=\"_blank\">See our tutorial for burning the Bootloader</a></p>",
-        "visible": "False"
+        "visible": false
     },
     "altComp": [
         1000,

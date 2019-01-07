@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>A single \"momentary\" capacitive touch sensor. When a capacitive load is detected the output pin goes high. You can also solder a wire to the middle pad and create your own capacitive pad.To save power, the LED can be disconnected from the output pin by cutting the trace between the jumper on its back side.</p>",
-        "visible": "true"
+        "visible": true
     },
     "circuits": [
         {

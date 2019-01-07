@@ -301,13 +301,13 @@
               "additionalProperties": false,
               "properties": {
                 "solder": {
-                  "type": "string"
+                  "type": "boolean"
                 },
                 "code": {
-                  "type": "string"
+                  "type": "boolean"
                 },
                 "verified": {
-                  "type": "string"
+                  "type": "boolean"
                 }
               },
               "required": [
@@ -323,7 +323,7 @@
               "type": "string"
             },
             "visible": {
-              "type": "string"
+              "type": "boolean"
             }
           },
           "required": [

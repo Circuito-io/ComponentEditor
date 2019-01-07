@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "false",
-            "solder": "true"
+            "verified": true,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>Make your electronics see in color with this RGB sensor. It has RGB and Clear light sensing elements and an IR blocking filter. Moreover it has controlled white LED to illuminate the sensed object.</p>",
-        "visible": "true"
+        "visible": true
     },
     "circuits": [
         {
-            "name": "-5v",
+            "name": "5v",
             "coders": [
                 "TCS34725"
             ],
@@ -85,7 +85,7 @@
             "priority": 0
         },
         {
-            "name": "-3v3",
+            "name": "3v3",
             "coders": [
                 "TCS34725"
             ],
