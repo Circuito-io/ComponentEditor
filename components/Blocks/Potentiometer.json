@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/How-to-Make-an-Office-Neighbor-Shield-With-Arduino-1/\">Neighbour Shield</a>.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "Potentiometer5v",
+            "name": "5v",
             "coders": [
                 "Potentiometer"
             ],
@@ -47,27 +47,27 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "Potentiometer3v3",
+            "name": "3v3",
             "coders": [
                 "Potentiometer"
             ],
@@ -90,20 +90,20 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

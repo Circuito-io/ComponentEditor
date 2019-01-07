@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>The 'ZX Distance and Gesture Sensor' is a touchless sensor that is capable of detecting simple gestures. It can recognize the distance of an object 30cm away in the Z aixs, and 15cm in the X aixs.</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "GestureSensorZX5v",
+            "name": "5v",
             "coders": [
                 "GestureSensorZX"
             ],
@@ -46,32 +46,32 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "DA",
                     "interface": {
-                        "requires":[[0,["5v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "CL",
                     "interface": {
-                        "requires":[[0,["5v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "GestureSensorZX3v3",
+            "name": "3v3",
             "coders": [
                 "GestureSensorZX"
             ],
@@ -92,25 +92,25 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "DA",
                     "interface": {
-                        "requires":[[0,["3.3v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "CL",
                     "interface": {
-                        "requires":[[0,["3.3v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
                     }
                 }
             ],

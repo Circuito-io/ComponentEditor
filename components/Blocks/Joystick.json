@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This Joystick is simply two 10Kohm potentiometers - one for each axis. The module also has a pushbutton for press functionality.</p>\n<p><strong>Returned Values</strong>: &#39;0 - 1023&#39; analog input value per direction and logical &#39;0&#39; or &#39;1&#39; for press.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://blog.arduino.cc/2012/12/23/xbee-controlled-4wd-wireless-robot/\">XBEE-CONTROLLED 4WD WIRELESS ROBOT</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "Joystick5v",
+            "name": "5v",
             "coders": [
                 "Joystick"
             ],
@@ -47,33 +47,33 @@
                 {
                     "name": "SW",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "VRX",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VRY",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }
@@ -81,7 +81,7 @@
             "priority": 0
         },
         {
-            "name": "Joystick3v3",
+            "name": "3v3",
             "coders": [
                 "Joystick"
             ],
@@ -103,33 +103,33 @@
                 {
                     "name": "SW",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "VRX",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VRY",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }

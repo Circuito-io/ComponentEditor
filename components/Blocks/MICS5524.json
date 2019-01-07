@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>This sensor can easily detect gas leak indoor. It is sensitive to CO (~ 1 to 1000 ppm), Ammonia (~ 1 to 500 ppm), Ethanol (~ 10 to 500 ppm), H2 (~ 1 - 1000 ppm), and Methane / Propane / Iso-Butane (~ 1,000++ ppm).</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "MICS5524",
+            "name": "",
             "coders": [
                 "MICS5524"
             ],
@@ -52,20 +52,20 @@
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 35
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Ao",
                     "interface": {
-                        "requires":[[0,["ADC"]],[1,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""},{"cost":1,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }

@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "true",
-            "solder": "true"
+            "verified": false,
+            "code": true,
+            "solder": true
         },
         "desc": "<p>This is a simple SPDT Slide Switch, it can be used as on/off switches or selector switch. It requires soldering to connect to breadboard.</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "ToggleSwitch5v",
+            "name": "5v",
             "coders": [
                 "ToggleSwitch"
             ],
@@ -61,19 +61,19 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "1",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 }
@@ -81,7 +81,7 @@
             "priority": 0
         },
         {
-            "name": "ToggleSwitch3v3",
+            "name": "3v3",
             "coders": [
                 "ToggleSwitch"
             ],
@@ -118,19 +118,19 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "1",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

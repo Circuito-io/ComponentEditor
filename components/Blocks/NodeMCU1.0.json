@@ -14,12 +14,12 @@
             "controllers"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>",
-        "visible": "False"
+        "visible": false
     },
     "requiresExpansion": [
         [
@@ -31,24 +31,9 @@
             "74HC4051"
         ]
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "NodeMCU1.0_ExPower",
-            "requires": [
-                [
-                    0,
-                    [
-                        "USBPowerMicro"
-                    ]
-                ],
-                [
-                    30,
-                    [
-                        "Reg5v",
-                        "USBPowerMicro"
-                    ]
-                ]
-            ],
+            "name": "_ExPower",
             "supportedControllers": [
                 "NodeMCU"
             ],
@@ -62,155 +47,155 @@
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[["ESPSoftwareSerialTag"]]
+                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 },
                 {
                     "name": "D1",
                     "interface": {
                         "codename": "5",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCL"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCL","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D2",
                     "interface": {
                         "codename": "4",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","DigitalIn","Int"],["3.3v","PWM"],["3.3v","SDA"],["3.3v","Timer2"],["SoftwareSerial","3.3v"],["3.3v","SS"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SDA","voltage":"3.3v"},{"spec":"Timer2","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"SS","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D3",
                     "interface": {
                         "codename": "0",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D4",
                     "interface": {
                         "codename": "2",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","TX"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"TX","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D5",
                     "interface": {
                         "codename": "14",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["3.3v","SCK"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D6",
                     "interface": {
                         "codename": "12",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialRX","3.3v"],["3.3v","MISO"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"spec":"MISO","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D7",
                     "interface": {
                         "codename": "13",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialTX","3.3v"],["3.3v","MOSI"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D8",
                     "interface": {
                         "codename": "15",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D0",
                     "interface": {
                         "codename": "16",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
                         "codename": "RX",
-                        "provides":[["3.3v","RX"]]
+                        "provides":[{"spec":"RX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "TX",
-                        "provides":[["3.3v","TX"]]
+                        "provides":[{"spec":"TX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SD2",
                     "interface": {
                         "codename": "9",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SD3",
                     "interface": {
                         "codename": "10",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "requires":[[0,["GND"]],[1,["GND","USB"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"},{"cost":1,"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND3",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "3V3",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 800
                     }
                 },
                 {
                     "name": "3V3_1",
                     "interface": {
-                        "provides":[["3.3v"]]
+                        "provides":[{"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "3V3_2",
                     "interface": {
-                        "provides":[["3.3v"]]
+                        "provides":[{"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["6v"]],[1,["7.4v"]],[2,["9v"]],[3,["12v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"6v"},{"cost":1,"spec":"","voltage":"7.4v"},{"cost":2,"spec":"","voltage":"9v"},{"cost":3,"spec":"","voltage":"12v"}],
                         "requiresLoad": 50
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[["USB_MICRO"]]
+                        "provides":[{"spec":"USB_MICRO","voltage":""}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[["SRAMLoad"]],
+                        "provides":[{"spec":"SRAMLoad","voltage":""}],
                         "providesLoad": 128000
                     }
                 }
@@ -218,10 +203,25 @@
             "priority": 1,
             "coders": [
                 "NodeMCU1.0"
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "Reg5v",
+                        "USBPowerMicro"
+                    ]
+                }
             ]
         },
         {
-            "name": "NodeMCU1.0_USB",
+            "name": "_USB",
             "supportedControllers": [
                 "NodeMCU"
             ],
@@ -235,140 +235,140 @@
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[["ESPSoftwareSerialTag"]]
+                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 },
                 {
                     "name": "D1",
                     "interface": {
                         "codename": "5",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCL"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCL","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D2",
                     "interface": {
                         "codename": "4",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["3.3v","DigitalIn","Int"],["3.3v","PWM"],["3.3v","SDA"],["3.3v","Timer2"],["SoftwareSerial","3.3v"],["3.3v","SS"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SDA","voltage":"3.3v"},{"spec":"Timer2","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"SS","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D3",
                     "interface": {
                         "codename": "0",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D4",
                     "interface": {
                         "codename": "2",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","TX"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"TX","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D5",
                     "interface": {
                         "codename": "14",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["3.3v","SCK"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D6",
                     "interface": {
                         "codename": "12",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialRX","3.3v"],["3.3v","MISO"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"spec":"MISO","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D7",
                     "interface": {
                         "codename": "13",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"],["ESPSoftwareSerialTX","3.3v"],["3.3v","MOSI"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"},{"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D8",
                     "interface": {
                         "codename": "15",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "D0",
                     "interface": {
                         "codename": "16",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"],["SoftwareSerial","3.3v"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SoftwareSerial","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND2",
                     "interface": {
-                        "requires":[[0,["GND","USB"]]]
+                        "requires":[{"cost":0,"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND3",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "USBPos",
                     "interface": {
-                        "requires":[[0,["5v","USB"]]],
+                        "requires":[{"cost":0,"spec":"USB","voltage":"5v"}],
                         "requiresLoad": 50
                     }
                 },
                 {
                     "name": "3V3",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 800
                     }
                 },
                 {
                     "name": "3V3_1",
                     "interface": {
-                        "provides":[["3.3v"]]
+                        "provides":[{"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "3V3_2",
                     "interface": {
-                        "provides":[["3.3v"]]
+                        "provides":[{"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
                         "codename": "3",
-                        "provides":[["3.3v","RX"]]
+                        "provides":[{"spec":"RX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[["3.3v","TX"]]
+                        "provides":[{"spec":"TX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "provides":[["5v"]],
+                        "provides":[{"spec":"","voltage":"5v"}],
                         "providesLoad": 500
                     }
                 },
@@ -376,33 +376,33 @@
                     "name": "SD2",
                     "interface": {
                         "codename": "9",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SD3",
                     "interface": {
                         "codename": "10",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[["USB_MICRO"]]
+                        "provides":[{"spec":"USB_MICRO","voltage":""}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[["SRAMLoad"]],
+                        "provides":[{"spec":"SRAMLoad","voltage":""}],
                         "providesLoad": 128000
                     }
                 }

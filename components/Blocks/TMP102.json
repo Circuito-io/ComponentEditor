@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "true"
+            "verified": true,
+            "code": true,
+            "solder": true
         },
         "desc": "<p>A breakout board for the TMP102 temperature sensor - a digital sensor, ideal for projects where high accuracy is required.<br><strong>Returned Values</strong>: from -25\u00b0C to +85\u00b0C, with an accuracy of 0.5\u00b0C.(Can also return Fahrenheit).<br><strong>Requires</strong>: Soldering of 6 male pins to fit onto a breadboard.<br><strong>Sample applications</strong>: (1) Measure and show temperature on a screen, (2) If temperature is higher than a certain threshold, turn on a fan.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "TMP102",
+            "name": "",
             "coders": [
                 "TMP102"
             ],
@@ -52,39 +52,39 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "ADD0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["SDA","3.3v"]],[1,["SDA","5v"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"},{"cost":1,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"},{"cost":1,"spec":"SCL","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 176
                     }
                 }

@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>Piezo Vibration Sensor is suitable for measurements of flexibility, vibration, impact and touch. When the sensor moves back and forth, a certain voltage will be created by the voltage comparator inside of it. <br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong></p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "PiezoVibration",
+            "name": "",
             "coders": [
                 "PiezoVibration"
             ],
@@ -70,14 +70,14 @@
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "-",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ]

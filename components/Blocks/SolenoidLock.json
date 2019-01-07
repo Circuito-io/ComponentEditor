@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "true",
-            "solder": "false"
+            "verified": false,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This solenoid has a slug with a slanted cut and a mounting bracket. It's an electronic lock for cabinet or safe or door. It allows you to hold a door closed without electricity and pulls the slug when current is applied.</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "SolenoidLock",
+            "name": "",
             "coders": [
                 "SolenoidLock"
             ],
@@ -41,14 +41,6 @@
                 "RPI3B",
                 "ATTiny85",
                 "Teensy32"
-            ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadSwitching"
-                    ]
-                ]
             ],
             "parts": [
                 {
@@ -74,7 +66,7 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GndLoadSwitching"]]],
+                        "requires":[{"cost":0,"spec":"GndLoadSwitching","voltage":""}],
                         "requiresLoad": 1000,
                         "unique": true
                     }
@@ -82,8 +74,16 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["12v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "GndHighLoadSwitching"
+                    ]
                 }
             ]
         }

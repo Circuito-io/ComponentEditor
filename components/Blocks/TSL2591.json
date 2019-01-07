@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>The TSL2591 is an ultra-high-range luminosity sensor with an I2C interface, Compared to low cost LDR photoscell this sensor is more precise, and can detect light ranges from 188 uLux up to 88,000 Lux</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "TSL2591-5v",
+            "name": "5v",
             "coders": [
                 "TSL2591"
             ],
@@ -46,32 +46,32 @@
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["5v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["5v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "TSL2591-3v3",
+            "name": "3v3",
             "coders": [
                 "TSL2591"
             ],
@@ -92,25 +92,25 @@
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["3.3v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["3.3v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

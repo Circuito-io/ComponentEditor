@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "true",
-            "solder": "false"
+            "verified": false,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>A slide potentiometer rated at 10kOhm and 0.5W.</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "PotentiometerSlide5v",
+            "name": "5v",
             "coders": [
                 "PotentiometerSlide"
             ],
@@ -47,27 +47,27 @@
                 {
                     "name": "leg2",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "wiper",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "leg1",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "PotentiometerSlide3v3",
+            "name": "3v3",
             "coders": [
                 "PotentiometerSlide"
             ],
@@ -90,20 +90,20 @@
                 {
                     "name": "leg2",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "wiper",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "leg1",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

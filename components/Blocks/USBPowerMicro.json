@@ -14,20 +14,20 @@
             "powerSupplies"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "none",
-            "solder": "false"
+            "verified": true,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>A standard Micro USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": "False"
+        "visible": false
     },
     "altComp": [
         150,
         "PowerSupply12v2A"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "USBPowerMicro",
+            "name": "",
             "supportedControllers": [
                 "ArduinoGemma",
                 "ArduinoLeonardo",
@@ -47,20 +47,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","USB"]],
+                        "provides":[{"spec":"USB","voltage":"5v"}],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","USB"]]
+                        "provides":[{"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "requires":[[0,["USB_MICRO"]]]
+                        "requires":[{"cost":0,"spec":"USB_MICRO","voltage":""}]
                     }
                 }
             ]

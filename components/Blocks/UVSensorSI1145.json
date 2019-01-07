@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>The SI1145 is a new sensor from SiLabs with a calibrated light sensing algorithm that can calculate UV Index. It doesn't contain an actual UV sensing element, instead it approximates it based on visible & IR light from the sun. </p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "UVSensorSI1145-5v",
+            "name": "5v",
             "coders": [
                 "UVSensorSI1145"
             ],
@@ -46,32 +46,32 @@
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["5v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["5v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "UVSensorSI1145-3v3",
+            "name": "3v3",
             "coders": [
                 "UVSensorSI1145"
             ],
@@ -92,25 +92,25 @@
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["3.3v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["3.3v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

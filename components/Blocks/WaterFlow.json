@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>The water flow sensor based on a water rotor and a hall-effect sensor.<br> When the water flows through the rotor, the rotor rolls and the speed of it changes with a different rate of flow. The hall-effect sensor outputs the corresponding pulse signal.<br><strong>Returned Value</strong>: RPM calculated from the built-in hall effect sensor</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "WaterFlow5v",
+            "name": "5v",
             "coders": [
                 "WaterFlow"
             ],
@@ -65,27 +65,27 @@
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[[0,["Int","5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "WaterFlow3v3",
+            "name": "3v3",
             "coders": [
                 "WaterFlow"
             ],
@@ -145,20 +145,20 @@
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[[0,["Int","3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],

@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>A low cost humidity and temperature sensor.<br><strong>Returned Values</strong>:  Temperature and Humidity through a single wire digital interface.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "DHT225v",
+            "name": "5v",
             "coders": [
                 "DHT22"
             ],
@@ -61,19 +61,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "DATA",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 }
@@ -81,7 +81,7 @@
             "priority": 0
         },
         {
-            "name": "DHT223v3",
+            "name": "3v3",
             "coders": [
                 "DHT22"
             ],
@@ -118,19 +118,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "DATA",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

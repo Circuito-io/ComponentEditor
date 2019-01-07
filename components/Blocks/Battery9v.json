@@ -13,20 +13,20 @@
             "powerSupplies"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "none",
-            "solder": "false"
+            "verified": true,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
-        "visible": "False"
+        "visible": false
     },
     "altComp": [
         100,
         "PowerSupply12v2A"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "Battery9v",
+            "name": "",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoGemma",
@@ -52,20 +52,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["9v"]],
+                        "provides":[{"spec":"","voltage":"9v"}],
                         "providesLoad": 1000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[["Battery"]]
+                        "provides":[{"spec":"Battery","voltage":""}]
                     }
                 }
             ]

@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>The Line Follower sensor gives you the ability to detect lines or nearby objects. The sensor works by detecting reflected light emitted from its on board infrared LED. By measuring the amount of reflected infrared light, it can detect transitions from light to dark (lines) or even objects directly in front of it.</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "IRLineFollowSF5v",
+            "name": "5v",
             "coders": [
                 "IRLineFollowSF"
             ],
@@ -47,19 +47,19 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "OUT",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }
@@ -67,7 +67,7 @@
             "priority": 1
         },
         {
-            "name": "IRLineFollowSF3v3",
+            "name": "3v3",
             "coders": [
                 "IRLineFollowSF"
             ],
@@ -90,19 +90,19 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "OUT",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }

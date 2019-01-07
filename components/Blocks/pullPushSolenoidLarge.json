@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "pullPushSolenoidLarge",
+            "name": "",
             "coders": [
                 "pullPushSolenoidLarge"
             ],
@@ -40,14 +40,6 @@
                 "RPI3B",
                 "ATTiny85",
                 "Teensy32"
-            ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "GndHighLoadSwitching"
-                    ]
-                ]
             ],
             "parts": [
                 {
@@ -74,7 +66,7 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[[0,["GndLoadSwitching"]]],
+                        "requires":[{"cost":0,"spec":"GndLoadSwitching","voltage":""}],
                         "requiresLoad": 250,
                         "unique": true
                     }
@@ -82,8 +74,16 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[[0,["12v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "GndHighLoadSwitching"
+                    ]
                 }
             ]
         }

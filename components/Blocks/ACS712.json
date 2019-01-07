@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Sense the AC or DC current flowing through it. it has a sensitivity of 185mV/A (equivalent to 26.4mA/Count of ADC). </p>\n<p><strong>Return Value</strong>: mA. Needs to be manually calibrated with zero current.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Simplified-Arduino-AC-Current-Measurement-Using-AC/\">Simplified Arduino AC Current Measurement Using ACS712 Hall Effect Sensor</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "ACS7125v",
+            "name": "5v",
             "coders": [
                 "ACS7125v"
             ],
@@ -47,19 +47,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "VO",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }
@@ -67,7 +67,7 @@
             "priority": 1
         },
         {
-            "name": "ACS7123v3",
+            "name": "3v3",
             "coders": [
                 "ACS7123v3"
             ],
@@ -116,19 +116,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "Vo",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 }

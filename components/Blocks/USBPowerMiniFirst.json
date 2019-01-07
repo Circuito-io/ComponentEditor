@@ -14,18 +14,18 @@
             "powerSupplies"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "none",
-            "solder": "false"
+            "verified": true,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>A standard Mini USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": "False"
+        "visible": false
     },
     "altComp": [
         150,
         "PowerSupply12v2A"
     ],
-    "circuit": [
+    "circuits": [
         {
             "name": "USBPowerMiniWithFTDI5v",
             "altComp": [
@@ -46,20 +46,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","USB"]],
+                        "provides":[{"spec":"USB","voltage":"5v"}],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","USB"]]
+                        "provides":[{"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "FTDI",
                     "interface": {
-                        "requires":[[0,["FTDI"]]]
+                        "requires":[{"cost":0,"spec":"FTDI","voltage":""}]
                     }
                 }
             ],
@@ -85,20 +85,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["3.3v","USB"]],
+                        "provides":[{"spec":"USB","voltage":"3.3v"}],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","USB"]]
+                        "provides":[{"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "FTDI",
                     "interface": {
-                        "requires":[[0,["FTDI"]]]
+                        "requires":[{"cost":0,"spec":"FTDI","voltage":""}]
                     }
                 }
             ],
@@ -123,20 +123,20 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","USB"]],
+                        "provides":[{"spec":"USB","voltage":"5v"}],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","USB"]]
+                        "provides":[{"spec":"USB","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "USB_MINI",
                     "interface": {
-                        "requires":[[0,["USB_MINI"]]]
+                        "requires":[{"cost":0,"spec":"USB_MINI","voltage":""}]
                     }
                 }
             ],

@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "true"
+            "verified": true,
+            "code": true,
+            "solder": true
         },
         "desc": "<p>The load cell breakout of the HX711 enables reading load cell values and measuring weight.</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "LoadCellHX711SF5v",
+            "name": "5v",
             "coders": [
                 "LoadCellHX711SF"
             ],
@@ -47,40 +47,40 @@
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "DAT",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "CLK",
                     "interface": {
-                        "requires":[[0,["5v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "LoadCellHX711SF3v3",
+            "name": "3v3",
             "coders": [
                 "LoadCellHX711SF"
             ],
@@ -103,33 +103,33 @@
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "DAT",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "CLK",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],

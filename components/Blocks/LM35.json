@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Precision integrated-circuit temperature sensor. Output is linearly proportional to the centegrade temperature.</p>\n<p><strong>Returned Value</strong>: Returns the temperature in Celsius or Fahrenheit.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/lm35-temperature-sensor/\">Learn More</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "LM355v",
+            "name": "5v",
             "coders": [
                 "LM35"
             ],
@@ -47,27 +47,27 @@
                 {
                     "name": "Vout",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vcc",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "LM353v3",
+            "name": "3v3",
             "coders": [
                 "LM35"
             ],
@@ -116,20 +116,20 @@
                 {
                     "name": "Vout",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vcc",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],

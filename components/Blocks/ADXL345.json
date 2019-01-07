@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "true"
+            "verified": true,
+            "code": true,
+            "solder": true
         },
         "desc": "<p>This accelerometer measures the acceleration of an object in 3 axes - x-y-z. Acceleration is a change in rate, speed, etc.. If an object start moving faster or slower - it is detected by the accelerometer.<br><strong>Range</strong>: +-16 g.<br><strong>Requires</strong>: soldering 8 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/34five-Arduino-Pet/\">34five Arduino Pet</a>.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "ADXL345",
+            "name": "",
             "coders": [
                 "ADXL345"
             ],
@@ -59,25 +59,25 @@
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["SDA","3.3v"]],[1,["SDA","5v"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"},{"cost":1,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 335
                     }
                 },
@@ -85,7 +85,7 @@
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["SCL","3.3v"]],[1,["SCL","5v"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"},{"cost":1,"spec":"SCL","voltage":"5v"}]
                     }
                 }
             ]

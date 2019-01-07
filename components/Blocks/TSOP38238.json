@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>A diode that can receive an IR code - wire it to your circuit whenever you\u2019d like to control your circuit with an IR remote control (standard or yof your own making).<br><strong>Returned values</strong>: detected IR codes for all major remote providers.<br><strong>Sample Applications</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Remote-controlled-switch-using-Atmega-328p/\">Remote Control Switch</a>.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "TSOP382385v",
+            "name": "5v",
             "coders": [
                 "TSOP38238"
             ],
@@ -47,34 +47,34 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 227
                     }
                 },
                 {
                     "name": "Out",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "TSOP382383v3",
+            "name": "3v3",
             "coders": [
                 "TSOP38238"
             ],
@@ -96,27 +96,27 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 227
                     }
                 },
                 {
                     "name": "Out",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
