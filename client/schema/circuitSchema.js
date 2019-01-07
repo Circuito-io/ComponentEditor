@@ -7,7 +7,7 @@ import { all_parts_cached } from "../controller";
 const blockListEnum = ["ADXL345", "ADXL335", "Resistor"];
 
 export const circuitsuiSchema = {
-  circuit: {
+  circuits: {
     "ui:field": "tabbedarray",
     items: {
       "ui:field": "tabbedobject",
@@ -15,7 +15,7 @@ export const circuitsuiSchema = {
         tabs: {
           Info: ["name", "priority", "supportedControllers"],
           Parts: ["parts"],
-          Blocks: ["supportBlocks"],
+          Blocks: ["requiredBlocks"],
           Coders: ["coders"],
           Wiring: ["ports", "wires"]
         }
@@ -67,7 +67,7 @@ export const circuitsuiSchema = {
           orderable: false
         }
       },
-      supportBlocks: {
+      requiredBlocks: {
         "ui:options": {
           orderable: false
         },
@@ -91,7 +91,7 @@ export const circuitsuiSchema = {
 };
 
 export const circuitsSchema = {
-  circuit: {
+  circuits: {
     type: "array",
     title: "",
     items: {
@@ -125,18 +125,20 @@ export const circuitsSchema = {
             }
           }
         },
-        supportBlocks: {
+        requiredBlocks: {
           type: "array",
           title: "Support Blocks [list only support and power blocks]",
           items: {
             type: "object",
             properties: {
               cost: {
-                type: "integer",
+				type: "integer",
+				title: "Cost",
                 default: 0
               },
               blocks: {
-                type: "array",
+				type: "array",
+				title: "Blocks",
                 items: {
                   type: "string",
                   enum: blockListEnum

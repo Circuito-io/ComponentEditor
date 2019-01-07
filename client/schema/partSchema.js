@@ -1,3 +1,6 @@
+const partCategoryEnum = ['output', 'input', 'support', 'power']
+const auxPartsEnum = ['Heatsink', 'Bolt', 'Nut']
+
 export const partuiSchema = {
   name: {
     "ui:readonly": true
@@ -19,6 +22,14 @@ export const partuiSchema = {
       "ui:help": "SVG must follow circuito.io/blog/SVG-Guidelines"
     }
   },
+  category: {
+    "ui:field": "typeahead",
+    typeahead: {
+      options: partCategoryEnum,
+      minLength: 0,
+      multiple: true
+    }
+  },
   bom: {
     items: {
       image: { "ui:widget": "imagewidget" }
@@ -32,7 +43,7 @@ export const partuiSchema = {
   auxParts: {
     "ui:field": "typeahead",
     typeahead: {
-      options: ["Heatsink", "Screw", "Nut"],
+      options: auxPartsEnum,
       minLength: 0,
       multiple: true
     }
@@ -80,8 +91,13 @@ export const partSchema = {
       default: ""
     },
     category: {
-      type: "string",
-      enum: ["output", "input", "controller", "power", "support"]
+      title: "Category",
+      type: "array",
+      items: {
+        type: "string",
+        enum: partCategoryEnum
+      },
+      uniqueItems: true
     },
     placing: {
       type: "object",
@@ -149,8 +165,13 @@ export const partSchema = {
       }
     },
     auxParts: {
-      type: "string",
-      title: "Auxilary parts"
+      type: "array",
+      title: "Auxilary parts",
+      items: {
+        type: "string",
+        enum: auxPartsEnum
+      },
+      uniqueItems: true
     },
     notes: {
       type: "string"
