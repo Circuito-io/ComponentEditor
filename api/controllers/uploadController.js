@@ -5,45 +5,49 @@ const fs = require('fs');
 const path = require('path');
 const urlJoin = require("proper-url-join");
 
-const walkDirSync = (d, res = { Parts: [], Coders: [], Blocks: [], CodeFiles: [] }, type = null) => {
+const walkDirSync = (d, res = { Parts: [], Coders: [], Blocks: [], CodeFiles: [] }, type = null, depth = 0) => {
+	var dpath      = path.parse(d)
+	var basename   = dpath.base;
+	var dirname    = dpath.dir;
+	var enddirname = dirname.split(path.sep).pop();
+	var ext        = dpath.ext;
+
 	if (fs.statSync(d).isDirectory()) {
-		if (type == null) {
-			if (d.includes('/Parts')) {
-				type = 'Parts';
-			}
-			else if (d.includes('/Coders')) {
-				type = 'Coders';
-			}
-			else if (d.includes('/Blocks')) {
-				type = 'Blocks';
-			}
+		// directory
+		if (depth == 1) {
+			if (['Parts', 'Coders', 'Blocks'].includes(basename))
+				type = basename
+			else
+				console.error('Ignoring unkonwn folder', basename);
 		}
 
-		return fs.readdirSync(d).reduce((res, f) => walkDirSync(path.join(d, f), res, type), res);
+		return fs.readdirSync(d).reduce((res, f) => walkDirSync(path.join(d, f), res, type, depth + 1), res);
 	}
 	else {
+		// file
 		let data = fs.readFileSync(d, 'utf8');
-		if (d.includes('.json')) {
+		if (depth == 2 && ext == '.json') {
+			// json data file
 			data = JSON.parse(data);
 			res[type].push(data);
 		}
-		else {
-			let path = d.split('\\').pop().split('/');
-			let filename = path.pop();
-			let curDir = path.pop();
-			// It's a code file belonging to a coder
+		else if (type == 'Coders' && depth == 3) {
+			// coder file
 			res['CodeFiles'].push({
-				name: filename,
-				coder: curDir,
+				name: basename,
+				coder: enddirname,
 				content: encodeURIComponent(data)
 			});
+		}
+		else {
+			console.error("Ignoring file", d);
 		}
 	}
 
 	return res;
 }
 
-exports.upload = function(req, res) {
+exports.upload = function (req, res) {
 
 	var files = walkDirSync(global.dataFolder);
 	const endPoint = urlJoin(global.circuitoServer, global.uploadEndpoint, global.userid, { trailingSlash: true });
@@ -51,13 +55,14 @@ exports.upload = function(req, res) {
 	console.log("Sending to", endPoint)
 
 	rp({
-			url: endPoint,
-			method: 'post',
-			body: files,
-			json: true,
-		})
+		url: endPoint,
+		method: 'post',
+		body: files,
+		json: true,
+	})
 		.then(body => {
-			res.send('OK');
+			console.log("Upload OK");
+			res.sendStatus(200);
 		})
 		.catch(err => {
 			console.log(err)
