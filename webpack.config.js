@@ -3,7 +3,7 @@ const NodemonPlugin = require('nodemon-webpack-plugin')
 
 module.exports = {
   mode: "development",
-  entry: "./src/client.js",
+  entry: "./client/app.js",
   devtool: 'source-map',
   module: {
     rules: [{

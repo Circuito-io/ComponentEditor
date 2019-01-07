@@ -1,3 +1,8 @@
+import {
+  circuitsSchema,
+  circuitsuiSchema
+} from "./circuitSchema";
+
 export const blockuiSchema = {
   name: {
     "ui:readonly": true
@@ -33,11 +38,13 @@ export const blockuiSchema = {
     "ui:options": {
       rows: 7
     }
-  }
+  },
+  ...circuitsuiSchema
 };
 
 export const blockSchema = {
   type: "object",
+  required: ["name", "blockId","category"],
   properties: {
     name: {
       type: "string",
@@ -55,6 +62,7 @@ export const blockSchema = {
     app: {
       type: "object",
       title: "Appearance",
+      required: ["appName", "tags", "desc"],
       properties: {
         appName: {
           type: "string",
@@ -103,6 +111,7 @@ export const blockSchema = {
     },
     notes: {
       type: "string"
-    }
+    },
+    ...circuitsSchema
   }
 };
