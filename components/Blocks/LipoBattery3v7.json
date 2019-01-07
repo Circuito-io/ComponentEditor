@@ -13,20 +13,20 @@
             "powerSupplies"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "none",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has one cell and outputs 3.7V.\n",
-        "visible": "False"
+        "visible": false
     },
     "altComp": [
         100,
         "LipoBattery7v4"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "LipoBattery3v7",
+            "name": "",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoGemma",
@@ -46,20 +46,20 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND","Battery"]]
+                        "provides":[{"spec":"Battery","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "provides":[["3.7v","Battery"]],
+                        "provides":[{"spec":"Battery","voltage":"3.7v"}],
                         "providesLoad": 5000
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[["Battery"]]
+                        "provides":[{"spec":"Battery","voltage":""}]
                     }
                 }
             ]

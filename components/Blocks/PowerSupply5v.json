@@ -3,23 +3,9 @@
     "category": [
         "power"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "PowerSupply5v2A",
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "BarrelJack5v"
-                    ]
-                ]
-            ],
+            "name": "2A",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoLeonardo",
@@ -38,22 +24,29 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","Barrel"]],
+                        "provides":[{"spec":"Barrel","voltage":"5v"}],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","Barrel"]]
+                        "provides":[{"spec":"Barrel","voltage":"GND"}]
                     }
                 }
             ],
-            "priority": 0
+            "priority": 0,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "BarrelJack5v"
+                    ]
+                }
+            ]
         },
         {
-            "name": "PowerSupply5v5A",
-            "requires":[[0,["NONE"]],[1,["BarrelJack5v"]]],
+            "name": "5A",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoLeonardo",
@@ -72,18 +65,26 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[["5v","Barrel"]],
+                        "provides":[{"spec":"Barrel","voltage":"5v"}],
                         "providesLoad": 5000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[["GND","Barrel"]]
+                        "provides":[{"spec":"Barrel","voltage":"GND"}]
                     }
                 }
             ],
-            "priority": 5
+            "priority": 5,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "BarrelJack5v"
+                    ]
+                }
+            ]
         }
     ]
 }

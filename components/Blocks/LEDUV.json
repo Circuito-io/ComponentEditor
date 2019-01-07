@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This is a very basic, small, UV LED. Its Luminous Intensity is 100-180mcd.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "LEDUV5v",
+            "name": "5v",
             "coders": [
                 "LEDUV"
             ],
@@ -62,21 +62,21 @@
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["5v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],
             "priority": 1
         },
         {
-            "name": "LEDUV3.3v",
+            "name": "3.3v",
             "coders": [
                 "LEDUV"
             ],
@@ -114,14 +114,14 @@
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["3.3v","PWM"]]],
+                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ],

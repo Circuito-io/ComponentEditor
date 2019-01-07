@@ -3,9 +3,9 @@
     "category": [
         "support"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "LogicLevelConverterSPI-5-3.3",
+            "name": "",
             "supportedControllers": [],
             "parts": [
                 {
@@ -17,67 +17,67 @@
                 {
                     "name": "HV",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "LV2",
                     "interface": {
-                        "provides":[["MOSI","3.3v"]]
+                        "provides":[{"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "HV2",
                     "interface": {
-                        "requires":[[0,["MOSI","5v"]]]
+                        "requires":[{"cost":0,"spec":"MOSI","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "HV3",
                     "interface": {
-                        "requires":[[0,["SCK","5v"]]]
+                        "requires":[{"cost":0,"spec":"SCK","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "LV",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "LV3",
                     "interface": {
-                        "provides":[["SCK","3.3v"]]
+                        "provides":[{"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "LV1",
                     "interface": {
-                        "provides":[["MISO","3.3v"]]
+                        "provides":[{"spec":"MISO","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "HV1",
                     "interface": {
-                        "requires":[[0,["MISO","5v"]]]
+                        "requires":[{"cost":0,"spec":"MISO","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "HV4",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -85,7 +85,7 @@
                     "name": "LV4",
                     "interface": {
                         "codenameRedirect": "HV4",
-                        "provides":[["DigitalOut","3.3v"]]
+                        "provides":[{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 }
             ]

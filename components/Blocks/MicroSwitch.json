@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Micro-switches are really handy in any kind of project, it actuated by very little physical force, it\u2019s reliable, cheap, and comes in many sizes and shapes. It actually acts as a small push button, and have a \u2018clicky\u2019 sound and a nice tactile feel.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/micro-switch/\">Learn More</a></p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "MicroSwitch5v",
+            "name": "5v",
             "coders": [
                 "MicroSwitch"
             ],
@@ -61,19 +61,19 @@
                 {
                     "name": "NO",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "COM",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
                         "unique": true
                     }
                 }
@@ -81,7 +81,7 @@
             "priority": 0
         },
         {
-            "name": "MicroSwitch3v3",
+            "name": "3v3",
             "coders": [
                 "MicroSwitch"
             ],
@@ -118,19 +118,19 @@
                 {
                     "name": "NO",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "COM",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

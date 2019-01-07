@@ -14,12 +14,12 @@
             "controllers"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>Raspberry Pi 3 model B</p>",
-        "visible": "true"
+        "visible": true
     },
     "requiresExpansion": [
         [
@@ -31,23 +31,9 @@
             "MCP3008"
         ]
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "RPI3BUSB",
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "PowerSupply12vExt"
-                    ]
-                ]
-            ],
+            "name": "USB",
             "supportedControllers": [
                 "RPI3B"
             ],
@@ -64,14 +50,14 @@
                 {
                     "name": "3v3",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 500
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[["5v"]],
+                        "provides":[{"spec":"","voltage":"5v"}],
                         "providesLoad": 1500
                     }
                 },
@@ -79,13 +65,13 @@
                     "name": "2",
                     "interface": {
                         "codename": "2",
-                        "provides":[["3.3v","SDA"]]
+                        "provides":[{"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "5v_1",
                     "interface": {
-                        "provides":[["5v"]],
+                        "provides":[{"spec":"","voltage":"5v"}],
                         "providesLoad": 1500
                     }
                 },
@@ -93,87 +79,87 @@
                     "name": "3",
                     "interface": {
                         "codename": "3",
-                        "provides":[["3.3v","SCL"]]
+                        "provides":[{"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "4",
                     "interface": {
                         "codename": "4",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "14",
                     "interface": {
                         "codename": "14",
-                        "provides":[["3.3v","TX"]]
+                        "provides":[{"spec":"TX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_1",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "15",
                     "interface": {
                         "codename": "15",
-                        "provides":[["3.3v","RX"]]
+                        "provides":[{"spec":"RX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "17",
                     "interface": {
                         "codename": "17",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "18",
                     "interface": {
                         "codename": "18",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "27",
                     "interface": {
                         "codename": "27",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_2",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "22",
                     "interface": {
                         "codename": "22",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "23",
                     "interface": {
                         "codename": "23",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "3v3_1",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 500
                     }
                 },
@@ -181,190 +167,197 @@
                     "name": "24",
                     "interface": {
                         "codename": "24",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "10",
                     "interface": {
                         "codename": "10",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MOSI"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_3",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "9",
                     "interface": {
                         "codename": "9",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MISO"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MISO","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "25",
                     "interface": {
                         "codename": "25",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "11",
                     "interface": {
                         "codename": "11",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCK"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "8",
                     "interface": {
                         "codename": "8",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SS"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SS","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_4",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "7",
                     "interface": {
                         "codename": "7",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "1",
                     "interface": {
                         "codename": "1",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "5",
                     "interface": {
                         "codename": "5",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_5",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "6",
                     "interface": {
                         "codename": "6",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "12",
                     "interface": {
                         "codename": "12",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "13",
                     "interface": {
                         "codename": "13",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_6",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "19",
                     "interface": {
                         "codename": "19",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MISO1"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MISO1","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "16",
                     "interface": {
                         "codename": "16",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "26",
                     "interface": {
                         "codename": "26",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "20",
                     "interface": {
                         "codename": "20",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MOSI1"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MOSI1","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_7",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "21",
                     "interface": {
                         "codename": "21",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCK1"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCK1","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[["SRAMLoad"]],
+                        "provides":[{"spec":"SRAMLoad","voltage":""}],
                         "providesLoad": 1000000
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[["USB_MICRO"]]
+                        "provides":[{"spec":"USB_MICRO","voltage":""}]
                     }
                 },
                 {
                     "name": "USBPos",
                     "interface": {
-                        "requires":[[0,["5v","USB"]]],
+                        "requires":[{"cost":0,"spec":"USB","voltage":"5v"}],
                         "requiresLoad": 50
                     }
                 },
                 {
                     "name": "USBNeg",
                     "interface": {
-                        "requires":[[0,["GND","USB"]]]
+                        "requires":[{"cost":0,"spec":"USB","voltage":"GND"}]
                     }
                 }
             ],
-            "priority": 0
+            "priority": 0,
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "PowerSupply12vExt"
+                    ]
+                }
+            ]
         },
         {
-            "name": "RPI3BExt",
-            "requires":[[0,["Reg5v"]],[1,["StepUp5v"]]],
+            "name": "Ext",
             "supportedControllers": [
                 "RPI3B"
             ],
@@ -381,27 +374,27 @@
                 {
                     "name": "3v3",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 500
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
                         "codename": "2",
-                        "provides":[["3.3v","SDA"]]
+                        "provides":[{"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "5v_1",
                     "interface": {
-                        "provides":[["5v"]],
+                        "provides":[{"spec":"","voltage":"5v"}],
                         "providesLoad": 1500
                     }
                 },
@@ -409,87 +402,87 @@
                     "name": "3",
                     "interface": {
                         "codename": "3",
-                        "provides":[["3.3v","SCL"]]
+                        "provides":[{"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "4",
                     "interface": {
                         "codename": "4",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "14",
                     "interface": {
                         "codename": "14",
-                        "provides":[["3.3v","TX"]]
+                        "provides":[{"spec":"TX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_1",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "15",
                     "interface": {
                         "codename": "15",
-                        "provides":[["3.3v","RX"]]
+                        "provides":[{"spec":"RX","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "17",
                     "interface": {
                         "codename": "17",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "18",
                     "interface": {
                         "codename": "18",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "27",
                     "interface": {
                         "codename": "27",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_2",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "22",
                     "interface": {
                         "codename": "22",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "23",
                     "interface": {
                         "codename": "23",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "3v3_1",
                     "interface": {
-                        "provides":[["3.3v"]],
+                        "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 500
                     }
                 },
@@ -497,173 +490,187 @@
                     "name": "24",
                     "interface": {
                         "codename": "24",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "10",
                     "interface": {
                         "codename": "10",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MOSI"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_3",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "9",
                     "interface": {
                         "codename": "9",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MISO"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MISO","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "25",
                     "interface": {
                         "codename": "25",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "11",
                     "interface": {
                         "codename": "11",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCK"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "8",
                     "interface": {
                         "codename": "8",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SS"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SS","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_4",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "7",
                     "interface": {
                         "codename": "7",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "1",
                     "interface": {
                         "codename": "1",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "5",
                     "interface": {
                         "codename": "5",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_5",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "6",
                     "interface": {
                         "codename": "6",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "12",
                     "interface": {
                         "codename": "12",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "13",
                     "interface": {
                         "codename": "13",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","PWM"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_6",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "19",
                     "interface": {
                         "codename": "19",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MISO1"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MISO1","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "16",
                     "interface": {
                         "codename": "16",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "26",
                     "interface": {
                         "codename": "26",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "20",
                     "interface": {
                         "codename": "20",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","MOSI1"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"MOSI1","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND_7",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "21",
                     "interface": {
                         "codename": "21",
-                        "provides":[["3.3v","DigitalIn"],["3.3v","DigitalIn","Int"],["3.3v","DigitalOut"],["3.3v","SCK1"]]
+                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SCK1","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[["SRAMLoad"]],
+                        "provides":[{"spec":"SRAMLoad","voltage":""}],
                         "providesLoad": 1000000
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[["USB_MICRO"]]
+                        "provides":[{"spec":"USB_MICRO","voltage":""}]
                     }
                 }
             ],
-            "priority": 1
+            "priority": 1,
+            "requiredBlocks": [
+                {
+                    "cost": 0,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "StepUp5v"
+                    ]
+                }
+            ]
         }
     ]
 }

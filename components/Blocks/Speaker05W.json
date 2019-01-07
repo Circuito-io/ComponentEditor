@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This 0.25W, 8Ohm speaker is a great is great start to get some sound out of your project, it's 40mm in diameter and about 4mm thick.</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "Speaker05W",
+            "name": "",
             "coders": [
                 "Speaker05W"
             ],
@@ -52,14 +52,14 @@
                 {
                     "name": "POS",
                     "interface": {
-                        "requires":[[0,["5v","DigitalOut"]],[1,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "NEG",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
             ]

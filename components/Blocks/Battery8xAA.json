@@ -13,16 +13,16 @@
             "powerSupplies"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "none",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "Battery8xAA",
+            "name": "",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoGemma",
@@ -38,20 +38,6 @@
                 "ATTiny85",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "BarrelJack12v"
-                    ]
-                ]
-            ],
             "parts": [
                 {
                     "name": "this",
@@ -62,21 +48,29 @@
                 {
                     "name": "POS",
                     "interface": {
-                        "provides":[["12v"]],
+                        "provides":[{"spec":"","voltage":"12v"}],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "NEG",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[["Battery"]]
+                        "provides":[{"spec":"Battery","voltage":""}]
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "BarrelJack12v"
+                    ]
                 }
             ]
         }

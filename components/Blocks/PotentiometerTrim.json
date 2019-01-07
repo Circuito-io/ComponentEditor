@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "true",
-            "solder": "false"
+            "verified": false,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).</p>\n",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "PotentiometerTrim5v",
+            "name": "5v",
             "coders": [
                 "PotentiometerTrim"
             ],
@@ -47,27 +47,27 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[1,["5v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "PotentiometerTrim3v3",
+            "name": "3v3",
             "coders": [
                 "PotentiometerTrim"
             ],
@@ -90,20 +90,20 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[1,["3.3v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

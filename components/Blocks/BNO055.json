@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>The BNO055 uses three triple-axis sensors simultaneously, the data is analyzed inside the sensor using its ARM Cortex-M0 based processor, giving you a very simple way to get 3D space orientation in real time.</p>",
-        "visible": "true"
+        "visible": true
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "BNO0555v",
+            "name": "5v",
             "coders": [
                 "BNO055"
             ],
@@ -46,31 +46,31 @@
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["5v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["5v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "INT",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn","Int"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"}],
                         "unique": true
                     }
                 }
@@ -78,7 +78,7 @@
             "priority": 0
         },
         {
-            "name": "BNO0553v3",
+            "name": "3v3",
             "coders": [
                 "BNO055"
             ],
@@ -99,31 +99,31 @@
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["3.3v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["3.3v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "INT",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalIn","Int"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

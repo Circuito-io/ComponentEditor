@@ -65,7 +65,7 @@
         "3.3v",
         "Barrel",
         "USB",
-        "Int",
+        "DigitalIn-Int",
         "PWM",
         "IORef",
         "ADC",
@@ -82,6 +82,7 @@
         "DigitalOut",
         "DigitalIn",
         "GndLoadSwitching",
+        "GndLoadSwitching-PWM",
         "RX",
         "TX",
         "RX2",
@@ -300,13 +301,13 @@
               "additionalProperties": false,
               "properties": {
                 "solder": {
-                  "type": "string"
+                  "type": "boolean"
                 },
                 "code": {
-                  "type": "string"
+                  "type": "boolean"
                 },
                 "verified": {
-                  "type": "string"
+                  "type": "boolean"
                 }
               },
               "required": [
@@ -322,7 +323,7 @@
               "type": "string"
             },
             "visible": {
-              "type": "string"
+              "type": "boolean"
             }
           },
           "required": [
@@ -379,7 +380,7 @@
         "derivesFrom": {
           "type": "string"
         },
-        "circuit": {
+        "circuits": {
           "type": "array",
           "items": {
             "type": "object",
@@ -403,8 +404,23 @@
                   "type": "string"
                 }
               },
-              "requires": {
-                "$ref": "#/definitions/intStringTupleArray"
+              "requiredBlocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "cost": {
+                      "type": "integer"
+                    },
+                    "blocks": {
+                      "type": "array",
+                      "itmes": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
               },
               "priority": {
                 "type": "integer"
@@ -521,6 +537,7 @@
                     },
                     "interface": {
                       "type": "object",
+                      "additionalProperties": false,
                       "properties": {
                         "unique": {
                           "type": "boolean"
@@ -539,27 +556,35 @@
                           "minItems": 1,
                           "uniqueItems": true,
                           "items": {
-                            "type": "array",
-                            "items": [
-                              {
-                                "type": "integer"
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "spec": {
+                                "type": "string"
                               },
-                              {
-                                "type": "array",
-                                "items": {
-                                  "$ref": "#/definitions/pinTypes"
-                                }
+                              "voltage": {
+                                "type": "string"
+                              },
+                              "cost": {
+                                "type": "integer"
                               }
-                            ],
-                            "additionalItems": false
+                            }
                           }
                         },
                         "provides": {
                           "type": "array",
+                          "minItems": 1,
+                          "uniqueItems": true,
                           "items": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/definitions/pinTypes"
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "spec": {
+                                "type": "string"
+                              },
+                              "voltage": {
+                                "type": "string"
+                              }
                             }
                           }
                         },

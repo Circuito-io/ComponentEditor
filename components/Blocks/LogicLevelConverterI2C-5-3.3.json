@@ -3,9 +3,9 @@
     "category": [
         "support"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "LogicLevelConverterI2C-5-3.3",
+            "name": "",
             "supportedControllers": [],
             "parts": [
                 {
@@ -17,49 +17,49 @@
                 {
                     "name": "LV",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "HV1",
                     "interface": {
-                        "requires":[[0,["SDA","5v"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "LV1",
                     "interface": {
-                        "provides":[["SDA","3.3v"]]
+                        "provides":[{"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "LV2",
                     "interface": {
-                        "provides":[["SCL","3.3v"]]
+                        "provides":[{"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "provides":[["GND"]]
+                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "HV",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "HV2",
                     "interface": {
-                        "requires":[[0,["SCL","5v"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
                     }
                 }
             ]

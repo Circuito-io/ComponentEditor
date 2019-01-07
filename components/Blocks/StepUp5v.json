@@ -3,9 +3,9 @@
     "category": [
         "support"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "StepUp5v",
+            "name": "",
             "supportedControllers": [],
             "parts": [
                 {
@@ -23,32 +23,32 @@
                 {
                     "name": "OUT5v-",
                     "interface": {
-                        "requires":[[1,["GND"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "OUT5v+",
                     "interface": {
-                        "provides":[["5v"]],
+                        "provides":[{"spec":"","voltage":"5v"}],
                         "providesLoad": 1000
                     }
                 },
                 {
                     "name": "BAT+",
                     "interface": {
-                        "requires":[[0,["3.7v","Battery"]],[1,["3.7v"]]]
+                        "requires":[{"cost":0,"spec":"Battery","voltage":"3.7v"},{"cost":1,"spec":"","voltage":"3.7v"}]
                     }
                 },
                 {
                     "name": "BAT-",
                     "interface": {
-                        "requires":[[0,["GND","Battery"]],[1,["GND"]]]
+                        "requires":[{"cost":0,"spec":"Battery","voltage":"GND"},{"cost":1,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "requires":[[0,["Battery"]]]
+                        "requires":[{"cost":0,"spec":"Battery","voltage":""}]
                     }
                 }
             ]

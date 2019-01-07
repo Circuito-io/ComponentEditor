@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Control a 8x8 LED matrix display using the MAX7219. Up to 8 modules can be chained for a longer display.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/LED-Matrix-with-Arduino/\">LED Matrix with Arduino</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "LedMatrix",
+            "name": "",
             "coders": [
                 "LedMatrix"
             ],
@@ -40,33 +40,6 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "LogicLevelConverterSPI-3.3-5"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "Reg5v"
-                    ]
-                ],
-                [
-                    11,
-                    [
-                        "Reg5v",
-                        "LogicLevelConverterSPI-3.3-5"
-                    ]
-                ]
-            ],
             "parts": [
                 {
                     "name": "this",
@@ -78,7 +51,7 @@
                     "name": "VCC",
                     "interface": {
                         "chainTo": "VCC_PT",
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 300
                     }
                 },
@@ -86,14 +59,14 @@
                     "name": "GND",
                     "interface": {
                         "chainTo": "GND_PT",
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "DIN",
                     "interface": {
                         "chainTo": "DIN_CHN",
-                        "requires":[[50,["5v","MISO"]],[1000,["5v","DigitalOut"]]],
+                        "requires":[{"cost":50,"spec":"MISO","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -101,7 +74,7 @@
                     "name": "CLK",
                     "interface": {
                         "chainTo": "CLK_PT",
-                        "requires":[[50,["5v","MOSI"]],[1000,["5v","DigitalOut"]]],
+                        "requires":[{"cost":50,"spec":"MOSI","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -109,7 +82,7 @@
                     "name": "CS",
                     "interface": {
                         "chainTo": "CS_PT",
-                        "requires":[[50,["5v","SS"]],[1000,["5v","DigitalOut"]]],
+                        "requires":[{"cost":50,"spec":"SS","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
@@ -142,6 +115,27 @@
                     "interface": {
                         "chain": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "LogicLevelConverterSPI-3.3-5"
+                    ]
+                },
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "Reg5v"
+                    ]
+                },
+                {
+                    "cost": 11,
+                    "blocks": [
+                        "Reg5v",
+                        "LogicLevelConverterSPI-3.3-5"
+                    ]
                 }
             ]
         }

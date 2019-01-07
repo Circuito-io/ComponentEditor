@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>The VL53L0X is a Time of Flight distance sensor. It send a laser pulse and measures the time it takes it to get back to the sensor. The VL53LOX can measure distances ~30 to 1000mm.</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "LIDARVL53",
+            "name": "",
             "coders": [
                 "LIDARVL53"
             ],
@@ -51,25 +51,25 @@
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[[0,["3.3v"]],[1,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[[0,["3.3v","SCL"]],[1,["5v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"},{"cost":1,"spec":"SCL","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[[0,["3.3v","SDA"]],[1,["5v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"},{"cost":1,"spec":"SDA","voltage":"5v"}]
                     }
                 }
             ]

@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>The built in APDS-9960 can measure ambient light and color, proximity and detect touchless gestures.<br> Use this sensor to control your Arduino with a swipe of your hand.</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "RGBGesture",
+            "name": "",
             "coders": [
                 "RGBGesture"
             ],
@@ -40,20 +40,6 @@
                 "RPI3B",
                 "Teensy32"
             ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    10,
-                    [
-                        "LogicLevelConverterI2C-5-3.3"
-                    ]
-                ]
-            ],
             "parts": [
                 {
                     "name": "this",
@@ -64,41 +50,49 @@
                 {
                     "name": "VL",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["3.3v","SDA"]]]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["3.3v","SCL"]]]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "INT",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn","Int"]],[1,["3.3v","DigitalIn","Int"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
                         "unique": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "LogicLevelConverterI2C-5-3.3"
+                    ]
                 }
             ]
         }

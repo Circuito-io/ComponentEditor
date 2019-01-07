@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Solenoids are a great way to induce linear motion for pushing, pulling or controlling switches and levers.</p>",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "pullPushSolenoid",
+            "name": "",
             "coders": [
                 "pullPushSolenoid"
             ],
@@ -41,20 +41,6 @@
                 "RPI3B",
                 "ATTiny85",
                 "Teensy32"
-            ],
-            "requires": [
-                [
-                    0,
-                    [
-                        "NONE"
-                    ]
-                ],
-                [
-                    1,
-                    [
-                        "Reg5v"
-                    ]
-                ]
             ],
             "parts": [
                 {
@@ -110,22 +96,30 @@
                 {
                     "name": "pin1",
                     "interface": {
-                        "requires":[[0,["5v"]]],
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
                         "requiresLoad": 700
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalOut"]],[1,["5v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
+                }
+            ],
+            "requiredBlocks": [
+                {
+                    "cost": 1,
+                    "blocks": [
+                        "Reg5v"
+                    ]
                 }
             ]
         }

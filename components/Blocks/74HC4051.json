@@ -3,9 +3,9 @@
     "category": [
         "support"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "74HC4051_3v3",
+            "name": "_3v3",
             "coders": [
                 "74HC4051"
             ],
@@ -20,52 +20,52 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VEE",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Enot",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "S0",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]],[1,["DigitalOut","3.3v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "S1",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]],[1,["DigitalOut","3.3v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "S2",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]],[1,["DigitalOut","3.3v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "A",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
@@ -73,63 +73,63 @@
                     "name": "A0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A1",
                     "interface": {
                         "codename": "1",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "2",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "3",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "4",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A5",
                     "interface": {
                         "codename": "5",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A6",
                     "interface": {
                         "codename": "6",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A7",
                     "interface": {
                         "codename": "7",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "74HC4051_5v",
+            "name": "_5v",
             "coders": [
                 "74HC4051"
             ],
@@ -144,52 +144,52 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VEE",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Enot",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "S0",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "S1",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "S2",
                     "interface": {
-                        "requires":[[0,["DigitalOut","5v"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "A",
                     "interface": {
-                        "requires":[[0,["ADC"]]],
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
                         "unique": true
                     }
                 },
@@ -197,56 +197,56 @@
                     "name": "A0",
                     "interface": {
                         "codename": "0",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A1",
                     "interface": {
                         "codename": "1",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "2",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "3",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "4",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A5",
                     "interface": {
                         "codename": "5",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A6",
                     "interface": {
                         "codename": "6",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 },
                 {
                     "name": "A7",
                     "interface": {
                         "codename": "7",
-                        "provides":[["ADC"]]
+                        "provides":[{"spec":"ADC","voltage":""}]
                     }
                 }
             ],

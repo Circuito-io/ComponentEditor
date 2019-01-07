@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This is a very simple IR emitter, that allows you to build your own IR remote control for devices that can receive an IR signal \u2026 replace a lost air-conditioner remote, or control a custom device you\u2019ve built from afar. Works for most known system. For more details, check the code library you\u2019ll receive with the circuit.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "LED_IR5v",
+            "name": "5v",
             "coders": [
                 "LED_IR"
             ],
@@ -74,34 +74,34 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 190
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["5v","Timer2"]]],
+                        "requires":[{"cost":0,"spec":"Timer2","voltage":"5v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 }
             ],
             "priority": 0
         },
         {
-            "name": "LED_IR3v3",
+            "name": "3v3",
             "coders": [
                 "LED_IR"
             ],
@@ -148,34 +148,34 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 190
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["3.3v","Timer2"]]],
+                        "requires":[{"cost":0,"spec":"Timer2","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],
             "priority": 1
         },
         {
-            "name": "LED_IR_RPI",
+            "name": "_RPI",
             "coders": [
                 "LED_IR"
             ],
@@ -220,20 +220,20 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[[0,["3.3v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
                     }
                 }
             ],

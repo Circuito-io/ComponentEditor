@@ -13,16 +13,16 @@
             "outputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>Enables transferring data to and from a standard micro SD card.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "SD",
+            "name": "",
             "coders": [
                 "SD"
             ],
@@ -64,40 +64,40 @@
                 {
                     "name": "CS",
                     "interface": {
-                        "requires":[[0,["5v","SS"]],[1,["3.3v","SS"]]],
+                        "requires":[{"cost":0,"spec":"SS","voltage":"5v"},{"cost":1,"spec":"SS","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[[1,["5v"]],[2,["3.3v"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"},{"cost":2,"spec":"","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["5v","SCK"]],[1,["3.3v","SCK"]]]
+                        "requires":[{"cost":0,"spec":"SCK","voltage":"5v"},{"cost":1,"spec":"SCK","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["5v","MOSI"]],[1,["3.3v","MOSI"]]]
+                        "requires":[{"cost":0,"spec":"MOSI","voltage":"5v"},{"cost":1,"spec":"MOSI","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[[0,["SRAMLoad"]]],
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
                         "requiresLoad": 930
                     }
                 },
@@ -105,7 +105,7 @@
                     "name": "MISOR",
                     "interface": {
                         "isBus": true,
-                        "requires":[[0,["5v","MISO"]],[1,["3.3v","MISO"]]]
+                        "requires":[{"cost":0,"spec":"MISO","voltage":"5v"},{"cost":1,"spec":"MISO","voltage":"3.3v"}]
                     }
                 }
             ]

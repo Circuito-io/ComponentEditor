@@ -4,9 +4,9 @@
         "output"
     ],
     "blockId": "7654340",
-    "circuit": [
+    "circuits": [
         {
-            "name": "L293D1M",
+            "name": "",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoGemma",
@@ -31,59 +31,59 @@
                 {
                     "name": "Enable1",
                     "interface": {
-                        "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                        "requires":[{"cost":1,"spec":"PWM","voltage":"5v"},{"cost":2,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "In1",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "requires":[[1,["GND"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "GND2",
                     "interface": {
-                        "requires":[[1,["GND"]]]
+                        "requires":[{"cost":1,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "In2",
                     "interface": {
-                        "requires":[[1,["5v","DigitalOut"]],[2,["3.3v","DigitalOut"]]],
+                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
                     "name": "+Vmotor",
                     "interface": {
-                        "requires":[[8,["3.3v"]],[7,["3.7v"]],[9,["3.7v","Battery"]],[6,["5v"]],[5,["6v"]],[3,["7.4v"]],[2,["9v"]],[1,["12v"]]],
+                        "requires":[{"cost":8,"spec":"","voltage":"3.3v"},{"cost":7,"spec":"","voltage":"3.7v"},{"cost":9,"spec":"Battery","voltage":"3.7v"},{"cost":6,"spec":"","voltage":"5v"},{"cost":5,"spec":"","voltage":"6v"},{"cost":3,"spec":"","voltage":"7.4v"},{"cost":2,"spec":"","voltage":"9v"},{"cost":1,"spec":"","voltage":"12v"}],
                         "requiresLoad": 400
                     }
                 },
                 {
                     "name": "+V",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "Out1",
                     "interface": {
-                        "provides":[["DCMA1"]]
+                        "provides":[{"spec":"DCMA1","voltage":""}]
                     }
                 },
                 {
                     "name": "Out2",
                     "interface": {
-                        "provides":[["DCMA2"]]
+                        "provides":[{"spec":"DCMA2","voltage":""}]
                     }
                 }
             ]

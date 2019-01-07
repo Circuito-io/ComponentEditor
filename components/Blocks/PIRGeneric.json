@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>The passive infrared motion sensor (PIR) allows you to detect movement of a person or animal within a 6 meter range. The sensor is based on infrared radiation returned from people and animals.<br><strong>Returned values</strong>: true - presence detected, false - no presence detected.  - Presence can be detected within a 6-meter range.</p>\n",
-        "visible": "False"
+        "visible": false
     },
-    "circuit": [
+    "circuits": [
         {
-            "name": "PIRGeneric",
+            "name": "",
             "coders": [
                 "PIRGeneric"
             ],
@@ -52,19 +52,19 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[[0,["5v"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[[0,["5v","DigitalIn"]],[1,["3.3v","DigitalIn"]]],
+                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
                         "unique": true
                     }
                 }

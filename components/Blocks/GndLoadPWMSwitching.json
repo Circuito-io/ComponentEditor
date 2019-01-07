@@ -3,9 +3,9 @@
     "category": [
         "support"
     ],
-    "circuit": [
+    "circuits": [
         {
-            "name": "GndLoadPWMSwitching",
+            "name": "",
             "supportedControllers": [],
             "parts": [
                 {
@@ -39,13 +39,13 @@
                 {
                     "name": "GndIn",
                     "interface": {
-                        "requires":[[0,["GND"]]]
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[[1,["5v","PWM"]],[2,["3.3v","PWM"]]],
+                        "requires":[{"cost":1,"spec":"PWM","voltage":"5v"},{"cost":2,"spec":"PWM","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
@@ -53,7 +53,7 @@
                     "name": "GndOut",
                     "interface": {
                         "codenameRedirect": "Sig",
-                        "provides":[["GndLoadSwitching","PWM"]],
+                        "provides":[{"spec":"PWM","voltage":""}],
                         "providesLoad": 800
                     }
                 }
