@@ -59,7 +59,7 @@ export class CoderField extends React.Component {
                 <Typeahead
                   options={["a", "b", "c"]}
                   placeholder="Select a coder..."
-                  defaultSelected={[this.state.objName]}
+                  defaultSelected={this.state.objName && [this.state.objName]}
                   onInputChange	={input => {
                     this.setState({objName: input});
                     this.props.onChange(input);
