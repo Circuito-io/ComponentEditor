@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>The SI1145 is a new sensor from SiLabs with a calibrated light sensing algorithm that can calculate UV Index. It doesn't contain an actual UV sensing element, instead it approximates it based on visible & IR light from the sun. </p>",
-        "visible": "true"
+        "visible": true
     },
     "circuits": [
         {
-            "name": "-5v",
+            "name": "5v",
             "coders": [
                 "UVSensorSI1145"
             ],
@@ -71,7 +71,7 @@
             "priority": 0
         },
         {
-            "name": "-3v3",
+            "name": "3v3",
             "coders": [
                 "UVSensorSI1145"
             ],

@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "true"
+            "verified": true,
+            "code": true,
+            "solder": true
         },
         "desc": "<p>Digital breakout board for a triple-axis gyroscope - allowing to measure change in position in 3D.<br><strong>Returned values</strong>: A tilt value between 0 and 65535 on each one of the 3 axes, X, Y and Z.<br><strong>Requires</strong>: soldering of 7 male header pins to fit onto a breadboard. Also, solder together the two pads marked with CLK IN - those pads allow you to connect an external clock, which we assume you don\u2019t really need. (if you do - don\u2019t solder ofcourse :)). This component requires a Logic Level Converter, which will be provided as part of the wiring schematic. Please note that the Logic Level Converter itself also requires the soldering of 12 male header pins (6 X 2) to fit onto the breadboard.</p>\n",
-        "visible": "False"
+        "visible": false
     },
     "circuits": [
         {

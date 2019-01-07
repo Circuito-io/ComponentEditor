@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>The RFID module allows reading/writing RFID card/Tags.<br><strong>Returned Value</strong>: Card tag ID via SPI</p>\n<p><strong>Requires</strong>: Soldering 8 pin male header</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Security-System-and-Access-Control-with-Arduino-an/?ALLSTEPS\">Security System and Access Control with Arduino and RFID</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
     "circuits": [
         {

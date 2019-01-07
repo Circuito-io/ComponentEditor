@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>This is an air quality sensor, for measuring gas and VOCs (Volatile Organic Compounds). It can measure eCO2 (equivalent calculated carbon-dioxide) concentration between 0 to 60,000 ppm (parts per million), and TVOC (Total Volatile Organic Compound) concentration between 0 to 60,000 ppb (parts per billion).</p>",
-        "visible": "true"
+        "visible": true
     },
     "circuits": [
         {
-            "name": "-5v",
+            "name": "5v",
             "coders": [
                 "SGP30"
             ],
@@ -72,7 +72,7 @@
             "priority": 0
         },
         {
-            "name": "-3v3",
+            "name": "3v3",
             "coders": [
                 "SGP30"
             ],

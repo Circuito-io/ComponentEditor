@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "true"
+            "verified": false,
+            "code": false,
+            "solder": true
         },
         "desc": "<p>This sensnor can measure Temperature, Humidity, Pressure and Gas. The gas sensor detects the volatile organic compounds (VOC) in the air, but it can not distinguish between different gasses. It is recommended to calibrate it, if you wish to use the gas sensor.</p>",
-        "visible": "true"
+        "visible": true
     },
     "circuits": [
         {
-            "name": "-5v",
+            "name": "5v",
             "coders": [
                 "BME680"
             ],
@@ -71,7 +71,7 @@
             "priority": 0
         },
         {
-            "name": "-3v3",
+            "name": "3v3",
             "coders": [
                 "BME680"
             ],

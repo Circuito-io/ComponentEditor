@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This is a very small light sensor that reacts to changes in ambient light. (turned out light bulb, sun light).<br><strong>Returned values</strong>: from 0 (no light) to 1023 (maximal light). - Works in ambient Light, regular daylight.<br><strong>Sample applications</strong>: Detect that light has been turned out and perform some action, like say \u201cHello\u201d.</p>\n",
-        "visible": "False"
+        "visible": false
     },
     "circuits": [
         {

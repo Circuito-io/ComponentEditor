@@ -29,29 +29,32 @@ filesToAdd = []
             
 
 # # 2. change circuit names
-# for (dirpath, dirnames, filenames) in os.walk(path):
+for (dirpath, dirnames, filenames) in os.walk(path):
     
-#     for filename in filenames:
-#         if filename.endswith('.json'): 
+    for filename in filenames:
+        if filename.endswith('.json'): 
             
-#             print(filename)
+            print(filename)
 
-#             json_data=open(dirpath + '/' + filename).read()
-#             data = json.loads(json_data)
+            json_data=open(dirpath + '/' + filename).read()
+            data = json.loads(json_data)
             
             
-#             if data.get('circuits'):
-#                 for circuit in data.get('circuits'):
-#                     if data.get('name') in circuit.get('name'):
-#                         circuit['name'] = circuit['name'].split(data['name'])[-1]
-#                         for char in ['_','-']:
-#                             circuit['name'].replace(char,'')
-#                         print(circuit['name'])
-#                         # import pdb; pdb.set_trace() 
+            if data.get('circuits'):
+                for circuit in data.get('circuits'):
+                    if data.get('name') in circuit.get('name'):
+                        circuit['name'] = circuit['name'].split(data['name'])[-1]
+                        for char in ['_','-']:
+                            circuit['name'].replace(char,'')
+                    elif circuit.get('name').startswith('-'):
+                        circuit['name'] = circuit['name'].replace('-','')
+                        # import pdb; pdb.set_trace() 
+                        print(circuit['name'])
+                        # import pdb; pdb.set_trace() 
             
-#                 f = open(dirpath + '/' + filename, 'w')
-#                 f.write(newOrginizeJson(data))
-#                 f.close()
+                f = open(dirpath + '/' + filename, 'w')
+                f.write(newOrginizeJson(data))
+                f.close()
             
 
 # 3. req and prov expantion to object
@@ -144,41 +147,66 @@ filesToAdd = []
 
 
 # 4. change requires to requiredBlock
-for (dirpath, dirnames, filenames) in os.walk(path):
+# for (dirpath, dirnames, filenames) in os.walk(path):
     
-    for filename in filenames:
-        if filename.endswith('.json'): 
+#     for filename in filenames:
+#         if filename.endswith('.json'): 
             
-            print(filename)
+#             print(filename)
 
-            json_data=open(dirpath + '/' + filename).read()
-            data = json.loads(json_data)
+#             json_data=open(dirpath + '/' + filename).read()
+#             data = json.loads(json_data)
             
             
-            if 'circuits' in data:
-                for circuit in data.get('circuits'):
-                    if 'requires' in circuit:
-                        requiredBlocks = []
-                        for pr, req in circuit['requires']:
-                            # remove NONE elements from data, they will be added dynamically
-                            if 'NONE' in req:
-                                continue
-                            newReq = {}
-                            newReq['cost'] = pr
-                            newReq['blocks'] = req
+#             if 'circuits' in data:
+#                 for circuit in data.get('circuits'):
+#                     if 'requires' in circuit:
+#                         requiredBlocks = []
+#                         for pr, req in circuit['requires']:
+#                             # remove NONE elements from data, they will be added dynamically
+#                             if 'NONE' in req:
+#                                 continue
+#                             newReq = {}
+#                             newReq['cost'] = pr
+#                             newReq['blocks'] = req
                         
-                            requiredBlocks.append(newReq)
+#                             requiredBlocks.append(newReq)
                         
                         
-                        circuit['requiredBlocks'] = requiredBlocks
-                        del circuit['requires']
-                        # import pdb; pdb.set_trace() 
+#                         circuit['requiredBlocks'] = requiredBlocks
+#                         del circuit['requires']
+#                         # import pdb; pdb.set_trace() 
                         
-                f = open(dirpath + '/' + filename, 'w')
-                f.write(newOrginizeJson(data))
-                f.close()
+#                 f = open(dirpath + '/' + filename, 'w')
+#                 f.write(newOrginizeJson(data))
+#                 f.close()
             
             
+# 5. Change non boolean fields to be boolean
+# for (dirpath, dirnames, filenames) in os.walk(path):
+    
+#     for filename in filenames:
+#         if filename.endswith('.json'): 
+            
+#             print(filename)
+
+#             json_data=open(dirpath + '/' + filename).read()
+#             data = json.loads(json_data)
+            
+            
+#             if 'app' in data:
+#                 app = data['app']
+                
+#                 for indicator, value in app['indicators'].items():
+#                     app['indicators'][indicator] = True if value == 'true' else False
+                
+#                 if app.get('visible'):
+#                     app['visible'] = True if app['visible'] == 'true' else False
+                    
+#                 # import pdb; pdb.set_trace()         
+#                 f = open(dirpath + '/' + filename, 'w')
+#                 f.write(newOrginizeJson(data))
+#                 f.close()
             
             
             

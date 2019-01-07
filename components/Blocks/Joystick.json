@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>This Joystick is simply two 10Kohm potentiometers - one for each axis. The module also has a pushbutton for press functionality.</p>\n<p><strong>Returned Values</strong>: &#39;0 - 1023&#39; analog input value per direction and logical &#39;0&#39; or &#39;1&#39; for press.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://blog.arduino.cc/2012/12/23/xbee-controlled-4wd-wireless-robot/\">XBEE-CONTROLLED 4WD WIRELESS ROBOT</a></p>\n",
-        "visible": "False"
+        "visible": false
     },
     "circuits": [
         {

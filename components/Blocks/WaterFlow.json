@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "false",
-            "code": "false",
-            "solder": "false"
+            "verified": false,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>The water flow sensor based on a water rotor and a hall-effect sensor.<br> When the water flows through the rotor, the rotor rolls and the speed of it changes with a different rate of flow. The hall-effect sensor outputs the corresponding pulse signal.<br><strong>Returned Value</strong>: RPM calculated from the built-in hall effect sensor</p>",
-        "visible": "False"
+        "visible": false
     },
     "circuits": [
         {

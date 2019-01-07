@@ -13,16 +13,16 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "false",
-            "solder": "false"
+            "verified": true,
+            "code": false,
+            "solder": false
         },
         "desc": "<p>This Analog Heart Rate Sensor (ECG) supply a clear measurement of the electrical pulse of the heart. It can be used to measure your heart bpm. Recommend input voltage 5V.</p>",
-        "visible": "true"
+        "visible": true
     },
     "circuits": [
         {
-            "name": "-5v",
+            "name": "5v",
             "coders": [
                 "HeartRateGravity"
             ],
@@ -67,7 +67,7 @@
             "priority": 0
         },
         {
-            "name": "-3v3",
+            "name": "3v3",
             "coders": [
                 "HeartRateGravity"
             ],

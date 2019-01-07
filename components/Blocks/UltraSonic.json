@@ -13,12 +13,12 @@
             "inputs"
         ],
         "indicators": {
-            "verified": "true",
-            "code": "true",
-            "solder": "false"
+            "verified": true,
+            "code": true,
+            "solder": false
         },
         "desc": "<p>The ultrasonic sensor measure the proximity of an object.<br><strong>Returned Values</strong>: 0 - 645 centimeters (0 - 254 inches) - Objects not detected beyond this range, and are best detected at a distances higher than 100 centimeters.<br><strong>Requires</strong>: 7 male header pins soldered to fit into the breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
-        "visible": "False"
+        "visible": false
     },
     "circuits": [
         {
