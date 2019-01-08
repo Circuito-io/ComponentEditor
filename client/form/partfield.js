@@ -1,42 +1,18 @@
 import React from "react";
-import { FormGroup, InputGroup, Modal, Button } from "react-bootstrap";
-import { DefaultLabel } from "react-jsonschema-form-extras/lib/Label";
-import { Typeahead } from "react-bootstrap-typeahead";
+import { Button } from "react-bootstrap";
 import { toast } from "react-toastify";
+import { Typeahead } from "react-bootstrap-typeahead";
+import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { partSchema, partuiSchema } from "../schema/partSchema.js";
 import { read_a_part, update_a_part } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
 
-export class PartField extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.currentData = null;
-
-    this.state = {
-      objName: props.formData,
-      showModal: false,
-      objData: null
-    };
-
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-    this.save = this.save.bind(this);
-  }
-
+export class PartField extends InputGroupModalField {
   showModal() {
     read_a_part(this.state.objName).then(newPartData =>
       this.setState({ objData: newPartData, showModal: true })
     );
-  }
-
-  hideModal() {
-    this.setState({ showModal: false });
-  }
-
-  componentDidUpdate() {
-    this.currentData = null;
   }
 
   save() {
@@ -47,39 +23,26 @@ export class PartField extends React.Component {
     });
   }
 
-  render() {
+  renderModalTitle() {
+    return "Part " + this.state.objName
+  }
+
+  renderInputGroup() {
+    return (<Typeahead
+      options={["a", "b", "c"]}
+      placeholder="Select a part..."
+      defaultSelected={this.state.objName && [this.state.objName]}
+      onInputChange={input => {
+        this.setState({ objName: input });
+        this.props.onChange(input);
+      }}
+    />);
+  }
+
+  renderModalBody() {
     return (
-      <React.Fragment>
-        <FormGroup>
-          <DefaultLabel {...this.props} />
-
-          <InputGroup>
-            <Typeahead
-              options={["a", "b", "c"]}
-              placeholder="Select a part..."
-              defaultSelected={this.state.objName && [this.state.objName]}
-              onInputChange={input => {
-                this.setState({ objName: input });
-                this.props.onChange(input);
-              }}
-            />
-            <InputGroup.Button className="input-group-append">
-              <Button
-                className="btn-outline-secondary"
-                onClick={this.showModal}
-              >
-                Edit Part
-              </Button>
-            </InputGroup.Button>
-          </InputGroup>
-        </FormGroup>
-
-        <Modal show={this.state.showModal} onHide={this.hideModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Part {this.state.objName}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <EditorForm
+    <React.Fragment>
+    <EditorForm
               schema={partSchema}
               uiSchema={partuiSchema}
               formData={this.state.objData}
@@ -91,13 +54,6 @@ export class PartField extends React.Component {
             </EditorForm>
 
             <SVGCreator />
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.save}>Save</Button>
-            <Button onClick={this.hideModal}>Close</Button>
-          </Modal.Footer>
-        </Modal>
-      </React.Fragment>
-    );
+            </React.Fragment>);
   }
 }

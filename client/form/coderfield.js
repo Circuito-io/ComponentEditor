@@ -1,8 +1,8 @@
 import React from "react";
-import { FormGroup, InputGroup, Modal, Button } from "react-bootstrap";
-import { DefaultLabel } from "react-jsonschema-form-extras/lib/Label";
-import { Typeahead } from "react-bootstrap-typeahead";
+import { Button } from "react-bootstrap";
 import { toast } from "react-toastify";
+import { Typeahead } from "react-bootstrap-typeahead";
+import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { coderSchema, coderuiSchema } from "../schema/coderSchema.js";
 import { read_a_coder, update_a_coder } from "../controller.js";
@@ -10,35 +10,11 @@ import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
 
-export class CoderField extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.currentData = null;
-
-    this.state = {
-      objName: props.formData,
-      showModal: false,
-      objData: null
-    };
-
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-    this.save = this.save.bind(this);
-  }
-
+export class CoderField extends InputGroupModalField {
   showModal() {
     read_a_coder(this.state.objName).then(newPartData =>
       this.setState({ objData: newPartData, showModal: true })
     );
-  }
-
-  hideModal() {
-    this.setState({ showModal: false });
-  }
-
-  componentDidUpdate() {
-    this.currentData = null;
   }
 
   save() {
@@ -49,39 +25,26 @@ export class CoderField extends React.Component {
     });
   }
 
-  render() {
+  renderModalTitle() {
+    return "Coder " + this.state.objName
+  }
+
+  renderInputGroup() {
+    return (<Typeahead
+      options={["a", "b", "c"]}
+      placeholder="Select a coder..."
+      defaultSelected={this.state.objName && [this.state.objName]}
+      onInputChange={input => {
+        this.setState({ objName: input });
+        this.props.onChange(input);
+      }}
+    />);
+  }
+
+  renderModalBody() {
     return (
-      <React.Fragment>
-        <FormGroup>
-          <DefaultLabel {...this.props} />
-
-          <InputGroup>
-            <Typeahead
-              options={["a", "b", "c"]}
-              placeholder="Select a coder..."
-              defaultSelected={this.state.objName && [this.state.objName]}
-              onInputChange={input => {
-                this.setState({ objName: input });
-                this.props.onChange(input);
-              }}
-            />
-            <InputGroup.Button className="input-group-append">
-              <Button
-                className="btn-outline-secondary"
-                onClick={this.showModal}
-              >
-                Edit Coder
-              </Button>
-            </InputGroup.Button>
-          </InputGroup>
-        </FormGroup>
-
-        <Modal show={this.state.showModal} onHide={this.hideModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Coder {this.state.objName}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <EditorForm
+    <React.Fragment>
+    <EditorForm
               schema={coderSchema}
               uiSchema={coderuiSchema}
               formData={this.state.objData}
@@ -98,13 +61,6 @@ export class CoderField extends React.Component {
               name="UNIQUE_ID_OF_DIV"
               editorProps={{ $blockScrolling: true }}
             />
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.save}>Save</Button>
-            <Button onClick={this.hideModal}>Close</Button>
-          </Modal.Footer>
-        </Modal>
-      </React.Fragment>
-    );
+            </React.Fragment>);
   }
 }
