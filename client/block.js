@@ -38,7 +38,7 @@ export class Block extends React.Component {
         .then((blockData) => {
           this.setState({ formSrcData: blockData });
 
-          updateConnectors()
+          this.updateConnectors()
         })
     }
   }
