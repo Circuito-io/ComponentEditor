@@ -1,0 +1,38 @@
+{
+    "name": "IRPhotoTransistor",
+    "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+    ],
+    "code": {
+        "global": "    #define THRESHOLD_{{varname}}   100\n    int {{varname}}AverageLight;\n",
+        "setup": "    {{varname}}AverageLight = {{varname}}.readAverage();\n",
+        "snippetCode": "    // Get current IR light reading, substract the ambient value to detect IR light changes\n    int {{varname}}Sample = {{varname}}.read();\n    int {{varname}}Diff = abs({{varname}}AverageLight - {{varname}}Sample);\n    Serial.print(F(\"Light Diff: \")); Serial.println({{varname}}Diff);\n"
+    },
+    "license": "circuito",
+    "instantiate": {
+        "classname": "Transistor",
+        "ports": [
+            "Sig"
+        ],
+        "varname": "IRTransistor"
+    },
+    "files": [
+        "IRPhotoTransistor.cpp",
+        "IRPhotoTransistor.h",
+        "IRPhotoTransistor_license.txt"
+    ],
+    "includeHeaders": [
+        "IRPhotoTransistor.h"
+    ]
+}

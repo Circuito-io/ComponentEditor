@@ -1,0 +1,159 @@
+{
+    "name": "IRPhotoTransistor",
+    "category": [
+        "input"
+    ],
+    "blockId": "9089",
+    "app": {
+        "appName": "IR Phototransistor",
+        "image": "http://res.cloudinary.com/circuito/image/upload/x8pzop9ftagchdrvgzmi",
+        "numericName": "OP560C",
+        "shortName": "Phototransistor",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": false,
+            "code": true,
+            "solder": false
+        },
+        "desc": "<p>This IR light sensor conduct the current from the collector leg to the emitter leg according to the IR light it measures (reacts best for 935nm wavelength).</p>\n",
+        "visible": false
+    },
+    "circuits": [
+        {
+            "name": "5v",
+            "coders": [
+                "IRPhotoTransistor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRPhotoTransistor"
+                },
+                {
+                    "name": "R1",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.con1",
+                    "to": "R1.con0"
+                },
+                {
+                    "from": "R1.con1",
+                    "to": "0"
+                },
+                {
+                    "from": "this.con0",
+                    "to": "5v"
+                },
+                {
+                    "from": "this.con1",
+                    "to": "Sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
+                    "name": "5v",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 0
+        },
+        {
+            "name": "3v3",
+            "coders": [
+                "IRPhotoTransistor"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoProMini3v3",
+                "ATTiny85",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "IRPhotoTransistor"
+                },
+                {
+                    "name": "R1",
+                    "part": "Res1KO"
+                }
+            ],
+            "wires": [
+                {
+                    "from": "this.con1",
+                    "to": "R1.con0"
+                },
+                {
+                    "from": "R1.con1",
+                    "to": "0"
+                },
+                {
+                    "from": "this.con0",
+                    "to": "5v"
+                },
+                {
+                    "from": "this.con1",
+                    "to": "Sig"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "0",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
+                    "name": "5v",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                    }
+                },
+                {
+                    "name": "Sig",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        }
+    ]
+}
