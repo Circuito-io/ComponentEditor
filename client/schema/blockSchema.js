@@ -1,17 +1,35 @@
-import {
-  circuitsSchema,
-  circuitsuiSchema
-} from "./circuitSchema";
+import { circuitsSchema, circuitsuiSchema } from "./circuitSchema";
+
+const tagsEnum = ["Controller", "Power supply", "Support"];
+const categoryEnum = ["Controller", "Power supply", "Support"];
 
 export const blockuiSchema = {
   name: {
-    "ui:readonly": true
+    "ui:readonly": true,
+    classNames: "two-coloumn-field"
+  },
+  blockId: {
+    classNames: "two-coloumn-field"
+  },
+  category: {
+    "ui:field": "typeahead",
+    typeahead: {
+      options: categoryEnum,
+      minLength: 0,
+      multiple: true
+    }
   },
   app: {
+    numericName: {
+      classNames: "two-coloumn-field"
+    },
+    shortName: {
+      classNames: "two-coloumn-field"
+    },
     tags: {
       "ui:field": "typeahead",
       typeahead: {
-        options: ["Controller", "Power supply", "Support"],
+        options: tagsEnum,
         minLength: 0,
         multiple: true
       }
@@ -22,6 +40,12 @@ export const blockuiSchema = {
     indicators: {
       verified: {
         "ui:widget": "hidden"
+      },
+      code: {
+        classNames: "two-coloumn-field"
+      },
+      solder: {
+        classNames: "two-coloumn-field"
       }
     },
     desc: {
@@ -44,7 +68,7 @@ export const blockuiSchema = {
 
 export const blockSchema = {
   type: "object",
-  required: ["name", "blockId","category"],
+  required: ["name", "blockId", "category"],
   properties: {
     name: {
       type: "string",
@@ -55,9 +79,13 @@ export const blockSchema = {
       title: "Block ID"
     },
     category: {
-      type: "string",
       title: "Category",
-      enum: ["output", "input", "controller", "power", "support"]
+      type: "array",
+      items: {
+        type: "string",
+        enum: categoryEnum
+      },
+      uniqueItems: true
     },
     app: {
       type: "object",
@@ -66,47 +94,57 @@ export const blockSchema = {
       properties: {
         appName: {
           type: "string",
+          title: "Application name"
         },
         numericName: {
           type: "string",
+          title: "Numeric name"
         },
         shortName: {
           type: "string",
+          title: "Short name"
         },
         image: {
-          type: "string"
+          type: "string",
+          title: "Image"
         },
         tags: {
-          type: "string"
+          title: "Tags",
+          type: "array",
+          items: {
+            type: "string",
+            enum: tagsEnum
+          },
+          uniqueItems: true
         },
         visible: {
           type: "boolean",
-          title: "List in application"
+          title: "Visible in application"
         },
         indicators: {
           type: "object",
           title: "Indicators",
           properties: {
-            "verified": {
+            verified: {
               type: "boolean",
               default: false
             },
-            "code": {
+            code: {
               type: "boolean",
               title: "Has coder support",
               default: false
             },
-            "solder": {
+            solder: {
               type: "boolean",
               title: "Requires soldering",
               default: false
-            },
+            }
           }
         },
         desc: {
           type: "string",
           title: "Description"
-        },
+        }
       }
     },
     notes: {

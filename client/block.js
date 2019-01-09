@@ -23,11 +23,9 @@ export class Block extends React.Component {
   }
 
   componentDidMount() {
-    console.log('block update');
     if (this.props.block != null) {
       // update block
       var block = this.props.block
-      console.log("Update form", block);
 
       if (block == undefined) {
         this.setState({ formSrcData: {} });
@@ -36,7 +34,6 @@ export class Block extends React.Component {
 
       read_a_block(block)
         .then((blockData) => {
-          console.log("setting", blockData);
           this.setState({ formSrcData: blockData });
         })
     }
@@ -52,6 +49,7 @@ export class Block extends React.Component {
     update_a_block(this.props.block, this.currentData)
       .then((json) => {
         console.log("Update response:", json);
+        this.modified = false;
       })
   }
 
