@@ -1,4 +1,7 @@
-import { supportedControllersUISchema } from "../form/commonfields"
+import {
+  supportedControllersSchema,
+  supportedControllersUISchema
+} from "../form/commonfields";
 
 export const coderuiSchema = {
   desc: {
@@ -6,6 +9,11 @@ export const coderuiSchema = {
   },
   supportedControllers: supportedControllersUISchema,
   files: {
+    "ui:options": {
+      orderable: false
+    }
+  },
+  includeHeaders: {
     "ui:options": {
       orderable: false
     }
@@ -43,23 +51,12 @@ export const coderSchema = {
       type: "string",
       title: "Name"
     },
-    supportedControllers: {
-      type: "string",
-      title: "Supported controllers"
-    },
+    supportedControllers: supportedControllersSchema,
     files: {
       type: "array",
       title: "Library files",
       items: {
-        type: "string"
-      }
-    },
-    uploadFiles: {
-      type: "array",
-      title: "Upload library files",
-      items: {
         type: "string",
-        format: "data-url",
       }
     },
     license: {
@@ -80,14 +77,16 @@ export const coderSchema = {
           title: "Variable name"
         },
         ports: {
-          type: "string",
-          title: "Ports"
+          type: "array",
+          title: "Ports",
+          items: { type: "string" }
         }
       }
     },
     includeHeaders: {
-      type: "string",
-      title: "Include header files"
+      type: "array",
+      title: "Include header files",
+      items: {type: "string"}
     },
     code: {
       type: "object",

@@ -1,0 +1,18 @@
+  
+  fieldset .two-coloumn-field:nth-child(even) {
+    float: right;
+    padding-left: 1em;
+    width: 50%;
+  }
+  
+  fieldset .two-coloumn-field:nth-child(odd) {
+    float: left;
+    padding-right: 1em;
+    width: 50%;
+  }
+  
+
+  form > p {
+    padding: 1em;
+  }
+  
