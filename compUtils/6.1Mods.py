@@ -29,32 +29,32 @@ filesToAdd = []
             
 
 # # 2. change circuit names
-for (dirpath, dirnames, filenames) in os.walk(path):
+# for (dirpath, dirnames, filenames) in os.walk(path):
     
-    for filename in filenames:
-        if filename.endswith('.json'): 
+#     for filename in filenames:
+#         if filename.endswith('.json'): 
             
-            print(filename)
+#             print(filename)
 
-            json_data=open(dirpath + '/' + filename).read()
-            data = json.loads(json_data)
+#             json_data=open(dirpath + '/' + filename).read()
+#             data = json.loads(json_data)
             
             
-            if data.get('circuits'):
-                for circuit in data.get('circuits'):
-                    if data.get('name') in circuit.get('name'):
-                        circuit['name'] = circuit['name'].split(data['name'])[-1]
-                        for char in ['_','-']:
-                            circuit['name'].replace(char,'')
-                    elif circuit.get('name').startswith('-'):
-                        circuit['name'] = circuit['name'].replace('-','')
-                        # import pdb; pdb.set_trace() 
-                        print(circuit['name'])
-                        # import pdb; pdb.set_trace() 
+#             if data.get('circuits'):
+#                 for circuit in data.get('circuits'):
+#                     if data.get('name') in circuit.get('name'):
+#                         circuit['name'] = circuit['name'].split(data['name'])[-1]
+#                         for char in ['_','-']:
+#                             circuit['name'].replace(char,'')
+#                     elif circuit.get('name').startswith('-'):
+#                         circuit['name'] = circuit['name'].replace('-','')
+#                         # import pdb; pdb.set_trace() 
+#                         print(circuit['name'])
+#                         # import pdb; pdb.set_trace() 
             
-                f = open(dirpath + '/' + filename, 'w')
-                f.write(newOrginizeJson(data))
-                f.close()
+#                 f = open(dirpath + '/' + filename, 'w')
+#                 f.write(newOrginizeJson(data))
+#                 f.close()
             
 
 # 3. req and prov expantion to object
