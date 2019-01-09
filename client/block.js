@@ -2,8 +2,7 @@ import React from "react";
 import { Panel, PanelGroup, Button } from "react-bootstrap";
 import { EditorForm } from "./form/editorform.js";
 import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
-import { circuitsSchema, circuitsuiSchema } from "./schema/circuitSchema.js";
-import { read_a_block, update_a_block, read_a_part, read_a_svgdata } from "./controller.js";
+import { read_a_block, update_a_block, read_a_part, read_a_svgdata, list_all_coders, list_all_parts, list_all_blocks } from "./controller.js";
 
 export class Block extends React.Component {
   constructor(props) {
@@ -11,6 +10,9 @@ export class Block extends React.Component {
 
     this.state = {
       formSrcData: {},
+      partsList: [],
+      codersList: [],
+      blocksList: []
     };
 
     this.modified = false;
@@ -18,7 +20,6 @@ export class Block extends React.Component {
 
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateConnectors = this.updateConnectors.bind(this);
-
     this.save = this.save.bind(this);
 
     this.props.setSave(this.save);
@@ -34,18 +35,36 @@ export class Block extends React.Component {
         return
       }
 
+      list_all_parts().then( parts =>
+        {this.setState({partsList: parts})}
+      );
+
+      list_all_coders().then ( coders =>
+        {this.setState({codersList: coders})}
+      );
+
+      list_all_blocks().then ( blocks =>
+        {this.setState({blocksList: blocks})}
+      );
+
       read_a_block(block)
         .then((blockData) => {
           this.setState({ formSrcData: blockData });
-
+          
           this.updateConnectors()
         })
     }
   }
 
   updateConnectors() {
+    this.setState({connectors: []});
 
-    var parts = this.state.formSrcData.circuits && this.state.formSrcData.circuits.map (circuit => {
+    var circuits = this.state.formSrcData.circuits && this.state.formSrcData.circuits;
+
+    if (!circuits)
+      return;
+
+    var parts = circuits.map (circuit => {
       return circuit.parts && circuit.parts.map (part => {
         read_a_part(part.part).then(partData => {
           var symbolurl = partData.symbol && partData.symbol.URL;
@@ -58,8 +77,11 @@ export class Block extends React.Component {
           }
 
           read_a_svgdata(imgid).then(svgdata => {
-            console.log(part.name, svgdata.ConnectorsNames);
-            // TODO: USE THIS DATA...
+            var normalizedConnectorsNames = svgdata.ConnectorsNames.map(connector => `${part.name}.${connector}`);
+            console.log("Adding", normalizedConnectorsNames, "from circuit", circuit.name);
+            // BUG: currently all connectors from all circuits are added to the same variable
+            // But the react doesn't support different enums for different array elements (circuits)
+            this.setState({connectors: this.state.connectors.concat(normalizedConnectorsNames) });
           })
         }) })
     });
@@ -89,9 +111,13 @@ export class Block extends React.Component {
             </Panel.Heading>
             <Panel.Body collapsible>
               <EditorForm
-                schema={blockSchema}
-                uiSchema={blockuiSchema}
+                schema={blockSchema(this.state.connectors)}
+                uiSchema={blockuiSchema(this.state.blocksList)}
                 formData={this.state.formSrcData}
+                formContext={{
+                  partsList: this.state.partsList,
+                  codersList: this.state.codersList
+                }}
                 onChange={data => {
                   this.modified=true; 
                   this.props.updateData(data);

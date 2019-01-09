@@ -5,7 +5,7 @@ import { Typeahead } from "react-bootstrap-typeahead";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { partSchema, partuiSchema } from "../schema/partSchema.js";
-import { read_a_part, update_a_part } from "../controller.js";
+import { read_a_part, update_a_part, list_all_parts } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
 
 export class PartField extends InputGroupModalField {
@@ -29,13 +29,13 @@ export class PartField extends InputGroupModalField {
 
   renderInputGroup() {
     return (<Typeahead
-      options={["a", "b", "c"]}
+      options={this.props.formContext.partsList}
       placeholder="Select a part..."
       defaultSelected={this.state.objName && [this.state.objName]}
-      onInputChange={input => {
-        this.setState({ objName: input });
-        this.props.onChange(input);
-      }}
+      onChange={selection => {
+        this.setState({ objName: selection[0] });
+        this.props.onChange(selection[0]);
+        }}
     />);
   }
 

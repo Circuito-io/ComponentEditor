@@ -31,12 +31,12 @@ export class CoderField extends InputGroupModalField {
 
   renderInputGroup() {
     return (<Typeahead
-      options={["a", "b", "c"]}
+      options={this.props.formContext.codersList}
       placeholder="Select a coder..."
       defaultSelected={this.state.objName && [this.state.objName]}
-      onInputChange={input => {
-        this.setState({ objName: input });
-        this.props.onChange(input);
+      onChange={selection => {
+        this.setState({ objName: selection[0] });
+        this.props.onChange(selection[0]);
       }}
     />);
   }

@@ -15,8 +15,9 @@ function list_all_factory(objPrefix) {
     }
 }
 
-export const list_all_blocks = list_all_factory('blocks');
-export const list_all_parts = list_all_factory('parts');
+export const list_all_blocks  = list_all_factory('blocks');
+export const list_all_parts   = list_all_factory('parts');
+export const list_all_coders  = list_all_factory('coders');
 
 export var all_blocks_cached = null;
 export var all_parts_cached = null;
