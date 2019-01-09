@@ -1,0 +1,31 @@
+{
+    "name": "IRPhotoTransistor",
+    "symbol": {
+        "ref": "circuito_LDR (Mini Photocell).svg",
+        "URL": "https://res.cloudinary.com/circuito/image/upload/srydpq5uc1cigzsn6t0v"
+    },
+    "displayName": "IR Phototransistor",
+    "category": [
+        "input"
+    ],
+    "desc": "<p>This IR light sensor conduct the current from the collector leg to the emitter leg according to the IR light it measures (reacts best for 935nm wavelength).</p>\n",
+        
+    "bom": [
+        {
+            "name": "octopart",
+            "image": "https://res.cloudinary.com/circuito/image/upload/x8pzop9ftagchdrvgzmi",
+            "link": "https://octopart.com/search?q=op560c&start=0",
+            "price": "1.17",
+            "SKU": "365-1073-ND"
+        }
+    ],
+    "info": {
+        "setup": "",
+        "test": ""
+    },
+    "placing": {
+        "onBreadboard": true,
+        "row": 4,
+        "rotation": 0
+    }
+}
