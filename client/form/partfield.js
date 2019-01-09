@@ -43,8 +43,8 @@ export class PartField extends InputGroupModalField {
     return (
     <React.Fragment>
     <EditorForm
-              schema={partSchema}
-              uiSchema={partuiSchema}
+              schema={partSchema(this.props.formContext.partsList)}
+              uiSchema={partuiSchema(this.props.formContext.partsList)}
               formData={this.state.objData}
               onChange={form => (this.currentData = form.formData)}
             >
