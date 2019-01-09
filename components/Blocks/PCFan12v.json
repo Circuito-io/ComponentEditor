@@ -50,8 +50,8 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":""}],
-                        "requiresLoad": 80,
+                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":"5v"},{"cost":1,"spec":"GndLoadSwitching-PWM","voltage":"3.3v"}],
+                        
                         "unique": true
                     }
                 },
