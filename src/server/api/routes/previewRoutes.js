@@ -2,6 +2,6 @@
 module.exports = function(app) {
   var previewController = require('../controllers/previewController');
 
-  app.route('/preview')
+  app.route('/api/preview')
     .get(previewController.preview);
 };

@@ -2,6 +2,6 @@
 module.exports = function(app) {
   var upload = require('../controllers/uploadController');
 
-  app.route('/upload')
+  app.route('/api/upload')
     .get(upload.upload);
 };

@@ -1,13 +1,9 @@
 import 'whatwg-fetch';
 import urlJoin from 'proper-url-join';
-import {
-    ToastContainer,
-    toast
-} from 'react-toastify';
 
 function list_all_factory(objPrefix) {
     return function () {
-        return fetch('/' + objPrefix)
+        return fetch(urlJoin('/api', objPrefix))
             .then((response) => response.json())
             .catch((ex) => {
                 console.log('parsing failed', ex);
@@ -40,7 +36,7 @@ export function cacheData() {
 
 function read_a_factory(objPrefix) {
     return function (name) {
-        return window.fetch(urlJoin(objPrefix, name))
+        return window.fetch(urlJoin('/api', objPrefix, name))
             .then((response) => response.json())
             .catch((ex) => {
                 console.log('parsing failed', ex);
@@ -54,7 +50,7 @@ export const read_a_coder = read_a_factory('coders');
 
 function update_a_factory(objPrefix) {
     return function (name, data) {
-        return window.fetch(urlJoin(objPrefix, name), {
+        return window.fetch(urlJoin('/api', objPrefix, name), {
                 method: 'put',
                 headers: {
                     'Content-Type': 'application/json'
@@ -73,14 +69,14 @@ export const update_a_coder = update_a_factory('coders');
 
 
 export function invoke_upload() {
-    return window.fetch('/upload')
+    return window.fetch('/api/upload')
         .catch((ex) => {
             console.log('upload failed', ex);
         });
 }
 
 export function read_a_svgdata(img) {
-    return window.fetch(urlJoin('/svgdata', img))
+    return window.fetch(urlJoin('/api/svgdata', img))
         .then((response) => response.json())
         .catch((ex) => {
             console.log('parsing failed', ex);
