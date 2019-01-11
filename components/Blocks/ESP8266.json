@@ -22,9 +22,9 @@
     },
     "circuits": [
         {
-            "name": "_HardwareSerial5v",
+            "name": "HardwareSerial5v",
             "coders": [
-                "ESP8266_HardwareSerial"
+                "ESP8266HardwareSerial"
             ],
             "supportedControllers": [
                 "ArduinoLeonardo",
@@ -80,7 +80,7 @@
                 },
                 {
                     "from": "LLC.HV",
-                    "to": "HV"
+                    "to": "hv"
                 },
                 {
                     "from": "LLC.GND",
@@ -109,7 +109,7 @@
                     }
                 },
                 {
-                    "name": "HV",
+                    "name": "hv",
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
@@ -139,7 +139,7 @@
             ]
         },
         {
-            "name": "_SoftwareSerial3v3",
+            "name": "SoftwareSerial3v3",
             "coders": [
                 "ESP8266_SoftwareSerial3v3"
             ],
@@ -211,7 +211,7 @@
             ]
         },
         {
-            "name": "_SoftwareSerial5v",
+            "name": "SoftwareSerial5v",
             "coders": [
                 "ESP8266_SoftwareSerial5v"
             ],
@@ -269,7 +269,7 @@
                 },
                 {
                     "from": "LLC.HV",
-                    "to": "HV"
+                    "to": "hv"
                 },
                 {
                     "from": "LLC.GND",
@@ -304,7 +304,7 @@
                     }
                 },
                 {
-                    "name": "HV",
+                    "name": "hv",
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"5v"}]
                     }
@@ -334,9 +334,9 @@
             ]
         },
         {
-            "name": "_HardwareSerial3v3",
+            "name": "HardwareSerial3v3",
             "coders": [
-                "ESP8266_HardwareSerial"
+                "ESP8266HardwareSerial"
             ],
             "supportedControllers": [
                 "ArduinoProMini3v3"
