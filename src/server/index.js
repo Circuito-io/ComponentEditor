@@ -1,9 +1,10 @@
 const path = require('path');
 
-global.dataFolder = path.join(__dirname , 'components');
+global.dataFolder = path.join(__dirname , '../../components');
 global.circuitoServer = "https://circuito-ci-staging-pr-319.herokuapp.com/";
 global.uploadEndpoint = "save_components";
 global.previewEndpoint = "app?u=";
+global.svgdataServer = "https://gz1f13eb3m.execute-api.us-west-1.amazonaws.com/Prod/";
 
 // Generate unique user uuid
 const uuidv4 = require('uuid/v4');
@@ -17,15 +18,17 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('public'))
+app.use(express.static('dist'))
 
 var partsBlocksCodersRoutes = require('./api/routes/partsblockscodersRoutes');
 var previewRoutes = require('./api/routes/previewRoutes');
 var uploadRoutes = require('./api/routes/uploadRoutes');
+var svgdataRoutes = require('./api/routes/svgdataRoutes');
 partsBlocksCodersRoutes(app);
 previewRoutes(app);
 uploadRoutes(app);
+svgdataRoutes(app);
 
 app.listen(port, hostname);
-
+console.log('Data folder:', global.dataFolder);
 console.log('miniMESS RESTful API server started on: ' + hostname + '/' + port);
