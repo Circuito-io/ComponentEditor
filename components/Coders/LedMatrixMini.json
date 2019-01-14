@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {},
     "license": "MIT",
@@ -30,5 +31,7 @@
         "Adafruit_GFX_license.txt",
         "Adafruit_GFX.h"
     ],
-    "includeHeaders": ["Adafruit_LEDBackpack.h"]
+    "includeHeaders": [
+        "Adafruit_LEDBackpack.h"
+    ]
 }

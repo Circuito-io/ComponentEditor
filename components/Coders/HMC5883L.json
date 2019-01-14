@@ -12,7 +12,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "setup": "    // Set declination angle on your location and fix heading\n    // You can find your declination on: http://magnetic-declination.com/\n    // (+) Positive or (-) for negative\n    // For declination angle 4'36E (positive)\n    {{varname}}.begin(+4,36);\n",

@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "global": "int {{varname}}Counter = 0; \nunsigned long {{varname}}Timer = millis();\nbyte {{varname}}DigitPins[] = { {{Dig1}}, {{Dig2}}, {{Dig3}}, {{Dig4}} };\nbyte {{varname}}SegmentPins[] = { {{A}}, {{B}}, {{C}}, {{D}}, {{E}}, {{F}} ,{{G}}, {{DECIMAL}} };\n",

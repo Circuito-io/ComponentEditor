@@ -9,7 +9,8 @@
         "ArduinoProMini3v3",
         "ArduinoProMini5v",
         "ArduinoUno",
-        "NodeMCU"
+        "NodeMCU",
+        "Teensy32"
     ],
     "code": {
         "setup": "    {{varname}}.begin(9600);\n    //This example uses HC-05 Bluetooth to communicate with an Android device.\n    //Download bluetooth terminal from google play store, https://play.google.com/store/apps/details?id=Qwerty.BluetoothTerminal&hl=en\n    //Pair and connect to 'HC-05', the default password for connection is '1234'.\n    //You should see this message from your arduino on your android device\n    {{varname}}.println(\"Bluetooth On....\");\n",

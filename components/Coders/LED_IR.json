@@ -10,7 +10,8 @@
         "ArduinoProMini5v",
         "ArduinoUno",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "    // Transmit your custom IR code using IR LED 950nm, for example, using Sony convention every second.\n    // For more routines see IRremote.h such as sendRaw, sendRC5 etc.\n    {{varname}}.sendSony(0xa90, 12);          // 1. Send IR data\n    delay(1000);                              // 2. waits 1 second until next send\n"
