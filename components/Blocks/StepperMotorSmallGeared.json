@@ -44,33 +44,33 @@
             ],
             "parts": [
                 {
-                    "name": "this",
+                    "name": "driver",
                     "part": "EasyDriver"
                 },
                 {
-                    "name": "motor",
+                    "name": "this",
                     "part": "StepperMotorSmallGeared"
                 }
             ],
             "wires": [
                 {
-                    "from": "this.OUT2A",
-                    "to": "motor.PINK"
+                    "from": "driver.OUT2A",
+                    "to": "this.PINK"
                 },
                 {
-                    "from": "this.OUT2B",
-                    "to": "motor.YELLOW"
+                    "from": "driver.OUT2B",
+                    "to": "this.YELLOW"
                 },
                 {
-                    "from": "this.OUT1A",
-                    "to": "motor.ORANGE"
+                    "from": "driver.OUT1A",
+                    "to": "this.ORANGE"
                 },
                 {
-                    "from": "this.OUT1B",
-                    "to": "motor.BLUE"
+                    "from": "driver.OUT1B",
+                    "to": "this.BLUE"
                 },
                 {
-                    "from": "motor.RED",
+                    "from": "this.RED",
                     "to": "red"
                 }
             ],

@@ -44,30 +44,30 @@
             ],
             "parts": [
                 {
-                    "name": "this",
+                    "name": "driver",
                     "part": "EasyDriver"
                 },
                 {
-                    "name": "motor",
+                    "name": "this",
                     "part": "StepperMotor"
                 }
             ],
             "wires": [
                 {
-                    "from": "this.OUT2A",
-                    "to": "motor.D"
+                    "from": "driver.OUT2A",
+                    "to": "this.D"
                 },
                 {
-                    "from": "this.OUT2B",
-                    "to": "motor.B"
+                    "from": "driver.OUT2B",
+                    "to": "this.B"
                 },
                 {
-                    "from": "this.OUT1A",
-                    "to": "motor.C"
+                    "from": "driver.OUT1A",
+                    "to": "this.C"
                 },
                 {
-                    "from": "this.OUT1B",
-                    "to": "motor.A"
+                    "from": "driver.OUT1B",
+                    "to": "this.A"
                 }
             ],
             "ports": [
