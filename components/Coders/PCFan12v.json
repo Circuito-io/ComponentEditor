@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "// The PC Fan will turn on for 2000ms and off for 4000ms (4 sec)\n{{varname}}.on(); // 1. turns on\ndelay(2000);       // 2. waits 2000 milliseconds (2 sec).\n{{varname}}.off();// 3. turns off\ndelay(4000);       // 4. waits 4000 milliseconds (4 sec).\n"

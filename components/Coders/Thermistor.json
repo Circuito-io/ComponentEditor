@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "    //Get Measurment from Thermistor temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));"
