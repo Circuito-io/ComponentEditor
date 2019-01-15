@@ -50,7 +50,7 @@ export class Block extends React.Component {
       read_a_block(block)
         .then((blockData) => {
           this.setState({ formSrcData: blockData });
-          
+
           this.updateConnectors()
         })
     }
@@ -93,7 +93,7 @@ export class Block extends React.Component {
       console.log("unmodified, ignoring save")
       return;
     }
-      
+
     update_a_block(this.props.block, this.currentData)
       .then((json) => {
         console.log("Update response:", json);
@@ -119,8 +119,8 @@ export class Block extends React.Component {
                   codersList: this.state.codersList
                 }}
                 onChange={data => {
-                  this.modified=true; 
-                  this.props.updateData(data);
+                  this.modified=true;
+                  this.currentData = data.formData;
                 }}
               >
                 <Button type="submit" style={{ display: "none" }}>
@@ -135,7 +135,7 @@ export class Block extends React.Component {
             </Panel.Heading>
             <Panel.Body collapsible>
             </Panel.Body>
-          </Panel> 
+          </Panel>
         </PanelGroup>
       </div>
     );
