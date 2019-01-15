@@ -1,6 +1,8 @@
 ports:
-  - port: 3000
+  - port: 54321
     onOpen: open-preview
+  - port: 8080
+    onOpen: ignore
 tasks:
   - init: npm install
     command: npm run dev
