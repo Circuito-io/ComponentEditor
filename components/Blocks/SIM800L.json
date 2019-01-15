@@ -22,7 +22,7 @@
     },
     "circuits": [
         {
-            "name": "_HardwareSerial",
+            "name": "HardwareSerial",
             "coders": [
                 "SIM800L_HardwareSerial"
             ],
@@ -80,7 +80,7 @@
             "priority": 0
         },
         {
-            "name": "_SoftwareSerial",
+            "name": "SoftwareSerial",
             "coders": [
                 "SIM800L_SoftwareSerial"
             ],

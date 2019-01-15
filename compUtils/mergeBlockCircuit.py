@@ -208,8 +208,40 @@ filesToAdd = []
 #             os.remove(dirpath + '/' + filename)
     
 
-print('~~~~~~~~~~~~~~remove rest of circuits')
-for (dirpath, dirnames, filenames) in os.walk(dstpath2):
+# print('~~~~~~~~~~~~~~remove rest of circuits')
+# for (dirpath, dirnames, filenames) in os.walk(dstpath2):
+    
+#     for filename in filenames:
+#         if filename.endswith('.json'): 
+            
+#             # if 'LEDBlue' not in filename:
+#             #     continue
+#             json_data=open(dirpath + '/' + filename).read()
+#             data = json.loads(json_data)
+            
+#             print(filename)
+            
+#             newData = {}
+#             circuit = {}
+#             circuit['name'] = data['name']
+#             for key in data:
+#                 if key in ['supportedControllers', 'coders', 'parts','ports','wires']:
+#                     circuit[key] = data[key]
+#                 else:                
+#                     newData[key] = data[key]
+            
+            
+#             newData['circuit'] = [circuit]
+            
+#             f = open(dstpath3 + '/' + filename, 'w')
+#             f.write(newOrginizeJson(newData))
+#             f.close()
+            
+#             os.remove(dirpath + '/' + filename)
+
+print('~~~~~~~~~~~~~~print and fix circuits name')
+i=1
+for (dirpath, dirnames, filenames) in os.walk(path):
     
     for filename in filenames:
         if filename.endswith('.json'): 
@@ -219,22 +251,29 @@ for (dirpath, dirnames, filenames) in os.walk(dstpath2):
             json_data=open(dirpath + '/' + filename).read()
             data = json.loads(json_data)
             
-            print(filename)
-            
-            newData = {}
-            circuit = {}
-            circuit['name'] = data['name']
-            for key in data:
-                if key in ['supportedControllers', 'coders', 'parts','ports','wires']:
-                    circuit[key] = data[key]
-                else:                
-                    newData[key] = data[key]
             
             
-            newData['circuit'] = [circuit]
+            circuits = data.get('circuits')
+            changed = 0
+            if circuits:
+                for circuit in circuits:
+                    if circuit['name'].startswith('_'):
+                        circuit['name'] = circuit['name'].replace('_','')
+                        changed = 1
+                    if not circuit['name']:
+                        circuit['name'] = 'default'
+                        changed = 1
+                
+                if changed:
+                    
+                    print(filename)
+                    print('\t{}. {}'.format(i,circuit['name']))
+                    i += 1
+                    # import pdb; pdb.set_trace() 
+                    
             
-            f = open(dstpath3 + '/' + filename, 'w')
-            f.write(newOrginizeJson(newData))
-            f.close()
+                    f = open(dirpath + '/' + filename, 'w')
+                    f.write(newOrginizeJson(data))
+                    f.close()
             
-            os.remove(dirpath + '/' + filename)
+

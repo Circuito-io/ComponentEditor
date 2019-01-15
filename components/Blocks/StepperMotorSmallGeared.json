@@ -22,7 +22,7 @@
     },
     "circuits": [
         {
-            "name": "",
+            "name": "default",
             "coders": [
                 "StepperMotorSmallGeared"
             ],
@@ -72,6 +72,22 @@
                 {
                     "from": "this.RED",
                     "to": "red"
+                },
+                {
+                    "from": "driver.GND",
+                    "to": "gnd"
+                },
+                {
+                    "from": "driver.Dir",
+                    "to": "dir"
+                },
+                {
+                    "from": "driver.Step",
+                    "to": "step"
+                },
+                {
+                    "from": "driver.V+",
+                    "to": "v+"
                 }
             ],
             "ports": [
@@ -82,27 +98,27 @@
                     }
                 },
                 {
-                    "name": "Step",
+                    "name": "step",
                     "interface": {
                         "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
-                    "name": "GND",
+                    "name": "gnd",
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 },
                 {
-                    "name": "Dir",
+                    "name": "dir",
                     "interface": {
                         "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
                 {
-                    "name": "V+",
+                    "name": "v+",
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"12v"}],
                         "requiresLoad": 330
