@@ -50,19 +50,21 @@ export class Block extends React.Component {
       read_a_block(block)
         .then((blockData) => {
           this.setState({ formSrcData: blockData });
-          
+
           this.updateConnectors()
         })
     }
   }
 
   updateConnectors() {
-    this.setState({connectors: []});
-
     var circuits = this.state.formSrcData.circuits && this.state.formSrcData.circuits;
 
     if (!circuits)
       return;
+
+    const ports = circuits.map (circuit => circuit.ports && circuit.ports.map(port => port.name)).flat();
+
+    this.setState({connectors: ports});
 
     var parts = circuits.map (circuit => {
       return circuit.parts && circuit.parts.map (part => {
@@ -93,7 +95,7 @@ export class Block extends React.Component {
       console.log("unmodified, ignoring save")
       return;
     }
-      
+
     update_a_block(this.props.block, this.currentData)
       .then((json) => {
         console.log("Update response:", json);
@@ -119,7 +121,7 @@ export class Block extends React.Component {
                   codersList: this.state.codersList
                 }}
                 onChange={data => {
-                  this.modified=true; 
+                  this.modified=true;
                   this.props.updateData(data);
                 }}
               >
@@ -135,7 +137,7 @@ export class Block extends React.Component {
             </Panel.Heading>
             <Panel.Body collapsible>
             </Panel.Body>
-          </Panel> 
+          </Panel>
         </PanelGroup>
       </div>
     );
