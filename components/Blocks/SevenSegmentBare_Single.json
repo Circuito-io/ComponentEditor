@@ -22,7 +22,7 @@
     },
     "circuits": [
         {
-            "name": "",
+            "name": "default",
             "coders": [
                 "SevenSegSingle"
             ],
@@ -58,7 +58,7 @@
                 },
                 {
                     "from": "r1.con1",
-                    "to": "Com"
+                    "to": "Common"
                 }
             ],
             "ports": [
@@ -77,7 +77,7 @@
                     }
                 },
                 {
-                    "name": "Com",
+                    "name": "Common",
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
