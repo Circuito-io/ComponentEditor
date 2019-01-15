@@ -1,5 +1,5 @@
 import React from "react";
-import { Panel, PanelGroup, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { EditorForm } from "./form/editorform.js";
 import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
 import { gitpod_open, read_a_block, update_a_block, read_a_part, read_a_svgdata, list_all_coders, list_all_parts, list_all_blocks } from "./controller.js";
