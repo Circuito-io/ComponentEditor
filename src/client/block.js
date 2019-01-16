@@ -122,7 +122,7 @@ export class Block extends React.Component {
                 }}
                 onChange={data => {
                   this.modified=true;
-                  this.props.updateData(data);
+                  this.currentData = data.formData;
                 }}
               >
                 <Button type="submit" style={{ display: "none" }}>
