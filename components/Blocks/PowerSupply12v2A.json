@@ -23,7 +23,7 @@
     },
     "circuits": [
         {
-            "name": "",
+            "name": "default",
             "supportedControllers": [
                 "ATMega328P",
                 "ArduinoGemma",
@@ -36,7 +36,8 @@
                 "ArduinoUno",
                 "ESP32DevKitC",
                 "NodeMCU",
-                "Teensy32"
+                "Teensy32",
+                "ATTiny85"
             ],
             "parts": [
                 {
@@ -61,7 +62,8 @@
                 {
                     "name": "BARREL_JACK",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"BARREL_JACK","voltage":""}]
+                        "requires":[{"cost":0,"spec":"BARREL_JACK","voltage":""}],
+                        "unique": true
                     }
                 }
             ],

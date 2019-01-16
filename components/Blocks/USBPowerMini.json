@@ -1,5 +1,5 @@
 {
-    "name": "USBPowerMiniFirst",
+    "name": "USBPowerMini",
     "category": [
         "powerConnector",
         "power"
@@ -27,14 +27,13 @@
     ],
     "circuits": [
         {
-            "name": "USBPowerMiniWithFTDI5v",
+            "name": "WithFTDI5v",
             "altComp": [
                 150,
                 "PowerSupply12v2A"
             ],
             "supportedControllers": [
-                "ArduinoProMini5v",
-                "ATTiny85"
+                "ArduinoProMini5v"
             ],
             "parts": [
                 {
@@ -66,14 +65,13 @@
             "priority": 1
         },
         {
-            "name": "USBPowerMiniWithFTDI3v3",
+            "name": "WithFTDI3v3",
             "altComp": [
                 150,
                 "PowerSupply12v2A"
             ],
             "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ATTiny85"
+                "ArduinoProMini3v3"
             ],
             "parts": [
                 {
@@ -105,7 +103,7 @@
             "priority": 2
         },
         {
-            "name": "USBPowerMini",
+            "name": "default",
             "altComp": [
                 150,
                 "PowerSupply12v2A"

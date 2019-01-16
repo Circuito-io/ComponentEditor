@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "global": "  byte {{varname}}inUse = {{numOfSameComp}};                      //Specify how many Max7219 led matrices are chained\n  int {{varname}}textScrollingSpeed = 50;        //Specify the scrolling speed\n  char {{varname}}Str[] = \"Hello World!    \";     //Specify the string to be displayed\n",

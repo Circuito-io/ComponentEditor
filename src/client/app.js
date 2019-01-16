@@ -9,8 +9,8 @@ import { Block } from "./block.js";
 import { Home } from "./home.js";
 import {cacheData} from './controller.js';
 
-import style from 'react-toastify/dist/ReactToastify.css';
-
+import './form.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class App extends React.Component {
   constructor(props) {
