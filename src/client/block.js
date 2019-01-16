@@ -26,34 +26,17 @@ export class Block extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.match.params.block != null) {
-      // update block
-      var block = this.props.match.params.block;
-
-      if (block == undefined) {
-        this.setState({ formSrcData: {} });
-        return
-      }
-
-      list_all_parts().then( parts =>
-        {this.setState({partsList: parts})}
-      );
-
-      list_all_coders().then ( coders =>
-        {this.setState({codersList: coders})}
-      );
-
-      list_all_blocks().then ( blocks =>
-        {this.setState({blocksList: blocks})}
-      );
-
-      read_a_block(block)
-        .then((blockData) => {
-          this.setState({ formSrcData: blockData });
-
-          this.updateConnectors()
-        })
+    if (!this.props.block) {
+      this.setState({ formSrcData: {} });
+      return;
     }
+
+    read_a_block(this.props.block)
+    .then((blockData) => {
+      this.setState({ formSrcData: blockData });
+
+      this.updateConnectors()
+    })
   }
 
   updateConnectors() {
@@ -91,15 +74,13 @@ export class Block extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    var block = this.props.match.params.block;
-
-    if (block == undefined) {
+    if (!this.props.block) {
       this.setState({ formSrcData: {} });
-      return
+      return;
     }
 
-    if (prevProps.match.params.block !== block) {
-      read_a_block(block)
+    if (prevProps.block !== this.props.block) {
+      read_a_block(this.props.block)
       .then((blockData) => {
         this.setState({ formSrcData: blockData });
       });
@@ -130,11 +111,11 @@ export class Block extends React.Component {
           </Button>
           <EditorForm
           schema={blockSchema(this.state.connectors)}
-          uiSchema={blockuiSchema(this.state.blocksList)}
+          uiSchema={blockuiSchema(this.props.cachedData.blocks)}
           formData={this.state.formSrcData}
           formContext={{
-              partsList: this.state.partsList,
-              codersList: this.state.codersList
+              partsList: this.props.cachedData.parts,
+              codersList: this.props.cachedData.coders
           }}
           onChange={data => {
               this.modified=true;

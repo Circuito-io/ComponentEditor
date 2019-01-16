@@ -2,7 +2,7 @@ require('bootstrap');
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, IndexRoute, BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { Header } from "./header"
 import { Block } from "./block.js";
@@ -25,7 +25,6 @@ export default class App extends React.Component {
 
     this.onSave = this.onSave.bind(this);
     this.setSaveFunc = this.setSaveFunc.bind(this);
-    this.goHome = this.goHome.bind(this);
 
     cacheData()
     .then((cachedData)=> {
@@ -34,30 +33,33 @@ export default class App extends React.Component {
   }
 
   onSave() {
-    if (this.params.state.activeBlock != null)
+    if (this.blockSaveFunc) {
       this.blockSaveFunc();
+    }
   }
 
   setSaveFunc(savefunc) {
     this.blockSaveFunc = savefunc;
   }
 
-  goHome() {
-    this.setState({ activeBlock: null });
-  }
-
   render() {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Header goHome={this.goHome} onSave={this.onSave} activeBlock={this.state.params.activeBlock} />
+          <Route exact path='/' render={(props)=> 
+            <Header {...props} onSave={this.onSave}/>}
+          />
           <Route exact path='/' render={(props)=>
-            <Home {...props} cachedData={this.state.cachedData} />}
+            <Home {...props} cachedData={this.state.cachedData} />
+          }/>
+          
+          <Route path='/:block' render={(props)=> 
+            <Header {...props} activeBlock={props.match.params.block} onSave={this.onSave}/>}
           />
           <Route path='/:block' render={(props)=>
-            <Block {...props} id="block" setSaveFunc={this.setSaveFunc}/>}
-          />
-
+            <Block {...props} id="block" setSaveFunc={this.setSaveFunc}
+                    cachedData={this.state.cachedData} block={props.match.params.block}/>
+          }/>
           <ToastContainer
             hideProgressBar={true}
           />
