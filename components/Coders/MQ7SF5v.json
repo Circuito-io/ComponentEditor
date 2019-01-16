@@ -7,7 +7,8 @@
         "ArduinoMicro",
         "ArduinoNano",
         "ArduinoProMini5v",
-        "ArduinoUno"
+        "ArduinoUno",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"

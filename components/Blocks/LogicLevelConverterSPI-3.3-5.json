@@ -5,7 +5,7 @@
     ],
     "circuits": [
         {
-            "name": "",
+            "name": "default",
             "supportedControllers": [],
             "parts": [
                 {
@@ -24,12 +24,6 @@
                     "name": "GND",
                     "interface": {
                         "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "GND1",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {

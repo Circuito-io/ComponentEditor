@@ -7,7 +7,8 @@
         "ArduinoMicro",
         "ArduinoNano",
         "ArduinoProMini5v",
-        "ArduinoUno"
+        "ArduinoUno",
+        "Teensy32"
     ],
     "code": {
         "global": "    #define THRESHOLD_{{varname}}   100\n    int {{varname}}AverageLight;\n",

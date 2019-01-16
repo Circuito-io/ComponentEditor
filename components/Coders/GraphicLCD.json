@@ -12,7 +12,8 @@
         "ArduinoProMini5v",
         "ArduinoUno",
         "ESP32DevKitC",
-        "NodeMCU"
+        "NodeMCU",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "    // The LCD Screen will display the text of your choice at the location (30,50) on screen. Counting from the top left corner: 30 pixels to the right and 50 pixels down  \n    {{varname}}.setX(30);                     // 1. sets left-right indent for text to print. Change the value in the brackets (1 - left, 164 - right) for a different indent.\n    {{varname}}.setY(50);                     // 2. sets top-bottom height for text to print. Change the value in the brackets (1 - top, 128 - bottom) for a different height.\n    {{varname}}.print(\"Circuito.io Rocks!\");  // 3. prints the text in the brackets. Modify the text to get your own unique print.\n    delay(1000);                               // 4. waits 1000 milliseconds (1 sec). Change the value in the brackets (1000) for a longer or shorter delay in milliseconds.\n    {{varname}}.clear();                      // 5. wipes the screen\n    delay(1000);                               // 6. waits 1000 milliseconds (1 sec). Change the value in the brackets (1000) for a longer or shorter delay in milliseconds."

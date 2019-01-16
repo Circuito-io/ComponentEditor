@@ -2,6 +2,6 @@
 module.exports = function(app) {
   var svgdataController = require('../controllers/svgdataController');
 
-  app.route('/svgdata/:img')
+  app.route('/api/svgdata/:img')
     .get(svgdataController.svgdata);
 };

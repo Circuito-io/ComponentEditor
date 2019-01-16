@@ -5,7 +5,7 @@
     ],
     "circuits": [
         {
-            "name": "",
+            "name": "default",
             "supportedControllers": [],
             "parts": [
                 {
@@ -46,6 +46,12 @@
                     "interface": {
                         "requires":[{"cost":0,"spec":"Barrel","voltage":"GND"}],
                         "unique": true
+                    }
+                },
+                {
+                    "name": "BARREL_JACK",
+                    "interface": {
+                        "provides":[{"spec":"BARREL_JACK","voltage":""}]
                     }
                 }
             ]

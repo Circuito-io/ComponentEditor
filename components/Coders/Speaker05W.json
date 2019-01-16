@@ -12,7 +12,8 @@
         "ArduinoProMini5v",
         "ArduinoUno",
         "ESP32DevKitC",
-        "NodeMCU"
+        "NodeMCU",
+        "Teensy32"
     ],
     "code": {
         "global": "    unsigned int {{varname}}HoorayLength          = 6;                                                      // amount of notes in melody\n    unsigned int {{varname}}HoorayMelody[]        = {NOTE_C4, NOTE_E4, NOTE_G4, NOTE_C5, NOTE_G4, NOTE_C5}; // list of notes. List length must match HoorayLength!\n    unsigned int {{varname}}HoorayNoteDurations[] = {8      , 8      , 8      , 4      , 8      , 4      }; // note durations; 4 = quarter note, 8 = eighth note, etc. List length must match HoorayLength!\n",
