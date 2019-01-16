@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab, Row, Col, Nav, MenuItem, NavDropdown } from "react-bootstrap";
+import { Tabs, Tab, Row, Col, Nav, MenuItem, NavDropdown, NavItem } from "react-bootstrap";
 import {
   getDefaultFormState,
   getUiOptions,
@@ -42,25 +42,48 @@ function IconBtn(props) {
   );
 }
 
-function TabbedArrayItemHeader(props) {
-  const btnStyle = {
-    flex: 1,
-    paddingLeft: 6,
-    paddingRight: 6,
-    fontWeight: "bold"
-  };
+class TabbedArrayItemHeader extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <NavDropdown eventKey={props.index} title={props.tabName} id="nav-dropdown-within-tab">
-      {props.hasRemove && (
-        <MenuItem eventKey={String(props.index) + "-close"}>
-          <IconBtn type="danger" icon="remove" className="array-item-remove" tabIndex="-1"
-                    style={btnStyle} disabled={props.disabled || props.readonly}
-                    onClick={props.onDropIndexClick(props.index)}/>
-        </MenuItem>
-      )}
-    </NavDropdown>
-  );
+    this.state = {isOpen: false};
+
+    this.btnStyle = {
+      flex: 1,
+      paddingLeft: 6,
+      paddingRight: 6,
+      fontWeight: "bold"
+    };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.isOpen && prevState.isOpen) {
+      this.setState({isOpen: false});
+    }
+  }
+
+  render() {
+    let props = this.props;
+    
+    return (
+      <NavItem eventKey={props.index} onClick={()=>props.onSelect(props.index)}>
+        <div style={{display: 'flex'}} className={'dropdown' + (this.state.isOpen ? ' open' : '')}>
+          {props.tabName}
+          {props.hasRemove && (
+            <div onClick={()=>this.setState({isOpen: !this.state.isOpen})}>
+              <span className="caret" style={{margin: '7px'}}/>
+            </div>
+          )}
+          <div className="dropdown-menu" style={{marginLeft: -15}}>
+            <div tabIndex="-1" style={this.btnStyle} disabled={props.disabled || props.readonly}
+                  onClick={props.onDropIndexClick(props.index)}>
+              Remove
+            </div>
+          </div>
+        </div>
+      </NavItem>
+    );
+  }
 }
 
 function TabbedArrayItemContent(props) {
@@ -134,9 +157,9 @@ function TabbedArrayFieldTemplate(props) {
         <Row className="clearfix">
           <Col sm={12}>
             <Nav bsStyle="tabs">
-              {props.items && props.items.map(p => TabbedArrayItemHeader(p))}
+              {props.items && props.items.map(p => <TabbedArrayItemHeader {...p} />)}
               {props.canAdd && (
-              <MenuItem eventKey="+" title="+" disabled={props.disabled || props.readonly}/>
+              <NavItem eventKey="+" disabled={props.disabled || props.readonly}>+</NavItem>
             )}
             </Nav>
           </Col>
