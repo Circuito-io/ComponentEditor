@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab } from "react-bootstrap";
+import { Tabs, Tab, Row, Col, Nav, MenuItem, NavDropdown, NavItem } from "react-bootstrap";
 import {
   getDefaultFormState,
   getUiOptions,
@@ -42,7 +42,51 @@ function IconBtn(props) {
   );
 }
 
-function TabbedArrayItem(props) {
+class TabbedArrayItemHeader extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {isOpen: false};
+
+    this.btnStyle = {
+      flex: 1,
+      paddingLeft: 6,
+      paddingRight: 6,
+      fontWeight: "bold"
+    };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.isOpen && prevState.isOpen) {
+      this.setState({isOpen: false});
+    }
+  }
+
+  render() {
+    let props = this.props;
+    
+    return (
+      <NavItem eventKey={props.index} onClick={()=>props.onSelect(props.index)}>
+        <div style={{display: 'flex'}} className={'dropdown' + (this.state.isOpen ? ' open' : '')}>
+          {props.tabName}
+          {props.hasRemove && (
+            <div onClick={()=>this.setState({isOpen: !this.state.isOpen})}>
+              <span className="caret" style={{margin: '7px'}}/>
+            </div>
+          )}
+          <div className="dropdown-menu" style={{marginLeft: -15}}>
+            <div tabIndex="-1" style={this.btnStyle} disabled={props.disabled || props.readonly}
+                  onClick={props.onDropIndexClick(props.index)}>
+              Remove
+            </div>
+          </div>
+        </div>
+      </NavItem>
+    );
+  }
+}
+
+function TabbedArrayItemContent(props) {
   const btnStyle = {
     flex: 1,
     paddingLeft: 6,
@@ -51,7 +95,7 @@ function TabbedArrayItem(props) {
   };
 
   return (
-    <Tab eventKey={props.index} title={props.tabName}>
+    <Tab.Pane eventKey={props.index}>
       <div key={props.index} className={props.className}>
         <div className={props.hasToolbar ? "col-xs-9" : "col-xs-12"}>
           {props.children}
@@ -66,22 +110,11 @@ function TabbedArrayItem(props) {
                 justifyContent: "space-around"
               }}
             >
-              {props.hasRemove && (
-                <IconBtn
-                  type="danger"
-                  icon="remove"
-                  className="array-item-remove"
-                  tabIndex="-1"
-                  style={btnStyle}
-                  disabled={props.disabled || props.readonly}
-                  onClick={props.onDropIndexClick(props.index)}
-                />
-              )}
             </div>
           </div>
         )}
       </div>
-    </Tab>
+    </Tab.Pane>
   );
 }
 
@@ -107,26 +140,37 @@ function TabbedArrayFieldTemplate(props) {
         />
       )}
 
-      <Tabs
+      <Tab.Container
         defaultActiveKey={0}
+        activeKey={props.activeKey}
         key={`array-item-list-${props.idSchema.$id}`}
         id={`array-item-list-${props.idSchema.$id}`}
         onSelect={eventKey => {
           if (eventKey == "+") {
             props.onAddClick(document.createEvent("Event"));
           }
+          else {
+            props.onSelect(eventKey);
+          }
         }}
       >
-        {props.items && props.items.map(p => TabbedArrayItem(p))}
-
-        {props.canAdd && (
-          <Tab
-            eventKey="+"
-            title="+"
-            disabled={props.disabled || props.readonly}
-          />
-        )}
-      </Tabs>
+        <Row className="clearfix">
+          <Col sm={12}>
+            <Nav bsStyle="tabs">
+              {props.items && props.items.map(p => <TabbedArrayItemHeader {...p} />)}
+              {props.canAdd && (
+              <NavItem eventKey="+" disabled={props.disabled || props.readonly}>+</NavItem>
+            )}
+            </Nav>
+          </Col>
+          <Col sm={12}>
+            <Tab.Content animation>
+              {props.items && props.items.map(p => TabbedArrayItemContent(p))}
+              <Tab.Pane eventKey="+">Adding...</Tab.Pane>
+            </Tab.Content>
+          </Col>
+        </Row>
+      </Tab.Container>
     </fieldset>
   );
 }
@@ -184,6 +228,8 @@ export class TabbedArrayField extends React.Component {
       ...formData,
       getDefaultFormState(itemSchema, undefined, definitions)
     ]);
+
+    this.onSelect(formData.length);
   };
 
   onDropIndexClick = index => {
@@ -272,6 +318,16 @@ export class TabbedArrayField extends React.Component {
     this.props.onChange(value);
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {activeKey: 0};
+  }
+
+  onSelect = (activeKey) => {
+    this.setState({activeKey});
+  }
+
   render() {
     const {
       schema,
@@ -335,7 +391,9 @@ export class TabbedArrayField extends React.Component {
       TitleField,
       formContext,
       formData,
-      rawErrors
+      rawErrors,
+      onSelect: this.onSelect,
+      activeKey: this.state.activeKey,
     };
 
     // Check if a custom render function was passed in
