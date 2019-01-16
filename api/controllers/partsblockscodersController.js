@@ -26,3 +26,7 @@ exports.read_a_coder = filesController.read_a_file_factory(codersSubFolder);
 exports.update_a_coder = filesController.update_a_file_factory(codersSubFolder);
 exports.delete_a_coder = filesController.delete_a_file_factory(codersSubFolder);
 
+// Server use only
+exports.cache_list_all_parts = filesController.cache_list_all_files_factory(partsSubFolder);
+exports.cache_list_all_blocks = filesController.cache_list_all_files_factory(blocksSubFolder);
+exports.cache_list_all_coders = filesController.cache_list_all_files_factory(codersSubFolder);
