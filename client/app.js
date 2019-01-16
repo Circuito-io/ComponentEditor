@@ -2,10 +2,12 @@ require('bootstrap');
 
 import React from "react";
 import ReactDOM from "react-dom";
+import { Route, BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { Header } from "./header"
 import { Block } from "./block.js";
 import { Home } from "./home.js";
+import {cacheData} from './controller.js';
 
 import style from 'react-toastify/dist/ReactToastify.css';
 
@@ -17,19 +19,19 @@ export default class App extends React.Component {
     this.blockSaveFunc = null;
 
     this.state = {
-      activeBlock: null
+      activeBlock: null,
+      cachedData: {blocks: [], parts: [], coders: []},
     };
 
-    this.blockSelected = this.blockSelected.bind(this);
     this.onSave = this.onSave.bind(this);
-    this.setSave = this.setSave.bind(this);
+    this.setSaveFunc = this.setSaveFunc.bind(this);
     this.goHome = this.goHome.bind(this);
     this.updateData = this.updateData.bind(this);
-  }
 
-  blockSelected(block) {
-    this.setState({ activeBlock: block });
-    console.log(block);
+    cacheData()
+    .then((cachedData)=> {
+      this.setState({cachedData});
+    })
   }
 
   onSave(event) {
@@ -37,7 +39,7 @@ export default class App extends React.Component {
       this.blockSaveFunc();
   }
 
-  setSave(savefunc) {
+  setSaveFunc(savefunc) {
     this.blockSaveFunc = savefunc;
   }
 
@@ -51,20 +53,23 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Header goHome={this.goHome} onSave={this.onSave} activeBlock={this.state.activeBlock}/>
-        
-        {
-          (this.state.activeBlock == null) ? 
-          <Home blockSelected = {this.blockSelected} /> : 
-          <Block id="block" block={this.state.activeBlock} setSave={this.setSave} updateData={this.updateData}/>
-        }
-        
-        <ToastContainer 
-          hideProgressBar={true}
-        />
-        
-      </React.Fragment>
+      <BrowserRouter>
+        <React.Fragment>
+          <Header goHome={this.goHome} onSave={this.onSave} activeBlock={this.state.activeBlock} />
+          <Route exact path='/' render={(props)=>
+            <Home {...props} cachedData={this.state.cachedData} />}
+          />
+          <Route path='/:block' render={(props)=> 
+            <Block {...props} id="block" setSaveFunc={this.setSaveFunc} 
+                              updateData={this.updateData}/>}
+          />
+          
+          <ToastContainer 
+            hideProgressBar={true}
+          />
+          
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }

@@ -22,13 +22,13 @@ export class Block extends React.Component {
     this.updateConnectors = this.updateConnectors.bind(this);
     this.save = this.save.bind(this);
 
-    this.props.setSave(this.save);
+    this.props.setSaveFunc(this.save);
   }
 
   componentDidMount() {
-    if (this.props.block != null) {
+    if (this.props.match.params.block != null) {
       // update block
-      var block = this.props.block
+      var block = this.props.match.params.block;
 
       if (block == undefined) {
         this.setState({ formSrcData: {} });
@@ -83,8 +83,25 @@ export class Block extends React.Component {
             // But the react doesn't support different enums for different array elements (circuits)
             this.setState({connectors: this.state.connectors.concat(normalizedConnectorsNames) });
           })
-        }) })
+        })
+      })
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    var block = this.props.match.params.block;
+    
+    if (block == undefined) {
+      this.setState({ formSrcData: {} });
+      return
+    }
+
+    if (prevProps.match.params.block !== block) {
+      read_a_block(block)
+      .then((blockData) => {
+        this.setState({ formSrcData: blockData });
+      });
+    }
   }
 
   save() {
@@ -94,7 +111,7 @@ export class Block extends React.Component {
       return;
     }
       
-    update_a_block(this.props.block, this.currentData)
+    update_a_block(this.props.params.block, this.currentData)
       .then((json) => {
         console.log("Update response:", json);
         this.modified = false;
