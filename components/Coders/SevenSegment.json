@@ -14,9 +14,9 @@
         "Teensy32"
     ],
     "code": {
-        "global": "    unsigned int {{varname}}counter = 0;  // This variable will count up to 65k\n",
-        "setup": "    {{varname}}.clearDisplay();  // Clears display, resets cursor\n    {{varname}}.writeStr(\"-HI-\");  // Displays -HI- on all digits   \n    {{varname}}.setBrightness(255);  // High brightness\n",
-        "snippetCode": "    // This will output the counter value to the display\n    {{varname}}.writeInt({{varname}}counter);\n    {{varname}}counter++;  // Increment the counter\n    delay(50);  "
+        "global": "unsigned int {{varname}}counter = 0;  // This variable will count up to 65k\n",
+        "setup": "{{varname}}.clearDisplay();  // Clears display, resets cursor\n{{varname}}.writeStr(\"-HI-\");  // Displays -HI- on all digits   \n{{varname}}.setBrightness(255);  // High brightness\n",
+        "snippetCode": "// This will output the counter value to the display\n{{varname}}.writeInt({{varname}}counter);\n{{varname}}counter++;  // Increment the counter\ndelay(50);  "
     },
     "license": "circuito",
     "instantiate": {
