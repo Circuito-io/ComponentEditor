@@ -1,8 +1,8 @@
 import React from "react";
-import { Panel, PanelGroup, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { EditorForm } from "./form/editorform.js";
 import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
-import { read_a_block, update_a_block, read_a_part, read_a_svgdata, list_all_coders, list_all_parts, list_all_blocks } from "./controller.js";
+import { gitpod_open, read_a_block, update_a_block, read_a_part, read_a_svgdata, list_all_coders, list_all_parts, list_all_blocks } from "./controller.js";
 
 export class Block extends React.Component {
   constructor(props) {
@@ -50,19 +50,21 @@ export class Block extends React.Component {
       read_a_block(block)
         .then((blockData) => {
           this.setState({ formSrcData: blockData });
-          
+
           this.updateConnectors()
         })
     }
   }
 
   updateConnectors() {
-    this.setState({connectors: []});
-
     var circuits = this.state.formSrcData.circuits && this.state.formSrcData.circuits;
 
     if (!circuits)
       return;
+
+    const ports = circuits.map (circuit => circuit.ports && circuit.ports.map(port => port.name)).flat();
+
+    this.setState({connectors: ports});
 
     var parts = circuits.map (circuit => {
       return circuit.parts && circuit.parts.map (part => {
@@ -93,7 +95,7 @@ export class Block extends React.Component {
       console.log("unmodified, ignoring save")
       return;
     }
-      
+
     update_a_block(this.props.block, this.currentData)
       .then((json) => {
         console.log("Update response:", json);
@@ -103,41 +105,30 @@ export class Block extends React.Component {
 
   render() {
     return (
-      <div>
-        <PanelGroup accordion id="block-panels" defaultActiveKey="1">
-          <Panel eventKey="1">
-            <Panel.Heading>
-              <Panel.Title toggle>Block Info</Panel.Title>
-            </Panel.Heading>
-            <Panel.Body collapsible>
-              <EditorForm
-                schema={blockSchema(this.state.connectors)}
-                uiSchema={blockuiSchema(this.state.blocksList)}
-                formData={this.state.formSrcData}
-                formContext={{
-                  partsList: this.state.partsList,
-                  codersList: this.state.codersList
-                }}
-                onChange={data => {
-                  this.modified=true; 
-                  this.props.updateData(data);
-                }}
-              >
-                <Button type="submit" style={{ display: "none" }}>
-                  Submit
-                </Button>
-              </EditorForm>
-            </Panel.Body>
-          </Panel>
-          <Panel eventKey="2">
-            <Panel.Heading>
-              <Panel.Title toggle>Circuits</Panel.Title>
-            </Panel.Heading>
-            <Panel.Body collapsible>
-            </Panel.Body>
-          </Panel> 
-        </PanelGroup>
-      </div>
+      <React.Fragment>
+          <Button onClick={(event) => {
+              gitpod_open('Blocks/' + this.props.block + '.json');
+          }}>
+              Open file in code editor
+          </Button>
+          <EditorForm
+          schema={blockSchema(this.state.connectors)}
+          uiSchema={blockuiSchema(this.state.blocksList)}
+          formData={this.state.formSrcData}
+          formContext={{
+              partsList: this.state.partsList,
+              codersList: this.state.codersList
+          }}
+          onChange={data => {
+              this.modified=true;
+              this.currentData = data.formData;
+          }}
+          >
+          <Button type="submit" style={{ display: "none" }}>
+              Submit
+          </Button>
+          </EditorForm>
+      </React.Fragment>
     );
   }
 }

@@ -24,10 +24,12 @@ var partsBlocksCodersRoutes = require('./api/routes/partsblockscodersRoutes');
 var previewRoutes = require('./api/routes/previewRoutes');
 var uploadRoutes = require('./api/routes/uploadRoutes');
 var svgdataRoutes = require('./api/routes/svgdataRoutes');
+var gitpodRoutes = require('./api/routes/gitpodRoutes');
 partsBlocksCodersRoutes(app);
 previewRoutes(app);
 uploadRoutes(app);
 svgdataRoutes(app);
+gitpodRoutes(app);
 
 app.listen(port, hostname);
 console.log('Data folder:', global.dataFolder);

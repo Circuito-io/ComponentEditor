@@ -24,7 +24,6 @@ export default class App extends React.Component {
     this.onSave = this.onSave.bind(this);
     this.setSave = this.setSave.bind(this);
     this.goHome = this.goHome.bind(this);
-    this.updateData = this.updateData.bind(this);
   }
 
   blockSelected(block) {
@@ -32,17 +31,13 @@ export default class App extends React.Component {
     console.log(block);
   }
 
-  onSave(event) {
-    if (this.activeBlock)
+  onSave() {
+    if (this.state.activeBlock != null)
       this.blockSaveFunc();
   }
 
   setSave(savefunc) {
     this.blockSaveFunc = savefunc;
-  }
-
-  updateData(data) {
-    this.currentData = data;
   }
 
   goHome() {
@@ -53,17 +48,17 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <Header goHome={this.goHome} onSave={this.onSave} activeBlock={this.state.activeBlock}/>
-        
+
         {
-          (this.state.activeBlock == null) ? 
-          <Home blockSelected = {this.blockSelected} /> : 
-          <Block id="block" block={this.state.activeBlock} setSave={this.setSave} updateData={this.updateData}/>
+          (this.state.activeBlock == null) ?
+          <Home blockSelected = {this.blockSelected} /> :
+          <Block id="block" block={this.state.activeBlock} setSave={this.setSave}/>
         }
-        
-        <ToastContainer 
+
+        <ToastContainer
           hideProgressBar={true}
         />
-        
+
       </React.Fragment>
     );
   }
