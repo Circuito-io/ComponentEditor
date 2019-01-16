@@ -5,9 +5,16 @@ import { NewComponent } from "./newcomponent";
 
 export class Home extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+
+    this.onBlockSelected = this.onBlockSelected.bind(this);
   }
   
+  onBlockSelected(block) {
+    this.props.history.push('/'+block);
+    console.log(block);
+  }
+
   render() {
     return (
       <Grid>
@@ -16,7 +23,7 @@ export class Home extends React.Component {
               <Well>
                 <h2>Edit</h2>
                 <br/>
-                <BlocksList blockSelected = {this.props.blockSelected}/>
+                <BlocksList cachedData={this.props.cachedData} onBlockSelected = {this.onBlockSelected}/>
               </Well>
             </Col>
             <Col xs={6}>
