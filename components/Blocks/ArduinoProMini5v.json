@@ -227,7 +227,7 @@
                     }
                 }
             ],
-            "priority": 1,
+            "priority": 0,
             "requiredBlocks": [
                 {
                     "cost": 50,
@@ -446,19 +446,19 @@
                     }
                 }
             ],
-            "priority": 2,
+            "priority": 1,
             "requiredBlocks": [
                 {
                     "cost": 0,
                     "blocks": [
-                        "USBPowerMiniWithFTDI5v"
+                        "USBPowerMini_WithFTDI5v"
                     ]
                 },
                 {
                     "cost": 50,
                     "blocks": [
                         "Reg3.3v",
-                        "USBPowerMiniWithFTDI5v"
+                        "USBPowerMini_WithFTDI5v"
                     ]
                 }
             ]
