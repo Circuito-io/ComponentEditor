@@ -16,7 +16,7 @@
         "Teensy32"
     ],
     "code": {
-        "snippetCode": "    // Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit use {{varname}}.ReadTempF()\n    float {{varname}}TempC = {{varname}}.readTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
+        "snippetCode": "// Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit use {{varname}}.ReadTempF()\nfloat {{varname}}TempC = {{varname}}.readTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
     },
     "license": "GNU",
     "instantiate": {

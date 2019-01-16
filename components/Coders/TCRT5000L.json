@@ -15,8 +15,8 @@
         "Teensy32"
     ],
     "code": {
-        "setup": "    {{varname}}.init();\n",
-        "snippetCode": "        //read Reflective IR Sensor. \n        //if the sensor detects an echo function will return LOW (0). \n        //if it is not detect an echo function will return HIGH (1).\n        bool {{varname}}_Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}_Val);"
+        "setup": "{{varname}}.init();\n",
+        "snippetCode": "//read Reflective IR Sensor. \n//if the sensor detects an echo function will return LOW (0). \n//if it is not detect an echo function will return HIGH (1).\nbool {{varname}}_Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}_Val);"
     },
     "license": "circuito",
     "instantiate": {

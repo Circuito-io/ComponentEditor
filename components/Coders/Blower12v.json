@@ -15,7 +15,7 @@
         "Teensy32"
     ],
     "code": {
-        "snippetCode": "    // The water pump will turn on and off for 2000ms (4 sec)\n    {{varname}}.on(); // 1. turns on\n    delay(2000);       // 2. waits 500 milliseconds (0.5 sec).\n    {{varname}}.off();// 3. turns off\n    delay(2000);       // 4. waits 500 milliseconds (0.5 sec).\n"
+        "snippetCode": "// The water pump will turn on and off for 2000ms (4 sec)\n{{varname}}.on(); // 1. turns on\ndelay(2000);       // 2. waits 500 milliseconds (0.5 sec).\n{{varname}}.off();// 3. turns off\ndelay(2000);       // 4. waits 500 milliseconds (0.5 sec).\n"
     },
     "license": "circuito",
     "instantiate": {

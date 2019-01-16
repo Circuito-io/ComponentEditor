@@ -16,8 +16,8 @@
         "Teensy32"
     ],
     "code": {
-        "setup": "    //Calibrate sensor\n    {{varname}}.calibrate();\n",
-        "snippetCode": "    //Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\n    int {{varname}}Val = {{varname}}.getMeasurment();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
+        "setup": "//Calibrate sensor\n{{varname}}.calibrate();\n",
+        "snippetCode": "//Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\nint {{varname}}Val = {{varname}}.getMeasurment();\nSerial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {

@@ -16,8 +16,8 @@
         "Teensy32"
     ],
     "code": {
-        "setup": "    // set up the LCD's number of columns and rows\n     {{varname}}.begin(16, 2);\n",
-        "snippetCode": "     // Print a message to the LCD.\n     {{varname}}.setCursor(0, 0);\n     {{varname}}.print(\"Circuito Rocks !\");\n     // Turn off the display:\n     {{varname}}.noDisplay();\n     delay(500);\n     // Turn on the display:\n     {{varname}}.display();\n     delay(500);"
+        "setup": "// set up the LCD's number of columns and rows\n{{varname}}.begin(16, 2);\n",
+        "snippetCode": "// Print a message to the LCD.\n{{varname}}.setCursor(0, 0);\n{{varname}}.print(\"Circuito Rocks !\");\n// Turn off the display:\n{{varname}}.noDisplay();\ndelay(500);\n// Turn on the display:\n{{varname}}.display();\ndelay(500);"
     },
     "license": "ArduinoIDE",
     "instantiate": {
