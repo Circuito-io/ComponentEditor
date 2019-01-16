@@ -82,3 +82,10 @@ export function read_a_svgdata(img) {
             console.log('parsing failed', ex);
         })
 }
+
+export function gitpod_open(path) {
+    return window.fetch(urlJoin('/api/open', encodeURIComponent(path)))
+        .catch((ex) => {
+            console.log('gitpod open failed', ex);
+        });
+}
