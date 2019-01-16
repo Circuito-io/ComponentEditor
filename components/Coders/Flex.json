@@ -16,7 +16,7 @@
         "Teensy32"
     ],
     "code": {
-        "snippetCode": "    // Read Flex sensor value.\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
+        "snippetCode": "// Read Flex sensor value.\nint {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
     },
     "license": "circuito",
     "instantiate": {

@@ -16,9 +16,9 @@
     ],
     "code": {
         "global": "",
-        "constructors": "    #define SSD1306_LCDHEIGHT 64\n    {{classname}} {{varname}}({{DC}}, {{RST}}, {{CS}});\n",
-        "setup": "    {{varname}}.begin(SSD1306_SWITCHCAPVCC);  // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)\n    {{varname}}.clearDisplay(); // Clear the buffer.\n    {{varname}}.display();\n",
-        "snippetCode": "    {{varname}}.setTextSize(1);\n    {{varname}}.setTextColor(WHITE);\n    {{varname}}.setCursor(0, 10);\n    {{varname}}.clearDisplay();\n    {{varname}}.println(\"Circuito.io Rocks!\");\n    {{varname}}.display();\n    delay(1);\n    {{varname}}.startscrollright(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();\n    delay(1000);\n    {{varname}}.startscrollleft(0x00, 0x0F);\n    delay(2000);\n    {{varname}}.stopscroll();"
+        "constructors": "#define SSD1306_LCDHEIGHT 64\n{{classname}} {{varname}}({{DC}}, {{RST}}, {{CS}});\n",
+        "setup": "{{varname}}.begin(SSD1306_SWITCHCAPVCC);  // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)\n{{varname}}.clearDisplay(); // Clear the buffer.\n{{varname}}.display();\n",
+        "snippetCode": "{{varname}}.setTextSize(1);\n{{varname}}.setTextColor(WHITE);\n{{varname}}.setCursor(0, 10);\n{{varname}}.clearDisplay();\n{{varname}}.println(\"Circuito.io Rocks!\");\n{{varname}}.display();\ndelay(1);\n{{varname}}.startscrollright(0x00, 0x0F);\ndelay(2000);\n{{varname}}.stopscroll();\ndelay(1000);\n{{varname}}.startscrollleft(0x00, 0x0F);\ndelay(2000);\n{{varname}}.stopscroll();"
     },
     "license": "BSD",
     "instantiate": {
