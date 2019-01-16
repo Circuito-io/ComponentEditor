@@ -16,8 +16,8 @@
         "Teensy32"
     ],
     "code": {
-        "setup": "    {{varname}}.init();\n",
-        "snippetCode": "        //read Toggle Switch state. \n        //if Switch is open function will return LOW (0). \n        //if it is closed function will return HIGH (1).\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
+        "setup": "{{varname}}.init();\n",
+        "snippetCode": "//read Toggle Switch state. \n//if Switch is open function will return LOW (0). \n//if it is closed function will return HIGH (1).\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
     },
     "license": "circuito",
     "instantiate": {

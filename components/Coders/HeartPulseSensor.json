@@ -16,9 +16,9 @@
         "Teensy32"
     ],
     "code": {
-        "constructors": "    {{classname}} {{varname}};\n",
-        "setup": "    {{varname}}.begin({{SIG}});\n",
-        "snippetCode": "    //Measure Heart Rate\n    int {{varname}}BPM = {{varname}}.BPM;\n    Serial.println({{varname}}BPM);\n    if ({{varname}}.QS == true) {\n        Serial.println(\"PULSE\");\n        {{varname}}.QS = false;\n    }"
+        "constructors": "{{classname}} {{varname}};\n",
+        "setup": "{{varname}}.begin({{SIG}});\n",
+        "snippetCode": "//Measure Heart Rate\nint {{varname}}BPM = {{varname}}.BPM;\nSerial.println({{varname}}BPM);\nif ({{varname}}.QS == true) {\nSerial.println(\"PULSE\");\n{{varname}}.QS = false;\n}"
     },
     "license": "MIT",
     "instantiate": {

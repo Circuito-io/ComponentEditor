@@ -16,13 +16,15 @@
             "link": "https://octopart.com/com-09032-sparkfun-76381402",
             "price": "3.95",
             "SKU": "1568-1526-ND",
-            "headers": [
-                5,
-                "MaleHeaders"
-            ]
+            "headers": {
+                "type": "MaleHeaders",
+                "qty": 5
+            }
         }
     ],
-    "bomAux": ["JoystickSFBreakout"],
+    "bomAux": [
+        "JoystickSFBreakout"
+    ],
     "info": {
         "setup": "",
         "test": ""

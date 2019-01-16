@@ -12,7 +12,7 @@
         "Teensy32"
     ],
     "code": {
-        "snippetCode": "    // Read distance measurment from UltraSonic sensor           \n    int {{varname}}Dist = {{varname}}.ping_cm();\n    delay(10);\n    Serial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+        "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
     },
     "license": "GNU_GPL_v3",
     "instantiate": {

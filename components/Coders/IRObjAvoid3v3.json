@@ -8,8 +8,8 @@
         "RPI3B"
     ],
     "code": {
-        "setup": "    pinMode({{OUT}}, INPUT);\n",
-        "snippetCode": "    //Read IR obstacle Sensor. {{varname}}Var will be '1' if an Obstacle was detected\n    //Use the onboard trimmer to set the distance of alert\n    bool {{varname}}Var = !digitalRead({{OUT}});\n    Serial.print(F(\"ObjAvoid: \")); Serial.println({{varname}}Var);\n"
+        "setup": "pinMode({{OUT}}, INPUT);\n",
+        "snippetCode": "//Read IR obstacle Sensor. {{varname}}Var will be '1' if an Obstacle was detected\n//Use the onboard trimmer to set the distance of alert\nbool {{varname}}Var = !digitalRead({{OUT}});\nSerial.print(F(\"ObjAvoid: \")); Serial.println({{varname}}Var);\n"
     },
     "license": "ArduinoIDE",
     "instantiate": {

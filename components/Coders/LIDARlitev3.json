@@ -17,9 +17,9 @@
     ],
     "code": {
         "global": "",
-        "constructors": "    {{classname}} {{varname}};\n",
-        "setup": "    {{varname}}.begin(0, true); // Set configuration to default '0', change this number to try out alternate configurations. I2C speed set to 400 kHz.\n",
-        "snippetCode": "    // Take a measurement with receiver bias correction and print to serial terminal\n    int {{varname}}Dist = {{varname}}.distance();\n    Serial.print({{varname}}Dist);\n    Serial.println(\" [cm]\");\n    delay(50);"
+        "constructors": "{{classname}} {{varname}};\n",
+        "setup": "{{varname}}.begin(0, true); // Set configuration to default '0', change this number to try out alternate configurations. I2C speed set to 400 kHz.\n",
+        "snippetCode": "// Take a measurement with receiver bias correction and print to serial terminal\nint {{varname}}Dist = {{varname}}.distance();\nSerial.print({{varname}}Dist);\nSerial.println(\" [cm]\");\ndelay(50);"
     },
     "license": "Apache2.0",
     "instantiate": {

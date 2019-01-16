@@ -15,8 +15,8 @@
         "Teensy32"
     ],
     "code": {
-        "setup": "    //initialize RFID module\n    {{varname}}.init();\n",
-        "snippetCode": "    //Read RFID tag if present\n    String {{varname}}tag = {{varname}}.readTag();\n    //print the tag to serial monitor if one was discovered\n    {{varname}}.printTag({{varname}}tag);\n"
+        "setup": "//initialize RFID module\n{{varname}}.init();\n",
+        "snippetCode": "//Read RFID tag if present\nString {{varname}}tag = {{varname}}.readTag();\n//print the tag to serial monitor if one was discovered\n{{varname}}.printTag({{varname}}tag);\n"
     },
     "license": "PublicDomain",
     "instantiate": {
