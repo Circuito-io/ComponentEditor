@@ -53,7 +53,7 @@
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"},{"cost":1,"spec":"SDA","voltage":"5v"}]
+                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
                     }
                 },
                 {
@@ -79,7 +79,7 @@
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"},{"cost":1,"spec":"SCL","voltage":"5v"}]
+                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
                     }
                 }
             ]

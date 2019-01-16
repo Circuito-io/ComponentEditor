@@ -22,19 +22,13 @@
     },
     "circuits": [
         {
-            "name": "",
+            "name": "3v3",
             "coders": [
                 "LedMatrix"
             ],
             "supportedControllers": [
                 "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
                 "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
                 "ESP32DevKitC",
                 "NodeMCU",
                 "RPI3B",
@@ -66,7 +60,7 @@
                     "name": "DIN",
                     "interface": {
                         "chainTo": "DIN_CHN",
-                        "requires":[{"cost":50,"spec":"MISO","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
@@ -74,7 +68,7 @@
                     "name": "CLK",
                     "interface": {
                         "chainTo": "CLK_PT",
-                        "requires":[{"cost":50,"spec":"MOSI","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
@@ -82,7 +76,7 @@
                     "name": "CS",
                     "interface": {
                         "chainTo": "CS_PT",
-                        "requires":[{"cost":50,"spec":"SS","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
                         "unique": true
                     }
                 },
@@ -117,26 +111,105 @@
                     }
                 }
             ],
+            "priority": 2,
             "requiredBlocks": [
+                
+            ]
+        },
+        {
+            "name": "5v",
+            "coders": [
+                "LedMatrix"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini5v",
+                "ArduinoUno"
+            ],
+            "parts": [
                 {
-                    "cost": 1,
-                    "blocks": [
-                        "LogicLevelConverterSPI-3.3-5"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 11,
-                    "blocks": [
-                        "Reg5v",
-                        "LogicLevelConverterSPI-3.3-5"
-                    ]
+                    "name": "this",
+                    "part": "LedMatrix"
                 }
+            ],
+            "ports": [
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "chainTo": "VCC_PT",
+                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requiresLoad": 300
+                    }
+                },
+                {
+                    "name": "GND",
+                    "interface": {
+                        "chainTo": "GND_PT",
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
+                    "name": "DIN",
+                    "interface": {
+                        "chainTo": "DIN_CHN",
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CLK",
+                    "interface": {
+                        "chainTo": "CLK_PT",
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "CS",
+                    "interface": {
+                        "chainTo": "CS_PT",
+                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "VCC_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "GND_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "DIN_CHN",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "CLK_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                },
+                {
+                    "name": "CS_PT",
+                    "interface": {
+                        "chain": true
+                    }
+                }
+            ],
+            "priority": 1,
+            "requiredBlocks": [
+                
             ]
         }
     ]

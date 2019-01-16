@@ -41,7 +41,7 @@
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"RX","voltage":"3.3v"}],
+                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"RX","voltage":"3.3v"},{"spec":"CapTouch","voltage":""}],
                         "providesLoad": 10
                     }
                 },
@@ -49,7 +49,7 @@
                     "name": "1",
                     "interface": {
                         "codename": 1,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"TX","voltage":"3.3v"}],
+                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"TX","voltage":"3.3v"},{"spec":"CapTouch","voltage":""}],
                         "providesLoad": 10
                     }
                 },
@@ -153,7 +153,7 @@
                     "name": "14",
                     "interface": {
                         "codename": 14,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"ADC","voltage":""}],
+                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"ADC","voltage":"3.3v"}],
                         "providesLoad": 10
                     }
                 },
@@ -233,33 +233,27 @@
                     "name": "A10",
                     "interface": {
                         "codename": "A10",
-                        "provides":[{"spec":"ADC","voltage":""}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A11",
                     "interface": {
                         "codename": "A11",
-                        "provides":[{"spec":"ADC","voltage":""}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A14",
                     "interface": {
                         "codename": "A14",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":"3.3v"}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"},{"spec":"DAC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "AREF",
                     "interface": {
                         "provides":[{"spec":"IORef","voltage":""}]
-                    }
-                },
-                {
-                    "name": "AGND",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
@@ -275,19 +269,34 @@
                     }
                 },
                 {
+                    "name": "AGND",
+                    "interface": {
+                        "provides":[{"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
+                    "name": "USBPos",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"USB","voltage":"5v"}],
+                        "requiresLoad": 50
+                    }
+                },
+				
+                {
+                    "name": "USBNeg",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"USB","voltage":"GND"}]
+										  
+                    }
+                },
+                {
                     "name": "3.3v",
                     "interface": {
                         "provides":[{"spec":"","voltage":"3.3v"}],
                         "providesLoad": 250
                     }
                 },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
-                        "providesLoad": 400
-                    }
-                },
+                
                 {
                     "name": "MemOverLoad",
                     "interface": {
@@ -308,18 +317,25 @@
                     }
                 }
             ],
-            "priority": 1,
+            "priority": 2,
             "requiredBlocks": [
                 {
                     "cost": 0,
                     "blocks": [
                         "USBPowerMicro"
                     ]
+                },
+                {
+                    "cost": 10,
+                    "blocks": [
+                        "USBPowerMicro",
+                        "Reg5v"
+                    ]
                 }
             ]
         },
         {
-            "name": "6v",
+            "name": "12v",
             "supportedControllers": [
                 "Teensy32"
             ],
@@ -526,33 +542,27 @@
                     "name": "A10",
                     "interface": {
                         "codename": "A10",
-                        "provides":[{"spec":"ADC","voltage":""}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A11",
                     "interface": {
                         "codename": "A11",
-                        "provides":[{"spec":"ADC","voltage":""}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A14",
                     "interface": {
                         "codename": "A14",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":"3.3v"}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"},{"spec":"DAC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "AREF",
                     "interface": {
                         "provides":[{"spec":"IORef","voltage":""}]
-                    }
-                },
-                {
-                    "name": "AGND",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
@@ -568,9 +578,15 @@
                     }
                 },
                 {
+                    "name": "AGND",
+                    "interface": {
+                        "provides":[{"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
                     "name": "VIN",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.7v"},{"cost":1,"spec":"Battery","voltage":"3.7v"},{"cost":2,"spec":"","voltage":"5v"},{"cost":3,"spec":"USB","voltage":"5v"},{"cost":4,"spec":"","voltage":"6v"}],
+                        "requires":[{"cost":3,"spec":"","voltage":"3.7v"},{"cost":2,"spec":"Battery","voltage":"3.7v"},{"cost":1,"spec":"","voltage":"5v"},{"cost":4,"spec":"USB","voltage":"5v"},{"cost":5,"spec":"","voltage":"6v"}],
                         "requiresLoad": 40
                     }
                 },
@@ -595,18 +611,25 @@
                     }
                 },
                 {
+                    "name": "BARREL_JACK",
+                    "interface": {
+                        "provides":[{"spec":"BARREL_JACK","voltage":""}]
+                    }
+                },
+                {
                     "name": "SerialType",
                     "interface": {
                         "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
                     }
                 }
             ],
-            "priority": 2,
+            "priority": 1,
             "requiredBlocks": [
                 {
                     "cost": 0,
                     "blocks": [
-                        "USBPowerMicro"
+                        "USBPowerMicro",
+                        "Reg5v"
                     ]
                 }
             ]
@@ -819,33 +842,27 @@
                     "name": "A10",
                     "interface": {
                         "codename": "A10",
-                        "provides":[{"spec":"ADC","voltage":""}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A11",
                     "interface": {
                         "codename": "A11",
-                        "provides":[{"spec":"ADC","voltage":""}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "A14",
                     "interface": {
                         "codename": "A14",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":"3.3v"}]
+                        "provides":[{"spec":"ADC","voltage":"3.3v"},{"spec":"DAC","voltage":"3.3v"}]
                     }
                 },
                 {
                     "name": "AREF",
                     "interface": {
                         "provides":[{"spec":"IORef","voltage":""}]
-                    }
-                },
-                {
-                    "name": "AGND",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
                     }
                 },
                 {
@@ -861,6 +878,12 @@
                     }
                 },
                 {
+                    "name": "AGND",
+                    "interface": {
+                        "provides":[{"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
                     "name": "3.3v",
                     "interface": {
                         "provides":[{"spec":"","voltage":"3.3v"}],
@@ -870,7 +893,7 @@
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.7v"},{"cost":1,"spec":"Battery","voltage":"3.7v"}],
+                        "requires":[{"cost":1,"spec":"","voltage":"3.7v"},{"cost":0,"spec":"Battery","voltage":"3.7v"}],
                         "requiresLoad": 40
                     }
                 },
