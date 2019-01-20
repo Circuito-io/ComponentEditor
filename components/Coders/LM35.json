@@ -12,8 +12,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "snippetCode": "//Get Measurment from LM35 temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"

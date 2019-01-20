@@ -11,8 +11,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "global": "//Use this 2D array to map the keys as you desire\nchar {{varname}}keys[ROWS][COLS] = {\n{'1','2','3'},\n{'4','5','6'},\n{'7','8','9'},\n{'*','0','#'}\n};\n",

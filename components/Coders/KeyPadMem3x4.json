@@ -11,10 +11,14 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
-    "code": {},
+    "code": {
+        "global": "//Use this 2D array to map the keys as you desire\nchar {{varname}}keys[ROWS][COLS] = {\n{'1','2','3'},\n{'4','5','6'},\n{'7','8','9'},\n{'*','0','#'}\n};\n",
+        "constructors": "{{classname}} {{varname}}({{col1}},{{col2}},{{col3}},{{row1}},{{row2}},{{row3}},{{row4}});\n",
+        "setup": "//Initialize the keypad with selected key map\n{{varname}}.begin({{varname}}keys);\n",
+        "snippetCode": "//Read keypad\nchar {{varname}}Key = {{varname}}.getKey();\nif (isDigit({{varname}}Key) ||  {{varname}}Key == '*' ||  {{varname}}Key == '#')\n{\nSerial.print({{varname}}Key);\n}"
+    },
     "license": "circuito",
     "instantiate": {
         "classname": "Keypad",
@@ -36,6 +40,6 @@
         "Keypad.h"
     ],
     "includeHeaders": [
-        "Keypad.h"
+        "KeyPad.h"
     ]
 }

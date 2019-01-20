@@ -2,7 +2,6 @@
     "name": "SlideSwitch",
     "supportedControllers": [
         "ATMega328P",
-        "ATTiny85",
         "ArduinoGemma",
         "ArduinoLeonardo",
         "ArduinoMega",
@@ -13,8 +12,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "setup": "{{varname}}.init();\n",
@@ -26,7 +24,7 @@
         "ports": [
             "2"
         ],
-        "varname": "SlideSwitch"
+        "varname": "switch"
     },
     "files": [
         "Button.h",

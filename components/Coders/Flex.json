@@ -12,8 +12,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "snippetCode": "// Read Flex sensor value.\nint {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"

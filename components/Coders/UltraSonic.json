@@ -11,8 +11,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "snippetCode": "//Get distance measurement in cm. see also {{varname}}.getInches()\nfloat {{varname}}Dist = {{varname}}.getCms();\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
