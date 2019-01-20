@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>One meter non-addressable Single Color LED strips with 60 LED's per meter.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -71,19 +71,42 @@
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

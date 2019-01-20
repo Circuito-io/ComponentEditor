@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>Microphone+amplifier allows you to detect standard sounds in your environment like voices, knocks, claps.<br><strong>Returned values</strong>: from 0 (no sound) to 1023 (maximal sound). - Works with regular ambient noises, silence vs. fall or knock, etc\u2026<br><strong>Requires</strong>: soldering 3 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: Detect a knock and perform some action, like open the door, or a secret drawer.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -47,20 +47,38 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],
@@ -90,20 +108,38 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ],

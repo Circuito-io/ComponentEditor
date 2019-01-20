@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>Control a 8x8 LED matrix display using the MAX7219. Up to 8 modules can be chained for a longer display.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/LED-Matrix-with-Arduino/\">LED Matrix with Arduino</a></p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -51,7 +51,13 @@
                     "name": "VCC",
                     "interface": {
                         "chainTo": "VCC_PT",
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 300
                     }
                 },
@@ -59,14 +65,31 @@
                     "name": "GND",
                     "interface": {
                         "chainTo": "GND_PT",
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "DIN",
                     "interface": {
                         "chainTo": "DIN_CHN",
-                        "requires":[{"cost":50,"spec":"MISO","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 50,
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1000,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
@@ -74,7 +97,18 @@
                     "name": "CLK",
                     "interface": {
                         "chainTo": "CLK_PT",
-                        "requires":[{"cost":50,"spec":"MOSI","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 50,
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1000,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
@@ -82,7 +116,18 @@
                     "name": "CS",
                     "interface": {
                         "chainTo": "CS_PT",
-                        "requires":[{"cost":50,"spec":"SS","voltage":"5v"},{"cost":1000,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 50,
+                                "spec": "SS",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1000,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },

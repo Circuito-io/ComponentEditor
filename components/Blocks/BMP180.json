@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>High precision, low power digital barometer.<br><strong>Returned Values</strong>: Can measure air pressure from 300-110 hPa with 0.02 hPa accuracy.</p>\n<p><strong>Requires</strong>: Soldering 4 pin male header.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -53,25 +53,54 @@
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"},{"cost":1,"spec":"SDA","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 500
                     }
                 },
@@ -79,7 +108,18 @@
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"},{"cost":1,"spec":"SCL","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ]

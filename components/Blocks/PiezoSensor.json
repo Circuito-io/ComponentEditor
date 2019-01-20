@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>Piezo generates a voltage when it is physically deformed by a vibration, sound wave, or mechanical strain.<br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"https://www.arduino.cc/en/Tutorial/Knock\">Secret Knock</a></p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -74,14 +74,26 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ]

@@ -19,7 +19,7 @@
             "solder": false
         },
         "desc": "<p>A 5V2.5A power supply for your Raspberry PI. Works with 90-264VAC inputs. The most reliable and most likely to work well with Raspberry PI. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.<br>This part can only be used with Raspberry Pi.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -39,20 +39,36 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[{"spec":"USB","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "USB",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 2500
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[{"spec":"USB","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "USB",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"USB_MICRO","voltage":""}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ]

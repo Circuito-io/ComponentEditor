@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
-        "visible": false
+        "visible": true
     },
     "altComp": [
         100,
@@ -52,20 +52,36 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"9v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "9v"
+                            }
+                        ],
                         "providesLoad": 1000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[{"spec":"Battery","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ]

@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A simple rotation motor, rotating 360 degrees, operating without a load at ~6000 RPM.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -66,7 +66,13 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "GndLoadSwitching-PWM",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 400,
                         "unique": true
                     }
@@ -74,7 +80,43 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[{"cost":8,"spec":"","voltage":"3.3v"},{"cost":7,"spec":"","voltage":"3.7v"},{"cost":6,"spec":"","voltage":"5v"},{"cost":5,"spec":"","voltage":"6v"},{"cost":3,"spec":"","voltage":"7.4v"},{"cost":2,"spec":"","voltage":"9v"},{"cost":1,"spec":"","voltage":"12v"}],
+                        "requires": [
+                            {
+                                "cost": 8,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 7,
+                                "spec": "",
+                                "voltage": "3.7v"
+                            },
+                            {
+                                "cost": 6,
+                                "spec": "",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 5,
+                                "spec": "",
+                                "voltage": "6v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "",
+                                "voltage": "7.4v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "",
+                                "voltage": "9v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ],
                         "requiresLoad": 400
                     }
                 }

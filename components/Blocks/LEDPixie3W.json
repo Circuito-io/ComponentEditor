@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>The Adafruit Pixie is very bright 3W RGB LED and it is also chainable. It communicates with the MCU over serial at 115200 baud rate.<p> It can be easily manipulated using <a href=\"https://learn.adafruit.com/pixie-3-watt-smart-chainable-led-pixels/wiring-and-test\">Adafruit Pixie library</a></p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -51,7 +51,13 @@
                     "name": "5V",
                     "interface": {
                         "chainTo": "5V_Ch",
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 500
                     }
                 },
@@ -59,14 +65,31 @@
                     "name": "GND",
                     "interface": {
                         "chainTo": "GND_Ch",
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "IN",
                     "interface": {
                         "chainTo": "OUT",
-                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"3.3v"},{"cost":1,"spec":"SoftwareSerial","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SoftwareSerial",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },

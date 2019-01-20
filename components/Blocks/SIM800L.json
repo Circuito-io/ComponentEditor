@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>SIM800L is a small quad-band GSM / GPRS module, equipped with quad-band antenna. Insert a valid SIM card and you can use it for voice calls, sending text messages and accessing the internet.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -46,33 +46,73 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RST",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"},{"cost":1,"spec":"RX","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "RX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"TX","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "TX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -103,40 +143,86 @@
                 {
                     "name": "RST",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],

@@ -53,7 +53,7 @@
                     "name": "GndOut",
                     "interface": {
                         "codenameRedirect": "Sig",
-                        "provides":[{"spec":"GndLoadSwitching","voltage":""}],
+                        "provides":[{"spec":"GndLoadSwitching-PWM","voltage":""}],
                         "providesLoad": 800
                     }
                 }

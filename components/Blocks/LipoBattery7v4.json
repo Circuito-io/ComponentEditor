@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
-        "visible": false
+        "visible": true
     },
     "altComp": [
         100,
@@ -52,20 +52,36 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"7.4v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "7.4v"
+                            }
+                        ],
                         "providesLoad": 5000
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[{"spec":"Battery","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ]

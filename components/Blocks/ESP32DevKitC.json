@@ -19,7 +19,7 @@
             "solder": false
         },
         "desc": "<p>ESP32-DevKitC is a small-sized ESP32-based development board. Built around the ESP-WROOM-32. It features a Wi-Fi and Bluetooth combo set, alongside optimized pinout to enable prototyping on a breadboard.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -42,275 +42,933 @@
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TXD0",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
                         "codename": "2",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RXD0",
                     "interface": {
                         "codename": "3",
-                        "provides":[{"spec":"RX","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "4",
                     "interface": {
                         "codename": "4",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5",
                     "interface": {
                         "codename": "5",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SS","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "CLK",
                     "interface": {
                         "codename": "6",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD0",
                     "interface": {
                         "codename": "7",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD1",
                     "interface": {
                         "codename": "8",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD2",
                     "interface": {
                         "codename": "9",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"RX2","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "RX2",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD3",
                     "interface": {
                         "codename": "10",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"TX2","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "TX2",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "CMD",
                     "interface": {
                         "codename": "11",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "12",
                     "interface": {
                         "codename": "12",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "13",
                     "interface": {
                         "codename": "13",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "14",
                     "interface": {
                         "codename": "14",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"ADC","voltage":""},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "15",
                     "interface": {
                         "codename": "15",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "16",
                     "interface": {
                         "codename": "16",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "17",
                     "interface": {
                         "codename": "17",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "18",
                     "interface": {
                         "codename": "18",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SCK",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "19",
                     "interface": {
                         "codename": "19",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"MISO","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "MISO",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "21",
                     "interface": {
                         "codename": "21",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SDA","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "22",
                     "interface": {
                         "codename": "22",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SCL","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "23",
                     "interface": {
                         "codename": "23",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"MOSI","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "MOSI",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "25",
                     "interface": {
                         "codename": "25",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DAC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "26",
                     "interface": {
                         "codename": "26",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DAC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "27",
                     "interface": {
                         "codename": "27",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "32",
                     "interface": {
                         "codename": "32",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "33",
                     "interface": {
                         "codename": "33",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "34",
                     "interface": {
                         "codename": "34",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "35",
                     "interface": {
                         "codename": "35",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "36",
                     "interface": {
                         "codename": "36",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "39",
                     "interface": {
                         "codename": "39",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND2",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"USB","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "3V3",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 500
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 500
                     }
                 },
                 {
                     "name": "USBPos",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"USB","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 128000
                     }
                 }
@@ -337,268 +995,920 @@
                     "name": "0",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TXD0",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
                         "codename": "2",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RXD0",
                     "interface": {
                         "codename": "3",
-                        "provides":[{"spec":"RX","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "4",
                     "interface": {
                         "codename": "4",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5",
                     "interface": {
                         "codename": "5",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"SS","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "CLK",
                     "interface": {
                         "codename": "6",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD0",
                     "interface": {
                         "codename": "7",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD1",
                     "interface": {
                         "codename": "8",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD2",
                     "interface": {
                         "codename": "9",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"RX2","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "RX2",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SD3",
                     "interface": {
                         "codename": "10",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"TX2","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "TX2",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "CMD",
                     "interface": {
                         "codename": "11",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "12",
                     "interface": {
                         "codename": "12",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "13",
                     "interface": {
                         "codename": "13",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "14",
                     "interface": {
                         "codename": "14",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"ADC","voltage":""},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "15",
                     "interface": {
                         "codename": "15",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "16",
                     "interface": {
                         "codename": "16",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "17",
                     "interface": {
                         "codename": "17",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "18",
                     "interface": {
                         "codename": "18",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SCK","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SCK",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "19",
                     "interface": {
                         "codename": "19",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"MISO","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "MISO",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "21",
                     "interface": {
                         "codename": "21",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SDA","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "22",
                     "interface": {
                         "codename": "22",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"SCL","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "23",
                     "interface": {
                         "codename": "23",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"MOSI","voltage":"3.3v"}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "MOSI",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "25",
                     "interface": {
                         "codename": "25",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DAC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "26",
                     "interface": {
                         "codename": "26",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""},{"spec":"DAC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DAC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "27",
                     "interface": {
                         "codename": "27",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "32",
                     "interface": {
                         "codename": "32",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "33",
                     "interface": {
                         "codename": "33",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "34",
                     "interface": {
                         "codename": "34",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "35",
                     "interface": {
                         "codename": "35",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "36",
                     "interface": {
                         "codename": "36",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "39",
                     "interface": {
                         "codename": "39",
-                        "provides":[{"spec":"DigitalIn","voltage":"3.3v"},{"spec":"DigitalIn-Int","voltage":"3.3v"},{"spec":"DigitalOut","voltage":"3.3v"},{"spec":"PWM","voltage":"3.3v"},{"spec":"ADC","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND1",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND2",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "3V3",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 800
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 1000
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 128000
                     }
                 }

@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This light emitting diode allows you to control its color by setting the intensity of RED, GREEN and BLUE from 0 (no color) to 255 (max color intensity). Use it for a colorful display or as an indicator that an event has occurred. Luminosity (RGB): (800, 4000, 900)mcd.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -85,28 +85,52 @@
                 {
                     "name": "b",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "g",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "r",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],
@@ -173,28 +197,52 @@
                 {
                     "name": "b",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "g",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "r",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ],

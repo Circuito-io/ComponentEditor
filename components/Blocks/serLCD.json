@@ -52,26 +52,65 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 165
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"5v"},{"cost":1,"spec":"SoftwareSerial","voltage":"3.3v"},{"cost":2,"spec":"TX","voltage":"5v"},{"cost":3,"spec":"TX","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SoftwareSerial",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "TX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

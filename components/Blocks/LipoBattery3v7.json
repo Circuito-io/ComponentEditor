@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has one cell and outputs 3.7V.\n",
-        "visible": false
+        "visible": true
     },
     "altComp": [
         100,
@@ -46,20 +46,35 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"Battery","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "provides":[{"spec":"Battery","voltage":"3.7v"}],
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": "3.7v"
+                            }
+                        ],
                         "providesLoad": 5000
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[{"spec":"Battery","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ]

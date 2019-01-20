@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This pump operates at 12V and has enough suction for most small projects.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -51,7 +51,13 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "GndLoadSwitching-PWM",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 400,
                         "unique": true
                     }
@@ -59,7 +65,13 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"12v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ],
                         "requiresLoad": 400
                     }
                 }

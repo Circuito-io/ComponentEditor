@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -48,20 +48,36 @@
                 {
                     "name": "POS",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"12v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "NEG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "PowerType",
                     "interface": {
-                        "provides":[{"spec":"Battery","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ],

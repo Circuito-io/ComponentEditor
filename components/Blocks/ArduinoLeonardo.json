@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>The Arduino Leonardo is a microcontroller board based on the ATmega32U4, developed in conjunction with Adafruit. </p>\n<p>It has 20 digital input/output pins (of which 7 can be used as PWM outputs and 12 as analog inputs), a 16 MHz crystal oscillator, a micro USB connection, a power jack, an ICSP header and a reset button. </p>\n<p>It contains everything needed to support the microcontroller; simply connect it to a computer with a micro USB cable to get started. - - <a target=\"_blank\" href=\"https://www.arduino.cc/en/main/arduinoBoardLeonardo\">More Info</a></p>\n<p>This text is provided under the <strong>Creative Commons Attribution ShareAlike 3.0</strong></p>\n",
-        "visible": false
+        "visible": true
     },
     "altComp": [
         1000,
@@ -41,7 +41,24 @@
                     "name": "2",
                     "interface": {
                         "codename": 2,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -49,7 +66,28 @@
                     "name": "3",
                     "interface": {
                         "codename": 3,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SCL","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -57,7 +95,16 @@
                     "name": "4",
                     "interface": {
                         "codename": 4,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -65,7 +112,20 @@
                     "name": "5",
                     "interface": {
                         "codename": 5,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -73,7 +133,20 @@
                     "name": "6",
                     "interface": {
                         "codename": 6,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -81,7 +154,20 @@
                     "name": "7",
                     "interface": {
                         "codename": 7,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -89,7 +175,24 @@
                     "name": "8",
                     "interface": {
                         "codename": 8,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -97,7 +200,24 @@
                     "name": "9",
                     "interface": {
                         "codename": 9,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -105,7 +225,28 @@
                     "name": "10",
                     "interface": {
                         "codename": 10,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"spec":"SS","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -113,7 +254,24 @@
                     "name": "11",
                     "interface": {
                         "codename": 11,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -121,7 +279,16 @@
                     "name": "12",
                     "interface": {
                         "codename": 12,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -129,35 +296,72 @@
                     "name": "13",
                     "interface": {
                         "codename": 13,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"Timer2","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "Timer2",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 150
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
                         "codename": "SCK",
-                        "provides":[{"spec":"SCK","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -165,7 +369,12 @@
                     "name": "RX",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"RX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -173,120 +382,268 @@
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A1",
                     "interface": {
                         "codename": "A1",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "A2",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "A3",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "A4",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A5",
                     "interface": {
                         "codename": "A5",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 2560
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
                         "codename": "RESET",
-                        "provides":[{"spec":"DigitalIn","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "codename": "MISO",
-                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "codename": "MOSI",
-                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "ARef",
                     "interface": {
-                        "provides":[{"spec":"IORef","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "IORef",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"12v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ],
                         "providesLoad": 1000
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "BARREL_JACK",
                     "interface": {
-                        "provides":[{"spec":"BARREL_JACK","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "BARREL_JACK",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "BarrelNeg",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"Barrel","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "Barrel",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "BarrelPos",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"Barrel","voltage":"12v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "Barrel",
+                                "voltage": "12v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 }
@@ -317,7 +674,24 @@
                     "name": "2",
                     "interface": {
                         "codename": 2,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -325,7 +699,28 @@
                     "name": "3",
                     "interface": {
                         "codename": 3,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SCL","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -333,7 +728,16 @@
                     "name": "4",
                     "interface": {
                         "codename": 4,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -341,7 +745,20 @@
                     "name": "5",
                     "interface": {
                         "codename": 5,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -349,7 +766,20 @@
                     "name": "6",
                     "interface": {
                         "codename": 6,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -357,7 +787,20 @@
                     "name": "7",
                     "interface": {
                         "codename": 7,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -365,7 +808,24 @@
                     "name": "8",
                     "interface": {
                         "codename": 8,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -373,7 +833,24 @@
                     "name": "9",
                     "interface": {
                         "codename": 9,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -381,7 +858,28 @@
                     "name": "10",
                     "interface": {
                         "codename": 10,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"spec":"SS","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -389,7 +887,24 @@
                     "name": "11",
                     "interface": {
                         "codename": 11,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -397,7 +912,16 @@
                     "name": "12",
                     "interface": {
                         "codename": 12,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -405,35 +929,72 @@
                     "name": "13",
                     "interface": {
                         "codename": 13,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"Timer2","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "Timer2",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 150
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
                         "codename": "SCK",
-                        "provides":[{"spec":"SCK","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -441,7 +1002,12 @@
                     "name": "RX",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"RX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -449,101 +1015,233 @@
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A1",
                     "interface": {
                         "codename": "A1",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "A2",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "A3",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "A4",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A5",
                     "interface": {
                         "codename": "A5",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 2560
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
                         "codename": "RESET",
-                        "provides":[{"spec":"DigitalIn","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "codename": "MISO",
-                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "codename": "MOSI",
-                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "ARef",
                     "interface": {
-                        "provides":[{"spec":"IORef","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "IORef",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"6v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "6v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 }
@@ -574,7 +1272,24 @@
                     "name": "2",
                     "interface": {
                         "codename": 2,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -582,7 +1297,28 @@
                     "name": "3",
                     "interface": {
                         "codename": 3,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SCL","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -590,7 +1326,16 @@
                     "name": "4",
                     "interface": {
                         "codename": 4,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -598,7 +1343,20 @@
                     "name": "5",
                     "interface": {
                         "codename": 5,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -606,7 +1364,20 @@
                     "name": "6",
                     "interface": {
                         "codename": 6,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -614,7 +1385,20 @@
                     "name": "7",
                     "interface": {
                         "codename": 7,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -622,21 +1406,60 @@
                     "name": "8",
                     "interface": {
                         "codename": 8,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "10",
                     "interface": {
                         "codename": 10,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -644,7 +1467,24 @@
                     "name": "11",
                     "interface": {
                         "codename": 11,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -652,7 +1492,16 @@
                     "name": "12",
                     "interface": {
                         "codename": 12,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -660,7 +1509,24 @@
                     "name": "13",
                     "interface": {
                         "codename": 13,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"Timer2","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "Timer2",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -668,13 +1534,23 @@
                     "name": "SCK",
                     "interface": {
                         "codename": "SCK",
-                        "provides":[{"spec":"SCK","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 150
                     }
                 },
@@ -682,20 +1558,43 @@
                     "name": "A1",
                     "interface": {
                         "codename": "A1",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -703,7 +1602,12 @@
                     "name": "RX",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"RX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -711,7 +1615,24 @@
                     "name": "9",
                     "interface": {
                         "codename": 9,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -719,20 +1640,51 @@
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "A2",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 2560
                     }
                 },
@@ -740,60 +1692,131 @@
                     "name": "A4",
                     "interface": {
                         "codename": "A4",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "A3",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "USBPos",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"USB","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 },
                 {
                     "name": "USBNeg",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"USB","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "codename": "MISO",
-                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
                         "codename": "RESET",
-                        "provides":[{"spec":"DigitalIn","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "codename": "MOSI",
-                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "ARef",
                     "interface": {
-                        "provides":[{"spec":"IORef","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "IORef",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
@@ -801,13 +1824,31 @@
                     "name": "A5",
                     "interface": {
                         "codename": "A5",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ],
@@ -829,7 +1870,24 @@
                     "name": "2",
                     "interface": {
                         "codename": 2,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -837,7 +1895,28 @@
                     "name": "3",
                     "interface": {
                         "codename": 3,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SCL","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -845,7 +1924,16 @@
                     "name": "4",
                     "interface": {
                         "codename": 4,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -853,7 +1941,20 @@
                     "name": "5",
                     "interface": {
                         "codename": 5,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -861,7 +1962,20 @@
                     "name": "6",
                     "interface": {
                         "codename": 6,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -869,7 +1983,20 @@
                     "name": "7",
                     "interface": {
                         "codename": 7,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -877,7 +2004,24 @@
                     "name": "8",
                     "interface": {
                         "codename": 8,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -885,7 +2029,24 @@
                     "name": "9",
                     "interface": {
                         "codename": 9,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -893,7 +2054,28 @@
                     "name": "10",
                     "interface": {
                         "codename": 10,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"spec":"SS","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -901,7 +2083,24 @@
                     "name": "11",
                     "interface": {
                         "codename": 11,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -909,7 +2108,16 @@
                     "name": "12",
                     "interface": {
                         "codename": 12,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -917,35 +2125,72 @@
                     "name": "13",
                     "interface": {
                         "codename": 13,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"Timer2","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "Timer2",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 150
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
                         "codename": "SCK",
-                        "provides":[{"spec":"SCK","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -953,7 +2198,12 @@
                     "name": "RX",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"RX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -961,101 +2211,233 @@
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A1",
                     "interface": {
                         "codename": "A1",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "A2",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "A3",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "A4",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A5",
                     "interface": {
                         "codename": "A5",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 2560
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
                         "codename": "RESET",
-                        "provides":[{"spec":"DigitalIn","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "codename": "MISO",
-                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "codename": "MOSI",
-                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "ARef",
                     "interface": {
-                        "provides":[{"spec":"IORef","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "IORef",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"9v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "9v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 }
@@ -1086,7 +2468,24 @@
                     "name": "2",
                     "interface": {
                         "codename": 2,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1094,7 +2493,28 @@
                     "name": "3",
                     "interface": {
                         "codename": 3,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SCL","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1102,7 +2522,16 @@
                     "name": "4",
                     "interface": {
                         "codename": 4,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1110,7 +2539,20 @@
                     "name": "5",
                     "interface": {
                         "codename": 5,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1118,7 +2560,20 @@
                     "name": "6",
                     "interface": {
                         "codename": 6,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1126,7 +2581,20 @@
                     "name": "7",
                     "interface": {
                         "codename": 7,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1134,21 +2602,64 @@
                     "name": "8",
                     "interface": {
                         "codename": 8,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "10",
                     "interface": {
                         "codename": 10,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"spec":"SS","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1156,7 +2667,24 @@
                     "name": "11",
                     "interface": {
                         "codename": 11,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1164,7 +2692,16 @@
                     "name": "12",
                     "interface": {
                         "codename": 12,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1172,7 +2709,24 @@
                     "name": "13",
                     "interface": {
                         "codename": 13,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"Timer2","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "Timer2",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1180,13 +2734,23 @@
                     "name": "SCK",
                     "interface": {
                         "codename": "SCK",
-                        "provides":[{"spec":"SCK","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 150
                     }
                 },
@@ -1194,20 +2758,43 @@
                     "name": "A1",
                     "interface": {
                         "codename": "A1",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1215,7 +2802,12 @@
                     "name": "RX",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"RX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1223,7 +2815,24 @@
                     "name": "9",
                     "interface": {
                         "codename": 9,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1231,27 +2840,64 @@
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "A2",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"7.4v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "7.4v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 2560
                     }
                 },
@@ -1259,47 +2905,106 @@
                     "name": "A3",
                     "interface": {
                         "codename": "A3",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "A4",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "codename": "MISO",
-                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
                         "codename": "RESET",
-                        "provides":[{"spec":"DigitalIn","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "codename": "MOSI",
-                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "ARef",
                     "interface": {
-                        "provides":[{"spec":"IORef","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "IORef",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
@@ -1307,13 +3012,31 @@
                     "name": "A5",
                     "interface": {
                         "codename": "A5",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ],
@@ -1343,7 +3066,24 @@
                     "name": "2",
                     "interface": {
                         "codename": 2,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"SDA","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1351,7 +3091,28 @@
                     "name": "3",
                     "interface": {
                         "codename": 3,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SCL","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1359,7 +3120,16 @@
                     "name": "4",
                     "interface": {
                         "codename": 4,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1367,7 +3137,20 @@
                     "name": "5",
                     "interface": {
                         "codename": 5,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1375,7 +3158,20 @@
                     "name": "6",
                     "interface": {
                         "codename": 6,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1383,7 +3179,20 @@
                     "name": "7",
                     "interface": {
                         "codename": 7,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalIn-Int","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1391,7 +3200,24 @@
                     "name": "8",
                     "interface": {
                         "codename": 8,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1399,7 +3225,24 @@
                     "name": "9",
                     "interface": {
                         "codename": 9,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1407,7 +3250,28 @@
                     "name": "10",
                     "interface": {
                         "codename": 10,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"spec":"SS","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SS",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1415,7 +3279,24 @@
                     "name": "11",
                     "interface": {
                         "codename": 11,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1423,7 +3304,16 @@
                     "name": "12",
                     "interface": {
                         "codename": 12,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1431,35 +3321,72 @@
                     "name": "13",
                     "interface": {
                         "codename": 13,
-                        "provides":[{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"},{"spec":"PWM","voltage":"5v"},{"spec":"Timer2","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "Timer2",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
                 {
                     "name": "3.3v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "providesLoad": 150
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
                         "codename": "SCK",
-                        "provides":[{"spec":"SCK","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
                         "codename": "1",
-                        "provides":[{"spec":"TX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1467,7 +3394,12 @@
                     "name": "RX",
                     "interface": {
                         "codename": "0",
-                        "provides":[{"spec":"RX","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 20
                     }
                 },
@@ -1475,101 +3407,233 @@
                     "name": "A0",
                     "interface": {
                         "codename": "A0",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A1",
                     "interface": {
                         "codename": "A1",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A2",
                     "interface": {
                         "codename": "A2",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A3",
                     "interface": {
                         "codename": "A3",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A4",
                     "interface": {
                         "codename": "A4",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "A5",
                     "interface": {
                         "codename": "A5",
-                        "provides":[{"spec":"ADC","voltage":""},{"spec":"DigitalIn","voltage":"5v"},{"spec":"DigitalOut","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "ADC",
+                                "voltage": ""
+                            },
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "provides":[{"spec":"SRAMLoad","voltage":""}],
+                        "provides": [
+                            {
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "providesLoad": 2560
                     }
                 },
                 {
                     "name": "SerialType",
                     "interface": {
-                        "provides":[{"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RESET",
                     "interface": {
                         "codename": "RESET",
-                        "provides":[{"spec":"DigitalIn","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "DigitalIn",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "codename": "MISO",
-                        "provides":[{"spec":"MISO","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "codename": "MOSI",
-                        "provides":[{"spec":"MOSI","voltage":"5v"},{"spec":"SoftwareSerial","voltage":"5v"}]
+                        "provides": [
+                            {
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "ARef",
                     "interface": {
-                        "provides":[{"spec":"IORef","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "IORef",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "5v",
                     "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "USB_MICRO",
                     "interface": {
-                        "provides":[{"spec":"USB_MICRO","voltage":""}]
+                        "provides": [
+                            {
+                                "spec": "USB_MICRO",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ],
                         "requiresLoad": 50
                     }
                 }

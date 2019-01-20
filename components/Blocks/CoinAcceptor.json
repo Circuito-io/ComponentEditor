@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A 3-type Coin Acceptor. This unit is programmable through the on-board display and buttons. After programming it will send serial data of its coin recognition.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -52,20 +52,63 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":2,"spec":"SoftwareSerial","voltage":"5v"},{"cost":3,"spec":"SoftwareSerial","voltage":"3.3v"},{"cost":4,"spec":"RX","voltage":"5v"},{"cost":5,"spec":"RX","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "SoftwareSerial",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 4,
+                                "spec": "RX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 5,
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "12V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ]
                     }
                 }
             ]

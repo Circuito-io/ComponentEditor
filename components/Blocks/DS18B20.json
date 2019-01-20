@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A very simple sensor to wire - measuring temperature in a huge range, with high accuracy.<br><strong>Returned values</strong>: \u201355\u00b0C to +125\u00b0C (\u201367\u00b0F to +257\u00b0F) - with an accuracy of (+/-0.5C).</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -70,26 +70,55 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 45
                     }
                 },
                 {
                     "name": "DQ",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"DigitalIn","voltage":"3.3v"},{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

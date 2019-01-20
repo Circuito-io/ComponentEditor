@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -66,7 +66,13 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "GndLoadSwitching",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 250,
                         "unique": true
                     }
@@ -74,7 +80,13 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ]
                     }
                 }
             ],
