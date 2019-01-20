@@ -13,12 +13,17 @@ var objFile = function(objPrefix, objName){
 
 exports.list_all_files_factory = function(objPrefix) {
     return function(req, res) {
-        var err = false;
-        if (err)
-          res.send(err);
-          
-        var files = fs.readdirSync(objFolder(objPrefix)).map(fn => path.basename(fn, '.json'));
-        res.json(files);
+        if (req.app.locals.listCache[objPrefix]) {
+            res.json(req.app.locals.listCache[objPrefix]);
+        }
+        else {
+            var err = false;
+            if (err)
+              res.send(err);
+              
+            var files = fs.readdirSync(objFolder(objPrefix)).map(fn => path.basename(fn, '.json'));
+            res.json(files);
+        }
     };
 };
 
@@ -104,5 +109,12 @@ exports.create_a_file_factory= function(objPrefix) {
 exports.delete_a_file_factory = function(objPrefix) {
     return function(req, res) {
         fs.unlinkSync(objFile(objPrefix, req.params.name));
+    };
+};
+
+exports.cache_list_all_files_factory = function(objPrefix) {
+    return function() {
+        var files = fs.readdirSync(objFolder(objPrefix)).map(fn => path.basename(fn, '.json'));
+        return files;
     };
 };

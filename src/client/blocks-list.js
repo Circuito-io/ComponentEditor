@@ -7,25 +7,17 @@ import { list_all_blocks } from "./controller.js";
 export class BlocksList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      blocks: [],
-    };
-
-    this.componentDidMount = this.componentDidMount.bind(this);
   }
-
-  componentDidMount() {
-    list_all_blocks()
-      .then((blocks) => {
-        this.setState({ blocks });
-      })
-  };
 
   render() {
     return (
       <Typeahead
-        options={this.state.blocks}
-        onChange={(selected) => {this.props.blockSelected(selected[0]);}}
+        options={this.props.cachedData.blocks}
+        onChange={(selected) => {
+          if (this.props.cachedData.blocks.includes(selected[0])) {
+            this.props.onBlockSelected(selected[0]);
+          }
+        }}
         bsSize={"small"}
         placeholder="Choose a block to edit"
         //defaultSelected = {["DT-22"]}

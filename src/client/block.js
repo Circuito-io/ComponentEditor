@@ -22,38 +22,21 @@ export class Block extends React.Component {
     this.updateConnectors = this.updateConnectors.bind(this);
     this.save = this.save.bind(this);
 
-    this.props.setSave(this.save);
+    this.props.setSaveFunc(this.save);
   }
 
   componentDidMount() {
-    if (this.props.block != null) {
-      // update block
-      var block = this.props.block
-
-      if (block == undefined) {
-        this.setState({ formSrcData: {} });
-        return
-      }
-
-      list_all_parts().then( parts =>
-        {this.setState({partsList: parts})}
-      );
-
-      list_all_coders().then ( coders =>
-        {this.setState({codersList: coders})}
-      );
-
-      list_all_blocks().then ( blocks =>
-        {this.setState({blocksList: blocks})}
-      );
-
-      read_a_block(block)
-        .then((blockData) => {
-          this.setState({ formSrcData: blockData });
-
-          this.updateConnectors()
-        })
+    if (!this.props.block) {
+      this.setState({ formSrcData: {} });
+      return;
     }
+
+    read_a_block(this.props.block)
+    .then((blockData) => {
+      this.setState({ formSrcData: blockData });
+
+      this.updateConnectors()
+    })
   }
 
   updateConnectors() {
@@ -85,8 +68,23 @@ export class Block extends React.Component {
             // But the react doesn't support different enums for different array elements (circuits)
             this.setState({connectors: this.state.connectors.concat(normalizedConnectorsNames) });
           })
-        }) })
+        })
+      })
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!this.props.block) {
+      this.setState({ formSrcData: {} });
+      return;
+    }
+
+    if (prevProps.block !== this.props.block) {
+      read_a_block(this.props.block)
+      .then((blockData) => {
+        this.setState({ formSrcData: blockData });
+      });
+    }
   }
 
   save() {
@@ -113,11 +111,11 @@ export class Block extends React.Component {
           </Button>
           <EditorForm
           schema={blockSchema(this.state.connectors)}
-          uiSchema={blockuiSchema(this.state.blocksList)}
+          uiSchema={blockuiSchema(this.props.cachedData.blocks)}
           formData={this.state.formSrcData}
           formContext={{
-              partsList: this.state.partsList,
-              codersList: this.state.codersList
+              partsList: this.props.cachedData.parts,
+              codersList: this.props.cachedData.coders
           }}
           onChange={data => {
               this.modified=true;
