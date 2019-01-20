@@ -12,8 +12,7 @@
         "ArduinoProMini5v",
         "ArduinoUno",
         "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
+        "NodeMCU"
     ],
     "code": {
         "constructors": "SoftwareSerial {{varname}}NSS(0,{{RX}});\nSerLCD {{varname}}({{varname}}NSS); \n",

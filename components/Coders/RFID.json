@@ -11,8 +11,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "setup": "//initialize RFID module\n{{varname}}.init();\n",

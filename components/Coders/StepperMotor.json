@@ -12,8 +12,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "global": "#define {{varname}}DelayTime  1000\n",
@@ -25,8 +24,8 @@
     "instantiate": {
         "classname": "StepperMotor",
         "ports": [
-            "step",
-            "dir"
+            "Step",
+            "Dir"
         ],
         "varname": "stepper"
     },

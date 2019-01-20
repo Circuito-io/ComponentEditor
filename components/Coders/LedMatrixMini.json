@@ -11,10 +11,13 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
-    "code": {},
+    "code": {
+        "constructors": "{{classname}} {{varname}} = Adafruit_8x8matrix();\n",
+        "setup": "{{varname}}.begin(0x70); // pass in the address\n",
+        "snippetCode": "{{varname}}.setTextSize(1);\n{{varname}}.setTextWrap(false);  // we dont want text to wrap so it scrolls nicely\n{{varname}}.setTextColor(LED_ON);\nfor (int i=0; i<4; i++) {\n{{varname}}.setRotation(i);\nfor (int8_t x=0; x>=-36; x--) {\n{{varname}}.clear();\n{{varname}}.setCursor(x,0);\n{{varname}}.print(\"Circuito\");\n{{varname}}.writeDisplay();\ndelay(120);\n}\n}"
+    },
     "license": "MIT",
     "instantiate": {
         "classname": "Adafruit_8x8matrix",
@@ -24,14 +27,7 @@
     "files": [
         "Adafruit_LEDBackpack.h",
         "Adafruit_LEDBackpack_license.txt",
-        "Adafruit_LEDBackpack.cpp",
-        "gfxfont.h",
-        "glcdfont.c",
-        "Adafruit_GFX.cpp",
-        "Adafruit_GFX_license.txt",
-        "Adafruit_GFX.h"
+        "Adafruit_LEDBackpack.cpp"
     ],
-    "includeHeaders": [
-        "Adafruit_LEDBackpack.h"
-    ]
+    "includeHeaders": []
 }

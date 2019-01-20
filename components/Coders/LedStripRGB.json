@@ -11,10 +11,14 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
-    "code": {},
+    "code": {
+        "global": "#define {{varname}}_TYPE COMMON_CATHODE\n",
+        "setup": "{{varname}}.turnOff();              // Start with  LED Strip RGB turned off\n",
+        "constructors": "{{classname}} {{varname}}({{SigR}},{{SigG}},{{SigB}},{{varname}}_TYPE);\n",
+        "snippetCode": "// The LED Strip RGB will turn PURPLE for 500ms(half a second) and turn off\n{{varname}}.setRGB(160, 3, 255);    // 1. sets LED Strip RGB color to purple. Change the values in the brackets to (255,0,0) for pure RED, (0,255,0) for pure GREEN and (0,0,255) for pure BLUE.\ndelay(500);                         // 2. change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n{{varname}}.turnOff();        // 3. turns LED Strip RGB off (showing no color). Change the values in the brackets to alter the color.\ndelay(500);                         // 4. change the value in the brackets (500) for a longer or shorter delay in milliseconds.  "
+    },
     "license": "circuito",
     "instantiate": {
         "classname": "RGBLed",

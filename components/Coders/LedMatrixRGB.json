@@ -12,8 +12,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "global": "#define {{varname}}_NUM_LEDS 64*{{numOfSameComp}}\n#define {{varname}}_BRIGHTNESS 10\n",

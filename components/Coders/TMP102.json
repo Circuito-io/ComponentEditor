@@ -12,8 +12,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "snippetCode": "float {{varname}}TempC = {{varname}}.readCelsius();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"

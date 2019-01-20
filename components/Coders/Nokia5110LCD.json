@@ -11,8 +11,7 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+        "RPI3B"
     ],
     "code": {
         "global": "//define Nokia LCD contrast and dimentions(in pixels)\n#define LCD_CONTRAST 60\n#define LCD_SIZE_COL 84\n#define LCD_SIZE_ROW 48\nint {{varname}}Counter = 0;\n",
