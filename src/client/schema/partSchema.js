@@ -34,12 +34,12 @@ export function partuiSchema(partsList) {
       items: {
         image: {
           "ui:widget": "imagewidget"
+        },
+        headers: {
+          qty: {
+            "ui:widget": "updown"
+          }
         }
-      }
-    },
-    headers: {
-      headersQty: {
-        "ui:widget": "updown"
       }
     },
     auxParts: {
@@ -112,25 +112,6 @@ export function partSchema(partsList) {
           }
         }
       },
-      headers: {
-        type: "object",
-        title: "Headers",
-        properties: {
-          requiresHeaders: {
-            type: "boolean",
-            title: "Requires headers"
-          },
-          headersType: {
-            type: "string",
-            title: "Headers type",
-            enum: ["female", "male"]
-          },
-          headersQty: {
-            type: "integer",
-            title: "Headers quantity"
-          }
-        }
-      },
       bom: {
         type: "array",
         items: {
@@ -160,7 +141,22 @@ export function partSchema(partsList) {
               type: "string",
               title: "Price (USD)",
               default: ""
-            }
+            },
+            headers: {
+                type: "object",
+                title: "Headers",
+                properties: {
+                type: {
+                    type: "string",
+                    title: "Headers type",
+                    enum: ["FemaleHeaders", "MaleHeaders"]
+                },
+                qty: {
+                    type: "integer",
+                    title: "Headers quantity"
+                }
+                }
+            },
           }
         }
       },
