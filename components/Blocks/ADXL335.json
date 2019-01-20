@@ -1,116 +1,86 @@
 {
-  "name": "ADXL335",
-  "blockId": "9269",
-  "category": [
-    "input"
-  ],
-  "app": {
-    "appName": "SparkFun ADXL335 - Triple Axis Accelerometer Breakout",
-    "numericName": "ADXL335",
-    "shortName": "Triple Axis Accelerometer",
-    "image": "http://res.cloudinary.com/circuito/image/upload/bbk2cbblkapeu7dl7pjt",
-    "tags": [
-      "inputs"
+    "name": "ADXL335",
+    "category": [
+        "input"
     ],
-    "visible": false,
-    "indicators": {
-      "verified": false,
-      "code": false,
-      "solder": true
+    "blockId": "9269",
+    "app": {
+        "appName": "SparkFun ADXL335 - Triple Axis Accelerometer Breakout",
+        "image": "http://res.cloudinary.com/circuito/image/upload/bbk2cbblkapeu7dl7pjt",
+        "numericName": "ADXL335",
+        "shortName": "Triple Axis Accelerometer",
+        "tags": [
+            "inputs"
+        ],
+        "indicators": {
+            "verified": false,
+            "code": false,
+            "solder": true
+        },
+        "desc": "<p>Triple axis analog accelerometer. It features low noise and low power consumption. The sensor has a full sensing range of +/-3g using three ADC pins.</p>",
+        "visible": false
     },
-    "desc": "<p>Triple axis analog accelerometer. It features low noise and low power consumption. The sensor has a full sensing range of +/-3g using three ADC pins.</p>"
-  },
-  "circuits": [
-    {
-      "name": "default",
-      "coders": [
-        "ADXL335"
-      ],
-      "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-      ],
-      "parts": [
+    "circuits": [
         {
-          "name": "this",
-          "part": "ADXL335"
-        }
-      ],
-      "ports": [
-        {
-          "name": "GND",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
-                "voltage": "GND"
-              }
+            "name": "default",
+            "coders": [
+                "ADXL335"
+            ],
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "RPI3B",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "ADXL335"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                    }
+                },
+                {
+                    "name": "XOUT",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "YOUT",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "unique": true
+                    }
+                },
+                {
+                    "name": "ZOUT",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "unique": true
+                    }
+                }
             ]
-          }
-        },
-        {
-          "name": "VCC",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
-                "voltage": "3.3v"
-              }
-            ]
-          }
-        },
-        {
-          "name": "XOUT",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "ADC",
-                "voltage": ""
-              }
-            ],
-            "unique": true
-          }
-        },
-        {
-          "name": "YOUT",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "ADC",
-                "voltage": ""
-              }
-            ],
-            "unique": true
-          }
-        },
-        {
-          "name": "ZOUT",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "ADC",
-                "voltage": ""
-              }
-            ],
-            "unique": true
-          }
         }
-      ]
-    }
-  ]
+    ]
 }
