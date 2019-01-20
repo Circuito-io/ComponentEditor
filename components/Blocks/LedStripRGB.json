@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>One meter non-addressable RGB LED strips with 60 LED's per meter.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -102,33 +102,78 @@
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SigB",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "SigR",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "SigG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

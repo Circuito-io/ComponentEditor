@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>This accelerometer measures the acceleration of an object in 3 axes - x-y-z. Acceleration is a change in rate, speed, etc.. If an object start moving faster or slower - it is detected by the accelerometer.<br><strong>Range</strong>: +-16 g.<br><strong>Requires</strong>: soldering 8 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/34five-Arduino-Pet/\">34five Arduino Pet</a>.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -59,25 +59,54 @@
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"},{"cost":1,"spec":"SDA","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 335
                     }
                 },
@@ -85,7 +114,18 @@
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"},{"cost":1,"spec":"SCL","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ]

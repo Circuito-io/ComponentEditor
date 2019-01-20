@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This is a very basic, small, UV LED. Its Luminous Intensity is 100-180mcd.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -62,14 +62,26 @@
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],
@@ -114,14 +126,26 @@
                 {
                     "name": "Vin",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "PWM",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],

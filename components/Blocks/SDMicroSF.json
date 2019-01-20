@@ -50,45 +50,127 @@
                 {
                     "name": "CO",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "DO",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"MISO","voltage":"5v"},{"cost":1,"spec":"MISO","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "MISO",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCK",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SCK","voltage":"5v"},{"cost":1,"spec":"SCK","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SCK",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "CS",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"},{"cost":2,"spec":"SS","voltage":"3.3v"},{"cost":3,"spec":"SS","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "SS",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "SS",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"},{"cost":1,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "DI",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"MOSI","voltage":"5v"},{"cost":1,"spec":"MOSI","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "MOSI",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ]

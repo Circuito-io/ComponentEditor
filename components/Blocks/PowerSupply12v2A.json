@@ -19,7 +19,7 @@
             "solder": false
         },
         "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -49,20 +49,36 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[{"spec":"Barrel","voltage":"12v"}],
+                        "provides": [
+                            {
+                                "spec": "Barrel",
+                                "voltage": "12v"
+                            }
+                        ],
                         "providesLoad": 2000
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[{"spec":"Barrel","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "Barrel",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "BARREL_JACK",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"BARREL_JACK","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "BARREL_JACK",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 }

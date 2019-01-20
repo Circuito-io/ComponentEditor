@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>The MPU-6050 is a triple axis accelerometer and gyro combined, allowing a very deep motion detection and analysis.</p>\n<p><strong>Returned Values</strong>: I2C Digital-output of 6 or 9-axis MotionFusion data.</p>\n<p><strong>Requires</strong>: Soldering of 8 male header pins to fit onto a breadboard.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Self-Balancing-Robot/\">Self Balancing Robot</a></p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -59,25 +59,54 @@
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"},{"cost":1,"spec":"SDA","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 235
                     }
                 },
@@ -85,7 +114,18 @@
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"},{"cost":1,"spec":"SCL","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ]

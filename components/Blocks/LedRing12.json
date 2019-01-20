@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>An addressable LED strip shaped like a ring with 12 5050 RGBW LED's. It allows you to control each RGB LED individually.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -52,7 +52,13 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 300
                     }
                 },
@@ -60,7 +66,18 @@
                     "name": "IN",
                     "interface": {
                         "chainTo": "OUT",
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
@@ -73,7 +90,13 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],

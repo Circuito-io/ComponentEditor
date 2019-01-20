@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>Acts like a bluetooth serial monitor. Enables the arduino to exchange data with other bluetooth devices such as PC or Android smartphone.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -56,27 +56,61 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 200
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"},{"cost":1,"spec":"RX","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "RX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"TX","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "TX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -121,33 +155,93 @@
                 {
                     "name": "SerialType",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 200
                     }
                 },
                 {
                     "name": "TXD",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 11,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "RXD",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 11,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

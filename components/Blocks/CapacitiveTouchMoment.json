@@ -47,20 +47,38 @@
                 {
                     "name": "OUT",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],
@@ -90,20 +108,38 @@
                 {
                     "name": "OUT",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ],

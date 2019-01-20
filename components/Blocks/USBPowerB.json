@@ -19,7 +19,7 @@
             "solder": false
         },
         "desc": "<p>A standard USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": false
+        "visible": true
     },
     "altComp": [
         150,
@@ -42,20 +42,36 @@
                 {
                     "name": "pos",
                     "interface": {
-                        "provides":[{"spec":"USB","voltage":"5v"}],
+                        "provides": [
+                            {
+                                "spec": "USB",
+                                "voltage": "5v"
+                            }
+                        ],
                         "providesLoad": 400
                     }
                 },
                 {
                     "name": "neg",
                     "interface": {
-                        "provides":[{"spec":"USB","voltage":"GND"}]
+                        "provides": [
+                            {
+                                "spec": "USB",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "USB_B",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"USB_B","voltage":""}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB_B",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 }
             ]

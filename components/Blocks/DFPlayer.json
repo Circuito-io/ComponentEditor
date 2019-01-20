@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>The DFPlayer Mini is a small and low price MP3 module with an simplified output directly to the speaker.<br>The module can be used as a stand alone module with attached battery, speaker and push buttons or used in combination with an Arduino UNO or any other with RX/TX capabilities.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -77,27 +77,106 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"},{"cost":1,"spec":"","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "requiresLoad": 100
                     }
                 },
                 {
                     "name": "GND-1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"},{"cost":1,"spec":"RX","voltage":"3.3v"},{"cost":2,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":3,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"},{"cost":11,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "RX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 11,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Rx",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"TX","voltage":"3.3v"},{"cost":2,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":3,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"},{"cost":11,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "TX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 11,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

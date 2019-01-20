@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This is a Fingerprint Scanner over TTL communication.<br>The module reads and identifies the fingerprints using an on-board optical sensor and CPU.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -73,27 +73,86 @@
                 {
                     "name": "Rx",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":2,"spec":"RX","voltage":"5v"},{"cost":3,"spec":"RX2","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "RX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "RX2",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Tx",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":2,"spec":"TX","voltage":"5v"},{"cost":3,"spec":"TX2","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "TX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "TX2",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],
@@ -128,27 +187,86 @@
                 {
                     "name": "Rx",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":2,"spec":"RX","voltage":"3.3v"},{"cost":3,"spec":"RX2","voltage":"3.3v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "RX2",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Tx",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":2,"spec":"TX","voltage":"3.3v"},{"cost":3,"spec":"TX2","voltage":"3.3v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "TX2",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 10,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],

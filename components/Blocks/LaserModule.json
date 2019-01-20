@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This Red Laser transmitter module gives a small intense beam. Take care of your eyes, do not look direct into the beam.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -52,14 +52,31 @@
                 {
                     "name": "S",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ]

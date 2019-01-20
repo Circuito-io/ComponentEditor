@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>An analog heart rate pulse sensor. It can be used to measure your heart bpm.<br><strong>Returned values</strong>: 0 to 1023 analog reading.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"https://www.dfrobot.com/index.php?route=product/product&product_id=1540\">Heart Rate Monitor Sensor For Arduino</a>.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -47,19 +47,37 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -90,19 +108,37 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 }

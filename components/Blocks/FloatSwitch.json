@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This float switch is great for sensing the level of liquid within a tank. It based on a reed switch that sealed in a stem and a magnet sealed in the float. Once the the liquid level raises  the float the magnet inside the float complete a circuit by the reed switch.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -65,19 +65,37 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "leg1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -126,19 +144,37 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "leg1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Sig",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

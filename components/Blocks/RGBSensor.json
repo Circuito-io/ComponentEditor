@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>A small board that allows you to detect the color in its surrounding.<br><strong>Returned Values</strong>: 0 (no color) to 256 (maximal intensity color) reading for each color: Red, Green, Blue.<br><strong>Requires</strong> : soldering of 5 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/DIY-Nespresso-Capsule-Detector/\">DIY Nespresson Capsule Detector</a>.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -53,19 +53,37 @@
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Vcc",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 450
                     }
                 },
@@ -73,13 +91,25 @@
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Gnd",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],

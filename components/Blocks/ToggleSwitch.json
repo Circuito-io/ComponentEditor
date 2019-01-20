@@ -61,19 +61,37 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -118,19 +136,37 @@
                 {
                     "name": "0",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "2",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

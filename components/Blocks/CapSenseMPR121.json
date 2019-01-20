@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>With this breakout board you can connect up to 12 individual touch pads to your microcontroller project.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -51,27 +51,66 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"},{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":1,"spec":"SDA","voltage":"3.3v"},{"cost":0,"spec":"SDA","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":1,"spec":"SCL","voltage":"3.3v"},{"cost":0,"spec":"SCL","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ]

@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>12V PC Fan 8cm square,operating speed of 2000 RPM.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -50,7 +50,13 @@
                 {
                     "name": "Coil1",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "GndLoadSwitching-PWM",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 80,
                         "unique": true
                     }
@@ -58,7 +64,13 @@
                 {
                     "name": "Coil2",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"12v"}],
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "12v"
+                            }
+                        ],
                         "requiresLoad": 80
                     }
                 }

@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>10 individual segment bar graph LED.<p><strong>Note:</strong> The pinout on these bar graphs may vary from what is listed on the datasheet. If not working, rotating the device 180 degrees will probably fix the problem.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -172,76 +172,192 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "JA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "IA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "HA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "FA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "EA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "DA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "CA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "BA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "AA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

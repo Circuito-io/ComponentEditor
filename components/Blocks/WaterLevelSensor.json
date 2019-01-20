@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This is simple and small portable water level/water droplet identification, a series of exposed parallel wires traces droplets/water and converts into analog signal. this sensor have low power consumption and high sensitivity.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -47,20 +47,38 @@
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],
@@ -89,20 +107,38 @@
                 {
                     "name": "SIG",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],

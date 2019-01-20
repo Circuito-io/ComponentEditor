@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>A low cost humidity and temperature sensor.<br><strong>Returned Values</strong>:  Temperature and Humidity through a single wire digital interface.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -61,19 +61,37 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "DATA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -118,19 +136,37 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VDD",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "DATA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

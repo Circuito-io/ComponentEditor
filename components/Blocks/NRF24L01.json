@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>The NRF24L01 is a low cost, low power 2.4GHz RF wireless transceiver.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -51,26 +51,70 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "CE",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "CS",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SS","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"SS","voltage":"3.3v"},{"cost":3,"spec":"DigitalOut","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SS",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalOut",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "SS",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "DigitalOut",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
@@ -78,21 +122,54 @@
                     "name": "SCK",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCK","voltage":"5v"},{"cost":1,"spec":"SCK","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCK",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SCK",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MOSI",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"MOSI","voltage":"5v"},{"cost":1,"spec":"MOSI","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "MOSI",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "MOSI",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MISO",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"MISO","voltage":"5v"},{"cost":1,"spec":"MISO","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "MISO",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "MISO",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ]

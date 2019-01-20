@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>The sensor can detect flames of wavelength at 760 nm to 1100 nm. It can detect a lighter flame from 80cm, the larger the flame the farther the sensing distance.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -47,20 +47,38 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "AOUT",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 }
             ],
@@ -90,20 +108,38 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "AOUT",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ],

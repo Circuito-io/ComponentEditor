@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>This analog UV sensor module based on a UV photodiode which can detect the 240-370nm range of light. Test is using module by using A UV tanning lamp.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -47,20 +47,38 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Out",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],
@@ -89,20 +107,38 @@
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "Out",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],

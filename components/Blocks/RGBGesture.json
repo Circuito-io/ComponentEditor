@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>The built in APDS-9960 can measure ambient light and color, proximity and detect touchless gestures.<br> Use this sensor to control your Arduino with a swipe of your hand.</p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -50,39 +50,80 @@
                 {
                     "name": "VL",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "INT",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }

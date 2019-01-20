@@ -47,26 +47,50 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "X",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Y",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -96,26 +120,50 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "X",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "Y",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ADC",
+                                "voltage": ""
+                            }
+                        ],
                         "unique": true
                     }
                 }

@@ -18,7 +18,7 @@
             "solder": false
         },
         "desc": "<p>a compact, high-performance optical distance measurement sensor from Garmin\u2122. <p>Features: <li>Range: 0-40m Laser Emitter</li><li>Accuracy: +/- 2.5cm at distances greater than 1m</li><li>Rep Rate: 1\u2013500Hz</li><li>Interface: I2C or PWM</li></p>",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -65,27 +65,61 @@
                 {
                     "name": "5V",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"},{"cost":1,"spec":"SCL","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
                         "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"},{"cost":1,"spec":"SDA","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ]

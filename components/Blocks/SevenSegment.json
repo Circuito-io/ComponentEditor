@@ -18,7 +18,7 @@
             "solder": true
         },
         "desc": "<p>This 7 segment display is able to do show 4 digits, where each one can be controlled separately. It can display numbers, letters and some special characters.<br><strong>Requires</strong>: Soldering of 10 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
-        "visible": false
+        "visible": true
     },
     "circuits": [
         {
@@ -50,26 +50,60 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"},{"cost":2,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 131
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"5v"},{"cost":1,"spec":"SoftwareSerial","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SoftwareSerial",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "SoftwareSerial",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -94,32 +128,62 @@
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VCC",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "MemOverLoad",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SRAMLoad",
+                                "voltage": ""
+                            }
+                        ],
                         "requiresLoad": 131
                     }
                 },
                 {
                     "name": "SDA",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SDA",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "SCL",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "SCL",
+                                "voltage": "3.3v"
+                            }
+                        ]
                     }
                 }
             ],

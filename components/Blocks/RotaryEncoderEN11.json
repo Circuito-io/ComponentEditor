@@ -51,34 +51,79 @@
                 {
                     "name": "A",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "B",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "SW",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND2",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],
@@ -114,34 +159,89 @@
                 {
                     "name": "A",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "B",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":50,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"},{"cost":51,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 50,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn-Int",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 51,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "SW",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "DigitalIn",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "DigitalIn",
+                                "voltage": "3.3v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "GND2",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 }
             ],

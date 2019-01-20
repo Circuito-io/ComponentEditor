@@ -44,27 +44,66 @@
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 25
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"3.3v"},{"cost":1,"spec":"TX","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "TX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "TX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"3.3v"},{"cost":1,"spec":"RX","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "RX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "RX",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
@@ -100,33 +139,98 @@
                 {
                     "name": "SerialType",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ESPSoftwareSerialTag",
+                                "voltage": ""
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "VIN",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "",
+                                "voltage": "5v"
+                            }
+                        ],
                         "requiresLoad": 25
                     }
                 },
                 {
                     "name": "GND",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
                     }
                 },
                 {
                     "name": "RX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"},{"cost":3,"spec":"ESPSoftwareSerialTX1","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialTX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "ESPSoftwareSerialTX1",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 },
                 {
                     "name": "TX",
                     "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"},{"cost":3,"spec":"ESPSoftwareSerialRX1","voltage":"5v"}],
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 1,
+                                "spec": "ESPSoftwareSerialRX",
+                                "voltage": "5v"
+                            },
+                            {
+                                "cost": 2,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "3.3v"
+                            },
+                            {
+                                "cost": 3,
+                                "spec": "ESPSoftwareSerialRX1",
+                                "voltage": "5v"
+                            }
+                        ],
                         "unique": true
                     }
                 }
