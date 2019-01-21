@@ -6,7 +6,8 @@
   "scripts": {
     "heroku-postbuild": "webpack -p --mode production",
     "start": "node src/server/index.js",
-    "dev": "concurrently \"webpack --mode development --devtool inline-source-map --hot  --watch\" \"nodemon src/server/index.js\""
+    "dev": "concurrently \"webpack --mode development --devtool inline-source-map --hot  --watch\" \"nodemon src/server/index.js\"",
+    "normalize": "node src/server/normalize.js"
   },
   "dependencies": {
     "@app-masters/react-cloudinary-uploader": "0.1.41",
