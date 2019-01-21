@@ -1021,6 +1021,31 @@
                     }
                 },
                 {
+                    "name": "USBPos",
+                    "interface": {
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB",
+                                "voltage": "5v"
+                            }
+                        ],
+                        "requiresLoad": 50
+                    }
+                },
+                {
+                    "name": "USBNeg",
+                    "interface": {
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "USB",
+                                "voltage": "GND"
+                            }
+                        ]
+                    }
+                },
+                {
                     "name": "SerialType",
                     "interface": {
                         "provides": [
@@ -1032,18 +1057,10 @@
                     }
                 }
             ],
-            "priority": 1,
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "USBPowerMicro"
-                    ]
-                }
-            ]
+            "priority": 1
         },
         {
-            "name": "6v",
+            "name": "EXT",
             "supportedControllers": [
                 "Teensy32"
             ],
@@ -2005,27 +2022,7 @@
                             {
                                 "cost": 0,
                                 "spec": "",
-                                "voltage": "3.7v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "Battery",
-                                "voltage": "3.7v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "",
                                 "voltage": "5v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "USB",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 4,
-                                "spec": "",
-                                "voltage": "6v"
                             }
                         ],
                         "requiresLoad": 40
@@ -2083,6 +2080,35 @@
                 {
                     "cost": 0,
                     "blocks": [
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 30,
+                    "blocks": [
+                        "StepUp5v",
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 20,
+                    "blocks": [
+                        "Reg5v",
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 40,
+                    "blocks": [
+                        "Reg3.3v",
+                        "USBPowerMicro"
+                    ]
+                },
+                {
+                    "cost": 50,
+                    "blocks": [
+                        "Reg5v",
+                        "Reg3.3v",
                         "USBPowerMicro"
                     ]
                 }
@@ -3108,31 +3134,6 @@
                             {
                                 "spec": "USB_MICRO",
                                 "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USBPos",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 50
-                    }
-                },
-                {
-                    "name": "USBNeg",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB",
-                                "voltage": "GND"
                             }
                         ]
                     }
