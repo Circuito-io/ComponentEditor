@@ -7,7 +7,7 @@ global.circuitoServer = "https://circuito-ci-staging-pr-319.herokuapp.com/";
 global.uploadEndpoint = "save_components";
 global.previewEndpoint = "app?u=";
 global.svgdataServer = "https://gz1f13eb3m.execute-api.us-west-1.amazonaws.com/Prod/";
-
+global.segmentWriteKey = "v7Pr4l9fyYqO9kng77jp4UF1KzDNW7TN";
 
 const useridFilename = path.join(__dirname, '../../userid.json');
 try {
@@ -29,3 +29,6 @@ if (global.userid == undefined) {
 } else {
     console.log("Found userid", global.userid);
 }
+
+var Analytics = require('analytics-node');
+global.analytics = new Analytics(global.segmentWriteKey);

@@ -2,25 +2,26 @@
 
 const fs = require('fs');
 const path = require('path');
+var Analytics = require('analytics-node');
 
-var objFolder = function (objPrefix){
+
+var objFolder = function (objPrefix) {
     return global.dataFolder + '/' + objPrefix + '/';
 }
 
-var objFile = function(objPrefix, objName){
+var objFile = function (objPrefix, objName) {
     return objFolder(objPrefix) + objName + '.json';
 }
 
-exports.list_all_files_factory = function(objPrefix) {
-    return function(req, res) {
+exports.list_all_files_factory = function (objPrefix) {
+    return function (req, res) {
         if (req.app.locals.listCache[objPrefix]) {
             res.json(req.app.locals.listCache[objPrefix]);
-        }
-        else {
+        } else {
             var err = false;
             if (err)
-              res.send(err);
-              
+                res.send(err);
+
             var files = fs.readdirSync(objFolder(objPrefix)).map(fn => path.basename(fn, '.json'));
             res.json(files);
         }
@@ -28,9 +29,19 @@ exports.list_all_files_factory = function(objPrefix) {
 };
 
 
-exports.read_a_file_factory = function(objPrefix) {
-    return function(req, res) {
+exports.read_a_file_factory = function (objPrefix) {
+    return function (req, res) {
         console.log('read_a_file', objPrefix, req.params);
+
+        global.analytics.track({
+            userId: global.userid,
+            event: 'File Opened',
+            properties: {
+                type: objPrefix,
+                name: req.params.name
+            }
+        });
+
         fs.readFile(objFile(objPrefix, req.params.name), 'utf8', (err, data) => {
             if (err) {
                 console.log(err);
@@ -39,34 +50,41 @@ exports.read_a_file_factory = function(objPrefix) {
 
             try {
                 var json = JSON.parse(data);
-            }
-            catch (err) {
+            } catch (err) {
                 console.log(err);
-                
-                if (err instanceof SyntaxError)
-                {
+
+                if (err instanceof SyntaxError) {
                     res.send('Invalid JSON<br>' + data);
                 }
                 return;
             }
-            
+
             res.json(json);
         });
     };
 }
 
 
-exports.update_a_file_factory = function(objPrefix) {
-    return function(req, res) {
+exports.update_a_file_factory = function (objPrefix) {
+    return function (req, res) {
         console.log("update", req.body);
+
+        global.analytics.track({
+            userId: global.userid,
+            event: 'File Updated',
+            properties: {
+                type: objPrefix,
+                name: req.params.name
+            }
+        });
+
+
         try {
             var data = JSON.stringify(req.body, null, 2)
-        }
-        catch (err) {
+        } catch (err) {
             console.log(err);
-                
-            if (err instanceof SyntaxError)
-            {
+
+            if (err instanceof SyntaxError) {
                 res.send('Invalid JSON<br>' + data);
             }
             return;
@@ -76,27 +94,24 @@ exports.update_a_file_factory = function(objPrefix) {
     };
 };
 
-exports.create_a_file_factory= function(objPrefix) {
-    return function(req, res) {
+exports.create_a_file_factory = function (objPrefix) {
+    return function (req, res) {
         var name = req.body['name'];
-        
-        if (!name)
-        {
+
+        if (!name) {
             console.log('CREATE request with missing object name');
             res.send('Missing name in object');
             return;
         }
-        
+
         console.log('name', name);
 
         try {
             var data = JSON.stringify(req.body, null, 2)
-        }
-        catch (err) {
+        } catch (err) {
             console.log(err);
-                
-            if (err instanceof SyntaxError)
-            {
+
+            if (err instanceof SyntaxError) {
                 res.send('Invalid JSON<br>' + data);
             }
             return;
@@ -106,14 +121,14 @@ exports.create_a_file_factory= function(objPrefix) {
 };
 
 
-exports.delete_a_file_factory = function(objPrefix) {
-    return function(req, res) {
+exports.delete_a_file_factory = function (objPrefix) {
+    return function (req, res) {
         fs.unlinkSync(objFile(objPrefix, req.params.name));
     };
 };
 
-exports.cache_list_all_files_factory = function(objPrefix) {
-    return function() {
+exports.cache_list_all_files_factory = function (objPrefix) {
+    return function () {
         var files = fs.readdirSync(objFolder(objPrefix)).map(fn => path.basename(fn, '.json'));
         return files;
     };
