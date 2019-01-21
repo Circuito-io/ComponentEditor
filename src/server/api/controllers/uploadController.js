@@ -54,6 +54,11 @@ exports.upload = function (req, res) {
 
 	console.log("Sending to", endPoint)
 
+	global.analytics.track({
+		userId: global.userid,
+		event: 'Data Uploaded'
+	});
+
 	rp({
 		url: endPoint,
 		method: 'post',
