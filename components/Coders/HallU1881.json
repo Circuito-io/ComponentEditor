@@ -12,7 +12,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "//Read hall sensor state\n//Switch between the U1881 states by placing different poles of a magnet next to it.\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"

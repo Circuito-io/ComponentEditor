@@ -7,7 +7,8 @@
         "ArduinoNano",
         "ArduinoProMini3v3",
         "ArduinoProMini5v",
-        "ArduinoUno"
+        "ArduinoUno",
+        "Teensy32"
     ],
     "code": {
         "global": "// ====================================================================\n// vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n//\nconst char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \nconst char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n//\n// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n// ====================================================================\nchar* const host = \"www.google.com\";\nint hostPort = 80;\n",

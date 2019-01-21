@@ -24,7 +24,7 @@
         {
             "name": "HardwareSerial5v",
             "coders": [
-                "ESP8266HardwareSerial"
+                "ESP8266_HardwareSerial"
             ],
             "supportedControllers": [
                 "ArduinoLeonardo",
@@ -476,10 +476,11 @@
         {
             "name": "HardwareSerial3v3",
             "coders": [
-                "ESP8266HardwareSerial"
+                "ESP8266_HardwareSerial"
             ],
             "supportedControllers": [
-                "ArduinoProMini3v3"
+                "ArduinoProMini3v3",
+                "Teensy32"
             ],
             "parts": [
                 {

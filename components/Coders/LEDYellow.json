@@ -12,7 +12,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "// The LED will turn on and fade till it is off\nfor(int i=255 ; i> 0 ; i -= 5)\n{\n{{varname}}.dim(i);                      // 1. Dim Led \ndelay(15);                               // 2. waits 5 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n}                                          \n{{varname}}.off();                        // 3. turns off"
