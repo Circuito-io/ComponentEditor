@@ -12,16 +12,20 @@ Under Development
 ```bash
 git clone https://github.com/Roboplan/ComponentsBank-MESS.git
 ```
-2. Run npm install
+3. Init submodule
+```bash
+git submodule init
+```
+3. Run npm install
 ```bash
 cd ComponentsBank-MESS
 npm install
 ```
-3. Run the dev web server
+4. Run the dev web server
 ```bash
 npm run dev
 ```
-4. Connect to the web server - http://localhost:8080
-5. Edit your files locally - components are in the ```components``` subfloder
-6. When ready - click the 'upload' button to sync local files with our server
-7. Click the 'preview' button to open your **private** circuito.io preview window
+5. Connect to the web server - http://localhost:8080
+6. Edit your files locally - components are in the ```components``` subfloder
+7. When ready - click the 'save&upload' button to sync local files with our server
+8. Click the 'preview' button to open your **private** circuito.io preview window
