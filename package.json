@@ -6,7 +6,7 @@
   "scripts": {
     "heroku-postbuild": "webpack -p --mode production",
     "start": "node src/server/index.js",
-    "dev": "concurrently \"webpack --mode development --devtool inline-source-map --hot  --watch\" \"nodemon src/server/index.js\"",
+    "dev": "webpack --mode development --devtool inline-source-map --hot  --watch",
     "normalize": "node src/server/normalize.js"
   },
   "dependencies": {
@@ -37,10 +37,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.0",
-    "concurrently": "^4.1.0",
     "css-loader": "^2.1.0",
     "nodemon": "^1.18.9",
-    "nodemon-webpack-plugin": "^4.0.6",
+    "nodemon-webpack-plugin": "^4.0.7",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
