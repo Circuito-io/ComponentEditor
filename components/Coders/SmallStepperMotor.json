@@ -17,7 +17,7 @@
   ],
   "code": {
     "global": "#define {{varname}}DelayTime  1000\n",
-    "constructors": "{{classname}} {{varname}}({{Step}},{{Dir}});\n",
+    "constructors": "{{classname}} {{varname}}({{step}},{{dir}});\n",
     "setup": "// enable the stepper motor, use .disable() to disable the motor\n{{varname}}.enable();\n// set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn\n{{varname}}.setStepDelay({{varname}}DelayTime);\n",
     "snippetCode": "// the higher the time value the slower the motor will run\n{{varname}}.step(1, 1000);  // move motor 1000 steps in one direction\ndelay(1000);            // short stop\n{{varname}}.step(0, 1000);  // move motor 1000 steps in the other dirction\ndelay(1000);            //short stop"
   },
@@ -25,8 +25,8 @@
   "instantiate": {
     "classname": "StepperMotor",
     "ports": [
-      "Step",
-      "Dir"
+      "step",
+      "dir"
     ],
     "varname": "stepperSmall"
   },
