@@ -2,5 +2,6 @@ ports:
   - port: 8080
     onOpen: open-preview
 tasks:
-  - init: npm install
+  - before: git submodule init
+    init: npm install
     command: npm run dev
