@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const NodemonPlugin = require( 'nodemon-webpack-plugin' )
 
 const outputDirectory = 'dist';
 
@@ -29,6 +30,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([outputDirectory])
+    new CleanWebpackPlugin([outputDirectory]),
+    new NodemonPlugin({
+      watch: path.join(__dirname, outputDirectory),
+      script: './src/server/index.js'
+    })
   ]
 };
