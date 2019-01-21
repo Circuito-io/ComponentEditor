@@ -1,134 +1,134 @@
 {
-    "name": "MPU6050",
-    "category": [
-        "input"
+  "name": "MPU6050",
+  "category": [
+    "input"
+  ],
+  "blockId": "11028",
+  "app": {
+    "appName": "SparkFun MPU-6050 - Accelerometer and Gyro",
+    "image": "http://res.cloudinary.com/circuito/image/upload/qijrhlsuaujzuqz84efy",
+    "numericName": "MPU6050",
+    "shortName": "Accelerometer and Gyro",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "11028",
-    "app": {
-        "appName": "SparkFun MPU-6050 - Accelerometer and Gyro",
-        "image": "http://res.cloudinary.com/circuito/image/upload/qijrhlsuaujzuqz84efy",
-        "numericName": "MPU6050",
-        "shortName": "Accelerometer and Gyro",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>The MPU-6050 is a triple axis accelerometer and gyro combined, allowing a very deep motion detection and analysis.</p>\n<p><strong>Returned Values</strong>: I2C Digital-output of 6 or 9-axis MotionFusion data.</p>\n<p><strong>Requires</strong>: Soldering of 8 male header pins to fit onto a breadboard.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Self-Balancing-Robot/\">Self Balancing Robot</a></p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>The MPU-6050 is a triple axis accelerometer and gyro combined, allowing a very deep motion detection and analysis.</p>\n<p><strong>Returned Values</strong>: I2C Digital-output of 6 or 9-axis MotionFusion data.</p>\n<p><strong>Requires</strong>: Soldering of 8 male header pins to fit onto a breadboard.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Self-Balancing-Robot/\">Self Balancing Robot</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "MPU6050"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "MPU6050"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "MPU6050"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.VIO",
-                    "to": "this.VCC"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 235
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCL",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "MPU6050"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.VIO",
+          "to": "this.VCC"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SDA",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 235
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

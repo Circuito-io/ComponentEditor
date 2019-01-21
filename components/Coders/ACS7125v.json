@@ -1,36 +1,36 @@
 {
-    "name": "ACS7125v",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
+  "name": "ACS7125v",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "const int {{varname}}calFactor = 513;\n",
+    "setup": "//Manually calibarte the ACS712 current sensor.\n//Connet the ACS to your board, but do not connect the current sensing side.\n//Follow serial monitor instructions. This needs be done one time only.\n{{varname}}.calibrate({{varname}}calFactor);\n",
+    "snippetCode": "//Get averaged current measurment.\nfloat {{varname}}Currrent  = {{varname}}.getCurrent();\nSerial.print({{varname}}Currrent); Serial.println(F(\" [mA]\"));\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "ACS712",
+    "ports": [
+      "VO"
     ],
-    "code": {
-        "global": "const int {{varname}}calFactor = 513;\n",
-        "setup": "//Manually calibarte the ACS712 current sensor.\n//Connet the ACS to your board, but do not connect the current sensing side.\n//Follow serial monitor instructions. This needs be done one time only.\n{{varname}}.calibrate({{varname}}calFactor);\n",
-        "snippetCode": "//Get averaged current measurment.\nfloat {{varname}}Currrent  = {{varname}}.getCurrent();\nSerial.print({{varname}}Currrent); Serial.println(F(\" [mA]\"));\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "ACS712",
-        "ports": [
-            "VO"
-        ],
-        "varname": "acs712"
-    },
-    "files": [
-        "ACS712.cpp",
-        "ACS712.h",
-        "ACS712_license.txt",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "ACS712.h"
-    ]
+    "varname": "acs712"
+  },
+  "files": [
+    "ACS712.cpp",
+    "ACS712.h",
+    "ACS712_license.txt",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "ACS712.h"
+  ]
 }

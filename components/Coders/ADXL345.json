@@ -1,35 +1,35 @@
 {
-    "name": "ADXL345",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "global": "int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n",
-        "setup": "{{varname}}.init();\n",
-        "snippetCode": "// read raw accel measurements from device\n{{varname}}.getAcceleration(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az);\n// display tab-separated accel x/y/z values\nSerial.print(F(\"{{instname}} accel-\\t\")); \nSerial.print({{varname}}Ax); Serial.print(F(\"\\t\"));\nSerial.print({{varname}}Ay); Serial.print(F(\"\\t\"));  \nSerial.println({{varname}}Az);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "ADXL345",
-        "varname": "adxl"
-    },
-    "files": [
-        "I2Cdev.cpp",
-        "ADXL345.h",
-        "ADXL345_license.txt",
-        "ADXL345.cpp",
-        "I2Cdev.h"
-    ]
+  "name": "ADXL345",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\n",
+    "setup": "{{varname}}.init();\n",
+    "snippetCode": "// read raw accel measurements from device\n{{varname}}.getAcceleration(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az);\n// display tab-separated accel x/y/z values\nSerial.print(F(\"{{instname}} accel-\\t\")); \nSerial.print({{varname}}Ax); Serial.print(F(\"\\t\"));\nSerial.print({{varname}}Ay); Serial.print(F(\"\\t\"));  \nSerial.println({{varname}}Az);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "ADXL345",
+    "varname": "adxl"
+  },
+  "files": [
+    "I2Cdev.cpp",
+    "ADXL345.h",
+    "ADXL345_license.txt",
+    "ADXL345.cpp",
+    "I2Cdev.h"
+  ]
 }

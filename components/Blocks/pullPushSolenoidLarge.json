@@ -1,103 +1,103 @@
 {
-    "name": "pullPushSolenoidLarge",
-    "category": [
-        "output"
+  "name": "pullPushSolenoidLarge",
+  "category": [
+    "output"
+  ],
+  "blockId": "10457",
+  "app": {
+    "appName": "Large Push-Pull Solenoid",
+    "image": "http://res.cloudinary.com/circuito/image/upload/osbtnvb5jzdlujv2ifa3",
+    "numericName": "",
+    "shortName": "Push-Pull Solenoid",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "10457",
-    "app": {
-        "appName": "Large Push-Pull Solenoid",
-        "image": "http://res.cloudinary.com/circuito/image/upload/osbtnvb5jzdlujv2ifa3",
-        "numericName": "",
-        "shortName": "Push-Pull Solenoid",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "pullPushSolenoidLarge"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "pullPushSolenoidLarge"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "pullPushSolenoidLarge"
-                },
-                {
-                    "name": "d1",
-                    "part": "DIRect1A50v",
-                    "rotation": 180
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Coil2",
-                    "to": "d1.neg"
-                },
-                {
-                    "from": "this.Coil1",
-                    "to": "d1.pos"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Coil1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "GndLoadSwitching",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 250,
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Coil2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "GndHighLoadSwitching"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "pullPushSolenoidLarge"
+        },
+        {
+          "name": "d1",
+          "part": "DIRect1A50v",
+          "rotation": 180
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Coil2",
+          "to": "d1.neg"
+        },
+        {
+          "from": "this.Coil1",
+          "to": "d1.pos"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Coil1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "GndLoadSwitching",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 250,
+            "unique": true
+          }
+        },
+        {
+          "name": "Coil2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "GndHighLoadSwitching"
+          ]
+        }
+      ]
+    }
+  ]
 }

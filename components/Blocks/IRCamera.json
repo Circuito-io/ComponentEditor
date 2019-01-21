@@ -1,218 +1,218 @@
 {
-    "name": "IRCamera",
-    "category": [
-        "input"
+  "name": "IRCamera",
+  "category": [
+    "input"
+  ],
+  "blockId": "908638",
+  "app": {
+    "appName": "AMG8833 IR Thermal Camera Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/idvgt23v69jfv9wwubzf",
+    "numericName": "AMG8833",
+    "shortName": "IR Thermal Camera",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "908638",
-    "app": {
-        "appName": "AMG8833 IR Thermal Camera Breakout",
-        "image": "http://res.cloudinary.com/circuito/image/upload/idvgt23v69jfv9wwubzf",
-        "numericName": "AMG8833",
-        "shortName": "IR Thermal Camera",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This sensor from Panasonic is an 8x8 array of IR thermal sensors, it returns an array of 64 individual infrared temperature readings over I2C. It\u2019s like having compact thermal camera but in low resolution.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This sensor from Panasonic is an 8x8 array of IR thermal sensors, it returns an array of 64 individual infrared temperature readings over I2C. It’s like having compact thermal camera but in low resolution.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "IRCamera"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "IRCamera"
+          "name": "this",
+          "part": "IRCamera"
+        }
+      ],
+      "ports": [
+        {
+          "name": "INT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "IRCamera"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "INT",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn-Int",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCL",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+            "unique": true
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "IRCamera"
-            ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "IRCamera"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "INT",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn-Int",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "IRCamera"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "IRCamera"
+        }
+      ],
+      "ports": [
+        {
+          "name": "INT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

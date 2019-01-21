@@ -1,155 +1,155 @@
 {
-    "name": "LEDBlue",
-    "category": [
-        "output"
+  "name": "LEDBlue",
+  "category": [
+    "output"
+  ],
+  "blockId": "11372",
+  "app": {
+    "appName": "Basic Blue LED 5mm",
+    "image": "http://res.cloudinary.com/circuito/image/upload/dcmcbamcmbbeirp0lhtm",
+    "numericName": "",
+    "shortName": "Blue LED",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "11372",
-    "app": {
-        "appName": "Basic Blue LED 5mm",
-        "image": "http://res.cloudinary.com/circuito/image/upload/dcmcbamcmbbeirp0lhtm",
-        "numericName": "",
-        "shortName": "Blue LED",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This is a very basic, small, Blue LED. Control the intensity of the color at a range of 0-255.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This is a very basic, small, Blue LED. Control the intensity of the color at a range of 0-255.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "LEDBlue"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "LEDBlue"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LEDBlue",
-                    "properties": "Blue (470nm)"
-                },
-                {
-                    "name": "Res1",
-                    "part": "Res100O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Gnd",
-                    "to": "Res1.con1"
-                },
-                {
-                    "from": "Res1.con0",
-                    "to": "GND"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "this",
+          "part": "LEDBlue",
+          "properties": "Blue (470nm)"
         },
         {
-            "name": "3.3v",
-            "coders": [
-                "LEDBlue"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LEDBlue",
-                    "properties": "Blue (470nm)"
-                },
-                {
-                    "name": "Res1",
-                    "part": "Res47O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Gnd",
-                    "to": "Res1.con1"
-                },
-                {
-                    "from": "Res1.con0",
-                    "to": "GND"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 2
+          "name": "Res1",
+          "part": "Res100O"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Gnd",
+          "to": "Res1.con1"
+        },
+        {
+          "from": "Res1.con0",
+          "to": "GND"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    },
+    {
+      "name": "3.3v",
+      "coders": [
+        "LEDBlue"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "LEDBlue",
+          "properties": "Blue (470nm)"
+        },
+        {
+          "name": "Res1",
+          "part": "Res47O"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.Gnd",
+          "to": "Res1.con1"
+        },
+        {
+          "from": "Res1.con0",
+          "to": "GND"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2
+    }
+  ]
 }

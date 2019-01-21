@@ -1,97 +1,97 @@
 {
-    "name": "CapacitiveTouch",
-    "category": [
-        "input"
+  "name": "CapacitiveTouch",
+  "category": [
+    "input"
+  ],
+  "blockId": "1331",
+  "app": {
+    "appName": "Capacitive Touch Sensor Module",
+    "image": "http://res.cloudinary.com/circuito/image/upload/mpmgwoyzigrqfydsiyzp",
+    "numericName": "",
+    "shortName": "Capacitive Touch Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "1331",
-    "app": {
-        "appName": "Capacitive Touch Sensor Module",
-        "image": "http://res.cloudinary.com/circuito/image/upload/mpmgwoyzigrqfydsiyzp",
-        "numericName": "",
-        "shortName": "Capacitive Touch Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This capacitive touch module based on a touch-sensing IC (TTP223B), When a finger touches the sensor surface, the module output high, else it output low.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This capacitive touch module based on a touch-sensing IC (TTP223B), When a finger touches the sensor surface, the module output high, else it output low.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "CapacitiveTouch"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "CapacitiveTouch"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CapacitiveTouch"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "CapacitiveTouch"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

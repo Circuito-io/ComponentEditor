@@ -1,38 +1,38 @@
 {
-    "name": "Thermistor",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "Thermistor",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "//Get Measurment from Thermistor temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[°C]\"));"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Thermistor",
+    "ports": [
+      "con1"
     ],
-    "code": {
-        "snippetCode": "//Get Measurment from Thermistor temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Thermistor",
-        "ports": [
-            "con1"
-        ],
-        "varname": "thermistor"
-    },
-    "files": [
-        "Thermistor.h",
-        "Thermistor.cpp",
-        "Thermistor_license.txt",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "Thermistor.h"
-    ]
+    "varname": "thermistor"
+  },
+  "files": [
+    "Thermistor.h",
+    "Thermistor.cpp",
+    "Thermistor_license.txt",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "Thermistor.h"
+  ]
 }

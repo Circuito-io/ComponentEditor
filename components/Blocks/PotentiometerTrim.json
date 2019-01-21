@@ -1,149 +1,149 @@
 {
-    "name": "PotentiometerTrim",
-    "category": [
-        "input"
+  "name": "PotentiometerTrim",
+  "category": [
+    "input"
+  ],
+  "blockId": "172542",
+  "app": {
+    "appName": "Trimmer Potentiometer - 10K",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ma1ii4dkdwr2o5k49i1e",
+    "numericName": "",
+    "shortName": "Trimmer Potentiometer",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "172542",
-    "app": {
-        "appName": "Trimmer Potentiometer - 10K",
-        "image": "http://res.cloudinary.com/circuito/image/upload/ma1ii4dkdwr2o5k49i1e",
-        "numericName": "",
-        "shortName": "Trimmer Potentiometer",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "PotentiometerTrim"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "PotentiometerTrim"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PotentiometerTrim"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "PotentiometerTrim"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "PotentiometerTrim"
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PotentiometerTrim"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "PotentiometerTrim"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "PotentiometerTrim"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

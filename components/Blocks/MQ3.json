@@ -1,175 +1,175 @@
 {
-    "name": "MQ3",
-    "category": [
-        "input"
+  "name": "MQ3",
+  "category": [
+    "input"
+  ],
+  "blockId": "398783",
+  "app": {
+    "appName": "Alcohol Gas Sensor - MQ-3",
+    "image": "http://res.cloudinary.com/circuito/image/upload/draptwfst3btwfbjx2xw",
+    "numericName": "MQ3",
+    "shortName": "Alcohol and Gas Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "398783",
-    "app": {
-        "appName": "Alcohol Gas Sensor - MQ-3",
-        "image": "http://res.cloudinary.com/circuito/image/upload/draptwfst3btwfbjx2xw",
-        "numericName": "MQ3",
-        "shortName": "Alcohol and Gas Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This alcohol sensor is suitable for detecting alcohol concentration on your breath, just like your common breathalyzer.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This alcohol sensor is suitable for detecting alcohol concentration on your breath, just like your common breathalyzer.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "MQ3"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "MQ3"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "MQ3"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "AOUT",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "5V",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "this",
+          "part": "MQ3"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "MQ33v3"
+          "name": "AOUT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "MQ3"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res470O"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.GND",
-                    "to": "r2.con1"
-                },
-                {
-                    "from": "r2.con0",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.AOUT",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "Aout"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Aout",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "5V",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 2
+            "unique": true
+          }
+        },
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 1
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "MQ33v3"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "MQ3"
+        },
+        {
+          "name": "r1",
+          "part": "Res470O"
+        },
+        {
+          "name": "r2",
+          "part": "Res1KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "r2.con1"
+        },
+        {
+          "from": "r2.con0",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.AOUT",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "Aout"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Aout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2
+    }
+  ]
 }

@@ -1,103 +1,103 @@
 {
-    "name": "SolenoidLock",
-    "category": [
-        "output"
+  "name": "SolenoidLock",
+  "category": [
+    "output"
+  ],
+  "blockId": "842876",
+  "app": {
+    "appName": "Lock-style Solenoid 12VDC",
+    "image": "http://res.cloudinary.com/circuito/image/upload/k9jztm0rt2mjswnwc6mj",
+    "numericName": "",
+    "shortName": "Lock Solenoid",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "842876",
-    "app": {
-        "appName": "Lock-style Solenoid 12VDC",
-        "image": "http://res.cloudinary.com/circuito/image/upload/k9jztm0rt2mjswnwc6mj",
-        "numericName": "",
-        "shortName": "Lock Solenoid",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This solenoid has a slug with a slanted cut and a mounting bracket. It's an electronic lock for cabinet or safe or door. It allows you to hold a door closed without electricity and pulls the slug when current is applied.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This solenoid has a slug with a slanted cut and a mounting bracket. It's an electronic lock for cabinet or safe or door. It allows you to hold a door closed without electricity and pulls the slug when current is applied.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "SolenoidLock"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "SolenoidLock"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "SolenoidLock"
-                },
-                {
-                    "name": "d1",
-                    "part": "DIRect1A50v"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.VCC",
-                    "to": "d1.neg"
-                },
-                {
-                    "from": "this.GND",
-                    "to": "d1.pos"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "GndLoadSwitching",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 1000,
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "GndHighLoadSwitching"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "SolenoidLock"
+        },
+        {
+          "name": "d1",
+          "part": "DIRect1A50v"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "d1.neg"
+        },
+        {
+          "from": "this.GND",
+          "to": "d1.pos"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "GndLoadSwitching",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 1000,
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "GndHighLoadSwitching"
+          ]
+        }
+      ]
+    }
+  ]
 }

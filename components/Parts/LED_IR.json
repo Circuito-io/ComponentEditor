@@ -1,28 +1,28 @@
 {
-    "name": "LED_IR",
-    "symbol": {
-        "ref": "circuito_LEDIR.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/wiaocnf6al45ymicjpkv"
-    },
-    "displayName": "Infrared (IR) LED 950nm",
-    "category": [
-        "output"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/gs4219wlunn7lrzz7bbn",
-            "link": "https://octopart.com/sfh+4512-osram+opto-31094091",
-            "price": "0.61",
-            "SKU": "475-2943-ND"
-        }
-    ],
-    "info": {
-        "setup": "The bended leg in the schematics is the longer leg of the LED",
-        "test": "To see if the IR LED works, look at it through a smartphone camera or try replacing it with a regular LED"
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "LED_IR",
+  "symbol": {
+    "ref": "circuito_LEDIR.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/wiaocnf6al45ymicjpkv"
+  },
+  "displayName": "Infrared (IR) LED 950nm",
+  "category": [
+    "output"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/gs4219wlunn7lrzz7bbn",
+      "link": "https://octopart.com/sfh+4512-osram+opto-31094091",
+      "price": "0.61",
+      "SKU": "475-2943-ND"
     }
+  ],
+  "info": {
+    "setup": "The bended leg in the schematics is the longer leg of the LED",
+    "test": "To see if the IR LED works, look at it through a smartphone camera or try replacing it with a regular LED"
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

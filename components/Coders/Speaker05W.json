@@ -1,43 +1,43 @@
 {
-    "name": "Speaker05W",
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
+  "name": "Speaker05W",
+  "supportedControllers": [
+    "ATMega328P",
+    "Arduino101",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "unsigned int {{varname}}HoorayLength          = 6;                                                      // amount of notes in melody\nunsigned int {{varname}}HoorayMelody[]        = {NOTE_C4, NOTE_E4, NOTE_G4, NOTE_C5, NOTE_G4, NOTE_C5}; // list of notes. List length must match HoorayLength!\nunsigned int {{varname}}HoorayNoteDurations[] = {8      , 8      , 8      , 4      , 8      , 4      }; // note durations; 4 = quarter note, 8 = eighth note, etc. List length must match HoorayLength!\n",
+    "snippetCode": "// The Speaker will play the Hooray tune\n{{varname}}.playMelody({{varname}}HoorayLength, {{varname}}HoorayMelody, {{varname}}HoorayNoteDurations); \ndelay(500);   "
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "PiezoSpeaker",
+    "ports": [
+      "POS"
     ],
-    "code": {
-        "global": "unsigned int {{varname}}HoorayLength          = 6;                                                      // amount of notes in melody\nunsigned int {{varname}}HoorayMelody[]        = {NOTE_C4, NOTE_E4, NOTE_G4, NOTE_C5, NOTE_G4, NOTE_C5}; // list of notes. List length must match HoorayLength!\nunsigned int {{varname}}HoorayNoteDurations[] = {8      , 8      , 8      , 4      , 8      , 4      }; // note durations; 4 = quarter note, 8 = eighth note, etc. List length must match HoorayLength!\n",
-        "snippetCode": "// The Speaker will play the Hooray tune\n{{varname}}.playMelody({{varname}}HoorayLength, {{varname}}HoorayMelody, {{varname}}HoorayNoteDurations); \ndelay(500);   "
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "PiezoSpeaker",
-        "ports": [
-            "POS"
-        ],
-        "varname": "thinSpeaker"
-    },
-    "files": [
-        "PiezoSpeaker.cpp",
-        "PiezoSpeaker_license.txt",
-        "PiezoSpeaker.h",
-        "Speaker.h",
-        "Speaker.cpp",
-        "Speaker_license.txt",
-        "TimerFreeTone.h",
-        "TimerFreeTone.cpp"
-    ],
-    "includeHeaders": [
-        "PiezoSpeaker.h"
-    ]
+    "varname": "thinSpeaker"
+  },
+  "files": [
+    "PiezoSpeaker.cpp",
+    "PiezoSpeaker_license.txt",
+    "PiezoSpeaker.h",
+    "Speaker.h",
+    "Speaker.cpp",
+    "Speaker_license.txt",
+    "TimerFreeTone.h",
+    "TimerFreeTone.cpp"
+  ],
+  "includeHeaders": [
+    "PiezoSpeaker.h"
+  ]
 }

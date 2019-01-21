@@ -1,85 +1,85 @@
 {
-    "name": "Laser",
-    "category": [
-        "output"
+  "name": "Laser",
+  "category": [
+    "output"
+  ],
+  "blockId": "193622",
+  "app": {
+    "appName": "650nm Red Laser Diode",
+    "image": "http://res.cloudinary.com/circuito/image/upload/v2cjdp03enej4shxfsz3",
+    "numericName": "",
+    "shortName": "Laser Diode",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "193622",
-    "app": {
-        "appName": "650nm Red Laser Diode",
-        "image": "http://res.cloudinary.com/circuito/image/upload/v2cjdp03enej4shxfsz3",
-        "numericName": "",
-        "shortName": "Laser Diode",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This Red Laser transmitter module gives a small intense beam. Take care of your eyes, do not look direct into the beam.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This Red Laser transmitter module gives a small intense beam. Take care of your eyes, do not look direct into the beam.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "Laser"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "Laser"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Laser"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "S",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "Laser"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "S",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

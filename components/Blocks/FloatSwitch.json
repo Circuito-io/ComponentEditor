@@ -1,185 +1,185 @@
 {
-    "name": "FloatSwitch",
-    "category": [
-        "input"
+  "name": "FloatSwitch",
+  "category": [
+    "input"
+  ],
+  "blockId": "561143",
+  "app": {
+    "appName": "Liquid Level Sensor Float Switch",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nl5pzjfaac7tzp4obj8l",
+    "numericName": "59630",
+    "shortName": "Liquid Level Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "561143",
-    "app": {
-        "appName": "Liquid Level Sensor Float Switch",
-        "image": "http://res.cloudinary.com/circuito/image/upload/nl5pzjfaac7tzp4obj8l",
-        "numericName": "59630",
-        "shortName": "Liquid Level Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This float switch is great for sensing the level of liquid within a tank. It based on a reed switch that sealed in a stem and a magnet sealed in the float. Once the the liquid level raises  the float the magnet inside the float complete a circuit by the reed switch.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This float switch is great for sensing the level of liquid within a tank. It based on a reed switch that sealed in a stem and a magnet sealed in the float. Once the the liquid level raises  the float the magnet inside the float complete a circuit by the reed switch.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "FloatSwitch"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "FloatSwitch"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FloatSwitch"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.leg0",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "0"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "Sig"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "leg1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "FloatSwitch"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "FloatSwitch"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FloatSwitch"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.leg0",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "0"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "Sig"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "leg1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.leg0",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "0"
+        },
+        {
+          "from": "r1.con0",
+          "to": "Sig"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "leg1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "FloatSwitch"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "FloatSwitch"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.leg0",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "0"
+        },
+        {
+          "from": "r1.con0",
+          "to": "Sig"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "leg1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

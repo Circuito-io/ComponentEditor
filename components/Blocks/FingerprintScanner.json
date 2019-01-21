@@ -1,276 +1,276 @@
 {
-    "name": "FingerprintScanner",
-    "category": [
-        "input"
+  "name": "FingerprintScanner",
+  "category": [
+    "input"
+  ],
+  "blockId": "11792",
+  "app": {
+    "appName": "Fingerprint Scanner - TTL (GT-511C3)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/kfry7we7nu7wp3odybkh",
+    "numericName": "GT511C3",
+    "shortName": "Fingerprint Scanner",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "11792",
-    "app": {
-        "appName": "Fingerprint Scanner - TTL (GT-511C3)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/kfry7we7nu7wp3odybkh",
-        "numericName": "GT511C3",
-        "shortName": "Fingerprint Scanner",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This is a Fingerprint Scanner over TTL communication.<br>The module reads and identifies the fingerprints using an on-board optical sensor and CPU.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This is a Fingerprint Scanner over TTL communication.<br>The module reads and identifies the fingerprints using an on-board optical sensor and CPU.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "FingerprintScanner"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "FingerprintScanner"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FingerprintScanner"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res470O"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.RX",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "r2.con0"
-                },
-                {
-                    "from": "r2.con1",
-                    "to": "this.GND"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "Rx"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Rx",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "ESPSoftwareSerialRX",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "RX",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "RX2",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 10,
-                                "spec": "ESPSoftwareSerialRX1",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Tx",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "ESPSoftwareSerialTX",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "TX",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "TX2",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 10,
-                                "spec": "ESPSoftwareSerialTX1",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "FingerprintScanner"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "FingerprintScanner"
-            ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FingerprintScanner"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.RX",
-                    "to": "Rx"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Rx",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "ESPSoftwareSerialRX",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "RX",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "RX2",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 10,
-                                "spec": "ESPSoftwareSerialRX1",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Tx",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "ESPSoftwareSerialTX",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "TX",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "TX2",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 10,
-                                "spec": "ESPSoftwareSerialTX1",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res470O"
+        },
+        {
+          "name": "r2",
+          "part": "Res1KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.RX",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con0",
+          "to": "r2.con0"
+        },
+        {
+          "from": "r2.con1",
+          "to": "this.GND"
+        },
+        {
+          "from": "r1.con1",
+          "to": "Rx"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Rx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "RX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 3,
+                "spec": "RX2",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Tx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "TX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 3,
+                "spec": "TX2",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "FingerprintScanner"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "FingerprintScanner"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.RX",
+          "to": "Rx"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Rx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 2,
+                "spec": "RX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 3,
+                "spec": "RX2",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Tx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 2,
+                "spec": "TX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 3,
+                "spec": "TX2",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

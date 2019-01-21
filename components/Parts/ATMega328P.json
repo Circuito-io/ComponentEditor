@@ -1,30 +1,30 @@
 {
-    "name": "ATMega328P",
-    "symbol": {
-        "ref": "circuito_ATMEGA328P-PU.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/qe5pib1izmciwd4hdss8"
-    },
-    "displayName": "Microchip Technology ATMEGA328P-PU",
-    "category": [
-        "controller"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/ghyh4jxq69d5sfyrzqgj",
-            "link": "https://octopart.com/atmega328p-pu-microchip-77760224?r=sp&s=LJ6vjrEYRLeEp_w1giQzWg",
-            "price": "2.14",
-            "SKU": "ATMEGA328P-PU-ND"
-        }
-    ],
-    "info": {
-        "setup": "Heads Up !<br>If you have a new ATmega328P , you\u2019ll need to burn the bootloader onto the chip first.<br>Please follow our instructions in the following tutorial:<br><a href=\"https://www.circuito.io/blog/atmega328p-bootloader/\"></a>",
-        "test": "After uploading the sketches onto the ATMega328P, open the serial monitor and reboot the ATMega328P to view the test code menu."
-    },
-    "placing": {
-        "onBreadboard": true,
-        "row": 4,
-        "rotation": 0
+  "name": "ATMega328P",
+  "symbol": {
+    "ref": "circuito_ATMEGA328P-PU.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/qe5pib1izmciwd4hdss8"
+  },
+  "displayName": "Microchip Technology ATMEGA328P-PU",
+  "category": [
+    "controller"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/ghyh4jxq69d5sfyrzqgj",
+      "link": "https://octopart.com/atmega328p-pu-microchip-77760224?r=sp&s=LJ6vjrEYRLeEp_w1giQzWg",
+      "price": "2.14",
+      "SKU": "ATMEGA328P-PU-ND"
     }
+  ],
+  "info": {
+    "setup": "Heads Up !<br>If you have a new ATmega328P , you’ll need to burn the bootloader onto the chip first.<br>Please follow our instructions in the following tutorial:<br><a href=\"https://www.circuito.io/blog/atmega328p-bootloader/\"></a>",
+    "test": "After uploading the sketches onto the ATMega328P, open the serial monitor and reboot the ATMega328P to view the test code menu."
+  },
+  "placing": {
+    "onBreadboard": true,
+    "row": 4,
+    "rotation": 0
+  }
 }

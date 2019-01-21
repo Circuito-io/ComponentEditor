@@ -1,98 +1,98 @@
 {
-    "name": "PiezoVibration",
-    "category": [
-        "input"
+  "name": "PiezoVibration",
+  "category": [
+    "input"
+  ],
+  "blockId": "117693",
+  "app": {
+    "appName": "Piezo Vibration Sensor - Large with Mass",
+    "image": "http://res.cloudinary.com/circuito/image/upload/j7kpxdfxhxwfaupre72c",
+    "numericName": "",
+    "shortName": "Piezo Vibration Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "117693",
-    "app": {
-        "appName": "Piezo Vibration Sensor - Large with Mass",
-        "image": "http://res.cloudinary.com/circuito/image/upload/j7kpxdfxhxwfaupre72c",
-        "numericName": "",
-        "shortName": "Piezo Vibration Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>Piezo Vibration Sensor is suitable for measurements of flexibility, vibration, impact and touch. When the sensor moves back and forth, a certain voltage will be created by the voltage comparator inside of it. <br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong></p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Piezo Vibration Sensor is suitable for measurements of flexibility, vibration, impact and touch. When the sensor moves back and forth, a certain voltage will be created by the voltage comparator inside of it. <br><strong>Returned values</strong>: from 0 (no strain) to 1023 (maximal strain).<br><strong></p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "PiezoVibration"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "PiezoVibration"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PiezoVibration"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res1MO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.+",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "this.-",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "neg"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "neg",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "-",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "PiezoVibration"
+        },
+        {
+          "name": "r1",
+          "part": "Res1MO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.+",
+          "to": "r1.con0"
+        },
+        {
+          "from": "this.-",
+          "to": "r1.con1"
+        },
+        {
+          "from": "r1.con0",
+          "to": "neg"
+        }
+      ],
+      "ports": [
+        {
+          "name": "neg",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "-",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

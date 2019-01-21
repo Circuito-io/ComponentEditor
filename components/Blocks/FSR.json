@@ -1,177 +1,177 @@
 {
-    "name": "FSR",
-    "category": [
-        "input"
+  "name": "FSR",
+  "category": [
+    "input"
+  ],
+  "blockId": "9375",
+  "app": {
+    "appName": "Force Sensitive Resistor 0.5''",
+    "image": "http://res.cloudinary.com/circuito/image/upload/xinsrtgblhhqn4o1g2nj",
+    "numericName": "",
+    "shortName": "Force Sensitive Resistor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "9375",
-    "app": {
-        "appName": "Force Sensitive Resistor 0.5''",
-        "image": "http://res.cloudinary.com/circuito/image/upload/xinsrtgblhhqn4o1g2nj",
-        "numericName": "",
-        "shortName": "Force Sensitive Resistor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "FSR"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "FSR"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FSR"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res3K3O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.1",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "FSR"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "FSR"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FSR"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res3K3O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.1",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res3K3O"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.1",
+          "to": "r1.con1"
+        },
+        {
+          "from": "r1.con0",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "FSR"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "FSR"
+        },
+        {
+          "name": "r1",
+          "part": "Res3K3O"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.1",
+          "to": "r1.con1"
+        },
+        {
+          "from": "r1.con0",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

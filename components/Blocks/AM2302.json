@@ -1,148 +1,148 @@
 {
-    "name": "AM2302",
-    "category": [
-        "input"
+  "name": "AM2302",
+  "category": [
+    "input"
+  ],
+  "blockId": "963780",
+  "app": {
+    "appName": "AM2302 Digital Temperature and Humidity Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nqhyrltgv1knwcztk3it",
+    "numericName": "AM2302",
+    "shortName": "Temperature and Humidity Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "963780",
-    "app": {
-        "appName": "AM2302 Digital Temperature and Humidity Sensor",
-        "image": "http://res.cloudinary.com/circuito/image/upload/nqhyrltgv1knwcztk3it",
-        "numericName": "AM2302",
-        "shortName": "Temperature and Humidity Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 2-5% humidity accuracy and 0.5C temperature accuracy.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 2-5% humidity accuracy and 0.5C temperature accuracy.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "AM2302"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "AM2302"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "AM2302"
-                }
-            ],
-            "wires": [],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "AM2302"
+        }
+      ],
+      "wires": [],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "AM2302"
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "AM2302"
-                }
-            ],
-            "wires": [],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "AM2302"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "AM2302"
+        }
+      ],
+      "wires": [],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

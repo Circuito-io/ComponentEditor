@@ -1,36 +1,36 @@
 {
-    "name": "LedRGBWS2812",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "LedRGBWS2812",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "#define {{varname}}_NUMOFLEDS {{numOfSameComp}}\n",
+    "setup": "{{varname}}.begin(); // This initializes the NeoPixel library.\n{{varname}}.show(); // Initialize all leds to 'off'\n",
+    "snippetCode": "for(int i=0 ; i <= {{varname}}_NUMOFLEDS ; i++){\nfor (int k = 0 ; k <= 255 ; k++) {\n// set leds Color to RGB values, from 0,0,0 up to 255,255,255\n{{varname}}.setPixelColor(i, {{varname}}.Color(255-k,k,100)); // turn on green color on led #i.\nif (i > 0)\n{{varname}}.setPixelColor(i-1, {{varname}}.Color(0,0,0)); // turn off last led\n{{varname}}.show(); //update led color to the hardware.\ndelay(1);\n}\n}\n"
+  },
+  "license": "GNU",
+  "instantiate": {
+    "classname": "Adafruit_NeoPixel",
+    "ports": [
+      "DIN"
     ],
-    "code": {
-        "global": "#define {{varname}}_NUMOFLEDS {{numOfSameComp}}\n",
-        "setup": "{{varname}}.begin(); // This initializes the NeoPixel library.\n{{varname}}.show(); // Initialize all leds to 'off'\n",
-        "snippetCode": "for(int i=0 ; i <= {{varname}}_NUMOFLEDS ; i++){\nfor (int k = 0 ; k <= 255 ; k++) {\n// set leds Color to RGB values, from 0,0,0 up to 255,255,255\n{{varname}}.setPixelColor(i, {{varname}}.Color(255-k,k,100)); // turn on green color on led #i.\nif (i > 0)\n{{varname}}.setPixelColor(i-1, {{varname}}.Color(0,0,0)); // turn off last led\n{{varname}}.show(); //update led color to the hardware.\ndelay(1);\n}\n}\n"
-    },
-    "license": "GNU",
-    "instantiate": {
-        "classname": "Adafruit_NeoPixel",
-        "ports": [
-            "DIN"
-        ],
-        "varname": "LedRGB"
-    },
-    "files": [
-        "Adafruit_NeoPixel_license.txt",
-        "Adafruit_NeoPixel.h",
-        "Adafruit_NeoPixel.cpp"
-    ]
+    "varname": "LedRGB"
+  },
+  "files": [
+    "Adafruit_NeoPixel_license.txt",
+    "Adafruit_NeoPixel.h",
+    "Adafruit_NeoPixel.cpp"
+  ]
 }

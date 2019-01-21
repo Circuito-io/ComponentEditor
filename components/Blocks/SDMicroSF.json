@@ -1,179 +1,179 @@
 {
-    "name": "SDMicroSF",
-    "category": [
-        "output"
+  "name": "SDMicroSF",
+  "category": [
+    "output"
+  ],
+  "blockId": "520501",
+  "app": {
+    "appName": "SparkFun Level Shifting microSD Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/buhf1xqjx5rlgv4kwyiw",
+    "numericName": "",
+    "shortName": "microSD",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "520501",
-    "app": {
-        "appName": "SparkFun Level Shifting microSD Breakout",
-        "image": "http://res.cloudinary.com/circuito/image/upload/buhf1xqjx5rlgv4kwyiw",
-        "numericName": "",
-        "shortName": "microSD",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>The SparkFun Level Shifting microSD Breakout utilies a microSD card using Arduino\u2019s SD library\u2019s on a 5V or 3.3V system thanks to the included level shifting hardware.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>The SparkFun Level Shifting microSD Breakout utilies a microSD card using Arduino’s SD library’s on a 5V or 3.3V system thanks to the included level shifting hardware.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "SDMicroSF"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "SDMicroSF"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "SDMicroSF"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "CO",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "DO",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "MISO",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SCK",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCK",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "CS",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "SS",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "SS",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "DI",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "MOSI",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "SDMicroSF"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "CO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "DO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MISO",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCK",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "CS",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 2,
+                "spec": "SS",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 3,
+                "spec": "SS",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DI",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MOSI",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

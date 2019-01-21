@@ -1,149 +1,149 @@
 {
-    "name": "Mic",
-    "category": [
-        "input"
+  "name": "Mic",
+  "category": [
+    "input"
+  ],
+  "blockId": "9964",
+  "app": {
+    "appName": "SparkFun Electret Microphone Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/bvtpexcewrxogl7cle6d",
+    "numericName": "",
+    "shortName": "Electret Microphone",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "9964",
-    "app": {
-        "appName": "SparkFun Electret Microphone Breakout",
-        "image": "http://res.cloudinary.com/circuito/image/upload/bvtpexcewrxogl7cle6d",
-        "numericName": "",
-        "shortName": "Electret Microphone",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>Microphone+amplifier allows you to detect standard sounds in your environment like voices, knocks, claps.<br><strong>Returned values</strong>: from 0 (no sound) to 1023 (maximal sound). - Works with regular ambient noises, silence vs. fall or knock, etc\u2026<br><strong>Requires</strong>: soldering 3 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: Detect a knock and perform some action, like open the door, or a secret drawer.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>Microphone+amplifier allows you to detect standard sounds in your environment like voices, knocks, claps.<br><strong>Returned values</strong>: from 0 (no sound) to 1023 (maximal sound). - Works with regular ambient noises, silence vs. fall or knock, etc…<br><strong>Requires</strong>: soldering 3 male header pins to fit onto a breadboard.<br><strong>Sample applications</strong>: Detect a knock and perform some action, like open the door, or a secret drawer.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "Mic"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "Mic"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Mic"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "Mic"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "Mic"
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Mic"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "Mic"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "Mic"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

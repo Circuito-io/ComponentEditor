@@ -1,128 +1,128 @@
 {
-    "name": "DS18B20WP",
-    "category": [
-        "input"
+  "name": "DS18B20WP",
+  "category": [
+    "input"
+  ],
+  "blockId": "11050",
+  "app": {
+    "appName": "DS18B20 1-Wire Temperature Sensor - Waterproof",
+    "image": "http://res.cloudinary.com/circuito/image/upload/xcthgr6n3ajjht7wjerm",
+    "numericName": "DS18B20",
+    "shortName": "Waterproof Temperature Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "11050",
-    "app": {
-        "appName": "DS18B20 1-Wire Temperature Sensor - Waterproof",
-        "image": "http://res.cloudinary.com/circuito/image/upload/xcthgr6n3ajjht7wjerm",
-        "numericName": "DS18B20",
-        "shortName": "Waterproof Temperature Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A very simple sensor to wire - measuring temperature in a huge range, with high accuracy.<br><strong>Returned values</strong>: \u201355\u00b0C to +125\u00b0C (\u201367\u00b0F to +257\u00b0F) - with an accuracy of (+/-0.5C).</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A very simple sensor to wire - measuring temperature in a huge range, with high accuracy.<br><strong>Returned values</strong>: –55°C to +125°C (–67°F to +257°F) - with an accuracy of (+/-0.5C).</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "DS18B20WP"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "DS18B20WP"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "DS18B20WP"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res4K7O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.DQ",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 45
-                    }
-                },
-                {
-                    "name": "DQ",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "DS18B20WP"
+        },
+        {
+          "name": "r1",
+          "part": "Res4K7O"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.DQ",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con0",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 45
+          }
+        },
+        {
+          "name": "DQ",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

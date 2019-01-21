@@ -1,48 +1,48 @@
 {
-    "name": "SevenSegmentBare_Quad_woShiftReg",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "SevenSegmentBare_Quad_woShiftReg",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "int {{varname}}Counter = 0; \nunsigned long {{varname}}Timer = millis();\nbyte {{varname}}DigitPins[] = { {{Dig1}}, {{Dig2}}, {{Dig3}}, {{Dig4}} };\nbyte {{varname}}SegmentPins[] = { {{A}}, {{B}}, {{C}}, {{D}}, {{E}}, {{F}} ,{{G}}, {{DECIMAL}} };\n",
+    "constructors": "{{classname}} {{varname}}({{varname}}DigitPins, {{varname}}SegmentPins);\n",
+    "setup": "{{varname}}.setBrightness(90);      //Seven-Segment LED brightness 0 - 100\n",
+    "snippetCode": "if (millis() - {{varname}}Timer >= 50) \n{\n{{varname}}Timer = millis();\n{{varname}}Counter++;                           //increment counter\n{{varname}}.setNumber({{varname}}Counter, 1);   //set display value\n}\n{{varname}}.refreshDisplay(); // Must run repeatedly"
+  },
+  "license": "Apache 2.0",
+  "instantiate": {
+    "classname": "SevSeg",
+    "ports": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "DECIMAL",
+      "Dig1",
+      "Dig2",
+      "Dig3",
+      "Dig4"
     ],
-    "code": {
-        "global": "int {{varname}}Counter = 0; \nunsigned long {{varname}}Timer = millis();\nbyte {{varname}}DigitPins[] = { {{Dig1}}, {{Dig2}}, {{Dig3}}, {{Dig4}} };\nbyte {{varname}}SegmentPins[] = { {{A}}, {{B}}, {{C}}, {{D}}, {{E}}, {{F}} ,{{G}}, {{DECIMAL}} };\n",
-        "constructors": "{{classname}} {{varname}}({{varname}}DigitPins, {{varname}}SegmentPins);\n",
-        "setup": "{{varname}}.setBrightness(90);      //Seven-Segment LED brightness 0 - 100\n",
-        "snippetCode": "if (millis() - {{varname}}Timer >= 50) \n{\n{{varname}}Timer = millis();\n{{varname}}Counter++;                           //increment counter\n{{varname}}.setNumber({{varname}}Counter, 1);   //set display value\n}\n{{varname}}.refreshDisplay(); // Must run repeatedly"
-    },
-    "license": "Apache 2.0",
-    "instantiate": {
-        "classname": "SevSeg",
-        "ports": [
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "DECIMAL",
-            "Dig1",
-            "Dig2",
-            "Dig3",
-            "Dig4"
-        ],
-        "varname": "s7seg"
-    },
-    "files": [
-        "SevSeg.cpp",
-        "SevSeg.h",
-        "SevSeg_license.txt"
-    ],
-    "includeHeaders": []
+    "varname": "s7seg"
+  },
+  "files": [
+    "SevSeg.cpp",
+    "SevSeg.h",
+    "SevSeg_license.txt"
+  ],
+  "includeHeaders": []
 }

@@ -1,48 +1,70 @@
 {
-    "name": "DCMotorL",
-    "category": [
-        "output"
-    ],
-    "blockId": "11698",
-    "circuits": [
+  "name": "DCMotorL",
+  "category": [
+    "output"
+  ],
+  "blockId": "11698",
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "DCMotor"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Coil1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DCMA1","voltage":""},{"cost":5,"spec":"DCMB1","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Coil2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DCMA2","voltage":""},{"cost":5,"spec":"DCMB2","voltage":""}]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 7,
-                    "blocks": [
-                        "L293D1M"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "L293D2M"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "DCMotor"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "Coil1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DCMA1",
+                "voltage": ""
+              },
+              {
+                "cost": 5,
+                "spec": "DCMB1",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Coil2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DCMA2",
+                "voltage": ""
+              },
+              {
+                "cost": 5,
+                "spec": "DCMB2",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 7,
+          "blocks": [
+            "L293D1M"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "L293D2M"
+          ]
+        }
+      ]
+    }
+  ]
 }

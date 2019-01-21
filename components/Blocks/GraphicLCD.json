@@ -1,129 +1,129 @@
 {
-    "name": "GraphicLCD",
-    "category": [
-        "output"
+  "name": "GraphicLCD",
+  "category": [
+    "output"
+  ],
+  "blockId": "8799",
+  "app": {
+    "appName": "Graphic LCD 160x128 Huge",
+    "image": "http://res.cloudinary.com/circuito/image/upload/pwbeovatluc0uwehggza",
+    "numericName": "",
+    "shortName": "Graphic LCD",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "8799",
-    "app": {
-        "appName": "Graphic LCD 160x128 Huge",
-        "image": "http://res.cloudinary.com/circuito/image/upload/pwbeovatluc0uwehggza",
-        "numericName": "",
-        "shortName": "Graphic LCD",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A huge LCD screen, allowing you to display long messages, or complex drawings. It\u2019s background is blue with a white font. The  screen may be sensitive to very low or very high temperature.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A huge LCD screen, allowing you to display long messages, or complex drawings. It’s background is blue with a white font. The  screen may be sensitive to very low or very high temperature.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "GraphicLCD"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "GraphicLCD"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "Arduino101",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "GraphicLCD",
-                    "rotation": 180
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 200
-                    }
-                },
-                {
-                    "name": "TX",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 113
-                    }
-                },
-                {
-                    "name": "RX",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "GraphicLCD",
+          "rotation": 180
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 200
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 113
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

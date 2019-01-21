@@ -1,111 +1,111 @@
 {
-    "name": "ServoMD",
-    "category": [
-        "output"
+  "name": "ServoMD",
+  "category": [
+    "output"
+  ],
+  "blockId": "10334",
+  "app": {
+    "appName": "Standard Size - High Torque - Metal Gear Servo - MG995",
+    "image": "http://res.cloudinary.com/circuito/image/upload/uqdlbgo77ihzuikdqodi",
+    "numericName": "MG995",
+    "shortName": "Servo",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "10334",
-    "app": {
-        "appName": "Standard Size - High Torque - Metal Gear Servo - MG995",
-        "image": "http://res.cloudinary.com/circuito/image/upload/uqdlbgo77ihzuikdqodi",
-        "numericName": "MG995",
-        "shortName": "Servo",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Standard size high torque with metal gear servo. You can use to rotate an object, or move a robotic arm. <a href=\"https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard\"></p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Standard size high torque with metal gear servo. You can use to rotate an object, or move a robotic arm. <a href=\"https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard\"></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "ServoMD"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "ServoMD"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ServoMD"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "6v"
-                            }
-                        ],
-                        "requiresLoad": 500
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 30,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "ServoMD"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "6v"
+              }
+            ],
+            "requiresLoad": 500
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 30,
+          "blocks": [
+            "Reg5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

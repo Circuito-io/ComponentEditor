@@ -1,57 +1,96 @@
 {
-    "name": "StepUp5v",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "StepUp5v",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "StepUp5v"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.OUT5v-",
-                    "to": "this.BAT-"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "OUT5v-",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "OUT5v+",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
-                        "providesLoad": 1000
-                    }
-                },
-                {
-                    "name": "BAT+",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"Battery","voltage":"3.7v"},{"cost":1,"spec":"","voltage":"3.7v"}]
-                    }
-                },
-                {
-                    "name": "BAT-",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"Battery","voltage":"GND"},{"cost":1,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "PowerType",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"Battery","voltage":""}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "StepUp5v"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.OUT5v-",
+          "to": "this.BAT-"
+        }
+      ],
+      "ports": [
+        {
+          "name": "OUT5v-",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "OUT5v+",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 1000
+          }
+        },
+        {
+          "name": "BAT+",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Battery",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.7v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "BAT-",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Battery",
+                "voltage": "GND"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PowerType",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Battery",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -1,34 +1,34 @@
 {
-    "name": "ToggleSwitch",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "ToggleSwitch",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "{{varname}}.init();\n",
+    "snippetCode": "//read Toggle Switch state. \n//if Switch is open function will return LOW (0). \n//if it is closed function will return HIGH (1).\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Button",
+    "ports": [
+      "2"
     ],
-    "code": {
-        "setup": "{{varname}}.init();\n",
-        "snippetCode": "//read Toggle Switch state. \n//if Switch is open function will return LOW (0). \n//if it is closed function will return HIGH (1).\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Button",
-        "ports": [
-            "2"
-        ],
-        "varname": "ToggleSwitch"
-    },
-    "files": [
-        "Button.h",
-        "Button.cpp"
-    ]
+    "varname": "ToggleSwitch"
+  },
+  "files": [
+    "Button.h",
+    "Button.cpp"
+  ]
 }

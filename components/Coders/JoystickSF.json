@@ -1,41 +1,41 @@
 {
-    "name": "JoystickSF",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "JoystickSF",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Read Joystick X,Y axis and press\nint {{varname}}X =  {{varname}}.getX();\nint {{varname}}Y =  {{varname}}.getY();\nint {{varname}}SW =  {{varname}}.getSW();\nSerial.print(F(\"X: \")); Serial.print({{varname}}X);\nSerial.print(F(\"\\tY: \")); Serial.print({{varname}}Y);\nSerial.print(F(\"\\tSW: \")); Serial.println({{varname}}SW);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Joystick",
+    "ports": [
+      "VERT",
+      "HORZ",
+      "SEL"
     ],
-    "code": {
-        "snippetCode": "// Read Joystick X,Y axis and press\nint {{varname}}X =  {{varname}}.getX();\nint {{varname}}Y =  {{varname}}.getY();\nint {{varname}}SW =  {{varname}}.getSW();\nSerial.print(F(\"X: \")); Serial.print({{varname}}X);\nSerial.print(F(\"\\tY: \")); Serial.print({{varname}}Y);\nSerial.print(F(\"\\tSW: \")); Serial.println({{varname}}SW);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Joystick",
-        "ports": [
-            "VERT",
-            "HORZ",
-            "SEL"
-        ],
-        "varname": "joystickSF"
-    },
-    "files": [
-        "AnalogReader.h",
-        "AnalogReader.cpp",
-        "Button.h",
-        "Button.cpp",
-        "Joystick.h",
-        "Joystick.cpp"
-    ],
-    "includeHeaders": [
-        "Joystick.h"
-    ]
+    "varname": "joystickSF"
+  },
+  "files": [
+    "AnalogReader.h",
+    "AnalogReader.cpp",
+    "Button.h",
+    "Button.cpp",
+    "Joystick.h",
+    "Joystick.cpp"
+  ],
+  "includeHeaders": [
+    "Joystick.h"
+  ]
 }

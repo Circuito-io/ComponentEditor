@@ -1,150 +1,150 @@
 {
-    "name": "pullPushSolenoid",
-    "category": [
-        "output"
+  "name": "pullPushSolenoid",
+  "category": [
+    "output"
+  ],
+  "blockId": "11015",
+  "app": {
+    "appName": "Solenoid Push-Pull - 5v (Small)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/yacbxnalvc2lho8uinub",
+    "numericName": "",
+    "shortName": "Solenoid Push-Pull",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "11015",
-    "app": {
-        "appName": "Solenoid Push-Pull - 5v (Small)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/yacbxnalvc2lho8uinub",
-        "numericName": "",
-        "shortName": "Solenoid Push-Pull",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Solenoids are a great way to induce linear motion for pushing, pulling or controlling switches and levers.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Solenoids are a great way to induce linear motion for pushing, pulling or controlling switches and levers.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "pullPushSolenoid"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "pullPushSolenoid"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "pullPushSolenoid",
-                    "rotation": 0
-                },
-                {
-                    "name": "nmos",
-                    "part": "TNMOSFETFQP"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                },
-                {
-                    "name": "d1",
-                    "part": "DIRect1A50v",
-                    "rotation": 180
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.pin2",
-                    "to": "nmos.D"
-                },
-                {
-                    "from": "nmos.G",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "nmos.S",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.pin1",
-                    "to": "d1.neg"
-                },
-                {
-                    "from": "this.pin2",
-                    "to": "d1.pos"
-                },
-                {
-                    "from": "nmos.S",
-                    "to": "GND"
-                },
-                {
-                    "from": "nmos.G",
-                    "to": "SIG"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pin1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 700
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 1,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "pullPushSolenoid",
+          "rotation": 0
+        },
+        {
+          "name": "nmos",
+          "part": "TNMOSFETFQP"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
+        },
+        {
+          "name": "d1",
+          "part": "DIRect1A50v",
+          "rotation": 180
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.pin2",
+          "to": "nmos.D"
+        },
+        {
+          "from": "nmos.G",
+          "to": "r1.con0"
+        },
+        {
+          "from": "nmos.S",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.pin1",
+          "to": "d1.neg"
+        },
+        {
+          "from": "this.pin2",
+          "to": "d1.pos"
+        },
+        {
+          "from": "nmos.S",
+          "to": "GND"
+        },
+        {
+          "from": "nmos.G",
+          "to": "SIG"
+        }
+      ],
+      "ports": [
+        {
+          "name": "pin1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 700
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 1,
+          "blocks": [
+            "Reg5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

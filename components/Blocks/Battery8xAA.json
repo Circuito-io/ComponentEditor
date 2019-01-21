@@ -1,94 +1,94 @@
 {
-    "name": "Battery8xAA",
-    "category": [
-        "power"
+  "name": "Battery8xAA",
+  "category": [
+    "power"
+  ],
+  "blockId": "783868",
+  "app": {
+    "appName": "Battery Holder - 8xAA - 12V",
+    "image": "http://res.cloudinary.com/circuito/image/upload/mkzntmtofahhewss45v7",
+    "numericName": "",
+    "shortName": "8xAA Battery Holder",
+    "tags": [
+      "powerSupplies"
     ],
-    "blockId": "783868",
-    "app": {
-        "appName": "Battery Holder - 8xAA - 12V",
-        "image": "http://res.cloudinary.com/circuito/image/upload/mkzntmtofahhewss45v7",
-        "numericName": "",
-        "shortName": "8xAA Battery Holder",
-        "tags": [
-            "powerSupplies"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Also contains a switch which allows you to turn the circuit power on and off easily..</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Battery8xAA"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "POS",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ],
-                        "providesLoad": 2000
-                    }
-                },
-                {
-                    "name": "NEG",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "PowerType",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "Battery",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 1,
-                    "blocks": [
-                        "BarrelJack12v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "Battery8xAA"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "POS",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "providesLoad": 2000
+          }
+        },
+        {
+          "name": "NEG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PowerType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "Battery",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 1,
+          "blocks": [
+            "BarrelJack12v"
+          ]
+        }
+      ]
+    }
+  ]
 }

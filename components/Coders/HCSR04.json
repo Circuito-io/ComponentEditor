@@ -1,31 +1,31 @@
 {
-    "name": "HCSR04",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
+  "name": "HCSR04",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+  },
+  "license": "GNU_GPL_v3",
+  "instantiate": {
+    "classname": "NewPing",
+    "ports": [
+      "TRIG",
+      "ECHO"
     ],
-    "code": {
-        "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
-    },
-    "license": "GNU_GPL_v3",
-    "instantiate": {
-        "classname": "NewPing",
-        "ports": [
-            "TRIG",
-            "ECHO"
-        ],
-        "varname": "hcsr04"
-    },
-    "files": [
-        "NewPing.cpp",
-        "NewPing_license.txt",
-        "NewPing.h"
-    ]
+    "varname": "hcsr04"
+  },
+  "files": [
+    "NewPing.cpp",
+    "NewPing_license.txt",
+    "NewPing.h"
+  ]
 }

@@ -1,945 +1,945 @@
 {
-    "name": "ArduinoGemma",
-    "category": [
-        "controller"
+  "name": "ArduinoGemma",
+  "category": [
+    "controller"
+  ],
+  "blockId": "666531",
+  "app": {
+    "appName": "Adafruit Arduino Gemma v2",
+    "image": "http://res.cloudinary.com/circuito/image/upload/vpj3s6thbwmuoazt8zwi",
+    "numericName": "",
+    "shortName": "Arduino Gemma",
+    "tags": [
+      "controllers"
     ],
-    "blockId": "666531",
-    "app": {
-        "appName": "Adafruit Arduino Gemma v2",
-        "image": "http://res.cloudinary.com/circuito/image/upload/vpj3s6thbwmuoazt8zwi",
-        "numericName": "",
-        "shortName": "Arduino Gemma",
-        "tags": [
-            "controllers"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>GEMMA is a tiny wearable platform board powered by a Attiny85 and programmable with an Arduino IDE over USB. It is perfect for small wearable project!</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>GEMMA is a tiny wearable platform board powered by a Attiny85 and programmable with an Arduino IDE over USB. It is perfect for small wearable project!</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "USB",
+      "coders": [
+        "ArduinoGemma"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma"
+      ],
+      "parts": [
         {
-            "name": "USB",
-            "coders": [
-                "ArduinoGemma"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ArduinoGemma"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "3.3V",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D0",
-                    "interface": {
-                        "codename": "0",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialRX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D1",
-                    "interface": {
-                        "codename": "1",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialTX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D2",
-                    "interface": {
-                        "codename": "2",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB-",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB+",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB_MICRO",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "providesLoad": 512
-                    }
-                },
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "ESPSoftwareSerialTag",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1,
-            "requiredBlocks": [
-                {
-                    "cost": 20,
-                    "blocks": [
-                        "StepUp5v"
-                    ]
-                },
-                {
-                    "cost": 30,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 40,
-                    "blocks": [
-                        "Reg3.3v"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Barrel12v",
-            "coders": [
-                "ArduinoGemma"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ArduinoGemma"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "3.3V",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D0",
-                    "interface": {
-                        "codename": "0",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialRX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D1",
-                    "interface": {
-                        "codename": "1",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialTX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D2",
-                    "interface": {
-                        "codename": "2",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB_MICRO",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "providesLoad": 512
-                    }
-                },
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "ESPSoftwareSerialTag",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 2,
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "USBPowerMicro"
-                    ]
-                },
-                {
-                    "cost": 20,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "StepUp5v"
-                    ]
-                },
-                {
-                    "cost": 30,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 40,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg3.3v"
-                    ]
-                },
-                {
-                    "cost": 50,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg3.3v",
-                        "Reg5v"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "BatteryEx",
-            "coders": [
-                "ArduinoGemma"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ArduinoGemma"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "3.3V",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D0",
-                    "interface": {
-                        "codename": "0",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialRX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D1",
-                    "interface": {
-                        "codename": "1",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialTX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D2",
-                    "interface": {
-                        "codename": "2",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.7v"
-                            },
-                            {
-                                "cost": 4,
-                                "spec": "",
-                                "voltage": "6v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "",
-                                "voltage": "7.4v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "",
-                                "voltage": "9v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB_MICRO",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "providesLoad": 512
-                    }
-                },
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "ESPSoftwareSerialTag",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 3,
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "USBPowerMicro"
-                    ]
-                },
-                {
-                    "cost": 20,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "StepUp5v"
-                    ]
-                },
-                {
-                    "cost": 30,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 40,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg3.3v"
-                    ]
-                },
-                {
-                    "cost": 50,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg3.3v",
-                        "Reg5v"
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Lipo3v7",
-            "coders": [
-                "ArduinoGemma"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ArduinoGemma"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "3.3V",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D0",
-                    "interface": {
-                        "codename": "0",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialRX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D1",
-                    "interface": {
-                        "codename": "1",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ESPSoftwareSerialTX1",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "D2",
-                    "interface": {
-                        "codename": "2",
-                        "provides": [
-                            {
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "spec": "ADC",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "3.7v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "BAT-",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "Battery",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "BAT+",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "Battery",
-                                "voltage": "3.7v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB_MICRO",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "providesLoad": 512
-                    }
-                },
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "ESPSoftwareSerialTag",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 4,
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "USBPowerMicro"
-                    ]
-                },
-                {
-                    "cost": 20,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "StepUp5v"
-                    ]
-                },
-                {
-                    "cost": 30,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 40,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg3.3v"
-                    ]
-                },
-                {
-                    "cost": 50,
-                    "blocks": [
-                        "USBPowerMicro",
-                        "Reg3.3v",
-                        "Reg5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "ArduinoGemma"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "3.3V",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D1",
+          "interface": {
+            "codename": "1",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D2",
+          "interface": {
+            "codename": "2",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vout",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB-",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB+",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 512
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1,
+      "requiredBlocks": [
+        {
+          "cost": 20,
+          "blocks": [
+            "StepUp5v"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "Reg3.3v"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Barrel12v",
+      "coders": [
+        "ArduinoGemma"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "ArduinoGemma"
+        }
+      ],
+      "ports": [
+        {
+          "name": "3.3V",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D1",
+          "interface": {
+            "codename": "1",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D2",
+          "interface": {
+            "codename": "2",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 512
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "USBPowerMicro",
+            "StepUp5v"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg3.3v"
+          ]
+        },
+        {
+          "cost": 50,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg3.3v",
+            "Reg5v"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BatteryEx",
+      "coders": [
+        "ArduinoGemma"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "ArduinoGemma"
+        }
+      ],
+      "ports": [
+        {
+          "name": "3.3V",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D1",
+          "interface": {
+            "codename": "1",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D2",
+          "interface": {
+            "codename": "2",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 4,
+                "spec": "",
+                "voltage": "6v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "7.4v"
+              },
+              {
+                "cost": 3,
+                "spec": "",
+                "voltage": "9v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 512
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 3,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "USBPowerMicro",
+            "StepUp5v"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg3.3v"
+          ]
+        },
+        {
+          "cost": 50,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg3.3v",
+            "Reg5v"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lipo3v7",
+      "coders": [
+        "ArduinoGemma"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "ArduinoGemma"
+        }
+      ],
+      "ports": [
+        {
+          "name": "3.3V",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D1",
+          "interface": {
+            "codename": "1",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D2",
+          "interface": {
+            "codename": "2",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vout",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.7v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "BAT-",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Battery",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "BAT+",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Battery",
+                "voltage": "3.7v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 512
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 4,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "USBPowerMicro",
+            "StepUp5v"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg3.3v"
+          ]
+        },
+        {
+          "cost": 50,
+          "blocks": [
+            "USBPowerMicro",
+            "Reg3.3v",
+            "Reg5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

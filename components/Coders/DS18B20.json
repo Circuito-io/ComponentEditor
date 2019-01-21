@@ -1,42 +1,42 @@
 {
-    "name": "DS18B20",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "DS18B20",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit use {{varname}}.ReadTempF()\nfloat {{varname}}TempC = {{varname}}.readTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
+  },
+  "license": "GNU",
+  "instantiate": {
+    "classname": "DS18B20",
+    "ports": [
+      "DQ"
     ],
-    "code": {
-        "snippetCode": "// Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit use {{varname}}.ReadTempF()\nfloat {{varname}}TempC = {{varname}}.readTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n"
-    },
-    "license": "GNU",
-    "instantiate": {
-        "classname": "DS18B20",
-        "ports": [
-            "DQ"
-        ],
-        "varname": "ds18b20"
-    },
-    "files": [
-        "Dallas README.md",
-        "DS18B20_license.txt",
-        "OneWire.h",
-        "DS18B20.h",
-        "DallasTemperature.cpp",
-        "DS18B20.cpp",
-        "OneWire.cpp",
-        "DallasTemperature.h"
-    ],
-    "includeHeaders": [
-        "DS18B20.h"
-    ]
+    "varname": "ds18b20"
+  },
+  "files": [
+    "Dallas README.md",
+    "DS18B20_license.txt",
+    "OneWire.h",
+    "DS18B20.h",
+    "DallasTemperature.cpp",
+    "DS18B20.cpp",
+    "OneWire.cpp",
+    "DallasTemperature.h"
+  ],
+  "includeHeaders": [
+    "DS18B20.h"
+  ]
 }

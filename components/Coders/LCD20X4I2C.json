@@ -1,34 +1,34 @@
 {
-    "name": "LCD20X4I2C",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "global": "// There are several different versions of the LCD I2C adapter, each might have a different address.\n// Try the given addresses by Un/commenting the following rows until LCD works follow the serial monitor prints. \n// To find your LCD address go to: http://playground.arduino.cc/Main/I2cScanner and run example.\n#define LCD_ADDRESS 0x3F\n//#define LCD_ADDRESS 0x27\n// Define LCD characteristics\n#define LCD_ROWS 4\n#define LCD_COLUMNS 20\n#define SCROLL_DELAY 150\n#define BACKLIGHT 255\n",
-        "setup": "// initialize the lcd\n{{varname}}.begin(LCD_COLUMNS, LCD_ROWS, LCD_ADDRESS, BACKLIGHT); \n",
-        "snippetCode": "// The LCD Screen will display the text of your choice.\n{{varname}}.clear();                          // Clear LCD screen.\n{{varname}}.selectLine(2);                    // Set cursor at the begining of line 2\n{{varname}}.print(\"    Circuito.io  \");                   // Print print String to LCD on first line\n{{varname}}.selectLine(3);                    // Set cursor at the begining of line 3\n{{varname}}.print(\"      Rocks!  \");                   // Print print String to LCD on second line\ndelay(1000);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "LiquidCrystal_PCF8574",
-        "ports": [],
-        "varname": "lcd20x4"
-    },
-    "files": [
-        "LiquidCrystal_PCF8574.cpp",
-        "LiquidCrystal_PCF8574.h",
-        "LiquidCrystal_PCF8574_license.txt"
-    ]
+  "name": "LCD20X4I2C",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "// There are several different versions of the LCD I2C adapter, each might have a different address.\n// Try the given addresses by Un/commenting the following rows until LCD works follow the serial monitor prints. \n// To find your LCD address go to: http://playground.arduino.cc/Main/I2cScanner and run example.\n#define LCD_ADDRESS 0x3F\n//#define LCD_ADDRESS 0x27\n// Define LCD characteristics\n#define LCD_ROWS 4\n#define LCD_COLUMNS 20\n#define SCROLL_DELAY 150\n#define BACKLIGHT 255\n",
+    "setup": "// initialize the lcd\n{{varname}}.begin(LCD_COLUMNS, LCD_ROWS, LCD_ADDRESS, BACKLIGHT); \n",
+    "snippetCode": "// The LCD Screen will display the text of your choice.\n{{varname}}.clear();                          // Clear LCD screen.\n{{varname}}.selectLine(2);                    // Set cursor at the begining of line 2\n{{varname}}.print(\"    Circuito.io  \");                   // Print print String to LCD on first line\n{{varname}}.selectLine(3);                    // Set cursor at the begining of line 3\n{{varname}}.print(\"      Rocks!  \");                   // Print print String to LCD on second line\ndelay(1000);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "LiquidCrystal_PCF8574",
+    "ports": [],
+    "varname": "lcd20x4"
+  },
+  "files": [
+    "LiquidCrystal_PCF8574.cpp",
+    "LiquidCrystal_PCF8574.h",
+    "LiquidCrystal_PCF8574_license.txt"
+  ]
 }

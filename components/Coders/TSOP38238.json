@@ -1,61 +1,61 @@
 {
-    "name": "TSOP38238",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "TSOP38238",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "// initialize IR device\n{{varname}}.init();\n",
+    "snippetCode": "//Receive IR code into {{varname}}Code\nlong {{varname}}Code =  {{varname}}.detect();\n// if a code was received print it to serial monitor, note that the code is of type long but printed in HEX\n// Consider changing the if statment to something like: if({{varname}}Code == \"YOUR IR CODE\")\nif({{varname}}Code)\n{\nSerial.print(\"0x\");\nSerial.println({{varname}}Code, HEX);\n}"
+  },
+  "license": "GNU",
+  "instantiate": {
+    "classname": "IR",
+    "ports": [
+      "Out"
     ],
-    "code": {
-        "setup": "// initialize IR device\n{{varname}}.init();\n",
-        "snippetCode": "//Receive IR code into {{varname}}Code\nlong {{varname}}Code =  {{varname}}.detect();\n// if a code was received print it to serial monitor, note that the code is of type long but printed in HEX\n// Consider changing the if statment to something like: if({{varname}}Code == \"YOUR IR CODE\")\nif({{varname}}Code)\n{\nSerial.print(\"0x\");\nSerial.println({{varname}}Code, HEX);\n}"
-    },
-    "license": "GNU",
-    "instantiate": {
-        "classname": "IR",
-        "ports": [
-            "Out"
-        ],
-        "varname": "ir"
-    },
-    "files": [
-        "IRremote.cpp",
-        "irSend.cpp",
-        "ir_Panasonic.cpp",
-        "ir_Samsung.cpp",
-        "ir_Dish.cpp",
-        "ir_LG.cpp",
-        "IRremote_Contributors.md",
-        "IRremote_README.md",
-        "ir_Sanyo.cpp",
-        "ir_Template.cpp",
-        "IRremote_changelog.md",
-        "IRremote_Contributing.md",
-        "ir_Lego_PF.cpp",
-        "IRremote_license.txt",
-        "IR.h",
-        "irPronto.cpp",
-        "ir_Whynter.cpp",
-        "IR_license.txt",
-        "IRremoteInt.h",
-        "ir_RC5_RC6.cpp",
-        "ir_Sharp.cpp",
-        "ir_Sony.cpp",
-        "IR.cpp",
-        "ir_Aiwa.cpp",
-        "ir_NEC.cpp",
-        "irRecv.cpp",
-        "ir_Denon.cpp",
-        "IRremote.h",
-        "ir_Mitsubishi.cpp",
-        "ir_JVC.cpp"
-    ]
+    "varname": "ir"
+  },
+  "files": [
+    "IRremote.cpp",
+    "irSend.cpp",
+    "ir_Panasonic.cpp",
+    "ir_Samsung.cpp",
+    "ir_Dish.cpp",
+    "ir_LG.cpp",
+    "IRremote_Contributors.md",
+    "IRremote_README.md",
+    "ir_Sanyo.cpp",
+    "ir_Template.cpp",
+    "IRremote_changelog.md",
+    "IRremote_Contributing.md",
+    "ir_Lego_PF.cpp",
+    "IRremote_license.txt",
+    "IR.h",
+    "irPronto.cpp",
+    "ir_Whynter.cpp",
+    "IR_license.txt",
+    "IRremoteInt.h",
+    "ir_RC5_RC6.cpp",
+    "ir_Sharp.cpp",
+    "ir_Sony.cpp",
+    "IR.cpp",
+    "ir_Aiwa.cpp",
+    "ir_NEC.cpp",
+    "irRecv.cpp",
+    "ir_Denon.cpp",
+    "IRremote.h",
+    "ir_Mitsubishi.cpp",
+    "ir_JVC.cpp"
+  ]
 }

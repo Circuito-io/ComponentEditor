@@ -1,26 +1,26 @@
 {
-    "name": "GPSUltimateADA_HardwareSerial",
-    "supportedControllers": [
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ESP32DevKitC",
-        "RPI3B"
-    ],
-    "code": {
-        "global": "#define GPSECHO  true\nuint32_t timer = millis(); //timer to read & print out the current stats\nboolean usingInterrupt = false; // off by default! this keeps track of whether we're using the interrupt\n",
-        "constructors": "HardwareSerial& gpsSerial(Serial1);\n{{classname}} {{varname}}(&gpsSerial);\n",
-        "setup": "{{varname}}.init();\n",
-        "snippetCode": "if (! usingInterrupt) {\n// read data from the GPS in the 'main loop'\nchar c = {{varname}}.read();\n// if you want to debug, this is a good time to do it!\nif (GPSECHO)\nif (c) Serial.print(c);\n}\n// if a sentence is received, we can check the checksum, parse it...\nif ({{varname}}.newNMEAreceived()) {\n// a tricky thing here is if we print the NMEA sentence, or data\n// we end up not listening and catching other sentences!\n// so be very wary if using OUTPUT_ALLDATA and trytng to print out data\n//Serial.println({{varname}}.lastNMEA());   // this also sets the newNMEAreceived() flag to false\nif (!{{varname}}.parse({{varname}}.lastNMEA()))   // this also sets the newNMEAreceived() flag to false\nreturn;  // we can fail to parse a sentence in which case we should just wait for another\n}\n// if millis() or timer wraps around, we'll just reset it\nif (timer > millis())  timer = millis();\n// approximately every 2 seconds or so, print out the current stats\nif (millis() - timer > 2000) {\ntimer = millis(); // reset the timer\nSerial.print(\"\\nTime: \");\nSerial.print({{varname}}.hour, DEC); Serial.print(':');\nSerial.print({{varname}}.minute, DEC); Serial.print(':');\nSerial.print({{varname}}.seconds, DEC); Serial.print('.');\nSerial.println({{varname}}.milliseconds);\nSerial.print(\"Date: \");\nSerial.print({{varname}}.day, DEC); Serial.print('/');\nSerial.print({{varname}}.month, DEC); Serial.print(\"/20\");\nSerial.println({{varname}}.year, DEC);\nSerial.print(\"Fix: \"); Serial.print((int){{varname}}.fix);\nSerial.print(\" quality: \"); Serial.println((int){{varname}}.fixquality);\nif ({{varname}}.fix) {\nSerial.print(\"Location: \");\nSerial.print({{varname}}.latitude, 4); Serial.print({{varname}}.lat);\nSerial.print(\", \");\nSerial.print({{varname}}.longitude, 4); Serial.println({{varname}}.lon);\nSerial.print(\"Location (in degrees, works with Google Maps): \");\nSerial.print({{varname}}.latitudeDegrees, 4);\nSerial.print(\", \");\nSerial.println({{varname}}.longitudeDegrees, 4);\nSerial.print(\"Speed (knots): \"); Serial.println({{varname}}.speed);\nSerial.print(\"Angle: \"); Serial.println({{varname}}.angle);\nSerial.print(\"Altitude: \"); Serial.println({{varname}}.altitude);\nSerial.print(\"Satellites: \"); Serial.println((int){{varname}}.satellites);\n}\n}"
-    },
-    "license": "BSD",
-    "instantiate": {
-        "classname": "Adafruit_GPS",
-        "varname": "GPS"
-    },
-    "files": [
-        "Adafruit_GPS_license.txt",
-        "Adafruit_GPS.cpp",
-        "Adafruit_GPS.h"
-    ]
+  "name": "GPSUltimateADA_HardwareSerial",
+  "supportedControllers": [
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ESP32DevKitC",
+    "RPI3B"
+  ],
+  "code": {
+    "global": "#define GPSECHO  true\nuint32_t timer = millis(); //timer to read & print out the current stats\nboolean usingInterrupt = false; // off by default! this keeps track of whether we're using the interrupt\n",
+    "constructors": "HardwareSerial& gpsSerial(Serial1);\n{{classname}} {{varname}}(&gpsSerial);\n",
+    "setup": "{{varname}}.init();\n",
+    "snippetCode": "if (! usingInterrupt) {\n// read data from the GPS in the 'main loop'\nchar c = {{varname}}.read();\n// if you want to debug, this is a good time to do it!\nif (GPSECHO)\nif (c) Serial.print(c);\n}\n// if a sentence is received, we can check the checksum, parse it...\nif ({{varname}}.newNMEAreceived()) {\n// a tricky thing here is if we print the NMEA sentence, or data\n// we end up not listening and catching other sentences!\n// so be very wary if using OUTPUT_ALLDATA and trytng to print out data\n//Serial.println({{varname}}.lastNMEA());   // this also sets the newNMEAreceived() flag to false\nif (!{{varname}}.parse({{varname}}.lastNMEA()))   // this also sets the newNMEAreceived() flag to false\nreturn;  // we can fail to parse a sentence in which case we should just wait for another\n}\n// if millis() or timer wraps around, we'll just reset it\nif (timer > millis())  timer = millis();\n// approximately every 2 seconds or so, print out the current stats\nif (millis() - timer > 2000) {\ntimer = millis(); // reset the timer\nSerial.print(\"\\nTime: \");\nSerial.print({{varname}}.hour, DEC); Serial.print(':');\nSerial.print({{varname}}.minute, DEC); Serial.print(':');\nSerial.print({{varname}}.seconds, DEC); Serial.print('.');\nSerial.println({{varname}}.milliseconds);\nSerial.print(\"Date: \");\nSerial.print({{varname}}.day, DEC); Serial.print('/');\nSerial.print({{varname}}.month, DEC); Serial.print(\"/20\");\nSerial.println({{varname}}.year, DEC);\nSerial.print(\"Fix: \"); Serial.print((int){{varname}}.fix);\nSerial.print(\" quality: \"); Serial.println((int){{varname}}.fixquality);\nif ({{varname}}.fix) {\nSerial.print(\"Location: \");\nSerial.print({{varname}}.latitude, 4); Serial.print({{varname}}.lat);\nSerial.print(\", \");\nSerial.print({{varname}}.longitude, 4); Serial.println({{varname}}.lon);\nSerial.print(\"Location (in degrees, works with Google Maps): \");\nSerial.print({{varname}}.latitudeDegrees, 4);\nSerial.print(\", \");\nSerial.println({{varname}}.longitudeDegrees, 4);\nSerial.print(\"Speed (knots): \"); Serial.println({{varname}}.speed);\nSerial.print(\"Angle: \"); Serial.println({{varname}}.angle);\nSerial.print(\"Altitude: \"); Serial.println({{varname}}.altitude);\nSerial.print(\"Satellites: \"); Serial.println((int){{varname}}.satellites);\n}\n}"
+  },
+  "license": "BSD",
+  "instantiate": {
+    "classname": "Adafruit_GPS",
+    "varname": "GPS"
+  },
+  "files": [
+    "Adafruit_GPS_license.txt",
+    "Adafruit_GPS.cpp",
+    "Adafruit_GPS.h"
+  ]
 }

@@ -1,223 +1,223 @@
 {
-    "name": "AM2320",
-    "category": [
-        "input"
+  "name": "AM2320",
+  "category": [
+    "input"
+  ],
+  "blockId": "656839",
+  "app": {
+    "appName": "AM2320 Digital Temperature and Humidity Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nqhyrltgv1knwcztk3it",
+    "numericName": "AM2320",
+    "shortName": "Temperature and Humidity Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "656839",
-    "app": {
-        "appName": "AM2320 Digital Temperature and Humidity Sensor",
-        "image": "http://res.cloudinary.com/circuito/image/upload/nqhyrltgv1knwcztk3it",
-        "numericName": "AM2320",
-        "shortName": "Temperature and Humidity Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 3% humidity accuracy and 0.5C temperature accuracy.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 3% humidity accuracy and 0.5C temperature accuracy.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "AM2320"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "AM2320"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "AM2320"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.SCL",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.SDA",
-                    "to": "r2.con0"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r2.con1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCL",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "AM2320"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "AM2320"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "AM2320"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.SCL",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.SDA",
-                    "to": "r2.con0"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r2.con1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res10KO"
+        },
+        {
+          "name": "r2",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.SCL",
+          "to": "r1.con0"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.SDA",
+          "to": "r2.con0"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r2.con1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "AM2320"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "AM2320"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
+        },
+        {
+          "name": "r2",
+          "part": "Res10KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.SCL",
+          "to": "r1.con0"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.SDA",
+          "to": "r2.con0"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r2.con1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }
