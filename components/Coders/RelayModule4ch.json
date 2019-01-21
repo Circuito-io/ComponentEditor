@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "global": "//define an array for the 4ch relay module pins\nint {{varname}}Pins[] = { {{IN1}}, {{IN2}}, {{IN3}}, {{IN4}} };\n",

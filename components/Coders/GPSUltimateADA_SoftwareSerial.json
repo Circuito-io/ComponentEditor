@@ -10,7 +10,8 @@
         "ArduinoProMini3v3",
         "ArduinoProMini5v",
         "ArduinoUno",
-        "NodeMCU"
+        "NodeMCU",
+        "Teensy32"
     ],
     "code": {
         "global": "#define GPSECHO  true\nuint32_t timer = millis(); //timer to read & print out the current stats\nboolean usingInterrupt = false; // off by default! this keeps track of whether we're using the interrupt\n",

@@ -12,7 +12,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "// Get gyro readings in three axes.\nint {{varname}}X = {{varname}}.getX();\nint {{varname}}Y = {{varname}}.getY();\nint {{varname}}Z = {{varname}}.getZ();\nSerial.print(F(\"X: \")); Serial.print({{varname}}X); \nSerial.print(F(\"\\tY: \")); Serial.print({{varname}}Y); \nSerial.print(F(\"\\tZ: \")); Serial.println({{varname}}Z);\n"

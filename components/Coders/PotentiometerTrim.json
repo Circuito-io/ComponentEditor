@@ -12,7 +12,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);"

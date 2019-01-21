@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "global": "//define an array for the 10 Segment LED Bar Graph pins\nint {{varname}}Pins[] = { {{AA}}, {{BA}}, {{CA}}, {{DA}}, {{EA}}, {{FA}}, {{GA}}, {{HA}}, {{IA}}, {{JA}} }; \n",

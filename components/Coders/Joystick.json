@@ -11,7 +11,8 @@
         "ArduinoUno",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "Teensy32"
     ],
     "code": {
         "snippetCode": "// Read Joystick X,Y axis and press\nint {{varname}}X =  {{varname}}.getX();\nint {{varname}}Y =  {{varname}}.getY();\nint {{varname}}SW =  {{varname}}.getSW();\nSerial.print(F(\"X: \")); Serial.print({{varname}}X);\nSerial.print(F(\"\\tY: \")); Serial.print({{varname}}Y);\nSerial.print(F(\"\\tSW: \")); Serial.println({{varname}}SW);\n"
