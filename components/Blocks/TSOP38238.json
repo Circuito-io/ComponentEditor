@@ -1,174 +1,174 @@
 {
-    "name": "TSOP38238",
-    "category": [
-        "input"
+  "name": "TSOP38238",
+  "category": [
+    "input"
+  ],
+  "blockId": "10266",
+  "app": {
+    "appName": "IR Receiver Diode - TSOP38238",
+    "image": "http://res.cloudinary.com/circuito/image/upload/cvenimkvwxpfmlsozjpd",
+    "numericName": "TSOP38238",
+    "shortName": "IR Receiver",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "10266",
-    "app": {
-        "appName": "IR Receiver Diode - TSOP38238",
-        "image": "http://res.cloudinary.com/circuito/image/upload/cvenimkvwxpfmlsozjpd",
-        "numericName": "TSOP38238",
-        "shortName": "IR Receiver",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A diode that can receive an IR code - wire it to your circuit whenever you\u2019d like to control your circuit with an IR remote control (standard or yof your own making).<br><strong>Returned values</strong>: detected IR codes for all major remote providers.<br><strong>Sample Applications</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Remote-controlled-switch-using-Atmega-328p/\">Remote Control Switch</a>.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A diode that can receive an IR code - wire it to your circuit whenever you’d like to control your circuit with an IR remote control (standard or yof your own making).<br><strong>Returned values</strong>: detected IR codes for all major remote providers.<br><strong>Sample Applications</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Remote-controlled-switch-using-Atmega-328p/\">Remote Control Switch</a>.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "TSOP38238"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "TSOP38238"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "TSOP38238"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 227
-                    }
-                },
-                {
-                    "name": "Out",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "TSOP38238"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "TSOP38238"
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
+            "requiresLoad": 227
+          }
+        },
+        {
+          "name": "Out",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
             ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "TSOP38238"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 227
-                    }
-                },
-                {
-                    "name": "Out",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "TSOP38238"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "TSOP38238"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 227
+          }
+        },
+        {
+          "name": "Out",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

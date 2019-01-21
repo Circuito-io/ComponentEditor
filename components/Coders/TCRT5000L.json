@@ -1,34 +1,34 @@
 {
-    "name": "TCRT5000L",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "TCRT5000L",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "{{varname}}.init();\n",
+    "snippetCode": "//read Reflective IR Sensor. \n//if the sensor detects an echo function will return LOW (0). \n//if it is not detect an echo function will return HIGH (1).\nbool {{varname}}_Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}_Val);"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Button",
+    "ports": [
+      "Coll"
     ],
-    "code": {
-        "setup": "{{varname}}.init();\n",
-        "snippetCode": "//read Reflective IR Sensor. \n//if the sensor detects an echo function will return LOW (0). \n//if it is not detect an echo function will return HIGH (1).\nbool {{varname}}_Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}_Val);"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Button",
-        "ports": [
-            "Coll"
-        ],
-        "varname": "ReflectiveIR"
-    },
-    "files": [
-        "Button.h",
-        "Button.cpp"
-    ],
-    "includeHeaders": []
+    "varname": "ReflectiveIR"
+  },
+  "files": [
+    "Button.h",
+    "Button.cpp"
+  ],
+  "includeHeaders": []
 }

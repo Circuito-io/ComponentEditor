@@ -1,32 +1,32 @@
 {
-    "name": "RGBSensor",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "global": "uint16_t {{varname}}R,{{varname}}G,{{varname}}B;\n",
-        "setup": "// Initialize the {{varname}}\nif ({{varname}}.init())\nSerial.println(\"{{varname}} Init OK!\");\nelse\nSerial.println(\"{{varname}} Init Failed! Check your wiring.\");\n",
-        "snippetCode": "// Compare red value and blue value in {{varname}}\n{{varname}}R = {{varname}}.readRed();\n{{varname}}G = {{varname}}.readGreen();\n{{varname}}B = {{varname}}.readBlue();\nSerial.print(F(\"R: \"));    Serial.print({{varname}}R);\nSerial.print(F(\"\\tG: \"));  Serial.print({{varname}}G);\nSerial.print(F(\"\\tB: \"));  Serial.println({{varname}}B);\n"
-    },
-    "license": "Beerware",
-    "instantiate": {
-        "classname": "SFE_ISL29125",
-        "varname": "rgbSensor"
-    },
-    "files": [
-        "SparkFunISL29125.h",
-        "SparkFunISL29125.cpp"
-    ]
+  "name": "RGBSensor",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "uint16_t {{varname}}R,{{varname}}G,{{varname}}B;\n",
+    "setup": "// Initialize the {{varname}}\nif ({{varname}}.init())\nSerial.println(\"{{varname}} Init OK!\");\nelse\nSerial.println(\"{{varname}} Init Failed! Check your wiring.\");\n",
+    "snippetCode": "// Compare red value and blue value in {{varname}}\n{{varname}}R = {{varname}}.readRed();\n{{varname}}G = {{varname}}.readGreen();\n{{varname}}B = {{varname}}.readBlue();\nSerial.print(F(\"R: \"));    Serial.print({{varname}}R);\nSerial.print(F(\"\\tG: \"));  Serial.print({{varname}}G);\nSerial.print(F(\"\\tB: \"));  Serial.println({{varname}}B);\n"
+  },
+  "license": "Beerware",
+  "instantiate": {
+    "classname": "SFE_ISL29125",
+    "varname": "rgbSensor"
+  },
+  "files": [
+    "SparkFunISL29125.h",
+    "SparkFunISL29125.cpp"
+  ]
 }

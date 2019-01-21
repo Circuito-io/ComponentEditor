@@ -1,47 +1,47 @@
 {
-    "name": "RotaryEncoderDigital",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "Teensy32"
+  "name": "RotaryEncoderDigital",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "long {{varname}}OldPosition  = 0;\n",
+    "constructors": "{{classname}} {{varname}}({{D}},{{CLK}});\nButton {{varname}}Button({{S1}});\n",
+    "setup": "{{varname}}Button.init();\npinMode({{S1}}, INPUT_PULLUP);\n",
+    "snippetCode": "//Read encoder new position\nlong {{varname}}NewPosition = {{varname}}.read();\nbool {{varname}}ButtonVal = {{varname}}Button.onPress();\nif ({{varname}}NewPosition != {{varname}}OldPosition || {{varname}}ButtonVal) {\n{{varname}}OldPosition = {{varname}}NewPosition;\nSerial.print(F(\"Pos: \"));\nSerial.print({{varname}}NewPosition);\nSerial.print(F(\"\\tButton: \"));\nSerial.println({{varname}}ButtonVal);\n}\n"
+  },
+  "license": "Free",
+  "instantiate": {
+    "classname": "Encoder",
+    "ports": [
+      "D",
+      "CLK",
+      "S1"
     ],
-    "code": {
-        "global": "long {{varname}}OldPosition  = 0;\n",
-        "constructors": "{{classname}} {{varname}}({{D}},{{CLK}});\nButton {{varname}}Button({{S1}});\n",
-        "setup": "{{varname}}Button.init();\npinMode({{S1}}, INPUT_PULLUP);\n",
-        "snippetCode": "//Read encoder new position\nlong {{varname}}NewPosition = {{varname}}.read();\nbool {{varname}}ButtonVal = {{varname}}Button.onPress();\nif ({{varname}}NewPosition != {{varname}}OldPosition || {{varname}}ButtonVal) {\n{{varname}}OldPosition = {{varname}}NewPosition;\nSerial.print(F(\"Pos: \"));\nSerial.print({{varname}}NewPosition);\nSerial.print(F(\"\\tButton: \"));\nSerial.println({{varname}}ButtonVal);\n}\n"
-    },
-    "license": "Free",
-    "instantiate": {
-        "classname": "Encoder",
-        "ports": [
-            "D",
-            "CLK",
-            "S1"
-        ],
-        "varname": "rotaryEncD"
-    },
-    "files": [
-        "Encoder_license.txt",
-        "direct_pin_read.h",
-        "interrupt_config.h",
-        "Encoder.h",
-        "interrupt_pins.h",
-        "Encoder.cpp",
-        "Button.h",
-        "Button.cpp",
-        "Button_license.txt"
-    ],
-    "includeHeaders": [
-        "Encoder.h",
-        "Button.h"
-    ]
+    "varname": "rotaryEncD"
+  },
+  "files": [
+    "Encoder_license.txt",
+    "direct_pin_read.h",
+    "interrupt_config.h",
+    "Encoder.h",
+    "interrupt_pins.h",
+    "Encoder.cpp",
+    "Button.h",
+    "Button.cpp",
+    "Button_license.txt"
+  ],
+  "includeHeaders": [
+    "Encoder.h",
+    "Button.h"
+  ]
 }

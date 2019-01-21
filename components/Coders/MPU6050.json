@@ -1,41 +1,41 @@
 {
-    "name": "MPU6050",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "global": "int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\nint16_t {{varname}}Gx, {{varname}}Gy, {{varname}}Gz;\n",
-        "setup": "Wire.begin();\n{{varname}}.initialize();\n",
-        "snippetCode": "{{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\ndouble {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\nSerial.print(\"a/g-\\t\");\nSerial.print({{varname}}Ax); Serial.print(\"\\t\");\nSerial.print({{varname}}Ay); Serial.print(\"\\t\");\nSerial.print({{varname}}Az); Serial.print(\"\\t\");\nSerial.print({{varname}}Gx); Serial.print(\"\\t\");\nSerial.print({{varname}}Gy); Serial.print(\"\\t\");\nSerial.print({{varname}}Gz); Serial.print(\"\\t\");\nSerial.print(F(\"Temp- \"));   \nSerial.println({{varname}}Temp);\ndelay(100);\n"
-    },
-    "license": "MIT",
-    "instantiate": {
-        "classname": "MPU6050",
-        "varname": "mpu6050"
-    },
-    "files": [
-        "I2Cdev.cpp",
-        "helper_3dmath.h",
-        "MPU6050.cpp",
-        "MPU6050.h",
-        "I2Cdev.h",
-        "MPU6050_license.txt"
-    ],
-    "includeHeaders": [
-        "MPU6050.h",
-        "Wire.h",
-        "I2Cdev.h"
-    ]
+  "name": "MPU6050",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\nint16_t {{varname}}Gx, {{varname}}Gy, {{varname}}Gz;\n",
+    "setup": "Wire.begin();\n{{varname}}.initialize();\n",
+    "snippetCode": "{{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\ndouble {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\nSerial.print(\"a/g-\\t\");\nSerial.print({{varname}}Ax); Serial.print(\"\\t\");\nSerial.print({{varname}}Ay); Serial.print(\"\\t\");\nSerial.print({{varname}}Az); Serial.print(\"\\t\");\nSerial.print({{varname}}Gx); Serial.print(\"\\t\");\nSerial.print({{varname}}Gy); Serial.print(\"\\t\");\nSerial.print({{varname}}Gz); Serial.print(\"\\t\");\nSerial.print(F(\"Temp- \"));   \nSerial.println({{varname}}Temp);\ndelay(100);\n"
+  },
+  "license": "MIT",
+  "instantiate": {
+    "classname": "MPU6050",
+    "varname": "mpu6050"
+  },
+  "files": [
+    "I2Cdev.cpp",
+    "helper_3dmath.h",
+    "MPU6050.cpp",
+    "MPU6050.h",
+    "I2Cdev.h",
+    "MPU6050_license.txt"
+  ],
+  "includeHeaders": [
+    "MPU6050.h",
+    "Wire.h",
+    "I2Cdev.h"
+  ]
 }

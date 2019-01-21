@@ -1,67 +1,94 @@
 {
-    "name": "Reg5v",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "Reg5v",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "L7805"
-                },
-                {
-                    "name": "capin",
-                    "pos": "0,120",
-                    "part": "CapCeramic100nF"
-                },
-                {
-                    "name": "capout",
-                    "pos": "20,80",
-                    "part": "CapElectro1uF"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Vin",
-                    "to": "capin.con0"
-                },
-                {
-                    "from": "this.0",
-                    "to": "capin.con1"
-                },
-                {
-                    "from": "this.Vout",
-                    "to": "capout.pos"
-                },
-                {
-                    "from": "this.0",
-                    "to": "capout.neg"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
-                        "providesLoad": 1500
-                    }
-                },
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"9v"},{"cost":1,"spec":"","voltage":"12v"},{"cost":2,"spec":"","voltage":"7.4v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "L7805"
+        },
+        {
+          "name": "capin",
+          "pos": "0,120",
+          "part": "CapCeramic100nF"
+        },
+        {
+          "name": "capout",
+          "pos": "20,80",
+          "part": "CapElectro1uF"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Vin",
+          "to": "capin.con0"
+        },
+        {
+          "from": "this.0",
+          "to": "capin.con1"
+        },
+        {
+          "from": "this.Vout",
+          "to": "capout.pos"
+        },
+        {
+          "from": "this.0",
+          "to": "capout.neg"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vout",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 1500
+          }
+        },
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "9v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "12v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "7.4v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -1,252 +1,252 @@
 {
-    "name": "RGBLedAnode",
-    "category": [
-        "output"
+  "name": "RGBLedAnode",
+  "category": [
+    "output"
+  ],
+  "blockId": "10820",
+  "app": {
+    "appName": "RGB LED Clear Common Anode",
+    "image": "http://res.cloudinary.com/circuito/image/upload/crmr0uxpzr2b1ow49gmt",
+    "numericName": "",
+    "shortName": "RGB LED",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "10820",
-    "app": {
-        "appName": "RGB LED Clear Common Anode",
-        "image": "http://res.cloudinary.com/circuito/image/upload/crmr0uxpzr2b1ow49gmt",
-        "numericName": "",
-        "shortName": "RGB LED",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This light emitting diode allows you to control its color by setting the intensity of RED, GREEN and BLUE from 0 (no color) to 255 (max color intensity). Use it for a colorful display or as an indicator that an event has occurred. Luminosity (RGB): (800, 4000, 900)mcd.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This light emitting diode allows you to control its color by setting the intensity of RED, GREEN and BLUE from 0 (no color) to 255 (max color intensity). Use it for a colorful display or as an indicator that an event has occurred. Luminosity (RGB): (800, 4000, 900)mcd.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Red-Balloon/\">Red Balloon</a>.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "RGBLedAnode"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "RGBLedAnode"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RGBLedCommonAnode"
-                },
-                {
-                    "name": "Res_R",
-                    "part": "Res220O"
-                },
-                {
-                    "name": "Res_G",
-                    "part": "Res100O"
-                },
-                {
-                    "name": "Res_B",
-                    "part": "Res100O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.R",
-                    "to": "Res_R.con0"
-                },
-                {
-                    "from": "this.G",
-                    "to": "Res_G.con0"
-                },
-                {
-                    "from": "this.B",
-                    "to": "Res_B.con0"
-                },
-                {
-                    "from": "Res_B.con1",
-                    "to": "b"
-                },
-                {
-                    "from": "Res_R.con1",
-                    "to": "r"
-                },
-                {
-                    "from": "Res_G.con1",
-                    "to": "g"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "b",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "g",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "r",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "this",
+          "part": "RGBLedCommonAnode"
         },
         {
-            "name": "3.3v",
-            "coders": [
-                "RGBLedAnode"
-            ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RGBLedCommonAnode"
-                },
-                {
-                    "name": "Res_R",
-                    "part": "Res100O"
-                },
-                {
-                    "name": "Res_G",
-                    "part": "Res47O"
-                },
-                {
-                    "name": "Res_B",
-                    "part": "Res47O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.R",
-                    "to": "Res_R.con0"
-                },
-                {
-                    "from": "this.G",
-                    "to": "Res_G.con0"
-                },
-                {
-                    "from": "this.B",
-                    "to": "Res_B.con0"
-                },
-                {
-                    "from": "Res_B.con1",
-                    "to": "b"
-                },
-                {
-                    "from": "Res_R.con1",
-                    "to": "r"
-                },
-                {
-                    "from": "Res_G.con1",
-                    "to": "g"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "b",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "g",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "r",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 2
+          "name": "Res_R",
+          "part": "Res220O"
+        },
+        {
+          "name": "Res_G",
+          "part": "Res100O"
+        },
+        {
+          "name": "Res_B",
+          "part": "Res100O"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.R",
+          "to": "Res_R.con0"
+        },
+        {
+          "from": "this.G",
+          "to": "Res_G.con0"
+        },
+        {
+          "from": "this.B",
+          "to": "Res_B.con0"
+        },
+        {
+          "from": "Res_B.con1",
+          "to": "b"
+        },
+        {
+          "from": "Res_R.con1",
+          "to": "r"
+        },
+        {
+          "from": "Res_G.con1",
+          "to": "g"
+        }
+      ],
+      "ports": [
+        {
+          "name": "b",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "g",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "r",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    },
+    {
+      "name": "3.3v",
+      "coders": [
+        "RGBLedAnode"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "RGBLedCommonAnode"
+        },
+        {
+          "name": "Res_R",
+          "part": "Res100O"
+        },
+        {
+          "name": "Res_G",
+          "part": "Res47O"
+        },
+        {
+          "name": "Res_B",
+          "part": "Res47O"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.R",
+          "to": "Res_R.con0"
+        },
+        {
+          "from": "this.G",
+          "to": "Res_G.con0"
+        },
+        {
+          "from": "this.B",
+          "to": "Res_B.con0"
+        },
+        {
+          "from": "Res_B.con1",
+          "to": "b"
+        },
+        {
+          "from": "Res_R.con1",
+          "to": "r"
+        },
+        {
+          "from": "Res_G.con1",
+          "to": "g"
+        }
+      ],
+      "ports": [
+        {
+          "name": "b",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "g",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "r",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2
+    }
+  ]
 }

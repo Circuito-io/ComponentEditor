@@ -1,105 +1,105 @@
 {
-    "name": "VoiceRecorder",
-    "category": [
-        "output"
+  "name": "VoiceRecorder",
+  "category": [
+    "output"
+  ],
+  "blockId": "803025",
+  "app": {
+    "appName": "Voice Recorder",
+    "image": "http://res.cloudinary.com/circuito/image/upload/vmeqg6zar09pxp6xs4ps",
+    "numericName": "ISD1820",
+    "shortName": "Voice Recorder",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "803025",
-    "app": {
-        "appName": "Voice Recorder",
-        "image": "http://res.cloudinary.com/circuito/image/upload/vmeqg6zar09pxp6xs4ps",
-        "numericName": "ISD1820",
-        "shortName": "Voice Recorder",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>An easy voice recorder - push the \"REC\" button to record your voice (10 seconds max), then push the \"PLAY\" button to play it. You can use the microcontroller to play the record instead of pushing the button.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>An easy voice recorder - push the \"REC\" button to record your voice (10 seconds max), then push the \"PLAY\" button to play it. You can use the microcontroller to play the record instead of pushing the button.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "VoiceRecorder"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "VoiceRecorder"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "VoiceRecorder"
-                },
-                {
-                    "name": "SpeakerStereo3W",
-                    "part": "SpeakerStereo3W"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.SPK_0",
-                    "to": "SpeakerStereo3W.NEG"
-                },
-                {
-                    "from": "this.SPK_1",
-                    "to": "SpeakerStereo3W.POS"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "VoiceRecorder"
+        },
+        {
+          "name": "SpeakerStereo3W",
+          "part": "SpeakerStereo3W"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.SPK_0",
+          "to": "SpeakerStereo3W.NEG"
+        },
+        {
+          "from": "this.SPK_1",
+          "to": "SpeakerStereo3W.POS"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

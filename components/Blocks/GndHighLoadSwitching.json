@@ -1,67 +1,89 @@
 {
-    "name": "GndHighLoadSwitching",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "GndHighLoadSwitching",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "TNMOSFETFQP"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.G",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.S",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "this.S",
-                    "to": "GndIn"
-                },
-                {
-                    "from": "this.G",
-                    "to": "Sig"
-                },
-                {
-                    "from": "this.D",
-                    "to": "GndOut"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GndIn",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GndOut",
-                    "interface": {
-                        "codenameRedirect": "Sig",
-                        "provides":[{"spec":"GndLoadSwitching","voltage":""}],
-                        "providesLoad": 3000
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "TNMOSFETFQP"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.G",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.S",
+          "to": "r1.con0"
+        },
+        {
+          "from": "this.S",
+          "to": "GndIn"
+        },
+        {
+          "from": "this.G",
+          "to": "Sig"
+        },
+        {
+          "from": "this.D",
+          "to": "GndOut"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GndIn",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GndOut",
+          "interface": {
+            "codenameRedirect": "Sig",
+            "provides": [
+              {
+                "spec": "GndLoadSwitching",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 3000
+          }
+        }
+      ]
+    }
+  ]
 }

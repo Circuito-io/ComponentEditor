@@ -1,167 +1,167 @@
 {
-    "name": "SmallStepperMotor",
-    "category": [
-        "output"
+  "name": "SmallStepperMotor",
+  "category": [
+    "output"
+  ],
+  "blockId": "9239",
+  "app": {
+    "appName": "Small Stepper Motor with EasyDriver",
+    "image": "http://res.cloudinary.com/circuito/image/upload/mul2ksumxcfvvzdxvzzo",
+    "numericName": "",
+    "shortName": "Small 12V Stepper Motor",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "9239",
-    "app": {
-        "appName": "Small Stepper Motor with EasyDriver",
-        "image": "http://res.cloudinary.com/circuito/image/upload/mul2ksumxcfvvzdxvzzo",
-        "numericName": "",
-        "shortName": "Small 12V Stepper Motor",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "SmallStepperMotor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "SmallStepperMotor"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "driver",
-                    "part": "EasyDriver"
-                },
-                {
-                    "name": "this",
-                    "part": "SmallStepperMotor"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "driver.OUT1A",
-                    "to": "this.A"
-                },
-                {
-                    "from": "driver.OUT2A",
-                    "to": "this.C"
-                },
-                {
-                    "from": "driver.OUT2B",
-                    "to": "this.D"
-                },
-                {
-                    "from": "driver.OUT1B",
-                    "to": "this.B"
-                },
-                {
-                    "from": "driver.GND",
-                    "to": "gnd"
-                },
-                {
-                    "from": "driver.Dir",
-                    "to": "dir"
-                },
-                {
-                    "from": "driver.Step",
-                    "to": "step"
-                },
-                {
-                    "from": "driver.V+",
-                    "to": "v+"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "step",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "gnd",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "dir",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "v+",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ],
-                        "requiresLoad": 330
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SRAMLoad",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 200
-                    }
-                }
-            ]
+          "name": "driver",
+          "part": "EasyDriver"
+        },
+        {
+          "name": "this",
+          "part": "SmallStepperMotor"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "driver.OUT1A",
+          "to": "this.A"
+        },
+        {
+          "from": "driver.OUT2A",
+          "to": "this.C"
+        },
+        {
+          "from": "driver.OUT2B",
+          "to": "this.D"
+        },
+        {
+          "from": "driver.OUT1B",
+          "to": "this.B"
+        },
+        {
+          "from": "driver.GND",
+          "to": "gnd"
+        },
+        {
+          "from": "driver.Dir",
+          "to": "dir"
+        },
+        {
+          "from": "driver.Step",
+          "to": "step"
+        },
+        {
+          "from": "driver.V+",
+          "to": "v+"
+        }
+      ],
+      "ports": [
+        {
+          "name": "step",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "dir",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "v+",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 330
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 200
+          }
+        }
+      ]
+    }
+  ]
 }

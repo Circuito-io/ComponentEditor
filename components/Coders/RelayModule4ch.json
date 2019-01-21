@@ -1,36 +1,36 @@
 {
-    "name": "RelayModule4ch",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "RelayModule4ch",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "//define an array for the 4ch relay module pins\nint {{varname}}Pins[] = { {{IN1}}, {{IN2}}, {{IN3}}, {{IN4}} };\n",
+    "constructors": "",
+    "setup": "pinMode({{IN1}}, OUTPUT);\npinMode({{IN2}}, OUTPUT);\npinMode({{IN3}}, OUTPUT);\npinMode({{IN4}}, OUTPUT);\n",
+    "snippetCode": "//This loop will turn on and off each relay in the array for 0.5 sec\nfor (int i = 0; i < 4; i++) { \ndigitalWrite({{varname}}Pins[i],HIGH);\ndelay(500);\ndigitalWrite({{varname}}Pins[i],LOW);\ndelay(500);\n}"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "",
+    "ports": [
+      "IN1",
+      "IN2",
+      "IN3",
+      "IN4"
     ],
-    "code": {
-        "global": "//define an array for the 4ch relay module pins\nint {{varname}}Pins[] = { {{IN1}}, {{IN2}}, {{IN3}}, {{IN4}} };\n",
-        "constructors": "",
-        "setup": "pinMode({{IN1}}, OUTPUT);\npinMode({{IN2}}, OUTPUT);\npinMode({{IN3}}, OUTPUT);\npinMode({{IN4}}, OUTPUT);\n",
-        "snippetCode": "//This loop will turn on and off each relay in the array for 0.5 sec\nfor (int i = 0; i < 4; i++) { \ndigitalWrite({{varname}}Pins[i],HIGH);\ndelay(500);\ndigitalWrite({{varname}}Pins[i],LOW);\ndelay(500);\n}"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "",
-        "ports": [
-            "IN1",
-            "IN2",
-            "IN3",
-            "IN4"
-        ],
-        "varname": "RelayModule4ch"
-    },
-    "files": [],
-    "includeHeaders": []
+    "varname": "RelayModule4ch"
+  },
+  "files": [],
+  "includeHeaders": []
 }

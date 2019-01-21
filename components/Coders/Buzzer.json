@@ -1,38 +1,38 @@
 {
-    "name": "Buzzer",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "snippetCode": "// The buzzer will turn on and off for 500ms (0.5 sec)\n{{varname}}.on();       // 1. turns on\ndelay(500);             // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n{{varname}}.off();      // 3. turns off.\ndelay(500);             // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds."
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Buzzer",
-        "ports": [
-            "Sig"
-        ]
-    },
-    "files": [
-        "Buzzer.cpp",
-        "Buzzer.h",
-        "Buzzer_license.txt",
-        "Switchable.h",
-        "Switchable.cpp"
-    ],
-    "includeHeaders": [
-        "Buzzer.h"
+  "name": "Buzzer",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// The buzzer will turn on and off for 500ms (0.5 sec)\n{{varname}}.on();       // 1. turns on\ndelay(500);             // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n{{varname}}.off();      // 3. turns off.\ndelay(500);             // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds."
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Buzzer",
+    "ports": [
+      "Sig"
     ]
+  },
+  "files": [
+    "Buzzer.cpp",
+    "Buzzer.h",
+    "Buzzer_license.txt",
+    "Switchable.h",
+    "Switchable.cpp"
+  ],
+  "includeHeaders": [
+    "Buzzer.h"
+  ]
 }

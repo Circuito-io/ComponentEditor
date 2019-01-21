@@ -1,131 +1,131 @@
 {
-    "name": "LEDPixie3W",
-    "category": [
-        "output"
+  "name": "LEDPixie3W",
+  "category": [
+    "output"
+  ],
+  "blockId": "469778",
+  "app": {
+    "appName": "Pixie - 3W Chainable Smart LED Pixel",
+    "image": "http://res.cloudinary.com/circuito/image/upload/pbmty1bnmuk73pzum53i",
+    "numericName": "",
+    "shortName": "Chainable Smart LED Pixel",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "469778",
-    "app": {
-        "appName": "Pixie - 3W Chainable Smart LED Pixel",
-        "image": "http://res.cloudinary.com/circuito/image/upload/pbmty1bnmuk73pzum53i",
-        "numericName": "",
-        "shortName": "Chainable Smart LED Pixel",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>The Adafruit Pixie is very bright 3W RGB LED and it is also chainable. It communicates with the MCU over serial at 115200 baud rate.<p> It can be easily manipulated using <a href=\"https://learn.adafruit.com/pixie-3-watt-smart-chainable-led-pixels/wiring-and-test\">Adafruit Pixie library</a></p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The Adafruit Pixie is very bright 3W RGB LED and it is also chainable. It communicates with the MCU over serial at 115200 baud rate.<p> It can be easily manipulated using <a href=\"https://learn.adafruit.com/pixie-3-watt-smart-chainable-led-pixels/wiring-and-test\">Adafruit Pixie library</a></p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LEDPixie3W"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "LEDPixie3W"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LEDPixie3W"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "5V",
-                    "interface": {
-                        "chainTo": "5V_Ch",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 500
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "chainTo": "GND_Ch",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "IN",
-                    "interface": {
-                        "chainTo": "OUT",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SoftwareSerial",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SoftwareSerial",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "OUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "5V_Ch",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "GND_Ch",
-                    "interface": {
-                        "chain": true
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "PowerSupply5v"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "LEDPixie3W"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "5V",
+          "interface": {
+            "chainTo": "5V_Ch",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 500
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "chainTo": "GND_Ch",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "IN",
+          "interface": {
+            "chainTo": "OUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "SoftwareSerial",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "OUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "5V_Ch",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "GND_Ch",
+          "interface": {
+            "chain": true
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 10,
+          "blocks": [
+            "PowerSupply5v"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "Reg5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,177 +1,177 @@
 {
-    "name": "RFID",
-    "category": [
-        "input"
+  "name": "RFID",
+  "category": [
+    "input"
+  ],
+  "blockId": "761981",
+  "app": {
+    "appName": "RFID Card Reader - RC522",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nuqtt1aib3sia118u6wn",
+    "numericName": "RC522",
+    "shortName": "RFID Card Reader",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "761981",
-    "app": {
-        "appName": "RFID Card Reader - RC522",
-        "image": "http://res.cloudinary.com/circuito/image/upload/nuqtt1aib3sia118u6wn",
-        "numericName": "RC522",
-        "shortName": "RFID Card Reader",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>The RFID module allows reading/writing RFID card/Tags.<br><strong>Returned Value</strong>: Card tag ID via SPI</p>\n<p><strong>Requires</strong>: Soldering 8 pin male header</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Security-System-and-Access-Control-with-Arduino-an/?ALLSTEPS\">Security System and Access Control with Arduino and RFID</a></p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The RFID module allows reading/writing RFID card/Tags.<br><strong>Returned Value</strong>: Card tag ID via SPI</p>\n<p><strong>Requires</strong>: Soldering 8 pin male header</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Security-System-and-Access-Control-with-Arduino-an/?ALLSTEPS\">Security System and Access Control with Arduino and RFID</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "RFID"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "RFID"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RFID"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "RST",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "MISO",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "MISO",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SCK",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SCK",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SS",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SS",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "3.3v",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MOSI",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "MOSI",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "RFID"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "RST",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "MISO",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MISO",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "MISO",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCK",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCK",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCK",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SS",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "SS",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 3,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "3.3v",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MOSI",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "MOSI",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

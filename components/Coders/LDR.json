@@ -1,31 +1,31 @@
 {
-    "name": "LDR",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
+  "name": "LDR",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "#define THRESHOLD_{{varname}}   100\nint {{varname}}AverageLight;\n",
+    "setup": "{{varname}}AverageLight = {{varname}}.readAverage();\n",
+    "snippetCode": "// Get current light reading, substract the ambient value to detect light changes\nint {{varname}}Sample = {{varname}}.read();\nint {{varname}}Diff = abs({{varname}}AverageLight - {{varname}}Sample);\nSerial.print(F(\"Light Diff: \")); Serial.println({{varname}}Diff);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "LDR",
+    "ports": [
+      "Sig"
     ],
-    "code": {
-        "global": "#define THRESHOLD_{{varname}}   100\nint {{varname}}AverageLight;\n",
-        "setup": "{{varname}}AverageLight = {{varname}}.readAverage();\n",
-        "snippetCode": "// Get current light reading, substract the ambient value to detect light changes\nint {{varname}}Sample = {{varname}}.read();\nint {{varname}}Diff = abs({{varname}}AverageLight - {{varname}}Sample);\nSerial.print(F(\"Light Diff: \")); Serial.println({{varname}}Diff);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "LDR",
-        "ports": [
-            "Sig"
-        ],
-        "varname": "ldr"
-    },
-    "files": [
-        "LDR.cpp",
-        "LDR.h",
-        "LDR_license.txt"
-    ]
+    "varname": "ldr"
+  },
+  "files": [
+    "LDR.cpp",
+    "LDR.h",
+    "LDR_license.txt"
+  ]
 }

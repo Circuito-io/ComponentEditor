@@ -1,158 +1,158 @@
 {
-    "name": "LEDStripDotStar",
-    "category": [
-        "output"
+  "name": "LEDStripDotStar",
+  "category": [
+    "output"
+  ],
+  "blockId": "530717",
+  "app": {
+    "appName": "DotStar APA102 LED Strip",
+    "image": "http://res.cloudinary.com/circuito/image/upload/vt7ule7e4cbbxkwqcc4y",
+    "numericName": "APA102",
+    "shortName": "DotStar LED Strip",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "530717",
-    "app": {
-        "appName": "DotStar APA102 LED Strip",
-        "image": "http://res.cloudinary.com/circuito/image/upload/vt7ule7e4cbbxkwqcc4y",
-        "numericName": "APA102",
-        "shortName": "DotStar LED Strip",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>Dot Star (Generic SPI) Adressable LED Strip, fast and fancy, 60 LED-per-meter. since it's APA102 you don't have to keep refreshing the strip as it keeps the PWM values for each led</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Dot Star (Generic SPI) Adressable LED Strip, fast and fancy, 60 LED-per-meter. since it's APA102 you don't have to keep refreshing the strip as it keeps the PWM values for each led</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LEDStripDotStar"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "LEDStripDotStar"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LEDStripDotStar"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCC_IN",
-                    "interface": {
-                        "chainTo": "VCC_OUT",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 1700
-                    }
-                },
-                {
-                    "name": "GND_IN",
-                    "interface": {
-                        "chainTo": "GND_OUT",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "DI",
-                    "interface": {
-                        "chainTo": "DO",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "CI",
-                    "interface": {
-                        "chainTo": "CO",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC_OUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "GND_OUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "DO",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "CO",
-                    "interface": {
-                        "chain": true
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 5,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 2,
-                    "blocks": [
-                        "PowerSupply5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "LEDStripDotStar"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "VCC_IN",
+          "interface": {
+            "chainTo": "VCC_OUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 1700
+          }
+        },
+        {
+          "name": "GND_IN",
+          "interface": {
+            "chainTo": "GND_OUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DI",
+          "interface": {
+            "chainTo": "DO",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "CI",
+          "interface": {
+            "chainTo": "CO",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC_OUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "GND_OUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "DO",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "CO",
+          "interface": {
+            "chain": true
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 5,
+          "blocks": [
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 2,
+          "blocks": [
+            "PowerSupply5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

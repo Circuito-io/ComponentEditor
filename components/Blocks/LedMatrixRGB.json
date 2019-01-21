@@ -1,132 +1,132 @@
 {
-    "name": "LedMatrixRGB",
-    "category": [
-        "output"
+  "name": "LedMatrixRGB",
+  "category": [
+    "output"
+  ],
+  "blockId": "763365",
+  "app": {
+    "appName": "Adafruit NeoPixel NeoMatrix 8x8 - 64 RGB LED Pixel Matrix",
+    "image": "http://res.cloudinary.com/circuito/image/upload/r8j5xypxm0gzrwgye0re",
+    "numericName": "WS2812",
+    "shortName": "RGB LED Matrix",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "763365",
-    "app": {
-        "appName": "Adafruit NeoPixel NeoMatrix 8x8 - 64 RGB LED Pixel Matrix",
-        "image": "http://res.cloudinary.com/circuito/image/upload/r8j5xypxm0gzrwgye0re",
-        "numericName": "WS2812",
-        "shortName": "RGB LED Matrix",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>This is a NeoPixel 8x8 RGB LED Matrix. It has 64 chained NeoPixel LEDs, meaning that you can control the whole matrix with only 1 data pin. You can chain a few of these matrices to get a bigger one.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This is a NeoPixel 8x8 RGB LED Matrix. It has 64 chained NeoPixel LEDs, meaning that you can control the whole matrix with only 1 data pin. You can chain a few of these matrices to get a bigger one.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LedMatrixRGB"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "LedMatrixRGB"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedMatrixRGB"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND_IN",
-                    "interface": {
-                        "chainTo": "GND_OUT",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "5V_IN",
-                    "interface": {
-                        "chainTo": "5V_OUT",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 1000
-                    }
-                },
-                {
-                    "name": "DIN",
-                    "interface": {
-                        "chainTo": "DOUT",
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "DOUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "5V_OUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "GND_OUT",
-                    "interface": {
-                        "chain": true
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 5,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "PowerSupply5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "LedMatrixRGB"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND_IN",
+          "interface": {
+            "chainTo": "GND_OUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "5V_IN",
+          "interface": {
+            "chainTo": "5V_OUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 1000
+          }
+        },
+        {
+          "name": "DIN",
+          "interface": {
+            "chainTo": "DOUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "DOUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "5V_OUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "GND_OUT",
+          "interface": {
+            "chain": true
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 5,
+          "blocks": [
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "PowerSupply5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

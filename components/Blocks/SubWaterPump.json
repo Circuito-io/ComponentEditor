@@ -1,90 +1,90 @@
 {
-    "name": "SubWaterPump",
-    "category": [
-        "output"
+  "name": "SubWaterPump",
+  "category": [
+    "output"
+  ],
+  "blockId": "987654",
+  "app": {
+    "appName": "Submersible Pool Water Pump",
+    "image": "http://res.cloudinary.com/circuito/image/upload/lygabzvew9s3zft1uneg",
+    "numericName": "",
+    "shortName": "Water Pump",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "987654",
-    "app": {
-        "appName": "Submersible Pool Water Pump",
-        "image": "http://res.cloudinary.com/circuito/image/upload/lygabzvew9s3zft1uneg",
-        "numericName": "",
-        "shortName": "Water Pump",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A simple 12 VDC submersible water pump.<br>Use this pump to make a fountain or waterfall, even water your plants!<br>Specifications:<br><li>Rated voltage: 12V DC.<br><li>Max rated current: 350mA.<br><li>Max flow rate: 240L/H.<br><li>Max Head(lift height): 3M.<br><li>Submersible installation and entirely waterproof.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A simple 12 VDC submersible water pump.<br>Use this pump to make a fountain or waterfall, even water your plants!<br>Specifications:<br><li>Rated voltage: 12V DC.<br><li>Max rated current: 350mA.<br><li>Max flow rate: 240L/H.<br><li>Max Head(lift height): 3M.<br><li>Submersible installation and entirely waterproof.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "SubWaterPump"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "SubWaterPump"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "SubWaterPump",
-                    "rotation": 90
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Coil1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "GndLoadSwitching-PWM",
-                                "voltage": ""
-                            }
-                        ],
-                        "requiresLoad": 400,
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Coil2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ],
-                        "requiresLoad": 400
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "SubWaterPump",
+          "rotation": 90
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "Coil1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "GndLoadSwitching-PWM",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 400,
+            "unique": true
+          }
+        },
+        {
+          "name": "Coil2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 400
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "GndHighLoadPWMSwitching"
+          ]
+        }
+      ]
+    }
+  ]
 }

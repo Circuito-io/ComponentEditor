@@ -1,46 +1,46 @@
 {
-    "name": "Nokia5110LCD",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "Nokia5110LCD",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "//define Nokia LCD contrast and dimentions(in pixels)\n#define LCD_CONTRAST 60\n#define LCD_SIZE_COL 84\n#define LCD_SIZE_ROW 48\nint {{varname}}Counter = 0;\n",
+    "setup": "//Initialize Nokia instance\n{{varname}}.begin(LCD_SIZE_COL, LCD_SIZE_ROW);\n{{varname}}.setContrast(LCD_CONTRAST); //Adjust display contrast\n",
+    "snippetCode": "{{varname}}.clearDisplay();             //Erase & clear display buffer\n{{varname}}.setTextColor(BLACK);        //Set text color to black, background is white by default\n{{varname}}.setTextSize(1);             //set text size\n{{varname}}.println(\"circuito.io\");     //print to screen\n{{varname}}.println();                  \n{{varname}}.setTextColor(WHITE, BLACK); //set text color to white and backgroung to black\n{{varname}}.setTextSize(2);             //set text size\n{{varname}}.println({{varname}}Counter++);          //print to screen\n{{varname}}.display();                  //display on screen"
+  },
+  "license": "BSD",
+  "instantiate": {
+    "classname": "Adafruit_PCD8544",
+    "ports": [
+      "DC",
+      "CS",
+      "RST"
     ],
-    "code": {
-        "global": "//define Nokia LCD contrast and dimentions(in pixels)\n#define LCD_CONTRAST 60\n#define LCD_SIZE_COL 84\n#define LCD_SIZE_ROW 48\nint {{varname}}Counter = 0;\n",
-        "setup": "//Initialize Nokia instance\n{{varname}}.begin(LCD_SIZE_COL, LCD_SIZE_ROW);\n{{varname}}.setContrast(LCD_CONTRAST); //Adjust display contrast\n",
-        "snippetCode": "{{varname}}.clearDisplay();             //Erase & clear display buffer\n{{varname}}.setTextColor(BLACK);        //Set text color to black, background is white by default\n{{varname}}.setTextSize(1);             //set text size\n{{varname}}.println(\"circuito.io\");     //print to screen\n{{varname}}.println();                  \n{{varname}}.setTextColor(WHITE, BLACK); //set text color to white and backgroung to black\n{{varname}}.setTextSize(2);             //set text size\n{{varname}}.println({{varname}}Counter++);          //print to screen\n{{varname}}.display();                  //display on screen"
-    },
-    "license": "BSD",
-    "instantiate": {
-        "classname": "Adafruit_PCD8544",
-        "ports": [
-            "DC",
-            "CS",
-            "RST"
-        ],
-        "varname": "nokiaLcd"
-    },
-    "files": [
-        "Adafruit_PCD8544.h",
-        "gfxfont.h",
-        "glcdfont.c",
-        "Adafruit_PCD8544.cpp",
-        "Adafruit_GFX.cpp",
-        "Adafruit_PCD8544_license.txt",
-        "Adafruit_GFX_license.txt",
-        "Adafruit_GFX.h"
-    ],
-    "includeHeaders": [
-        "Adafruit_GFX.h",
-        "Adafruit_PCD8544.h"
-    ]
+    "varname": "nokiaLcd"
+  },
+  "files": [
+    "Adafruit_PCD8544.h",
+    "gfxfont.h",
+    "glcdfont.c",
+    "Adafruit_PCD8544.cpp",
+    "Adafruit_GFX.cpp",
+    "Adafruit_PCD8544_license.txt",
+    "Adafruit_GFX_license.txt",
+    "Adafruit_GFX.h"
+  ],
+  "includeHeaders": [
+    "Adafruit_GFX.h",
+    "Adafruit_PCD8544.h"
+  ]
 }

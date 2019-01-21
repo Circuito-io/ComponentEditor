@@ -1,32 +1,32 @@
 {
-    "name": "UltraSonic",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "snippetCode": "//Get distance measurement in cm. see also {{varname}}.getInches()\nfloat {{varname}}Dist = {{varname}}.getCms();\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "UltraSonic",
-        "ports": [
-            "PW"
-        ]
-    },
-    "files": [
-        "UltraSonic.h",
-        "UltraSonic_license.txt",
-        "UltraSonic.cpp"
+  "name": "UltraSonic",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "//Get distance measurement in cm. see also {{varname}}.getInches()\nfloat {{varname}}Dist = {{varname}}.getCms();\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "UltraSonic",
+    "ports": [
+      "PW"
     ]
+  },
+  "files": [
+    "UltraSonic.h",
+    "UltraSonic_license.txt",
+    "UltraSonic.cpp"
+  ]
 }

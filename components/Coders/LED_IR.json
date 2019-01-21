@@ -1,57 +1,57 @@
 {
-    "name": "LED_IR",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
-    ],
-    "code": {
-        "snippetCode": "// Transmit your custom IR code using IR LED 950nm, for example, using Sony convention every second.\n// For more routines see IRremote.h such as sendRaw, sendRC5 etc.\n{{varname}}.sendSony(0xa90, 12);          // 1. Send IR data\ndelay(1000);                              // 2. waits 1 second until next send\n"
-    },
-    "license": "GNU",
-    "instantiate": {
-        "classname": "IRsend",
-        "ports": [],
-        "varname": "ir_led"
-    },
-    "files": [
-        "IRremote.cpp",
-        "irSend.cpp",
-        "ir_Panasonic.cpp",
-        "ir_Samsung.cpp",
-        "ir_Dish.cpp",
-        "ir_LG.cpp",
-        "IRremote_Contributors.md",
-        "IRremote_README.md",
-        "ir_Sanyo.cpp",
-        "ir_Template.cpp",
-        "IRremote_changelog.md",
-        "IRremote_Contributing.md",
-        "ir_Lego_PF.cpp",
-        "IRremote_license.txt",
-        "irPronto.cpp",
-        "ir_Whynter.cpp",
-        "IRremoteInt.h",
-        "ir_RC5_RC6.cpp",
-        "ir_Sharp.cpp",
-        "ir_Sony.cpp",
-        "ir_Aiwa.cpp",
-        "ir_NEC.cpp",
-        "irRecv.cpp",
-        "ir_Denon.cpp",
-        "IRremote.h",
-        "ir_Mitsubishi.cpp",
-        "ir_JVC.cpp"
-    ],
-    "includeHeaders": [
-        "IRremote.h"
-    ]
+  "name": "LED_IR",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Transmit your custom IR code using IR LED 950nm, for example, using Sony convention every second.\n// For more routines see IRremote.h such as sendRaw, sendRC5 etc.\n{{varname}}.sendSony(0xa90, 12);          // 1. Send IR data\ndelay(1000);                              // 2. waits 1 second until next send\n"
+  },
+  "license": "GNU",
+  "instantiate": {
+    "classname": "IRsend",
+    "ports": [],
+    "varname": "ir_led"
+  },
+  "files": [
+    "IRremote.cpp",
+    "irSend.cpp",
+    "ir_Panasonic.cpp",
+    "ir_Samsung.cpp",
+    "ir_Dish.cpp",
+    "ir_LG.cpp",
+    "IRremote_Contributors.md",
+    "IRremote_README.md",
+    "ir_Sanyo.cpp",
+    "ir_Template.cpp",
+    "IRremote_changelog.md",
+    "IRremote_Contributing.md",
+    "ir_Lego_PF.cpp",
+    "IRremote_license.txt",
+    "irPronto.cpp",
+    "ir_Whynter.cpp",
+    "IRremoteInt.h",
+    "ir_RC5_RC6.cpp",
+    "ir_Sharp.cpp",
+    "ir_Sony.cpp",
+    "ir_Aiwa.cpp",
+    "ir_NEC.cpp",
+    "irRecv.cpp",
+    "ir_Denon.cpp",
+    "IRremote.h",
+    "ir_Mitsubishi.cpp",
+    "ir_JVC.cpp"
+  ],
+  "includeHeaders": [
+    "IRremote.h"
+  ]
 }

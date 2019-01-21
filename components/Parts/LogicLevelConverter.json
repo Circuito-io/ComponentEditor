@@ -1,32 +1,32 @@
 {
-    "name": "LogicLevelConverter",
-    "symbol": {
-        "ref": "circuito_Logic Level Converter - Bi-Directional.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/egws9usefzrhkcsgdtsq"
-    },
-    "displayName": "Logic Level Converter - Bi-Directional",
-    "category": [
-        "support"
-    ],
-    "desc": "The LLC is used to coordinate voltage levels between 5V controllers and 3.3V components and vice versa.",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/kmpqa4ptkxe7etu8yvrr",
-            "link": "https://octopart.com/bob-12009-sparkfun-66533238",
-            "price": "2.95",
-            "SKU": "1568-1209-ND",
-            "headers": {
-                "type": "MaleHeaders",
-                "qty": 12
-            }
-        }
-    ],
-    "info": {
-        "setup": "To place the LLC correctly, look at its pin labels",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "LogicLevelConverter",
+  "symbol": {
+    "ref": "circuito_Logic Level Converter - Bi-Directional.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/egws9usefzrhkcsgdtsq"
+  },
+  "displayName": "Logic Level Converter - Bi-Directional",
+  "category": [
+    "support"
+  ],
+  "desc": "The LLC is used to coordinate voltage levels between 5V controllers and 3.3V components and vice versa.",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/kmpqa4ptkxe7etu8yvrr",
+      "link": "https://octopart.com/bob-12009-sparkfun-66533238",
+      "price": "2.95",
+      "SKU": "1568-1209-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 12
+      }
     }
+  ],
+  "info": {
+    "setup": "To place the LLC correctly, look at its pin labels",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

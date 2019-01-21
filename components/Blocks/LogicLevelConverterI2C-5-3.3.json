@@ -1,62 +1,102 @@
 {
-    "name": "LogicLevelConverterI2C-5-3.3",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "LogicLevelConverterI2C-5-3.3",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LogicLevelConverter"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "LV",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "HV1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "LV1",
-                    "interface": {
-                        "provides":[{"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "LV2",
-                    "interface": {
-                        "provides":[{"spec":"SCL","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "HV",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "HV2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LogicLevelConverter"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "LV",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LV1",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LV2",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -1,178 +1,178 @@
 {
-    "name": "NRF24L01",
-    "category": [
-        "input"
+  "name": "NRF24L01",
+  "category": [
+    "input"
+  ],
+  "blockId": "748665",
+  "app": {
+    "appName": "NRF24L01 - 2.4G Wireless Transceiver Module",
+    "image": "http://res.cloudinary.com/circuito/image/upload/r7clb023uhwnbhovdhcc",
+    "numericName": "NRF24L01",
+    "shortName": "Wireless Transceiver",
+    "tags": [
+      "connectivity"
     ],
-    "blockId": "748665",
-    "app": {
-        "appName": "NRF24L01 - 2.4G Wireless Transceiver Module",
-        "image": "http://res.cloudinary.com/circuito/image/upload/r7clb023uhwnbhovdhcc",
-        "numericName": "NRF24L01",
-        "shortName": "Wireless Transceiver",
-        "tags": [
-            "connectivity"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>The NRF24L01 is a low cost, low power 2.4GHz RF wireless transceiver.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The NRF24L01 is a low cost, low power 2.4GHz RF wireless transceiver.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "NRF24L01"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "NRF24L01"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "NRF24L01"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "CE",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "CS",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SS",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "SS",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SCK",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCK",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "SCK",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MOSI",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "MOSI",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "MOSI",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "MISO",
-                    "interface": {
-                        "isBus": true,
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "MISO",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "MISO",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "NRF24L01"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "CE",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "CS",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SS",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "SS",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 3,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "SCK",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCK",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MOSI",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MOSI",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MISO",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MISO",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

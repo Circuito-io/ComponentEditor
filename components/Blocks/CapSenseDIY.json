@@ -1,137 +1,137 @@
 {
-    "name": "CapSenseDIY",
-    "category": [
-        "input"
+  "name": "CapSenseDIY",
+  "category": [
+    "input"
+  ],
+  "blockId": "341867",
+  "app": {
+    "appName": "DIY Capacitive Sensor",
+    "image": "",
+    "numericName": "",
+    "shortName": "DIY Capacitive Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "341867",
-    "app": {
-        "appName": "DIY Capacitive Sensor",
-        "image": "",
-        "numericName": "",
-        "shortName": "DIY Capacitive Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A DIY Capacitive sensor using a 1MOhm resistor and some metal object. read more at: <a href=\"http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense\">arduino.cc</a></p>\n",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A DIY Capacitive sensor using a 1MOhm resistor and some metal object. read more at: <a href=\"http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense\">arduino.cc</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "arduino",
+      "coders": [
+        "CapSenseDIY"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B"
+      ],
+      "parts": [
         {
-            "name": "arduino",
-            "coders": [
-                "CapSenseDIY"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CapSenseDIY"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res1MO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.PinA",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "SendPin"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "RcevPin"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "RcevPin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SendPin",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "DigitalIn",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "DigitalIn",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "CapSenseDIY"
         },
         {
-            "name": "Teensy",
-            "coders": [
-                "CapSenseDIYTeensy"
-            ],
-            "supportedControllers": [
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CapSenseDIY"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "PinA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "CapTouch",
-                                "voltage": ""
-                            }
-                        ],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "r1",
+          "part": "Res1MO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.PinA",
+          "to": "r1.con1"
+        },
+        {
+          "from": "r1.con0",
+          "to": "SendPin"
+        },
+        {
+          "from": "r1.con1",
+          "to": "RcevPin"
+        }
+      ],
+      "ports": [
+        {
+          "name": "RcevPin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "SendPin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Teensy",
+      "coders": [
+        "CapSenseDIYTeensy"
+      ],
+      "supportedControllers": [
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "CapSenseDIY"
+        }
+      ],
+      "ports": [
+        {
+          "name": "PinA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

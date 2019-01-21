@@ -1,111 +1,111 @@
 {
-    "name": "MPU9250SF",
-    "category": [
-        "input"
+  "name": "MPU9250SF",
+  "category": [
+    "input"
+  ],
+  "blockId": "13762",
+  "app": {
+    "appName": "SparkFun MPU-9250 - IMU Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/jt3oasvfeds4nymkgtau",
+    "numericName": "MPU9250",
+    "shortName": "SparkFun IMU Breakout",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "13762",
-    "app": {
-        "appName": "SparkFun MPU-9250 - IMU Breakout",
-        "image": "http://res.cloudinary.com/circuito/image/upload/jt3oasvfeds4nymkgtau",
-        "numericName": "MPU9250",
-        "shortName": "SparkFun IMU Breakout",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>The SparkFun MPU-9250 IMU Breakout features the latest 9-axis MEMS sensor from InvenSense. It combines two chips: the MPU-6500, which contains a 3-axis gyroscope as well as a 3-axis accelerometer, and the AK8963, which features a 3-axis magnetometer.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>The SparkFun MPU-9250 IMU Breakout features the latest 9-axis MEMS sensor from InvenSense. It combines two chips: the MPU-6500, which contains a 3-axis gyroscope as well as a 3-axis accelerometer, and the AK8963, which features a 3-axis magnetometer.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "MPU9250SF"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "MPU9250SF"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "MPU9250SF"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "3v3",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SDA",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SCL",
-                                "voltage": "3.3v"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 1,
-                    "blocks": [
-                        "LogicLevelConverterI2C-5-3.3"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "MPU9250SF"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "3v3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 1,
+          "blocks": [
+            "LogicLevelConverterI2C-5-3.3"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,25 +1,25 @@
 {
-    "name": "IRLineFollow",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
+  "name": "IRLineFollow",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "pinMode({{OUT}}, INPUT);\n",
+    "snippetCode": "//Read IR Line Follower Sensor. {{varname}}Var will be '0' if a black line was detected\nbool {{varname}}Var = digitalRead({{OUT}});\nSerial.print(F(\"LineFollow: \")); Serial.println({{varname}}Var);\n"
+  },
+  "license": "ArduinoIDE",
+  "instantiate": {
+    "ports": [
+      "OUT"
     ],
-    "code": {
-        "setup": "pinMode({{OUT}}, INPUT);\n",
-        "snippetCode": "//Read IR Line Follower Sensor. {{varname}}Var will be '0' if a black line was detected\nbool {{varname}}Var = digitalRead({{OUT}});\nSerial.print(F(\"LineFollow: \")); Serial.println({{varname}}Var);\n"
-    },
-    "license": "ArduinoIDE",
-    "instantiate": {
-        "ports": [
-            "OUT"
-        ],
-        "varname": "irLineFollow"
-    },
-    "files": []
+    "varname": "irLineFollow"
+  },
+  "files": []
 }

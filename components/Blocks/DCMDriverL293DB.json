@@ -1,296 +1,296 @@
 {
-    "name": "DCMDriverL293DB",
-    "category": [
-        "output"
+  "name": "DCMDriverL293DB",
+  "category": [
+    "output"
+  ],
+  "blockId": "7654331",
+  "app": {
+    "appName": "L293D Motor Driver with Dual Standard DC Motors (Geared)",
+    "image": "",
+    "numericName": "L293D",
+    "shortName": "Geared DC Motors with Driver",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "7654331",
-    "app": {
-        "appName": "L293D Motor Driver with Dual Standard DC Motors (Geared)",
-        "image": "",
-        "numericName": "L293D",
-        "shortName": "Geared DC Motors with Driver",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A DC motor driver with two Standard Gearmotor. Enables speed and direction control for both DC motor.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A DC motor driver with two Standard Gearmotor. Enables speed and direction control for both DC motor.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "DCMDriverL293DB"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "DCMDriverL293DB"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "DCMDriverL293D"
-                },
-                {
-                    "name": "MotorA",
-                    "part": "DCMotor"
-                },
-                {
-                    "name": "MotorB",
-                    "part": "DCMotor"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Out1",
-                    "to": "MotorA.Coil1"
-                },
-                {
-                    "from": "this.Out2",
-                    "to": "MotorA.Coil2"
-                },
-                {
-                    "from": "this.Out3",
-                    "to": "MotorB.Coil1"
-                },
-                {
-                    "from": "this.Out4",
-                    "to": "MotorB.Coil2"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Enable1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "PWM",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "In1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND1",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "In2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "+Vmotor",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 8,
-                                "spec": "",
-                                "voltage": "3.3v"
-                            },
-                            {
-                                "cost": 7,
-                                "spec": "",
-                                "voltage": "3.7v"
-                            },
-                            {
-                                "cost": 9,
-                                "spec": "Battery",
-                                "voltage": "3.7v"
-                            },
-                            {
-                                "cost": 6,
-                                "spec": "",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 5,
-                                "spec": "",
-                                "voltage": "6v"
-                            },
-                            {
-                                "cost": 3,
-                                "spec": "",
-                                "voltage": "7.4v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "",
-                                "voltage": "9v"
-                            },
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "12v"
-                            }
-                        ],
-                        "requiresLoad": 400
-                    }
-                },
-                {
-                    "name": "Enable2",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "PWM",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "PWM",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "In3",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND3",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "GND4",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "In4",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 1,
-                                "spec": "DigitalOut",
-                                "voltage": "5v"
-                            },
-                            {
-                                "cost": 2,
-                                "spec": "DigitalOut",
-                                "voltage": "3.3v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "+V",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "DCMDriverL293D"
+        },
+        {
+          "name": "MotorA",
+          "part": "DCMotor"
+        },
+        {
+          "name": "MotorB",
+          "part": "DCMotor"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Out1",
+          "to": "MotorA.Coil1"
+        },
+        {
+          "from": "this.Out2",
+          "to": "MotorA.Coil2"
+        },
+        {
+          "from": "this.Out3",
+          "to": "MotorB.Coil1"
+        },
+        {
+          "from": "this.Out4",
+          "to": "MotorB.Coil2"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Enable1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "In1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "In2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "+Vmotor",
+          "interface": {
+            "requires": [
+              {
+                "cost": 8,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 7,
+                "spec": "",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 9,
+                "spec": "Battery",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 6,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 5,
+                "spec": "",
+                "voltage": "6v"
+              },
+              {
+                "cost": 3,
+                "spec": "",
+                "voltage": "7.4v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "9v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 400
+          }
+        },
+        {
+          "name": "Enable2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "In3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "In4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "+V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

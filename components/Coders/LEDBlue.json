@@ -1,36 +1,36 @@
 {
-    "name": "LEDBlue",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32"
+  "name": "LEDBlue",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// The LED will turn on and fade till it is off\nfor(int i=255 ; i> 0 ; i -= 5)\n{\n{{varname}}.dim(i);                      // 1. Dim Led \ndelay(15);                               // 2. waits 5 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n}                                          \n{{varname}}.off();                        // 3. turns off"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "LED",
+    "ports": [
+      "Vin"
     ],
-    "code": {
-        "snippetCode": "// The LED will turn on and fade till it is off\nfor(int i=255 ; i> 0 ; i -= 5)\n{\n{{varname}}.dim(i);                      // 1. Dim Led \ndelay(15);                               // 2. waits 5 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n}                                          \n{{varname}}.off();                        // 3. turns off"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "LED",
-        "ports": [
-            "Vin"
-        ],
-        "varname": "ledB"
-    },
-    "files": [
-        "LED.cpp",
-        "LED.h",
-        "LED_license.txt",
-        "Switchable.h",
-        "Switchable.cpp"
-    ]
+    "varname": "ledB"
+  },
+  "files": [
+    "LED.cpp",
+    "LED.h",
+    "LED_license.txt",
+    "Switchable.h",
+    "Switchable.cpp"
+  ]
 }

@@ -1,85 +1,85 @@
 {
-    "name": "PowerSupply12vExt",
-    "category": [
-        "powerConnector",
-        "power"
+  "name": "PowerSupply12vExt",
+  "category": [
+    "powerConnector",
+    "power"
+  ],
+  "blockId": "9444",
+  "app": {
+    "appName": "Wall Power - 12VDC 2A",
+    "image": "",
+    "numericName": "",
+    "shortName": "12V Wall Power",
+    "tags": [
+      "powerSupplies"
     ],
-    "blockId": "9444",
-    "app": {
-        "appName": "Wall Power - 12VDC 2A",
-        "image": "",
-        "numericName": "",
-        "shortName": "12V Wall Power",
-        "tags": [
-            "powerSupplies"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A 12V power source you plug into your regular socket. Works with 100-240VAC inputs. The most reliable and most likely to work for all components you choose. Use it when you don’t need your circuit to be mobile, or positioned in a location without wall power.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PowerSupply12v2A"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "Barrel",
-                                "voltage": "12v"
-                            }
-                        ],
-                        "providesLoad": 2000
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "Barrel",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "BARREL_JACK",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "BARREL_JACK",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 1,
-                    "blocks": [
-                        "BarrelJack12v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "PowerSupply12v2A"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "Barrel",
+                "voltage": "12v"
+              }
+            ],
+            "providesLoad": 2000
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "provides": [
+              {
+                "spec": "Barrel",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "BARREL_JACK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "BARREL_JACK",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 1,
+          "blocks": [
+            "BarrelJack12v"
+          ]
+        }
+      ]
+    }
+  ]
 }

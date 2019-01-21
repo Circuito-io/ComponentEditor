@@ -1,32 +1,32 @@
 {
-    "name": "SoilMoisture",
-    "symbol": {
-        "ref": "circuito_Soil Moisture Sensor.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/jmfyww7iailywqo2p3ee"
-    },
-    "displayName": "Soil Moisture Sensor",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/ni7dsiyc64uguaw3f2me",
-            "link": "https://octopart.com/sen-13322-sparkfun-67069601",
-            "price": "4.95",
-            "SKU": "1568-1360-ND",
-            "headers": {
-                "type": "MaleHeaders",
-                "qty": 3
-            }
-        }
-    ],
-    "info": {
-        "setup": "The soil moisture sensor requires soldering, consider soldering wires instead of pins",
-        "test": "Touch both pads of the sensor with your finger, you should see the values changing"
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "SoilMoisture",
+  "symbol": {
+    "ref": "circuito_Soil Moisture Sensor.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/jmfyww7iailywqo2p3ee"
+  },
+  "displayName": "Soil Moisture Sensor",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/ni7dsiyc64uguaw3f2me",
+      "link": "https://octopart.com/sen-13322-sparkfun-67069601",
+      "price": "4.95",
+      "SKU": "1568-1360-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 3
+      }
     }
+  ],
+  "info": {
+    "setup": "The soil moisture sensor requires soldering, consider soldering wires instead of pins",
+    "test": "Touch both pads of the sensor with your finger, you should see the values changing"
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

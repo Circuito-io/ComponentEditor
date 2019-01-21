@@ -1,78 +1,129 @@
 {
-    "name": "LogicLevelConverterSPI-3.3-5",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "LogicLevelConverterSPI-3.3-5",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LogicLevelConverter"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "HV",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "LV2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"MOSI","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "HV2",
-                    "interface": {
-                        "codenameRedirect": "LV2",
-                        "provides":[{"spec":"MOSI","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "LV",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "LV1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"MISO","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "HV1",
-                    "interface": {
-                        "codenameRedirect": "LV1",
-                        "provides":[{"spec":"MISO","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "HV4",
-                    "interface": {
-                        "codenameRedirect": "LV4",
-                        "provides":[{"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "LV4",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LogicLevelConverter"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "HV",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LV2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV2",
+          "interface": {
+            "codenameRedirect": "LV2",
+            "provides": [
+              {
+                "spec": "MOSI",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LV",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LV1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV1",
+          "interface": {
+            "codenameRedirect": "LV1",
+            "provides": [
+              {
+                "spec": "MISO",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV4",
+          "interface": {
+            "codenameRedirect": "LV4",
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "LV4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

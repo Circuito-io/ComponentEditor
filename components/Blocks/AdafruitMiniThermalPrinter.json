@@ -1,127 +1,127 @@
 {
-    "name": "AdafruitMiniThermalPrinter",
-    "category": [
-        "output"
+  "name": "AdafruitMiniThermalPrinter",
+  "category": [
+    "output"
+  ],
+  "blockId": "947731",
+  "app": {
+    "appName": "Adafruit Mini Thermal Receipt Printer",
+    "image": "http://res.cloudinary.com/circuito/image/upload/lud4da20imjuisge1dwg",
+    "numericName": "",
+    "shortName": "Thermal Printer",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "947731",
-    "app": {
-        "appName": "Adafruit Mini Thermal Receipt Printer",
-        "image": "http://res.cloudinary.com/circuito/image/upload/lud4da20imjuisge1dwg",
-        "numericName": "",
-        "shortName": "Thermal Printer",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This thermal printer can print pictures, text and QR codes. Thermal paper not included!</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This thermal printer can print pictures, text and QR codes. Thermal paper not included!</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "AdafruitMiniThermalPrinter"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "coders": [
-                "AdafruitMiniThermalPrinter"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "AdafruitMiniThermalPrinter",
-                    "rotation": 180
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND_COM",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "DIN",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SoftwareSerial",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "requiresLoad": 2000
-                    }
-                },
-                {
-                    "name": "DOUT",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "SoftwareSerial",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 5,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "PowerSupply5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "AdafruitMiniThermalPrinter",
+          "rotation": 180
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND_COM",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SoftwareSerial",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 2000
+          }
+        },
+        {
+          "name": "DOUT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SoftwareSerial",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 5,
+          "blocks": [
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "PowerSupply5v"
+          ]
+        }
+      ]
+    }
+  ]
 }
