@@ -1,0 +1,25 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/components/Blocks/*.json"
+      ],
+      "url": "file://workspace/ComponentsBank-MESS/circuito-schema/block.json"
+    },
+    {
+      "fileMatch": [
+        "/components/Coders/*.json"
+      ],
+      "url": "file://workspace/ComponentsBank-MESS/circuito-schema/coder.json"
+    },
+    {
+      "fileMatch": [
+        "/components/Parts/*.json"
+      ],
+      "url": "file://workspace/ComponentsBank-MESS/circuito-schema/part.json"
+    }
+  ]
+}
