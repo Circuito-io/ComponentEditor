@@ -2,7 +2,7 @@ import React from "react";
 import Form from "react-jsonschema-form";
 import { Button, Modal, Well } from "react-bootstrap";
 import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
-import { svgSchema, svguiSchema } from "./svg-creatorSchema.js";
+import { svgSchema, svguiSchema } from "./schema/svg-creatorSchema.js";
 
 
 
