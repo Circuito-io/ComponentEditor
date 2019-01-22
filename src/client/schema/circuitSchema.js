@@ -69,10 +69,12 @@ export function circuitsuiSchema(blocksList) {
         wires: {
           items: {
             from: {
-              classNames: "two-coloumn-field"
+              classNames: "two-coloumn-field",
+              "ui:widget": "wiredropdown"
             },
             to: {
-              classNames: "two-coloumn-field"
+              classNames: "two-coloumn-field",
+              "ui:widget": "wiredropdown"
             }
           },
           "ui:options": {
@@ -159,7 +161,7 @@ export function circuitsuiSchema(blocksList) {
   }
 };
 
-export function circuitsSchema(blockConnectors) {
+export function circuitsSchema() {
   return {
     circuits: {
       type: "array",
@@ -231,13 +233,11 @@ export function circuitsSchema(blockConnectors) {
               properties: {
                 from: {
                   type: "string",
-                  default: "",
-                  enum: blockConnectors
+                  default: ""
                 },
                 to: {
                   type: "string",
-                  default: "",
-                  enum: blockConnectors
+                  default: ""
                 }
               }
             }
