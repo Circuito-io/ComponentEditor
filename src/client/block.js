@@ -2,18 +2,16 @@ import React from "react";
 import { isEqual } from "underscore";
 import { Button } from "react-bootstrap";
 import { EditorForm } from "./form/editorform.js";
-import { blockSchema, blockuiSchema } from "./schema/blockSchema.js";
+import { blockuiSchema } from "./schema/blockSchema.js";
 import {
   gitpod_open,
   read_a_block,
   update_a_block,
   read_a_part,
-  read_a_svgdata,
-  list_all_coders,
-  list_all_parts,
-  list_all_blocks
+  read_a_svgdata
 } from "./controller.js";
 
+import * as blockSchema from '../../circuito-schema/block.json';
 export class Block extends React.Component {
   constructor(props) {
     super(props);
@@ -171,7 +169,7 @@ export class Block extends React.Component {
           Open file in code editor
         </Button>
         <EditorForm
-          schema={blockSchema()}
+          schema={blockSchema.default}
           uiSchema={blockuiSchema(this.props.cachedData.blocks)}
           formData={this.state.formSrcData}
           formContext={{
