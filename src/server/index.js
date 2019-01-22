@@ -14,6 +14,8 @@ var app = express();
 var port = process.env.PORT || 8080;
 var hostname = "0.0.0.0";
 var bodyParser = require('body-parser');
+var reload = require('reload')
+reload(app);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug'); // We use pug as our templating engine
