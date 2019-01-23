@@ -6,7 +6,7 @@
   "scripts": {
     "heroku-postbuild": "webpack -p --mode production",
     "start": "node src/server/index.js",
-    "dev": "webpack --mode development --devtool inline-source-map --hot  --watch",
+    "dev": "webpack --mode development --devtool inline-source-map --watch",
     "normalize": "node src/server/normalize.js"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "jquery": "^3.3.1",
     "proper-url-join": "*",
     "pug": "2.0.0-beta6",
+    "dotenv": "6.2.0",
     "react": "16.6.3",
     "react-ace": "6.2.0",
     "react-bootstrap": "0.32.4",
