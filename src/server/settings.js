@@ -3,7 +3,7 @@ const fs = require('fs');
 const uuidv4 = require('uuid/v4');
 
 global.dataFolder = path.join(__dirname, '../../components');
-global.circuitoServer = "***REMOVED***
+global.circuitoServer = process.env.CIRCUITO_SERVER || "***REMOVED***
 global.uploadEndpoint = "save_components";
 global.previewEndpoint = "app?u=";
 global.svgdataServer = "***REMOVED***
