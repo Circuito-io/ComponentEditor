@@ -19,7 +19,7 @@ export function WireDropDown(props) {
         {connectorsList &&
           connectorsList[circuitid] &&
           connectorsList[circuitid].map((connector, index) => (
-            <option key={index} value={connector}>
+            <option key={connector} value={connector}>
               {connector}
             </option>
           ))}
