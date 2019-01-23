@@ -1,131 +1,155 @@
 {
-    "name": "LEDUV",
-    "category": [
-        "output"
+  "name": "LEDUV",
+  "category": [
+    "output"
+  ],
+  "blockId": "8662",
+  "app": {
+    "appName": "Basic Ultraviolet LED 5mm",
+    "image": "http://res.cloudinary.com/circuito/image/upload/sr3umgz940jgby6xkisc",
+    "numericName": "",
+    "shortName": "UV LED",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "8662",
-    "app": {
-        "appName": "Basic Ultraviolet LED 5mm",
-        "image": "http://res.cloudinary.com/circuito/image/upload/sr3umgz940jgby6xkisc",
-        "numericName": "",
-        "shortName": "UV LED",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This is a very basic, small, UV LED. Its Luminous Intensity is 100-180mcd.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This is a very basic, small, UV LED. Its Luminous Intensity is 100-180mcd.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "LEDUV"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "LEDUV"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LEDUV",
-                    "properties": "Ultraviolet"
-                },
-                {
-                    "name": "Res1",
-                    "part": "Res100O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Gnd",
-                    "to": "Res1.con1"
-                },
-                {
-                    "from": "Res1.con0",
-                    "to": "GND"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "this",
+          "part": "LEDUV",
+          "properties": "Ultraviolet"
         },
         {
-            "name": "3.3v",
-            "coders": [
-                "LEDUV"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LEDUV",
-                    "properties": "Ultraviolet"
-                },
-                {
-                    "name": "Res1",
-                    "part": "Res100O"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Gnd",
-                    "to": "Res1.con1"
-                },
-                {
-                    "from": "Res1.con0",
-                    "to": "GND"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 2
+          "name": "Res1",
+          "part": "Res100O"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Gnd",
+          "to": "Res1.con1"
+        },
+        {
+          "from": "Res1.con0",
+          "to": "GND"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    },
+    {
+      "name": "3.3v",
+      "coders": [
+        "LEDUV"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "LEDUV",
+          "properties": "Ultraviolet"
+        },
+        {
+          "name": "Res1",
+          "part": "Res100O"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.Gnd",
+          "to": "Res1.con1"
+        },
+        {
+          "from": "Res1.con0",
+          "to": "GND"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2
+    }
+  ]
 }

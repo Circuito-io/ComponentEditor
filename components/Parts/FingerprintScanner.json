@@ -1,28 +1,31 @@
 {
-    "name": "FingerprintScanner",
-    "symbol": {
-        "ref": "circuito_Fingerprint Scanner - TTL (GT-511C3).svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/idxesupvqxpsmg4ma4s3"
-    },
-    "displayName": "Fingerprint Scanner - TTL (GT-511C3)",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/kfry7we7nu7wp3odybkh",
-            "link": "https://octopart.com/sen-11792-sparkfun-65743527?r=sp&s=KwxFPDgqS82VlbypNPOjXQ",
-            "price": "49.95",
-            "SKU": "1568-1130-ND"
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": false
+  "name": "FingerprintScanner",
+  "symbol": {
+    "ref": "circuito_Fingerprint Scanner - TTL (GT-511C3).svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/idxesupvqxpsmg4ma4s3"
+  },
+  "displayName": "Fingerprint Scanner - TTL (GT-511C3)",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/kfry7we7nu7wp3odybkh",
+      "link": "https://octopart.com/sen-11792-sparkfun-65743527?r=sp&s=KwxFPDgqS82VlbypNPOjXQ",
+      "price": "49.95",
+      "SKU": "1568-1130-ND"
     }
+  ],
+  "bomAux": [
+    "JST4pinCable"
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": false
+  }
 }

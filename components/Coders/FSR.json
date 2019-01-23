@@ -1,38 +1,39 @@
 {
-    "name": "FSR",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "FSR",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Read FSR resistance value. try also {{varname}}.getResistance()\n// For more information see Sparkfun website - www.sparkfun.com/products/9375\n// Note, the default Vcc and external resistor values for FSR calculations are 5V ang 3300Okm, if you are not \n//       using these default valuse in your circuit go to FSR.cpp and change default values in FSR constructor\nfloat {{varname}}Force = {{varname}}.getForce();\nSerial.print(F(\"Force: \")); Serial.print({{varname}}Force); Serial.println(F(\" [g]\"));\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "FSR",
+    "ports": [
+      "1"
     ],
-    "code": {
-        "snippetCode": "    // Read FSR resistance value. try also {{varname}}.getResistance()\n    // For more information see Sparkfun website - www.sparkfun.com/products/9375\n    // Note, the default Vcc and external resistor values for FSR calculations are 5V ang 3300Okm, if you are not \n    //       using these default valuse in your circuit go to FSR.cpp and change default values in FSR constructor\n    float {{varname}}Force = {{varname}}.getForce();\n    Serial.print(F(\"Force: \")); Serial.print({{varname}}Force); Serial.println(F(\" [g]\"));\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "FSR",
-        "ports": [
-            "1"
-        ],
-        "varname": "fsr"
-    },
-    "files": [
-        "FSR.h",
-        "FSR.cpp",
-        "FSR_license.txt",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "FSR.h"
-    ]
+    "varname": "fsr"
+  },
+  "files": [
+    "FSR.h",
+    "FSR.cpp",
+    "FSR_license.txt",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "FSR.h"
+  ]
 }

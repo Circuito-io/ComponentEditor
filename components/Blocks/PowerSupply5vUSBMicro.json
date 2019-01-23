@@ -1,61 +1,75 @@
 {
-    "name": "PowerSupply5vUSBMicro",
-    "category": [
-        "powerConnector",
-        "power"
+  "name": "PowerSupply5vUSBMicro",
+  "category": [
+    "powerConnector",
+    "power"
+  ],
+  "blockId": "9443",
+  "app": {
+    "appName": "Wall Power - 5VDC 2.5A for Raspberry PI",
+    "image": "http://res.cloudinary.com/circuito/image/upload/jmbdpxugxoxa6udpze04",
+    "numericName": "",
+    "shortName": "5V Wall Power",
+    "tags": [
+      "powerSupplies"
     ],
-    "blockId": "9443",
-    "app": {
-        "appName": "Wall Power - 5VDC 2.5A for Raspberry PI",
-        "image": "http://res.cloudinary.com/circuito/image/upload/jmbdpxugxoxa6udpze04",
-        "numericName": "",
-        "shortName": "5V Wall Power",
-        "tags": [
-            "powerSupplies"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A 5V2.5A power supply for your Raspberry PI. Works with 90-264VAC inputs. The most reliable and most likely to work well with Raspberry PI. Use it when you don\u2019t need your circuit to be mobile, or positioned in a location without wall power.<br>This part can only be used with Raspberry Pi.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A 5V2.5A power supply for your Raspberry PI. Works with 90-264VAC inputs. The most reliable and most likely to work well with Raspberry PI. Use it when you don’t need your circuit to be mobile, or positioned in a location without wall power.<br>This part can only be used with Raspberry Pi.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "RPI3B"
+      ],
+      "parts": [
         {
-            "name": "",
-            "supportedControllers": [
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "USBPowerMicro"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides":[{"spec":"USB","voltage":"5v"}],
-                        "providesLoad": 2500
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "provides":[{"spec":"USB","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"USB_MICRO","voltage":""}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "USBPowerMicro"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 2500
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

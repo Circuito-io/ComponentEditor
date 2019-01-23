@@ -1,113 +1,149 @@
 {
-    "name": "WaterPressureSensor",
-    "category": [
-        "input"
+  "name": "WaterPressureSensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "267055",
+  "app": {
+    "appName": "Analog Water Pressure Sensor - Gravity",
+    "image": "http://res.cloudinary.com/circuito/image/upload/dcpnxc1spww3ulupxdse",
+    "numericName": "",
+    "shortName": "Water Pressure Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "267055",
-    "app": {
-        "appName": "Analog Water Pressure Sensor - Gravity",
-        "image": "http://res.cloudinary.com/circuito/image/upload/dcpnxc1spww3ulupxdse",
-        "numericName": "",
-        "shortName": "Water Pressure Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This water pressure sensor can detect presence of water and how strong the water pressure is.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This water pressure sensor can detect presence of water and how strong the water pressure is.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "WaterPressureSensor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "WaterPressureSensor"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "WaterPressureSensor"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "5V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "WaterPressureSensor"
+        }
+      ],
+      "ports": [
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "WaterPressureSensor"
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "WaterPressureSensor"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "5V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "WaterPressureSensor"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "WaterPressureSensor"
+        }
+      ],
+      "ports": [
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

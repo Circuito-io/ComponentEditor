@@ -1,102 +1,179 @@
 {
-    "name": "KeyPadMem3x4",
-    "category": [
-        "input"
+  "name": "KeyPadMem3x4",
+  "category": [
+    "input"
+  ],
+  "blockId": "8654",
+  "app": {
+    "appName": "Membrane 3x4 Matrix Keypad",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ornp1mzmxe1daanr4ab0",
+    "numericName": "",
+    "shortName": "3x4 Matrix Keypad",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "8654",
-    "app": {
-        "appName": "Membrane 3x4 Matrix Keypad",
-        "image": "http://res.cloudinary.com/circuito/image/upload/ornp1mzmxe1daanr4ab0",
-        "numericName": "",
-        "shortName": "3x4 Matrix Keypad",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A simple 4-by-3 membrane Keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed KeyPad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A simple 4-by-3 membrane Keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed KeyPad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "KeyPadMem3x4"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "KeyPadMem3x4"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "KeyPadMem3x4"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "row1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "row2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "row3",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "row4",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "col1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "col2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "col3",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"},{"cost":1,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "KeyPadMem3x4"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "row1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "row2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "row3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "row4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "col1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "col2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "col3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

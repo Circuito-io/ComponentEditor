@@ -1,141 +1,177 @@
 {
-    "name": "PushButtonArcadeNoLED",
-    "category": [
-        "input"
+  "name": "PushButtonArcadeNoLED",
+  "category": [
+    "input"
+  ],
+  "blockId": "689245",
+  "app": {
+    "appName": "Concave Arcade Button - Red",
+    "image": "http://res.cloudinary.com/circuito/image/upload/wo75wedwaimhc7t6td6e",
+    "numericName": "",
+    "shortName": "Arcade Button",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "689245",
-    "app": {
-        "appName": "Concave Arcade Button - Red",
-        "image": "http://res.cloudinary.com/circuito/image/upload/wo75wedwaimhc7t6td6e",
-        "numericName": "",
-        "shortName": "Arcade Button",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>This is a Red Arcade Button without built-in LED. it can be mounted easily to a panel since it have screwing around it (requires 28mm diameter hole for mounting).</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This is a Red Arcade Button without built-in LED. it can be mounted easily to a panel since it have screwing around it (requires 28mm diameter hole for mounting).</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "PushButtonRcadeNLED"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "PushButtonRcadeNLED"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PushButtonArcadeNoLED"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.NO",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "COM",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "NO",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "PushButtonArcadeNoLED"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "PushButtonRcadeNLED"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PushButtonArcadeNoLED"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.NO",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "COM",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "NO",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.NO",
+          "to": "r1.con1"
+        },
+        {
+          "from": "r1.con0",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "COM",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "NO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "PushButtonRcadeNLED"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "PushButtonArcadeNoLED"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.NO",
+          "to": "r1.con1"
+        },
+        {
+          "from": "r1.con0",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "COM",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "NO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

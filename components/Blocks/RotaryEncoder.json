@@ -1,199 +1,339 @@
 {
-    "name": "RotaryEncoder",
-    "category": [
-        "input"
+  "name": "RotaryEncoder",
+  "category": [
+    "input"
+  ],
+  "blockId": "217614",
+  "app": {
+    "appName": "Rotary Encoder",
+    "image": "http://res.cloudinary.com/circuito/image/upload/e0wvwp9jbjwa1fnbyxav",
+    "numericName": "",
+    "shortName": "Rotary Encoder",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "217614",
-    "app": {
-        "appName": "Rotary Encoder",
-        "image": "http://res.cloudinary.com/circuito/image/upload/e0wvwp9jbjwa1fnbyxav",
-        "numericName": "",
-        "shortName": "Rotary Encoder",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Rotary encoders can be used similarly to potentiometers. The difference being that an encoder has full rotation without limits.<br><strong>Returned values</strong>: absolute position (integer).</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Rotary encoders can be used similarly to potentiometers. The difference being that an encoder has full rotation without limits.<br><strong>Returned values</strong>: absolute position (integer).</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "Int",
+      "coders": [
+        "RotaryEncoderInt"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "Int",
-            "coders": [
-                "RotaryEncoderInt"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RotaryEncoder"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"},{"cost":1,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "CLK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "D",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "S1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
-        },
-        {
-            "name": "Digital",
-            "coders": [
-                "RotaryEncoderDigital"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RotaryEncoder"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"},{"cost":1,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "CLK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "D",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"},{"cost":50,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn-Int","voltage":"3.3v"},{"cost":51,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "S1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 100
-        },
-        {
-            "name": "Int3v3",
-            "supportedControllers": [
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RotaryEncoder"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "CLK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "D",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "S1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 100
+          "name": "this",
+          "part": "RotaryEncoder"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "CLK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "D",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "S1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "Digital",
+      "coders": [
+        "RotaryEncoderDigital"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "RotaryEncoder"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "CLK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "D",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "cost": 50,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 51,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "S1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 100
+    },
+    {
+      "name": "Int3v3",
+      "supportedControllers": [
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "RotaryEncoder"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "CLK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "D",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "S1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 100
+    }
+  ]
 }

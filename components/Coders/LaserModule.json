@@ -1,37 +1,38 @@
 {
-    "name": "LaserModule",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "snippetCode": "    // The laser will turn on and off for 500ms (0.5 sec)\n    {{varname}}.on();       // 1. turns on\n    delay(500);             // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n    {{varname}}.off();      // 3. turns off.\n    delay(500);             // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds."
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Laser",
-        "ports": [
-            "S"
-        ]
-    },
-    "files": [
-        "Laser.cpp",
-        "Laser.h",
-        "Laser_license.txt",
-        "Switchable.h",
-        "Switchable.cpp"
-    ],
-    "includeHeaders": [
-        "Laser.h"
+  "name": "LaserModule",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// The laser will turn on and off for 500ms (0.5 sec)\n{{varname}}.on();       // 1. turns on\ndelay(500);             // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n{{varname}}.off();      // 3. turns off.\ndelay(500);             // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds."
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Laser",
+    "ports": [
+      "S"
     ]
+  },
+  "files": [
+    "Laser.cpp",
+    "Laser.h",
+    "Laser_license.txt",
+    "Switchable.h",
+    "Switchable.cpp"
+  ],
+  "includeHeaders": [
+    "Laser.h"
+  ]
 }

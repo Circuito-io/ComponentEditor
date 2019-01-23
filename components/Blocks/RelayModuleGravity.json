@@ -1,74 +1,97 @@
 {
-    "name": "RelayModuleGravity",
-    "category": [
-        "output"
+  "name": "RelayModuleGravity",
+  "category": [
+    "output"
+  ],
+  "blockId": "487601",
+  "app": {
+    "appName": "Digital 5A Relay Module - Gravity",
+    "image": "http://res.cloudinary.com/circuito/image/upload/a5zg2sf4qqiwrftkpoct",
+    "numericName": "",
+    "shortName": "Relay Module",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "487601",
-    "app": {
-        "appName": "Digital 5A Relay Module - Gravity",
-        "image": "http://res.cloudinary.com/circuito/image/upload/a5zg2sf4qqiwrftkpoct",
-        "numericName": "",
-        "shortName": "Relay Module",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>The DFRobot Relay Module is a standard relay used with a controller board to interface external electrical circuits or modules.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The DFRobot Relay Module is a standard relay used with a controller board to interface external electrical circuits or modules.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "RelayModuleGravity"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "RelayModuleGravity"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RelayModuleGravity"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "RelayModuleGravity"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

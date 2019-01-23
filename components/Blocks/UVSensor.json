@@ -1,86 +1,110 @@
 {
-    "name": "UVSensor",
-    "category": [
-        "input"
+  "name": "UVSensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "934121",
+  "app": {
+    "appName": "UV Sensor Breakout - ML8511",
+    "image": "http://res.cloudinary.com/circuito/image/upload/zthw0gnmzvbexbs1l6ap",
+    "numericName": "ML8511",
+    "shortName": "UV Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "934121",
-    "app": {
-        "appName": "UV Sensor Breakout - ML8511",
-        "image": "http://res.cloudinary.com/circuito/image/upload/zthw0gnmzvbexbs1l6ap",
-        "numericName": "ML8511",
-        "shortName": "UV Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>The MP8511 Sensor works by outputing an analog signal in relation to the amount of UV light that\u2019s detected</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>The MP8511 Sensor works by outputing an analog signal in relation to the amount of UV light that’s detected</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "UVSensor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "UVSensor"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "UVSensor"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.3.3V",
-                    "to": "this.EN"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "EN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "OUT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "3.3V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "UVSensor"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.3.3V",
+          "to": "this.EN"
+        }
+      ],
+      "ports": [
+        {
+          "name": "EN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "OUT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "3.3V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

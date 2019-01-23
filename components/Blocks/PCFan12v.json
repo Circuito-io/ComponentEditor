@@ -1,51 +1,63 @@
 {
-    "name": "PCFan12v",
-    "category": [
-        "output"
+  "name": "PCFan12v",
+  "category": [
+    "output"
+  ],
+  "blockId": "11285",
+  "app": {
+    "appName": "PC Fan 12V",
+    "image": "",
+    "numericName": "",
+    "shortName": "PC Fan 12V",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "11285",
-    "app": {
-        "appName": "PC Fan 12V",
-        "image": "",
-        "numericName": "",
-        "shortName": "PC Fan 12V",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>12V PC Fan 8cm square,operating speed of 2000 RPM.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>12V PC Fan 8cm square,operating speed of 2000 RPM.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "PCFan12v"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "PCFan12v"
+          "name": "this",
+          "part": "PCFan12v"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Coil1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "GndLoadSwitching-PWM",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PCFan12v"
-                }
-            ],
+<<<<<<< HEAD
             "ports": [
                 {
                     "name": "Coil1",
@@ -62,15 +74,34 @@
                         "requiresLoad": 80
                     }
                 }
+=======
+            "requiresLoad": 80,
+            "unique": true
+          }
+        },
+        {
+          "name": "Coil2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "12v"
+              }
+>>>>>>> 17a0c966580db5e238462e37c426145e017c8d94
             ],
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                }
-            ]
+            "requiresLoad": 80
+          }
         }
-    ]
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "GndHighLoadPWMSwitching"
+          ]
+        }
+      ]
+    }
+  ]
 }

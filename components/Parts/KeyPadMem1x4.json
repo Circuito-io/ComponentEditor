@@ -1,32 +1,32 @@
 {
-    "name": "KeyPadMem1x4",
-    "symbol": {
-        "ref": "circuito_Membrane 1x4 Matrix Keypad.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/edaazowbhtxknjfrli9v"
-    },
-    "displayName": "Membrane 1x4 Matrix Keypad",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "",
-            "link": "https://octopart.com/1332-adafruit+industries-32978361?r=sp&s=j9qYKio6Q6eX8TDlg4geGQ",
-            "price": "2.95",
-            "SKU": "",
-            "headers": [
-                5,
-                "MaleHeadersTall"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "KeyPadMem1x4",
+  "symbol": {
+    "ref": "circuito_Membrane 1x4 Matrix Keypad.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/edaazowbhtxknjfrli9v"
+  },
+  "displayName": "Membrane 1x4 Matrix Keypad",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "",
+      "link": "https://octopart.com/1332-adafruit+industries-32978361?r=sp&s=j9qYKio6Q6eX8TDlg4geGQ",
+      "price": "2.95",
+      "SKU": "",
+      "headers": {
+        "type": "MaleHeadersTall",
+        "qty": 5
+      }
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

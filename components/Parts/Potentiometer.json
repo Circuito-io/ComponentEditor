@@ -1,28 +1,28 @@
 {
-    "name": "Potentiometer",
-    "symbol": {
-        "ref": "circuito_Rotary Potentiometer - 10k Ohm, Linear.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/kzcd1i7dl8mr92tiumbf"
-    },
-    "displayName": "Rotary Potentiometer - 10k Ohm, Linear",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/oyjpnf3arkrq0obbrbcr",
-            "link": "https://octopart.com/p160kn-0qd15b10k-bi+technologies-7159713",
-            "price": "0.76",
-            "SKU": "987-1308-ND"
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "Potentiometer",
+  "symbol": {
+    "ref": "circuito_Rotary Potentiometer - 10k Ohm, Linear.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/kzcd1i7dl8mr92tiumbf"
+  },
+  "displayName": "Rotary Potentiometer - 10k Ohm, Linear",
+  "category": [
+    "input"
+  ],
+  "desc": "<p>Turning the Knob changes the resistance of the potentiometer. It can be used to control other components in your circuit with a simple turn of a knob.<br><strong>Returned values</strong>: from 0 (resting position) to 1023 (maximal turn).<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/How-to-Make-an-Office-Neighbor-Shield-With-Arduino-1/\">Neighbour Shield</a>.</p>\n",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/oyjpnf3arkrq0obbrbcr",
+      "link": "https://octopart.com/p160kn-0qd15b10k-bi+technologies-7159713",
+      "price": "0.76",
+      "SKU": "987-1308-ND"
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

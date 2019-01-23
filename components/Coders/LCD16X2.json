@@ -1,37 +1,38 @@
 {
-    "name": "LCD16X2",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "LCD16X2",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "// set up the LCD's number of columns and rows\n{{varname}}.begin(16, 2);\n",
+    "snippetCode": "// Print a message to the LCD.\n{{varname}}.setCursor(0, 0);\n{{varname}}.print(\"Circuito Rocks !\");\n// Turn off the display:\n{{varname}}.noDisplay();\ndelay(500);\n// Turn on the display:\n{{varname}}.display();\ndelay(500);"
+  },
+  "license": "ArduinoIDE",
+  "instantiate": {
+    "classname": "LiquidCrystal",
+    "ports": [
+      "RS",
+      "E",
+      "DB4",
+      "DB5",
+      "DB6",
+      "DB7"
     ],
-    "code": {
-        "setup": "    // set up the LCD's number of columns and rows\n     {{varname}}.begin(16, 2);\n",
-        "snippetCode": "     // Print a message to the LCD.\n     {{varname}}.setCursor(0, 0);\n     {{varname}}.print(\"Circuito Rocks !\");\n     // Turn off the display:\n     {{varname}}.noDisplay();\n     delay(500);\n     // Turn on the display:\n     {{varname}}.display();\n     delay(500);"
-    },
-    "license": "ArduinoIDE",
-    "instantiate": {
-        "classname": "LiquidCrystal",
-        "ports": [
-            "RS",
-            "E",
-            "DB4",
-            "DB5",
-            "DB6",
-            "DB7"
-        ],
-        "varname": "lcd"
-    },
-    "includeHeaders": [
-        "LiquidCrystal.h"
-    ]
+    "varname": "lcd"
+  },
+  "includeHeaders": [
+    "LiquidCrystal.h"
+  ]
 }

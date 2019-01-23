@@ -1,141 +1,177 @@
 {
-    "name": "DHT22",
-    "category": [
-        "input"
+  "name": "DHT22",
+  "category": [
+    "input"
+  ],
+  "blockId": "10167",
+  "app": {
+    "appName": "DHT22/11 Humidity and Temperature Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/dbhe5vbq7epmevqu4taf",
+    "numericName": "DHT22",
+    "shortName": "Temperature and Humidity Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "10167",
-    "app": {
-        "appName": "DHT22/11 Humidity and Temperature Sensor",
-        "image": "http://res.cloudinary.com/circuito/image/upload/dbhe5vbq7epmevqu4taf",
-        "numericName": "DHT22",
-        "shortName": "Temperature and Humidity Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A low cost humidity and temperature sensor.<br><strong>Returned Values</strong>:  Temperature and Humidity through a single wire digital interface.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A low cost humidity and temperature sensor.<br><strong>Returned Values</strong>:  Temperature and Humidity through a single wire digital interface.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "DHT22"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "DHT22"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "DHT22"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.DATA",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r1.con1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "DATA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "DHT22"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "DHT22"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "DHT22"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.DATA",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "this.VDD",
-                    "to": "r1.con1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "DATA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.DATA",
+          "to": "r1.con0"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r1.con1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DATA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "DHT22"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "DHT22"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.DATA",
+          "to": "r1.con0"
+        },
+        {
+          "from": "this.VDD",
+          "to": "r1.con1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DATA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

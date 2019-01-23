@@ -1,28 +1,28 @@
 {
-    "name": "LM35",
-    "symbol": {
-        "ref": "circuito_LM35DZ - Temperature Sensor.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/kzzet3byzpg3rw5fzzn0"
-    },
-    "displayName": "LM35DZ - Temperature Sensor",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/qbhpjqu0wjji210r0jbu",
-            "link": "https://octopart.com/lm35dz%2Fnopb-texas+instruments-24814031",
-            "price": "2.05",
-            "SKU": "LM35DZ/NOPB-ND"
-        }
-    ],
-    "info": {
-        "setup": "Mind the LM35 orientation. The flat side should face you.",
-        "test": "Touch the sensor with your fingers to change it's temperature reading. Caution, if connected wrong it might be very hot."
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "LM35",
+  "symbol": {
+    "ref": "circuito_LM35DZ - Temperature Sensor.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/kzzet3byzpg3rw5fzzn0"
+  },
+  "displayName": "LM35DZ - Temperature Sensor",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/qbhpjqu0wjji210r0jbu",
+      "link": "https://octopart.com/lm35dz%2Fnopb-texas+instruments-24814031",
+      "price": "2.05",
+      "SKU": "LM35DZ/NOPB-ND"
     }
+  ],
+  "info": {
+    "setup": "Mind the LM35 orientation. The flat side should face you.",
+    "test": "Touch the sensor with your fingers to change it's temperature reading. Caution, if connected wrong it might be very hot."
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

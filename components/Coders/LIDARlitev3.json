@@ -1,38 +1,39 @@
 {
-    "name": "LIDARlitev3",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "global": "",
-        "constructors": "    {{classname}} {{varname}};\n",
-        "setup": "    {{varname}}.begin(0, true); // Set configuration to default '0', change this number to try out alternate configurations. I2C speed set to 400 kHz.\n",
-        "snippetCode": "    // Take a measurement with receiver bias correction and print to serial terminal\n    int {{varname}}Dist = {{varname}}.distance();\n    Serial.print({{varname}}Dist);\n    Serial.println(\" [cm]\");\n    delay(50);"
-    },
-    "license": "Apache2.0",
-    "instantiate": {
-        "classname": "LIDARLite",
-        "ports": [],
-        "varname": "lidarLite"
-    },
-    "files": [
-        "LIDARLite_license",
-        "LIDARLite.h",
-        "LIDARLite.cpp"
-    ],
-    "includeHeaders": [
-        "LIDARLite.h",
-        "Wire.h"
-    ]
+  "name": "LIDARlitev3",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "",
+    "constructors": "{{classname}} {{varname}};\n",
+    "setup": "{{varname}}.begin(0, true); // Set configuration to default '0', change this number to try out alternate configurations. I2C speed set to 400 kHz.\n",
+    "snippetCode": "// Take a measurement with receiver bias correction and print to serial terminal\nint {{varname}}Dist = {{varname}}.distance();\nSerial.print({{varname}}Dist);\nSerial.println(\" [cm]\");\ndelay(50);"
+  },
+  "license": "Apache2.0",
+  "instantiate": {
+    "classname": "LIDARLite",
+    "ports": [],
+    "varname": "lidarLite"
+  },
+  "files": [
+    "LIDARLite_license",
+    "LIDARLite.h",
+    "LIDARLite.cpp"
+  ],
+  "includeHeaders": [
+    "LIDARLite.h",
+    "Wire.h"
+  ]
 }

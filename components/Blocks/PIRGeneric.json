@@ -1,74 +1,97 @@
 {
-    "name": "PIRGeneric",
-    "category": [
-        "input"
+  "name": "PIRGeneric",
+  "category": [
+    "input"
+  ],
+  "blockId": "931983",
+  "app": {
+    "appName": "Infrared PIR Motion Sensor Module",
+    "image": "http://res.cloudinary.com/circuito/image/upload/bdybefelifgzjojjzuwa",
+    "numericName": "",
+    "shortName": "PIR Motion Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "931983",
-    "app": {
-        "appName": "Infrared PIR Motion Sensor Module",
-        "image": "http://res.cloudinary.com/circuito/image/upload/bdybefelifgzjojjzuwa",
-        "numericName": "",
-        "shortName": "PIR Motion Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>The passive infrared motion sensor (PIR) allows you to detect movement of a person or animal within a 6 meter range. The sensor is based on infrared radiation returned from people and animals.<br><strong>Returned values</strong>: true - presence detected, false - no presence detected.  - Presence can be detected within a 6-meter range.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The passive infrared motion sensor (PIR) allows you to detect movement of a person or animal within a 6 meter range. The sensor is based on infrared radiation returned from people and animals.<br><strong>Returned values</strong>: true - presence detected, false - no presence detected.  - Presence can be detected within a 6-meter range.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "PIRGeneric"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "PIRGeneric"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PIRGeneric"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"},{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "PIRGeneric"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

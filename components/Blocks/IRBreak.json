@@ -1,173 +1,233 @@
 {
-    "name": "IRBreak",
-    "category": [
-        "input"
+  "name": "IRBreak",
+  "category": [
+    "input"
+  ],
+  "blockId": "669681",
+  "app": {
+    "appName": "IR Break Beam Sensor - 3mm LEDs",
+    "image": "http://res.cloudinary.com/circuito/image/upload/g0lm5mair4249xo8vegy",
+    "numericName": "",
+    "shortName": "IR Break Beam Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "669681",
-    "app": {
-        "appName": "IR Break Beam Sensor - 3mm LEDs",
-        "image": "http://res.cloudinary.com/circuito/image/upload/g0lm5mair4249xo8vegy",
-        "numericName": "",
-        "shortName": "IR Break Beam Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A simple way to detect motion. They work by having an emitting side that sends out an IR beam, then a receiver across the way which is sensitive to that same beam. When something breaks the beam the receiver will output a signal.  It works up to 25cm / 10\".</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A simple way to detect motion. They work by having an emitting side that sends out an IR beam, then a receiver across the way which is sensitive to that same beam. When something breaks the beam the receiver will output a signal.  It works up to 25cm / 10\".</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "IRBreak"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "IRBreak"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "IRBreak"
-                },
-                {
-                    "name": "R_pullup",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.VCCR",
-                    "to": "R_pullup.con0"
-                },
-                {
-                    "from": "this.SIG",
-                    "to": "R_pullup.con1"
-                },
-                {
-                    "from": "R_pullup.con1",
-                    "to": "sig"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCCT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GNDR",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "GNDT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCCR",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "sig",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "IRBreak"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "IRBreak"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "IRBreak"
-                },
-                {
-                    "name": "R_pullup",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.VCCR",
-                    "to": "R_pullup.con0"
-                },
-                {
-                    "from": "this.SIG",
-                    "to": "R_pullup.con1"
-                },
-                {
-                    "from": "R_pullup.con1",
-                    "to": "sig"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCCT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GNDR",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "GNDT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCCR",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "sig",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "R_pullup",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.VCCR",
+          "to": "R_pullup.con0"
+        },
+        {
+          "from": "this.SIG",
+          "to": "R_pullup.con1"
+        },
+        {
+          "from": "R_pullup.con1",
+          "to": "sig"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCCT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GNDR",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GNDT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCCR",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "IRBreak"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "IRBreak"
+        },
+        {
+          "name": "R_pullup",
+          "part": "Res10KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.VCCR",
+          "to": "R_pullup.con0"
+        },
+        {
+          "from": "this.SIG",
+          "to": "R_pullup.con1"
+        },
+        {
+          "from": "R_pullup.con1",
+          "to": "sig"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCCT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GNDR",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GNDT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCCR",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

@@ -1,27 +1,28 @@
 {
-    "name": "JoystickPSP",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "JoystickPSP",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Read Joystick X,Y axis\nint {{varname}}X = analogRead({{X}});\nint {{varname}}Y = analogRead({{Y}});\nSerial.print({{varname}}X); Serial.print(\"\\t\");\nSerial.println({{varname}}Y);\n"
+  },
+  "license": "ArduinoIDE",
+  "instantiate": {
+    "ports": [
+      "X",
+      "Y"
     ],
-    "code": {
-        "snippetCode": "    // Read Joystick X,Y axis\n    int {{varname}}X = analogRead({{X}});\n    int {{varname}}Y = analogRead({{Y}});\n    Serial.print({{varname}}X); Serial.print(\"\\t\");\n    Serial.println({{varname}}Y);\n"
-    },
-    "license": "ArduinoIDE",
-    "instantiate": {
-        "ports": [
-            "X",
-            "Y"
-        ],
-        "varname": "joystickPSP"
-    }
+    "varname": "joystickPSP"
+  }
 }

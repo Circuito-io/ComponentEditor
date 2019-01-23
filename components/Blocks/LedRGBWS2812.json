@@ -1,81 +1,104 @@
 {
-    "name": "LedRGBWS2812",
-    "category": [
-        "output"
+  "name": "LedRGBWS2812",
+  "category": [
+    "output"
+  ],
+  "blockId": "855863",
+  "app": {
+    "appName": "LED - RGB Addressable, PTH, 5mm Diffused (5 Pack)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/y6hf6glzzlghuksc5ffa",
+    "numericName": "WS2812",
+    "shortName": "Addressable RGB LED",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "855863",
-    "app": {
-        "appName": "LED - RGB Addressable, PTH, 5mm Diffused (5 Pack)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/y6hf6glzzlghuksc5ffa",
-        "numericName": "WS2812",
-        "shortName": "Addressable RGB LED",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This LED looks like a regular 5mm RGB LED but it's not. It has a WS2812 IC inside of it, meaning that it is an addressable RGB LED. You can chain multiple LEDs and control them all with only 1 pin.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This LED looks like a regular 5mm RGB LED but it's not. It has a WS2812 IC inside of it, meaning that it is an addressable RGB LED. You can chain multiple LEDs and control them all with only 1 pin.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LedRGBWS2812"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "LedRGBWS2812"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedRGBWS2812"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "DIN",
-                    "interface": {
-                        "chainTo": "DOUT",
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "DOUT",
-                    "interface": {
-                        "chain": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LedRGBWS2812"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "DIN",
+          "interface": {
+            "chainTo": "DOUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DOUT",
+          "interface": {
+            "chain": true
+          }
+        }
+      ]
+    }
+  ]
 }

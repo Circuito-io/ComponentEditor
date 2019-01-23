@@ -1,139 +1,199 @@
 {
-    "name": "LoadCellHX711SF",
-    "category": [
-        "input"
+  "name": "LoadCellHX711SF",
+  "category": [
+    "input"
+  ],
+  "blockId": "13879",
+  "app": {
+    "appName": "SparkFun HX711 - Load Cell Amplifier",
+    "image": "http://res.cloudinary.com/circuito/image/upload/gksc0v9ujss5cf5pkkvc",
+    "numericName": "HX711",
+    "shortName": "Load Cell Amplifier",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "13879",
-    "app": {
-        "appName": "SparkFun HX711 - Load Cell Amplifier",
-        "image": "http://res.cloudinary.com/circuito/image/upload/gksc0v9ujss5cf5pkkvc",
-        "numericName": "HX711",
-        "shortName": "Load Cell Amplifier",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>The load cell breakout of the HX711 enables reading load cell values and measuring weight.</p>",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>The load cell breakout of the HX711 enables reading load cell values and measuring weight.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "LoadCellHX711SF"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "LoadCellHX711SF"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LoadCellHX711SF"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "DAT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "CLK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "LoadCellHX711SF"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "LoadCellHX711SF"
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
+            "unique": true
+          }
+        },
+        {
+          "name": "CLK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
             ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LoadCellHX711SF"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "DAT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "CLK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "LoadCellHX711SF"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "LoadCellHX711SF"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DAT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "CLK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

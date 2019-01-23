@@ -1,32 +1,32 @@
 {
-    "name": "RGBSensor",
-    "symbol": {
-        "ref": "circuito_RGB Light Sensor - ISL29125.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/zuzkv7yzvf0sqfptuer8"
-    },
-    "displayName": "SparkFun ISL29125 - RGB Light Sensor",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/pwwbdklgkowblqaefbyu",
-            "link": "https://octopart.com/sen-12829-sparkfun-66533292",
-            "price": "7.95",
-            "SKU": "1568-1170-ND",
-            "headers": [
-                5,
-                "MaleHeaders"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "RGBSensor",
+  "symbol": {
+    "ref": "circuito_RGB Light Sensor - ISL29125.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/zuzkv7yzvf0sqfptuer8"
+  },
+  "displayName": "SparkFun ISL29125 - RGB Light Sensor",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/pwwbdklgkowblqaefbyu",
+      "link": "https://octopart.com/sen-12829-sparkfun-66533292",
+      "price": "7.95",
+      "SKU": "1568-1170-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 5
+      }
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

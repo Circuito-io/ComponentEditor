@@ -1,31 +1,31 @@
 {
-    "name": "MQ7SF3v3",
-    "supportedControllers": [
-        "ArduinoGemma",
-        "ArduinoProMini3v3",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "MQ7SF3v3",
+  "supportedControllers": [
+    "ArduinoGemma",
+    "ArduinoProMini3v3",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B"
+  ],
+  "code": {
+    "snippetCode": "//read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\nint {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "MQ7",
+    "ports": [
+      "Aout"
     ],
-    "code": {
-        "snippetCode": "    //read CO levels from MQ-7 (please note that the MQ-7 requires few minutes of pre-heating)\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "MQ7",
-        "ports": [
-            "Aout"
-        ],
-        "varname": "mq7"
-    },
-    "files": [
-        "MQ7.cpp",
-        "MQ7_license.txt",
-        "MQ7.h",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "MQ7.h"
-    ]
+    "varname": "mq7"
+  },
+  "files": [
+    "MQ7.cpp",
+    "MQ7_license.txt",
+    "MQ7.h",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "MQ7.h"
+  ]
 }

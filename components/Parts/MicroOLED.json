@@ -1,32 +1,32 @@
 {
-    "name": "MicroOLED",
-    "symbol": {
-        "ref": "circuito_SparkFun Micro OLED Breakout.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/zjshwplrtklnoqjgyaf7"
-    },
-    "displayName": "SparkFun Micro OLED Breakout",
-    "category": [
-        "output"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/ayu0kh64lyhwwgp9mrpp",
-            "link": "https://octopart.com/lcd-13003-sparkfun-66533267",
-            "price": "14.95",
-            "SKU": "1568-1188-ND",
-            "headers": [
-                8,
-                "MaleHeaders"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "MicroOLED",
+  "symbol": {
+    "ref": "circuito_SparkFun Micro OLED Breakout.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/zjshwplrtklnoqjgyaf7"
+  },
+  "displayName": "SparkFun Micro OLED Breakout",
+  "category": [
+    "output"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/ayu0kh64lyhwwgp9mrpp",
+      "link": "https://octopart.com/lcd-13003-sparkfun-66533267",
+      "price": "14.95",
+      "SKU": "1568-1188-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 8
+      }
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

@@ -1,81 +1,120 @@
 {
-    "name": "serLCD",
-    "category": [
-        "output"
+  "name": "serLCD",
+  "category": [
+    "output"
+  ],
+  "blockId": "9395",
+  "app": {
+    "appName": "Serial Enabled 16x2 LCD - White on Black 5V",
+    "image": "http://res.cloudinary.com/circuito/image/upload/aj4swuo96afhqonnpynq",
+    "numericName": "",
+    "shortName": "Serial Enabled 16x2 LCD",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "9395",
-    "app": {
-        "appName": "Serial Enabled 16x2 LCD - White on Black 5V",
-        "image": "http://res.cloudinary.com/circuito/image/upload/aj4swuo96afhqonnpynq",
-        "numericName": "",
-        "shortName": "Serial Enabled 16x2 LCD",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/DIY-Nespresso-Capsule-Detector/\">DIY Nespresso Capsule Detector</a>.</p>\n",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/DIY-Nespresso-Capsule-Detector/\">DIY Nespresso Capsule Detector</a>.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "serLCD"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "serLCD"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "Arduino101",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "serLCD"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
-                        "requiresLoad": 165
-                    }
-                },
-                {
-                    "name": "RX",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SoftwareSerial","voltage":"5v"},{"cost":1,"spec":"SoftwareSerial","voltage":"3.3v"},{"cost":2,"spec":"TX","voltage":"5v"},{"cost":3,"spec":"TX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "serLCD"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 165
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SoftwareSerial",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 2,
+                "spec": "TX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 3,
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

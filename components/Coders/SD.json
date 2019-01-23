@@ -1,32 +1,33 @@
 {
-    "name": "SD",
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU"
+  "name": "SD",
+  "supportedControllers": [
+    "ATMega328P",
+    "Arduino101",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "Teensy32"
+  ],
+  "code": {
+    "constructors": "{{classname}} {{varname}};\n",
+    "setup": "// Set SPI SS pin to output otherwise the SD library functions will not work.\n// The SD is set to use SPI SS Arduino pin 10 as chip select(CS) by default.\n// To change the pin use SD.begin(SD_CS_PIN)\npinMode({{CS}}, OUTPUT);\n// Check if the card is present and can be initialized\nif (!SD.begin()) {\nSerial.println(F(\"Card failed, or not present\"));\nwhile(1);\n}\nSerial.println(F(\"card initialized.\"));\n",
+    "snippetCode": "// The SD example code creates a datalog.txt file for logging sensor data\n// open the file. note that only one file can be open at a time,\n// so you have to close this one before opening another.\n{{varname}} = SD.open(\"datalog.txt\", FILE_WRITE);\n// if the file exists in SD card, write sensor data\nif ({{varname}}) {\n//Write to file\n{{varname}}.println(\"ENTER SENSOR DATA HERE\");\n// close the file\n{{varname}}.close();\n// Uncomment to print to the serial port\n//Serial.println(\"ENTER SENSOR DATA HERE\");\n} \nelse {\n// if the file didn't open, print an error\nSerial.println(F(\"error opening file.\"));\n}"
+  },
+  "license": "ArduinoIDE",
+  "instantiate": {
+    "classname": "File",
+    "ports": [
+      "CS"
     ],
-    "code": {
-        "constructors": "    {{classname}} {{varname}};\n",
-        "setup": "    // Set SPI SS pin to output otherwise the SD library functions will not work.\n    // The SD is set to use SPI SS Arduino pin 10 as chip select(CS) by default.\n    // To change the pin use SD.begin(SD_CS_PIN)\n    pinMode({{CS}}, OUTPUT);\n    // Check if the card is present and can be initialized\n    if (!SD.begin()) {\n        Serial.println(F(\"Card failed, or not present\"));\n        while(1);\n    }\n    Serial.println(F(\"card initialized.\"));\n",
-        "snippetCode": "    // The SD example code creates a datalog.txt file for logging sensor data\n    // open the file. note that only one file can be open at a time,\n    // so you have to close this one before opening another.\n    {{varname}} = SD.open(\"datalog.txt\", FILE_WRITE);\n    // if the file exists in SD card, write sensor data\n    if ({{varname}}) {\n        //Write to file\n        {{varname}}.println(\"ENTER SENSOR DATA HERE\");\n        // close the file\n        {{varname}}.close();\n        // Uncomment to print to the serial port\n        //Serial.println(\"ENTER SENSOR DATA HERE\");\n    } \n    else {\n        // if the file didn't open, print an error\n        Serial.println(F(\"error opening file.\"));\n    }"
-    },
-    "license": "ArduinoIDE",
-    "instantiate": {
-        "classname": "File",
-        "ports": [
-            "CS"
-        ],
-        "varname": "sdFile"
-    },
-    "includeHeaders": [
-        "SD.h"
-    ]
+    "varname": "sdFile"
+  },
+  "includeHeaders": [
+    "SD.h"
+  ]
 }

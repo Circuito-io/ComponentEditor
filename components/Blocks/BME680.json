@@ -1,121 +1,169 @@
 {
-    "name": "BME680",
-    "category": [
-        "input"
+  "name": "BME680",
+  "category": [
+    "input"
+  ],
+  "blockId": "164792",
+  "app": {
+    "appName": "BME680 Temperature, Humidity, Pressure and Gas sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/h4tkc5gh0ywuadtgntcp",
+    "numericName": "BME680",
+    "shortName": "Temperature, Humidity, Pressure and Gas Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "164792",
-    "app": {
-        "appName": "BME680 Temperature, Humidity, Pressure and Gas sensor",
-        "image": "http://res.cloudinary.com/circuito/image/upload/h4tkc5gh0ywuadtgntcp",
-        "numericName": "BME680",
-        "shortName": "Temperature, Humidity, Pressure and Gas Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>This sensnor can measure Temperature, Humidity, Pressure and Gas. The gas sensor detects the volatile organic compounds (VOC) in the air, but it can not distinguish between different gasses. It is recommended to calibrate it, if you wish to use the gas sensor.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This sensnor can measure Temperature, Humidity, Pressure and Gas. The gas sensor detects the volatile organic compounds (VOC) in the air, but it can not distinguish between different gasses. It is recommended to calibrate it, if you wish to use the gas sensor.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "BME680"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "BME680"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BME680"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SCK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "SDI",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "BME680"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SCK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "BME680"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BME680"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SCK",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "SDI",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDI",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "BME680"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "BME680"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SCK",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDI",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

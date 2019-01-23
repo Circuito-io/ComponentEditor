@@ -1,92 +1,139 @@
 {
-    "name": "DCMotorA",
-    "category": [
-        "output"
+  "name": "DCMotorA",
+  "category": [
+    "output"
+  ],
+  "blockId": "12288",
+  "app": {
+    "appName": "Standard Gearmotor - 107 RPM (12V)",
+    "image": "",
+    "numericName": "ASLONG-JGB37",
+    "shortName": "Geared Motor",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "12288",
-    "app": {
-        "appName": "Standard Gearmotor - 107 RPM (12V)",
-        "image": "",
-        "numericName": "ASLONG-JGB37",
-        "shortName": "Geared Motor",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A full metal geared DC motor. It has a ratio of 56:1 and has a max speed of 107 RPM.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A full metal geared DC motor. It has a ratio of 56:1 and has a max speed of 107 RPM.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "DCMotor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "DCMotor"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "d1",
-                    "part": "DIRect1A50v",
-                    "rotation": 180
-                },
-                {
-                    "name": "this",
-                    "part": "DCMotor"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Coil1",
-                    "to": "d1.pos"
-                },
-                {
-                    "from": "this.Coil2",
-                    "to": "d1.neg"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Coil1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching-PWM","voltage":""}],
-                        "requiresLoad": 400,
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Coil2",
-                    "interface": {
-                        "requires":[{"cost":8,"spec":"","voltage":"3.3v"},{"cost":7,"spec":"","voltage":"3.7v"},{"cost":9,"spec":"Battery","voltage":"3.7v"},{"cost":6,"spec":"","voltage":"5v"},{"cost":5,"spec":"","voltage":"6v"},{"cost":3,"spec":"","voltage":"7.4v"},{"cost":2,"spec":"","voltage":"9v"},{"cost":1,"spec":"","voltage":"12v"}],
-                        "requiresLoad": 400
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "GndHighLoadPWMSwitching"
-                    ]
-                }
-            ]
+          "name": "d1",
+          "part": "DIRect1A50v",
+          "rotation": 180
+        },
+        {
+          "name": "this",
+          "part": "DCMotor"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Coil1",
+          "to": "d1.pos"
+        },
+        {
+          "from": "this.Coil2",
+          "to": "d1.neg"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Coil1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "GndLoadSwitching-PWM",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 400,
+            "unique": true
+          }
+        },
+        {
+          "name": "Coil2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 8,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 7,
+                "spec": "",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 9,
+                "spec": "Battery",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 6,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 5,
+                "spec": "",
+                "voltage": "6v"
+              },
+              {
+                "cost": 3,
+                "spec": "",
+                "voltage": "7.4v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "9v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 400
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "GndHighLoadPWMSwitching"
+          ]
+        }
+      ]
+    }
+  ]
 }

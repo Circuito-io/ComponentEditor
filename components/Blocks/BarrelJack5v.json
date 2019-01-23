@@ -1,54 +1,93 @@
 {
-    "name": "BarrelJack5v",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "BarrelJack5v",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BarrelJack",
-                    "rotation": 180
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"5v"}],
-                        "redirectLoad": "posIn"
-                    }
-                },
-                {
-                    "name": "posIn",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"Barrel","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "negIn",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"Barrel","voltage":"GND"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "BarrelJack",
+          "rotation": 270
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "redirectLoad": "posIn"
+          }
+        },
+        {
+          "name": "posIn",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Barrel",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "negIn",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Barrel",
+                "voltage": "GND"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "BARREL_JACK",
+          "interface": {
+            "provides": [
+              {
+                "spec": "BARREL_JACK",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

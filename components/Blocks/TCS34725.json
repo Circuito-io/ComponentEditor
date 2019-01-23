@@ -1,148 +1,220 @@
 {
-    "name": "TCS34725",
-    "category": [
-        "input"
+  "name": "TCS34725",
+  "category": [
+    "input"
+  ],
+  "blockId": "268781",
+  "app": {
+    "appName": "RGB Color Sensor with IR filter and White LED - TCS34725",
+    "image": "http://res.cloudinary.com/circuito/image/upload/rve628swnioqx9nl7dne",
+    "numericName": "TCS34725",
+    "shortName": "RGB Color Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "268781",
-    "app": {
-        "appName": "RGB Color Sensor with IR filter and White LED - TCS34725",
-        "image": "http://res.cloudinary.com/circuito/image/upload/rve628swnioqx9nl7dne",
-        "numericName": "TCS34725",
-        "shortName": "RGB Color Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>Make your electronics see in color with this RGB sensor. It has RGB and Clear light sensing elements and an IR blocking filter. Moreover it has controlled white LED to illuminate the sensed object.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>Make your electronics see in color with this RGB sensor. It has RGB and Clear light sensing elements and an IR blocking filter. Moreover it has controlled white LED to illuminate the sensed object.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "TCS34725"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "TCS34725"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "TCS34725"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "LED",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "INT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "TCS34725"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "TCS34725"
+          "name": "LED",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
+            "unique": true
+          }
+        },
+        {
+          "name": "INT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              }
             ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "TCS34725"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "LED",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "INT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn-Int","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "TCS34725"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "TCS34725"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LED",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "INT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

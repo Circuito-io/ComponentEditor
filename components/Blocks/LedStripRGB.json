@@ -1,138 +1,183 @@
 {
-    "name": "LedStripRGB",
-    "category": [
-        "output"
+  "name": "LedStripRGB",
+  "category": [
+    "output"
+  ],
+  "blockId": "12021",
+  "app": {
+    "appName": "LED RGB Strip - Bare (1m)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/zsxdrunkomhaomuwb0ii",
+    "numericName": "",
+    "shortName": "LED RGB Strip",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "12021",
-    "app": {
-        "appName": "LED RGB Strip - Bare (1m)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/zsxdrunkomhaomuwb0ii",
-        "numericName": "",
-        "shortName": "LED RGB Strip",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>One meter non-addressable RGB LED strips with 60 LED's per meter.</p>",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>One meter non-addressable RGB LED strips with 60 LED's per meter.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LedStripRGB"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "LedStripRGB"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedStripRGB",
-                    "rotation": 90
-                },
-                {
-                    "name": "tG",
-                    "part": "TNMOSFETFQP"
-                },
-                {
-                    "name": "tR",
-                    "part": "TNMOSFETFQP"
-                },
-                {
-                    "name": "tB",
-                    "part": "TNMOSFETFQP"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.B",
-                    "to": "tB.D"
-                },
-                {
-                    "from": "this.R",
-                    "to": "tR.D"
-                },
-                {
-                    "from": "this.G",
-                    "to": "tG.D"
-                },
-                {
-                    "from": "tR.S",
-                    "to": "tB.S"
-                },
-                {
-                    "from": "tB.S",
-                    "to": "tG.S"
-                },
-                {
-                    "from": "tR.S",
-                    "to": "Gnd"
-                },
-                {
-                    "from": "tR.G",
-                    "to": "SigR"
-                },
-                {
-                    "from": "tB.G",
-                    "to": "SigB"
-                },
-                {
-                    "from": "tG.G",
-                    "to": "SigG"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "SigB",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SigR",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SigG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LedStripRGB",
+          "rotation": 90
+        },
+        {
+          "name": "tG",
+          "part": "TNMOSFETFQP"
+        },
+        {
+          "name": "tR",
+          "part": "TNMOSFETFQP"
+        },
+        {
+          "name": "tB",
+          "part": "TNMOSFETFQP"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.B",
+          "to": "tB.D"
+        },
+        {
+          "from": "this.R",
+          "to": "tR.D"
+        },
+        {
+          "from": "this.G",
+          "to": "tG.D"
+        },
+        {
+          "from": "tR.S",
+          "to": "tB.S"
+        },
+        {
+          "from": "tB.S",
+          "to": "tG.S"
+        },
+        {
+          "from": "tR.S",
+          "to": "Gnd"
+        },
+        {
+          "from": "tR.G",
+          "to": "SigR"
+        },
+        {
+          "from": "tB.G",
+          "to": "SigB"
+        },
+        {
+          "from": "tG.G",
+          "to": "SigG"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SigB",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "SigR",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "SigG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

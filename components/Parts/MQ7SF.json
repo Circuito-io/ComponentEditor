@@ -1,34 +1,37 @@
 {
-    "name": "MQ7SF",
-    "symbol": {
-        "ref": "circuito_Gas Sensor Breakout.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/jjx65k0jxepcc4cwfovj"
-    },
-    "displayName": "Carbon Monoxide Sensor - MQ-7",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/ehbitybbgnfystg5nmtt",
-            "link": "https://octopart.com/fit0227-dfrobot-77801145?r=sp&s=U5-MXUoKSnmDEo1dPNoYug",
-            "price": "5.99",
-            "SKU": "605-00007-ND",
-            "headers": [
-                4,
-                "MaleHeaders"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "The part requires soldering its breakout PCB",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true,
-        "row": 3,
-        "rotation": 0
+  "name": "MQ7SF",
+  "symbol": {
+    "ref": "circuito_Gas Sensor Breakout.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/jjx65k0jxepcc4cwfovj"
+  },
+  "displayName": "Carbon Monoxide Sensor - MQ-7",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/ehbitybbgnfystg5nmtt",
+      "link": "https://octopart.com/fit0227-dfrobot-77801145?r=sp&s=U5-MXUoKSnmDEo1dPNoYug",
+      "price": "5.99",
+      "SKU": "605-00007-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 4
+      }
     }
+  ],
+  "bomAux": [
+    "MQ7_breakout_board"
+  ],
+  "info": {
+    "setup": "The part requires soldering its breakout PCB",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true,
+    "row": 3,
+    "rotation": 0
+  }
 }

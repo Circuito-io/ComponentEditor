@@ -1,74 +1,92 @@
 {
-    "name": "IRProximity",
-    "category": [
-        "input"
+  "name": "IRProximity",
+  "category": [
+    "input"
+  ],
+  "blockId": "848753",
+  "app": {
+    "appName": "Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F",
+    "image": "http://res.cloudinary.com/circuito/image/upload/kg4nsvgdhfcg2zjyrfse",
+    "numericName": "",
+    "shortName": "Infrared Proximity Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "848753",
-    "app": {
-        "appName": "Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F",
-        "image": "http://res.cloudinary.com/circuito/image/upload/kg4nsvgdhfcg2zjyrfse",
-        "numericName": "",
-        "shortName": "Infrared Proximity Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>The Sharp GP2Y0A02YK0F is an Infrared proximity Sensor. It shines a beam of IR light from an LED, and measures the intensity of light that is bounced pack using a phototransistor. This IR sensor is more economical than sonar rangefinders, yet it provides much better performance than other IR alternatives. Interfacing to most microcontrollers is straightforward: the single analog output can be connected to an analog-to-digital converter for taking distance measurements.<br><strong>Returned Values</strong>: 15cm - 150cm detection range.</p><p><strong></p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The Sharp GP2Y0A02YK0F is an Infrared proximity Sensor. It shines a beam of IR light from an LED, and measures the intensity of light that is bounced pack using a phototransistor. This IR sensor is more economical than sonar rangefinders, yet it provides much better performance than other IR alternatives. Interfacing to most microcontrollers is straightforward: the single analog output can be connected to an analog-to-digital converter for taking distance measurements.<br><strong>Returned Values</strong>: 15cm - 150cm detection range.</p><p><strong></p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "IRProximity"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "IRProximity"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "IRProximity"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Vcc",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "IRProximity"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "Vout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vcc",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -1,37 +1,38 @@
 {
-    "name": "ResistiveTouchScreen",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "global": "",
-        "constructors": "    {{classname}} {{varname}} = {{classname}}();\n",
-        "setup": "    if (! {{varname}}.begin()) Serial.println(\"Touch controller not found!\");\n",
-        "snippetCode": "    uint16_t x, y;\n    uint8_t z;\n    if ({{varname}}.touched()) {\n      // read x & y & z;\n      while (! {{varname}}.bufferEmpty()) {\n        Serial.print({{varname}}.bufferSize());\n        {{varname}}.readData(&x, &y, &z);\n        Serial.print(\"->(\");\n        Serial.print(x); Serial.print(\", \");\n        Serial.print(y); Serial.print(\", \");\n        Serial.print(z);\n        Serial.println(\")\");\n      }\n      {{varname}}.writeRegister8(STMPE_INT_STA, 0xFF); // reset all ints\n    }\n    delay(10);"
-    },
-    "license": "MIT",
-    "instantiate": {
-        "classname": "Adafruit_STMPE610",
-        "ports": [],
-        "varname": "touch"
-    },
-    "files": [
-        "Adafruit_STMPE610.h",
-        "Adafruit_STMPE610.cpp",
-        "ResistiveTouchScreen_license"
-    ],
-    "includeHeaders": [
-        "Adafruit_STMPE610.h",
-        "Wire.h"
-    ]
+  "name": "ResistiveTouchScreen",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "",
+    "constructors": "{{classname}} {{varname}} = {{classname}}();\n",
+    "setup": "if (! {{varname}}.begin()) Serial.println(\"Touch controller not found!\");\n",
+    "snippetCode": "uint16_t x, y;\nuint8_t z;\nif ({{varname}}.touched()) {\n// read x & y & z;\nwhile (! {{varname}}.bufferEmpty()) {\nSerial.print({{varname}}.bufferSize());\n{{varname}}.readData(&x, &y, &z);\nSerial.print(\"->(\");\nSerial.print(x); Serial.print(\", \");\nSerial.print(y); Serial.print(\", \");\nSerial.print(z);\nSerial.println(\")\");\n}\n{{varname}}.writeRegister8(STMPE_INT_STA, 0xFF); // reset all ints\n}\ndelay(10);"
+  },
+  "license": "MIT",
+  "instantiate": {
+    "classname": "Adafruit_STMPE610",
+    "ports": [],
+    "varname": "touch"
+  },
+  "files": [
+    "Adafruit_STMPE610.h",
+    "Adafruit_STMPE610.cpp",
+    "ResistiveTouchScreen_license"
+  ],
+  "includeHeaders": [
+    "Adafruit_STMPE610.h",
+    "Wire.h"
+  ]
 }

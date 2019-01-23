@@ -1,163 +1,247 @@
 {
-    "name": "OLED128X64",
-    "category": [
-        "input"
+  "name": "OLED128X64",
+  "category": [
+    "input"
+  ],
+  "blockId": "466193",
+  "app": {
+    "appName": "Monochrome 1.3 inch 128x64 OLED graphic display",
+    "image": "http://res.cloudinary.com/circuito/image/upload/etkmo19y8ulblzdpit7r",
+    "numericName": "",
+    "shortName": "OLED 128x64",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "466193",
-    "app": {
-        "appName": "Monochrome 1.3 inch 128x64 OLED graphic display",
-        "image": "http://res.cloudinary.com/circuito/image/upload/etkmo19y8ulblzdpit7r",
-        "numericName": "",
-        "shortName": "OLED 128x64",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>This 1.3-inch OLED Breakout Board breaks out a small monochrome, white-on-black OLED. it packs a punch \u2013 the OLED display is crisp, and you can fit a deceivingly large amount of graphics on there.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This 1.3-inch OLED Breakout Board breaks out a small monochrome, white-on-black OLED. it packs a punch – the OLED display is crisp, and you can fit a deceivingly large amount of graphics on there.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "OLED128X64"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "OLED128X64"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "OLED128X64"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Data",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"MOSI","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Clk",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCK","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "RST",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "DC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "CS",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "OLED128X64"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Data",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MOSI",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "OLED128X64"
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Clk",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCK",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RST",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
+            "unique": true
+          }
+        },
+        {
+          "name": "DC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
             ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "OLED128X64"
-                }
+            "unique": true
+          }
+        },
+        {
+          "name": "CS",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
             ],
-            "ports": [
-                {
-                    "name": "Data",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"MOSI","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Clk",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCK","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "RST",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "DC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "CS",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "OLED128X64"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "OLED128X64"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Data",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Clk",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RST",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "DC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "CS",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

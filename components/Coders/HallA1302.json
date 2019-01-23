@@ -1,39 +1,40 @@
 {
-    "name": "HallA1302",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "HallA1302",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "//Calibrate sensor\n{{varname}}.calibrate();\n",
+    "snippetCode": "//Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\nint {{varname}}Val = {{varname}}.getMeasurment();\nSerial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "HallA1302",
+    "ports": [
+      "Vout"
     ],
-    "code": {
-        "setup": "    //Calibrate sensor\n    {{varname}}.calibrate();\n",
-        "snippetCode": "    //Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\n    int {{varname}}Val = {{varname}}.getMeasurment();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "HallA1302",
-        "ports": [
-            "Vout"
-        ],
-        "varname": "hallA"
-    },
-    "files": [
-        "HallA1302.h",
-        "HallA1302.cpp",
-        "HallA1302_license.txt",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "HallA1302.h"
-    ]
+    "varname": "hallA"
+  },
+  "files": [
+    "HallA1302.h",
+    "HallA1302.cpp",
+    "HallA1302_license.txt",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "HallA1302.h"
+  ]
 }

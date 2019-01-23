@@ -1,34 +1,35 @@
 {
-    "name": "PushButton",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "PushButton",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "{{varname}}.init();\n",
+    "snippetCode": "//Read pushbutton state. \n//if button is pressed function will return HIGH (1). if not function will return LOW (0). \n//for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n//if debounce is not working properly try changing 'debounceDelay' variable in Button.h\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Button",
+    "ports": [
+      "2"
     ],
-    "code": {
-        "setup": "    {{varname}}.init();\n",
-        "snippetCode": "        //Read pushbutton state. \n        //if button is pressed function will return HIGH (1). if not function will return LOW (0). \n        //for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n        //if debounce is not working properly try changing 'debounceDelay' variable in Button.h\n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Button",
-        "ports": [
-            "2"
-        ],
-        "varname": "pushButton"
-    },
-    "files": [
-        "Button.h",
-        "Button.cpp",
-        "Button_license.txt"
-    ]
+    "varname": "pushButton"
+  },
+  "files": [
+    "Button.h",
+    "Button.cpp",
+    "Button_license.txt"
+  ]
 }

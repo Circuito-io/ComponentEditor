@@ -1,121 +1,183 @@
 {
-    "name": "StepperMotorSmallGeared",
-    "category": [
-        "output"
+  "name": "StepperMotorSmallGeared",
+  "category": [
+    "output"
+  ],
+  "blockId": "9240",
+  "app": {
+    "appName": "Small Reduction Stepper Motor with EasyDriver - 5VDC 32-Step 1/16 Gearing",
+    "image": "http://res.cloudinary.com/circuito/image/upload/c8i9tlvjttlhfynta2w0",
+    "numericName": "28BYJ-48",
+    "shortName": "Small 5V Stepper Motor",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "9240",
-    "app": {
-        "appName": "Small Reduction Stepper Motor with EasyDriver - 5VDC 32-Step 1/16 Gearing",
-        "image": "http://res.cloudinary.com/circuito/image/upload/c8i9tlvjttlhfynta2w0",
-        "numericName": "28BYJ-48",
-        "shortName": "Small 5V Stepper Motor",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>5V stepper motor with gear 1/16 and 32 steps per revolution. It is good for small projects and experimenting with steppers.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "StepperMotorSmallGeared"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "StepperMotorSmallGeared"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "EasyDriver"
-                },
-                {
-                    "name": "motor",
-                    "part": "StepperMotorSmallGeared"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.OUT2A",
-                    "to": "motor.PINK"
-                },
-                {
-                    "from": "this.OUT2B",
-                    "to": "motor.YELLOW"
-                },
-                {
-                    "from": "this.OUT1A",
-                    "to": "motor.ORANGE"
-                },
-                {
-                    "from": "this.OUT1B",
-                    "to": "motor.BLUE"
-                },
-                {
-                    "from": "motor.RED",
-                    "to": "red"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "red",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Step",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Dir",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "V+",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}],
-                        "requiresLoad": 330
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
-                        "requiresLoad": 200
-                    }
-                }
-            ]
+          "name": "driver",
+          "part": "EasyDriver"
+        },
+        {
+          "name": "this",
+          "part": "StepperMotorSmallGeared"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "driver.OUT2A",
+          "to": "this.PINK"
+        },
+        {
+          "from": "driver.OUT2B",
+          "to": "this.YELLOW"
+        },
+        {
+          "from": "driver.OUT1A",
+          "to": "this.ORANGE"
+        },
+        {
+          "from": "driver.OUT1B",
+          "to": "this.BLUE"
+        },
+        {
+          "from": "this.RED",
+          "to": "red"
+        },
+        {
+          "from": "driver.GND",
+          "to": "gnd"
+        },
+        {
+          "from": "driver.Dir",
+          "to": "dir"
+        },
+        {
+          "from": "driver.Step",
+          "to": "step"
+        },
+        {
+          "from": "driver.V+",
+          "to": "v+"
+        }
+      ],
+      "ports": [
+        {
+          "name": "red",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "step",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "dir",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "v+",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 330
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 200
+          }
+        }
+      ]
+    }
+  ]
 }

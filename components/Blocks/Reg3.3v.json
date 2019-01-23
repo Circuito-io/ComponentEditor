@@ -1,67 +1,104 @@
 {
-    "name": "Reg3.3v",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "Reg3.3v",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LD11173.3v"
-                },
-                {
-                    "name": "capin",
-                    "pos": "0,120",
-                    "part": "CapCeramic100nF"
-                },
-                {
-                    "name": "capout",
-                    "pos": "20,80",
-                    "part": "CapElectro10uF"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Vin",
-                    "to": "capin.con0"
-                },
-                {
-                    "from": "this.0",
-                    "to": "capin.con1"
-                },
-                {
-                    "from": "this.Vout",
-                    "to": "capout.pos"
-                },
-                {
-                    "from": "this.0",
-                    "to": "capout.neg"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"3.3v"}],
-                        "providesLoad": 800
-                    }
-                },
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"6v"},{"cost":2,"spec":"","voltage":"5v"},{"cost":4,"spec":"","voltage":"9v"},{"cost":5,"spec":"","voltage":"12v"},{"cost":6,"spec":"","voltage":"7.4v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LD11173.3v"
+        },
+        {
+          "name": "capin",
+          "pos": "0,120",
+          "part": "CapCeramic100nF"
+        },
+        {
+          "name": "capout",
+          "pos": "20,80",
+          "part": "CapElectro10uF"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Vin",
+          "to": "capin.con0"
+        },
+        {
+          "from": "this.0",
+          "to": "capin.con1"
+        },
+        {
+          "from": "this.Vout",
+          "to": "capout.pos"
+        },
+        {
+          "from": "this.0",
+          "to": "capout.neg"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vout",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 800
+          }
+        },
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "6v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 4,
+                "spec": "",
+                "voltage": "9v"
+              },
+              {
+                "cost": 5,
+                "spec": "",
+                "voltage": "12v"
+              },
+              {
+                "cost": 6,
+                "spec": "",
+                "voltage": "7.4v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

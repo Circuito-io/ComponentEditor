@@ -1,120 +1,168 @@
 {
-    "name": "LedMatrixMini",
-    "category": [
-        "input"
+  "name": "LedMatrixMini",
+  "category": [
+    "input"
+  ],
+  "blockId": "912191",
+  "app": {
+    "appName": "Adafruit Mini 8x8 LED Matrix with I2C Backpack - Ultra Bright White",
+    "image": "http://res.cloudinary.com/circuito/image/upload/vuoubrdl32clmzd4x8bx",
+    "numericName": "",
+    "shortName": "8x8 LED Matrix",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "912191",
-    "app": {
-        "appName": "Adafruit Mini 8x8 LED Matrix with I2C Backpack - Ultra Bright White",
-        "image": "http://res.cloudinary.com/circuito/image/upload/vuoubrdl32clmzd4x8bx",
-        "numericName": "",
-        "shortName": "8x8 LED Matrix",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>Control a 8x8 LED matrix display using I2C.</p>",
-        "visible": true
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>Control a 8x8 LED matrix display using I2C.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "LedMatrixMini"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "LedMatrixMini"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedMatrixMini"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "C",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "D",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "LedMatrixMini"
+        }
+      ],
+      "ports": [
+        {
+          "name": "C",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "LedMatrixMini"
-            ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedMatrixMini"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "C",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "D",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "LedMatrixMini"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "LedMatrixMini"
+        }
+      ],
+      "ports": [
+        {
+          "name": "C",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

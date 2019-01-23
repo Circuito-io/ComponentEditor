@@ -1,82 +1,116 @@
 {
-    "name": "LCD20X4I2C",
-    "category": [
-        "output"
+  "name": "LCD20X4I2C",
+  "category": [
+    "output"
+  ],
+  "blockId": "417987",
+  "app": {
+    "appName": "LCD Display 20x4 I2C",
+    "image": "http://res.cloudinary.com/circuito/image/upload/efwbkgnfqose3kbfnzj8",
+    "numericName": "",
+    "shortName": "20x4 LCD",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "417987",
-    "app": {
-        "appName": "LCD Display 20x4 I2C",
-        "image": "http://res.cloudinary.com/circuito/image/upload/efwbkgnfqose3kbfnzj8",
-        "numericName": "",
-        "shortName": "20x4 LCD",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings via I2C interface.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A small LCD screen, allowing the display of short message or simple drawings via I2C interface.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LCD20X4I2C"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "LCD20X4I2C"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LCD20X4I2C",
-                    "rotation": 180
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"},{"cost":1,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"},{"cost":1,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LCD20X4I2C",
+          "rotation": 180
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "SDA",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

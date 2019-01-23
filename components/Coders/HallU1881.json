@@ -1,38 +1,39 @@
 {
-    "name": "HallU1881",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "HallU1881",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "//Read hall sensor state\n//Switch between the U1881 states by placing different poles of a magnet next to it.\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "HallU1881",
+    "ports": [
+      "Vout"
     ],
-    "code": {
-        "snippetCode": "    //Read hall sensor state\n    //Switch between the U1881 states by placing different poles of a magnet next to it.\n    bool {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "HallU1881",
-        "ports": [
-            "Vout"
-        ],
-        "varname": "hallU"
-    },
-    "files": [
-        "HallU1881.h",
-        "HallU1881.cpp",
-        "HallU1881_license.txt",
-        "Button.h",
-        "Button.cpp"
-    ],
-    "includeHeaders": [
-        "HallU1881.h"
-    ]
+    "varname": "hallU"
+  },
+  "files": [
+    "HallU1881.h",
+    "HallU1881.cpp",
+    "HallU1881_license.txt",
+    "Button.h",
+    "Button.cpp"
+  ],
+  "includeHeaders": [
+    "HallU1881.h"
+  ]
 }

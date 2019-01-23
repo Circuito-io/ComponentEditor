@@ -1,68 +1,85 @@
 {
-    "name": "SpeakerStereo3W",
-    "category": [
-        "output"
+  "name": "SpeakerStereo3W",
+  "category": [
+    "output"
+  ],
+  "blockId": "197254",
+  "app": {
+    "appName": "3W Stereo Speaker",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nb2vjq7uhsepzjulfvom",
+    "numericName": "",
+    "shortName": "3W Speaker",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "197254",
-    "app": {
-        "appName": "3W Stereo Speaker",
-        "image": "http://res.cloudinary.com/circuito/image/upload/nb2vjq7uhsepzjulfvom",
-        "numericName": "",
-        "shortName": "3W Speaker",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This stereo 3W, 8Ohm speaker is a great option to get some loud stereophonic sound out for your project, it's 70 * 30 * 16 mm.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This stereo 3W, 8Ohm speaker is a great option to get some loud stereophonic sound out for your project, it's 70 * 30 * 16 mm.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "SpeakerStereo3W"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ATTiny85",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "SpeakerStereo3W"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ATTiny85",
-                "Arduino101",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "SpeakerStereo3W"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "POS",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "NEG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "SpeakerStereo3W"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "POS",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "NEG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

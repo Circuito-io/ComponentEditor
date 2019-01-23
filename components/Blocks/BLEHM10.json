@@ -1,162 +1,256 @@
 {
-    "name": "BLEHM10",
-    "category": [
-        "input"
+  "name": "BLEHM10",
+  "category": [
+    "input"
+  ],
+  "blockId": "395589",
+  "app": {
+    "appName": "Bluetooth 4 (BLE) HM-10",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ivdaiq1yd6jwoakjb7lr",
+    "numericName": "HM10",
+    "shortName": "BLE",
+    "tags": [
+      "connectivity"
     ],
-    "blockId": "395589",
-    "app": {
-        "appName": "Bluetooth 4 (BLE) HM-10",
-        "image": "http://res.cloudinary.com/circuito/image/upload/ivdaiq1yd6jwoakjb7lr",
-        "numericName": "HM10",
-        "shortName": "BLE",
-        "tags": [
-            "connectivity"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Bluetooth Low Energy (BLE) serial device. Use it to communicate with other BLE devices like other arduino boards or Smartphones which support BLE.<br><strong>Returned Value</strong>: Strings via Serial communication.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"https://evothings.com/control-an-led-using-hm-10-ble-module-an-arduino-and-a-mobile-app/\">Control an Arduino via the HM-10 BLE module, from a mobile app on your smartphone</a></p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Bluetooth Low Energy (BLE) serial device. Use it to communicate with other BLE devices like other arduino boards or Smartphones which support BLE.<br><strong>Returned Value</strong>: Strings via Serial communication.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"https://evothings.com/control-an-led-using-hm-10-ble-module-an-arduino-and-a-mobile-app/\">Control an Arduino via the HM-10 BLE module, from a mobile app on your smartphone</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "HardwareSerial",
+      "coders": [
+        "BLEHM10_HardwareSerial"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "_HardwareSerial",
-            "coders": [
-                "BLEHM10_HardwareSerial"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "Arduino101",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "NodeMCU",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BLEHM10"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.RX",
-                    "to": "TXD"
-                },
-                {
-                    "from": "this.TX",
-                    "to": "RXD"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "TX",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"},{"cost":1,"spec":"RX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "RX",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"TX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "BLEHM10"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.RX",
+          "to": "TXD"
         },
         {
-            "name": "_SoftwareSerial",
-            "coders": [
-                "BLEHM10_SoftwareSerial"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "Arduino101",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BLEHM10"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.RX",
-                    "to": "TXD"
-                },
-                {
-                    "from": "this.TX",
-                    "to": "RXD"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "TXD",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "RXD",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 100
+          "from": "this.TX",
+          "to": "RXD"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "RX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "TX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "SoftwareSerial",
+      "coders": [
+        "BLEHM10_SoftwareSerial"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "BLEHM10"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.RX",
+          "to": "TXD"
+        },
+        {
+          "from": "this.TX",
+          "to": "RXD"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SerialType",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "TXD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 11,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "RXD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 11,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 100
+    }
+  ]
 }

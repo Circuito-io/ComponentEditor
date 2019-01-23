@@ -1,74 +1,117 @@
 {
-    "name": "CoinAcceptor",
-    "category": [
-        "input"
+  "name": "CoinAcceptor",
+  "category": [
+    "input"
+  ],
+  "blockId": "11719",
+  "app": {
+    "appName": "Coin Acceptor - Programmable (3 coin types)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/mscs9vsobpqhgwmwgru5",
+    "numericName": "",
+    "shortName": "Coin Acceptor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "11719",
-    "app": {
-        "appName": "Coin Acceptor - Programmable (3 coin types)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/mscs9vsobpqhgwmwgru5",
-        "numericName": "",
-        "shortName": "Coin Acceptor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A 3-type Coin Acceptor. This unit is programmable through the on-board display and buttons. After programming it will send serial data of its coin recognition.</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A 3-type Coin Acceptor. This unit is programmable through the on-board display and buttons. After programming it will send serial data of its coin recognition.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "CoinAcceptor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "CoinAcceptor"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CoinAcceptor"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":2,"spec":"SoftwareSerial","voltage":"5v"},{"cost":3,"spec":"SoftwareSerial","voltage":"3.3v"},{"cost":4,"spec":"RX","voltage":"5v"},{"cost":5,"spec":"RX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "12V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "CoinAcceptor"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 2,
+                "spec": "SoftwareSerial",
+                "voltage": "5v"
+              },
+              {
+                "cost": 3,
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 4,
+                "spec": "RX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 5,
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "12V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }
