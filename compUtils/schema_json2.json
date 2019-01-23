@@ -1,0 +1,688 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Schema",
+  "definitions": {
+    "intStringTupleArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "array",
+        "items": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": [
+              "string",
+              "array"
+            ]
+          }
+        ],
+        "additionalItems": false
+      }
+    },
+    "MultipleintStringTupleArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "array",
+        "items": [
+          {
+            "$ref": "#/definitions/intStringTupleArray"
+          }
+        ],
+        "additionalItems": false
+      }
+    },
+    "pinTypes": {
+      "type": "string",
+      "enum": [
+        "ArduinoUno",
+        "ArduinoMega",
+        "ArduinoProMini5v",
+        "ArduinoProMini3v3",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoLeonardo",
+        "ArduinoGemma",
+        "Arduino101",
+        "NodeMCU",
+        "RPI3B",
+        "ESP32DevKitC",
+        "ATMega328P",
+        "ATMega32U4",
+        "GND",
+        "Battery",
+        "12v",
+        "9v",
+        "7.2v",
+        "7.4v",
+        "6v",
+        "5v",
+        "3.7v",
+        "3.3v",
+        "Barrel",
+        "USB",
+        "Int",
+        "PWM",
+        "IORef",
+        "ADC",
+        "DAC",
+        "MISO",
+        "MOSI",
+        "SCK",
+        "MISO1",
+        "MOSI1",
+        "SCK1",
+        "SDA",
+        "SCL",
+        "SS",
+        "DigitalOut",
+        "DigitalIn",
+        "GndLoadSwitching",
+        "RX",
+        "TX",
+        "RX2",
+        "TX2",
+        "RX3",
+        "TX3",
+        "Timer0",
+        "Timer1",
+        "Timer2",
+        "SoftwareSerial",
+        "ESPSoftwareSerialRX",
+        "ESPSoftwareSerialTX",
+        "ESPSoftwareSerialTag",
+        "SRAMLoad",
+        "ESPSoftwareSerialRX1",
+        "ESPSoftwareSerialTX1",
+        "Speaker",
+        "DCMA1",
+        "DCMA2",
+        "DCMB1",
+        "DCMB2",
+        "USB_B",
+        "USB_MICRO",
+        "USB_MINI",
+        "BARREL_JACK",
+        "FTDI",
+        "DTR",
+        "CTS",
+        "CapTouch"
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "title": "part",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "object",
+          "properties": {
+            "ref": {
+              "type": "string"
+            },
+            "URL": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "ref"
+          ]
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "output",
+              "input",
+              "controller",
+              "power",
+              "connectivity",
+              "support",
+              "iot"
+            ]
+          }
+        },
+        "desc": {
+          "type": "string"
+        },
+        "bom": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              },
+              "SKU": {
+                "type": "string"
+              },
+              "packOf": {
+                "type": "integer"
+              },
+              "headers": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "image",
+              "link",
+              "price",
+              "SKU"
+            ]
+          }
+        },
+        "bomAux": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "placing": {
+          "type": "object",
+          "properties": {
+            "onBreadboard": {
+              "type": "boolean"
+            },
+            "row": {
+              "type": "integer"
+            },
+            "rotation": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "info": {
+          "type": "object",
+          "properties": {
+            "setup": {
+              "type": "string"
+            },
+            "test": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "symbol",
+        "category",
+        "desc",
+        "bom",
+        "info"
+      ]
+    },
+    {
+      "title": "block",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "blockId": {
+          "type": "string"
+        },
+        "altComp": {
+          "type": "array",
+          "items": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "app": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "appName": {
+              "type": "string"
+            },
+            "numericName": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "indicators": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "solder": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "verified": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "solder",
+                "verified"
+              ]
+            },
+            "desc": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "visible": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "appName",
+            "tags",
+            "indicators",
+            "desc",
+            "image"
+          ]
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "output",
+              "input",
+              "controller",
+              "power",
+              "connectivity",
+              "powerConnector",
+              "support",
+              "iot"
+            ]
+          }
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requires": {
+          "$ref": "#/definitions/intStringTupleArray"
+        },
+        "requiresExpansion": {
+          "$ref": "#/definitions/intStringTupleArray"
+        },
+        "chain": {
+          "type": "boolean"
+        },
+        "supportedPowerSupply": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requiredBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "derivesFrom": {
+          "type": "string"
+        },
+        "circuit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "coders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "supportedControllers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "requires": {
+                "$ref": "#/definitions/intStringTupleArray"
+              },
+              "priority": {
+                "type": "integer"
+              },
+              "altComp": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "parts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "part": {
+                      "type": "string"
+                    },
+                    "pos": {
+                      "type": "string"
+                    },
+                    "rotation": {
+                      "type": "integer"
+                    },
+                    "properties": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "name",
+                    "part"
+                  ]
+                }
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "part": {
+                      "type": "string"
+                    },
+                    "pos": {
+                      "type": "string"
+                    },
+                    "rotation": {
+                      "type": "integer"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "name",
+                    "part",
+                    "pos",
+                    "rotation"
+                  ]
+                }
+              },
+              "wires": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "from": {
+                      "type": "string"
+                    },
+                    "to": {
+                      "type": "string"
+                    },
+                    "waypoints": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
+                    "from",
+                    "to"
+                  ]
+                }
+              },
+              "ports": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "name",
+                    "interface"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "boolean"
+                    },
+                    "pos": {
+                      "type": "string"
+                    },
+                    "rotation": {
+                      "type": "integer"
+                    },
+                    "interface": {
+                      "type": "object",
+                      "properties": {
+                        "unique": {
+                          "type": "boolean"
+                        },
+                        "isBus": {
+                          "type": "boolean"
+                        },
+                        "chain": {
+                          "type": "boolean"
+                        },
+                        "chainTo": {
+                          "type": "string"
+                        },
+                        "requires": {
+                          "type": "array",
+                          "minItems": 1,
+                          "uniqueItems": true,
+                          "items": {
+                            "type": "array",
+                            "items": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "$ref": "#/definitions/pinTypes"
+                                }
+                              }
+                            ],
+                            "additionalItems": false
+                          }
+                        },
+                        "provides": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/definitions/pinTypes"
+                            }
+                          }
+                        },
+                        "providesLoad": {
+                          "type": "integer"
+                        },
+                        "requiresLoad": {
+                          "type": "integer"
+                        },
+                        "redirectLoad": {
+                          "type": "string"
+                        },
+                        "codename": {
+                          "type": [
+                            "string",
+                            "integer"
+                          ]
+                        },
+                        "codenameRedirect": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "coder",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "license",
+        "instantiate"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "supportedControllers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "insertFiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "includeHeaders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "instantiate": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "classname": {
+              "type": "string"
+            },
+            "varname": {
+              "type": "string"
+            },
+            "custominit": {
+              "type": "string"
+            },
+            "ports": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "code": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "filename": {
+              "type": "string"
+            },
+            "includes": {
+              "type": "string"
+            },
+            "comments": {
+              "type": "string"
+            },
+            "pins": {
+              "type": "string"
+            },
+            "global": {
+              "type": "string"
+            },
+            "constructors": {
+              "type": "string"
+            },
+            "setup": {
+              "type": "string"
+            },
+            "snippetCode": {
+              "type": "string"
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

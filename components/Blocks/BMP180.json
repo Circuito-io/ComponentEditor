@@ -119,40 +119,7 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            "ports": [
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
-                        "requiresLoad": 500
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                }
+            
             ]
           }
         }

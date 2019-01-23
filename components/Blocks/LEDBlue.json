@@ -38,22 +38,6 @@
         "Teensy32"
       ],
       "parts": [
-        {
-            "name": "5v",
-            "coders": [
-                "LEDBlue"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85"
-            ],
-            "parts": [
                 {
                     "name": "this",
                     "part": "LEDBlue",
@@ -88,26 +72,7 @@
                         "requires":[{"cost":0,"spec":"","voltage":"GND"}]
                     }
                 }
-            ],
-            "priority": 1,
-          "name": "this",
-          "part": "LEDBlue",
-          "properties": "Blue (470nm)"
-        },
-        {
-          "name": "Res1",
-          "part": "Res100O"
-        }
-      ],
-      "wires": [
-        {
-          "from": "this.Gnd",
-          "to": "Res1.con1"
-        },
-        {
-          "from": "Res1.con0",
-          "to": "GND"
-        }
+            
       ],
       "ports": [
         {
