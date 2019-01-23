@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { Tabs, Tab, Row, Col, Nav, MenuItem, NavDropdown, NavItem } from "react-bootstrap";
 import {
   getDefaultFormState,
@@ -66,7 +67,7 @@ class TabbedArrayItemHeader extends React.Component {
     let props = this.props;
     
     return (
-      <NavItem eventKey={props.index} onClick={()=>props.onSelect(props.index)}>
+      <NavItem eventKey={props.index} ref={props.index} onClick={()=>props.onSelect(props.index)}>
         <div style={{display: 'flex'}} className={'dropdown' + (this.state.isOpen ? ' open' : '')}>
           {props.tabName}
           {props.hasRemove && (
@@ -156,7 +157,7 @@ function TabbedArrayFieldTemplate(props) {
       >
         <Row className="clearfix">
           <Col sm={12}>
-            <Nav bsStyle="tabs">
+            <Nav bsStyle="tabs" activeKey={props.activeKey}>
               {props.items && props.items.map(p => <TabbedArrayItemHeader {...p} />)}
               {props.canAdd && (
               <NavItem eventKey="+" disabled={props.disabled || props.readonly}>+</NavItem>
@@ -322,7 +323,11 @@ export class TabbedArrayField extends React.Component {
     super(props);
 
     this.state = {activeKey: 0};
-  }
+  };
+
+  /*componentDidUpdate() {
+    ReactDOM.findDOMNode(this.refs[this.state.activeKey]).focus();
+  };*/
 
   onSelect = (activeKey) => {
     this.setState({activeKey});
