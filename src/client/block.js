@@ -161,7 +161,7 @@ export class Block extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div>
+        <div className="container">
           <Button
             onClick={event => {
               gitpod_open("Blocks/" + this.props.block + ".json");
