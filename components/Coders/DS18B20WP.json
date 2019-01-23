@@ -1,39 +1,40 @@
 {
-    "name": "DS18B20WP",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "DS18B20WP",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {},
+  "license": "GNU",
+  "instantiate": {
+    "classname": "DS18B20",
+    "ports": [
+      "DQ"
     ],
-    "code": {},
-    "license": "GNU",
-    "instantiate": {
-        "classname": "DS18B20",
-        "ports": [
-            "DQ"
-        ],
-        "varname": "ds18b20wp"
-    },
-    "files": [
-        "Dallas README.md",
-        "DS18B20_license.txt",
-        "OneWire.h",
-        "DS18B20.h",
-        "DallasTemperature.cpp",
-        "DS18B20.cpp",
-        "OneWire.cpp",
-        "DallasTemperature.h"
-    ],
-    "includeHeaders": [
-        "DS18B20.h"
-    ]
+    "varname": "ds18b20wp"
+  },
+  "files": [
+    "Dallas README.md",
+    "DS18B20_license.txt",
+    "OneWire.h",
+    "DS18B20.h",
+    "DallasTemperature.cpp",
+    "DS18B20.cpp",
+    "OneWire.cpp",
+    "DallasTemperature.h"
+  ],
+  "includeHeaders": [
+    "DS18B20.h"
+  ]
 }

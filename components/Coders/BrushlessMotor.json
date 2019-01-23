@@ -1,33 +1,34 @@
 {
-    "name": "BrushlessMotor",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "global": "        const int {{varname}}LowSpeed = 1000;  //Starting speed\n        const int {{varname}}FastSpeed = 2000; //Top speed\n",
-        "constructors": "        {{classname}} {{varname}};\n",
-        "setup": "        // WARNING! DO NOT CONNECT THE PROPELLER UNDER TEST!\n        {{varname}}.attach({{DATA}});\n        {{varname}}.writeMicroseconds({{varname}}LowSpeed);\n",
-        "snippetCode": "        // The motor will rotate, statrting from low speed to high speed gradually.\n        // WARNING! DO NOT CONNECT THE PROPELLER UNDER TEST!\n        // In order to reverse the motor direction disconnect the power from the circuit and replace any 2 of the 3 blue wires between the motor and the ESC (marked: 30A OPTO)\n        for(int {{varname}}RotationSpeed = {{varname}}LowSpeed; {{varname}}RotationSpeed <=  {{varname}}FastSpeed; {{varname}}RotationSpeed += 10)\n        {\n        {{varname}}.writeMicroseconds({{varname}}RotationSpeed);  // 2. spin the motor at the rated speed. This number gradually changes during the 'for' loop\n        Serial.println({{varname}}RotationSpeed);\n        delay(100);                              // 3. waits 100 milliseconds (0.1 sec). change the value in the brackets (100) for a longer or shorter delay in milliseconds.\n        }\n        for(int {{varname}}RotationSpeed = {{varname}}FastSpeed; {{varname}}RotationSpeed >=  {{varname}}LowSpeed; {{varname}}RotationSpeed -= 10)\n        {\n        {{varname}}.writeMicroseconds({{varname}}RotationSpeed);  // 2. spin the motor at the rated speed. This number gradually changes during the 'for' loop\n        Serial.println({{varname}}RotationSpeed);\n        delay(100);                              // 3. waits 100 milliseconds (0.1 sec). change the value in the brackets (100) for a longer or shorter delay in milliseconds.\n        }\n        {{varname}}.detach();                    // 4. release the brushless motor to conserve power and accidental operation."
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Servo",
-        "ports": [
-            "DATA"
-        ]
-    },
-    "files": [],
-    "includeHeaders": [
-        "Servo.h"
+  "name": "BrushlessMotor",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "const int {{varname}}LowSpeed = 1000;  //Starting speed\nconst int {{varname}}FastSpeed = 2000; //Top speed\n",
+    "constructors": "{{classname}} {{varname}};\n",
+    "setup": "// WARNING! DO NOT CONNECT THE PROPELLER UNDER TEST!\n{{varname}}.attach({{DATA}});\n{{varname}}.writeMicroseconds({{varname}}LowSpeed);\n",
+    "snippetCode": "// The motor will rotate, statrting from low speed to high speed gradually.\n// WARNING! DO NOT CONNECT THE PROPELLER UNDER TEST!\n// In order to reverse the motor direction disconnect the power from the circuit and replace any 2 of the 3 blue wires between the motor and the ESC (marked: 30A OPTO)\nfor(int {{varname}}RotationSpeed = {{varname}}LowSpeed; {{varname}}RotationSpeed <=  {{varname}}FastSpeed; {{varname}}RotationSpeed += 10)\n{\n{{varname}}.writeMicroseconds({{varname}}RotationSpeed);  // 2. spin the motor at the rated speed. This number gradually changes during the 'for' loop\nSerial.println({{varname}}RotationSpeed);\ndelay(100);                              // 3. waits 100 milliseconds (0.1 sec). change the value in the brackets (100) for a longer or shorter delay in milliseconds.\n}\nfor(int {{varname}}RotationSpeed = {{varname}}FastSpeed; {{varname}}RotationSpeed >=  {{varname}}LowSpeed; {{varname}}RotationSpeed -= 10)\n{\n{{varname}}.writeMicroseconds({{varname}}RotationSpeed);  // 2. spin the motor at the rated speed. This number gradually changes during the 'for' loop\nSerial.println({{varname}}RotationSpeed);\ndelay(100);                              // 3. waits 100 milliseconds (0.1 sec). change the value in the brackets (100) for a longer or shorter delay in milliseconds.\n}\n{{varname}}.detach();                    // 4. release the brushless motor to conserve power and accidental operation."
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Servo",
+    "ports": [
+      "DATA"
     ]
+  },
+  "files": [],
+  "includeHeaders": [
+    "Servo.h"
+  ]
 }

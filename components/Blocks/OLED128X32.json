@@ -1,136 +1,196 @@
 {
-    "name": "OLED128X32",
-    "category": [
-        "output"
+  "name": "OLED128X32",
+  "category": [
+    "output"
+  ],
+  "blockId": "985157",
+  "app": {
+    "appName": "Monochrome 128x32 I2C OLED graphic display",
+    "image": "http://res.cloudinary.com/circuito/image/upload/vigjwz5uzm2hnq0f62ad",
+    "numericName": "",
+    "shortName": "OLED",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "985157",
-    "app": {
-        "appName": "Monochrome 128x32 I2C OLED graphic display",
-        "image": "http://res.cloudinary.com/circuito/image/upload/vigjwz5uzm2hnq0f62ad",
-        "numericName": "",
-        "shortName": "OLED",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>This is a 1-inch diagonal OLED Breakout Board. It communicates via I2C, and altough it's small this OLED is very readable due to the high contrast.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This is a 1-inch diagonal OLED Breakout Board. It communicates via I2C, and altough it's small this OLED is very readable due to the high contrast.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "OLED128X32"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "OLED128X32"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "OLED128X32"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "RST",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "OLED128X32"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "OLED128X32"
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RST",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "OLED128X32"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "RST",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "OLED128X32"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "OLED128X32"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RST",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

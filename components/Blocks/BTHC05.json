@@ -1,158 +1,252 @@
 {
-    "name": "BTHC05",
-    "category": [
-        "input"
+  "name": "BTHC05",
+  "category": [
+    "input"
+  ],
+  "blockId": "2631981",
+  "app": {
+    "appName": "HC - 05 Bluetooth Serial Module",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ddsimv6epfofcnhtisxn",
+    "numericName": "HC05",
+    "shortName": "Bluetooth Transceiver",
+    "tags": [
+      "connectivity"
     ],
-    "blockId": "2631981",
-    "app": {
-        "appName": "HC - 05 Bluetooth Serial Module",
-        "image": "http://res.cloudinary.com/circuito/image/upload/ddsimv6epfofcnhtisxn",
-        "numericName": "HC05",
-        "shortName": "Bluetooth Transceiver",
-        "tags": [
-            "connectivity"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Acts like a bluetooth serial monitor. Enables the arduino to exchange data with other bluetooth devices such as PC or Android smartphone.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Acts like a bluetooth serial monitor. Enables the arduino to exchange data with other bluetooth devices such as PC or Android smartphone.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "HardwareSerial",
+      "coders": [
+        "BTHC05_HardwareSerial"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "_HardwareSerial",
-            "coders": [
-                "BTHC05_HardwareSerial"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BTHC05"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.RX",
-                    "to": "TXD"
-                },
-                {
-                    "from": "this.TX",
-                    "to": "RXD"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
-                        "requiresLoad": 200
-                    }
-                },
-                {
-                    "name": "TX",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"},{"cost":1,"spec":"RX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "RX",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"TX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "BTHC05"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.RX",
+          "to": "TXD"
         },
         {
-            "name": "_SoftwareSerial",
-            "coders": [
-                "BTHC05_SoftwareSerial"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BTHC05"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.RX",
-                    "to": "TXD"
-                },
-                {
-                    "from": "this.TX",
-                    "to": "RXD"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
-                        "requiresLoad": 200
-                    }
-                },
-                {
-                    "name": "TXD",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "RXD",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 100
+          "from": "this.TX",
+          "to": "RXD"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 200
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "RX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "TX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "SoftwareSerial",
+      "coders": [
+        "BTHC05_SoftwareSerial"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "BTHC05"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.RX",
+          "to": "TXD"
+        },
+        {
+          "from": "this.TX",
+          "to": "RXD"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SerialType",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 200
+          }
+        },
+        {
+          "name": "TXD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 11,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "RXD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 11,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 100
+    }
+  ]
 }

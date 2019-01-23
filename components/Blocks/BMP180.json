@@ -1,53 +1,124 @@
 {
-    "name": "BMP180",
-    "category": [
-        "input"
+  "name": "BMP180",
+  "category": [
+    "input"
+  ],
+  "blockId": "11824",
+  "app": {
+    "appName": "BMP180 - Barometric Pressure, Temperature, Altitude Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/rj9o9spmbsyli5v3mqyx",
+    "numericName": "BMP180",
+    "shortName": "Barometric Pressure Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "11824",
-    "app": {
-        "appName": "BMP180 - Barometric Pressure, Temperature, Altitude Sensor",
-        "image": "http://res.cloudinary.com/circuito/image/upload/rj9o9spmbsyli5v3mqyx",
-        "numericName": "BMP180",
-        "shortName": "Barometric Pressure Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>High precision, low power digital barometer.<br><strong>Returned Values</strong>: Can measure air pressure from 300-110 hPa with 0.02 hPa accuracy.</p>\n<p><strong>Requires</strong>: Soldering 4 pin male header.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>High precision, low power digital barometer.<br><strong>Returned Values</strong>: Can measure air pressure from 300-110 hPa with 0.02 hPa accuracy.</p>\n<p><strong>Requires</strong>: Soldering 4 pin male header.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "BMP180"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "BMP180"
+          "name": "this",
+          "part": "BMP180"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SDA",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BMP180"
-                }
-            ],
+            "requiresLoad": 500
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
             "ports": [
                 {
                     "name": "SDA",
@@ -83,6 +154,9 @@
                     }
                 }
             ]
+          }
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -1,35 +1,37 @@
 {
-    "name": "WaterLevelSNC",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "Teensy32",
-        "ATTiny85"
+  "name": "WaterLevelSNC",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32",
+    "ATTiny85",
+    "Teensy32"
+  ],
+  "code": {
+    "setup": "{{varname}}.init();\n",
+    "snippetCode": "//read Water Level Sensor state. \n//If the Water Level Sensor detects the liquid level, it will output HIGH (1) and turn the LED ON. \n//If no liquid is detected it output LOW (0) and turn the LED off.. \nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Button",
+    "ports": [
+      "SIG"
     ],
-    "code": {"setup": "    {{varname}}.init();\n",
-        "snippetCode": "        //read Water Level Sensor state. \n        //If the Water Level Sensor detects the liquid level, it will output HIGH (1) and turn the LED ON. \n        //If no liquid is detected it output LOW (0) and turn the LED off.. \n        bool {{varname}}Val = {{varname}}.read();\n        Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Button",
-        "ports": [
-            "SIG"
-        ],
-        "varname": "WaterLevelSensor"
-    },
-    "files": [
-        "Button.h",
-        "Button.cpp",
-        "Button_license.txt"
-    ],
-    "includeHeaders": []
+    "varname": "WaterLevelSensor"
+  },
+  "files": [
+    "Button.h",
+    "Button.cpp",
+    "Button_license.txt"
+  ],
+  "includeHeaders": []
 }

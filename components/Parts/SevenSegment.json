@@ -1,32 +1,32 @@
 {
-    "name": "SevenSegment",
-    "symbol": {
-        "ref": "circuito_7-Segment Serial Display.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/mpl643xcxahthjbiykwo"
-    },
-    "displayName": "7 - Segment Serial Display",
-    "category": [
-        "output"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/e5o3is7ilwmlgrnpdfq5",
-            "link": "https://octopart.com/com-11441-sparkfun-68039942",
-            "price": "12.95",
-            "SKU": "1568-1533-ND",
-            "headers": [
-                10,
-                "MaleHeaders"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "SevenSegment",
+  "symbol": {
+    "ref": "circuito_7-Segment Serial Display.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/mpl643xcxahthjbiykwo"
+  },
+  "displayName": "7 - Segment Serial Display",
+  "category": [
+    "output"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/e5o3is7ilwmlgrnpdfq5",
+      "link": "https://octopart.com/com-11441-sparkfun-68039942",
+      "price": "12.95",
+      "SKU": "1568-1533-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 10
+      }
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

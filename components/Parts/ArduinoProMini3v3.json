@@ -1,34 +1,34 @@
 {
-    "name": "ArduinoProMini3v3",
-    "symbol": {
-        "ref": "circuito_Arduino Pro Mini 328 - 3.3V-8MHz.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/znxuyeslg0xydyvzpra5"
-    },
-    "displayName": "Arduino Pro Mini 328 - 3.3V/8MHz",
-    "category": [
-        "controller"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/yb4blyyzok85uuhgdjwc",
-            "link": "https://octopart.com/dev-11114-sparkfun-55832349",
-            "price": "9.95",
-            "SKU": "1568-1054-ND",
-            "headers": [
-                34,
-                "MaleHeaders"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true,
-        "row": 2,
-        "rotation": 90
+  "name": "ArduinoProMini3v3",
+  "symbol": {
+    "ref": "circuito_Arduino Pro Mini 328 - 3.3V-8MHz.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/znxuyeslg0xydyvzpra5"
+  },
+  "displayName": "Arduino Pro Mini 328 - 3.3V/8MHz",
+  "category": [
+    "controller"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/yb4blyyzok85uuhgdjwc",
+      "link": "https://octopart.com/dev-11114-sparkfun-55832349",
+      "price": "9.95",
+      "SKU": "1568-1054-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 34
+      }
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true,
+    "row": 2,
+    "rotation": 90
+  }
 }

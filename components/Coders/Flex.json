@@ -1,37 +1,38 @@
 {
-    "name": "Flex",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "snippetCode": "    // Read Flex sensor value.\n    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Flex",
-        "ports": [
-            "Sig"
-        ]
-    },
-    "files": [
-        "flex_license.txt",
-        "Flex.cpp",
-        "Flex.h",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "Flex.h"
+  "name": "Flex",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "// Read Flex sensor value.\nint {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"{{varname}}Val: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Flex",
+    "ports": [
+      "Sig"
     ]
+  },
+  "files": [
+    "flex_license.txt",
+    "Flex.cpp",
+    "Flex.h",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "Flex.h"
+  ]
 }

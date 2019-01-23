@@ -1,212 +1,284 @@
 {
-    "name": "HCSR04",
-    "category": [
-        "input"
+  "name": "HCSR04",
+  "category": [
+    "input"
+  ],
+  "blockId": "13959",
+  "app": {
+    "appName": "Ultrasonic Sensor - HC-SR04",
+    "image": "http://res.cloudinary.com/circuito/image/upload/hc2bnew6g3ku7cc85osy",
+    "numericName": "HCSR04",
+    "shortName": "Ultrasonic Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "13959",
-    "app": {
-        "appName": "Ultrasonic Sensor - HC-SR04",
-        "image": "http://res.cloudinary.com/circuito/image/upload/hc2bnew6g3ku7cc85osy",
-        "numericName": "HCSR04",
-        "shortName": "Ultrasonic Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A low cost ultrasonic sensor, for your common range measuring needs.</p>\n<p><strong>Returned Values</strong>: 2cm - 400cm detection range, with an accuracy of 3mm.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Obstacle-Avoider-Using-HC-SR04-Ultrasonic-Sensor/\">Obstacle Avoider</a><br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/hc-sr04/\">Learn More</a></p></p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A low cost ultrasonic sensor, for your common range measuring needs.</p>\n<p><strong>Returned Values</strong>: 2cm - 400cm detection range, with an accuracy of 3mm.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Obstacle-Avoider-Using-HC-SR04-Ultrasonic-Sensor/\">Obstacle Avoider</a><br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/hc-sr04/\">Learn More</a></p></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "3v3",
+      "coders": [
+        "HCSR043v3"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "3v3",
-            "coders": [
-                "HCSR043v3"
-            ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "HCSR04"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res470O"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.GND",
-                    "to": "r2.con1"
-                },
-                {
-                    "from": "r2.con0",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.ECHO",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "Echo"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "TRIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Echo",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "this",
+          "part": "HCSR04"
         },
         {
-            "name": "5v",
-            "coders": [
-                "HCSR04"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "HCSR04"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "TRIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "ECHO",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res470O"
         },
         {
-            "name": "_Gemma",
-            "coders": [
-                "HCSR04"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "HCSR04"
-                },
-                {
-                    "name": "Res",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.TRIG",
-                    "to": "Res.con0"
-                },
-                {
-                    "from": "this.GND",
-                    "to": "Res.con1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "TRIG",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "ECHO",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 3
+          "name": "r2",
+          "part": "Res1KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "r2.con1"
+        },
+        {
+          "from": "r2.con0",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.ECHO",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "Echo"
+        }
+      ],
+      "ports": [
+        {
+          "name": "TRIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Echo",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    },
+    {
+      "name": "5v",
+      "coders": [
+        "HCSR04"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "HCSR04"
+        }
+      ],
+      "ports": [
+        {
+          "name": "TRIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ECHO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    },
+    {
+      "name": "Gemma",
+      "coders": [
+        "HCSR04"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "HCSR04"
+        },
+        {
+          "name": "Res",
+          "part": "Res1KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.TRIG",
+          "to": "Res.con0"
+        },
+        {
+          "from": "this.GND",
+          "to": "Res.con1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "TRIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ECHO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 3
+    }
+  ]
 }

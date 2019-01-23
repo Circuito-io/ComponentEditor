@@ -1,80 +1,119 @@
 {
-    "name": "CapSenseMPR121",
-    "category": [
-        "input"
+  "name": "CapSenseMPR121",
+  "category": [
+    "input"
+  ],
+  "blockId": "583741",
+  "app": {
+    "appName": "Adafruit MPR121 - 12-Key Capacitive Touch Sensor Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/gcliifyr7wle7gnsxbo9",
+    "numericName": "MPR121",
+    "shortName": "Capacitive Touch Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "583741",
-    "app": {
-        "appName": "Adafruit MPR121 - 12-Key Capacitive Touch Sensor Breakout",
-        "image": "http://res.cloudinary.com/circuito/image/upload/gcliifyr7wle7gnsxbo9",
-        "numericName": "MPR121",
-        "shortName": "Capacitive Touch Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>With this breakout board you can connect up to 12 individual touch pads to your microcontroller project.</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>With this breakout board you can connect up to 12 individual touch pads to your microcontroller project.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "CapSenseMPR121"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "CapSenseMPR121"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CapSenseMPR121"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"},{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":1,"spec":"SDA","voltage":"3.3v"},{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":1,"spec":"SCL","voltage":"3.3v"},{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "CapSenseMPR121"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

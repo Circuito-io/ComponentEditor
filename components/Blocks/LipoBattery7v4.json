@@ -1,74 +1,90 @@
 {
-    "name": "LipoBattery7v4",
-    "category": [
-        "power"
+  "name": "LipoBattery7v4",
+  "category": [
+    "power"
+  ],
+  "blockId": "11856",
+  "app": {
+    "appName": "Lithium Polymer Battery 7.4v",
+    "image": "http://res.cloudinary.com/circuito/image/upload/bpaxgam0z62jjbjlv9xx",
+    "numericName": "",
+    "shortName": "LiPo Battery 7.4V",
+    "tags": [
+      "powerSupplies"
     ],
-    "blockId": "11856",
-    "app": {
-        "appName": "Lithium Polymer Battery 7.4v",
-        "image": "http://res.cloudinary.com/circuito/image/upload/bpaxgam0z62jjbjlv9xx",
-        "numericName": "",
-        "shortName": "LiPo Battery 7.4V",
-        "tags": [
-            "powerSupplies"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": false,
+      "solder": false
     },
-    "altComp": [
-        100,
-        "Battery8xAA"
-    ],
-    "circuits": [
+    "desc": "<p>A great way to power any R/C, robotic, or portable project. This is an excellent choice for anything that requires a small battery with a lot of punch.<br>The battery has two cells and outputs 7.4V.<br>Because this is a dual cell battery pack, a special charger is needed. It is not compatible with single cell chargers.</p>\n",
+    "visible": true
+  },
+  "altComp": [
+    100,
+    "Battery8xAA"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LipoBattery7v4"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "provides":[{"spec":"","voltage":"7.4v"}],
-                        "providesLoad": 5000
-                    }
-                },
-                {
-                    "name": "PowerType",
-                    "interface": {
-                        "provides":[{"spec":"Battery","voltage":""}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LipoBattery7v4"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "7.4v"
+              }
+            ],
+            "providesLoad": 5000
+          }
+        },
+        {
+          "name": "PowerType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "Battery",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

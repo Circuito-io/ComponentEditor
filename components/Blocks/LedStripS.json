@@ -1,93 +1,116 @@
 {
-    "name": "LedStripS",
-    "category": [
-        "output"
+  "name": "LedStripS",
+  "category": [
+    "output"
+  ],
+  "blockId": "12022",
+  "app": {
+    "appName": "Single Color LED Weatherproof Flexi-Strip 60 LED - (1 m)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/yrfb5ovgdbyboqfsjexo",
+    "numericName": "",
+    "shortName": "Single Color LED Strip",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "12022",
-    "app": {
-        "appName": "Single Color LED Weatherproof Flexi-Strip 60 LED - (1 m)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/yrfb5ovgdbyboqfsjexo",
-        "numericName": "",
-        "shortName": "Single Color LED Strip",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>One meter non-addressable Single Color LED strips with 60 LED's per meter.</p>",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>One meter non-addressable Single Color LED strips with 60 LED's per meter.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LedStripS"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "LedStripS"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedStripS",
-                    "rotation": 90
-                },
-                {
-                    "name": "t1",
-                    "part": "TNMOSFETFQP"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.SIG",
-                    "to": "t1.D"
-                },
-                {
-                    "from": "t1.S",
-                    "to": "Gnd"
-                },
-                {
-                    "from": "t1.G",
-                    "to": "Sig"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LedStripS",
+          "rotation": 90
+        },
+        {
+          "name": "t1",
+          "part": "TNMOSFETFQP"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.SIG",
+          "to": "t1.D"
+        },
+        {
+          "from": "t1.S",
+          "to": "Gnd"
+        },
+        {
+          "from": "t1.G",
+          "to": "Sig"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

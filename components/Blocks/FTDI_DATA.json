@@ -1,107 +1,159 @@
 {
-    "name": "FTDI_DATA",
-    "category": [
-        "support"
-    ],
-    "blockId": "1514678",
-    "circuits": [
+  "name": "FTDI_DATA",
+  "category": [
+    "support"
+  ],
+  "blockId": "1514678",
+  "circuits": [
+    {
+      "name": "5v",
+      "altComp": [
+        150,
+        "PowerSupply12v2A"
+      ],
+      "supportedControllers": [
+        "ATMega328P"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "altComp": [
-                150,
-                "PowerSupply12v2A"
-            ],
-            "supportedControllers": [
-                "ATMega328P"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FTDI5v"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "CTS",
-                    "interface": {
-                        "provides":[{"spec":"CTS","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "RX",
-                    "interface": {
-                        "provides":[{"spec":"RX","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "TX",
-                    "interface": {
-                        "provides":[{"spec":"TX","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "DTR",
-                    "interface": {
-                        "provides":[{"spec":"DTR","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "FTDI5v"
+        }
+      ],
+      "ports": [
+        {
+          "name": "CTS",
+          "interface": {
+            "provides": [
+              {
+                "spec": "CTS",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "altComp": [
-                150,
-                "PowerSupply12v2A"
-            ],
-            "supportedControllers": [
-                "ATMega328P"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "FTDI3.3v"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "CTS",
-                    "interface": {
-                        "provides":[{"spec":"CTS","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "RX",
-                    "interface": {
-                        "provides":[{"spec":"RX","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "TX",
-                    "interface": {
-                        "provides":[{"spec":"TX","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "DTR",
-                    "interface": {
-                        "provides":[{"spec":"DTR","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "RX",
+          "interface": {
+            "provides": [
+              {
+                "spec": "RX",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "provides": [
+              {
+                "spec": "TX",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DTR",
+          "interface": {
+            "provides": [
+              {
+                "spec": "DTR",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "altComp": [
+        150,
+        "PowerSupply12v2A"
+      ],
+      "supportedControllers": [
+        "ATMega328P"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "FTDI3.3v"
+        }
+      ],
+      "ports": [
+        {
+          "name": "CTS",
+          "interface": {
+            "provides": [
+              {
+                "spec": "CTS",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "provides": [
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "provides": [
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DTR",
+          "interface": {
+            "provides": [
+              {
+                "spec": "DTR",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

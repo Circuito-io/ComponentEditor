@@ -1,74 +1,92 @@
 {
-    "name": "WaterLevelSNC",
-    "category": [
-        "input"
+  "name": "WaterLevelSNC",
+  "category": [
+    "input"
+  ],
+  "blockId": "401431",
+  "app": {
+    "appName": "Gravity: Non-contact Digital Water / Liquid Level Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/client/circuito_WaterLevelSensorNC_n33gc0",
+    "numericName": "",
+    "shortName": "Non-contact Liquid Level Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "401431",
-    "app": {
-        "appName": "Gravity: Non-contact Digital Water / Liquid Level Sensor",
-        "image": "http://res.cloudinary.com/circuito/image/upload/client/circuito_WaterLevelSensorNC_n33gc0",
-        "numericName": "",
-        "shortName": "Non-contact Liquid Level Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>The Liquid Level Sensor provides single point liquid detection via a TTL compatible push/pull output.</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The Liquid Level Sensor provides single point liquid detection via a TTL compatible push/pull output.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "WaterLevelSNC"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "WaterLevelSNC"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "WaterLevelSNC"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SIG",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "WaterLevelSNC"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "SIG",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

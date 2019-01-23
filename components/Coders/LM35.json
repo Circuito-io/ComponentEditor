@@ -1,38 +1,39 @@
 {
-    "name": "LM35",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "LM35",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "//Get Measurment from LM35 temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[°C]\"));\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "LM35",
+    "ports": [
+      "Vout"
     ],
-    "code": {
-        "snippetCode": "    //Get Measurment from LM35 temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "LM35",
-        "ports": [
-            "Vout"
-        ],
-        "varname": "lm35"
-    },
-    "files": [
-        "LM35.h",
-        "LM35_license.txt",
-        "LM35.cpp",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "LM35.h"
-    ]
+    "varname": "lm35"
+  },
+  "files": [
+    "LM35.h",
+    "LM35_license.txt",
+    "LM35.cpp",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "LM35.h"
+  ]
 }

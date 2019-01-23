@@ -1,75 +1,93 @@
 {
-    "name": "floraRGBNeoPixel2",
-    "category": [
-        "output"
+  "name": "floraRGBNeoPixel2",
+  "category": [
+    "output"
+  ],
+  "blockId": "214077",
+  "app": {
+    "appName": "Flora RGB Smart NeoPixel version 2",
+    "image": "http://res.cloudinary.com/circuito/image/upload/hcatijixfmyknxi8esba",
+    "numericName": "WS2812",
+    "shortName": "Flora NeoPixel",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "214077",
-    "app": {
-        "appName": "Flora RGB Smart NeoPixel version 2",
-        "image": "http://res.cloudinary.com/circuito/image/upload/hcatijixfmyknxi8esba",
-        "numericName": "WS2812",
-        "shortName": "Flora NeoPixel",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>This pack contains 4 RGB NeoPixels leds. The leds are chainable, which means it possible to control all of them with only one wire.  Nevertheless every pixel led can controlled separately. This is the second faster version (800KHz).</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This pack contains 4 RGB NeoPixels leds. The leds are chainable, which means it possible to control all of them with only one wire.  Nevertheless every pixel led can controlled separately. This is the second faster version (800KHz).</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "floraRGBNeoPixel2"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "floraRGBNeoPixel2"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "floraRGBNeoPixel2"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "DIN",
-                    "interface": {
-                        "chainTo": "DOUT",
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "DOUT",
-                    "interface": {
-                        "chain": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "floraRGBNeoPixel2"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "DIN",
+          "interface": {
+            "chainTo": "DOUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "DOUT",
+          "interface": {
+            "chain": true
+          }
+        }
+      ]
+    }
+  ]
 }

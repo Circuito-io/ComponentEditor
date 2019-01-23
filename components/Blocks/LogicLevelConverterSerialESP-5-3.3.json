@@ -1,66 +1,116 @@
 {
-    "name": "LogicLevelConverterSerialESP-5-3.3",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "LogicLevelConverterSerialESP-5-3.3",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LogicLevelConverter"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "LV",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "HV1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "LV1",
-                    "interface": {
-                        "codenameRedirect": "HV2",
-                        "provides":[{"spec":"RX","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "LV2",
-                    "interface": {
-                        "codenameRedirect": "HV1",
-                        "provides":[{"spec":"TX","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "HV",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "HV2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"RX","voltage":"5v"},{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "LogicLevelConverter"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "LV",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "TX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "LV1",
+          "interface": {
+            "codenameRedirect": "HV2",
+            "provides": [
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "LV2",
+          "interface": {
+            "codenameRedirect": "HV1",
+            "provides": [
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "HV2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "RX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ]
+    }
+  ]
 }

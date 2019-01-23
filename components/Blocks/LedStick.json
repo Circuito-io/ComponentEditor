@@ -1,110 +1,133 @@
 {
-    "name": "LedStick",
-    "category": [
-        "output"
+  "name": "LedStick",
+  "category": [
+    "output"
+  ],
+  "blockId": "216577",
+  "app": {
+    "appName": "NeoPixel Stick - 8 x 5050 RGB LED",
+    "image": "http://res.cloudinary.com/circuito/image/upload/upkpifqpnk6apidld0f0",
+    "numericName": "WS2812",
+    "shortName": "NeoPixel Stick",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "216577",
-    "app": {
-        "appName": "NeoPixel Stick - 8 x 5050 RGB LED",
-        "image": "http://res.cloudinary.com/circuito/image/upload/upkpifqpnk6apidld0f0",
-        "numericName": "WS2812",
-        "shortName": "NeoPixel Stick",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>An 8 addressable RGB LED stick. It has a single data line for control. You can chain these units by connecting the output of one stick to the input of another.</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>An 8 addressable RGB LED stick. It has a single data line for control. You can chain these units by connecting the output of one stick to the input of another.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LedStick"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "LedStick"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedStick"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "+5VB",
-                    "interface": {
-                        "chainTo": "+5VA",
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
-                        "requiresLoad": 200
-                    }
-                },
-                {
-                    "name": "DATAIN",
-                    "interface": {
-                        "chainTo": "DATAOUT",
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GNDC",
-                    "interface": {
-                        "chainTo": "GNDA",
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "+5VA",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "DATAOUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "GNDA",
-                    "interface": {
-                        "chain": true
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "PowerSupply5v"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "LedStick"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "+5VB",
+          "interface": {
+            "chainTo": "+5VA",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 200
+          }
+        },
+        {
+          "name": "DATAIN",
+          "interface": {
+            "chainTo": "DATAOUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GNDC",
+          "interface": {
+            "chainTo": "GNDA",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "+5VA",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "DATAOUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "GNDA",
+          "interface": {
+            "chain": true
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 10,
+          "blocks": [
+            "PowerSupply5v"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "Reg5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

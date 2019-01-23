@@ -1,25 +1,23 @@
 {
-    "name": "Teensy32",
-    "category": [
-        "controller"
+  "name": "Teensy32",
+  "category": [
+    "controller"
+  ],
+  "blockId": "771055",
+  "app": {
+    "appName": "PJRC Teensy 3.2 - R3",
+    "image": "http://res.cloudinary.com/circuito/image/upload/gnm7n2cprfly8vk1cxch",
+    "numericName": "",
+    "shortName": "PJRC Teensy 3.2",
+    "tags": [
+      "controllers"
     ],
-    "blockId": "771055",
-    "app": {
-        "appName": "PJRC Teensy 3.2 - R3",
-        "image": "http://res.cloudinary.com/circuito/image/upload/gnm7n2cprfly8vk1cxch",
-        "numericName": "",
-        "shortName": "PJRC Teensy 3.2",
-        "tags": [
-            "controllers"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>The PJRC Teensy 3.2 is a small, complete, and breadboard-friendly board based on the Freescale MK20DX256 32 bit ARM Cortex-M4.<br> developed in conjunction with Arduino, </p>\n<p>It has 24 5V tolerance digital input/output pins for breadboard use (of which 10 can be used as PWM outputs and 10 as analog inputs), a 72 MHz crystal oscillator (Can be overclocked to 96MHz).</p>\n<p>It sports 256K Flash Memory, 64K RAM, 2K EEPROM.</p>\n<p>In order to program the teensy through the Arduino IDE, all you have to do is to download & install the <a target=\"_blank\" href=\"https://www.pjrc.com/teensy/td_download.html\">Teensyduino add-on</a>.",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
+<<<<<<< HEAD
     "altComp": [
         1000,
         "ArduinoUno"
@@ -332,9 +330,978 @@
                         "Reg5v"
                     ]
                 }
-            ]
+=======
+    "desc": "<p>The PJRC Teensy 3.2 is a small, complete, and breadboard-friendly board based on the Freescale MK20DX256 32 bit ARM Cortex-M4.<br> developed in conjunction with Arduino, </p>\n<p>It has 24 5V tolerance digital input/output pins for breadboard use (of which 10 can be used as PWM outputs and 10 as analog inputs), a 72 MHz crystal oscillator (Can be overclocked to 96MHz).</p>\n<p>It sports 256K Flash Memory, 64K RAM, 2K EEPROM.</p>\n<p>In order to program the teensy through the Arduino IDE, all you have to do is to download & install the <a target=\"_blank\" href=\"https://www.pjrc.com/teensy/td_download.html\">Teensyduino add-on</a>.",
+    "visible": true
+  },
+  "altComp": [
+    1000,
+    "ArduinoUno"
+  ],
+  "circuits": [
+    {
+      "name": "USB",
+      "supportedControllers": [
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "Teensy32"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
         },
         {
+          "name": "1",
+          "interface": {
+            "codename": 1,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "codename": 2,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "3",
+          "interface": {
+            "codename": 3,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "4",
+          "interface": {
+            "codename": 4,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "5",
+          "interface": {
+            "codename": 5,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "6",
+          "interface": {
+            "codename": 6,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "7",
+          "interface": {
+            "codename": 7,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX3",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "8",
+          "interface": {
+            "codename": 8,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX3",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "9",
+          "interface": {
+            "codename": 9,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "10",
+          "interface": {
+            "codename": 10,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SS",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "11",
+          "interface": {
+            "codename": 11,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "12",
+          "interface": {
+            "codename": 12,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "13",
+          "interface": {
+            "codename": 13,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "14",
+          "interface": {
+            "codename": 14,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "15",
+          "interface": {
+            "codename": 15,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "16",
+          "interface": {
+            "codename": 16,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "17",
+          "interface": {
+            "codename": 17,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "18",
+          "interface": {
+            "codename": 18,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "19",
+          "interface": {
+            "codename": 19,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "20",
+          "interface": {
+            "codename": 20,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "21",
+          "interface": {
+            "codename": 21,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "22",
+          "interface": {
+            "codename": 22,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "23",
+          "interface": {
+            "codename": 23,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "A10",
+          "interface": {
+            "codename": "A10",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "A11",
+          "interface": {
+            "codename": "A11",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "A14",
+          "interface": {
+            "codename": "A14",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "DAC",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "AREF",
+          "interface": {
+            "provides": [
+              {
+                "spec": "IORef",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "AGND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+>>>>>>> 17a0c966580db5e238462e37c426145e017c8d94
+            ]
+          }
+        },
+        {
+          "name": "GND1",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "3.3v",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 250
+          }
+        },
+        {
+<<<<<<< HEAD
             "name": "12v",
             "supportedControllers": [
                 "Teensy32"
@@ -632,9 +1599,44 @@
                         "Reg5v"
                     ]
                 }
-            ]
+=======
+          "name": "VIN",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 400
+          }
         },
         {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 65536
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+>>>>>>> 17a0c966580db5e238462e37c426145e017c8d94
+            ]
+          }
+        },
+        {
+<<<<<<< HEAD
             "name": "Lipo3v7",
             "supportedControllers": [
                 "Teensy32"
@@ -938,7 +1940,2146 @@
                         "USBPowerMicro"
                     ]
                 }
+=======
+          "name": "USBPos",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 50
+          }
+        },
+        {
+          "name": "USBNeg",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB",
+                "voltage": "GND"
+              }
+>>>>>>> 17a0c966580db5e238462e37c426145e017c8d94
             ]
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 1
+    },
+    {
+      "name": "EXT",
+      "supportedControllers": [
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "Teensy32"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "1",
+          "interface": {
+            "codename": 1,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "codename": 2,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "3",
+          "interface": {
+            "codename": 3,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "4",
+          "interface": {
+            "codename": 4,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "5",
+          "interface": {
+            "codename": 5,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "6",
+          "interface": {
+            "codename": 6,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "7",
+          "interface": {
+            "codename": 7,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX3",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "8",
+          "interface": {
+            "codename": 8,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX3",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "9",
+          "interface": {
+            "codename": 9,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "10",
+          "interface": {
+            "codename": 10,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SS",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "11",
+          "interface": {
+            "codename": 11,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "12",
+          "interface": {
+            "codename": 12,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "13",
+          "interface": {
+            "codename": 13,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "14",
+          "interface": {
+            "codename": 14,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "15",
+          "interface": {
+            "codename": 15,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "16",
+          "interface": {
+            "codename": 16,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "17",
+          "interface": {
+            "codename": 17,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "18",
+          "interface": {
+            "codename": 18,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "19",
+          "interface": {
+            "codename": 19,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "20",
+          "interface": {
+            "codename": 20,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "21",
+          "interface": {
+            "codename": 21,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "22",
+          "interface": {
+            "codename": 22,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "23",
+          "interface": {
+            "codename": 23,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "A10",
+          "interface": {
+            "codename": "A10",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "A11",
+          "interface": {
+            "codename": "A11",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "A14",
+          "interface": {
+            "codename": "A14",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "DAC",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "AREF",
+          "interface": {
+            "provides": [
+              {
+                "spec": "IORef",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "AGND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND1",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 40
+          }
+        },
+        {
+          "name": "3.3v",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 250
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 65536
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "StepUp5v",
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "Reg5v",
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "Reg3.3v",
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 50,
+          "blocks": [
+            "Reg5v",
+            "Reg3.3v",
+            "USBPowerMicro"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lipo3v7",
+      "supportedControllers": [
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "Teensy32"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "1",
+          "interface": {
+            "codename": 1,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "codename": 2,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "3",
+          "interface": {
+            "codename": 3,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "4",
+          "interface": {
+            "codename": 4,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "5",
+          "interface": {
+            "codename": 5,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "6",
+          "interface": {
+            "codename": 6,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "7",
+          "interface": {
+            "codename": 7,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX3",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "8",
+          "interface": {
+            "codename": 8,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX3",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "9",
+          "interface": {
+            "codename": 9,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "RX2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "10",
+          "interface": {
+            "codename": 10,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SS",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "11",
+          "interface": {
+            "codename": 11,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "12",
+          "interface": {
+            "codename": 12,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "13",
+          "interface": {
+            "codename": 13,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "14",
+          "interface": {
+            "codename": 14,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "15",
+          "interface": {
+            "codename": 15,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "16",
+          "interface": {
+            "codename": 16,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "17",
+          "interface": {
+            "codename": 17,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "18",
+          "interface": {
+            "codename": 18,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "19",
+          "interface": {
+            "codename": 19,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "20",
+          "interface": {
+            "codename": 20,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "21",
+          "interface": {
+            "codename": 21,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "22",
+          "interface": {
+            "codename": 22,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "23",
+          "interface": {
+            "codename": 23,
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "5v"
+              },
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "CapTouch",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 10
+          }
+        },
+        {
+          "name": "A10",
+          "interface": {
+            "codename": "A10",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "A11",
+          "interface": {
+            "codename": "A11",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "A14",
+          "interface": {
+            "codename": "A14",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              },
+              {
+                "spec": "DAC",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "AREF",
+          "interface": {
+            "provides": [
+              {
+                "spec": "IORef",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "AGND",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              },
+              {
+                "cost": 1,
+                "spec": "Battery",
+                "voltage": "GND"
+              },
+              {
+                "cost": 2,
+                "spec": "USB",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND1",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "3.3v",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "providesLoad": 250
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 1,
+                "spec": "Battery",
+                "voltage": "3.7v"
+              }
+            ],
+            "requiresLoad": 40
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "providesLoad": 65536
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 3,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        }
+      ]
+    }
+  ]
 }

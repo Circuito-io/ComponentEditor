@@ -1,37 +1,38 @@
 {
-    "name": "PiezoSensor",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "snippetCode": "    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "PiezoSensor",
-        "ports": [
-            "pos"
-        ]
-    },
-    "files": [
-        "PiezoSensor.cpp",
-        "PiezoSensor_license.txt",
-        "PiezoSensor.h",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
-    ],
-    "includeHeaders": [
-        "PiezoSensor.h"
+  "name": "PiezoSensor",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "PiezoSensor",
+    "ports": [
+      "pos"
     ]
+  },
+  "files": [
+    "PiezoSensor.cpp",
+    "PiezoSensor_license.txt",
+    "PiezoSensor.h",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "PiezoSensor.h"
+  ]
 }

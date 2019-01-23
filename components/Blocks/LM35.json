@@ -1,139 +1,175 @@
 {
-    "name": "LM35",
-    "category": [
-        "input"
+  "name": "LM35",
+  "category": [
+    "input"
+  ],
+  "blockId": "333429",
+  "app": {
+    "appName": "LM35",
+    "image": "http://res.cloudinary.com/circuito/image/upload/qbhpjqu0wjji210r0jbu",
+    "numericName": "LM35",
+    "shortName": "Temperature Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "333429",
-    "app": {
-        "appName": "LM35",
-        "image": "http://res.cloudinary.com/circuito/image/upload/qbhpjqu0wjji210r0jbu",
-        "numericName": "LM35",
-        "shortName": "Temperature Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Precision integrated-circuit temperature sensor. Output is linearly proportional to the centegrade temperature.</p>\n<p><strong>Returned Value</strong>: Returns the temperature in Celsius or Fahrenheit.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/lm35-temperature-sensor/\">Learn More</a></p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Precision integrated-circuit temperature sensor. Output is linearly proportional to the centegrade temperature.</p>\n<p><strong>Returned Value</strong>: Returns the temperature in Celsius or Fahrenheit.<br><a class=\"more-info\" target=\"_blank\" href=\"https://www.circuito.io/component/lm35-temperature-sensor/\">Learn More</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "LM35"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "LM35"
+          "name": "this",
+          "part": "LM35"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LM35"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vcc",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 0
+            "unique": true
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "LM35"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LM35"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res470O"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Gnd",
-                    "to": "r2.con1"
-                },
-                {
-                    "from": "r2.con0",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.Vout",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "VOUT"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Vout",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vcc",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Gnd",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "Vcc",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "LM35"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "LM35"
+        },
+        {
+          "name": "r1",
+          "part": "Res470O"
+        },
+        {
+          "name": "r2",
+          "part": "Res1KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.Gnd",
+          "to": "r2.con1"
+        },
+        {
+          "from": "r2.con0",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.Vout",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "VOUT"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Vout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vcc",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Gnd",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

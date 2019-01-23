@@ -1,112 +1,148 @@
 {
-    "name": "UltraSonic",
-    "category": [
-        "input"
+  "name": "UltraSonic",
+  "category": [
+    "input"
+  ],
+  "blockId": "639",
+  "app": {
+    "appName": "LV-MaxSonar-EZ1 - Ultrasonic Range Finder",
+    "image": "http://res.cloudinary.com/circuito/image/upload/idrr91ra0hvtvgik8gxo",
+    "numericName": "",
+    "shortName": "Ultrasonic Sonar Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "639",
-    "app": {
-        "appName": "LV-MaxSonar-EZ1 - Ultrasonic Range Finder",
-        "image": "http://res.cloudinary.com/circuito/image/upload/idrr91ra0hvtvgik8gxo",
-        "numericName": "",
-        "shortName": "Ultrasonic Sonar Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>The ultrasonic sensor measure the proximity of an object.<br><strong>Returned Values</strong>: 0 - 645 centimeters (0 - 254 inches) - Objects not detected beyond this range, and are best detected at a distances higher than 100 centimeters.<br><strong>Requires</strong>: 7 male header pins soldered to fit into the breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>The ultrasonic sensor measure the proximity of an object.<br><strong>Returned Values</strong>: 0 - 645 centimeters (0 - 254 inches) - Objects not detected beyond this range, and are best detected at a distances higher than 100 centimeters.<br><strong>Requires</strong>: 7 male header pins soldered to fit into the breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "UltraSonic"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "UltraSonic"
+          "name": "this",
+          "part": "UltraSonic"
+        }
+      ],
+      "ports": [
+        {
+          "name": "PW",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "UltraSonic"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "PW",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 0
+            "unique": true
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "UltraSonic"
-            ],
-            "supportedControllers": [
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "UltraSonic"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "PW",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "UltraSonic"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "UltraSonic"
+        }
+      ],
+      "ports": [
+        {
+          "name": "PW",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

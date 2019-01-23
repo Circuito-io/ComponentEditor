@@ -1,139 +1,175 @@
 {
-    "name": "MQ5",
-    "category": [
-        "input"
+  "name": "MQ5",
+  "category": [
+    "input"
+  ],
+  "blockId": "398785",
+  "app": {
+    "appName": "LPG, Natural and Coal Gas Sensor - MQ-5",
+    "image": "http://res.cloudinary.com/circuito/image/upload/zixjbjl6f3f9exl7twno",
+    "numericName": "MQ5",
+    "shortName": "LPG Gas Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "398785",
-    "app": {
-        "appName": "LPG, Natural and Coal Gas Sensor - MQ-5",
-        "image": "http://res.cloudinary.com/circuito/image/upload/zixjbjl6f3f9exl7twno",
-        "numericName": "MQ5",
-        "shortName": "LPG Gas Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This sensor is sensitive for LPG, natural gas and coal gas.</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This sensor is sensitive for LPG, natural gas and coal gas.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "MQ5"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "MQ5"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "MQ5"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "AOUT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "5V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "this",
+          "part": "MQ5"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "MQ53v3"
+          "name": "AOUT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
             ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "MQ5"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res470O"
-                },
-                {
-                    "name": "r2",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.GND",
-                    "to": "r2.con1"
-                },
-                {
-                    "from": "r2.con0",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "this.AOUT",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "Aout"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Aout",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ADC","voltage":""}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "5V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 2
+            "unique": true
+          }
+        },
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 1
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "MQ53v3"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "MQ5"
+        },
+        {
+          "name": "r1",
+          "part": "Res470O"
+        },
+        {
+          "name": "r2",
+          "part": "Res1KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "r2.con1"
+        },
+        {
+          "from": "r2.con0",
+          "to": "r1.con1"
+        },
+        {
+          "from": "this.AOUT",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "Aout"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Aout",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2
+    }
+  ]
 }

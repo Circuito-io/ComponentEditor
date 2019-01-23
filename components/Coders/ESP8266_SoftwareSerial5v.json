@@ -1,32 +1,36 @@
 {
-    "name": "ESP8266_SoftwareSerial5v",
-    "supportedControllers": [
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno"
+  "name": "ESP8266_SoftwareSerial5v",
+  "supportedControllers": [
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "// ====================================================================\n// vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n//\nconst char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \nconst char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n//\n// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n// ====================================================================\nchar* const host = \"www.google.com\";\nint hostPort = 80;\n",
+    "constructors": "{{classname}} {{varname}}({{Rx}},{{Tx}});\n",
+    "setup": "{{varname}}.init(SSID, PASSWORD);\n",
+    "snippetCode": "//Send request for www.google.com at port 80\n{{varname}}.httpGet(host, hostPort);\n// get response buffer. Note that it is set to 250 bytes due to the Arduino low memory\nchar* {{varname}}Buf = {{varname}}.getBuffer();\n//Comment out to print the buffer to Serial Monitor\n//for(int i=0; i< MAX_BUFFER_SIZE ; i++)\n//  Serial.print({{varname}}Buf[i]);\n//search buffer for the date and time and print it to the serial monitor. This is GMT time!\nchar *{{varname}}DateIdx = strstr ({{varname}}Buf, \"Date\");\nfor (int i = 0; {{varname}}DateIdx[i] != '\\n' ; i++)\nSerial.print({{varname}}DateIdx[i]);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "ESP8266",
+    "ports": [
+      "Rx",
+      "Tx"
     ],
-    "code": {
-        "global": "    // ====================================================================\n    // vvvvvvvvvvvvvvvvvvvv ENTER YOUR WI-FI SETTINGS  vvvvvvvvvvvvvvvvvvvv\n    //\n    const char *SSID     = \"WIFI-SSID\"; // Enter your Wi-Fi name \n    const char *PASSWORD = \"PASSWORD\" ; // Enter your Wi-Fi password\n    //\n    // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    // ====================================================================\n    char* const host = \"www.google.com\";\n    int hostPort = 80;\n",
-        "constructors": "    {{classname}} {{varname}}({{Rx}},{{Tx}});\n",
-        "setup": "  {{varname}}.init(SSID, PASSWORD);\n",
-        "snippetCode": "    //Send request for www.google.com at port 80\n    {{varname}}.httpGet(host, hostPort);\n    // get response buffer. Note that it is set to 250 bytes due to the Arduino low memory\n    char* {{varname}}Buf = {{varname}}.getBuffer();\n    //Comment out to print the buffer to Serial Monitor\n    //for(int i=0; i< MAX_BUFFER_SIZE ; i++)\n    //  Serial.print({{varname}}Buf[i]);\n    //search buffer for the date and time and print it to the serial monitor. This is GMT time!\n    char *{{varname}}DateIdx = strstr ({{varname}}Buf, \"Date\");\n    for (int i = 0; {{varname}}DateIdx[i] != '\\n' ; i++)\n      Serial.print({{varname}}DateIdx[i]);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "ESP8266",
-        "ports": [
-            "Rx",
-            "Tx"
-        ],
-        "varname": "wifi"
-    },
-    "files": [
-        "ESP8266.h"
-    ],
-    "includeHeaders": [
-        "ESP8266.h"
-    ]
+    "varname": "wifi"
+  },
+  "files": [
+    "ESP8266.h",
+    "ESP8266.cpp",
+    "ESP8266_common.h",
+    "ESP8266_license.txt"
+  ],
+  "includeHeaders": [
+    "ESP8266.h"
+  ]
 }

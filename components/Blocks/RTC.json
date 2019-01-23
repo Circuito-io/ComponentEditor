@@ -1,81 +1,115 @@
 {
-    "name": "RTC",
-    "category": [
-        "input"
+  "name": "RTC",
+  "category": [
+    "input"
+  ],
+  "blockId": "821989",
+  "app": {
+    "appName": "RTC - Real Time Clock",
+    "image": "http://res.cloudinary.com/circuito/image/upload/cykutafc4v7y0hutdi50",
+    "numericName": "DS3231",
+    "shortName": "Real Time Clock",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "821989",
-    "app": {
-        "appName": "RTC - Real Time Clock",
-        "image": "http://res.cloudinary.com/circuito/image/upload/cykutafc4v7y0hutdi50",
-        "numericName": "DS3231",
-        "shortName": "Real Time Clock",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>Keep track of the current year, month, day as well as the current time.</p>\n<p><strong>Returned Value</strong>: Returns the time and date.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>Keep track of the current year, month, day as well as the current time.</p>\n<p><strong>Returned Value</strong>: Returns the time and date.</p>\n<p><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"https://edwardmallon.wordpress.com/2015/12/22/arduino-uno-based-data-logger-with-no-soldering/\">Data Logger</a></p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "RTC"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "Arduino101",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "RTC"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "Arduino101",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "RTC"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"},{"cost":1,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "isBus": true,
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"},{"cost":1,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "RTC"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "SDA",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "isBus": true,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

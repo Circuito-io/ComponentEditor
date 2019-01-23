@@ -1,83 +1,111 @@
 {
-    "name": "Servo360",
-    "category": [
-        "output"
+  "name": "Servo360",
+  "category": [
+    "output"
+  ],
+  "blockId": "10189",
+  "app": {
+    "appName": "Servo - Generic Continuous Rotation (Micro Size)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/xod5e8xvhphbbt1rtwio",
+    "numericName": "",
+    "shortName": "Continuous Rotation Servo",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "10189",
-    "app": {
-        "appName": "Servo - Generic Continuous Rotation (Micro Size)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/xod5e8xvhphbbt1rtwio",
-        "numericName": "",
-        "shortName": "Continuous Rotation Servo",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>simple, high quality continuous rotation servo motor. This servo is able to take in 6 volts and deliver 30.6 oz-in. of maximum torque at 0.14 sec/60\u00b0</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>simple, high quality continuous rotation servo motor. This servo is able to take in 6 volts and deliver 30.6 oz-in. of maximum torque at 0.14 sec/60°</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "Servo360"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "Servo360"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Servo360"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":1,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"},{"cost":1,"spec":"","voltage":"6v"}],
-                        "requiresLoad": 500
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 30,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "Servo360"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "6v"
+              }
+            ],
+            "requiresLoad": 500
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 30,
+          "blocks": [
+            "Reg5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

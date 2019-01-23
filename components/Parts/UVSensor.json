@@ -1,32 +1,32 @@
 {
-    "name": "UVSensor",
-    "symbol": {
-        "ref": "circuito_UV Sensor Breakout - ML8511.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/d5xtrisbsabjvkfmk6fu"
-    },
-    "displayName": "UV Sensor Breakout - ML8511",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "digikey",
-            "image": "https://res.cloudinary.com/circuito/image/upload/zthw0gnmzvbexbs1l6ap",
-            "link": "https://www.digikey.com/products/en?keywords=12705&keywords=&pkeyword=12705&v=1568",
-            "price": "12.95",
-            "SKU": "1568-1301-ND",
-            "headers": [
-                4,
-                "MaleHeaders"
-            ]
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "UVSensor",
+  "symbol": {
+    "ref": "circuito_UV Sensor Breakout - ML8511.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/d5xtrisbsabjvkfmk6fu"
+  },
+  "displayName": "UV Sensor Breakout - ML8511",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "digikey",
+      "image": "https://res.cloudinary.com/circuito/image/upload/zthw0gnmzvbexbs1l6ap",
+      "link": "https://www.digikey.com/products/en?keywords=12705&keywords=&pkeyword=12705&v=1568",
+      "price": "12.95",
+      "SKU": "1568-1301-ND",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 4
+      }
     }
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

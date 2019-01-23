@@ -1,47 +1,39 @@
+const path = require("path");
 const webpack = require("webpack");
-const NodemonPlugin = require('nodemon-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const NodemonPlugin = require( 'nodemon-webpack-plugin' )
+
+const outputDirectory = 'dist';
 
 module.exports = {
-  mode: "development",
-  entry: "./client/app.js",
-  devtool: 'source-map',
+  entry: './src/client/app.js',
+  output: {
+    path: path.join(__dirname, outputDirectory),
+    filename: 'bundle.js'
+  },
   module: {
     rules: [{
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" }
-        ]
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
-  resolve: {
-    extensions: ["*", ".js", ".jsx"]
-  },
-  output: {
-    path: __dirname + "/public",
-    publicPath: "/",
-    filename: "bundle.js",
-    hotUpdateChunkFilename: 'hot/hot-update.js',
-    hotUpdateMainFilename: 'hot/hot-update.json'
-  },
   plugins: [
+    new CleanWebpackPlugin([outputDirectory]),
     new NodemonPlugin({
-      watch: ["server.js", "./src", "./api"],
-      script: './server.js',
-      ext: 'js,njk,json'
-    }),
-    new webpack.HotModuleReplacementPlugin({
-      debug: true
+      watch: ['./src', './dist'],
+      script: './src/server/index.js',
     })
-  ],
-  devServer: {
-    contentBase: "./dist",
-    hot: true
-  }
+  ]
 };

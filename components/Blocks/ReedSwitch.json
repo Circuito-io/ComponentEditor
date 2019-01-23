@@ -1,141 +1,177 @@
 {
-    "name": "ReedSwitch",
-    "category": [
-        "input"
+  "name": "ReedSwitch",
+  "category": [
+    "input"
+  ],
+  "blockId": "8642",
+  "app": {
+    "appName": "Reed Switch",
+    "image": "http://res.cloudinary.com/circuito/image/upload/htaqbvtozf9t7kv2cmcf",
+    "numericName": "",
+    "shortName": "Reed Switch",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "8642",
-    "app": {
-        "appName": "Reed Switch",
-        "image": "http://res.cloudinary.com/circuito/image/upload/htaqbvtozf9t7kv2cmcf",
-        "numericName": "",
-        "shortName": "Reed Switch",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>A neat magnetic switch, that closes a circuit in present of a magnet and disconnects when the magnet is removed.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>A neat magnetic switch, that closes a circuit in present of a magnet and disconnects when the magnet is removed.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "ReedSwitch"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "ReedSwitch"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ReedSwitch"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.2",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "ReedSwitch"
         },
         {
-            "name": "3v3",
-            "coders": [
-                "ReedSwitch"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "ReedSwitch"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res10KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.2",
-                    "to": "r1.con0"
-                },
-                {
-                    "from": "r1.con1",
-                    "to": "0"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "r1",
+          "part": "Res10KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.2",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "ReedSwitch"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "ReedSwitch"
+        },
+        {
+          "name": "r1",
+          "part": "Res10KO"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.2",
+          "to": "r1.con0"
+        },
+        {
+          "from": "r1.con1",
+          "to": "0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

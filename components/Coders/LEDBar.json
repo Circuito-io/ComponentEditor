@@ -1,36 +1,42 @@
 {
-    "name": "LEDBar",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "LEDBar",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "//define an array for the 10 Segment LED Bar Graph pins\nint {{varname}}Pins[] = { {{AA}}, {{BA}}, {{CA}}, {{DA}}, {{EA}}, {{FA}}, {{GA}}, {{HA}}, {{IA}}, {{JA}} }; \n",
+    "constructors": "",
+    "setup": "// loop over the pin array and set them all to output:\nfor (int i = 0; i < 10; i++) {\npinMode({{varname}}Pins[i], OUTPUT);\n}\n",
+    "snippetCode": "//This loop will turn on and off each led of the 10 Segment LED Bar Graph for 0.05 sec\nfor (int i = 0; i <= 10; i++) { \ndigitalWrite({{varname}}Pins[i],HIGH);\ndelay(50);\n}\nfor (int i = 10; i >= 0; i--) { \ndigitalWrite({{varname}}Pins[i],LOW);\ndelay(50);\n}"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "",
+    "ports": [
+      "AA",
+      "BA",
+      "CA",
+      "DA",
+      "EA",
+      "FA",
+      "GA",
+      "HA",
+      "IA",
+      "JA"
     ],
-    "code": {},
-    "license": "circuito",
-    "instantiate": {
-        "classname": "",
-        "ports": [
-            "AA",
-            "BA",
-            "CA",
-            "DA",
-            "EA",
-            "FA",
-            "GA",
-            "HA",
-            "IA",
-            "JA"
-        ],
-        "varname": "LEDBar"
-    },
-    "files": [],
-    "includeHeaders": []
+    "varname": "LEDBar"
+  },
+  "files": [],
+  "includeHeaders": []
 }

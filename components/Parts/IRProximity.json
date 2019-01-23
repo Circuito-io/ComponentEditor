@@ -1,28 +1,31 @@
 {
-    "name": "IRProximity",
-    "symbol": {
-        "ref": "circuito_Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F.svg",
-        "URL": "https://res.cloudinary.com/circuito/image/upload/bsswbo7ajvj4xwarg4dt"
-    },
-    "displayName": "Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F",
-    "category": [
-        "input"
-    ],
-    "desc": "",
-    "bom": [
-        {
-            "name": "octopart",
-            "image": "https://res.cloudinary.com/circuito/image/upload/kg4nsvgdhfcg2zjyrfse",
-            "link": "https://octopart.com/gp2y0a02yk0f-sharp-39642229?r=sp&s=s-MRzgdxQMSVsYHhdIqo_w",
-            "price": "14.95",
-            "SKU": ""
-        }
-    ],
-    "info": {
-        "setup": "",
-        "test": ""
-    },
-    "placing": {
-        "onBreadboard": true
+  "name": "IRProximity",
+  "symbol": {
+    "ref": "circuito_Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F.svg",
+    "URL": "https://res.cloudinary.com/circuito/image/upload/bsswbo7ajvj4xwarg4dt"
+  },
+  "displayName": "Infrared Proximity Sensor Long Range - Sharp GP2Y0A02YK0F",
+  "category": [
+    "input"
+  ],
+  "desc": "",
+  "bom": [
+    {
+      "name": "octopart",
+      "image": "https://res.cloudinary.com/circuito/image/upload/kg4nsvgdhfcg2zjyrfse",
+      "link": "https://octopart.com/gp2y0a02yk0f-sharp-39642229?r=sp&s=s-MRzgdxQMSVsYHhdIqo_w",
+      "price": "14.95",
+      "SKU": ""
     }
+  ],
+  "bomAux": [
+    "JST3pinCable"
+  ],
+  "info": {
+    "setup": "",
+    "test": ""
+  },
+  "placing": {
+    "onBreadboard": true
+  }
 }

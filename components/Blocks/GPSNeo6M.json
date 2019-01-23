@@ -1,241 +1,392 @@
 {
-    "name": "GPSNeo6M",
-    "category": [
-        "input"
+  "name": "GPSNeo6M",
+  "category": [
+    "input"
+  ],
+  "blockId": "975601",
+  "app": {
+    "appName": "Ublox NEO-6M GPS Module",
+    "image": "http://res.cloudinary.com/circuito/image/upload/v9l1jbpibwd4ptff0og8",
+    "numericName": "NEO-6M",
+    "shortName": "GPS Module",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "975601",
-    "app": {
-        "appName": "Ublox NEO-6M GPS Module",
-        "image": "http://res.cloudinary.com/circuito/image/upload/v9l1jbpibwd4ptff0og8",
-        "numericName": "NEO-6M",
-        "shortName": "GPS Module",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>This device connects to GPS satellites to retrive its location. Also provides the current time and date.</p>\n<p><strong>Returned Value</strong>: Location - Lat and Long, time and date via serial communication.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This device connects to GPS satellites to retrive its location. Also provides the current time and date.</p>\n<p><strong>Returned Value</strong>: Location - Lat and Long, time and date via serial communication.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "HardwareSerial1",
+      "coders": [
+        "GPSNeo6M_HardwareSerial1"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "_HardwareSerial1",
-            "coders": [
-                "GPSNeo6M_HardwareSerial1"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "GPSNeo6M"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.TX",
-                    "to": "Rx"
-                },
-                {
-                    "from": "this.RX",
-                    "to": "Tx"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Tx",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"TX","voltage":"5v"},{"cost":0,"spec":"TX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
-                        "requiresLoad": 570
-                    }
-                },
-                {
-                    "name": "Rx",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"RX","voltage":"5v"},{"cost":0,"spec":"RX","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 0
-        },
-        {
-            "name": "_HardwareSerial2",
-            "coders": [
-                "GPSNeo6M_HardwareSerial2"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "GPSNeo6M"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.TX",
-                    "to": "Rx"
-                },
-                {
-                    "from": "this.RX",
-                    "to": "Tx"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Tx",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"TX2","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
-                        "requiresLoad": 570
-                    }
-                },
-                {
-                    "name": "Rx",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"RX2","voltage":"5v"}],
-                        "unique": true
-                    }
-                }
-            ],
-            "priority": 1
-        },
-        {
-            "name": "_SoftwareSerial",
-            "coders": [
-                "GPSNeo6M_SoftwareSerial"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "NodeMCU",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "GPSNeo6M"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.TX",
-                    "to": "Rx"
-                },
-                {
-                    "from": "this.RX",
-                    "to": "Tx"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"},{"cost":1,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "Tx",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialTX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialTX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialTX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialTX1","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Rx",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"ESPSoftwareSerialRX","voltage":"5v"},{"cost":10,"spec":"ESPSoftwareSerialRX1","voltage":"5v"},{"cost":2,"spec":"ESPSoftwareSerialRX","voltage":"3.3v"},{"cost":11,"spec":"ESPSoftwareSerialRX1","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "SerialType",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"ESPSoftwareSerialTag","voltage":""}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "MemOverLoad",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
-                        "requiresLoad": 570
-                    }
-                }
-            ],
-            "priority": 100
+          "name": "this",
+          "part": "GPSNeo6M"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.TX",
+          "to": "Rx"
+        },
+        {
+          "from": "this.RX",
+          "to": "Tx"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Tx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "TX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 0,
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 570
+          }
+        },
+        {
+          "name": "Rx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "RX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 0,
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 0
+    },
+    {
+      "name": "HardwareSerial2",
+      "coders": [
+        "GPSNeo6M_HardwareSerial2"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "GPSNeo6M"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.TX",
+          "to": "Rx"
+        },
+        {
+          "from": "this.RX",
+          "to": "Tx"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Tx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "TX2",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 570
+          }
+        },
+        {
+          "name": "Rx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "RX2",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "priority": 1
+    },
+    {
+      "name": "SoftwareSerial",
+      "coders": [
+        "GPSNeo6M_SoftwareSerial"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "GPSNeo6M"
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.TX",
+          "to": "Rx"
+        },
+        {
+          "from": "this.RX",
+          "to": "Tx"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Tx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 11,
+                "spec": "ESPSoftwareSerialTX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Rx",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "5v"
+              },
+              {
+                "cost": 10,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 11,
+                "spec": "ESPSoftwareSerialRX1",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "SerialType",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 570
+          }
+        }
+      ],
+      "priority": 100
+    }
+  ]
 }

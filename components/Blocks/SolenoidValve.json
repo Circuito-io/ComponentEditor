@@ -1,93 +1,105 @@
 {
-    "name": "SolenoidValve",
-    "category": [
-        "output"
+  "name": "SolenoidValve",
+  "category": [
+    "output"
+  ],
+  "blockId": "10456",
+  "app": {
+    "appName": "12V Solenoid Valve - 3/4''",
+    "image": "http://res.cloudinary.com/circuito/image/upload/jmkshwynjxq2wk6sipqf",
+    "numericName": "",
+    "shortName": "Solenoid Valve",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "10456",
-    "app": {
-        "appName": "12V Solenoid Valve - 3/4''",
-        "image": "http://res.cloudinary.com/circuito/image/upload/jmkshwynjxq2wk6sipqf",
-        "numericName": "",
-        "shortName": "Solenoid Valve",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This valve allows you to open or close the flow of a liquid through it.<br><strong>Requires</strong>: Has a push on terminal connection, so it needs soldering of jumper wires/regular wires or push on terminal cables.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "SolenoidValve"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "SolenoidValve"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "SolenoidValve",
-                    "rotation": 180
-                },
-                {
-                    "name": "d1",
-                    "part": "DIRect1A50v",
-                    "rotation": 180
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.Coil2",
-                    "to": "d1.neg"
-                },
-                {
-                    "from": "this.Coil1",
-                    "to": "d1.pos"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "Coil1",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"GndLoadSwitching","voltage":""}],
-                        "requiresLoad": 1000,
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Coil2",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 0,
-                    "blocks": [
-                        "GndHighLoadSwitching"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "SolenoidValve",
+          "rotation": 180
+        },
+        {
+          "name": "d1",
+          "part": "DIRect1A50v",
+          "rotation": 180
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.Coil2",
+          "to": "d1.neg"
+        },
+        {
+          "from": "this.Coil1",
+          "to": "d1.pos"
+        }
+      ],
+      "ports": [
+        {
+          "name": "Coil1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "GndLoadSwitching",
+                "voltage": ""
+              }
+            ],
+            "requiresLoad": 1000,
+            "unique": true
+          }
+        },
+        {
+          "name": "Coil2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "GndHighLoadSwitching"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,104 +1,132 @@
 {
-    "name": "Buzzer",
-    "category": [
-        "output"
+  "name": "Buzzer",
+  "category": [
+    "output"
+  ],
+  "blockId": "956215",
+  "app": {
+    "appName": "Buzzer",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nguqhwfilt6ncwlgerlh",
+    "numericName": "",
+    "shortName": "Buzzer",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "956215",
-    "app": {
-        "appName": "Buzzer",
-        "image": "http://res.cloudinary.com/circuito/image/upload/nguqhwfilt6ncwlgerlh",
-        "numericName": "",
-        "shortName": "Buzzer",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": false
-        },
-        "desc": "<p>This is a very small buzzer that produce a loud 2KHz beep tone.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": false
     },
-    "circuits": [
+    "desc": "<p>This is a very small buzzer that produce a loud 2KHz beep tone.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "Buzzer"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "Buzzer"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Buzzer"
-                },
-                {
-                    "name": "BC337",
-                    "part": "TSBC337"
-                },
-                {
-                    "name": "r1",
-                    "part": "Res1KO"
-                }
-            ],
-            "wires": [
-                {
-                    "from": "this.neg",
-                    "to": "BC337.C"
-                },
-                {
-                    "from": "BC337.B",
-                    "to": "r1.con1"
-                },
-                {
-                    "from": "BC337.E",
-                    "to": "0"
-                },
-                {
-                    "from": "r1.con0",
-                    "to": "Sig"
-                },
-                {
-                    "from": "this.pos",
-                    "to": "Vin"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "0",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "Sig",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"5v"},{"cost":2,"spec":"DigitalOut","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "Vin",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"5v"},{"cost":2,"spec":"","voltage":"3.3v"}]
-                    }
-                }
-            ]
+          "name": "this",
+          "part": "Buzzer"
+        },
+        {
+          "name": "BC337",
+          "part": "TSBC337"
+        },
+        {
+          "name": "r1",
+          "part": "Res1KO"
         }
-    ]
+      ],
+      "wires": [
+        {
+          "from": "this.neg",
+          "to": "BC337.C"
+        },
+        {
+          "from": "BC337.B",
+          "to": "r1.con1"
+        },
+        {
+          "from": "BC337.E",
+          "to": "0"
+        },
+        {
+          "from": "r1.con0",
+          "to": "Sig"
+        },
+        {
+          "from": "this.pos",
+          "to": "Vin"
+        }
+      ],
+      "ports": [
+        {
+          "name": "0",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Sig",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Vin",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

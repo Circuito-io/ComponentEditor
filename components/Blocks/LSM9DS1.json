@@ -1,121 +1,169 @@
 {
-    "name": "LSM9DS1",
-    "category": [
-        "input"
+  "name": "LSM9DS1",
+  "category": [
+    "input"
+  ],
+  "blockId": "779831",
+  "app": {
+    "appName": "Accelerometer/Magnetometer/Gyroscope + Temp LSM9DS1",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ahw3u3apqvzxoet8euru",
+    "numericName": "LSM9DS1",
+    "shortName": "9-DOF Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "779831",
-    "app": {
-        "appName": "Accelerometer/Magnetometer/Gyroscope + Temp LSM9DS1",
-        "image": "http://res.cloudinary.com/circuito/image/upload/ahw3u3apqvzxoet8euru",
-        "numericName": "LSM9DS1",
-        "shortName": "9-DOF Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>This is a 9-DOF sensor, which means 3-axis accelerometer, 3-axis magnetometer and 3-axis gyroscope. It can be used to orient your project by measuring twist&spin, north direction and acceleration</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This is a 9-DOF sensor, which means 3-axis accelerometer, 3-axis magnetometer and 3-axis gyroscope. It can be used to orient your project by measuring twist&spin, north direction and acceleration</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "LSM9DS1"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "LSM9DS1"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LSM9DS1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"5v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "LSM9DS1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ]
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "LSM9DS1"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LSM9DS1"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "SCL",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SCL","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "VIN",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "SDA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"SDA","voltage":"3.3v"}]
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "priority": 1
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "LSM9DS1"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "LSM9DS1"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 1
+    }
+  ]
 }

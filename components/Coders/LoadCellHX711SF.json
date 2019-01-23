@@ -1,40 +1,41 @@
 {
-    "name": "LoadCellHX711SF",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
+  "name": "LoadCellHX711SF",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "",
+    "constructors": "{{classname}} {{varname}}({{DAT}}, {{CLK}});\n#define calibration_factor 2280 //This value is obtained using the SparkFun_HX711_Calibration sketch https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide?_ga=2.77038550.2126325781.1526891300-303225217.1493631967\n",
+    "setup": "{{varname}}.set_scale(calibration_factor); \n{{varname}}.tare(); //Assuming there is no weight on the scale at start up, reset the scale to 0\n",
+    "snippetCode": "float {{varname}}Units = {{varname}}.get_units(); //scale.get_units() returns a float\nSerial.print({{varname}}Units); //You can change this to lbs but you'll need to refactor the calibration_factor\nSerial.println(\" Kg\"); //You can change this to lbs but you'll need to refactor the calibration_factor"
+  },
+  "license": "GNU",
+  "instantiate": {
+    "classname": "HX711",
+    "ports": [
+      "DAT",
+      "CLK"
     ],
-    "code": {
-        "global": "",
-        "constructors": "    {{classname}} {{varname}}({{DAT}}, {{CLK}});\n    #define calibration_factor 2280 //This value is obtained using the SparkFun_HX711_Calibration sketch https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide?_ga=2.77038550.2126325781.1526891300-303225217.1493631967\n",
-        "setup": "    {{varname}}.set_scale(calibration_factor); \n    {{varname}}.tare(); //Assuming there is no weight on the scale at start up, reset the scale to 0\n",
-        "snippetCode": "    float {{varname}}Units = {{varname}}.get_units(); //scale.get_units() returns a float\n    Serial.print({{varname}}Units); //You can change this to lbs but you'll need to refactor the calibration_factor\n    Serial.println(\" Kg\"); //You can change this to lbs but you'll need to refactor the calibration_factor"
-    },
-    "license": "GNU",
-    "instantiate": {
-        "classname": "HX711",
-        "ports": [
-            "DAT",
-            "CLK"
-        ],
-        "varname": "scale"
-    },
-    "files": [
-        "HX711.cpp",
-        "HX711.h",
-        "LICENSE"
-    ],
-    "includeHeaders": [
-        "HX711.h"
-    ]
+    "varname": "scale"
+  },
+  "files": [
+    "HX711.cpp",
+    "HX711.h",
+    "LICENSE"
+  ],
+  "includeHeaders": [
+    "HX711.h"
+  ]
 }

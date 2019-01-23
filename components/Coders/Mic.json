@@ -1,32 +1,33 @@
 {
-    "name": "Mic",
-    "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B"
-    ],
-    "code": {
-        "snippetCode": "    int {{varname}}Val = {{varname}}.read();\n    Serial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "Mic",
-        "ports": [
-            "Sig"
-        ]
-    },
-    "files": [
-        "Mic_license.txt",
-        "Mic.cpp",
-        "Mic.h"
+  "name": "Mic",
+  "supportedControllers": [
+    "ATMega328P",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "ESP32DevKitC",
+    "NodeMCU",
+    "RPI3B",
+    "Teensy32"
+  ],
+  "code": {
+    "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "Mic",
+    "ports": [
+      "Sig"
     ]
+  },
+  "files": [
+    "Mic_license.txt",
+    "Mic.cpp",
+    "Mic.h"
+  ]
 }

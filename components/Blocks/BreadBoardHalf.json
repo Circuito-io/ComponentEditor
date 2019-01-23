@@ -1,18 +1,18 @@
 {
-    "name": "BreadBoardHalf",
-    "category": [
-        "support"
-    ],
-    "circuits": [
+  "name": "BreadBoardHalf",
+  "category": [
+    "support"
+  ],
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [],
+      "parts": [
         {
-            "name": "",
-            "supportedControllers": [],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BreadBoardHalf"
-                }
-            ]
+          "name": "this",
+          "part": "BreadBoardHalf"
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -1,96 +1,119 @@
 {
-    "name": "LedRing12",
-    "category": [
-        "output"
+  "name": "LedRing12",
+  "category": [
+    "output"
+  ],
+  "blockId": "964450",
+  "app": {
+    "appName": "NeoPixel Ring - 12 x 5050 RGBW LEDs",
+    "image": "http://res.cloudinary.com/circuito/image/upload/gf4bi6t0tjh1yut7bpxg",
+    "numericName": "WS2812",
+    "shortName": "NeoPixel Ring",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "964450",
-    "app": {
-        "appName": "NeoPixel Ring - 12 x 5050 RGBW LEDs",
-        "image": "http://res.cloudinary.com/circuito/image/upload/gf4bi6t0tjh1yut7bpxg",
-        "numericName": "WS2812",
-        "shortName": "NeoPixel Ring",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>An addressable LED strip shaped like a ring with 12 5050 RGBW LED's. It allows you to control each RGB LED individually.</p>",
-        "visible": false
+    "indicators": {
+      "verified": true,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>An addressable LED strip shaped like a ring with 12 5050 RGBW LED's. It allows you to control each RGB LED individually.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "LedRing12"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "LedRing12"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "LedRing12"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "VCC",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}],
-                        "requiresLoad": 300
-                    }
-                },
-                {
-                    "name": "IN",
-                    "interface": {
-                        "chainTo": "OUT",
-                        "requires":[{"cost":0,"spec":"DigitalOut","voltage":"3.3v"},{"cost":1,"spec":"DigitalOut","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "OUT",
-                    "interface": {
-                        "chain": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 5,
-                    "blocks": [
-                        "Reg5v"
-                    ]
-                },
-                {
-                    "cost": 10,
-                    "blocks": [
-                        "PowerSupply5v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "LedRing12"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 300
+          }
+        },
+        {
+          "name": "IN",
+          "interface": {
+            "chainTo": "OUT",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "OUT",
+          "interface": {
+            "chain": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 5,
+          "blocks": [
+            "Reg5v"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "PowerSupply5v"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,27 +1,28 @@
 {
-    "name": "BLEHM10_HardwareSerial",
-    "supportedControllers": [
-        "ATMega328P",
-        "Arduino101",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "NodeMCU"
-    ],
-    "code": {
-        "global": "    String {{varname}}Str = \"\";\n",
-        "setup": "    {{varname}}.begin(9600);\n    //This example uses HM-10 BLE to communicate with an Android or iOS device.\n    //For Android download Hm BLE Terminal from google play store, or any other BLE app.\n    //For iOS download LightBlue from App Store, or any other BLE app.\n    //On both apps, pair and connect to your HM-10\n    //You should see this message your Smartphone \n    {{varname}}.println(\"BLE On....\");\n",
-        "snippetCode": "    //Receive String from bluetooth device\n    if ({{varname}}.available())\n    {\n        //Read a complete line from bluetooth terminal\n        {{varname}}Str = {{varname}}.readStringUntil('\\n');\n        // Print raw data to serial monitor\n        Serial.print(\"BT Raw Data: \");\n        Serial.println({{varname}}Str);\n    }\n    //Send sensor data to Bluetooth device  \n    {{varname}}.println(\"PUT YOUR SENSOR DATA HERE\");\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "HardwareSerial&",
-        "custominit": "Serial1",
-        "varname": "blehm10"
-    }
+  "name": "BLEHM10_HardwareSerial",
+  "supportedControllers": [
+    "ATMega328P",
+    "Arduino101",
+    "ArduinoGemma",
+    "ArduinoLeonardo",
+    "ArduinoMega",
+    "ArduinoMicro",
+    "ArduinoNano",
+    "ArduinoProMini3v3",
+    "ArduinoProMini5v",
+    "ArduinoUno",
+    "NodeMCU",
+    "Teensy32"
+  ],
+  "code": {
+    "global": "String {{varname}}Str = \"\";\n",
+    "setup": "{{varname}}.begin(9600);\n//This example uses HM-10 BLE to communicate with an Android or iOS device.\n//For Android download Hm BLE Terminal from google play store, or any other BLE app.\n//For iOS download LightBlue from App Store, or any other BLE app.\n//On both apps, pair and connect to your HM-10\n//You should see this message your Smartphone \n{{varname}}.println(\"BLE On....\");\n",
+    "snippetCode": "//Receive String from bluetooth device\nif ({{varname}}.available())\n{\n//Read a complete line from bluetooth terminal\n{{varname}}Str = {{varname}}.readStringUntil('\\n');\n// Print raw data to serial monitor\nSerial.print(\"BT Raw Data: \");\nSerial.println({{varname}}Str);\n}\n//Send sensor data to Bluetooth device  \n{{varname}}.println(\"PUT YOUR SENSOR DATA HERE\");\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "HardwareSerial&",
+    "custominit": "Serial1",
+    "varname": "blehm10"
+  }
 }

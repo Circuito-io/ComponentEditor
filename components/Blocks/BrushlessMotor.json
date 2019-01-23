@@ -1,88 +1,117 @@
 {
-    "name": "BrushlessMotor",
-    "category": [
-        "output"
+  "name": "BrushlessMotor",
+  "category": [
+    "output"
+  ],
+  "blockId": "250754",
+  "app": {
+    "appName": "A2212 Brushless Motor 1000KV (with 30A ESC)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/oiqdk163gqsgfjkpmlzp",
+    "numericName": "",
+    "shortName": "Brushless Motor",
+    "tags": [
+      "outputs"
     ],
-    "blockId": "250754",
-    "app": {
-        "appName": "A2212 Brushless Motor 1000KV (with 30A ESC)",
-        "image": "http://res.cloudinary.com/circuito/image/upload/oiqdk163gqsgfjkpmlzp",
-        "numericName": "",
-        "shortName": "Brushless Motor",
-        "tags": [
-            "outputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": true,
-            "solder": true
-        },
-        "desc": "<p>This Brushless Motor is great for R/C projects such as drones, RC car, and more. To run the motor, it needs to be attached to an ESC (electronic speed controller), that converts the servo-style interface into three-phase AC for driving the motor.</p>",
-        "visible": false
+    "indicators": {
+      "verified": false,
+      "code": true,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>This Brushless Motor is great for R/C projects such as drones, RC car, and more. To run the motor, it needs to be attached to an ESC (electronic speed controller), that converts the servo-style interface into three-phase AC for driving the motor.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "BrushlessMotor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "",
-            "coders": [
-                "BrushlessMotor"
-            ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "BrushlessMotor"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "+12V",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"12v"}],
-                        "requiresLoad": 550
-                    }
-                },
-                {
-                    "name": "DATA",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"PWM","voltage":"5v"},{"cost":1,"spec":"PWM","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "GROUND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                }
-            ],
-            "requiredBlocks": [
-                {
-                    "cost": 1,
-                    "blocks": [
-                        "BarrelJack12v"
-                    ]
-                }
-            ]
+          "name": "this",
+          "part": "BrushlessMotor"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "+12V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 550
+          }
+        },
+        {
+          "name": "DATA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GROUND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 1,
+          "blocks": [
+            "BarrelJack12v"
+          ]
+        }
+      ]
+    }
+  ]
 }

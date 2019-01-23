@@ -1,113 +1,149 @@
 {
-    "name": "CapacitiveTouchToggle",
-    "category": [
-        "input"
+  "name": "CapacitiveTouchToggle",
+  "category": [
+    "input"
+  ],
+  "blockId": "926213",
+  "app": {
+    "appName": "AT42QT1012 - Toggle Capacitive Touch Sensor Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ijc5drqsdeodkcjo1uer",
+    "numericName": "AT42QT1012",
+    "shortName": "Capacitive Touch Sensor",
+    "tags": [
+      "inputs"
     ],
-    "blockId": "926213",
-    "app": {
-        "appName": "AT42QT1012 - Toggle Capacitive Touch Sensor Breakout",
-        "image": "http://res.cloudinary.com/circuito/image/upload/ijc5drqsdeodkcjo1uer",
-        "numericName": "AT42QT1012",
-        "shortName": "Capacitive Touch Sensor",
-        "tags": [
-            "inputs"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": true
-        },
-        "desc": "<p>A single \"Toggle\" capacitive touch sensor. When a capacitive load is detected the output pin will toggle. You can also solder a wire to the middle pad and create your own capacitive pad.To save power, the LED can be disconnected from the output pin by cutting the trace between the jumper on its back side.</p>",
-        "visible": true
+    "indicators": {
+      "verified": false,
+      "code": false,
+      "solder": true
     },
-    "circuits": [
+    "desc": "<p>A single \"Toggle\" capacitive touch sensor. When a capacitive load is detected the output pin will toggle. You can also solder a wire to the middle pad and create your own capacitive pad.To save power, the LED can be disconnected from the output pin by cutting the trace between the jumper on its back side.</p>",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "CapacitiveTouchToggle"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "5v",
-            "coders": [
-                "CapacitiveTouchToggle"
+          "name": "this",
+          "part": "CapacitiveTouchToggle"
+        }
+      ],
+      "ports": [
+        {
+          "name": "OUT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
             ],
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CapacitiveTouchToggle"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "OUT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"5v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"5v"}]
-                    }
-                }
-            ],
-            "priority": 1
+            "unique": true
+          }
         },
         {
-            "name": "3v3",
-            "coders": [
-                "CapacitiveTouchToggle"
-            ],
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoProMini3v3",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "CapacitiveTouchToggle"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "OUT",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"DigitalIn","voltage":"3.3v"}],
-                        "unique": true
-                    }
-                },
-                {
-                    "name": "GND",
-                    "interface": {
-                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
-                    }
-                },
-                {
-                    "name": "VDD",
-                    "interface": {
-                        "requires":[{"cost":1,"spec":"","voltage":"3.3v"}]
-                    }
-                }
-            ],
-            "priority": 2
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
         }
-    ]
+      ],
+      "priority": 1
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "CapacitiveTouchToggle"
+      ],
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "CapacitiveTouchToggle"
+        }
+      ],
+      "ports": [
+        {
+          "name": "OUT",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 2
+    }
+  ]
 }

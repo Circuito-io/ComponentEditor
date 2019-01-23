@@ -1,25 +1,25 @@
 {
-    "name": "LM353v3",
-    "supportedControllers": [],
-    "code": {
-        "snippetCode": "    //Get Measurment from LM35 temperature sensor.\n    float {{varname}}TempC = {{varname}}.getTempC();\n    Serial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n"
-    },
-    "license": "circuito",
-    "instantiate": {
-        "classname": "LM35",
-        "ports": [
-            "VOUT"
-        ],
-        "varname": "lm35"
-    },
-    "files": [
-        "LM35.h",
-        "LM35_license.txt",
-        "LM35.cpp",
-        "AnalogReader.h",
-        "AnalogReader.cpp"
+  "name": "LM353v3",
+  "supportedControllers": [],
+  "code": {
+    "snippetCode": "//Get Measurment from LM35 temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[°C]\"));\n"
+  },
+  "license": "circuito",
+  "instantiate": {
+    "classname": "LM35",
+    "ports": [
+      "VOUT"
     ],
-    "includeHeaders": [
-        "LM35.h"
-    ]
+    "varname": "lm35"
+  },
+  "files": [
+    "LM35.h",
+    "LM35_license.txt",
+    "LM35.cpp",
+    "AnalogReader.h",
+    "AnalogReader.cpp"
+  ],
+  "includeHeaders": [
+    "LM35.h"
+  ]
 }
