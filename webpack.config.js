@@ -34,6 +34,8 @@ module.exports = {
     new NodemonPlugin({
       watch: ['./src', './dist'],
       script: './src/server/index.js',
+      verbose: true,
+      ignore: ['*.js.map'],
     })
   ]
 };
