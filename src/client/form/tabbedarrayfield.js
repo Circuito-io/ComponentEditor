@@ -1,5 +1,15 @@
 import React from "react";
-import { Tabs, Tab, Row, Col, Nav, MenuItem, NavDropdown, NavItem } from "react-bootstrap";
+import {
+  Tabs,
+  Tab,
+  Row,
+  Col,
+  Nav,
+  MenuItem,
+  NavDropdown,
+  NavItem
+} from "react-bootstrap";
+
 import {
   getDefaultFormState,
   getUiOptions,
@@ -46,7 +56,7 @@ class TabbedArrayItemHeader extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {isOpen: false};
+    this.state = { isOpen: false };
 
     this.btnStyle = {
       flex: 1,
@@ -58,25 +68,34 @@ class TabbedArrayItemHeader extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.isOpen && prevState.isOpen) {
-      this.setState({isOpen: false});
+      this.setState({ isOpen: false });
     }
   }
 
   render() {
     let props = this.props;
-    
     return (
-      <NavItem eventKey={props.index} onClick={()=>props.onSelect(props.index)}>
-        <div style={{display: 'flex'}} className={'dropdown' + (this.state.isOpen ? ' open' : '')}>
+      <NavItem
+        eventKey={props.index}
+        onClick={() => props.onSelect(props.index)}
+      >
+        <div
+          style={{ display: "flex" }}
+          className={"dropdown" + (this.state.isOpen ? " open" : "")}
+        >
           {props.tabName}
           {props.hasRemove && (
-            <div onClick={()=>this.setState({isOpen: !this.state.isOpen})}>
-              <span className="caret" style={{margin: '7px'}}/>
+            <div onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
+              <span className="caret" style={{ margin: "7px" }} />
             </div>
           )}
-          <div className="dropdown-menu" style={{marginLeft: -15}}>
-            <div tabIndex="-1" style={this.btnStyle} disabled={props.disabled || props.readonly}
-                  onClick={props.onDropIndexClick(props.index)}>
+          <div className="dropdown-menu" style={{ marginLeft: -15 }}>
+            <div
+              tabIndex="-1"
+              style={this.btnStyle}
+              disabled={props.disabled || props.readonly}
+              onClick={props.onDropIndexClick(props.index)}
+            >
               Remove
             </div>
           </div>
@@ -93,10 +112,10 @@ function TabbedArrayItemContent(props) {
     paddingRight: 6,
     fontWeight: "bold"
   };
-
+  
   return (
     <Tab.Pane eventKey={props.index}>
-      <div key={props.index} className={props.className}>
+      <div className={props.className}>
         <div className={props.hasToolbar ? "col-xs-9" : "col-xs-12"}>
           {props.children}
         </div>
@@ -109,8 +128,7 @@ function TabbedArrayItemContent(props) {
                 display: "flex",
                 justifyContent: "space-around"
               }}
-            >
-            </div>
+            />
           </div>
         )}
       </div>
@@ -122,7 +140,6 @@ function TabbedArrayFieldTemplate(props) {
   return (
     <fieldset className={props.className}>
       <ArrayFieldTitle
-        key={`array-field-title-${props.idSchema.$id}`}
         TitleField={props.TitleField}
         idSchema={props.idSchema}
         title={props.uiSchema["ui:title"] || props.title}
@@ -131,7 +148,6 @@ function TabbedArrayFieldTemplate(props) {
 
       {(props.uiSchema["ui:description"] || props.schema.description) && (
         <ArrayFieldDescription
-          key={`array-field-description-${props.idSchema.$id}`}
           DescriptionField={props.DescriptionField}
           idSchema={props.idSchema}
           description={
@@ -143,13 +159,11 @@ function TabbedArrayFieldTemplate(props) {
       <Tab.Container
         defaultActiveKey={0}
         activeKey={props.activeKey}
-        key={`array-item-list-${props.idSchema.$id}`}
         id={`array-item-list-${props.idSchema.$id}`}
         onSelect={eventKey => {
           if (eventKey == "+") {
             props.onAddClick(document.createEvent("Event"));
-          }
-          else {
+          } else {
             props.onSelect(eventKey);
           }
         }}
@@ -157,15 +171,32 @@ function TabbedArrayFieldTemplate(props) {
         <Row className="clearfix">
           <Col sm={12}>
             <Nav bsStyle="tabs">
-              {props.items && props.items.map(p => <TabbedArrayItemHeader {...p} />)}
+              {props.items &&
+                props.items.map((p, index) => (
+                  <TabbedArrayItemHeader
+                    key={index}
+                    {...p}
+                  />
+                ))}
               {props.canAdd && (
-              <NavItem eventKey="+" disabled={props.disabled || props.readonly}>+</NavItem>
-            )}
+                <NavItem
+                  eventKey="+"
+                  disabled={props.disabled || props.readonly}
+                >
+                  +
+                </NavItem>
+              )}
             </Nav>
           </Col>
           <Col sm={12}>
             <Tab.Content animation>
-              {props.items && props.items.map(p => TabbedArrayItemContent(p))}
+              {props.items &&
+                props.items.map((p, index) => (
+                  <TabbedArrayItemContent
+                    key={index}
+                    {...p}
+                  />
+                ))}
               <Tab.Pane eventKey="+">Adding...</Tab.Pane>
             </Tab.Content>
           </Col>
@@ -321,12 +352,12 @@ export class TabbedArrayField extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {activeKey: 0};
+    this.state = { activeKey: 0 };
   }
 
-  onSelect = (activeKey) => {
-    this.setState({activeKey});
-  }
+  onSelect = activeKey => {
+    this.setState({ activeKey });
+  };
 
   render() {
     const {
@@ -393,7 +424,7 @@ export class TabbedArrayField extends React.Component {
       formData,
       rawErrors,
       onSelect: this.onSelect,
-      activeKey: this.state.activeKey,
+      activeKey: this.state.activeKey
     };
 
     // Check if a custom render function was passed in

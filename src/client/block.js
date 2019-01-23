@@ -161,28 +161,30 @@ export class Block extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Button
-          onClick={event => {
-            gitpod_open("Blocks/" + this.props.block + ".json");
-          }}
-        >
-          Open file in code editor
-        </Button>
-        <EditorForm
-          schema={blockSchema.default}
-          uiSchema={blockuiSchema(this.props.cachedData.blocks)}
-          formData={this.state.formSrcData}
-          formContext={{
-            partsList: this.props.cachedData.parts,
-            codersList: this.props.cachedData.coders,
-            connectorsList: this.state.connectorsList
-          }}
-          onChange={this.onDataChange}
-        >
-          <Button type="submit" style={{ display: "none" }}>
-            Submit
+        <div className="container">
+          <Button
+            onClick={event => {
+              gitpod_open("Blocks/" + this.props.block + ".json");
+            }}
+          >
+            Open file in code editor
           </Button>
-        </EditorForm>
+          <EditorForm
+            schema={blockSchema.default}
+            uiSchema={blockuiSchema(this.props.cachedData.blocks)}
+            formData={this.state.formSrcData}
+            formContext={{
+              partsList: this.props.cachedData.parts,
+              codersList: this.props.cachedData.coders,
+              connectorsList: this.state.connectorsList
+            }}
+            onChange={this.onDataChange}
+          >
+            <Button type="submit" style={{ display: "none" }}>
+              Submit
+            </Button>
+          </EditorForm>
+        </div>
       </React.Fragment>
     );
   }
