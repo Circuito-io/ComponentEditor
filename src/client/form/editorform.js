@@ -8,6 +8,8 @@ import { ListArrayField } from "./listarrayfield";
 import { TabbedArrayField } from "./tabbedarrayfield";
 import { TabbedObjectField } from "./tabbedobjectfield";
 import { WireDropDown } from "./wiredropdown";
+import { AceEditorWidget} from "./aceeditorwidget";
+
 
 const editorFields = {
   typeahead: TypeaheadField,
@@ -20,7 +22,8 @@ const editorFields = {
 
 const editorWidgets = {
   imagewidget: ImageWidget,
-  wiredropdown: WireDropDown
+  wiredropdown: WireDropDown,
+  aceeditor: AceEditorWidget
 };
 
 export const EditorForm = React.forwardRef((props, ref) => {

@@ -1,3 +1,4 @@
+require('dotenv').config({silent: true});
 require('./settings.js');
 const path = require('path');
 
@@ -14,8 +15,6 @@ var app = express();
 var port = process.env.PORT || 8080;
 var hostname = "0.0.0.0";
 var bodyParser = require('body-parser');
-var reload = require('reload')
-reload(app);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug'); // We use pug as our templating engine
@@ -56,6 +55,9 @@ app.get('/:block', function (req, res) {
 	}
 
 });
+
+var reload = require('reload', {verbose: true});
+reload(app);
 
 console.log('Data folder:', global.dataFolder);
 console.log('miniMESS RESTful API server started on: ' + hostname + '/' + port);
