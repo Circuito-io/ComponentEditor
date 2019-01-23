@@ -4,11 +4,13 @@ import { toast } from "react-toastify";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
-import { coderSchema, coderuiSchema } from "../schema/coderSchema.js";
+import { coderuiSchema } from "../schema/coderSchema.js";
 import { read_a_coder, update_a_coder } from "../controller.js";
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
+
+import * as coderSchema from "../../../circuito-schema/coder.json"
 
 export class CoderField extends InputGroupModalField {
   showModal() {
@@ -45,7 +47,7 @@ export class CoderField extends InputGroupModalField {
     return (
     <React.Fragment>
     <EditorForm
-              schema={coderSchema}
+              schema={coderSchema.default}
               uiSchema={coderuiSchema}
               formData={this.state.objData}
               onChange={form => (this.currentData = form.formData)}

@@ -4,9 +4,11 @@ import { toast } from "react-toastify";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
-import { partSchema, partuiSchema } from "../schema/partSchema.js";
+import { partuiSchema } from "../schema/partSchema.js";
 import { read_a_part, update_a_part, list_all_parts } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
+
+import * as partSchema from "../../../circuito-schema/part.json";
 
 export class PartField extends InputGroupModalField {
   showModal() {
@@ -43,7 +45,7 @@ export class PartField extends InputGroupModalField {
     return (
     <React.Fragment>
     <EditorForm
-              schema={partSchema(this.props.formContext.partsList)}
+              schema={partSchema.default}
               uiSchema={partuiSchema(this.props.formContext.partsList)}
               formData={this.state.objData}
               onChange={form => (this.currentData = form.formData)}

@@ -1,3 +1,5 @@
+const jQuery = require('jquery');
+window.jQuery = jQuery;
 require('bootstrap');
 
 import React from "react";

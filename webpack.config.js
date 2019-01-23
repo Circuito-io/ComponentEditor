@@ -32,8 +32,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin([outputDirectory]),
     new NodemonPlugin({
-      watch: path.join(__dirname, outputDirectory),
-      script: './src/server/index.js'
+      watch: ['./src', './dist'],
+      script: './src/server/index.js',
+      verbose: true,
+      ignore: ['*.js.map'],
     })
   ]
 };

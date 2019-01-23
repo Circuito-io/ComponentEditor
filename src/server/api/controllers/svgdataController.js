@@ -5,14 +5,13 @@ const urlJoin = require("proper-url-join");
 
 exports.svgdata = function(req, res) {
     const endPoint = urlJoin(global.svgdataServer, 'svgdata', '?img=' + req.params.img);
-    console.log(endPoint);
+    console.log("svgdata", req.params.img)
     
     rp({
 		url: endPoint,
 		json: true,
 	})
 		.then(data => {
-			console.log(data);
 			res.json(data);
 		})
 		.catch(err => {

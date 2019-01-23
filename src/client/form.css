@@ -15,4 +15,24 @@
   form > p {
     padding: 1em;
   }
+
+  .youtube-container {
+    position: relative;
+  }
+
+  .youtube-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   
+  /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
+  .ace_text-input {position:absolute!important}

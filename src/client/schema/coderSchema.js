@@ -30,81 +30,16 @@ export const coderuiSchema = {
   },
   code: {
     global: {
-      "ui:widget": "textarea"
+      "ui:widget": "aceeditor"
     },
     constructors: {
-      "ui:widget": "textarea"
+      "ui:widget": "aceeditor"
     },
     setup: {
-      "ui:widget": "textarea"
+      "ui:widget": "aceeditor"
     },
     snippetCode: {
-      "ui:widget": "textarea"
-    }
-  }
-};
-
-export const coderSchema = {
-  type: "object",
-  properties: {
-    name: {
-      type: "string",
-      title: "Name"
-    },
-    supportedControllers: supportedControllersSchema,
-    files: {
-      type: "array",
-      title: "Library files",
-      items: {
-        type: "string",
-      }
-    },
-    license: {
-      type: "string",
-      title: "License",
-      default: ""
-    },
-    instantiate: {
-      type: "object",
-      title: "Variable generation settings",
-      properties: {
-        classname: {
-          type: "string",
-          title: "Class name"
-        },
-        varname: {
-          type: "string",
-          title: "Variable name"
-        },
-        ports: {
-          type: "array",
-          title: "Ports",
-          items: { type: "string" }
-        }
-      }
-    },
-    includeHeaders: {
-      type: "array",
-      title: "Include header files",
-      items: {type: "string"}
-    },
-    code: {
-      type: "object",
-      title: "Code snippets",
-      properties: {
-        global: {
-          type: "string"
-        },
-        constructors: {
-          type: "string"
-        },
-        setup: {
-          type: "string"
-        },
-        snippetCode: {
-          type: "string"
-        }
-      }
+      "ui:widget": "aceeditor"
     }
   }
 };
