@@ -109,9 +109,6 @@ export function circuitsuiSchema(blocksList) {
                 unique: {
                   classNames: "two-coloumn-field"
                 },
-                includeInFirmware: {
-                  classNames: "two-coloumn-field"
-                },
                 isBus: {
                   "ui:widget": "hidden"
                 }
