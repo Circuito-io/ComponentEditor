@@ -77,6 +77,53 @@
             "priority": 0
         },
         {
+            "name": "HWSer",
+            "coders": [
+                "SevenSegment"
+            ],
+            "supportedControllers": [
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "Teensy32"
+            ],
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "SevenSegment"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "GND",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"","voltage":"GND"}]
+                    }
+                },
+                {
+                    "name": "VCC",
+                    "interface": {
+                        "requires":[{"cost":1,"spec":"","voltage":"5v"},{"cost":2,"spec":"","voltage":"3.3v"}]
+                    }
+                },
+                {
+                    "name": "MemOverLoad",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"SRAMLoad","voltage":""}],
+                        "requiresLoad": 131
+                    }
+                },
+                {
+                    "name": "RX",
+                    "interface": {
+                        "requires":[{"cost":0,"spec":"TX","voltage":"5v"},{"cost":1,"spec":"TX","voltage":"3.3v"}],
+                        "unique": true
+                    }
+                }
+            ],
+            "priority": 1
+        },
+        {
             "name": "I2C",
             "supportedControllers": [
                 "ESP32DevKitC",
@@ -123,7 +170,7 @@
                     }
                 }
             ],
-            "priority": 1
+            "priority": 2
         }
     ]
 }
