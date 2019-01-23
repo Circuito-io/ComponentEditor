@@ -13,8 +13,8 @@ export class Header extends React.Component {
         <Navbar.Brand>
           <Link to='/'>Components Editor</Link>
         </Navbar.Brand>
-        <NavItem>
-          <Link to='/'>Home</Link>
+        <NavItem href="/">
+          Home
         </NavItem>
         {
           this.props.activeBlock && (
