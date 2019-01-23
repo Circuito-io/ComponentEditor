@@ -16,3 +16,5 @@
     padding: 1em;
   }
   
+  /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
+  .ace_text-input {position:absolute!important}
