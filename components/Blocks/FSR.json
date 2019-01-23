@@ -22,25 +22,6 @@
   },
   "circuits": [
     {
-      "name": "5v",
-      "coders": [
-        "FSR"
-      ],
-      "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ATTiny85",
-        "Teensy32"
-      ],
-      "parts": [
-        {
-          "name": "this",
-          "part": "FSR"
             "name": "5v",
             "coders": [
                 "FSR"
@@ -97,62 +78,6 @@
                 }
             ],
             "priority": 0
-        },
-        {
-          "name": "r1",
-          "part": "Res3K3O"
-        }
-      ],
-      "wires": [
-        {
-          "from": "this.1",
-          "to": "r1.con1"
-        },
-        {
-          "from": "r1.con0",
-          "to": "0"
-        }
-      ],
-      "ports": [
-        {
-          "name": "0",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
-                "voltage": "GND"
-              }
-            ]
-          }
-        },
-        {
-          "name": "1",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "ADC",
-                "voltage": ""
-              }
-            ],
-            "unique": true
-          }
-        },
-        {
-          "name": "2",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
-                "voltage": "5v"
-              }
-            ]
-          }
-        }
-      ],
-      "priority": 0
     },
     {
       "name": "3v3",

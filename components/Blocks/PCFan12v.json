@@ -47,18 +47,6 @@
         }
       ],
       "ports": [
-        {
-          "name": "Coil1",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "GndLoadSwitching-PWM",
-                "voltage": ""
-              }
-            ],
-<<<<<<< HEAD
-            "ports": [
                 {
                     "name": "Coil1",
                     "interface": {
@@ -74,26 +62,7 @@
                         "requiresLoad": 80
                     }
                 }
-=======
-            "requiresLoad": 80,
-            "unique": true
-          }
-        },
-        {
-          "name": "Coil2",
-          "interface": {
-            "requires": [
-              {
-                "cost": 1,
-                "spec": "",
-                "voltage": "12v"
-              }
->>>>>>> 17a0c966580db5e238462e37c426145e017c8d94
             ],
-            "requiresLoad": 80
-          }
-        }
-      ],
       "requiredBlocks": [
         {
           "cost": 0,
