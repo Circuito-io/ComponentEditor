@@ -31,7 +31,7 @@ exports.list_all_files_factory = function (objPrefix) {
 
 exports.read_a_file_factory = function (objPrefix) {
     return function (req, res) {
-        console.log('read_a_file', objPrefix, req.params);
+        console.log('read_a_file', objPrefix, req.params.name);
 
         global.analytics.track({
             userId: global.userid,
