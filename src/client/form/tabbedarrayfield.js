@@ -112,11 +112,11 @@ function TabbedArrayItemContent(props) {
     paddingRight: 6,
     fontWeight: "bold"
   };
-  
+
   return (
     <Tab.Pane eventKey={props.index}>
       <div className={props.className}>
-        <div className={props.hasToolbar ? "col-xs-9" : "col-xs-12"}>
+        <div className="col-xs-12">
           {props.children}
         </div>
 

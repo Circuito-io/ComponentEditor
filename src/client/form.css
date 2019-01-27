@@ -1,16 +1,16 @@
-  
+
   fieldset .two-coloumn-field:nth-child(even) {
     float: right;
     padding-left: 1em;
     width: 50%;
   }
-  
+
   fieldset .two-coloumn-field:nth-child(odd) {
     float: left;
     padding-right: 1em;
     width: 50%;
   }
-  
+
 
   form > p {
     padding: 1em;
@@ -33,6 +33,22 @@
     width: 100%;
     height: 100%;
   }
-  
+
   /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
   .ace_text-input {position:absolute!important}
+
+
+
+
+
+/*** MEDIA QUERIES ****/
+
+@media only screen and (max-width: 600px) {
+  .form-group.field.field-string.two-coloumn-field{
+    width:100%;
+    padding:0px;
+  }
+}
+
+
+/*** MEDIA QUERIES ****/

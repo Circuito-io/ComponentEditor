@@ -1,6 +1,5 @@
 const jQuery = require('jquery');
 window.jQuery = jQuery;
-require('bootstrap');
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -48,14 +47,14 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Route exact path='/' render={(props)=> 
+          <Route exact path='/' render={(props)=>
             <Header {...props} onSave={this.onSave}/>}
           />
           <Route exact path='/' render={(props)=>
             <Home {...props} cachedData={this.state.cachedData} />
           }/>
-          
-          <Route path='/:block' render={(props)=> 
+
+          <Route path='/:block' render={(props)=>
             <Header {...props} activeBlock={props.match.params.block} onSave={this.onSave}/>}
           />
           <Route path='/:block' render={(props)=>
