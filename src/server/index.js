@@ -1,6 +1,7 @@
 require('dotenv').config({silent: true});
 require('./settings.js');
 const path = require('path');
+const fileUpload = require('express-fileupload');
 
 global.analytics.identify({
 	userId: global.userid
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static('dist'))
+app.use(fileUpload({}))
 
 
 var partsBlocksCodersController = require('./api/controllers/partsblockscodersController');

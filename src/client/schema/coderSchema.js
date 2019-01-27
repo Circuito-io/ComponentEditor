@@ -9,9 +9,7 @@ export const coderuiSchema = {
   },
   supportedControllers: supportedControllersUISchema,
   files: {
-    "ui:options": {
-      orderable: false
-    }
+    "ui:field": "filesarray"
   },
   includeHeaders: {
     "ui:options": {

@@ -61,7 +61,6 @@ export const update_a_block = update_a_factory('blocks');
 export const update_a_part = update_a_factory('parts');
 export const update_a_coder = update_a_factory('coders');
 
-
 export function invoke_upload() {
     return window.fetch('/api/upload')
     .catch((err) => console.log('upload failed: ' + err));
