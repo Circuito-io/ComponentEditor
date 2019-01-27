@@ -1,18 +1,24 @@
 {
   "name": "WemosD1Mini",
-  "symbol": {
-    "ref": "circuito_WeMosD1Mini.svg",
-    "URL": "https://res.cloudinary.com/circuito/image/upload/ze1pncoyr0bs4hwic6fm"
-  },
   "displayName": "Wemos D1 Mini",
+  "desc": "",
+  "symbol": {
+    "URL": "https://res.cloudinary.com/circuito/image/upload/client/circuito_WeMosD1Mini_mkbzfy",
+    "ref": "circuito_WeMosD1Mini.svg"
+  },
+  "symbolParam": "",
   "category": [
     "controller"
   ],
-  "desc": "",
+  "placing": {
+    "onBreadboard": true,
+    "row": 1,
+    "rotation": 0
+  },
   "bom": [
     {
       "name": "octopart",
-      "image": "https://res.cloudinary.com/circuito/image/upload/xegsn3dtgtm0xm8rfo5z",
+      "image": "https://res.cloudinary.com/circuito/image/upload/client/WeMosD1Mini_lq2ptx",
       "link": "https://octopart.com/a076f53a6s-generic-97720080",
       "price": "10.19",
       "SKU": ""
@@ -21,10 +27,5 @@
   "info": {
     "setup": "",
     "test": ""
-  },
-  "placing": {
-    "onBreadboard": true,
-    "row": 1,
-    "rotation": 0
   }
 }
