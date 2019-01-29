@@ -68,50 +68,47 @@ export function circuitsuiSchema(blocksList) {
           },
           items: {
             classNames: "well",
-            codename: {
-              "ui:help": "For controllers only: port name in coder, <blank> for default name"
-            },
             interface: {
               requires: {
-                  "ui:options": {
-                    orderable: false
+                "ui:options": {
+                  orderable: false
+                },
+                items: {
+                  spec: {
+                    classNames: "two-coloumn-field",
+                    "ui:emptyValue": ""
                   },
-                  items: {
-                    spec: {
-                      classNames: "two-coloumn-field",
-                      "ui:emptyValue": ""
-                    },
-                    voltage: {
-                      classNames: "two-coloumn-field"
-                    }
+                  voltage: {
+                    classNames: "two-coloumn-field"
                   }
-                },
-                provides: {
-                  "ui:options": {
-                    orderable: false
-                  },
-                  items: {
-                    spec: {
-                      classNames: "two-coloumn-field",
-                      "ui:emptyValue": ""
-                    },
-                    voltage: {
-                      classNames: "two-coloumn-field"
-                    }
-                  }
-                },
-                requiresLoad: {
-                  classNames: "two-coloumn-field"
-                },
-                providesLoad: {
-                  classNames: "two-coloumn-field"
-                },
-                unique: {
-                  classNames: "two-coloumn-field"
-                },
-                isBus: {
-                  "ui:widget": "hidden"
                 }
+              },
+              provides: {
+                "ui:options": {
+                  orderable: false
+                },
+                items: {
+                  spec: {
+                    classNames: "two-coloumn-field",
+                    "ui:emptyValue": ""
+                  },
+                  voltage: {
+                    classNames: "two-coloumn-field"
+                  }
+                }
+              },
+              requiresLoad: {
+                classNames: "two-coloumn-field"
+              },
+              providesLoad: {
+                classNames: "two-coloumn-field"
+              },
+              unique: {
+                classNames: "two-coloumn-field"
+              },
+              isBus: {
+                "ui:widget": "hidden"
+              }
             }
           }
         },
@@ -136,5 +133,5 @@ export function circuitsuiSchema(blocksList) {
         }
       }
     }
-  }
-};
+  };
+}
