@@ -24,10 +24,10 @@ export function blockuiSchema(blocksList) {
     },
     app: {
       numericName: {
-        classNames: "two-coloumn-field"
+        "ui:widget": "hidden"
       },
       shortName: {
-        classNames: "two-coloumn-field"
+        "ui:widget": "hidden"
       },
       tags: {
         "ui:field": "typeahead",
