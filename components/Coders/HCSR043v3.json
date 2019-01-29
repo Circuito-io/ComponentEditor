@@ -7,15 +7,12 @@
     "RPI3B"
   ],
   "code": {
-    "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+    "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n",
+    "constructors": "{{classname}} {{varname}}({{TRIG}},{{Echo}});"
   },
   "license": "GNU_GPL_v3",
   "instantiate": {
     "classname": "NewPing",
-    "ports": [
-      "TRIG",
-      "Echo"
-    ],
     "varname": "hcsr04"
   },
   "files": [

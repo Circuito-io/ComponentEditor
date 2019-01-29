@@ -16,16 +16,13 @@
   ],
   "code": {
     "global": "",
-    "constructors": "",
+    "constructors": "{{classname}} {{varname}}({{2}});",
     "setup": "{{varname}}.init();\n",
     "snippetCode": "//Read Tilt Switch state. \n//if Switch is tilted function will return HIGH (1). if not function will return LOW (0). \n//for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n//if debounce is not working properly try changing 'debounceDelay' variable in Button.h\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "Button",
-    "ports": [
-      "2"
-    ],
     "varname": "TiltSwitch"
   },
   "files": [

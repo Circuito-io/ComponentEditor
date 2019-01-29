@@ -17,16 +17,12 @@
   ],
   "code": {
     "global": "",
-    "constructors": "",
     "setup": "pinMode({{SIG}}, INPUT);\n",
     "snippetCode": "//Read Capacitive Touch Sensor. {{varname}}Var will be '1' if the sensor will be touched\nbool {{varname}}Var = digitalRead({{SIG}});\nSerial.print(F(\"Capacitive Touch Sensor: \")); Serial.println({{varname}}Var);\n"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "",
-    "ports": [
-      "SIG"
-    ],
     "varname": "CapacitiveTouch"
   },
   "files": [],

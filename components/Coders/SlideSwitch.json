@@ -17,14 +17,12 @@
   ],
   "code": {
     "setup": "{{varname}}.init();\n",
-    "snippetCode": "//read Slide Switch state. \n//if Switch is open function will return LOW (0). \n//if it is closed function will return HIGH (1).\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);"
+    "snippetCode": "//read Slide Switch state. \n//if Switch is open function will return LOW (0). \n//if it is closed function will return HIGH (1).\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);",
+    "constructors": "{{classname}} {{varname}}({{2}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "Button",
-    "ports": [
-      "2"
-    ],
     "varname": "slideSwitch"
   },
   "files": [

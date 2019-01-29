@@ -17,16 +17,12 @@
   "code": {
     "global": "//define Nokia LCD contrast and dimentions(in pixels)\n#define LCD_CONTRAST 60\n#define LCD_SIZE_COL 84\n#define LCD_SIZE_ROW 48\nint {{varname}}Counter = 0;\n",
     "setup": "//Initialize Nokia instance\n{{varname}}.begin(LCD_SIZE_COL, LCD_SIZE_ROW);\n{{varname}}.setContrast(LCD_CONTRAST); //Adjust display contrast\n",
-    "snippetCode": "{{varname}}.clearDisplay();             //Erase & clear display buffer\n{{varname}}.setTextColor(BLACK);        //Set text color to black, background is white by default\n{{varname}}.setTextSize(1);             //set text size\n{{varname}}.println(\"circuito.io\");     //print to screen\n{{varname}}.println();                  \n{{varname}}.setTextColor(WHITE, BLACK); //set text color to white and backgroung to black\n{{varname}}.setTextSize(2);             //set text size\n{{varname}}.println({{varname}}Counter++);          //print to screen\n{{varname}}.display();                  //display on screen"
+    "snippetCode": "{{varname}}.clearDisplay();             //Erase & clear display buffer\n{{varname}}.setTextColor(BLACK);        //Set text color to black, background is white by default\n{{varname}}.setTextSize(1);             //set text size\n{{varname}}.println(\"circuito.io\");     //print to screen\n{{varname}}.println();                  \n{{varname}}.setTextColor(WHITE, BLACK); //set text color to white and backgroung to black\n{{varname}}.setTextSize(2);             //set text size\n{{varname}}.println({{varname}}Counter++);          //print to screen\n{{varname}}.display();                  //display on screen",
+    "constructors": "{{classname}} {{varname}}({{DC}},{{CS}},{{RST}});"
   },
   "license": "BSD",
   "instantiate": {
     "classname": "Adafruit_PCD8544",
-    "ports": [
-      "DC",
-      "CS",
-      "RST"
-    ],
     "varname": "nokiaLcd"
   },
   "files": [

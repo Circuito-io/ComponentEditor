@@ -16,14 +16,12 @@
   "code": {
     "global": "unsigned int {{varname}}counter = 0;  // This variable will count up to 65k\n",
     "setup": "{{varname}}.clearDisplay();  // Clears display, resets cursor\n{{varname}}.writeStr(\"-HI-\");  // Displays -HI- on all digits   \n{{varname}}.setBrightness(255);  // High brightness\n",
-    "snippetCode": "// This will output the counter value to the display\n{{varname}}.writeInt({{varname}}counter);\n{{varname}}counter++;  // Increment the counter\ndelay(50);  "
+    "snippetCode": "// This will output the counter value to the display\n{{varname}}.writeInt({{varname}}counter);\n{{varname}}counter++;  // Increment the counter\ndelay(50);  ",
+    "constructors": "{{classname}} {{varname}}({{RX}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "S7S",
-    "ports": [
-      "RX"
-    ],
     "varname": "s7s"
   },
   "files": [

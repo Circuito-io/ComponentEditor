@@ -17,14 +17,12 @@
   ],
   "code": {
     "setup": "//Calibrate sensor\n{{varname}}.calibrate();\n",
-    "snippetCode": "//Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\nint {{varname}}Val = {{varname}}.getMeasurment();\nSerial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n"
+    "snippetCode": "//Get Measurment from hall sensor. Depending on the magnet pole polarity the sensor will return positive or negative values.\nint {{varname}}Val = {{varname}}.getMeasurment();\nSerial.print(F(\"Hall: \")); Serial.println({{varname}}Val);\n",
+    "constructors": "{{classname}} {{varname}}({{Vout}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "HallA1302",
-    "ports": [
-      "Vout"
-    ],
     "varname": "hallA"
   },
   "files": [

@@ -16,14 +16,12 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "// The LED will turn on and fade till it is off\nfor(int i=255 ; i> 0 ; i -= 5)\n{\n{{varname}}.dim(i);                      // 1. Dim Led \ndelay(15);                               // 2. waits 5 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n}                                          \n{{varname}}.off();                        // 3. turns off"
+    "snippetCode": "// The LED will turn on and fade till it is off\nfor(int i=255 ; i> 0 ; i -= 5)\n{\n{{varname}}.dim(i);                      // 1. Dim Led \ndelay(15);                               // 2. waits 5 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n}                                          \n{{varname}}.off();                        // 3. turns off",
+    "constructors": "{{classname}} {{varname}}({{Vin}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "LED",
-    "ports": [
-      "Vin"
-    ],
     "varname": "ledB"
   },
   "files": [
@@ -32,5 +30,7 @@
     "LED_license.txt",
     "Switchable.h",
     "Switchable.cpp"
-  ]
+  ],
+  "includeHeaders": [
+    "LED.h" ]
 }

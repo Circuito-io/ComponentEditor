@@ -6,13 +6,11 @@
   "license": "circuito",
   "code": {
     "setup": "",
-    "snippetCode": "//read Touch sensor value. \n//the higher the value the more it feels human touch. \nint {{varname}}Val = touchRead({{PinA}});\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+    "snippetCode": "//read Touch sensor value. \n//the higher the value the more it feels human touch. \nint {{varname}}Val = touchRead({{PinA}});\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n",
+    "constructors": "{{classname}} {{varname}}({{PinA}});"
   },
   "instantiate": {
     "classname": "",
-    "ports": [
-      "PinA"
-    ],
     "varname": "touch"
   }
 }

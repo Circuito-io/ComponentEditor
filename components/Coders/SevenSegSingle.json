@@ -17,23 +17,12 @@
   ],
   "code": {
     "global": "//define an array for all the segments\nint {{varname}}Pins[] = { {{DP}}, {{C}}, {{D}}, {{E}}, {{B}}, {{A}}, {{F}}, {{G}} };\n",
-    "constructors": "",
     "setup": "pinMode({{DP}}, OUTPUT);\npinMode({{C}}, OUTPUT);\npinMode({{D}}, OUTPUT);\npinMode({{E}}, OUTPUT);\npinMode({{B}}, OUTPUT);\npinMode({{A}}, OUTPUT);\npinMode({{F}}, OUTPUT);\npinMode({{G}}, OUTPUT);\n//turn off all segments:\nfor (int i = 0; i < 8; i++) { \ndigitalWrite({{varname}}Pins[i],HIGH);\n}\n",
     "snippetCode": "//This loop will turn on and off each segment in the array for 0.5 sec\nfor (int i = 0; i < 8; i++) { \ndigitalWrite({{varname}}Pins[i],LOW);\ndelay(500);\n}\nfor (int i = 0; i < 8; i++) { \ndigitalWrite({{varname}}Pins[i],HIGH);\n}\n"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "",
-    "ports": [
-      "DP",
-      "C",
-      "D",
-      "E",
-      "B",
-      "A",
-      "F",
-      "G"
-    ],
     "varname": "SevenSegSingle"
   },
   "files": [],
