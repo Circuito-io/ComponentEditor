@@ -146,23 +146,6 @@ exports.upload = function(req, res) {
     return;
   }
 
-  var filesByCoder = {};
-  files["CodeFiles"].forEach(file => {
-    if (!(file.coder in filesByCoder)) {
-      console.log("creating", file.coder);
-      filesByCoder[file.coder] = [];
-    }
-    console.log(file.coder);
-    filesByCoder[file.coder].push(file.name);
-  });
-
-  console.log(filesByCoder);
-
-  files["Coders"].map(coder => {
-    console.log(coder.files);
-  });
-  return;
-
   const endPoint = urlJoin(
     global.circuitoServer,
     global.uploadEndpoint,
