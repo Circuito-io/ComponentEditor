@@ -1,4 +1,4 @@
-const partCategoryEnum = ['output', 'input', 'support', 'power']
+const partCategoryEnum = ["output", "input", "support", "power"];
 
 export function partuiSchema(partsList) {
   return {
@@ -14,13 +14,10 @@ export function partuiSchema(partsList) {
       },
       test: {
         "ui:widget": "textarea"
-      },
+      }
     },
     symbol: {
-      URL: {
-        "ui:widget": "imagewidget",
-        "ui:help": "SVG must follow circuito.io/blog/SVG-Guidelines"
-      }
+      "ui:widget": "imagewidget",
     },
     category: {
       "ui:field": "typeahead",
@@ -58,135 +55,5 @@ export function partuiSchema(partsList) {
         rows: 7
       }
     }
-  }
-};
-
-export function partSchema(partsList) {
-  return {
-    type: "object",
-    properties: {
-      name: {
-        type: "string",
-        title: "Name"
-      },
-      displayName: {
-        type: "string",
-        title: "Display Name"
-      },
-      desc: {
-        type: "string",
-        title: "Description"
-      },
-      symbol: {
-        type: "object",
-        properties: {
-          URL: {
-            type: "string",
-            title: "Symbol (SVG)"
-          },
-          ref: {
-            type: "string"
-          }
-        }
-      },
-      symbolParam: {
-        type: "string",
-        title: "Symbol parameter",
-        default: ""
-      },
-      category: {
-        title: "Category",
-        type: "array",
-        items: {
-          type: "string",
-          enum: partCategoryEnum
-        },
-        uniqueItems: true
-      },
-      placing: {
-        type: "object",
-        properties: {
-          onBreadboard: {
-            type: "boolean",
-            title: "Place on breadboard"
-          }
-        }
-      },
-      bom: {
-        type: "array",
-        items: {
-          type: "object",
-          title: "BoM data",
-          properties: {
-            name: {
-              type: "string",
-              title: "Supplier",
-              default: "",
-              enum: ["octopart", "digikey", "other"]
-            },
-            image: {
-              type: "string",
-              title: "Image"
-            },
-            SKU: {
-              type: "string",
-              default: ""
-            },
-            link: {
-              type: "string",
-              title: "Link",
-              default: ""
-            },
-            price: {
-              type: "string",
-              title: "Price (USD)",
-              default: ""
-            },
-            headers: {
-                type: "object",
-                title: "Headers",
-                properties: {
-                type: {
-                    type: "string",
-                    title: "Headers type",
-                    enum: ["FemaleHeaders", "MaleHeaders"]
-                },
-                qty: {
-                    type: "integer",
-                    title: "Headers quantity"
-                }
-                }
-            },
-          }
-        }
-      },
-      info: {
-        type: "object",
-        properties: {
-          setup: {
-            type: "string",
-            title: "Setup info",
-            default: ""
-          },
-          test: {
-            type: "string",
-            title: "Test info",
-            default: ""
-          },
-        }
-      },
-      auxParts: {
-        type: "array",
-        title: "Auxilary parts",
-        items: {
-          type: "string",
-          enum: partsList
-        },
-        uniqueItems: true
-      },
-      notes: {
-        type: "string"
-      }
-    }
-  }
-};
+  };
+}

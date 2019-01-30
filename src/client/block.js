@@ -91,9 +91,9 @@ export class Block extends React.Component {
             promises.push(
               read_a_part(part.part)
                 .then(partData => {
-                  var symbolurl = partData.symbol && partData.symbol.URL;
+                  var symbolurl = partData.symbol;
 
-                  if (symbolurl) var imgid = symbolurl.split("/").pop();
+                  if (symbolurl && (typeof(symbol) === 'string')) var imgid = symbolurl.split("/").pop();
                   else {
                     return Promise.reject("Mising symbol for " + partName);
                   }
