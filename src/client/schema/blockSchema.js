@@ -17,7 +17,7 @@ export function blockuiSchema(blocksList) {
     category: {
       "ui:field": "typeahead",
       typeahead: {
-        options: blockSchema.default.properties.app.properties.tags.items.enum,
+        options: blockSchema.default.properties.category.items.enum,
         minLength: 0,
         multiple: true
       }
@@ -28,14 +28,6 @@ export function blockuiSchema(blocksList) {
       },
       shortName: {
         "ui:widget": "hidden"
-      },
-      tags: {
-        "ui:field": "typeahead",
-        typeahead: {
-          options: blockSchema.default.properties.category.items.enum,
-          minLength: 0,
-          multiple: true
-        }
       },
       image: {
         "ui:widget": "imagewidget"
