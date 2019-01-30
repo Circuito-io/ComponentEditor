@@ -44,7 +44,7 @@ exports.read_a_file_factory = function(objPrefix) {
     fs.readFile(objFile(objPrefix, req.params.name), "utf8", (err, data) => {
       if (err) {
         console.log(err);
-        res.send(err);
+        res.status(400).send(err);
       }
 
       try {
@@ -53,7 +53,7 @@ exports.read_a_file_factory = function(objPrefix) {
         console.log(err);
 
         if (err instanceof SyntaxError) {
-          res.send("Invalid JSON<br>" + data);
+          res.status(400).send("Invalid JSON<br>" + data);
         }
         return;
       }
@@ -82,7 +82,7 @@ exports.update_a_file_factory = function(objPrefix) {
       console.log(err);
 
       if (err instanceof SyntaxError) {
-        res.send("Invalid JSON<br>" + data);
+        res.status(400).send("Invalid JSON<br>" + data);
       }
       return;
     }
@@ -97,7 +97,7 @@ exports.create_a_file_factory = function(objPrefix) {
 
     if (!name) {
       console.log("CREATE request with missing object name");
-      res.send("Missing name in object");
+      res.status(400).send("Missing name in object");
       return;
     }
 
@@ -109,7 +109,7 @@ exports.create_a_file_factory = function(objPrefix) {
       console.log(err);
 
       if (err instanceof SyntaxError) {
-        res.send("Invalid JSON<br>" + data);
+        res.status(400).send("Invalid JSON<br>" + data);
       }
       return;
     }
@@ -125,9 +125,21 @@ exports.delete_a_file_factory = function(objPrefix) {
 
 exports.delete_a_subdir_file_factory = function(objPrefix) {
   return function(req, res) {
-    fs.unlinkSync(
-      path.join(objFolder(objPrefix), req.params.name, req.params.filename)
+    const filepath = path.join(
+      objFolder(objPrefix),
+      req.params.name,
+      req.params.filename
     );
+    console.log("DELETE ", filepath);
+
+    fs.unlink(filepath, err => {
+      if (err) {
+        console.log("DELETE failed");
+        res.status(400).send("Can't find file" + err);
+      } else {
+        res.send("OK");
+      }
+    });
   };
 };
 

@@ -70,13 +70,20 @@ export function read_a_svgdata(img) {
     return window.fetch(urlJoin('/api/svgdata', img))
         .then((response) => response.json())
         .catch((ex) => {
-            console.log('parsing failed', ex);
+            console.log('read_a_svgdata failed', ex);
         })
 }
 
 export function gitpod_open(path) {
     return window.fetch(urlJoin('/api/open', encodeURIComponent(path)))
         .catch((ex) => {
-            console.log('gitpod open failed', ex);
+            console.log('gitpod_open failed', ex);
         });
+}
+
+export function delete_a_coder_file(name, filename) {
+    return window.fetch(urlJoin('/api/coders', name, filename), {method: 'delete',})
+        .catch((ex) => {
+            console.log('delete_a_coder_file failed', ex);
+        })
 }

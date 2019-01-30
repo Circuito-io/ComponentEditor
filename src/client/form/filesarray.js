@@ -2,18 +2,16 @@ import AddButton from "react-jsonschema-form/lib/components/AddButton";
 import IconButton from "react-jsonschema-form/lib/components/IconButton";
 import React from "react";
 import Upload from "rc-upload";
-
+import { Container, Row, Col } from "react-bootstrap";
+import { delete_a_coder_file } from "../controller";
 import {
-  getDefaultFormState,
   getUiOptions,
-  isFixedItems,
-  allowAdditionalItems,
   retrieveSchema,
   toIdSchema,
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
-import { upload_a_file } from "../controller";
+import { toast } from "react-toastify";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
   if (!title) {
@@ -35,19 +33,12 @@ function ArrayFieldDescription({ DescriptionField, idSchema, description }) {
 
 function FileArrayItem(props) {
   const btnStyle = {
-    flex: 1,
-    paddingLeft: 6,
-    paddingRight: 6,
-    fontWeight: "bold"
+    flex: 1
   };
   return (
-    <div key={props.index} className={props.className}>
-      <div className={props.hasToolbar ? "col-xs-9" : "col-xs-12"}>
-        {props.children}
-      </div>
-
+    <Row key={props.index} className={props.className}>
       {props.hasToolbar && (
-        <div className="col-xs-3 array-item-toolbox">
+        <Col xs={1}>
           <div
             className="btn-group"
             style={{
@@ -91,13 +82,15 @@ function FileArrayItem(props) {
               />
             )}
           </div>
-        </div>
+        </Col>
       )}
-    </div>
+      <Col xs={11}>{props.children.props.formData}</Col>
+    </Row>
   );
 }
 
 function FilesArrayFieldTemplate(props) {
+  console.log(props);
   return (
     <fieldset className={props.className}>
       <ArrayFieldTitle
@@ -118,20 +111,27 @@ function FilesArrayFieldTemplate(props) {
       )}
 
       <div
-        className="row array-item-list"
+        className="container array-item-list"
         key={`array-item-list-${props.idSchema.$id}`}
       >
         {props.items && props.items.map(p => FileArrayItem(p))}
       </div>
 
       {props.canAdd && (
-        <Upload 
-          action={"/api/coders-file/" + props.formContext.targetFolder}
-          onStart = {file => {
-            console.log('onStart', props, file.name)
-            props.addItem(file.name);
-          }}
-        ><a>Upload file...</a></Upload>
+        <Row>
+          <Col xs={1} />
+          <Col xs={11}>
+            <Upload
+              action={"/api/coders-file/" + props.formContext.targetFolder}
+              onStart={file => {
+                console.log("onStart", props, file.name);
+                props.addItem(file.name);
+              }}
+            >
+              <a>Upload file...</a>
+            </Upload>
+          </Col>
+        </Row>
       )}
     </fieldset>
   );
@@ -182,13 +182,25 @@ export class FilesArrayField extends React.Component {
     this.props.onChange(this.props.formData.concat(item).sort());
   }
 
-
   onDropIndexClick = index => {
     return event => {
       if (event) {
         event.preventDefault();
       }
       const { formData, onChange } = this.props;
+
+      var filename = formData[index];
+      var folder = this.props.formContext.targetFolder;
+      delete_a_coder_file(folder, filename).then(res => {
+        if (res && !res.ok) {
+          res.text().then(text => toast.error("Delete failed:" + text));
+        } else if (!(res && res.ok)) {
+          toast.error(
+            "Delete failed:" + ((res && res.statusText) || "can't connect")
+          );
+        }
+      });
+
       // refs #195: revalidate to ensure properly reindexing errors
       let newErrorSchema;
       if (this.props.errorSchema) {
