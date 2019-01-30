@@ -21,7 +21,7 @@ try {
 }
 
 if (global.userid == undefined) {
-    global.userid = 'main';//uuidv4();
+    global.userid = uuidv4();
     console.log("Generated userid", global.userid);
 
     // save for next run
