@@ -1,34 +1,10 @@
-const supportedControllersOptions = [
-  "ATMega328P",
-  "ArduinoLeonardo",
-  "ArduinoMega",
-  "ArduinoMicro",
-  "ArduinoNano",
-  "ArduinoProMini5v",
-  "ArduinoUno",
-  "ATTiny85",
-  "Teensy32",
-  "ArduinoGemma",
-  "ArduinoProMini3v3",
-  "ESP32DevKitC",
-  "NodeMCU",
-  "RPI3B"
-];
 
-export var supportedControllersSchema = {
-  type: "array",
-  title: "Supported Controllers",
-  items: {
-    type: "string",
-    enum: supportedControllersOptions
-  },
-  uniqueItems: true
-};
+import * as blockSchema from '../../../circuito-schema/block.json';
 
 export var supportedControllersUISchema = {
   "ui:field": "typeahead",
   typeahead: {
-    options: supportedControllersOptions,
+    options: blockSchema.default.definitions.supportedControllers.items.enum,
     placeholder: "Select controllers",
     multiple: true,
     minLength: 0

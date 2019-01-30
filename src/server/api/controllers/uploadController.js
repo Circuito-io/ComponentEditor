@@ -75,7 +75,7 @@ exports.upload = function(req, res) {
     files[schemaSet.type].map(obj => {
       var validation = validator.validate(obj, schemaSet.schema);
       if (validation.errors.length > 0) {
-        errorString += `<h4>${schemaSet.type}:${
+        errorString += `<h4>${schemaSet.type} ${
           obj.name
         }</h4>\n</br><ul>${validation.errors
           .map(error => `<li>${error}</li>`)
