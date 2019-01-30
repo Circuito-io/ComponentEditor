@@ -30,21 +30,22 @@ export class SaveUpload extends React.Component {
         autoClose: false
       });
 
-      invoke_upload().then(response => {
-        if (!response.ok) {
+      invoke_upload().then(res => {
+        if (!(res && res.ok)) {
           toast.update(toastId, {
-            render: "Upload failed:" + response.statusText,
+            render:
+              "Upload failed:" + ((res && res.statusText) || "can't connect"),
             type: toast.TYPE.ERROR,
             autoClose: 5000
           });
 
-          if (response.status === 412) {
+          if (res && res.status === 412) {
             // Precondition failed - validation errors
-            response.text().then(text => {
+            res.text().then(text => {
               this.setState({ show: true, modalMsg: text });
             });
           } else {
-            console.log(response);
+            console.log(res);
           }
         } else {
           toast.update(toastId, {
@@ -69,10 +70,8 @@ export class SaveUpload extends React.Component {
               "max-height": "calc(100vh - 210px)",
               "overflow-y": "auto"
             }}
-            dangerouslySetInnerHTML={{__html: this.state.modalMsg}}
-          >
-            
-          </Modal.Body>
+            dangerouslySetInnerHTML={{ __html: this.state.modalMsg }}
+          />
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
               Close

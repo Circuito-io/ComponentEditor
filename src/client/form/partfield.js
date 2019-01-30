@@ -19,43 +19,49 @@ export class PartField extends InputGroupModalField {
 
   save() {
     update_a_part(this.state.objName, this.currentData).then(res => {
-      if (!res.ok) toast.error("Update part failed " + res.statusText);
+      if (!(res && res.ok))
+        toast.error(
+          "Update part failed:" + ((res && res.statusText) || "can't connect")
+        );
       else toast.success("Saved " + this.state.objName, { autoClose: 2000 });
       console.log("Update response:", res);
     });
   }
 
   renderModalTitle() {
-    return "Part " + this.state.objName
+    return "Part " + this.state.objName;
   }
 
   renderInputGroup() {
-    return (<Typeahead
-      options={this.props.formContext.partsList}
-      placeholder="Select a part..."
-      defaultSelected={this.state.objName && [this.state.objName]}
-      onChange={selection => {
-        this.setState({ objName: selection[0] });
-        this.props.onChange(selection[0]);
+    return (
+      <Typeahead
+        options={this.props.formContext.partsList}
+        placeholder="Select a part..."
+        defaultSelected={this.state.objName && [this.state.objName]}
+        onChange={selection => {
+          this.setState({ objName: selection[0] });
+          this.props.onChange(selection[0]);
         }}
-    />);
+      />
+    );
   }
 
   renderModalBody() {
     return (
-    <React.Fragment>
-    <EditorForm
-              schema={partSchema.default}
-              uiSchema={partuiSchema(this.props.formContext.partsList)}
-              formData={this.state.objData}
-              onChange={form => (this.currentData = form.formData)}
-            >
-              <Button type="submit" style={{ display: "none" }}>
-                Submit
-              </Button>
-            </EditorForm>
+      <React.Fragment>
+        <EditorForm
+          schema={partSchema.default}
+          uiSchema={partuiSchema(this.props.formContext.partsList)}
+          formData={this.state.objData}
+          onChange={form => (this.currentData = form.formData)}
+        >
+          <Button type="submit" style={{ display: "none" }}>
+            Submit
+          </Button>
+        </EditorForm>
 
-            <SVGCreator />
-            </React.Fragment>);
+        <SVGCreator />
+      </React.Fragment>
+    );
   }
 }
