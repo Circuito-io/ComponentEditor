@@ -1,5 +1,6 @@
 import React from "react";
 import { isEqual } from "underscore";
+import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
 import { EditorForm } from "./form/editorform.js";
 import { blockuiSchema } from "./schema/blockSchema.js";
@@ -11,7 +12,7 @@ import {
   read_a_svgdata
 } from "./controller.js";
 
-import * as blockSchema from '../../circuito-schema/block.json';
+import * as blockSchema from "../../circuito-schema/block.json";
 export class Block extends React.Component {
   constructor(props) {
     super(props);
@@ -93,7 +94,8 @@ export class Block extends React.Component {
                 .then(partData => {
                   var symbolurl = partData.symbol;
 
-                  if (symbolurl && (typeof(symbol) === 'string')) var imgid = symbolurl.split("/").pop();
+                  if (symbolurl && typeof symbol === "string")
+                    var imgid = symbolurl.split("/").pop();
                   else {
                     return Promise.reject("Mising symbol for " + partName);
                   }
@@ -140,8 +142,11 @@ export class Block extends React.Component {
       return;
     }
 
-    update_a_block(this.props.block, this.currentData).then(json => {
-      console.log("Update response:", json);
+    update_a_block(this.props.block, this.currentData).then(res => {
+      if (!(res && res.ok))
+        toast.error(
+          "Update part failed:" + ((res && res.statusText) || "can't connect")
+        );
       this.modified = false;
     });
   }
