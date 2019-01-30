@@ -9,10 +9,9 @@ export function blockuiSchema(blocksList) {
   return {
     name: {
       "ui:readonly": true,
-      classNames: "two-coloumn-field"
     },
     blockId: {
-      classNames: "two-coloumn-field"
+      "ui:widget": "hidden"
     },
     category: {
       "ui:field": "typeahead",
