@@ -2,14 +2,11 @@
   "name": "Thermistor3v3",
   "supportedControllers": [],
   "code": {
-    "snippetCode": "//Get Measurment from Thermistor temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[°C]\"));"
+    "snippetCode": "//Get Measurment from Thermistor temperature sensor.\nfloat {{varname}}TempC = {{varname}}.getTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "Thermistor",
-    "ports": [
-      "con1"
-    ],
     "varname": "thermistor"
   },
   "files": [
