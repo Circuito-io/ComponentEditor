@@ -90,7 +90,6 @@ function FileArrayItem(props) {
 }
 
 function FilesArrayFieldTemplate(props) {
-  console.log(props);
   return (
     <fieldset className={props.className}>
       <ArrayFieldTitle
