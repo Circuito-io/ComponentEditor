@@ -14,17 +14,11 @@ var objFile = function(objPrefix, objName) {
 
 exports.list_all_files_factory = function(objPrefix) {
   return function(req, res) {
-    if (req.app.locals.listCache[objPrefix]) {
-      res.json(req.app.locals.listCache[objPrefix]);
-    } else {
-      var err = false;
-      if (err) res.send(err);
-
-      var files = fs
-        .readdirSync(objFolder(objPrefix))
-        .map(fn => path.basename(fn, ".json"));
-      res.json(files);
-    }
+    console.log("list_all_files", objPrefix);
+    var files = fs
+      .readdirSync(objFolder(objPrefix))
+      .map(fn => path.basename(fn, ".json"));
+    res.json(files);
   };
 };
 

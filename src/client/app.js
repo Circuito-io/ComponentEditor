@@ -1,17 +1,17 @@
-const jQuery = require('jquery');
+const jQuery = require("jquery");
 window.jQuery = jQuery;
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, IndexRoute, BrowserRouter } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import { Header } from "./header"
+import { Route, IndexRoute, BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { Header } from "./header";
 import { Block } from "./block.js";
 import { Home } from "./home.js";
-import {cacheData} from './controller.js';
+import { cacheData } from "./controller.js";
 
-import './form.css';
-import 'react-toastify/dist/ReactToastify.css';
+import "./form.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -21,16 +21,20 @@ export default class App extends React.Component {
 
     this.state = {
       activeBlock: null,
-      cachedData: {blocks: [], parts: [], coders: []},
+      cachedData: { blocks: [], parts: [], coders: [] }
     };
 
     this.onSave = this.onSave.bind(this);
     this.setSaveFunc = this.setSaveFunc.bind(this);
+    this.refreshData = this.refreshData.bind(this);
 
-    cacheData()
-    .then((cachedData)=> {
-      this.setState({cachedData});
-    })
+    this.refreshData();
+  }
+
+  refreshData() {
+    cacheData().then(cachedData => {
+      this.setState({ cachedData });
+    });
   }
 
   onSave() {
@@ -47,32 +51,46 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Route exact path='/' render={(props)=>
-            <Header {...props} onSave={this.onSave}/>}
+          <Route
+            exact
+            path="/"
+            render={props => <Header {...props} onSave={this.onSave} />}
           />
-          <Route exact path='/' render={(props)=>
-            <Home {...props} cachedData={this.state.cachedData} />
-          }/>
-
-          <Route path='/:block' render={(props)=>
-            <Header {...props} activeBlock={props.match.params.block} onSave={this.onSave}/>}
-          />
-          <Route path='/:block' render={(props)=>
-            <Block {...props} id="block" setSaveFunc={this.setSaveFunc}
-                    cachedData={this.state.cachedData} block={props.match.params.block}/>
-          }/>
-          <ToastContainer
-            hideProgressBar={true}
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Home {...props} cachedData={this.state.cachedData} refreshData={this.refreshData}/>
+            )}
           />
 
+          <Route
+            path="/:block"
+            render={props => (
+              <Header
+                {...props}
+                activeBlock={props.match.params.block}
+                onSave={this.onSave}
+              />
+            )}
+          />
+          <Route
+            path="/:block"
+            render={props => (
+              <Block
+                {...props}
+                id="block"
+                setSaveFunc={this.setSaveFunc}
+                cachedData={this.state.cachedData}
+                block={props.match.params.block}
+              />
+            )}
+          />
+          <ToastContainer hideProgressBar={true} />
         </React.Fragment>
       </BrowserRouter>
     );
   }
 }
 
-
-ReactDOM.render(
-  <App />,
-  document.getElementById("app")
-);
+ReactDOM.render(<App />, document.getElementById("app"));

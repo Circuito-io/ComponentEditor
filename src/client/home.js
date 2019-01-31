@@ -9,32 +9,28 @@ export class Home extends React.Component {
 
     this.onBlockSelected = this.onBlockSelected.bind(this);
   }
-  
+
   onBlockSelected(block) {
-    this.props.history.push('/'+block);
-    console.log(block);
+    this.props.history.push("/" + block);
   }
 
   render() {
     return (
       <Grid>
-          <Row>
-            <Col sm={6}>
-              <Well>
-                <h2>Edit</h2>
-                <br/>
-                <BlocksList cachedData={this.props.cachedData} onBlockSelected = {this.onBlockSelected}/>
-              </Well>
-            </Col>
-            <Col sm={6}>
-              <Well>
-                <h2>Create</h2>
-                <br/>
-                <NewComponent/>
-              </Well>
-            </Col>
-          </Row>
-        </Grid>
+        <Row>
+          <Col>
+            <Well>
+              <h2>Edit or create a block</h2>
+              <br />
+              <BlocksList
+                cachedData={this.props.cachedData}
+                onBlockSelected={this.onBlockSelected}
+                refreshData={this.props.refreshData}
+              />
+            </Well>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }
