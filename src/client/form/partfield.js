@@ -5,7 +5,7 @@ import { Typeahead } from "react-bootstrap-typeahead";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { partuiSchema } from "../schema/partSchema.js";
-import { read_a_part, update_a_part, list_all_parts } from "../controller.js";
+import { read_a_part, update_a_part } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
 
 import * as partSchema from "../../../circuito-schema/part.json";
@@ -38,9 +38,39 @@ export class PartField extends InputGroupModalField {
         options={this.props.formContext.partsList}
         placeholder="Select a part..."
         defaultSelected={this.state.objName && [this.state.objName]}
+        selectHintOnEnter={true}
+        allowNew={true}
+        newSelectionPrefix="Create new part:"
         onChange={selection => {
-          this.setState({ objName: selection[0] });
-          this.props.onChange(selection[0]);
+          if (
+            selection[0] &&
+            typeof selection[0] === "object" &&
+            "customOption" in selection[0]
+          ) {
+            // clicked create new
+            var newPartName = selection[0].label;
+
+            update_a_part(newPartName, { name: newPartName }).then(res => {
+              if (!(res && res.ok))
+                toast.error(
+                  "Create part failed:" +
+                    ((res && res.statusText) || "can't connect")
+                );
+              else {
+                toast.success("Created " + newPartName, {
+                  autoClose: 2000
+                });
+                this.setState({
+                  objName: newPartName
+                });
+                this.props.formContext.partsList.push(newPartName);
+                this.props.onChange(newPartName);
+              }
+            });
+          } else {
+            this.setState({ objName: selection[0] });
+            this.props.onChange(selection[0]);
+          }
         }}
       />
     );

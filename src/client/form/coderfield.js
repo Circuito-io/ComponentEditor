@@ -14,8 +14,8 @@ import * as coderSchema from "../../../circuito-schema/coder.json";
 
 export class CoderField extends InputGroupModalField {
   showModal() {
-    read_a_coder(this.state.objName).then(newPartData =>
-      this.setState({ objData: newPartData, showModal: true })
+    read_a_coder(this.state.objName).then(newCoderData =>
+      this.setState({ objData: newCoderData, showModal: true })
     );
   }
 
@@ -40,9 +40,39 @@ export class CoderField extends InputGroupModalField {
         options={this.props.formContext.codersList}
         placeholder="Select a coder..."
         defaultSelected={this.state.objName && [this.state.objName]}
+        selectHintOnEnter={true}
+        allowNew={true}
+        newSelectionPrefix="Create new coder:"
         onChange={selection => {
-          this.setState({ objName: selection[0] });
-          this.props.onChange(selection[0]);
+          if (
+            selection[0] &&
+            typeof selection[0] === "object" &&
+            "customOption" in selection[0]
+          ) {
+            // clicked create new
+            var newCoderName = selection[0].label;
+
+            update_a_coder(newCoderName, { name: newCoderName }).then(res => {
+              if (!(res && res.ok))
+                toast.error(
+                  "Create coder failed:" +
+                    ((res && res.statusText) || "can't connect")
+                );
+              else {
+                toast.success("Created " + newCoderName, {
+                  autoClose: 2000
+                });
+                this.setState({
+                  objName: newCoderName
+                });
+                this.props.formContext.codersList.push(newCoderName);
+                this.props.onChange(newCoderName);
+              }
+            });
+          } else {
+            this.setState({ objName: selection[0] });
+            this.props.onChange(selection[0]);
+          }
         }}
       />
     );

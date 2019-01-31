@@ -44,6 +44,8 @@ export class InputGroupModalField extends React.Component {
     options={["a", "b", "c"]}
     placeholder="Select..."
     defaultSelected={this.state.objName && [this.state.objName]}
+    selectHintOnEnter={true}
+    allowNew={true}
     onInputChange={input => {
       this.setState({ objName: input });
       this.props.onChange(input);
