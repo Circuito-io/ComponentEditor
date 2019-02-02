@@ -3,7 +3,7 @@ window.jQuery = jQuery;
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, IndexRoute, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { Header } from "./header";
 import { Block } from "./block.js";

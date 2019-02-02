@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static('dist'))
+app.use(express.static('public'))
 app.use(fileUpload({}))
 
 
