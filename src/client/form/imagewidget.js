@@ -1,9 +1,15 @@
 import React from "react";
-import { FormGroup, InputGroup, Button, FormControl } from "react-bootstrap";
+import {
+  FormGroup,
+  InputGroup,
+  Button,
+  FormControl,
+  Glyphicon
+} from "react-bootstrap";
 import ReactCloudinaryUploader from "@app-masters/react-cloudinary-uploader";
-import urlJoin from 'proper-url-join';
+import urlJoin from "proper-url-join";
 
-const CDN = 'https://res.cloudinary.com/circuito/image/upload/';
+const CDN = "https://res.cloudinary.com/circuito/image/upload/";
 
 const cloudinaryOptions = {
   cloud_name: "circuito",
@@ -29,11 +35,19 @@ export function ImageWidget(props) {
 
         <InputGroup.Button>
           <Button
+            disabled={(!props.value)}
+            onClick={event => {
+              if (props.value) window.open(props.value, "_blank");
+            }}
+          >
+            Open
+          </Button>
+          <Button
             onClick={event => {
               console.log("click");
               ReactCloudinaryUploader.open(cloudinaryOptions)
                 .then(image => {
-                  var url = urlJoin(CDN + image.public_id)
+                  var url = urlJoin(CDN + image.public_id);
                   //console.log("image", image);
                   console.log("url", url);
                   props.onChange(url);
