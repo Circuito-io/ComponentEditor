@@ -94,7 +94,7 @@ export class Block extends React.Component {
                 .then(partData => {
                   var symbolurl = partData.symbol;
 
-                  if (symbolurl && typeof symbol === "string")
+                  if (symbolurl && typeof symbolurl === "string")
                     var imgid = symbolurl.split("/").pop();
                   else {
                     return Promise.reject("Mising symbol for " + partName);
