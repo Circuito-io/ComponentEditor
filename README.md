@@ -10,7 +10,7 @@ Under Development
 1. Make sure you have [Node.js](https://nodejs.org/en/download/)
 2. Clone this repository
 ```bash
-git clone https://github.com/Roboplan/ComponentsBank-MESS.git
+git clone https://github.com/Circuito-io/ComponentsEditor.git
 ```
 3. Init submodule
 ```bash
