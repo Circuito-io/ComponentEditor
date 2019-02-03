@@ -1,81 +1,78 @@
 {
-    "name": "USBPowerB",
-    "category": [
-        "powerConnector",
-        "power"
-    ],
-    "blockId": "512",
-    "app": {
-        "appName": "USB Cable A to B - 6 Foot",
-        "image": "http://res.cloudinary.com/circuito/image/upload/l2cblyri9f4haosunwdn",
-        "numericName": "",
-        "shortName": "USB Cable",
-        "tags": [
-            "power"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A standard USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": true
+  "name": "USBPowerB",
+  "category": [
+    "powerConnector",
+    "power"
+  ],
+  "blockId": "512",
+  "app": {
+    "appName": "USB Cable A to B - 6 Foot",
+    "image": "http://res.cloudinary.com/circuito/image/upload/l2cblyri9f4haosunwdn",
+    "numericName": "",
+    "shortName": "USB Cable",
+    "indicators": {
+      "verified": true,
+      "code": false,
+      "solder": false
     },
-    "altComp": {
-        "cost": 150,
-        "block": "PowerSupply12v2A"
-    },
-    "circuits": [
+    "desc": "<p>A standard USB cable to power your circuit from your computer or a USB socket.</p>\n",
+    "visible": true
+  },
+  "altComp": {
+    "cost": 150,
+    "block": "PowerSupply12v2A"
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "ArduinoMega",
+        "ArduinoUno"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [
-                "ArduinoMega",
-                "ArduinoUno"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "USBPowerB"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "providesLoad": 400
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_B",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB_B",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "USBPowerB"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 400
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_B",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB_B",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    }
+  ]
 }

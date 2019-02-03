@@ -1,86 +1,83 @@
 {
-    "name": "USBPowerMicro",
-    "category": [
-        "powerConnector",
-        "power"
-    ],
-    "blockId": "513",
-    "app": {
-        "appName": "Micro USB Cable",
-        "image": "http://res.cloudinary.com/circuito/image/upload/qxxcep3aniqsvt4ktrcl",
-        "numericName": "",
-        "shortName": "Micro USB Cable",
-        "tags": [
-            "power"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A standard Micro USB cable to power your circuit from your computer or a USB socket.</p>\n",
-        "visible": true
+  "name": "USBPowerMicro",
+  "category": [
+    "powerConnector",
+    "power"
+  ],
+  "blockId": "513",
+  "app": {
+    "appName": "Micro USB Cable",
+    "image": "http://res.cloudinary.com/circuito/image/upload/qxxcep3aniqsvt4ktrcl",
+    "numericName": "",
+    "shortName": "Micro USB Cable",
+    "indicators": {
+      "verified": true,
+      "code": false,
+      "solder": false
     },
-    "altComp": {
-        "cost": 150,
-        "block": "PowerSupply12v2A"
-    },
-    "circuits": [
+    "desc": "<p>A standard Micro USB cable to power your circuit from your computer or a USB socket.</p>\n",
+    "visible": true
+  },
+  "altComp": {
+    "cost": 150,
+    "block": "PowerSupply12v2A"
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMicro",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMicro",
-                "ESP32DevKitC",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "USBPowerMicro"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "providesLoad": 400
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB_MICRO",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "USBPowerMicro"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 400
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    }
+  ]
 }
