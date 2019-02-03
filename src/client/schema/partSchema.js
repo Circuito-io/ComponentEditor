@@ -5,6 +5,9 @@ export function partuiSchema(partsList) {
     name: {
       "ui:readonly": true
     },
+    path: {
+      "ui:widget": "hidden"
+    },
     desc: {
       "ui:widget": "textarea"
     },
@@ -17,7 +20,7 @@ export function partuiSchema(partsList) {
       }
     },
     symbol: {
-      "ui:widget": "imagewidget",
+      "ui:widget": "imagewidget"
     },
     category: {
       "ui:field": "typeahead",

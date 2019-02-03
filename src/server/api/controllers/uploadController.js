@@ -61,6 +61,7 @@ const walkDirSync = (
       // case json data file
 
       var data = JSON.parse(dataraw);
+      data.path=`${type}/${basename}`; // add file path to data
 
       if (type == "Coders" && data.name) {
         // for coder, find files under the relevant folder and compare to files field

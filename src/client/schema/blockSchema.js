@@ -1,14 +1,13 @@
-import * as blockSchema from '../../../circuito-schema/block.json';
-import {
-  circuitsSchema,
-  circuitsuiSchema
-} from "./circuitSchema";
-
+import * as blockSchema from "../../../circuito-schema/block.json";
+import { circuitsSchema, circuitsuiSchema } from "./circuitSchema";
 
 export function blockuiSchema(blocksList) {
   return {
     name: {
-      "ui:readonly": true,
+      "ui:readonly": true
+    },
+    path: {
+      "ui:widget": "hidden"
     },
     blockId: {
       "ui:widget": "hidden"
@@ -58,6 +57,5 @@ export function blockuiSchema(blocksList) {
       }
     },
     ...circuitsuiSchema(blocksList)
-  }
-};
-
+  };
+}

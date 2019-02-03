@@ -4,6 +4,9 @@ import {
 } from "../form/commonfields";
 
 export const coderuiSchema = {
+  path: {
+    "ui:widget": "hidden"
+  },
   desc: {
     "ui:widget": "textarea"
   },
