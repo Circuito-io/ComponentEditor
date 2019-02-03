@@ -3,10 +3,10 @@ const fs = require('fs');
 const uuidv4 = require('uuid/v4');
 
 global.dataFolder = path.join(__dirname, '../../components');
-global.circuitoServer = process.env.CIRCUITO_SERVER || "***REMOVED***
+global.circuitoServer = process.env.CIRCUITO_SERVER || "https://editor.circuito.io/";
 global.uploadEndpoint = "save_components";
 global.previewEndpoint = "app?u=";
-global.svgdataServer = "***REMOVED***
+global.svgdataServer = "https://api.circuito.io/v1/";
 global.segmentWriteKey = "v7Pr4l9fyYqO9kng77jp4UF1KzDNW7TN";
 
 console.log("Circutio server - " + global.circuitoServer);
