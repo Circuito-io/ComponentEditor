@@ -1,91 +1,91 @@
 {
-  "name": "Battery9v",
-  "category": [
-    "power"
-  ],
-  "blockId": "10218",
-  "app": {
-    "appName": "9V Alkaline Battery",
-    "image": "http://res.cloudinary.com/circuito/image/upload/jrtjfzlfcq4z9js5oi7k",
-    "numericName": "",
-    "shortName": "9V Battery",
-    "tags": [
-      "power"
+    "name": "Battery9v",
+    "category": [
+        "power"
     ],
-    "indicators": {
-      "verified": true,
-      "code": false,
-      "solder": false
+    "blockId": "10218",
+    "app": {
+        "appName": "9V Alkaline Battery",
+        "image": "http://res.cloudinary.com/circuito/image/upload/jrtjfzlfcq4z9js5oi7k",
+        "numericName": "",
+        "shortName": "9V Battery",
+        "tags": [
+            "power"
+        ],
+        "indicators": {
+            "verified": true,
+            "code": false,
+            "solder": false
+        },
+        "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
+        "visible": true
     },
-    "desc": "<p>A standard 9V battery, useful for circuits that required to be ported or are not located near wall power.</p>\n",
-    "visible": true
-  },
-  "altComp": [
-    100,
-    "PowerSupply12v2A"
-  ],
-  "circuits": [
-    {
-      "name": "default",
-      "supportedControllers": [
-        "ATMega328P",
-        "ArduinoGemma",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini3v3",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "ATTiny85",
-        "Teensy32"
-      ],
-      "parts": [
+    "altComp": {
+        "cost": 100,
+        "block": "PowerSupply12v2A"
+    },
+    "circuits": [
         {
-          "name": "this",
-          "part": "Battery9v"
-        }
-      ],
-      "ports": [
-        {
-          "name": "pos",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "9v"
-              }
+            "name": "default",
+            "supportedControllers": [
+                "ATMega328P",
+                "ArduinoGemma",
+                "ArduinoLeonardo",
+                "ArduinoMega",
+                "ArduinoMicro",
+                "ArduinoNano",
+                "ArduinoProMini3v3",
+                "ArduinoProMini5v",
+                "ArduinoUno",
+                "ESP32DevKitC",
+                "NodeMCU",
+                "ATTiny85",
+                "Teensy32"
             ],
-            "providesLoad": 1000
-          }
-        },
-        {
-          "name": "neg",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
-                "voltage": "GND"
-              }
-            ]
-          }
-        },
-        {
-          "name": "PowerType",
-          "interface": {
-            "provides": [
-              {
-                "spec": "Battery",
-                "voltage": ""
-              }
-            ]
-          }
+            "parts": [
+                {
+                    "name": "this",
+                    "part": "Battery9v"
+                }
+            ],
+            "ports": [
+                {
+                    "name": "pos",
+                    "interface": {
+                        "provides": [
+                            {
+                                "spec": "",
+                                "voltage": "9v"
+                            }
+                        ],
+                        "providesLoad": 1000
+                    }
+                },
+                {
+                    "name": "neg",
+                    "interface": {
+                        "requires": [
+                            {
+                                "cost": 0,
+                                "spec": "",
+                                "voltage": "GND"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "PowerType",
+                    "interface": {
+                        "provides": [
+                            {
+                                "spec": "Battery",
+                                "voltage": ""
+                            }
+                        ]
+                    }
+                }
+            ],
+            "priority": 0
         }
-      ],
-      "priority": 0
-    }
-  ]
+    ]
 }

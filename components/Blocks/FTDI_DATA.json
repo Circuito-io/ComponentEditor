@@ -4,13 +4,14 @@
     "support"
   ],
   "blockId": "1514678",
+  "altComp": {
+        "cost": 150,
+        "block": "PowerSupply12v2A"
+      },
   "circuits": [
     {
       "name": "5v",
-      "altComp": [
-        150,
-        "PowerSupply12v2A"
-      ],
+      
       "supportedControllers": [
         "ATMega328P"
       ],
@@ -82,10 +83,6 @@
     },
     {
       "name": "3v3",
-      "altComp": [
-        150,
-        "PowerSupply12v2A"
-      ],
       "supportedControllers": [
         "ATMega328P"
       ],
