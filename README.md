@@ -19,7 +19,7 @@ git submodule update
 ```
 3. Run npm install
 ```bash
-cd ComponentsBank-MESS
+cd ComponentEditor
 npm install
 ```
 4. Run the dev web server
