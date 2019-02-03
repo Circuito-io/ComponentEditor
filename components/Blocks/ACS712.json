@@ -9,12 +9,8 @@
     "image": "http://res.cloudinary.com/circuito/image/upload/ob5151tubdlojhzh4kop",
     "numericName": "ACS712",
     "shortName": "Current Sensor",
-    "tags": [
-      "input"
-    ],
     "indicators": {
       "verified": true,
-      "code": true,
       "solder": false
     },
     "desc": "<p>Sense the AC or DC current flowing through it. it has a sensitivity of 185mV/A (equivalent to 26.4mA/Count of ADC). </p>\n<p><strong>Return Value</strong>: mA. Needs to be manually calibrated with zero current.</p>\n<p><strong>Sample Application</strong>:<a target=\"_blank\" href=\"http://www.instructables.com/id/Simplified-Arduino-AC-Current-Measurement-Using-AC/\">Simplified Arduino AC Current Measurement Using ACS712 Hall Effect Sensor</a></p>\n",

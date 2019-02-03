@@ -2,9 +2,11 @@
   "name": "GPSNeo6M_HardwareSerial2",
   "supportedControllers": [],
   "license": "rapid",
+  "code": {
+    "constructors": "{{classname}} {{varname}}(Serial2);"
+  },
   "instantiate": {
     "classname": "HardwareSerial&",
-    "custominit": "Serial2",
     "varname": "gps"
   }
 }

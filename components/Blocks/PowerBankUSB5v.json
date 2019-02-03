@@ -1,83 +1,79 @@
 {
-    "name": "PowerBankUSB5v",
-    "category": [
-        "powerConnector",
-        "power"
-    ],
-    "blockId": "783869",
-    "app": {
-        "appName": "Power Bank USB - 5v 10000mAh",
-        "image": "",
-        "numericName": "",
-        "shortName": "Power Bank USB",
-        "tags": [
-            "power"
-        ],
-        "indicators": {
-            "verified": false,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>A large-sized rechargeable battery pack for your Raspberry Pi. Inside is a massive 10,000mAh lithium ion battery, a charging circuit  and two boost converters that provide 5VDC, 1A and 2A each via a USB A port.<br>This part can only be used with Raspberry Pi.</p>",
-        "visible": true
+  "name": "PowerBankUSB5v",
+  "category": [
+    "powerConnector",
+    "power"
+  ],
+  "blockId": "783869",
+  "app": {
+    "appName": "Power Bank USB - 5v 10000mAh",
+    "image": "",
+    "numericName": "",
+    "shortName": "Power Bank USB",
+    "indicators": {
+      "verified": false,
+      "solder": false
     },
-    "altComp": {
-        "cost": 100,
-        "block": "PowerSupply5vUSBMicro"
-    },
-    "circuits": [
+    "desc": "<p>A large-sized rechargeable battery pack for your Raspberry Pi. Inside is a massive 10,000mAh lithium ion battery, a charging circuit  and two boost converters that provide 5VDC, 1A and 2A each via a USB A port.<br>This part can only be used with Raspberry Pi.</p>",
+    "visible": true
+  },
+  "altComp": {
+    "cost": 100,
+    "block": "PowerSupply5vUSBMicro"
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [
-                "RPI3B",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "PowerBankUSB5v",
-                    "rotation": 90
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB",
-                                "voltage": "5v"
-                            }
-                        ],
-                        "providesLoad": 10000
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "USB",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "USB_MICRO",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "USB_MICRO",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "PowerBankUSB5v",
+          "rotation": 90
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "5v"
+              }
+            ],
+            "providesLoad": 10000
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    }
+  ]
 }

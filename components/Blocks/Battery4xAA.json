@@ -1,90 +1,86 @@
 {
-    "name": "Battery4xAA",
-    "category": [
-        "power"
-    ],
-    "blockId": "12083",
-    "app": {
-        "appName": "Battery Holder 4xAA",
-        "image": "http://res.cloudinary.com/circuito/image/upload/bjeqmr0wg1nvytgzrqhj",
-        "numericName": "",
-        "shortName": "4xAA Battery Holder",
-        "tags": [
-            "power"
-        ],
-        "indicators": {
-            "verified": true,
-            "code": false,
-            "solder": false
-        },
-        "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Use for circuits that require porting. Also contains a switch which allows you to turn the circuit power on and off easily..</p>\n",
-        "visible": true
+  "name": "Battery4xAA",
+  "category": [
+    "power"
+  ],
+  "blockId": "12083",
+  "app": {
+    "appName": "Battery Holder 4xAA",
+    "image": "http://res.cloudinary.com/circuito/image/upload/bjeqmr0wg1nvytgzrqhj",
+    "numericName": "",
+    "shortName": "4xAA Battery Holder",
+    "indicators": {
+      "verified": true,
+      "solder": false
     },
-    "altComp": {
-        "cost": 100,
-        "block": "Battery8xAA"
-    },
-    "circuits": [
+    "desc": "<p>An easy to replace power option, as you can always refresh the batteries in this holder quite easily. Use for circuits that require porting. Also contains a switch which allows you to turn the circuit power on and off easily..</p>\n",
+    "visible": true
+  },
+  "altComp": {
+    "cost": 100,
+    "block": "Battery8xAA"
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "NodeMCU",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
         {
-            "name": "default",
-            "supportedControllers": [
-                "ATMega328P",
-                "ArduinoGemma",
-                "ArduinoLeonardo",
-                "ArduinoMega",
-                "ArduinoMicro",
-                "ArduinoNano",
-                "ArduinoProMini3v3",
-                "ArduinoProMini5v",
-                "ArduinoUno",
-                "NodeMCU",
-                "ATTiny85",
-                "Teensy32"
-            ],
-            "parts": [
-                {
-                    "name": "this",
-                    "part": "Battery4xAA"
-                }
-            ],
-            "ports": [
-                {
-                    "name": "pos",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "",
-                                "voltage": "6v"
-                            }
-                        ],
-                        "providesLoad": 600
-                    }
-                },
-                {
-                    "name": "neg",
-                    "interface": {
-                        "requires": [
-                            {
-                                "cost": 0,
-                                "spec": "",
-                                "voltage": "GND"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "PowerType",
-                    "interface": {
-                        "provides": [
-                            {
-                                "spec": "Battery",
-                                "voltage": ""
-                            }
-                        ]
-                    }
-                }
-            ],
-            "priority": 0
+          "name": "this",
+          "part": "Battery4xAA"
         }
-    ]
+      ],
+      "ports": [
+        {
+          "name": "pos",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "6v"
+              }
+            ],
+            "providesLoad": 600
+          }
+        },
+        {
+          "name": "neg",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PowerType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "Battery",
+                "voltage": ""
+              }
+            ]
+          }
+        }
+      ],
+      "priority": 0
+    }
+  ]
 }
