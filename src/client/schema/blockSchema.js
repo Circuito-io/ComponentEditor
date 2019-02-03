@@ -56,6 +56,19 @@ export function blockuiSchema(blocksList) {
         rows: 7
       }
     },
+    altComp: {
+      cost: {
+        classNames: "two-coloumn-field"
+      },
+      block: {
+        "ui:field": "typeahead",
+        classNames: "two-coloumn-field",
+        typeahead: {
+          options: blocksList,
+          minLength: 0
+        }
+      }
+    },
     ...circuitsuiSchema(blocksList)
   };
 }
