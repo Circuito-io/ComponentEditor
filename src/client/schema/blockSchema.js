@@ -33,12 +33,6 @@ export function blockuiSchema(blocksList) {
       indicators: {
         verified: {
           "ui:widget": "hidden"
-        },
-        code: {
-          classNames: "two-coloumn-field"
-        },
-        solder: {
-          classNames: "two-coloumn-field"
         }
       },
       desc: {
