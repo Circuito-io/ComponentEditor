@@ -42,7 +42,7 @@ export function partuiSchema(partsList) {
         }
       }
     },
-    auxParts: {
+    bomAux: {
       "ui:field": "typeahead",
       typeahead: {
         options: partsList,
