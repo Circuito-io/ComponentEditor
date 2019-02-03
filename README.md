@@ -4,7 +4,7 @@
 [![Intro Video](https://res.cloudinary.com/circuito/image/upload/w_300,b_white/v1545820007/Circuito_4_Entities_1.png)](https://www.youtube.com/watch?v=Lb2UfK2290k)
 
 ## Using GitPod
-Under Development
+[Edit using GitPod](http://gitpod.io/#https://github.com/Circuito-io/ComponentEditor)
 
 ## Creating a Local Development Environment
 1. Make sure you have [Node.js](https://nodejs.org/en/download/)
