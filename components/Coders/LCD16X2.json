@@ -17,19 +17,12 @@
   ],
   "code": {
     "setup": "// set up the LCD's number of columns and rows\n{{varname}}.begin(16, 2);\n",
-    "snippetCode": "// Print a message to the LCD.\n{{varname}}.setCursor(0, 0);\n{{varname}}.print(\"Circuito Rocks !\");\n// Turn off the display:\n{{varname}}.noDisplay();\ndelay(500);\n// Turn on the display:\n{{varname}}.display();\ndelay(500);"
+    "snippetCode": "// Print a message to the LCD.\n{{varname}}.setCursor(0, 0);\n{{varname}}.print(\"Circuito Rocks !\");\n// Turn off the display:\n{{varname}}.noDisplay();\ndelay(500);\n// Turn on the display:\n{{varname}}.display();\ndelay(500);",
+    "constructors": "{{classname}} {{varname}}({{RS}},{{E}},{{DB4}},{{DB5}},{{DB6}},{{DB7}});"
   },
   "license": "ArduinoIDE",
   "instantiate": {
     "classname": "LiquidCrystal",
-    "ports": [
-      "RS",
-      "E",
-      "DB4",
-      "DB5",
-      "DB6",
-      "DB7"
-    ],
     "varname": "lcd"
   },
   "includeHeaders": [

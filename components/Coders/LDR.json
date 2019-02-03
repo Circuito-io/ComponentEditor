@@ -13,14 +13,12 @@
   "code": {
     "global": "#define THRESHOLD_{{varname}}   100\nint {{varname}}AverageLight;\n",
     "setup": "{{varname}}AverageLight = {{varname}}.readAverage();\n",
-    "snippetCode": "// Get current light reading, substract the ambient value to detect light changes\nint {{varname}}Sample = {{varname}}.read();\nint {{varname}}Diff = abs({{varname}}AverageLight - {{varname}}Sample);\nSerial.print(F(\"Light Diff: \")); Serial.println({{varname}}Diff);\n"
+    "snippetCode": "// Get current light reading, substract the ambient value to detect light changes\nint {{varname}}Sample = {{varname}}.read();\nint {{varname}}Diff = abs({{varname}}AverageLight - {{varname}}Sample);\nSerial.print(F(\"Light Diff: \")); Serial.println({{varname}}Diff);\n",
+    "constructors": "{{classname}} {{varname}}({{Sig}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "LDR",
-    "ports": [
-      "Sig"
-    ],
     "varname": "ldr"
   },
   "files": [

@@ -16,14 +16,12 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "// The solenoid valve will turn on and off for 500ms (0.5 sec)\n{{varname}}.on(); // 1. turns on\ndelay(500);       // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n{{varname}}.off();// 3. turns off\ndelay(500);       // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n"
+    "snippetCode": "// The solenoid valve will turn on and off for 500ms (0.5 sec)\n{{varname}}.on(); // 1. turns on\ndelay(500);       // 2. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n{{varname}}.off();// 3. turns off\ndelay(500);       // 4. waits 500 milliseconds (0.5 sec). Change the value in the brackets (500) for a longer or shorter delay in milliseconds.\n",
+    "constructors": "{{classname}} {{varname}}({{Coil1}});"
   },
   "license": "circuito",
   "instantiate": {
-    "classname": "SolenoidValve",
-    "ports": [
-      "Coil1"
-    ]
+    "classname": "SolenoidValve"
   },
   "files": [
     "SolenoidValve.h",

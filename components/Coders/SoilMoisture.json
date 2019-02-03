@@ -16,14 +16,12 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+    "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n",
+    "constructors": "{{classname}} {{varname}}({{Sig}});"
   },
   "license": "circuito",
   "instantiate": {
-    "classname": "SoilMoisture",
-    "ports": [
-      "Sig"
-    ]
+    "classname": "SoilMoisture"
   },
   "files": [
     "SoilMoisture.h",

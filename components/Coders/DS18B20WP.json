@@ -15,13 +15,13 @@
     "RPI3B",
     "Teensy32"
   ],
-  "code": {},
+  "code": {
+    "snippetCode": "// Read DS18B20 temp sensor value in degrees celsius. for degrees fahrenheit use {{varname}}.ReadTempF()\nfloat {{varname}}TempC = {{varname}}.readTempC();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\" [C]\"));\n",
+    "constructors": "{{classname}} {{varname}}({{DQ}});"
+  },
   "license": "GNU",
   "instantiate": {
     "classname": "DS18B20",
-    "ports": [
-      "DQ"
-    ],
     "varname": "ds18b20wp"
   },
   "files": [

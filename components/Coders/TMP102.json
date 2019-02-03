@@ -16,7 +16,8 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "float {{varname}}TempC = {{varname}}.readCelsius();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[°C]\"));\n"
+    "snippetCode": "float {{varname}}TempC = {{varname}}.readCelsius();\nSerial.print(F(\"Temp: \")); Serial.print({{varname}}TempC); Serial.println(F(\"[\u00b0C]\"));\n",
+    "constructors": "{{classname}} {{varname}};"
   },
   "license": "circuito",
   "instantiate": {

@@ -16,14 +16,12 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "bool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+    "snippetCode": "bool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n",
+    "constructors": "{{classname}} {{varname}}({{SIG}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "PIR",
-    "ports": [
-      "SIG"
-    ],
     "varname": "pir"
   },
   "files": [

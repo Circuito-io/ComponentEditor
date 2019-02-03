@@ -16,14 +16,12 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+    "snippetCode": "int {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n",
+    "constructors": "{{classname}} {{varname}}({{pos}});"
   },
   "license": "circuito",
   "instantiate": {
-    "classname": "PiezoSensor",
-    "ports": [
-      "pos"
-    ]
+    "classname": "PiezoSensor"
   },
   "files": [
     "PiezoSensor.cpp",

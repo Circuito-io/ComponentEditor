@@ -17,14 +17,12 @@
   ],
   "code": {
     "setup": "{{varname}}.init();\n",
-    "snippetCode": "//Read Arcade pushbutton (without LED)  state. \n//if button is pressed function will return HIGH (1). if not function will return LOW (0). \n//for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n//if debounce is not working properly try changing 'debounceDelay' variable in Button.h\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n"
+    "snippetCode": "//Read Arcade pushbutton (without LED)  state. \n//if button is pressed function will return HIGH (1). if not function will return LOW (0). \n//for debounce funtionality try also {{varname}}.onPress(), .onRelease() and .onChange().\n//if debounce is not working properly try changing 'debounceDelay' variable in Button.h\nbool {{varname}}Val = {{varname}}.read();\nSerial.print(F(\"Val: \")); Serial.println({{varname}}Val);\n",
+    "constructors": "{{classname}} {{varname}}({{NO}});"
   },
   "license": "circuito",
   "instantiate": {
     "classname": "Button",
-    "ports": [
-      "NO"
-    ],
     "varname": "ArcadeButton"
   },
   "files": [

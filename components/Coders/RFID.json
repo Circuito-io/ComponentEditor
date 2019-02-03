@@ -16,15 +16,12 @@
   ],
   "code": {
     "setup": "//initialize RFID module\n{{varname}}.init();\n",
-    "snippetCode": "//Read RFID tag if present\nString {{varname}}tag = {{varname}}.readTag();\n//print the tag to serial monitor if one was discovered\n{{varname}}.printTag({{varname}}tag);\n"
+    "snippetCode": "//Read RFID tag if present\nString {{varname}}tag = {{varname}}.readTag();\n//print the tag to serial monitor if one was discovered\n{{varname}}.printTag({{varname}}tag);\n",
+    "constructors": "{{classname}} {{varname}}({{SDA}},{{RST}});"
   },
   "license": "PublicDomain",
   "instantiate": {
     "classname": "RFID",
-    "ports": [
-      "SDA",
-      "RST"
-    ],
     "varname": "rfid"
   },
   "files": [

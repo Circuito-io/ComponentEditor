@@ -17,12 +17,12 @@
   ],
   "code": {
     "setup": "//Initialize I2C device\n{{varname}}.begin();\n",
-    "snippetCode": "// Read Altitude from barometric sensor, note that the sensor is 1m accurate\ndouble {{varname}}Alt = {{varname}}.altitude();\ndouble {{varname}}Pressure = {{varname}}.getPressure();\ndouble {{varname}}TempC = {{varname}}.getTemperatureC();     //See also {{varname}}.getTemperatureF() for Fahrenheit\nSerial.print(F(\"Altitude: \")); Serial.print({{varname}}Alt,1); Serial.print(F(\" [m]\"));\nSerial.print(F(\"\\tpressure: \")); Serial.print({{varname}}Pressure,1); Serial.print(F(\" [hPa]\"));\nSerial.print(F(\"\\tTemperature: \")); Serial.print({{varname}}TempC,1); Serial.println(F(\" [°C]\"));\n"
+    "snippetCode": "// Read Altitude from barometric sensor, note that the sensor is 1m accurate\ndouble {{varname}}Alt = {{varname}}.altitude();\ndouble {{varname}}Pressure = {{varname}}.getPressure();\ndouble {{varname}}TempC = {{varname}}.getTemperatureC();     //See also {{varname}}.getTemperatureF() for Fahrenheit\nSerial.print(F(\"Altitude: \")); Serial.print({{varname}}Alt,1); Serial.print(F(\" [m]\"));\nSerial.print(F(\"\\tpressure: \")); Serial.print({{varname}}Pressure,1); Serial.print(F(\" [hPa]\"));\nSerial.print(F(\"\\tTemperature: \")); Serial.print({{varname}}TempC,1); Serial.println(F(\" [\u00b0C]\"));\n",
+    "constructors": "{{classname}} {{varname}};"
   },
   "license": "Beerware",
   "instantiate": {
     "classname": "SFE_BMP180",
-    "ports": [],
     "varname": "bmp180"
   },
   "files": [

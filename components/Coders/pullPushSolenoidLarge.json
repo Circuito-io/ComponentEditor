@@ -16,16 +16,12 @@
   ],
   "code": {
     "global": "",
-    "constructors": "",
     "setup": "pinMode({{Coil1}}, OUTPUT);\n",
     "snippetCode": "digitalWrite({{Coil1}}, HIGH); //Turn Solenoid on. \ndelay(1000);  //waits 1000 milliseconds (1 sec). change the value in the brackets (1000) for a longer or shorter delay in milliseconds.\ndigitalWrite({{Coil1}}, LOW); //Turn Solenoid off. \ndelay(1000);  //waits 1000 milliseconds (1 sec). change the value in the brackets (1000) for a longer or shorter delay in milliseconds."
   },
   "license": "circuito",
   "instantiate": {
     "classname": "",
-    "ports": [
-      "Coil1"
-    ],
     "varname": "pullPushSolenoidLarge"
   },
   "files": [],

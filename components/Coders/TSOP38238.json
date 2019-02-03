@@ -16,14 +16,12 @@
   ],
   "code": {
     "setup": "// initialize IR device\n{{varname}}.init();\n",
-    "snippetCode": "//Receive IR code into {{varname}}Code\nlong {{varname}}Code =  {{varname}}.detect();\n// if a code was received print it to serial monitor, note that the code is of type long but printed in HEX\n// Consider changing the if statment to something like: if({{varname}}Code == \"YOUR IR CODE\")\nif({{varname}}Code)\n{\nSerial.print(\"0x\");\nSerial.println({{varname}}Code, HEX);\n}"
+    "snippetCode": "//Receive IR code into {{varname}}Code\nlong {{varname}}Code =  {{varname}}.detect();\n// if a code was received print it to serial monitor, note that the code is of type long but printed in HEX\n// Consider changing the if statment to something like: if({{varname}}Code == \"YOUR IR CODE\")\nif({{varname}}Code)\n{\nSerial.print(\"0x\");\nSerial.println({{varname}}Code, HEX);\n}",
+    "constructors": "{{classname}} {{varname}}({{Out}});"
   },
   "license": "GNU",
   "instantiate": {
     "classname": "IR",
-    "ports": [
-      "Out"
-    ],
     "varname": "ir"
   },
   "files": [

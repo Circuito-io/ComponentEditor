@@ -17,7 +17,8 @@
   ],
   "code": {
     "setup": "// Set declination angle on your location and fix heading\n// You can find your declination on: http://magnetic-declination.com/\n// (+) Positive or (-) for negative\n// For declination angle 4'36E (positive)\n{{varname}}.begin(+4,36);\n",
-    "snippetCode": "//Read heading value from compass\nfloat {{varname}}Heading = {{varname}}.getHeadingDeg();\nSerial.print(F(\"Heading: \")); Serial.print({{varname}}Heading); Serial.println(F(\"[°]\"));\n"
+    "snippetCode": "//Read heading value from compass\nfloat {{varname}}Heading = {{varname}}.getHeadingDeg();\nSerial.print(F(\"Heading: \")); Serial.print({{varname}}Heading); Serial.println(F(\"[\u00b0]\"));\n",
+    "constructors": "{{classname}} {{varname}};"
   },
   "license": "GNU",
   "instantiate": {

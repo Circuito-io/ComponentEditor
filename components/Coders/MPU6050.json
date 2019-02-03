@@ -18,7 +18,8 @@
   "code": {
     "global": "int16_t {{varname}}Ax, {{varname}}Ay, {{varname}}Az;\nint16_t {{varname}}Gx, {{varname}}Gy, {{varname}}Gz;\n",
     "setup": "Wire.begin();\n{{varname}}.initialize();\n",
-    "snippetCode": "{{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\ndouble {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\nSerial.print(\"a/g-\\t\");\nSerial.print({{varname}}Ax); Serial.print(\"\\t\");\nSerial.print({{varname}}Ay); Serial.print(\"\\t\");\nSerial.print({{varname}}Az); Serial.print(\"\\t\");\nSerial.print({{varname}}Gx); Serial.print(\"\\t\");\nSerial.print({{varname}}Gy); Serial.print(\"\\t\");\nSerial.print({{varname}}Gz); Serial.print(\"\\t\");\nSerial.print(F(\"Temp- \"));   \nSerial.println({{varname}}Temp);\ndelay(100);\n"
+    "snippetCode": "{{varname}}.getMotion6(&{{varname}}Ax, &{{varname}}Ay, &{{varname}}Az, &{{varname}}Gx, &{{varname}}Gy, &{{varname}}Gz);   //read accelerometer and gyroscope raw data in three axes\ndouble {{varname}}Temp = ((double){{varname}}.getTemperature() + 12412.0) / 340.0;\nSerial.print(\"a/g-\\t\");\nSerial.print({{varname}}Ax); Serial.print(\"\\t\");\nSerial.print({{varname}}Ay); Serial.print(\"\\t\");\nSerial.print({{varname}}Az); Serial.print(\"\\t\");\nSerial.print({{varname}}Gx); Serial.print(\"\\t\");\nSerial.print({{varname}}Gy); Serial.print(\"\\t\");\nSerial.print({{varname}}Gz); Serial.print(\"\\t\");\nSerial.print(F(\"Temp- \"));   \nSerial.println({{varname}}Temp);\ndelay(100);\n",
+    "constructors": "{{classname}} {{varname}};"
   },
   "license": "MIT",
   "instantiate": {

@@ -12,15 +12,12 @@
     "Teensy32"
   ],
   "code": {
-    "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n"
+    "snippetCode": "// Read distance measurment from UltraSonic sensor           \nint {{varname}}Dist = {{varname}}.ping_cm();\ndelay(10);\nSerial.print(F(\"Distance: \")); Serial.print({{varname}}Dist); Serial.println(F(\"[cm]\"));\n",
+    "constructors": "{{classname}} {{varname}}({{TRIG}},{{ECHO}});"
   },
   "license": "GNU_GPL_v3",
   "instantiate": {
     "classname": "NewPing",
-    "ports": [
-      "TRIG",
-      "ECHO"
-    ],
     "varname": "hcsr04"
   },
   "files": [
