@@ -12,9 +12,10 @@
 ```bash
 git clone https://github.com/Circuito-io/ComponentsEditor.git
 ```
-3. Init submodule
+3. Init and update submodule
 ```bash
 git submodule init
+git submodule update
 ```
 3. Run npm install
 ```bash
