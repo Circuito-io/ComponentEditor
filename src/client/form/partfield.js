@@ -65,6 +65,7 @@ export class PartField extends InputGroupModalField {
                 });
                 this.props.formContext.partsList.push(newPartName);
                 this.props.onChange(newPartName);
+                this.showModal();
               }
             });
           } else {

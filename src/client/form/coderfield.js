@@ -67,6 +67,7 @@ export class CoderField extends InputGroupModalField {
                 });
                 this.props.formContext.codersList.push(newCoderName);
                 this.props.onChange(newCoderName);
+                this.showModal();
               }
             });
           } else {
