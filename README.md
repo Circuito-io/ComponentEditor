@@ -1,4 +1,4 @@
-# Circuit.io Component Editor
+# Circuito.io Component Editor
 
 ## Video Tutorial
 [![Intro Video](https://res.cloudinary.com/circuito/image/upload/w_300,b_white/v1545820007/Circuito_4_Entities_1.png)](https://www.youtube.com/watch?v=Lb2UfK2290k)
