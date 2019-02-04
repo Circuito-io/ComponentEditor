@@ -15,7 +15,8 @@ export function circuitsuiSchema(blocksList) {
             Parts: ["parts"],
             Blocks: ["requiredBlocks"],
             Coders: ["coders"],
-            Wiring: ["ports", "wires"]
+            Ports: ["ports"],
+            Wiring: ["wires"]
           }
         },
         name: {
