@@ -123,7 +123,6 @@ function FilesArrayFieldTemplate(props) {
             <Upload
               action={"/api/coders-file/" + props.formContext.targetFolder}
               onStart={file => {
-                console.log("onStart", props, file.name);
                 props.addItem(file.name);
               }}
             >
