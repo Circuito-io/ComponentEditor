@@ -7,69 +7,50 @@ export class InputGroupModalField extends React.Component {
   constructor(props) {
     super(props);
 
-    this.currentData = null;
-
     this.state = {
-      objName: props.formData,
-      showModal: false,
-      objData: null
+      showModal: false
     };
 
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
-    this.save = this.save.bind(this);
-    this.renderInputGroup = this.renderInputGroup.bind(this);
-    this.renderModalBody  = this.renderModalBody.bind(this);
-    this.renderModalTitle = this.renderModalTitle.bind(this);
   }
 
   showModal() {
-    this.setState({ showModal: true })
+    this.props.onShowModal();
+    this.setState({ showModal: true });
   }
 
   hideModal() {
     this.setState({ showModal: false });
   }
 
-  componentDidUpdate() {
-    this.currentData = null;
-  }
-
-  save() {
-    console.log("Save");
-  }
-
-  renerInputGroup() {
-    return (<Typeahead
-    options={["a", "b", "c"]}
-    placeholder="Select..."
-    defaultSelected={this.state.objName && [this.state.objName]}
-    selectHintOnEnter={true}
-    allowNew={true}
-    onInputChange={input => {
-      this.setState({ objName: input });
-      this.props.onChange(input);
-    }}
-  />)
-  }
-
-  renderModalTitle() {
-    return "Object " + this.state.objName;
-  }
-
-
-  renderModalBody() {
-    return "Body";
-  }
-
   render() {
     return (
       <React.Fragment>
         <FormGroup>
-          <DefaultLabel {...this.props} />
-
+          <DefaultLabel {...this.props.labelProps} />
           <InputGroup>
-            {this.renderInputGroup()}
+            <Typeahead
+              options={this.props.options}
+              placeholder={this.props.placeholder}
+              defaultSelected={this.props.defaultSelected}
+              selectHintOnEnter={true}
+              allowNew={true}
+              newSelectionPrefix={this.props.newSelectionPrefix}
+              onChange={selection => {
+                if (
+                  selection[0] &&
+                  typeof selection[0] === "object" &&
+                  "customOption" in selection[0]
+                ) {
+                  // clicked create new
+                  this.props.onSelectNew(selection[0].label);
+                  this.showModal();
+                } else {
+                  this.props.onSelect(selection[0]);
+                }
+              }}
+            />
             <InputGroup.Button className="input-group-append">
               <Button
                 className="btn-outline-secondary"
@@ -83,13 +64,11 @@ export class InputGroupModalField extends React.Component {
 
         <Modal show={this.state.showModal} onHide={this.hideModal}>
           <Modal.Header closeButton>
-            <Modal.Title>{this.renderModalTitle()}</Modal.Title>
+            <Modal.Title>{this.props.modalTitle}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            {this.renderModalBody()}
-          </Modal.Body>
+          <Modal.Body>{this.props.children}</Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.save}>Save</Button>
+            <Button onClick={this.props.onSave}>Save</Button>
             <Button onClick={this.hideModal}>Close</Button>
           </Modal.Footer>
         </Modal>
