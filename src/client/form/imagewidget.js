@@ -47,10 +47,7 @@ export function ImageWidget(props) {
               console.log("click");
               ReactCloudinaryUploader.open(cloudinaryOptions)
                 .then(image => {
-                  var url = urlJoin(CDN + image.public_id);
-                  //console.log("image", image);
-                  console.log("url", url);
-                  props.onChange(url);
+                  props.onChange(image.url);
                 })
                 .catch(err => {
                   console.error(err);
