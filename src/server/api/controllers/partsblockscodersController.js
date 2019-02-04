@@ -35,12 +35,21 @@ exports.delete_a_coder_file = filesController.delete_a_subdir_file_factory(
 );
 
 exports.upload_a_coder_file = function(req, res) {
+  console.log("Upload_a_coder_file");
   if (Object.keys(req.files).length == 0) {
+    console.log("No files to upload");
     return res.status(400).send("No files were uploaded.");
   }
 
   var file = req.files.file;
-  var targetPath = path.join(global.dataFolder, codersSubFolder, req.params.name, file.name);
+  var targetFolder = path.join(
+    global.dataFolder,
+    codersSubFolder,
+    req.params.name
+  );
+  var targetPath = path.join(targetFolder, file.name);
+
+  if (!fs.existsSync(targetFolder)) fs.mkdirSync(targetFolder);
 
   file.mv(targetPath, function(err) {
     if (err) {
