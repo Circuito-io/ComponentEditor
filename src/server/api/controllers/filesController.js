@@ -38,7 +38,7 @@ exports.read_a_file_factory = function(objPrefix) {
     fs.readFile(objFile(objPrefix, req.params.name), "utf8", (err, data) => {
       if (err) {
         console.log(err);
-        res.status(400).send(err);
+        return res.status(400).send(err);
       }
 
       try {
@@ -47,7 +47,7 @@ exports.read_a_file_factory = function(objPrefix) {
         console.log(err);
 
         if (err instanceof SyntaxError) {
-          res.status(400).send("Invalid JSON<br>" + data);
+          return res.status(400).send("Invalid JSON<br>" + data);
         }
         return;
       }
