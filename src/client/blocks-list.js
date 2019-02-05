@@ -11,7 +11,7 @@ function createNewBlockData(blockName) {
   return {
     name: blockName,
     blockId: blockId.toString(),
-    app: { appName: blockName },
+    app: { appName: blockName, visible: true },
     circuits: [{ name: "default", priority: 0 }]
   };
 }
