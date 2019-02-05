@@ -16,12 +16,6 @@
     "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>",
     "visible": true
   },
-  "requiresExpansion": [
-    {
-      "cost": 10,
-      "blocks": ["74HC4051"]
-    }
-  ],
   "circuits": [
     {
       "name": "ExPower",
@@ -503,6 +497,21 @@
           "blocks": [
             "Reg5v",
             "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "USBPowerMicro",
+            "74HC4051"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "Reg5v",
+            "USBPowerMicro",
+            "74HC4051"
           ]
         }
       ]
@@ -996,6 +1005,14 @@
       "priority": 2,
       "coders": [
         "NodeMCU1.0"
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 10,
+          "blocks": [
+            "74HC4051"
+          ]
+        }
       ]
     }
   ]

@@ -16,12 +16,6 @@
     "desc": "<p>Raspberry Pi 3 model B</p>",
     "visible": true
   },
-  "requiresExpansion": [
-    {
-      "cost": 10,
-      "blocks": ["MCP3008"]
-    }
-  ],
   "circuits": [
     {
       "name": "USB",
@@ -770,6 +764,19 @@
           "blocks": [
             "PowerSupply12vExt"
           ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "MCP3008"
+          ]
+        },
+        {
+          "cost": 11,
+          "blocks": [
+            "PowerSupply12vExt",
+            "MCP3008"
+          ]
         }
       ]
     },
@@ -1501,8 +1508,23 @@
           "blocks": [
             "StepUp5v"
           ]
+        },
+        {
+          "cost": 0,
+          "blocks": [
+            "Reg5v",
+            "MCP3008"
+          ]
+        },
+        {
+          "cost": 1,
+          "blocks": [
+            "StepUp5v",
+            "MCP3008"
+          ]
         }
       ]
     }
   ]
 }
+
