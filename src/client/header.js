@@ -1,27 +1,29 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import { Navbar, Nav, NavItem } from "react-bootstrap";
-import { Preview } from './preview';
-import { Publish } from './publish';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
+import { Preview } from "./preview";
+import { Publish } from "./publish";
 
 export class Header extends React.Component {
   render() {
     return (
       <Navbar inverse collapseOnSelect>
         <Nav>
-        <Navbar.Brand>
-          <Link to='/'>Components Editor</Link>
-        </Navbar.Brand>
-        {
-          this.props.activeBlock && (
-          <NavItem >
-            {this.props.activeBlock}
-          </NavItem>
-          )
-        }
+          <Navbar.Brand>
+            <Image
+              src="https://www.circuito.io/static/images/cir_logo_white.svg"
+              width="110"
+            />
+          </Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="/">Editor</Link>
+          </Navbar.Brand>
+          {this.props.activeBlock && (
+            <NavItem>{this.props.activeBlock}</NavItem>
+          )}
         </Nav>
         <Nav pullRight>
-          <NavItem href="https://talk.circuito.io"  target="_blank">
+          <NavItem href="https://talk.circuito.io" target="_blank">
             Help
           </NavItem>
           <Preview />
@@ -37,5 +39,5 @@ Header.displayName = "Header";
 }*/
 
 Header.defaultProps = {
-  activeBlock: null,
-}
+  activeBlock: null
+};
