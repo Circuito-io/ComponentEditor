@@ -1,7 +1,7 @@
 import * as blockSchema from "../../../circuito-schema/block.json";
 import { circuitsSchema, circuitsuiSchema } from "./circuitSchema";
 
-export function blockuiSchema(blocksList) {
+export function blockuiSchema(blocksList, supportBlocksList) {
   return {
     name: {
       "ui:readonly": true
@@ -63,6 +63,6 @@ export function blockuiSchema(blocksList) {
         }
       }
     },
-    ...circuitsuiSchema(blocksList)
+    ...circuitsuiSchema(supportBlocksList)
   };
 }

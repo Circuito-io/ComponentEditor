@@ -3,7 +3,7 @@ import {
   supportedControllersUISchema
 } from "../form/commonfields";
 
-export function circuitsuiSchema(blocksList) {
+export function circuitsuiSchema(supportBlocksList) {
   return {
     circuits: {
       "ui:field": "tabbedarray",
@@ -128,7 +128,7 @@ export function circuitsuiSchema(blocksList) {
               "ui:field": "typeahead",
               classNames: "two-coloumn-field",
               typeahead: {
-                options: blocksList,
+                options: supportBlocksList,
                 minLength: 0,
                 multiple: true
               }

@@ -14,7 +14,7 @@ export const list_all_parts = list_all_factory("parts");
 export const list_all_coders = list_all_factory("coders");
 
 export function cacheData() {
-  let cachedData = { blocks: null, parts: null, coders: null };
+  let cachedData = { blocks: null, parts: null, coders: null, blocksData: null };
   return list_all_blocks()
     .then(blocksData => {
       // blocks are fetched as objects with several fields

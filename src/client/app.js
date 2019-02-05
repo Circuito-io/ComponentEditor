@@ -19,7 +19,7 @@ export default class App extends React.Component {
 
     this.state = {
       activeBlock: null,
-      cachedData: { blocks: [], parts: [], coders: [] }
+      cachedData: { blocks: [], parts: [], coders: [], blocksData : [] }
     };
 
     this.refreshData = this.refreshData.bind(this);

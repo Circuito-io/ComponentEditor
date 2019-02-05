@@ -171,6 +171,20 @@ export class Block extends React.Component {
   }
 
   render() {
+    var supportBlocksList = this.props.cachedData.blocksData.reduce(
+      (res, block) => {
+        if (
+          block.category.indexOf("support") >= 0 ||
+          block.category.indexOf("power") >= 0 ||
+          block.category.indexOf("powerConnector") >= 0
+        ) {
+          res.push(block.name);
+        }
+        return res;
+      },
+      []
+    );
+
     return (
       <React.Fragment>
         <div className="container">
@@ -183,7 +197,10 @@ export class Block extends React.Component {
           </Button>
           <EditorForm
             schema={blockSchema.default}
-            uiSchema={blockuiSchema(this.props.cachedData.blocks)}
+            uiSchema={blockuiSchema(
+              this.props.cachedData.blocks,
+              supportBlocksList
+            )}
             formData={this.state.formSrcData}
             formContext={{
               partsList: this.props.cachedData.parts,
