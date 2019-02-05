@@ -9,19 +9,15 @@
     "image": "http://res.cloudinary.com/circuito/image/upload/tgqgxog4euhcmarnn497",
     "numericName": "",
     "shortName": "",
+    "visible": true,
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>The Atmel 8-bit AVR RISC-based microcontroller combines 8 kB ISP flash memory with read-while-write capabilities, 1 kB EEPROM, 512 Bytes SRAM, 6 general purpose I/O lines, 32 general purpose working registers, two flexible timer/counters with compare modes, internal and external interrupts, SPI serial port, 4-channel 10-bit A/D converter</p>",
-    "visible": true
+    "desc": "<p>The Atmel 8-bit AVR RISC-based microcontroller combines 8 kB ISP flash memory with read-while-write capabilities, 1 kB EEPROM, 512 Bytes SRAM, 6 general purpose I/O lines, 32 general purpose working registers, two flexible timer/counters with compare modes, internal and external interrupts, SPI serial port, 4-channel 10-bit A/D converter</p>"
   },
-  "notes": [
-    "https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256",
-    "http://highlowtech.org/?p=1695",
-    "http://digistump.com/wiki/digispark/tutorials/connecting",
-    "http://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf"
-  ],
+  "notes": "References used:\nhttps://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256\nhttp://highlowtech.org/?p=1695\nhttp://digistump.com/wiki/digispark/tutorials/connecting\nhttp://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf",
+  "altComp": {},
   "circuits": [
     {
       "name": "3v3",
