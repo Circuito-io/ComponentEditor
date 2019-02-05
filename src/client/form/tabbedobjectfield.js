@@ -10,40 +10,32 @@ import {
 } from "react-jsonschema-form/lib/utils";
 
 function TabbedObjectFieldTemplate(props) {
-  const getTabsProperties = function getTabsProperties() {
-    const { formData, schema, uiSchema } = props;
+  const { formData, schema, uiSchema } = props;
 
-    var tabsSetting;
-    if (uiSchema["ui:options"] && uiSchema["ui:options"]["tabs"])
-      tabsSetting = uiSchema["ui:options"]["tabs"];
-    else tabsSetting = {};
+  var tabsSettings =
+    (uiSchema["ui:options"] && uiSchema["ui:options"]["tabs"]) || {};
 
-    var propsToTabs = {};
+  var tabsNames = tabsSettings.map(tabSetting => tabSetting.name);
 
-    Object.keys(tabsSetting).map(tabName => {
-      tabsSetting[tabName].map(prop => {
-        propsToTabs[prop] = tabName;
-      });
-    });
+  var propsToTabs = {};
 
-    var tabsProperties = {};
+  tabsSettings.forEach(tabSetting =>
+    tabSetting.props.forEach(prop => (propsToTabs[prop] = tabSetting.name))
+  );
 
-    props.properties.map(prop => {
-      var targetTab = propsToTabs[prop.name];
+  var tabsProperties = {};
 
-      if (targetTab == null) {
-        targetTab = "Undefined Tab";
-      }
+  props.properties.map(prop => {
+    var targetTab = propsToTabs[prop.name];
 
-      if (!(targetTab in tabsProperties)) tabsProperties[targetTab] = [];
+    if (targetTab == null) {
+      targetTab = "Undefined Tab";
+    }
 
-      tabsProperties[targetTab].push(prop);
-    });
+    if (!(targetTab in tabsProperties)) tabsProperties[targetTab] = [];
 
-    return tabsProperties;
-  };
-
-  const tabsProperties = getTabsProperties();
+    tabsProperties[targetTab].push(prop);
+  });
 
   const { TitleField, DescriptionField } = props;
   return (
@@ -68,12 +60,12 @@ function TabbedObjectFieldTemplate(props) {
       <Well>
         <Tab.Container
           id={`${props.idSchema.$id}__tabs`}
-          defaultActiveKey={Object.keys(tabsProperties)[0]}
+          defaultActiveKey={tabsNames[0]}
         >
           <Row className="clearfix">
             <Col sm={2}>
-              <Nav bsStyle="pills" stacked>
-                {Object.keys(tabsProperties).map((tabName, index) => (
+              <Nav bsStyle="pills">
+                {tabsNames.map((tabName, index) => (
                   <NavItem eventKey={`${tabName}`} key={index}>
                     {tabName}
                   </NavItem>
@@ -83,7 +75,7 @@ function TabbedObjectFieldTemplate(props) {
             <Col sm={10}>
               <Well>
                 <Tab.Content animation>
-                  {Object.keys(tabsProperties).map((tabName, index) => (
+                  {tabsNames.map((tabName, index) => (
                     <Tab.Pane eventKey={`${tabName}`} key={index}>
                       {tabsProperties[tabName].map(prop => prop.content)}
                     </Tab.Pane>

@@ -10,14 +10,17 @@ export function circuitsuiSchema(blocksList) {
       items: {
         "ui:field": "tabbedobject",
         "ui:options": {
-          tabs: {
-            Info: ["name", "priority", "supportedControllers"],
-            Parts: ["parts"],
-            Blocks: ["requiredBlocks"],
-            Coders: ["coders"],
-            Ports: ["ports"],
-            Wiring: ["wires"]
-          }
+          tabs: [
+            {
+              name: "Info",
+              props: ["name", "priority", "supportedControllers"]
+            },
+            { name: "Parts", props: ["parts"] },
+            { name: "Ports", props: ["ports"] },
+            { name: "Wiring", props: ["wires"] },
+            { name: "Coders", props: ["coders"] },
+            { name: "Support Blocks", props: ["requiredBlocks"] }
+          ]
         },
         name: {
           classNames: "two-coloumn-field"
