@@ -10,7 +10,7 @@ function createNewBlockData(blockName) {
   console.log("Creating blockId", blockId, "for", blockName);
   return {
     name: blockName,
-    blockId: blockId,
+    blockId: blockId.toString(),
     app: { appName: blockName },
     circuits: [{ name: "default", priority: 0 }]
   };
