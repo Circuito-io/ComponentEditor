@@ -35,8 +35,6 @@ export class Block extends React.Component {
     this.updateConnectors = this.updateConnectors.bind(this);
     this.save = this.save.bind(this);
     this.onDataChange = this.onDataChange.bind(this);
-
-    this.props.setSaveFunc(this.save);
   }
 
   componentDidMount() {
@@ -155,6 +153,7 @@ export class Block extends React.Component {
         toast.error(
           "Update part failed:" + ((res && res.statusText) || "can't connect")
         );
+      else toast.success("Saved " + this.props.block, { autoClose: 2000 });
       this.modified = false;
     });
   }
@@ -192,10 +191,19 @@ export class Block extends React.Component {
               connectorsList: this.state.connectorsList
             }}
             onChange={this.onDataChange}
+            onSubmit={this.save}
+            onError={errors => {
+              toast.error(
+                "Validation errors: " +
+                  errors.map(error => error.stack).join(",")
+              );
+            }}
           >
-            <Button type="submit" style={{ display: "none" }}>
-              Submit
-            </Button>
+            <div className="fixed-bottom-footer modal-footer">
+              <Button bsStyle="primary" type="submit">
+                Save
+              </Button>
+            </div>
           </EditorForm>
         </div>
       </React.Fragment>

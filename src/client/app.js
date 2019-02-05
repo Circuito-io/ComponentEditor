@@ -17,15 +17,11 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.blockSaveFunc = null;
-
     this.state = {
       activeBlock: null,
       cachedData: { blocks: [], parts: [], coders: [] }
     };
 
-    this.onSave = this.onSave.bind(this);
-    this.setSaveFunc = this.setSaveFunc.bind(this);
     this.refreshData = this.refreshData.bind(this);
 
     this.refreshData();
@@ -37,41 +33,27 @@ export default class App extends React.Component {
     });
   }
 
-  onSave() {
-    if (this.blockSaveFunc) {
-      this.blockSaveFunc();
-    }
-  }
-
-  setSaveFunc(savefunc) {
-    this.blockSaveFunc = savefunc;
-  }
-
   render() {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Route
-            exact
-            path="/"
-            render={props => <Header {...props} onSave={this.onSave} />}
-          />
+          <Route exact path="/" render={props => <Header {...props} />} />
           <Route
             exact
             path="/"
             render={props => (
-              <Home {...props} cachedData={this.state.cachedData} refreshData={this.refreshData}/>
+              <Home
+                {...props}
+                cachedData={this.state.cachedData}
+                refreshData={this.refreshData}
+              />
             )}
           />
 
           <Route
             path="/:block"
             render={props => (
-              <Header
-                {...props}
-                activeBlock={props.match.params.block}
-                onSave={this.onSave}
-              />
+              <Header {...props} activeBlock={props.match.params.block} />
             )}
           />
           <Route
@@ -80,7 +62,6 @@ export default class App extends React.Component {
               <Block
                 {...props}
                 id="block"
-                setSaveFunc={this.setSaveFunc}
                 cachedData={this.state.cachedData}
                 block={props.match.params.block}
               />

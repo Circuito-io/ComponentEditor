@@ -1,34 +1,43 @@
+fieldset .two-coloumn-field:nth-child(even) {
+  float: right;
+  padding-left: 1em;
+  width: 50%;
+}
 
-  fieldset .two-coloumn-field:nth-child(even) {
-    float: right;
-    padding-left: 1em;
-    width: 50%;
-  }
+fieldset .two-coloumn-field:nth-child(odd) {
+  float: left;
+  padding-right: 1em;
+  width: 50%;
+}
 
-  fieldset .two-coloumn-field:nth-child(odd) {
-    float: left;
-    padding-right: 1em;
-    width: 50%;
-  }
+form > p {
+  padding: 1em;
+}
 
+.modal-body {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+}
 
-  form > p {
-    padding: 1em;
-  }
+.fixed-bottom-footer.modal-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
 
-  /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
-  .ace_text-input {position:absolute!important}
-
-
+/* workaround see https://github.com/ajaxorg/ace/issues/2963 */
+.ace_text-input {
+  position: absolute !important;
+}
 
 /*** MEDIA QUERIES ****/
 
 @media only screen and (max-width: 600px) {
-  .form-group.field.field-string.two-coloumn-field{
-    width:100%;
-    padding:0px;
+  .form-group.field.field-string.two-coloumn-field {
+    width: 100%;
+    padding: 0px;
   }
 }
-
 
 /*** MEDIA QUERIES ****/

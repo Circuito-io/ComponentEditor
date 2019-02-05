@@ -68,7 +68,7 @@ export class InputGroupModalField extends React.Component {
           </Modal.Header>
           <Modal.Body>{this.props.children}</Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.props.onSave}>Save</Button>
+            <Button bsStyle="primary" onClick={this.props.onSave}>Save</Button>
             <Button onClick={this.hideModal}>Close</Button>
           </Modal.Footer>
         </Modal>

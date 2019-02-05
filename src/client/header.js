@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import { Preview } from './preview';
-import { SaveUpload } from './saveupload';
 import { Publish } from './publish';
 
 export class Header extends React.Component {
@@ -25,7 +24,6 @@ export class Header extends React.Component {
           <NavItem href="https://talk.circuito.io"  target="_blank">
             Help
           </NavItem>
-          <SaveUpload onSave={this.props.onSave}/>
           <Preview />
           <Publish />
         </Nav>
