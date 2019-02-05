@@ -1,12 +1,48 @@
 import React from "react";
-import { NavItem, Glyphicon } from "react-bootstrap";
-import { toast } from 'react-toastify';
+import { Modal, NavItem, Button } from "react-bootstrap";
+import ReactPlayer from "react-player";
 
-export function Publish(props) {
-  return (
-    <NavItem onClick={event => {
-      toast.info('Use gitpod git interface to fork, commit and create a pull request' , {autoClose: false});
-    }}
-      >Publish</NavItem>
-  );
+export class Publish extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { show: false };
+
+    this.handleClose = this.handleClose.bind(this);
+    this.handleShow = this.handleShow.bind(this);
+  }
+
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>How to publish your work</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=dLYCeUOOsX0"
+              width="90%"
+              controls={true}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
+        <NavItem onClick={this.handleShow}>Publish</NavItem>
+      </React.Fragment>
+    );
+  }
 }
