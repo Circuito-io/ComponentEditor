@@ -17,14 +17,10 @@
     "visible": true
   },
   "requiresExpansion": [
-    [
-      0,
-      "NONE"
-    ],
-    [
-      10,
-      "MCP3008"
-    ]
+    {
+      "cost": 10,
+      "blocks": ["MCP3008"]
+    }
   ],
   "circuits": [
     {
