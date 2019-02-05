@@ -2,8 +2,6 @@ import React from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { toast } from "react-toastify";
 import { update_a_block } from "./controller.js";
-//import "react-bootstrap-typeahead/css/Typeahead.css";
-//import "react-bootstrap-typeahead/css/Typeahead-bs4.css";
 
 function createNewBlockData(blockName) {
   var blockId = Math.floor(Math.random() * 5000 + 5000);
@@ -22,9 +20,17 @@ export class BlocksList extends React.Component {
   }
 
   render() {
+    var blocksIdsLabels = this.props.cachedData.blocksData.map(block => {
+      var appName = block["app.appName"];
+      return {
+        id: block.name,
+        label: (appName && `${block.name} - ${appName}`) || block.name
+      };
+    });
+
     return (
       <Typeahead
-        options={this.props.cachedData.blocks}
+        options={blocksIdsLabels}
         selectHintOnEnter={true}
         allowNew={true}
         newSelectionPrefix="Create new block:"
@@ -53,8 +59,8 @@ export class BlocksList extends React.Component {
                 }
               }
             );
-          } else if (this.props.cachedData.blocks.includes(selection[0])) {
-            this.props.onBlockSelected(selection[0]);
+          } else {
+            this.props.onBlockSelected(selection[0].id);
           }
         }}
         bsSize={"small"}
