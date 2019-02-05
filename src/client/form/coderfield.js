@@ -33,7 +33,7 @@ export class CoderField extends React.Component {
   }
 
   onSave() {
-    update_a_coder(this.state.objName, this.currentData).then(res => {
+    update_a_coder(this.state.objName, this.lastData).then(res => {
       if (!(res && res.ok))
         toast.error(
           "Update coder failed:" + ((res && res.statusText) || "can't connect")

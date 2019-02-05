@@ -95,7 +95,10 @@ export class Block extends React.Component {
                   var symbolurl = partData.symbol;
 
                   if (symbolurl && typeof symbolurl === "string")
-                    var imgid = symbolurl.split("/").pop();
+                    var imgid = symbolurl
+                      .split("/")
+                      .slice(4)
+                      .join("/");
                   else {
                     return Promise.reject("Mising symbol for " + partName);
                   }
@@ -103,7 +106,12 @@ export class Block extends React.Component {
                   return imgid;
                 })
                 .then(read_a_svgdata)
+                .catch(ex => {
+                  console.log("Ignoring bad SVG", part.part);
+                })
                 .then(svgdata => {
+                  if (svgdata === undefined) return;
+
                   const svgConnectors = svgdata.ConnectorsNames.map(
                     connector => `${part.name}.${connector}`
                   );

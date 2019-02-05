@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { partuiSchema } from "../schema/partSchema.js";
-import { read_a_part, update_a_part } from "../controller.js";
+import { read_a_part, update_a_part, read_a_svgdata } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
 
 import * as partSchema from "../../../circuito-schema/part.json";
@@ -19,6 +19,7 @@ export class PartField extends React.Component {
     this.onShowModal = this.onShowModal.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.onSelectNew = this.onSelectNew.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   onShowModal() {
@@ -29,7 +30,7 @@ export class PartField extends React.Component {
   }
 
   onSave() {
-    update_a_part(this.state.objName, this.currentData).then(res => {
+    update_a_part(this.state.objName, this.lastData).then(res => {
       if (!(res && res.ok))
         toast.error(
           "Update part failed:" + ((res && res.statusText) || "can't connect")
@@ -65,6 +66,32 @@ export class PartField extends React.Component {
     this.props.onChange(partName);
   }
 
+  onChange(form) {
+    var formData = form.formData;
+    var symbolurl = formData.symbol;
+
+    if (symbolurl && symbolurl != this.lastCheckedSymbolurl) {
+      this.lastCheckedSymbolurl = symbolurl;
+      
+      var imgid = symbolurl
+        .split("/")
+        .slice(4)
+        .join("/");
+      read_a_svgdata(imgid)
+        .then(svgdata => {
+          if (!(svgdata && svgdata.success && svgdata.Connectors.length > 0))
+            toast.error("No connectors found in Symbol SVG", {
+              autoClose: false
+            });
+        })
+        .catch(ex => {
+          console.log(ex);
+          toast.error("Symbol SVG error:" + ex);
+        });
+    }
+    this.lastData = formData;
+  }
+
   render() {
     return (
       <InputGroupModalField
@@ -84,7 +111,7 @@ export class PartField extends React.Component {
             schema={partSchema.default}
             uiSchema={partuiSchema(this.props.formContext.partsList)}
             formData={this.state.objData}
-            onChange={form => (this.currentData = form.formData)}
+            onChange={this.onChange}
           >
             <Button type="submit" style={{ display: "none" }}>
               Submit

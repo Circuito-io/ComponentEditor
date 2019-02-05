@@ -44,7 +44,6 @@ export function ImageWidget(props) {
           </Button>
           <Button
             onClick={event => {
-              console.log("click");
               ReactCloudinaryUploader.open(cloudinaryOptions)
                 .then(image => {
                   props.onChange(image.url);
