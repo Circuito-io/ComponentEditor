@@ -432,19 +432,19 @@
         },
         {
           "from": "shiftReg.VCC",
-          "to": "VCC"
+          "to": "Vcc"
         },
         {
           "from": "shiftReg.GND",
-          "to": "GND"
+          "to": "Gnd"
         },
         {
           "from": "shiftReg.OEnot",
-          "to": "OEnot"
+          "to": "OE_not"
         },
         {
           "from": "shiftReg.SRCLRnot",
-          "to": "SRCLRnot"
+          "to": "SRCLR_not"
         },
         {
           "from": "r1.con1",
@@ -465,7 +465,7 @@
       ],
       "ports": [
         {
-          "name": "VCC",
+          "name": "Vcc",
           "interface": {
             "requires": [
               {
@@ -482,7 +482,7 @@
           }
         },
         {
-          "name": "GND",
+          "name": "Gnd",
           "interface": {
             "requires": [
               {
@@ -494,7 +494,7 @@
           }
         },
         {
-          "name": "SRCLRnot",
+          "name": "SRCLR_not",
           "interface": {
             "requires": [
               {
@@ -511,7 +511,7 @@
           }
         },
         {
-          "name": "OEnot",
+          "name": "OE_not",
           "interface": {
             "requires": [
               {

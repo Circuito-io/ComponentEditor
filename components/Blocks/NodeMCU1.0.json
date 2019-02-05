@@ -17,14 +17,10 @@
     "visible": true
   },
   "requiresExpansion": [
-    [
-      0,
-      "NONE"
-    ],
-    [
-      10,
-      "74HC4051"
-    ]
+    {
+      "cost": 10,
+      "blocks": ["74HC4051"]
+    }
   ],
   "circuits": [
     {
@@ -386,15 +382,9 @@
         {
           "name": "GND1",
           "interface": {
-            "requires": [
+            "provides": [
               {
-                "cost": 0,
                 "spec": "",
-                "voltage": "GND"
-              },
-              {
-                "cost": 1,
-                "spec": "USB",
                 "voltage": "GND"
               }
             ]
