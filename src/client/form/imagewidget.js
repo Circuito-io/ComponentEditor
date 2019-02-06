@@ -22,41 +22,39 @@ const cloudinaryOptions = {
 
 export function ImageWidget(props) {
   return (
-    <FormGroup>
-      <InputGroup>
-        <FormControl
-          type="text"
-          disabled={true}
-          value={props.value}
-          required={props.required}
-          placeholder="https://"
-          onChange={event => props.onChange(event.target.value)}
-        />
+    <InputGroup>
+      <FormControl
+        type="text"
+        disabled={true}
+        value={props.value}
+        required={props.required}
+        placeholder="https://"
+        onChange={event => props.onChange(event.target.value)}
+      />
 
-        <InputGroup.Button>
-          <Button
-            disabled={(!props.value)}
-            onClick={event => {
-              if (props.value) window.open(props.value, "_blank");
-            }}
-          >
-            Open
-          </Button>
-          <Button
-            onClick={event => {
-              ReactCloudinaryUploader.open(cloudinaryOptions)
-                .then(image => {
-                  props.onChange(image.url);
-                })
-                .catch(err => {
-                  console.error(err);
-                });
-            }}
-          >
-            Upload...
-          </Button>
-        </InputGroup.Button>
-      </InputGroup>
-    </FormGroup>
+      <InputGroup.Button>
+        <Button
+          disabled={!props.value}
+          onClick={event => {
+            if (props.value) window.open(props.value, "_blank");
+          }}
+        >
+          Open
+        </Button>
+        <Button
+          onClick={event => {
+            ReactCloudinaryUploader.open(cloudinaryOptions)
+              .then(image => {
+                props.onChange(image.url);
+              })
+              .catch(err => {
+                console.error(err);
+              });
+          }}
+        >
+          Upload...
+        </Button>
+      </InputGroup.Button>
+    </InputGroup>
   );
 }
