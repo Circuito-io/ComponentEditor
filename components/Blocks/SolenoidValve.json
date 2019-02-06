@@ -72,7 +72,8 @@
               }
             ],
             "requiresLoad": 1000,
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -85,7 +86,8 @@
                 "spec": "",
                 "voltage": "12v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],

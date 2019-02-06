@@ -29,7 +29,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -41,7 +42,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 1000
+            "providesLoad": 1000,
+            "portType": "provides"
           }
         },
         {
@@ -58,7 +60,8 @@
                 "spec": "",
                 "voltage": "3.7v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,7 +78,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -87,7 +91,8 @@
                 "spec": "Battery",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],

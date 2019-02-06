@@ -47,7 +47,8 @@
                 "spec": "Battery",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -59,7 +60,8 @@
                 "voltage": "3.7v"
               }
             ],
-            "providesLoad": 5000
+            "providesLoad": 5000,
+            "portType": "provides"
           }
         },
         {
@@ -70,7 +72,8 @@
                 "spec": "Battery",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],

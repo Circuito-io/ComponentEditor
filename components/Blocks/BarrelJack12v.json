@@ -24,7 +24,8 @@
                 "voltage": "12v"
               }
             ],
-            "providesLoad": 2000
+            "providesLoad": 2000,
+            "portType": "provides"
           }
         },
         {
@@ -37,7 +38,8 @@
                 "voltage": "12v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -49,7 +51,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +65,8 @@
                 "voltage": "GND"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +77,8 @@
                 "spec": "BARREL_JACK",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],

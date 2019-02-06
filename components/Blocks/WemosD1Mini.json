@@ -1,31 +1,32 @@
 {
-  "name": "NodeMCU1.0",
+  "name": "WemosD1Mini",
   "category": [
     "controller"
   ],
-  "blockId": "360216",
+  "blockId": "817085",
   "app": {
-    "appName": "Node MCU 1.0V",
-    "image": "http://res.cloudinary.com/circuito/image/upload/xegsn3dtgtm0xm8rfo5z",
+    "appName": "Wemos D1 Mini",
+    "image": "https://res.cloudinary.com/circuito/image/upload/client/WeMosD1Mini_lq2ptx",
     "numericName": "",
-    "shortName": "Node MCU",
+    "shortName": "Wemos D1 Mini",
+    "visible": true,
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>",
-    "visible": true
+    "desc": "<p>Wemos D1 Mini is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "ExPower",
       "supportedControllers": [
-        "NodeMCU"
+        "WemosD1Mini"
       ],
       "parts": [
         {
           "name": "this",
-          "part": "NodeMCU1.0"
+          "part": "WemosD1Mini"
         }
       ],
       "ports": [
@@ -38,7 +39,8 @@
                 "voltage": ""
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -67,7 +69,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -108,7 +111,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -133,7 +137,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -162,7 +167,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -195,7 +201,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -232,7 +239,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -265,7 +273,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -294,7 +303,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -315,12 +325,14 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
           "name": "RX",
           "interface": {
+            "codename": "RX",
             "provides": [
               {
                 "spec": "RX",
@@ -333,6 +345,7 @@
         {
           "name": "TX",
           "interface": {
+            "codename": "TX",
             "provides": [
               {
                 "spec": "TX",
@@ -343,42 +356,9 @@
           }
         },
         {
-          "name": "SD2",
-          "interface": {
-            "codename": "9",
-            "provides": [
-              {
-                "spec": "DigitalIn",
-                "voltage": "3.3v"
-              },
-              {
-                "spec": "DigitalOut",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "SD3",
-          "interface": {
-            "codename": "10",
-            "provides": [
-              {
-                "spec": "DigitalIn",
-                "voltage": "3.3v"
-              },
-              {
-                "spec": "DigitalOut",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
           "name": "A0",
           "interface": {
+            "codename": "A0",
             "provides": [
               {
                 "spec": "ADC",
@@ -389,19 +369,7 @@
           }
         },
         {
-          "name": "GND1",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "GND"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "GND3",
+          "name": "G",
           "interface": {
             "provides": [
               {
@@ -421,61 +389,22 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 800,
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 800
           }
         },
         {
-          "name": "3V3_1",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "3V3_2",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "Vin",
+          "name": "5V",
           "interface": {
             "requires": [
               {
                 "cost": 0,
                 "spec": "",
-                "voltage": "6v"
-              },
-              {
-                "cost": 1,
-                "spec": "",
-                "voltage": "7.4v"
-              },
-              {
-                "cost": 2,
-                "spec": "",
-                "voltage": "9v"
-              },
-              {
-                "cost": 3,
-                "spec": "",
-                "voltage": "12v"
+                "voltage": "5v"
               }
             ],
-            "requiresLoad": 50,
-            "portType": "requires"
+            "portType": "requires",
+            "requiresLoad": 800
           }
         },
         {
@@ -499,15 +428,12 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 128000,
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 128000
           }
         }
       ],
-      "priority": 1,
-      "coders": [
-        "NodeMCU1.0"
-      ],
+      "priority": 2,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -518,23 +444,15 @@
         {
           "cost": 30,
           "blocks": [
-            "Reg5v",
+            "StepUp5v",
             "USBPowerMicro"
           ]
         },
         {
-          "cost": 10,
-          "blocks": [
-            "USBPowerMicro",
-            "74HC4051"
-          ]
-        },
-        {
-          "cost": 40,
+          "cost": 20,
           "blocks": [
             "Reg5v",
-            "USBPowerMicro",
-            "74HC4051"
+            "USBPowerMicro"
           ]
         }
       ]
@@ -560,7 +478,8 @@
                 "voltage": ""
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -589,7 +508,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -630,7 +550,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -655,7 +576,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -684,7 +606,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -717,7 +640,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -754,7 +678,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -787,7 +712,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -816,7 +742,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
@@ -837,113 +764,14 @@
                 "voltage": "3.3v"
               }
             ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "GND",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "GND"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "GND1",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "GND"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "GND2",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "USB",
-                "voltage": "GND"
-              }
-            ],
-            "portType": "requires"
-          }
-        },
-        {
-          "name": "GND3",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "GND"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "USBPos",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "USB",
-                "voltage": "5v"
-              }
-            ],
-            "requiresLoad": 50,
-            "portType": "requires"
-          }
-        },
-        {
-          "name": "3V3",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "3.3v"
-              }
-            ],
-            "providesLoad": 800,
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "3V3_1",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "3V3_2",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 12
           }
         },
         {
           "name": "RX",
           "interface": {
-            "codename": "3",
+            "codename": "RX",
             "provides": [
               {
                 "spec": "RX",
@@ -956,7 +784,7 @@
         {
           "name": "TX",
           "interface": {
-            "codename": "1",
+            "codename": "TX",
             "provides": [
               {
                 "spec": "TX",
@@ -967,55 +795,9 @@
           }
         },
         {
-          "name": "Vin",
-          "interface": {
-            "provides": [
-              {
-                "spec": "",
-                "voltage": "5v"
-              }
-            ],
-            "providesLoad": 500,
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "SD2",
-          "interface": {
-            "codename": "9",
-            "provides": [
-              {
-                "spec": "DigitalIn",
-                "voltage": "3.3v"
-              },
-              {
-                "spec": "DigitalOut",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
-          "name": "SD3",
-          "interface": {
-            "codename": "10",
-            "provides": [
-              {
-                "spec": "DigitalIn",
-                "voltage": "3.3v"
-              },
-              {
-                "spec": "DigitalOut",
-                "voltage": "3.3v"
-              }
-            ],
-            "portType": "provides"
-          }
-        },
-        {
           "name": "A0",
           "interface": {
+            "codename": "A0",
             "provides": [
               {
                 "spec": "ADC",
@@ -1023,6 +805,31 @@
               }
             ],
             "portType": "provides"
+          }
+        },
+        {
+          "name": "G",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "3V3",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 800
           }
         },
         {
@@ -1046,20 +853,31 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 128000,
-            "portType": "provides"
+            "portType": "provides",
+            "providesLoad": 128000
           }
         }
       ],
-      "priority": 2,
-      "coders": [
-        "NodeMCU1.0"
-      ],
+      "priority": 1,
       "requiredBlocks": [
         {
-          "cost": 10,
+          "cost": 0,
           "blocks": [
-            "74HC4051"
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "StepUp5v",
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "Reg5v",
+            "USBPowerMicro"
           ]
         }
       ]

@@ -39,7 +39,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 2500
+            "providesLoad": 2500,
+            "portType": "provides"
           }
         },
         {
@@ -50,7 +51,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -62,7 +64,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],

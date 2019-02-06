@@ -40,7 +40,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -76,7 +77,8 @@
                 "spec": "ESPSoftwareSerialRX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -108,7 +110,8 @@
                 "spec": "ESPSoftwareSerialTX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -136,7 +139,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -147,7 +151,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -158,7 +163,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -170,7 +176,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -182,7 +189,8 @@
                 "spec": "USB",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -193,7 +201,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -205,7 +214,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 512
+            "providesLoad": 512,
+            "portType": "provides"
           }
         },
         {
@@ -216,7 +226,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
@@ -265,7 +276,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -301,7 +313,8 @@
                 "spec": "ESPSoftwareSerialRX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -333,7 +346,8 @@
                 "spec": "ESPSoftwareSerialTX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -361,7 +375,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -372,7 +387,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -384,7 +400,8 @@
                 "spec": "",
                 "voltage": "12v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -395,7 +412,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -407,7 +425,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 512
+            "providesLoad": 512,
+            "portType": "provides"
           }
         },
         {
@@ -418,7 +437,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
@@ -484,7 +504,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -520,7 +541,8 @@
                 "spec": "ESPSoftwareSerialRX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -552,7 +574,8 @@
                 "spec": "ESPSoftwareSerialTX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -580,7 +603,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -591,7 +615,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -618,7 +643,8 @@
                 "spec": "",
                 "voltage": "9v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -629,7 +655,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -641,7 +668,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 512
+            "providesLoad": 512,
+            "portType": "provides"
           }
         },
         {
@@ -652,7 +680,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
@@ -718,7 +747,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -754,7 +784,8 @@
                 "spec": "ESPSoftwareSerialRX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -786,7 +817,8 @@
                 "spec": "ESPSoftwareSerialTX1",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -814,7 +846,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -825,7 +858,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -836,7 +870,8 @@
                 "spec": "",
                 "voltage": "3.7v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -848,7 +883,8 @@
                 "spec": "Battery",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -860,7 +896,8 @@
                 "spec": "Battery",
                 "voltage": "3.7v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -871,7 +908,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -883,7 +921,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 512
+            "providesLoad": 512,
+            "portType": "provides"
           }
         },
         {
@@ -894,7 +933,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],

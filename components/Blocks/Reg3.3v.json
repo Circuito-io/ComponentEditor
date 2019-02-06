@@ -49,7 +49,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 800
+            "providesLoad": 800,
+            "portType": "provides"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -93,7 +95,8 @@
                 "spec": "",
                 "voltage": "7.4v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],

@@ -19,7 +19,8 @@
         "ArduinoProMini3v3",
         "ESP32DevKitC",
         "NodeMCU",
-        "RPI3B"
+        "RPI3B",
+        "WemosD1Mini"
       ],
       "parts": [
         {
@@ -37,7 +38,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 2000
+            "providesLoad": 2000,
+            "portType": "provides"
           }
         },
         {
@@ -48,7 +50,8 @@
                 "spec": "Barrel",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -61,7 +64,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
@@ -107,7 +111,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 5000
+            "providesLoad": 5000,
+            "portType": "provides"
           }
         },
         {
@@ -118,7 +123,8 @@
                 "spec": "Barrel",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -131,7 +137,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],

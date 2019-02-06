@@ -31,7 +31,8 @@
         "ESP32DevKitC",
         "NodeMCU",
         "ATTiny85",
-        "Teensy32"
+        "Teensy32",
+        "WemosD1Mini"
       ],
       "parts": [
         {
@@ -49,7 +50,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 400
+            "providesLoad": 400,
+            "portType": "provides"
           }
         },
         {
@@ -60,7 +62,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -72,7 +75,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
