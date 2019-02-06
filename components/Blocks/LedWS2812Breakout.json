@@ -103,21 +103,24 @@
           "name": "GND_O",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "5v_O",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "DO",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
