@@ -96,7 +96,8 @@
           "name": "DOUT",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         }
       ],

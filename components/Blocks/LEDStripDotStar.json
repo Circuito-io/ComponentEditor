@@ -120,28 +120,32 @@
           "name": "VCC_OUT",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "GND_OUT",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "DO",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "CO",
           "interface": {
             "chain": true,
-            "portType": "chainable"
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
