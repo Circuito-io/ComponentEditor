@@ -43,7 +43,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +75,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,7 +88,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -103,7 +107,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -151,7 +156,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 400
+            "requiresLoad": 400,
+            "portType": "requires"
           }
         },
         {
@@ -169,7 +175,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -187,7 +194,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -199,7 +207,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -211,7 +220,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -229,7 +239,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -241,7 +252,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -252,7 +264,8 @@
                 "spec": "DCMA1",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -263,7 +276,8 @@
                 "spec": "DCMA2",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -274,7 +288,8 @@
                 "spec": "DCMB1",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -285,7 +300,8 @@
                 "spec": "DCMB2",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],

@@ -54,7 +54,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 500
+            "requiresLoad": 500,
+            "portType": "requires"
           }
         },
         {
@@ -67,7 +68,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -86,7 +88,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },

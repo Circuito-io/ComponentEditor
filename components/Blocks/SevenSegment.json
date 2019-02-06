@@ -52,7 +52,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -69,7 +70,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +84,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 131
+            "requiresLoad": 131,
+            "portType": "requires"
           }
         },
         {
@@ -100,7 +103,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
@@ -131,7 +135,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -143,7 +148,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -156,7 +162,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 131
+            "requiresLoad": 131,
+            "portType": "requires"
           }
         },
         {
@@ -168,7 +175,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -180,7 +188,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],

@@ -59,7 +59,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -72,7 +73,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -85,7 +87,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -98,7 +101,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }

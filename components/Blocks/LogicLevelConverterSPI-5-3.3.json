@@ -23,7 +23,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -35,7 +36,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -46,7 +48,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -58,7 +61,8 @@
                 "spec": "MOSI",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -70,7 +74,8 @@
                 "spec": "SCK",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +87,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -93,7 +99,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -104,7 +111,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -116,7 +124,8 @@
                 "spec": "MISO",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -129,7 +138,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -141,7 +151,8 @@
                 "spec": "DigitalOut",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],

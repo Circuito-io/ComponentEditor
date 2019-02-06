@@ -74,7 +74,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 1200
+            "requiresLoad": 1200,
+            "portType": "requires"
           }
         },
         {
@@ -86,7 +87,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -104,7 +106,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }

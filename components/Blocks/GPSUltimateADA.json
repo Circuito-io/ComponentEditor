@@ -52,7 +52,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 25
+            "requiresLoad": 25,
+            "portType": "requires"
           }
         },
         {
@@ -64,7 +65,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +84,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -100,7 +103,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
@@ -141,7 +145,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -159,7 +164,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 25
+            "requiresLoad": 25,
+            "portType": "requires"
           }
         },
         {
@@ -171,7 +177,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -199,7 +206,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -228,7 +236,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }

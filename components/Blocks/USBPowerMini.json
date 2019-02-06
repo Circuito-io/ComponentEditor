@@ -43,7 +43,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 400
+            "providesLoad": 400,
+            "portType": "provides"
           }
         },
         {
@@ -54,7 +55,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -66,7 +68,8 @@
                 "spec": "FTDI",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
@@ -93,7 +96,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 400
+            "providesLoad": 400,
+            "portType": "provides"
           }
         },
         {
@@ -104,7 +108,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -116,7 +121,8 @@
                 "spec": "FTDI",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
@@ -143,7 +149,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 400
+            "providesLoad": 400,
+            "portType": "provides"
           }
         },
         {
@@ -154,7 +161,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -166,7 +174,8 @@
                 "spec": "USB_MINI",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],

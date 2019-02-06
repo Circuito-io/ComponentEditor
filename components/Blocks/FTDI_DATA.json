@@ -5,13 +5,12 @@
   ],
   "blockId": "1514678",
   "altComp": {
-        "cost": 150,
-        "block": "PowerSupply12v2A"
-      },
+    "cost": 150,
+    "block": "PowerSupply12v2A"
+  },
   "circuits": [
     {
       "name": "5v",
-      
       "supportedControllers": [
         "ATMega328P"
       ],
@@ -30,7 +29,8 @@
                 "spec": "CTS",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -41,7 +41,8 @@
                 "spec": "RX",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -52,7 +53,8 @@
                 "spec": "TX",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -63,7 +65,8 @@
                 "spec": "DTR",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -75,7 +78,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
@@ -101,7 +105,8 @@
                 "spec": "CTS",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -112,7 +117,8 @@
                 "spec": "RX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -123,7 +129,8 @@
                 "spec": "TX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -134,7 +141,8 @@
                 "spec": "DTR",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -146,7 +154,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
