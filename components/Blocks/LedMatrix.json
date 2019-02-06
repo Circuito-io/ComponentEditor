@@ -138,31 +138,36 @@
         {
           "name": "VCC_PT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "GND_PT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "DIN_CHN",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "CLK_PT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "CS_PT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         }
       ],

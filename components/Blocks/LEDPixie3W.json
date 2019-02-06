@@ -96,19 +96,22 @@
         {
           "name": "OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "5V_Ch",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "GND_Ch",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         }
       ],

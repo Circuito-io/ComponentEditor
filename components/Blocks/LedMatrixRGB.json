@@ -97,19 +97,22 @@
         {
           "name": "DOUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "5V_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "GND_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         }
       ],

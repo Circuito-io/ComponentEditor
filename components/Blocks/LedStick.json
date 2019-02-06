@@ -98,19 +98,22 @@
         {
           "name": "+5VA",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "DATAOUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         },
         {
           "name": "GNDA",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "chainable"
           }
         }
       ],
