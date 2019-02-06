@@ -174,9 +174,10 @@ export class Block extends React.Component {
     var supportBlocksList = this.props.cachedData.blocksData.reduce(
       (res, block) => {
         if (
-          block.category.indexOf("support") >= 0 ||
-          block.category.indexOf("power") >= 0 ||
-          block.category.indexOf("powerConnector") >= 0
+          block.category &&
+          (block.category.indexOf("support") >= 0 ||
+            block.category.indexOf("power") >= 0 ||
+            block.category.indexOf("powerConnector") >= 0)
         ) {
           res.push(block.name);
         }
