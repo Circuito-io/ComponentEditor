@@ -101,15 +101,6 @@ export function circuitsuiSchema(supportBlocksList) {
                   }
                 }
               },
-              requiresLoad: {
-                classNames: "two-coloumn-field"
-              },
-              providesLoad: {
-                classNames: "two-coloumn-field"
-              },
-              unique: {
-                classNames: "two-coloumn-field"
-              },
               isBus: {
                 "ui:widget": "hidden"
               }
