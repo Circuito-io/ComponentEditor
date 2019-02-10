@@ -14,6 +14,33 @@ form > p {
   padding: 1em;
 }
 
+.form-legend {
+  display: contents;
+}
+
+.tooltip-hint {
+  display: inline;
+  padding: 2px;
+}
+
+.form-tooltip {
+  z-index: 10000 !important;
+  width: 400px;
+  pointer-events: auto !important;
+}
+
+.form-tooltip:hover {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.tooltip-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
 .modal-body {
   max-height: calc(100vh - 150px);
   overflow-y: auto;

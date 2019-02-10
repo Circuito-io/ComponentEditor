@@ -9,6 +9,7 @@ import { Header } from "./header";
 import { Block } from "./block.js";
 import { Home } from "./home.js";
 import { cacheData } from "./controller.js";
+import ReactTooltip from "react-tooltip";
 
 import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +20,7 @@ export default class App extends React.Component {
 
     this.state = {
       activeBlock: null,
-      cachedData: { blocks: [], parts: [], coders: [], blocksData : [] }
+      cachedData: { blocks: [], parts: [], coders: [], blocksData: [] }
     };
 
     this.refreshData = this.refreshData.bind(this);
@@ -68,6 +69,13 @@ export default class App extends React.Component {
             )}
           />
           <ToastContainer hideProgressBar={true} />
+          <ReactTooltip
+            html={true}
+            delayHide={1000}
+            className="form-tooltip"
+            effect="solid"
+            place="right" 
+          />
         </React.Fragment>
       </BrowserRouter>
     );
