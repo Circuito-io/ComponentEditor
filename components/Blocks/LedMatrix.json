@@ -197,7 +197,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -239,7 +238,8 @@
           "from": "this.CS_PT",
           "to": "CS_PT"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

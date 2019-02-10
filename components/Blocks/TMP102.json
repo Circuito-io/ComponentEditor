@@ -137,7 +137,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -159,7 +158,8 @@
           "from": "this.SCL",
           "to": "SCL"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

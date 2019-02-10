@@ -112,7 +112,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VIN",
@@ -130,7 +129,8 @@
           "from": "this.SDA",
           "to": "SDA"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

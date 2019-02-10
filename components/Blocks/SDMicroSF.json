@@ -179,7 +179,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.CO",
@@ -209,7 +208,8 @@
           "from": "this.GND",
           "to": "GND"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

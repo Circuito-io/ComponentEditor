@@ -125,7 +125,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND_COM",
@@ -147,7 +146,8 @@
           "from": "this.GND",
           "to": "GND"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

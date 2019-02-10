@@ -93,7 +93,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.5V",
@@ -107,7 +106,8 @@
           "from": "this.Ao",
           "to": "Ao"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

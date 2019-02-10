@@ -113,7 +113,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.+12V",
@@ -131,7 +130,8 @@
           "from": "this.GROUND",
           "to": "GROUND"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

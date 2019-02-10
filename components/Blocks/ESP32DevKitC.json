@@ -984,7 +984,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.0",
@@ -1126,7 +1125,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "EXT",
@@ -2081,7 +2081,6 @@
           }
         }
       ],
-      "priority": 3,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -2245,7 +2244,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 3
     }
   ]
 }

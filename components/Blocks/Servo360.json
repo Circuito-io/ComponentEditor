@@ -106,7 +106,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.0",
@@ -120,7 +119,8 @@
           "from": "this.Vin",
           "to": "Vin"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

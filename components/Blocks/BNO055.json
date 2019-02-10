@@ -107,7 +107,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.SCL",
@@ -129,7 +128,8 @@
           "from": "this.INT",
           "to": "INT"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -218,7 +218,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.SCL",
@@ -240,7 +239,8 @@
           "from": "this.INT",
           "to": "INT"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

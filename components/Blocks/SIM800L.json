@@ -118,7 +118,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -140,7 +139,8 @@
           "from": "this.RX",
           "to": "RX"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "SoftwareSerial",
@@ -257,7 +257,6 @@
           }
         }
       ],
-      "priority": 100,
       "wires": [
         {
           "from": "this.RST",
@@ -279,7 +278,8 @@
           "from": "this.5V",
           "to": "5V"
         }
-      ]
+      ],
+      "cost": 100
     }
   ]
 }

@@ -177,7 +177,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.RST",
@@ -207,7 +206,8 @@
           "from": "this.MOSI",
           "to": "MOSI"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

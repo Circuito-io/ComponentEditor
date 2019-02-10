@@ -116,7 +116,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -130,7 +129,8 @@
           "from": "this.RX",
           "to": "RX"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

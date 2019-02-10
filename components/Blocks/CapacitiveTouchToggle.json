@@ -82,7 +82,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.OUT",
@@ -96,7 +95,8 @@
           "from": "this.VDD",
           "to": "VDD"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -161,7 +161,6 @@
           }
         }
       ],
-      "priority": 2,
       "wires": [
         {
           "from": "this.OUT",
@@ -175,7 +174,8 @@
           "from": "this.VDD",
           "to": "VDD"
         }
-      ]
+      ],
+      "cost": 2
     }
   ]
 }

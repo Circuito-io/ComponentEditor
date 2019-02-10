@@ -231,7 +231,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 20,
@@ -281,7 +280,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "Barrel12v",
@@ -472,7 +472,6 @@
           }
         }
       ],
-      "priority": 2,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -539,7 +538,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 2
     },
     {
       "name": "BatteryEx",
@@ -745,7 +745,6 @@
           }
         }
       ],
-      "priority": 3,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -812,7 +811,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 3
     },
     {
       "name": "Lipo3v7",
@@ -1028,7 +1028,6 @@
           }
         }
       ],
-      "priority": 4,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -1103,7 +1102,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 4
     }
   ]
 }

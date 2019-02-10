@@ -88,7 +88,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.POS",
@@ -98,7 +97,8 @@
           "from": "this.NEG",
           "to": "NEG"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

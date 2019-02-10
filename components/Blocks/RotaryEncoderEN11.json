@@ -131,7 +131,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.A",
@@ -153,7 +152,8 @@
           "from": "this.GND2",
           "to": "GND2"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "Digital",
@@ -279,7 +279,6 @@
           }
         }
       ],
-      "priority": 100,
       "wires": [
         {
           "from": "this.A",
@@ -301,7 +300,8 @@
           "from": "this.GND2",
           "to": "GND2"
         }
-      ]
+      ],
+      "cost": 100
     }
   ]
 }

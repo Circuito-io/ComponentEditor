@@ -73,13 +73,13 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.FTDI",
           "to": "FTDI"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "WithFTDI3v3",
@@ -132,13 +132,13 @@
           }
         }
       ],
-      "priority": 2,
       "wires": [
         {
           "from": "this.FTDI",
           "to": "FTDI"
         }
-      ]
+      ],
+      "cost": 2
     },
     {
       "name": "Cable",
@@ -191,13 +191,13 @@
           }
         }
       ],
-      "priority": 3,
       "wires": [
         {
           "from": "this.USB_MINI",
           "to": "USB_MINI"
         }
-      ]
+      ],
+      "cost": 3
     }
   ]
 }

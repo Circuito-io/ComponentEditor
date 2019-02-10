@@ -627,7 +627,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -744,7 +743,8 @@
           "from": "this.USB_MINI",
           "to": "USB_MINI"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "USB",
@@ -1350,7 +1350,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.2",
@@ -1456,7 +1455,8 @@
           "from": "this.USB_MINI",
           "to": "USB_MINI"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

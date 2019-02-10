@@ -108,7 +108,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VIN",
@@ -126,7 +125,8 @@
           "from": "this.TX",
           "to": "TX"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "SoftwareSerial",
@@ -260,7 +260,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 100,
       "wires": [
         {
           "from": "this.VIN",
@@ -278,7 +277,8 @@
           "from": "this.TX",
           "to": "TX"
         }
-      ]
+      ],
+      "cost": 100
     }
   ]
 }

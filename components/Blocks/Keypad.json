@@ -184,7 +184,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.row3",
@@ -214,7 +213,8 @@
           "from": "this.row4",
           "to": "row4"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

@@ -245,7 +245,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 10,
@@ -296,7 +295,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "5v",
@@ -532,7 +532,6 @@
           }
         }
       ],
-      "priority": 3,
       "requiredBlocks": [
         {
           "cost": 10,
@@ -583,7 +582,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 3
     }
   ]
 }

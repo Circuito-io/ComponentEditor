@@ -97,7 +97,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.signal",
@@ -111,7 +110,8 @@
           "from": "this.power",
           "to": "power"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

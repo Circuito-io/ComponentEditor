@@ -182,7 +182,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.CS",
@@ -212,7 +211,8 @@
           "from": "this.DC",
           "to": "DC"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

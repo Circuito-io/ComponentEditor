@@ -144,7 +144,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.1",
@@ -166,7 +165,8 @@
           "from": "this.5",
           "to": "5"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

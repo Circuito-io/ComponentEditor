@@ -92,7 +92,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VDD",
@@ -106,7 +105,8 @@
           "from": "this.DQ",
           "to": "DQ"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

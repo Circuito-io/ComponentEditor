@@ -801,7 +801,6 @@
           }
         }
       ],
-      "priority": 0,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -988,7 +987,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "Ext",
@@ -1747,7 +1747,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -1941,7 +1940,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

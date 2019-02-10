@@ -1064,7 +1064,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.0",
@@ -1202,7 +1201,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "EXT",
@@ -2229,7 +2229,6 @@
           }
         }
       ],
-      "priority": 2,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -2404,7 +2403,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 2
     },
     {
       "name": "Lipo3v7",
@@ -3451,7 +3451,6 @@
           }
         }
       ],
-      "priority": 3,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -3597,7 +3596,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 3
     }
   ]
 }

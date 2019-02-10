@@ -83,7 +83,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -97,7 +96,8 @@
           "from": "this.Vin",
           "to": "Vin"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -161,7 +161,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.GND",
@@ -175,7 +174,8 @@
           "from": "this.Vin",
           "to": "Vin"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

@@ -122,7 +122,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.SDA",
@@ -140,7 +139,8 @@
           "from": "this.Gnd",
           "to": "Gnd"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

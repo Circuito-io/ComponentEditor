@@ -115,7 +115,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -137,7 +136,8 @@
           "from": "this.ZOUT",
           "to": "ZOUT"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

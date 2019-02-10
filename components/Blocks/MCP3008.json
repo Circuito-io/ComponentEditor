@@ -233,7 +233,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -299,7 +298,8 @@
           "from": "this.CH7",
           "to": "CH7"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

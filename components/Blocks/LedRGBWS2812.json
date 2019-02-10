@@ -101,7 +101,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.DIN",
@@ -119,7 +118,8 @@
           "from": "this.DOUT",
           "to": "DOUT"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

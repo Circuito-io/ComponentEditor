@@ -69,7 +69,6 @@
           }
         }
       ],
-      "priority": 0,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -83,7 +82,8 @@
           "from": "this.BARREL_JACK",
           "to": "BARREL_JACK"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "5A",
@@ -148,7 +148,6 @@
           }
         }
       ],
-      "priority": 5,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -162,7 +161,8 @@
           "from": "this.BARREL_JACK",
           "to": "BARREL_JACK"
         }
-      ]
+      ],
+      "cost": 5
     }
   ]
 }

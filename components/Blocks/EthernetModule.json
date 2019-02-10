@@ -175,7 +175,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.SCK",
@@ -205,7 +204,8 @@
           "from": "this.INT",
           "to": "INT"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

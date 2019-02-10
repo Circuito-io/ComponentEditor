@@ -178,7 +178,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -208,7 +207,8 @@
           "from": "this.MISO",
           "to": "MISO"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

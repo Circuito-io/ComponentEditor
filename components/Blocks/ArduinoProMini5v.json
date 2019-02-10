@@ -575,7 +575,6 @@
           }
         }
       ],
-      "priority": 0,
       "requiredBlocks": [
         {
           "cost": 50,
@@ -673,7 +672,8 @@
           "from": "this.FTDI",
           "to": "FTDI"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "EXT",
@@ -1279,7 +1279,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -1388,7 +1387,8 @@
           "from": "this.FTDI",
           "to": "FTDI"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

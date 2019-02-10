@@ -433,7 +433,6 @@
           }
         }
       ],
-      "priority": 2,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -455,7 +454,8 @@
             "USBPowerMicro"
           ]
         }
-      ]
+      ],
+      "cost": 2
     },
     {
       "name": "USB",
@@ -858,7 +858,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -880,7 +879,8 @@
             "USBPowerMicro"
           ]
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

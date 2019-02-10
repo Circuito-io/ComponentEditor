@@ -163,7 +163,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC_IN",
@@ -197,7 +196,8 @@
           "from": "this.CO",
           "to": "CO"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

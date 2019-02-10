@@ -249,7 +249,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -315,7 +314,8 @@
           "from": "this.A7",
           "to": "A7"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "5v",
@@ -547,7 +547,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.VCC",
@@ -613,7 +612,8 @@
           "from": "this.A7",
           "to": "A7"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

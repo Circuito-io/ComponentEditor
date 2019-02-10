@@ -110,7 +110,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -128,7 +127,8 @@
           "from": "this.SCK_SCL",
           "to": "SCK_SCL"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

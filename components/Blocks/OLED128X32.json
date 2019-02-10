@@ -108,7 +108,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VIN",
@@ -130,7 +129,8 @@
           "from": "this.RST",
           "to": "RST"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -220,7 +220,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.VIN",
@@ -242,7 +241,8 @@
           "from": "this.RST",
           "to": "RST"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

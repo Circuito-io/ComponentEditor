@@ -504,7 +504,6 @@
           }
         }
       ],
-      "priority": 1,
       "coders": [
         "NodeMCU1.0"
       ],
@@ -623,7 +622,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "USB",
@@ -1137,7 +1137,6 @@
           }
         }
       ],
-      "priority": 2,
       "coders": [
         "NodeMCU1.0"
       ],
@@ -1242,7 +1241,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 2
     }
   ]
 }

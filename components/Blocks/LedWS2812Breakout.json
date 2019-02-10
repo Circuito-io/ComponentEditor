@@ -124,7 +124,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.5v_I",
@@ -150,7 +149,8 @@
           "from": "this.DO",
           "to": "DO"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

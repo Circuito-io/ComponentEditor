@@ -82,7 +82,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.GND",
@@ -96,7 +95,8 @@
           "from": "this.VO",
           "to": "VO"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -195,7 +195,7 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }

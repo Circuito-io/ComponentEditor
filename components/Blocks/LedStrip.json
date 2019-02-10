@@ -134,7 +134,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -160,7 +159,8 @@
           "from": "this.DO",
           "to": "DO"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

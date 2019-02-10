@@ -82,7 +82,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.GND",
@@ -96,7 +95,8 @@
           "from": "this.5V",
           "to": "5V"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -195,7 +195,7 @@
           }
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }

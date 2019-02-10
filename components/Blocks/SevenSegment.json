@@ -109,7 +109,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -123,7 +122,8 @@
           "from": "this.RX",
           "to": "RX"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "I2C",
@@ -207,7 +207,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.GND",
@@ -225,7 +224,8 @@
           "from": "this.SCL",
           "to": "SCL"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

@@ -132,7 +132,7 @@
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     },
     {
       "name": "5v",
@@ -214,7 +214,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.TRIG",
@@ -232,7 +231,8 @@
           "from": "this.GND",
           "to": "GND"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "Gemma",
@@ -338,7 +338,7 @@
           }
         }
       ],
-      "priority": 3
+      "cost": 3
     }
   ]
 }

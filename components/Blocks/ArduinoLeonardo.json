@@ -657,7 +657,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -787,7 +786,8 @@
           "from": "this.BARREL_JACK",
           "to": "BARREL_JACK"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "6v",
@@ -1387,7 +1387,6 @@
           }
         }
       ],
-      "priority": 2,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -1513,7 +1512,8 @@
           "from": "this.Vin",
           "to": "Vin"
         }
-      ]
+      ],
+      "cost": 2
     },
     {
       "name": "USB",
@@ -2122,7 +2122,6 @@
           }
         }
       ],
-      "priority": 3,
       "wires": [
         {
           "from": "this.2",
@@ -2236,7 +2235,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 3
     },
     {
       "name": "9v",
@@ -2836,7 +2836,6 @@
           }
         }
       ],
-      "priority": 4,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -2962,7 +2961,8 @@
           "from": "this.Vin",
           "to": "Vin"
         }
-      ]
+      ],
+      "cost": 4
     },
     {
       "name": "Lipo7v4",
@@ -3562,7 +3562,6 @@
           }
         }
       ],
-      "priority": 5,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -3688,7 +3687,8 @@
           "from": "this.USB_MICRO",
           "to": "USB_MICRO"
         }
-      ]
+      ],
+      "cost": 5
     },
     {
       "name": "12v",
@@ -4288,7 +4288,6 @@
           }
         }
       ],
-      "priority": 6,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -4414,7 +4413,8 @@
           "from": "this.Vin",
           "to": "Vin"
         }
-      ]
+      ],
+      "cost": 6
     }
   ]
 }

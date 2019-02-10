@@ -198,7 +198,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.Enable1",
@@ -236,7 +235,8 @@
           "from": "this.Out2",
           "to": "Out2"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

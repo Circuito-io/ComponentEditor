@@ -77,7 +77,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND",
@@ -87,7 +86,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

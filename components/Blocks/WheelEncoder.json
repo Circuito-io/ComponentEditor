@@ -116,7 +116,6 @@
           }
         }
       ],
-      "priority": 3,
       "wires": [
         {
           "from": "this.GND",
@@ -134,7 +133,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 3
     },
     {
       "name": "Digital",
@@ -246,7 +246,6 @@
           }
         }
       ],
-      "priority": 5,
       "wires": [
         {
           "from": "this.GND",
@@ -264,7 +263,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 5
     }
   ]
 }

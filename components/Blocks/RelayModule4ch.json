@@ -151,7 +151,6 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -177,7 +176,8 @@
           "from": "this.IN3",
           "to": "IN3"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

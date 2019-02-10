@@ -92,7 +92,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.C",
@@ -110,7 +109,8 @@
           "from": "this.D",
           "to": "D"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -184,7 +184,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.C",
@@ -202,7 +201,8 @@
           "from": "this.D",
           "to": "D"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

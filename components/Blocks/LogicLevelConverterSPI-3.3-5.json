@@ -132,7 +132,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.HV",
@@ -170,7 +169,8 @@
           "from": "this.LV4",
           "to": "LV4"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

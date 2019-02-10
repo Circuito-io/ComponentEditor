@@ -133,7 +133,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GND_IN",
@@ -159,7 +158,8 @@
           "from": "this.GND_OUT",
           "to": "GND_OUT"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

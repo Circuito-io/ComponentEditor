@@ -137,7 +137,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.GATE",
@@ -159,7 +158,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

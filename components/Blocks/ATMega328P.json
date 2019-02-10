@@ -735,7 +735,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -765,7 +764,8 @@
             "FTDI_DATA_5v"
           ]
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -1481,7 +1481,6 @@
           }
         }
       ],
-      "priority": 2,
       "requiredBlocks": [
         {
           "cost": 0,
@@ -1511,7 +1510,8 @@
             "FTDI_DATA_3v3"
           ]
         }
-      ]
+      ],
+      "cost": 2
     }
   ]
 }

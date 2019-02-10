@@ -82,7 +82,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.pos",
@@ -96,7 +95,8 @@
           "from": "this.BARREL_JACK",
           "to": "BARREL_JACK"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

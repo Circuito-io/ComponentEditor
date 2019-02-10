@@ -109,7 +109,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -127,7 +126,8 @@
           "from": "this.SDA",
           "to": "SDA"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

@@ -92,7 +92,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.SIG",
@@ -106,7 +105,8 @@
           "from": "this.VCC",
           "to": "VCC"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

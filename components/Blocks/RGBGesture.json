@@ -139,7 +139,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VL",
@@ -165,7 +164,8 @@
           "from": "this.INT",
           "to": "INT"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

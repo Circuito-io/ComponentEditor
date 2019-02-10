@@ -165,7 +165,6 @@
           }
         }
       ],
-      "priority": 0,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -173,7 +172,8 @@
             "Reg3.3v"
           ]
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "SoftwareSerial3v3",
@@ -298,7 +298,6 @@
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -328,7 +327,8 @@
           "from": "this.GND",
           "to": "GND"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "SoftwareSerial5v",
@@ -503,7 +503,6 @@
           }
         }
       ],
-      "priority": 100,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -511,7 +510,8 @@
             "Reg3.3v"
           ]
         }
-      ]
+      ],
+      "cost": 100
     },
     {
       "name": "HardwareSerial3v3",
@@ -612,7 +612,6 @@
           }
         }
       ],
-      "priority": 101,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -642,7 +641,8 @@
           "from": "this.GND",
           "to": "GND"
         }
-      ]
+      ],
+      "cost": 101
     }
   ]
 }

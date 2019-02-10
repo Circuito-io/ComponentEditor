@@ -83,7 +83,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.Coil1",
@@ -93,7 +92,8 @@
           "from": "this.Coil2",
           "to": "Coil2"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }

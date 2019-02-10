@@ -96,7 +96,6 @@
           }
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VCC",
@@ -110,7 +109,8 @@
           "from": "this.Gnd",
           "to": "Gnd"
         }
-      ]
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -188,7 +188,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.VCC",
@@ -202,7 +201,8 @@
           "from": "this.Gnd",
           "to": "Gnd"
         }
-      ]
+      ],
+      "cost": 1
     }
   ]
 }

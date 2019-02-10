@@ -69,7 +69,6 @@
           }
         }
       ],
-      "priority": 1,
       "wires": [
         {
           "from": "this.Coil1",
@@ -79,7 +78,8 @@
           "from": "this.Coil2",
           "to": "Coil2"
         }
-      ]
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -174,7 +174,7 @@
           }
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }

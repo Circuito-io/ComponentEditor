@@ -135,7 +135,6 @@
           ]
         }
       ],
-      "priority": 0,
       "wires": [
         {
           "from": "this.VLOGIC",
@@ -157,7 +156,8 @@
           "from": "this.SCL",
           "to": "SCL"
         }
-      ]
+      ],
+      "cost": 0
     }
   ]
 }
