@@ -44,6 +44,9 @@ export function partuiSchema(partsList) {
     },
     bomAux: {
       "ui:field": "typeahead",
+      "ui:options": {
+        forceLabelDisplay: true
+      },
       typeahead: {
         options: partsList,
         minLength: 0,

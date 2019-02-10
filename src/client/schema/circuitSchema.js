@@ -117,6 +117,9 @@ export function circuitsuiSchema(supportBlocksList) {
             },
             blocks: {
               "ui:field": "typeahead",
+              "ui:options": {
+                forceLabelDisplay: true
+              },
               classNames: "two-coloumn-field",
               typeahead: {
                 options: supportBlocksList,
