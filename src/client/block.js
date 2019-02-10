@@ -11,6 +11,7 @@ import {
   read_a_part,
   read_a_svgdata
 } from "./controller.js";
+import ReactTooltip from 'react-tooltip'
 
 import * as blockSchema from "../../circuito-schema/block.json";
 export class Block extends React.Component {
@@ -45,7 +46,7 @@ export class Block extends React.Component {
 
     read_a_block(this.props.block).then(blockData => {
       this.setState({ formSrcData: blockData });
-
+      ReactTooltip.rebuild()
       this.updateConnectors();
     });
   }
@@ -164,6 +165,7 @@ export class Block extends React.Component {
     if (isEqual(data.formData.circuits, this.currentData.circuits) == false) {
       this.setState({ formSrcData: data.formData });
       this.updateConnectors();
+      ReactTooltip.rebuild()
     }
 
     this.modified = true;

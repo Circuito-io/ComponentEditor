@@ -1,0 +1,886 @@
+{
+  "name": "WemosD1Mini",
+  "category": [
+    "controller"
+  ],
+  "blockId": "817085",
+  "app": {
+    "appName": "Wemos D1 Mini",
+    "image": "https://res.cloudinary.com/circuito/image/upload/client/WeMosD1Mini_lq2ptx",
+    "numericName": "",
+    "shortName": "Wemos D1 Mini",
+    "visible": true,
+    "indicators": {
+      "verified": false,
+      "solder": false
+    },
+    "desc": "<p>Wemos D1 Mini is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "ExPower",
+      "supportedControllers": [
+        "WemosD1Mini"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "WemosD1Mini"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D1",
+          "interface": {
+            "codename": "5",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D2",
+          "interface": {
+            "codename": "4",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "Timer2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SS",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D3",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D4",
+          "interface": {
+            "codename": "2",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D5",
+          "interface": {
+            "codename": "14",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D6",
+          "interface": {
+            "codename": "12",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D7",
+          "interface": {
+            "codename": "13",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D8",
+          "interface": {
+            "codename": "15",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "codename": "16",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "codename": "RX",
+            "provides": [
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "codename": "TX",
+            "provides": [
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "A0",
+          "interface": {
+            "codename": "A0",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "G",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "3V3",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 800
+          }
+        },
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "portType": "requires",
+            "requiresLoad": 800
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 128000
+          }
+        }
+      ],
+      "priority": 2,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "StepUp5v",
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "Reg5v",
+            "USBPowerMicro"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "USB",
+      "supportedControllers": [
+        "NodeMCU"
+      ],
+      "parts": [
+        {
+          "name": "this",
+          "part": "NodeMCU1.0"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SerialType",
+          "interface": {
+            "provides": [
+              {
+                "spec": "ESPSoftwareSerialTag",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D1",
+          "interface": {
+            "codename": "5",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCL",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D2",
+          "interface": {
+            "codename": "4",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SDA",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "Timer2",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SS",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D3",
+          "interface": {
+            "codename": "0",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D4",
+          "interface": {
+            "codename": "2",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D5",
+          "interface": {
+            "codename": "14",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SCK",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D6",
+          "interface": {
+            "codename": "12",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialRX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MISO",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D7",
+          "interface": {
+            "codename": "13",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "ESPSoftwareSerialTX",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "MOSI",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D8",
+          "interface": {
+            "codename": "15",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalIn-Int",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "PWM",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "codename": "16",
+            "provides": [
+              {
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "spec": "SoftwareSerial",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 12
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "codename": "RX",
+            "provides": [
+              {
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "TX",
+          "interface": {
+            "codename": "TX",
+            "provides": [
+              {
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "A0",
+          "interface": {
+            "codename": "A0",
+            "provides": [
+              {
+                "spec": "ADC",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "G",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "3V3",
+          "interface": {
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 800
+          }
+        },
+        {
+          "name": "USB_MICRO",
+          "interface": {
+            "provides": [
+              {
+                "spec": "USB_MICRO",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides"
+          }
+        },
+        {
+          "name": "MemOverLoad",
+          "interface": {
+            "provides": [
+              {
+                "spec": "SRAMLoad",
+                "voltage": ""
+              }
+            ],
+            "portType": "provides",
+            "providesLoad": 128000
+          }
+        }
+      ],
+      "priority": 1,
+      "requiredBlocks": [
+        {
+          "cost": 0,
+          "blocks": [
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 30,
+          "blocks": [
+            "StepUp5v",
+            "USBPowerMicro"
+          ]
+        },
+        {
+          "cost": 20,
+          "blocks": [
+            "Reg5v",
+            "USBPowerMicro"
+          ]
+        }
+      ]
+    }
+  ]
+}

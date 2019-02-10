@@ -6,6 +6,7 @@ import { EditorForm } from "./editorform";
 import { partuiSchema } from "../schema/partSchema.js";
 import { read_a_part, update_a_part, read_a_svgdata } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
+import ReactTooltip from 'react-tooltip'
 
 import * as partSchema from "../../../circuito-schema/part.json";
 
@@ -24,9 +25,10 @@ export class PartField extends React.Component {
 
   onShowModal() {
     if (!this.preventNextReload)
-      read_a_part(this.state.objName).then(newPartData =>
-        this.setState({ objData: newPartData })
-      );
+      read_a_part(this.state.objName).then(newPartData => {
+        this.setState({ objData: newPartData });
+        ReactTooltip.rebuild();
+      });
   }
 
   onSave() {
@@ -72,7 +74,7 @@ export class PartField extends React.Component {
 
     if (symbolurl && symbolurl != this.lastCheckedSymbolurl) {
       this.lastCheckedSymbolurl = symbolurl;
-      
+
       var imgid = symbolurl
         .split("/")
         .slice(4)

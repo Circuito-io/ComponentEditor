@@ -8,6 +8,7 @@ import { read_a_coder, update_a_coder } from "../controller.js";
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
+import ReactTooltip from 'react-tooltip'
 
 import * as coderSchema from "../../../circuito-schema/coder.json";
 
@@ -28,6 +29,7 @@ export class CoderField extends React.Component {
     if (!this.preventNextReload)
       read_a_coder(this.state.objName).then(newCoderData => {
         this.setState({ objData: newCoderData });
+        ReactTooltip.rebuild();
       });
     this.preventNextReload = false;
   }

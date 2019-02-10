@@ -1,4 +1,4 @@
-const partCategoryEnum = ["output", "input", "support", "power"];
+import * as partSchema from "../../../circuito-schema/part.json";
 
 export function partuiSchema(partsList) {
   return {
@@ -25,7 +25,7 @@ export function partuiSchema(partsList) {
     category: {
       "ui:field": "typeahead",
       typeahead: {
-        options: partCategoryEnum,
+        options: partSchema.default.properties.category.items.enum,
         minLength: 0,
         multiple: true
       }

@@ -8,10 +8,15 @@ import { ListArrayField } from "./listarrayfield";
 import { TabbedArrayField } from "./tabbedarrayfield";
 import { TabbedObjectField } from "./tabbedobjectfield";
 import { WireDropDown } from "./wiredropdown";
-import { AceEditorWidget} from "./aceeditorwidget";
+import { AceEditorWidget } from "./aceeditorwidget";
 import { FilesArrayField } from "./filesarray";
+import { TooltipDescriptionField } from "./tooltipdescriptionfield";
+import { CustomTitleField} from "./titlefield";
+import ModifiedCheckboxWidget from "./modifiedcheckboxwidget";
 
 const editorFields = {
+  DescriptionField: TooltipDescriptionField,
+  TitleField: CustomTitleField,
   typeahead: TypeaheadField,
   listarray: ListArrayField,
   tabbedarray: TabbedArrayField,
@@ -22,6 +27,7 @@ const editorFields = {
 };
 
 const editorWidgets = {
+  checkbox: ModifiedCheckboxWidget,
   imagewidget: ImageWidget,
   wiredropdown: WireDropDown,
   aceeditor: AceEditorWidget
