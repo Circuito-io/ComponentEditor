@@ -178,7 +178,37 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.CE",
+          "to": "CE"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        },
+        {
+          "from": "this.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "this.MOSI",
+          "to": "MOSI"
+        },
+        {
+          "from": "this.MISO",
+          "to": "MISO"
+        }
+      ]
     }
   ]
 }

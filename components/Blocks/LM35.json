@@ -82,7 +82,21 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "this.Vcc",
+          "to": "Vcc"
+        },
+        {
+          "from": "this.Gnd",
+          "to": "Gnd"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -128,6 +142,18 @@
         {
           "from": "r1.con1",
           "to": "VOUT"
+        },
+        {
+          "from": "this.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "this.Vcc",
+          "to": "Vcc"
+        },
+        {
+          "from": "this.Gnd",
+          "to": "Gnd"
         }
       ],
       "ports": [

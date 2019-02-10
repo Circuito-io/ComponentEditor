@@ -110,7 +110,29 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.DAT",
+          "to": "DAT"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -203,7 +225,29 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.DAT",
+          "to": "DAT"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     }
   ]
 }

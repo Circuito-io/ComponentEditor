@@ -92,7 +92,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SDI",
+          "to": "SDI"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -167,7 +185,25 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SDI",
+          "to": "SDI"
+        }
+      ]
     }
   ]
 }

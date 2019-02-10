@@ -63,6 +63,18 @@
         {
           "from": "r1.con1",
           "to": "Rx"
+        },
+        {
+          "from": "this.Tx",
+          "to": "Tx"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [
@@ -183,6 +195,18 @@
         {
           "from": "this.RX",
           "to": "Rx"
+        },
+        {
+          "from": "this.Tx",
+          "to": "Tx"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [

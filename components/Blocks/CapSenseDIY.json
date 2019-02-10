@@ -135,7 +135,13 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.PinA",
+          "to": "PinA"
+        }
+      ]
     }
   ]
 }

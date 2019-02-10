@@ -120,7 +120,33 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.INT",
+          "to": "INT"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -222,7 +248,33 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.INT",
+          "to": "INT"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     }
   ]
 }

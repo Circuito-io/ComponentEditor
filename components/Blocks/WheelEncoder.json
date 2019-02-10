@@ -116,7 +116,25 @@
           }
         }
       ],
-      "priority": 3
+      "priority": 3,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.CH_A",
+          "to": "CH_A"
+        },
+        {
+          "from": "this.CH_B",
+          "to": "CH_B"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        }
+      ]
     },
     {
       "name": "Digital",
@@ -228,7 +246,25 @@
           }
         }
       ],
-      "priority": 5
+      "priority": 5,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.CH_A",
+          "to": "CH_A"
+        },
+        {
+          "from": "this.CH_B",
+          "to": "CH_B"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        }
+      ]
     }
   ]
 }

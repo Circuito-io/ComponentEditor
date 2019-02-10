@@ -163,7 +163,41 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC_IN",
+          "to": "VCC_IN"
+        },
+        {
+          "from": "this.GND_IN",
+          "to": "GND_IN"
+        },
+        {
+          "from": "this.DI",
+          "to": "DI"
+        },
+        {
+          "from": "this.CI",
+          "to": "CI"
+        },
+        {
+          "from": "this.VCC_OUT",
+          "to": "VCC_OUT"
+        },
+        {
+          "from": "this.GND_OUT",
+          "to": "GND_OUT"
+        },
+        {
+          "from": "this.DO",
+          "to": "DO"
+        },
+        {
+          "from": "this.CO",
+          "to": "CO"
+        }
+      ]
     }
   ]
 }

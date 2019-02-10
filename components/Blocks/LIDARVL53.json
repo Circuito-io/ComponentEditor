@@ -112,7 +112,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        }
+      ]
     }
   ]
 }

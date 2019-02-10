@@ -60,6 +60,18 @@
         {
           "from": "r1.con1",
           "to": "Echo"
+        },
+        {
+          "from": "this.TRIG",
+          "to": "TRIG"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
         }
       ],
       "ports": [
@@ -202,7 +214,25 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.TRIG",
+          "to": "TRIG"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.ECHO",
+          "to": "ECHO"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     },
     {
       "name": "Gemma",
@@ -232,6 +262,22 @@
         {
           "from": "this.GND",
           "to": "Res.con1"
+        },
+        {
+          "from": "this.TRIG",
+          "to": "TRIG"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.ECHO",
+          "to": "ECHO"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
         }
       ],
       "ports": [

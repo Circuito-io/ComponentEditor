@@ -50,6 +50,22 @@
         {
           "from": "this.TX",
           "to": "RXD"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
         }
       ],
       "ports": [
@@ -154,6 +170,14 @@
         {
           "from": "this.TX",
           "to": "RXD"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [

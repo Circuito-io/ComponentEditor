@@ -55,6 +55,14 @@
         {
           "from": "res_pullup.con0",
           "to": "Sig"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [
@@ -157,6 +165,14 @@
         {
           "from": "res2.con0",
           "to": "Sig"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [

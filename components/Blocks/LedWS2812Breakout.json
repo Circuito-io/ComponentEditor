@@ -124,7 +124,33 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.5v_I",
+          "to": "5v_I"
+        },
+        {
+          "from": "this.DI",
+          "to": "DI"
+        },
+        {
+          "from": "this.GND_I",
+          "to": "GND_I"
+        },
+        {
+          "from": "this.GND_O",
+          "to": "GND_O"
+        },
+        {
+          "from": "this.5v_O",
+          "to": "5v_O"
+        },
+        {
+          "from": "this.DO",
+          "to": "DO"
+        }
+      ]
     }
   ]
 }

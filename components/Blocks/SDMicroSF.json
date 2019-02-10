@@ -179,7 +179,37 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.CO",
+          "to": "CO"
+        },
+        {
+          "from": "this.DO",
+          "to": "DO"
+        },
+        {
+          "from": "this.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.DI",
+          "to": "DI"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     }
   ]
 }

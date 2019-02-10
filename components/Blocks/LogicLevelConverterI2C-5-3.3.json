@@ -104,7 +104,37 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.LV",
+          "to": "LV"
+        },
+        {
+          "from": "this.HV1",
+          "to": "HV1"
+        },
+        {
+          "from": "this.LV1",
+          "to": "LV1"
+        },
+        {
+          "from": "this.LV2",
+          "to": "LV2"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.HV",
+          "to": "HV"
+        },
+        {
+          "from": "this.HV2",
+          "to": "HV2"
+        }
+      ]
     }
   ]
 }

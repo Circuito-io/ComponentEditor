@@ -110,7 +110,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.3.3V",
+          "to": "3.3V"
+        },
+        {
+          "from": "this.SDI_SDA",
+          "to": "SDI_SDA"
+        },
+        {
+          "from": "this.SCK_SCL",
+          "to": "SCK_SCL"
+        }
+      ]
     }
   ]
 }

@@ -108,7 +108,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.RST",
+          "to": "RST"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -198,7 +220,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.RST",
+          "to": "RST"
+        }
+      ]
     }
   ]
 }

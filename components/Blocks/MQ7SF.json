@@ -55,6 +55,18 @@
         {
           "from": "this.A1",
           "to": "this.H1"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.B1",
+          "to": "B1"
+        },
+        {
+          "from": "this.H1",
+          "to": "H1"
         }
       ],
       "ports": [
@@ -162,6 +174,14 @@
         {
           "from": "r2.con1",
           "to": "Aout"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.H1",
+          "to": "H1"
         }
       ],
       "ports": [

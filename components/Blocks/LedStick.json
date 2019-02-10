@@ -134,7 +134,33 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.+5VB",
+          "to": "+5VB"
+        },
+        {
+          "from": "this.DATAIN",
+          "to": "DATAIN"
+        },
+        {
+          "from": "this.GNDC",
+          "to": "GNDC"
+        },
+        {
+          "from": "this.+5VA",
+          "to": "+5VA"
+        },
+        {
+          "from": "this.DATAOUT",
+          "to": "DATAOUT"
+        },
+        {
+          "from": "this.GNDA",
+          "to": "GNDA"
+        }
+      ]
     }
   ]
 }

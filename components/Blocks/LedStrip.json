@@ -134,7 +134,33 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.DI",
+          "to": "DI"
+        },
+        {
+          "from": "this.VCC_OUT",
+          "to": "VCC_OUT"
+        },
+        {
+          "from": "this.GND_OUT",
+          "to": "GND_OUT"
+        },
+        {
+          "from": "this.DO",
+          "to": "DO"
+        }
+      ]
     }
   ]
 }

@@ -138,7 +138,37 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.Data",
+          "to": "Data"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.Clk",
+          "to": "Clk"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.RST",
+          "to": "RST"
+        },
+        {
+          "from": "this.DC",
+          "to": "DC"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -257,7 +287,37 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.Data",
+          "to": "Data"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.Clk",
+          "to": "Clk"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.RST",
+          "to": "RST"
+        },
+        {
+          "from": "this.DC",
+          "to": "DC"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        }
+      ]
     }
   ]
 }

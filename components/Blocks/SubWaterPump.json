@@ -84,7 +84,17 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.Coil1",
+          "to": "Coil1"
+        },
+        {
+          "from": "this.Coil2",
+          "to": "Coil2"
+        }
+      ]
     }
   ]
 }

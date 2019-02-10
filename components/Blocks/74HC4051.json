@@ -249,7 +249,73 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VEE",
+          "to": "VEE"
+        },
+        {
+          "from": "this.Enot",
+          "to": "Enot"
+        },
+        {
+          "from": "this.S0",
+          "to": "S0"
+        },
+        {
+          "from": "this.S1",
+          "to": "S1"
+        },
+        {
+          "from": "this.S2",
+          "to": "S2"
+        },
+        {
+          "from": "this.A",
+          "to": "A"
+        },
+        {
+          "from": "this.A0",
+          "to": "A0"
+        },
+        {
+          "from": "this.A1",
+          "to": "A1"
+        },
+        {
+          "from": "this.A2",
+          "to": "A2"
+        },
+        {
+          "from": "this.A3",
+          "to": "A3"
+        },
+        {
+          "from": "this.A4",
+          "to": "A4"
+        },
+        {
+          "from": "this.A5",
+          "to": "A5"
+        },
+        {
+          "from": "this.A6",
+          "to": "A6"
+        },
+        {
+          "from": "this.A7",
+          "to": "A7"
+        }
+      ]
     },
     {
       "name": "5v",
@@ -481,7 +547,73 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VEE",
+          "to": "VEE"
+        },
+        {
+          "from": "this.Enot",
+          "to": "Enot"
+        },
+        {
+          "from": "this.S0",
+          "to": "S0"
+        },
+        {
+          "from": "this.S1",
+          "to": "S1"
+        },
+        {
+          "from": "this.S2",
+          "to": "S2"
+        },
+        {
+          "from": "this.A",
+          "to": "A"
+        },
+        {
+          "from": "this.A0",
+          "to": "A0"
+        },
+        {
+          "from": "this.A1",
+          "to": "A1"
+        },
+        {
+          "from": "this.A2",
+          "to": "A2"
+        },
+        {
+          "from": "this.A3",
+          "to": "A3"
+        },
+        {
+          "from": "this.A4",
+          "to": "A4"
+        },
+        {
+          "from": "this.A5",
+          "to": "A5"
+        },
+        {
+          "from": "this.A6",
+          "to": "A6"
+        },
+        {
+          "from": "this.A7",
+          "to": "A7"
+        }
+      ]
     }
   ]
 }

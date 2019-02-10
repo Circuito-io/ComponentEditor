@@ -233,7 +233,73 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.AGND",
+          "to": "AGND"
+        },
+        {
+          "from": "this.VREF",
+          "to": "VREF"
+        },
+        {
+          "from": "this.DGND",
+          "to": "DGND"
+        },
+        {
+          "from": "this.DOUT",
+          "to": "DOUT"
+        },
+        {
+          "from": "this.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        },
+        {
+          "from": "this.CH0",
+          "to": "CH0"
+        },
+        {
+          "from": "this.CH1",
+          "to": "CH1"
+        },
+        {
+          "from": "this.CH2",
+          "to": "CH2"
+        },
+        {
+          "from": "this.CH3",
+          "to": "CH3"
+        },
+        {
+          "from": "this.CH4",
+          "to": "CH4"
+        },
+        {
+          "from": "this.CH5",
+          "to": "CH5"
+        },
+        {
+          "from": "this.CH6",
+          "to": "CH6"
+        },
+        {
+          "from": "this.CH7",
+          "to": "CH7"
+        }
+      ]
     }
   ]
 }

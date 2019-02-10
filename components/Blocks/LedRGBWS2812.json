@@ -101,7 +101,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "this.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.DOUT",
+          "to": "DOUT"
+        }
+      ]
     }
   ]
 }

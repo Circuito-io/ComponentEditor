@@ -184,7 +184,37 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.row3",
+          "to": "row3"
+        },
+        {
+          "from": "this.row1",
+          "to": "row1"
+        },
+        {
+          "from": "this.col2",
+          "to": "col2"
+        },
+        {
+          "from": "this.col3",
+          "to": "col3"
+        },
+        {
+          "from": "this.row2",
+          "to": "row2"
+        },
+        {
+          "from": "this.col1",
+          "to": "col1"
+        },
+        {
+          "from": "this.row4",
+          "to": "row4"
+        }
+      ]
     }
   ]
 }

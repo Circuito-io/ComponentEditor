@@ -135,7 +135,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.D",
+          "to": "D"
+        },
+        {
+          "from": "this.S1",
+          "to": "S1"
+        }
+      ]
     },
     {
       "name": "Digital",
@@ -265,7 +287,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 100
+      "priority": 100,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.D",
+          "to": "D"
+        },
+        {
+          "from": "this.S1",
+          "to": "S1"
+        }
+      ]
     },
     {
       "name": "Int3v3",
@@ -350,7 +394,29 @@
           }
         }
       ],
-      "priority": 100
+      "priority": 100,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.D",
+          "to": "D"
+        },
+        {
+          "from": "this.S1",
+          "to": "S1"
+        }
+      ]
     }
   ]
 }

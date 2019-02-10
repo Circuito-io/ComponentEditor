@@ -125,7 +125,29 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND_COM",
+          "to": "GND_COM"
+        },
+        {
+          "from": "this.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.DOUT",
+          "to": "DOUT"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     }
   ]
 }

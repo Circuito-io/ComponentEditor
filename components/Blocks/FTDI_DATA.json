@@ -83,7 +83,29 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.CTS",
+          "to": "CTS"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        },
+        {
+          "from": "this.DTR",
+          "to": "DTR"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -159,7 +181,29 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.CTS",
+          "to": "CTS"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        },
+        {
+          "from": "this.DTR",
+          "to": "DTR"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     }
   ]
 }

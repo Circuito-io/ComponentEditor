@@ -139,7 +139,33 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VL",
+          "to": "VL"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.INT",
+          "to": "INT"
+        }
+      ]
     }
   ]
 }

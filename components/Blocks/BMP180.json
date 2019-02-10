@@ -124,7 +124,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        }
+      ]
     }
   ]
 }

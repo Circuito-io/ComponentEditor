@@ -251,6 +251,36 @@
             "Reg3.3v"
           ]
         }
+      ],
+      "wires": [
+        {
+          "from": "this.3.3V",
+          "to": "3.3V"
+        },
+        {
+          "from": "this.D0",
+          "to": "D0"
+        },
+        {
+          "from": "this.D1",
+          "to": "D1"
+        },
+        {
+          "from": "this.D2",
+          "to": "D2"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
+        }
       ]
     },
     {
@@ -478,6 +508,36 @@
             "Reg3.3v",
             "Reg5v"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.3.3V",
+          "to": "3.3V"
+        },
+        {
+          "from": "this.D0",
+          "to": "D0"
+        },
+        {
+          "from": "this.D1",
+          "to": "D1"
+        },
+        {
+          "from": "this.D2",
+          "to": "D2"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
         }
       ]
     },
@@ -721,6 +781,36 @@
             "Reg3.3v",
             "Reg5v"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.3.3V",
+          "to": "3.3V"
+        },
+        {
+          "from": "this.D0",
+          "to": "D0"
+        },
+        {
+          "from": "this.D1",
+          "to": "D1"
+        },
+        {
+          "from": "this.D2",
+          "to": "D2"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
         }
       ]
     },
@@ -974,6 +1064,44 @@
             "Reg3.3v",
             "Reg5v"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.3.3V",
+          "to": "3.3V"
+        },
+        {
+          "from": "this.D0",
+          "to": "D0"
+        },
+        {
+          "from": "this.D1",
+          "to": "D1"
+        },
+        {
+          "from": "this.D2",
+          "to": "D2"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "this.BAT-",
+          "to": "BAT-"
+        },
+        {
+          "from": "this.BAT+",
+          "to": "BAT+"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
         }
       ]
     }

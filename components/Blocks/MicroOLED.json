@@ -187,7 +187,41 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "this.D1_MOSI",
+          "to": "D1_MOSI"
+        },
+        {
+          "from": "this.D0_SCK",
+          "to": "D0_SCK"
+        },
+        {
+          "from": "this.D2",
+          "to": "D2"
+        },
+        {
+          "from": "this.DC",
+          "to": "DC"
+        },
+        {
+          "from": "this.RESET",
+          "to": "RESET"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        }
+      ]
     }
   ]
 }

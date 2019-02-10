@@ -113,7 +113,25 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.+12V",
+          "to": "+12V"
+        },
+        {
+          "from": "this.DATA",
+          "to": "DATA"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.GROUND",
+          "to": "GROUND"
+        }
+      ]
     }
   ]
 }

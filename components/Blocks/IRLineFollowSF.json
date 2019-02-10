@@ -82,7 +82,21 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.OUT",
+          "to": "OUT"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -147,7 +161,21 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 2
+      "priority": 2,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.OUT",
+          "to": "OUT"
+        }
+      ]
     }
   ]
 }

@@ -112,7 +112,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SEL",
+          "to": "SEL"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.VERT",
+          "to": "VERT"
+        },
+        {
+          "from": "this.HORZ",
+          "to": "HORZ"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -206,7 +228,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.SEL",
+          "to": "SEL"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.VERT",
+          "to": "VERT"
+        },
+        {
+          "from": "this.HORZ",
+          "to": "HORZ"
+        }
+      ]
     }
   ]
 }

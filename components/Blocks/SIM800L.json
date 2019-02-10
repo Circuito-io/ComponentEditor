@@ -118,7 +118,29 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.RST",
+          "to": "RST"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        },
+        {
+          "from": "this.5V",
+          "to": "5V"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        }
+      ]
     },
     {
       "name": "SoftwareSerial",
@@ -235,7 +257,29 @@
           }
         }
       ],
-      "priority": 100
+      "priority": 100,
+      "wires": [
+        {
+          "from": "this.RST",
+          "to": "RST"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.5V",
+          "to": "5V"
+        }
+      ]
     }
   ]
 }

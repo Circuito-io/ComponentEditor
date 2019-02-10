@@ -305,7 +305,73 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.Enable1",
+          "to": "Enable1"
+        },
+        {
+          "from": "this.In1",
+          "to": "In1"
+        },
+        {
+          "from": "this.GND1",
+          "to": "GND1"
+        },
+        {
+          "from": "this.GND2",
+          "to": "GND2"
+        },
+        {
+          "from": "this.In2",
+          "to": "In2"
+        },
+        {
+          "from": "this.+Vmotor",
+          "to": "+Vmotor"
+        },
+        {
+          "from": "this.Enable2",
+          "to": "Enable2"
+        },
+        {
+          "from": "this.In3",
+          "to": "In3"
+        },
+        {
+          "from": "this.GND3",
+          "to": "GND3"
+        },
+        {
+          "from": "this.GND4",
+          "to": "GND4"
+        },
+        {
+          "from": "this.In4",
+          "to": "In4"
+        },
+        {
+          "from": "this.+V",
+          "to": "+V"
+        },
+        {
+          "from": "this.Out1",
+          "to": "Out1"
+        },
+        {
+          "from": "this.Out2",
+          "to": "Out2"
+        },
+        {
+          "from": "this.Out3",
+          "to": "Out3"
+        },
+        {
+          "from": "this.Out4",
+          "to": "Out4"
+        }
+      ]
     }
   ]
 }

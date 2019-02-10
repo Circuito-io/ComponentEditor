@@ -82,7 +82,21 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.leg2",
+          "to": "leg2"
+        },
+        {
+          "from": "this.wiper",
+          "to": "wiper"
+        },
+        {
+          "from": "this.leg1",
+          "to": "leg1"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -147,7 +161,21 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.leg2",
+          "to": "leg2"
+        },
+        {
+          "from": "this.wiper",
+          "to": "wiper"
+        },
+        {
+          "from": "this.leg1",
+          "to": "leg1"
+        }
+      ]
     }
   ]
 }

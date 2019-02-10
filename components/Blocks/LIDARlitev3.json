@@ -55,6 +55,22 @@
         {
           "from": "this.5V",
           "to": "Cap.pos"
+        },
+        {
+          "from": "this.5V",
+          "to": "5V"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
         }
       ],
       "ports": [

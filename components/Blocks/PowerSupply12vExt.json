@@ -65,7 +65,13 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.BARREL_JACK",
+          "to": "BARREL_JACK"
+        }
+      ]
     }
   ]
 }

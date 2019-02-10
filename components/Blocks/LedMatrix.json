@@ -197,7 +197,49 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "this.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        },
+        {
+          "from": "this.VCC_PT",
+          "to": "VCC_PT"
+        },
+        {
+          "from": "this.GND_PT",
+          "to": "GND_PT"
+        },
+        {
+          "from": "this.DIN_CHN",
+          "to": "DIN_CHN"
+        },
+        {
+          "from": "this.CLK_PT",
+          "to": "CLK_PT"
+        },
+        {
+          "from": "this.CS_PT",
+          "to": "CS_PT"
+        }
+      ]
     }
   ]
 }

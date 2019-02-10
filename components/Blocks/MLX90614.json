@@ -80,6 +80,22 @@
         {
           "from": "this.VCC",
           "to": "rSCL.con1"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
         }
       ],
       "ports": [

@@ -93,7 +93,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.5v",
+          "to": "5v"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -168,7 +186,25 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.5v",
+          "to": "5v"
+        },
+        {
+          "from": "this.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "this.SDA",
+          "to": "SDA"
+        }
+      ]
     }
   ]
 }

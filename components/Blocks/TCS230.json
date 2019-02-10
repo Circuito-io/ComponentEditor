@@ -175,7 +175,37 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.S1",
+          "to": "S1"
+        },
+        {
+          "from": "this.S0",
+          "to": "S0"
+        },
+        {
+          "from": "this.S3",
+          "to": "S3"
+        },
+        {
+          "from": "this.S2",
+          "to": "S2"
+        },
+        {
+          "from": "this.Out",
+          "to": "Out"
+        },
+        {
+          "from": "this.Gnd",
+          "to": "Gnd"
+        },
+        {
+          "from": "this.Vcc",
+          "to": "Vcc"
+        }
+      ]
     }
   ]
 }

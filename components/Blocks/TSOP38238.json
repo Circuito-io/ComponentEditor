@@ -96,7 +96,21 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.Out",
+          "to": "Out"
+        },
+        {
+          "from": "this.Gnd",
+          "to": "Gnd"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -174,7 +188,21 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.Out",
+          "to": "Out"
+        },
+        {
+          "from": "this.Gnd",
+          "to": "Gnd"
+        }
+      ]
     }
   ]
 }

@@ -127,7 +127,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        },
+        {
+          "from": "this.Gnd",
+          "to": "Gnd"
+        }
+      ]
     }
   ]
 }

@@ -822,6 +822,172 @@
             "MCP3008"
           ]
         }
+      ],
+      "wires": [
+        {
+          "from": "this.3v3",
+          "to": "3v3"
+        },
+        {
+          "from": "this.5v",
+          "to": "5v"
+        },
+        {
+          "from": "this.2",
+          "to": "2"
+        },
+        {
+          "from": "this.5v_1",
+          "to": "5v_1"
+        },
+        {
+          "from": "this.3",
+          "to": "3"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.4",
+          "to": "4"
+        },
+        {
+          "from": "this.14",
+          "to": "14"
+        },
+        {
+          "from": "this.GND_1",
+          "to": "GND_1"
+        },
+        {
+          "from": "this.15",
+          "to": "15"
+        },
+        {
+          "from": "this.17",
+          "to": "17"
+        },
+        {
+          "from": "this.18",
+          "to": "18"
+        },
+        {
+          "from": "this.27",
+          "to": "27"
+        },
+        {
+          "from": "this.GND_2",
+          "to": "GND_2"
+        },
+        {
+          "from": "this.22",
+          "to": "22"
+        },
+        {
+          "from": "this.23",
+          "to": "23"
+        },
+        {
+          "from": "this.3v3_1",
+          "to": "3v3_1"
+        },
+        {
+          "from": "this.24",
+          "to": "24"
+        },
+        {
+          "from": "this.10",
+          "to": "10"
+        },
+        {
+          "from": "this.GND_3",
+          "to": "GND_3"
+        },
+        {
+          "from": "this.9",
+          "to": "9"
+        },
+        {
+          "from": "this.25",
+          "to": "25"
+        },
+        {
+          "from": "this.11",
+          "to": "11"
+        },
+        {
+          "from": "this.8",
+          "to": "8"
+        },
+        {
+          "from": "this.GND_4",
+          "to": "GND_4"
+        },
+        {
+          "from": "this.7",
+          "to": "7"
+        },
+        {
+          "from": "this.0",
+          "to": "0"
+        },
+        {
+          "from": "this.1",
+          "to": "1"
+        },
+        {
+          "from": "this.5",
+          "to": "5"
+        },
+        {
+          "from": "this.GND_5",
+          "to": "GND_5"
+        },
+        {
+          "from": "this.6",
+          "to": "6"
+        },
+        {
+          "from": "this.12",
+          "to": "12"
+        },
+        {
+          "from": "this.13",
+          "to": "13"
+        },
+        {
+          "from": "this.GND_6",
+          "to": "GND_6"
+        },
+        {
+          "from": "this.19",
+          "to": "19"
+        },
+        {
+          "from": "this.16",
+          "to": "16"
+        },
+        {
+          "from": "this.26",
+          "to": "26"
+        },
+        {
+          "from": "this.20",
+          "to": "20"
+        },
+        {
+          "from": "this.GND_7",
+          "to": "GND_7"
+        },
+        {
+          "from": "this.21",
+          "to": "21"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
+        }
       ]
     },
     {
@@ -1608,6 +1774,172 @@
             "StepUp5v",
             "MCP3008"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.3v3",
+          "to": "3v3"
+        },
+        {
+          "from": "this.5v",
+          "to": "5v"
+        },
+        {
+          "from": "this.2",
+          "to": "2"
+        },
+        {
+          "from": "this.5v_1",
+          "to": "5v_1"
+        },
+        {
+          "from": "this.3",
+          "to": "3"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.4",
+          "to": "4"
+        },
+        {
+          "from": "this.14",
+          "to": "14"
+        },
+        {
+          "from": "this.GND_1",
+          "to": "GND_1"
+        },
+        {
+          "from": "this.15",
+          "to": "15"
+        },
+        {
+          "from": "this.17",
+          "to": "17"
+        },
+        {
+          "from": "this.18",
+          "to": "18"
+        },
+        {
+          "from": "this.27",
+          "to": "27"
+        },
+        {
+          "from": "this.GND_2",
+          "to": "GND_2"
+        },
+        {
+          "from": "this.22",
+          "to": "22"
+        },
+        {
+          "from": "this.23",
+          "to": "23"
+        },
+        {
+          "from": "this.3v3_1",
+          "to": "3v3_1"
+        },
+        {
+          "from": "this.24",
+          "to": "24"
+        },
+        {
+          "from": "this.10",
+          "to": "10"
+        },
+        {
+          "from": "this.GND_3",
+          "to": "GND_3"
+        },
+        {
+          "from": "this.9",
+          "to": "9"
+        },
+        {
+          "from": "this.25",
+          "to": "25"
+        },
+        {
+          "from": "this.11",
+          "to": "11"
+        },
+        {
+          "from": "this.8",
+          "to": "8"
+        },
+        {
+          "from": "this.GND_4",
+          "to": "GND_4"
+        },
+        {
+          "from": "this.7",
+          "to": "7"
+        },
+        {
+          "from": "this.0",
+          "to": "0"
+        },
+        {
+          "from": "this.1",
+          "to": "1"
+        },
+        {
+          "from": "this.5",
+          "to": "5"
+        },
+        {
+          "from": "this.GND_5",
+          "to": "GND_5"
+        },
+        {
+          "from": "this.6",
+          "to": "6"
+        },
+        {
+          "from": "this.12",
+          "to": "12"
+        },
+        {
+          "from": "this.13",
+          "to": "13"
+        },
+        {
+          "from": "this.GND_6",
+          "to": "GND_6"
+        },
+        {
+          "from": "this.19",
+          "to": "19"
+        },
+        {
+          "from": "this.16",
+          "to": "16"
+        },
+        {
+          "from": "this.26",
+          "to": "26"
+        },
+        {
+          "from": "this.20",
+          "to": "20"
+        },
+        {
+          "from": "this.GND_7",
+          "to": "GND_7"
+        },
+        {
+          "from": "this.21",
+          "to": "21"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
         }
       ]
     }

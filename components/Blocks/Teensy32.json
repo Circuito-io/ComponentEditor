@@ -1064,7 +1064,145 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.0",
+          "to": "0"
+        },
+        {
+          "from": "this.1",
+          "to": "1"
+        },
+        {
+          "from": "this.2",
+          "to": "2"
+        },
+        {
+          "from": "this.3",
+          "to": "3"
+        },
+        {
+          "from": "this.4",
+          "to": "4"
+        },
+        {
+          "from": "this.5",
+          "to": "5"
+        },
+        {
+          "from": "this.6",
+          "to": "6"
+        },
+        {
+          "from": "this.7",
+          "to": "7"
+        },
+        {
+          "from": "this.8",
+          "to": "8"
+        },
+        {
+          "from": "this.9",
+          "to": "9"
+        },
+        {
+          "from": "this.10",
+          "to": "10"
+        },
+        {
+          "from": "this.11",
+          "to": "11"
+        },
+        {
+          "from": "this.12",
+          "to": "12"
+        },
+        {
+          "from": "this.13",
+          "to": "13"
+        },
+        {
+          "from": "this.14",
+          "to": "14"
+        },
+        {
+          "from": "this.15",
+          "to": "15"
+        },
+        {
+          "from": "this.16",
+          "to": "16"
+        },
+        {
+          "from": "this.17",
+          "to": "17"
+        },
+        {
+          "from": "this.18",
+          "to": "18"
+        },
+        {
+          "from": "this.19",
+          "to": "19"
+        },
+        {
+          "from": "this.20",
+          "to": "20"
+        },
+        {
+          "from": "this.21",
+          "to": "21"
+        },
+        {
+          "from": "this.22",
+          "to": "22"
+        },
+        {
+          "from": "this.23",
+          "to": "23"
+        },
+        {
+          "from": "this.A10",
+          "to": "A10"
+        },
+        {
+          "from": "this.A11",
+          "to": "A11"
+        },
+        {
+          "from": "this.A14",
+          "to": "A14"
+        },
+        {
+          "from": "this.AREF",
+          "to": "AREF"
+        },
+        {
+          "from": "this.AGND",
+          "to": "AGND"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.GND1",
+          "to": "GND1"
+        },
+        {
+          "from": "this.3.3v",
+          "to": "3.3v"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
+        }
+      ]
     },
     {
       "name": "EXT",
@@ -2128,6 +2266,144 @@
             "USBPowerMicro"
           ]
         }
+      ],
+      "wires": [
+        {
+          "from": "this.0",
+          "to": "0"
+        },
+        {
+          "from": "this.1",
+          "to": "1"
+        },
+        {
+          "from": "this.2",
+          "to": "2"
+        },
+        {
+          "from": "this.3",
+          "to": "3"
+        },
+        {
+          "from": "this.4",
+          "to": "4"
+        },
+        {
+          "from": "this.5",
+          "to": "5"
+        },
+        {
+          "from": "this.6",
+          "to": "6"
+        },
+        {
+          "from": "this.7",
+          "to": "7"
+        },
+        {
+          "from": "this.8",
+          "to": "8"
+        },
+        {
+          "from": "this.9",
+          "to": "9"
+        },
+        {
+          "from": "this.10",
+          "to": "10"
+        },
+        {
+          "from": "this.11",
+          "to": "11"
+        },
+        {
+          "from": "this.12",
+          "to": "12"
+        },
+        {
+          "from": "this.13",
+          "to": "13"
+        },
+        {
+          "from": "this.14",
+          "to": "14"
+        },
+        {
+          "from": "this.15",
+          "to": "15"
+        },
+        {
+          "from": "this.16",
+          "to": "16"
+        },
+        {
+          "from": "this.17",
+          "to": "17"
+        },
+        {
+          "from": "this.18",
+          "to": "18"
+        },
+        {
+          "from": "this.19",
+          "to": "19"
+        },
+        {
+          "from": "this.20",
+          "to": "20"
+        },
+        {
+          "from": "this.21",
+          "to": "21"
+        },
+        {
+          "from": "this.22",
+          "to": "22"
+        },
+        {
+          "from": "this.23",
+          "to": "23"
+        },
+        {
+          "from": "this.A10",
+          "to": "A10"
+        },
+        {
+          "from": "this.A11",
+          "to": "A11"
+        },
+        {
+          "from": "this.A14",
+          "to": "A14"
+        },
+        {
+          "from": "this.AREF",
+          "to": "AREF"
+        },
+        {
+          "from": "this.AGND",
+          "to": "AGND"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.GND1",
+          "to": "GND1"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.3.3v",
+          "to": "3.3v"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
+        }
       ]
     },
     {
@@ -3182,6 +3458,144 @@
           "blocks": [
             "USBPowerMicro"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.0",
+          "to": "0"
+        },
+        {
+          "from": "this.1",
+          "to": "1"
+        },
+        {
+          "from": "this.2",
+          "to": "2"
+        },
+        {
+          "from": "this.3",
+          "to": "3"
+        },
+        {
+          "from": "this.4",
+          "to": "4"
+        },
+        {
+          "from": "this.5",
+          "to": "5"
+        },
+        {
+          "from": "this.6",
+          "to": "6"
+        },
+        {
+          "from": "this.7",
+          "to": "7"
+        },
+        {
+          "from": "this.8",
+          "to": "8"
+        },
+        {
+          "from": "this.9",
+          "to": "9"
+        },
+        {
+          "from": "this.10",
+          "to": "10"
+        },
+        {
+          "from": "this.11",
+          "to": "11"
+        },
+        {
+          "from": "this.12",
+          "to": "12"
+        },
+        {
+          "from": "this.13",
+          "to": "13"
+        },
+        {
+          "from": "this.14",
+          "to": "14"
+        },
+        {
+          "from": "this.15",
+          "to": "15"
+        },
+        {
+          "from": "this.16",
+          "to": "16"
+        },
+        {
+          "from": "this.17",
+          "to": "17"
+        },
+        {
+          "from": "this.18",
+          "to": "18"
+        },
+        {
+          "from": "this.19",
+          "to": "19"
+        },
+        {
+          "from": "this.20",
+          "to": "20"
+        },
+        {
+          "from": "this.21",
+          "to": "21"
+        },
+        {
+          "from": "this.22",
+          "to": "22"
+        },
+        {
+          "from": "this.23",
+          "to": "23"
+        },
+        {
+          "from": "this.A10",
+          "to": "A10"
+        },
+        {
+          "from": "this.A11",
+          "to": "A11"
+        },
+        {
+          "from": "this.A14",
+          "to": "A14"
+        },
+        {
+          "from": "this.AREF",
+          "to": "AREF"
+        },
+        {
+          "from": "this.AGND",
+          "to": "AGND"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.GND1",
+          "to": "GND1"
+        },
+        {
+          "from": "this.3.3v",
+          "to": "3.3v"
+        },
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.USB_MICRO",
+          "to": "USB_MICRO"
         }
       ]
     }

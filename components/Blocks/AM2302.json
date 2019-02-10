@@ -37,7 +37,20 @@
           "part": "AM2302"
         }
       ],
-      "wires": [],
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.SIG",
+          "to": "SIG"
+        }
+      ],
       "ports": [
         {
           "name": "GND",
@@ -102,7 +115,20 @@
           "part": "AM2302"
         }
       ],
-      "wires": [],
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.SIG",
+          "to": "SIG"
+        }
+      ],
       "ports": [
         {
           "name": "GND",

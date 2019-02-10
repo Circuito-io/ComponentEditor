@@ -97,7 +97,21 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.signal",
+          "to": "signal"
+        },
+        {
+          "from": "this.ground",
+          "to": "ground"
+        },
+        {
+          "from": "this.power",
+          "to": "power"
+        }
+      ]
     }
   ]
 }

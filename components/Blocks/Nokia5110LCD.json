@@ -182,7 +182,37 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.CS",
+          "to": "CS"
+        },
+        {
+          "from": "this.DN",
+          "to": "DN"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.SCLK",
+          "to": "SCLK"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.RST",
+          "to": "RST"
+        },
+        {
+          "from": "this.DC",
+          "to": "DC"
+        }
+      ]
     }
   ]
 }

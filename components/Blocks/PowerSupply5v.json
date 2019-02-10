@@ -76,6 +76,12 @@
             "BarrelJack5v"
           ]
         }
+      ],
+      "wires": [
+        {
+          "from": "this.BARREL_JACK",
+          "to": "BARREL_JACK"
+        }
       ]
     },
     {
@@ -148,6 +154,12 @@
           "blocks": [
             "BarrelJack5v"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.BARREL_JACK",
+          "to": "BARREL_JACK"
         }
       ]
     }

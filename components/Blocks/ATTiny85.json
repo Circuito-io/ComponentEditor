@@ -266,6 +266,36 @@
             "StepUp5v"
           ]
         }
+      ],
+      "wires": [
+        {
+          "from": "this.PB0",
+          "to": "PB0"
+        },
+        {
+          "from": "this.PB1",
+          "to": "PB1"
+        },
+        {
+          "from": "this.PB2",
+          "to": "PB2"
+        },
+        {
+          "from": "this.PB3",
+          "to": "PB3"
+        },
+        {
+          "from": "this.PB4",
+          "to": "PB4"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        }
       ]
     },
     {
@@ -522,6 +552,36 @@
           "blocks": [
             "StepUp5v"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.PB0",
+          "to": "PB0"
+        },
+        {
+          "from": "this.PB1",
+          "to": "PB1"
+        },
+        {
+          "from": "this.PB2",
+          "to": "PB2"
+        },
+        {
+          "from": "this.PB3",
+          "to": "PB3"
+        },
+        {
+          "from": "this.PB4",
+          "to": "PB4"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
         }
       ]
     }

@@ -137,7 +137,29 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GATE",
+          "to": "GATE"
+        },
+        {
+          "from": "this.AUDIO",
+          "to": "AUDIO"
+        },
+        {
+          "from": "this.ENVELOPE",
+          "to": "ENVELOPE"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        }
+      ]
     }
   ]
 }

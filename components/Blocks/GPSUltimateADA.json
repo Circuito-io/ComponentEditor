@@ -108,7 +108,25 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        }
+      ]
     },
     {
       "name": "SoftwareSerial",
@@ -242,7 +260,25 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 100
+      "priority": 100,
+      "wires": [
+        {
+          "from": "this.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.RX",
+          "to": "RX"
+        },
+        {
+          "from": "this.TX",
+          "to": "TX"
+        }
+      ]
     }
   ]
 }

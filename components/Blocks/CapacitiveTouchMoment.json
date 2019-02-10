@@ -82,7 +82,21 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.OUT",
+          "to": "OUT"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VDD",
+          "to": "VDD"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -147,7 +161,21 @@
           }
         }
       ],
-      "priority": 2
+      "priority": 2,
+      "wires": [
+        {
+          "from": "this.OUT",
+          "to": "OUT"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VDD",
+          "to": "VDD"
+        }
+      ]
     }
   ]
 }

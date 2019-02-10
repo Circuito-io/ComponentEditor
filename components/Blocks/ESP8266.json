@@ -306,6 +306,28 @@
             "Reg3.3v"
           ]
         }
+      ],
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.TXD",
+          "to": "TXD"
+        },
+        {
+          "from": "this.CH_PD",
+          "to": "CH_PD"
+        },
+        {
+          "from": "this.RXD",
+          "to": "RXD"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
       ]
     },
     {
@@ -597,6 +619,28 @@
           "blocks": [
             "Reg3.3v"
           ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.TXD",
+          "to": "TXD"
+        },
+        {
+          "from": "this.CH_PD",
+          "to": "CH_PD"
+        },
+        {
+          "from": "this.RXD",
+          "to": "RXD"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
         }
       ]
     }

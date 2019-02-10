@@ -115,7 +115,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.XOUT",
+          "to": "XOUT"
+        },
+        {
+          "from": "this.YOUT",
+          "to": "YOUT"
+        },
+        {
+          "from": "this.ZOUT",
+          "to": "ZOUT"
+        }
+      ]
     }
   ]
 }

@@ -175,7 +175,37 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "this.SO",
+          "to": "SO"
+        },
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.SI",
+          "to": "SI"
+        },
+        {
+          "from": "this.CS",
+          "to": "CS"
+        },
+        {
+          "from": "this.INT",
+          "to": "INT"
+        }
+      ]
     }
   ]
 }

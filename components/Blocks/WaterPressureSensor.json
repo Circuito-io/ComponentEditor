@@ -82,7 +82,21 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.5V",
+          "to": "5V"
+        },
+        {
+          "from": "this.SIG",
+          "to": "SIG"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     },
     {
       "name": "3v3",
@@ -147,7 +161,21 @@
           }
         }
       ],
-      "priority": 1
+      "priority": 1,
+      "wires": [
+        {
+          "from": "this.5V",
+          "to": "5V"
+        },
+        {
+          "from": "this.SIG",
+          "to": "SIG"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        }
+      ]
     }
   ]
 }

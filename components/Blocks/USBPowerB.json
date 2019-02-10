@@ -74,7 +74,13 @@
           }
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.USB_B",
+          "to": "USB_B"
+        }
+      ]
     }
   ]
 }

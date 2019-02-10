@@ -133,7 +133,33 @@
           ]
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.GND_IN",
+          "to": "GND_IN"
+        },
+        {
+          "from": "this.5V_IN",
+          "to": "5V_IN"
+        },
+        {
+          "from": "this.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "this.DOUT",
+          "to": "DOUT"
+        },
+        {
+          "from": "this.5V_OUT",
+          "to": "5V_OUT"
+        },
+        {
+          "from": "this.GND_OUT",
+          "to": "GND_OUT"
+        }
+      ]
     }
   ]
 }

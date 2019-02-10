@@ -144,7 +144,29 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.1",
+          "to": "1"
+        },
+        {
+          "from": "this.2",
+          "to": "2"
+        },
+        {
+          "from": "this.3",
+          "to": "3"
+        },
+        {
+          "from": "this.4",
+          "to": "4"
+        },
+        {
+          "from": "this.5",
+          "to": "5"
+        }
+      ]
     }
   ]
 }

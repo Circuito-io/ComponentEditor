@@ -151,7 +151,33 @@
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "priority": 0,
+      "wires": [
+        {
+          "from": "this.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "this.GND",
+          "to": "GND"
+        },
+        {
+          "from": "this.IN1",
+          "to": "IN1"
+        },
+        {
+          "from": "this.IN2",
+          "to": "IN2"
+        },
+        {
+          "from": "this.IN4",
+          "to": "IN4"
+        },
+        {
+          "from": "this.IN3",
+          "to": "IN3"
+        }
+      ]
     }
   ]
 }
