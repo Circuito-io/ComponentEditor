@@ -13,7 +13,7 @@ export function circuitsuiSchema(supportBlocksList) {
           tabs: [
             {
               name: "Info",
-              props: ["name", "priority", "supportedControllers"]
+              props: ["name", "cost", "supportedControllers"]
             },
             { name: "Parts", props: ["parts"] },
             { name: "Ports", props: ["ports"] },
@@ -25,7 +25,7 @@ export function circuitsuiSchema(supportBlocksList) {
         name: {
           classNames: "two-coloumn-field"
         },
-        priority: {
+        cost: {
           classNames: "two-coloumn-field"
         },
         supportedControllers: supportedControllersUISchema,
@@ -117,6 +117,9 @@ export function circuitsuiSchema(supportBlocksList) {
             },
             blocks: {
               "ui:field": "typeahead",
+              "ui:options": {
+                forceLabelDisplay: true
+              },
               classNames: "two-coloumn-field",
               typeahead: {
                 options: supportBlocksList,
