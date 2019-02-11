@@ -46,14 +46,26 @@ export class Preview extends React.Component {
       });
 
       invoke_upload().then(res => {
-        if ( res && res.ok) {
+        if (res && res.ok) {
           toast.update(toastId, {
-            render: "Upload successful (Allow pop-ups to open)",
-            type: toast.TYPE.SUCCESS,
-            autoClose: 5000
+            render: (
+              <React.Fragment>
+                Upload successful.
+                <br />
+                Refresh your active preview or <br />
+                <Button
+                  bsStyle="success"
+                  style={{ width: "100%" }}
+                  onClick={event =>
+                    window.open(this.state.previewURL, "_blank")
+                  }
+                >
+                  Open a new preview
+                </Button>
+              </React.Fragment>
+            ),
+            type: toast.TYPE.SUCCESS
           });
-
-          window.open(this.state.previewURL, "_blank");
         } else {
           toast.update(toastId, {
             render:
