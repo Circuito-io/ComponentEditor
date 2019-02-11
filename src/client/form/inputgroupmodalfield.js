@@ -1,6 +1,6 @@
 import React from "react";
 import { FormGroup, InputGroup, Modal, Button } from "react-bootstrap";
-import { DefaultLabel } from "react-jsonschema-form-extras/lib/Label";
+import { DefaultLabel } from "./react-jsonschema-form-extras/Label";
 import { Typeahead } from "react-bootstrap-typeahead";
 
 export class InputGroupModalField extends React.Component {

@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "react-jsonschema-form";
-import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
+import { TypeaheadField } from "./react-jsonschema-form-extras/TypeaheadField";
 import { ImageWidget } from "./imagewidget";
 import { PartField } from "./partfield";
 import { CoderField } from "./coderfield";

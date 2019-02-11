@@ -1,4 +1,10 @@
-fieldset .two-coloumn-field:nth-child(even) {
+fieldset .two-coloumn-field {
+  display: inline-block;
+  width: 50% !important;
+  vertical-align: top;
+}
+
+/* fieldset .two-coloumn-field:nth-child(even) {
   float: right;
   padding-left: 1em;
   width: 50%;
@@ -8,7 +14,7 @@ fieldset .two-coloumn-field:nth-child(odd) {
   float: left;
   padding-right: 1em;
   width: 50%;
-}
+} */
 
 form > p {
   padding: 1em;
@@ -52,6 +58,7 @@ form > p {
   right: 0;
   left: 0;
   background-color: white;
+  z-index: 100;
 }
 
 /* workaround see https://github.com/ajaxorg/ace/issues/2963 */

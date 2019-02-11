@@ -30,6 +30,7 @@ export const TooltipDescriptionField = ({ id, description }) => {
         <a>
           <span className="glyphicon glyphicon-question-sign" aria-hidden="true" />
         </a>
+        <br/>
       </div>
     );
   } else {

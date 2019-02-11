@@ -6,7 +6,7 @@ import { EditorForm } from "./editorform";
 import { partuiSchema } from "../schema/partSchema.js";
 import { read_a_part, update_a_part, read_a_svgdata } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from "react-tooltip";
 
 import * as partSchema from "../../../circuito-schema/part.json";
 
@@ -109,6 +109,7 @@ export class PartField extends React.Component {
         onSelectNew={this.onSelectNew}
       >
         <React.Fragment>
+          <SVGCreator />
           <EditorForm
             schema={partSchema.default}
             uiSchema={partuiSchema(this.props.formContext.partsList)}
