@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
-var object = require('lodash/object');
+var object = require("lodash/object");
 
 var objFolder = function(objPrefix) {
   return path.join(global.dataFolder, objPrefix);
@@ -56,7 +56,7 @@ exports.read_a_file_factory = function(objPrefix) {
     fs.readFile(objFile(objPrefix, req.params.name), "utf8", (err, data) => {
       if (err) {
         console.log(err);
-        return res.status(400).send(err);
+        return res.status(400).json({error: err.code});
       }
 
       try {
@@ -65,7 +65,7 @@ exports.read_a_file_factory = function(objPrefix) {
         console.log(err);
 
         if (err instanceof SyntaxError) {
-          return res.status(400).send("Invalid JSON<br>" + data);
+          return res.status(400).json({error: "Invalid JSON<br>" + data});
         }
         return;
       }
@@ -131,7 +131,16 @@ exports.create_a_file_factory = function(objPrefix) {
 
 exports.delete_a_file_factory = function(objPrefix) {
   return function(req, res) {
+    console.log(req.params);
+    console.log("DELETE ", objPrefix, req.params.name);
+    try {
     fs.unlinkSync(objFile(objPrefix, req.params.name));
+    } catch (err) {
+      console.log(err)
+      return res.status(400).send("Delete failed");
+    }
+
+    res.send("OK");
   };
 };
 

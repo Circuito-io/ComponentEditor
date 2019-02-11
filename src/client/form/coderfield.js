@@ -4,17 +4,19 @@ import { toast } from "react-toastify";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { coderuiSchema } from "../schema/coderSchema.js";
-import { read_a_coder, update_a_coder } from "../controller.js";
+import { read_a_coder, update_a_coder, delete_a_coder } from "../controller.js";
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from "react-tooltip";
 
 import * as coderSchema from "../../../circuito-schema/coder.json";
 
 export class CoderField extends React.Component {
   constructor(props) {
     super(props);
+
+    this.inputmodalRef = React.createRef();
 
     this.preventNextReload = false;
     this.state = { objName: props.formData, addHeaders: false };
@@ -23,11 +25,17 @@ export class CoderField extends React.Component {
     this.onShowModal = this.onShowModal.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.onSelectNew = this.onSelectNew.bind(this);
+    this.onDelete = this.onDelete.bind(this);
   }
 
   onShowModal() {
     if (!this.preventNextReload)
       read_a_coder(this.state.objName).then(newCoderData => {
+        if (newCoderData.error) {
+          toast.error("Can't read coder:" + newCoderData.error);
+          this.inputmodalRef.current.hideModal();
+          return;
+        }
         this.setState({ objData: newCoderData });
         ReactTooltip.rebuild();
       });
@@ -108,9 +116,24 @@ export class CoderField extends React.Component {
     }
   }
 
+  onDelete() {
+    if (confirm("Really delete coder?")) {
+      delete_a_coder(this.state.objName).then(res => {
+        if (!(res && res.ok)) toast.error("Delete coder failed");
+        else {
+          toast.success("Deleted " + this.state.objName, { autoClose: 2000 });
+          this.props.onChange("");
+          this.inputmodalRef.current.hideModal();
+          this.setState({ objName: "" });
+        }
+      });
+    }
+  }
+
   render() {
     return (
       <InputGroupModalField
+        ref={this.inputmodalRef}
         labelProps={this.props}
         modalTitle={"Coder " + this.state.objName}
         onSave={this.onSave}
@@ -121,6 +144,7 @@ export class CoderField extends React.Component {
         newSelectionPrefix="Create new coder:"
         onSelect={this.onSelect}
         onSelectNew={this.onSelectNew}
+        onDelete={this.onDelete}
       >
         <React.Fragment>
           <EditorForm

@@ -4,7 +4,12 @@ import { toast } from "react-toastify";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { partuiSchema } from "../schema/partSchema.js";
-import { read_a_part, update_a_part, read_a_svgdata } from "../controller.js";
+import {
+  read_a_part,
+  update_a_part,
+  read_a_svgdata,
+  delete_a_part
+} from "../controller.js";
 import { SVGCreator } from "../svg-creator";
 import ReactTooltip from "react-tooltip";
 
@@ -14,6 +19,8 @@ export class PartField extends React.Component {
   constructor(props) {
     super(props);
 
+    this.inputmodalRef = React.createRef();
+
     this.preventNextReload = false;
     this.state = { objName: props.formData };
     this.onSave = this.onSave.bind(this);
@@ -21,11 +28,17 @@ export class PartField extends React.Component {
     this.onSelect = this.onSelect.bind(this);
     this.onSelectNew = this.onSelectNew.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.onDelete = this.onDelete.bind(this);
   }
 
   onShowModal() {
     if (!this.preventNextReload)
       read_a_part(this.state.objName).then(newPartData => {
+        if (newPartData.error) {
+          toast.error("Can't read part:" + newPartData.error);
+          this.inputmodalRef.current.hideModal();
+          return;
+        }
         this.setState({ objData: newPartData });
         ReactTooltip.rebuild();
       });
@@ -94,9 +107,24 @@ export class PartField extends React.Component {
     this.lastData = formData;
   }
 
+  onDelete() {
+    if (confirm("Really delete part?")) {
+      delete_a_part(this.state.objName).then(res => {
+        if (!(res && res.ok)) toast.error("Delete part failed");
+        else {
+          toast.success("Deleted " + this.state.objName, { autoClose: 2000 });
+          //this.props.onChange(""); // BUG: not updating form
+          this.inputmodalRef.current.hideModal();
+          this.setState({ objName: "" });
+        }
+      });
+    }
+  }
+
   render() {
     return (
       <InputGroupModalField
+        ref={this.inputmodalRef}
         labelProps={this.props}
         modalTitle={"Part " + this.state.objName}
         onSave={this.onSave}
@@ -107,6 +135,7 @@ export class PartField extends React.Component {
         newSelectionPrefix="Create new part:"
         onSelect={this.onSelect}
         onSelectNew={this.onSelectNew}
+        onDelete={this.onDelete}
       >
         <React.Fragment>
           <SVGCreator />

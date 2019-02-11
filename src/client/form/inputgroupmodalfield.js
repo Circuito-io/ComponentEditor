@@ -13,6 +13,7 @@ export class InputGroupModalField extends React.Component {
 
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    this.delete;
   }
 
   showModal() {
@@ -23,6 +24,8 @@ export class InputGroupModalField extends React.Component {
   hideModal() {
     this.setState({ showModal: false });
   }
+
+  delete() {}
 
   render() {
     return (
@@ -68,7 +71,14 @@ export class InputGroupModalField extends React.Component {
           </Modal.Header>
           <Modal.Body>{this.props.children}</Modal.Body>
           <Modal.Footer>
-            <Button bsStyle="primary" onClick={this.props.onSave}>Save</Button>
+            {this.props.onDelete && (
+              <Button bsStyle="danger" onClick={this.props.onDelete}>
+                Delete
+              </Button>
+            )}
+            <Button bsStyle="primary" onClick={this.props.onSave}>
+              Save
+            </Button>
             <Button onClick={this.hideModal}>Close</Button>
           </Modal.Footer>
         </Modal>

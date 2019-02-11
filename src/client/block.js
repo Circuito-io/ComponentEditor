@@ -9,9 +9,10 @@ import {
   read_a_block,
   update_a_block,
   read_a_part,
-  read_a_svgdata
+  read_a_svgdata,
+  delete_a_block
 } from "./controller.js";
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from "react-tooltip";
 
 import * as blockSchema from "../../circuito-schema/block.json";
 export class Block extends React.Component {
@@ -36,6 +37,7 @@ export class Block extends React.Component {
     this.updateConnectors = this.updateConnectors.bind(this);
     this.save = this.save.bind(this);
     this.onDataChange = this.onDataChange.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   componentDidMount() {
@@ -46,7 +48,7 @@ export class Block extends React.Component {
 
     read_a_block(this.props.block).then(blockData => {
       this.setState({ formSrcData: blockData });
-      ReactTooltip.rebuild()
+      ReactTooltip.rebuild();
       this.updateConnectors();
     });
   }
@@ -152,11 +154,24 @@ export class Block extends React.Component {
     update_a_block(this.props.block, this.currentData).then(res => {
       if (!(res && res.ok))
         toast.error(
-          "Update part failed:" + ((res && res.statusText) || "can't connect")
+          "Update block failed:" + ((res && res.statusText) || "can't connect")
         );
       else toast.success("Saved " + this.props.block, { autoClose: 2000 });
       this.modified = false;
     });
+  }
+
+  delete() {
+    if (confirm("Really delete block?")) {
+      delete_a_block(this.props.block).then(res => {
+        if (!(res && res.ok)) toast.error("Delete block failed");
+        else {
+          toast.success("Deleted " + this.props.block, { autoClose: 2000 });
+          this.setState({ block: null });
+          this.props.history.push("/");
+        }
+      });
+    }
   }
 
   onDataChange(data) {
@@ -165,7 +180,7 @@ export class Block extends React.Component {
     if (isEqual(data.formData.circuits, this.currentData.circuits) == false) {
       this.setState({ formSrcData: data.formData });
       this.updateConnectors();
-      ReactTooltip.rebuild()
+      ReactTooltip.rebuild();
     }
 
     this.modified = true;
@@ -220,6 +235,9 @@ export class Block extends React.Component {
             }}
           >
             <div className="fixed-bottom-footer modal-footer">
+              <Button bsStyle="danger" onClick={this.delete}>
+                Delete
+              </Button>
               <Button bsStyle="primary" type="submit">
                 Save
               </Button>

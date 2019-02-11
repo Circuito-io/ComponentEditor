@@ -65,6 +65,20 @@ export const update_a_block = update_a_factory("blocks");
 export const update_a_part = update_a_factory("parts");
 export const update_a_coder = update_a_factory("coders");
 
+function delete_a_factory(objPrefix) {
+  return name => {
+    return window
+      .fetch(urlJoin("/api", objPrefix, name), {
+        method: "delete"
+      })
+  };
+}
+
+export const delete_a_block = delete_a_factory("blocks");
+export const delete_a_part = delete_a_factory("parts");
+export const delete_a_coder = delete_a_factory("coders");
+
+
 export function invoke_upload() {
   return window
     .fetch("/api/upload")
