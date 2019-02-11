@@ -63,4 +63,4 @@ var reload = require('reload', {verbose: true});
 reload(app);
 
 console.log('Data folder:', global.dataFolder);
-console.log('miniMESS RESTful API server started on: ' + hostname + '/' + port);
+console.log('Component Editor RESTful API server started on: ' + hostname + '/' + port);
