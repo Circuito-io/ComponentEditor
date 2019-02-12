@@ -116,9 +116,7 @@ function TabbedArrayItemContent(props) {
   return (
     <Tab.Pane eventKey={props.index}>
       <div className={props.className}>
-        <div className="col-xs-12">
-          {props.children}
-        </div>
+        <div className="col-xs-12">{props.children}</div>
 
         {props.hasToolbar && (
           <div className="col-xs-3 array-item-toolbox">
@@ -173,10 +171,7 @@ function TabbedArrayFieldTemplate(props) {
             <Nav bsStyle="tabs">
               {props.items &&
                 props.items.map((p, index) => (
-                  <TabbedArrayItemHeader
-                    key={index}
-                    {...p}
-                  />
+                  <TabbedArrayItemHeader key={index} {...p} />
                 ))}
               {props.canAdd && (
                 <NavItem
@@ -192,11 +187,13 @@ function TabbedArrayFieldTemplate(props) {
             <Tab.Content animation>
               {props.items &&
                 props.items.map((p, index) => (
-                  <TabbedArrayItemContent
-                    key={index}
-                    {...p}
-                  />
+                  <TabbedArrayItemContent key={index} {...p} />
                 ))}
+              {(props.items.length == 0) && (
+                <TabbedArrayItemContent key={-1} index={-1}>
+                  No elements. Click '+' to create a new one.
+                </TabbedArrayItemContent>
+              )}
               <Tab.Pane eventKey="+">Adding...</Tab.Pane>
             </Tab.Content>
           </Col>
@@ -220,6 +217,19 @@ export class TabbedArrayField extends React.Component {
   get itemTitle() {
     const { schema } = this.props;
     return schema.items.title || schema.items.description || "Item";
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.state.activeKey != -1 && this.props.formData.length == 0) {
+      // when no elements in data key should be null
+      this.setState({ activeKey: -1 });
+    } else if (
+      this.props.formData.length &&
+      this.state.activeKey >= this.props.formData.length
+    ) {
+      // invalid activeKey after tab remove - update it
+      this.setState({ activeKey: 0 });
+    }
   }
 
   isItemRequired(itemSchema) {
