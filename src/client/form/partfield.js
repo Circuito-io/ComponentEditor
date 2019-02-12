@@ -33,7 +33,9 @@ export class PartField extends React.Component {
   }
 
   onShowModal() {
-    if (!this.preventNextReload)
+    //prevent the reload only once
+    if (this.preventNextReload) this.preventNextReload = false;
+    else
       read_a_part(this.state.objName).then(newPartData => {
         if (newPartData.error) {
           toast.error("Can't read part:" + newPartData.error);
@@ -56,7 +58,8 @@ export class PartField extends React.Component {
   }
 
   onSelectNew(newPartName) {
-    var newData = { name: newPartName };
+    var newData = { name: newPartName, bom: [{ name: "octopart" }] };
+
     this.preventNextReload = true; // don't reload file on modalShow, because it's not ready
     update_a_part(newPartName, newData).then(res => {
       if (!(res && res.ok))
@@ -106,6 +109,7 @@ export class PartField extends React.Component {
         });
     }
     this.lastData = formData;
+    ReactTooltip.rebuild();
   }
 
   onDelete() {
