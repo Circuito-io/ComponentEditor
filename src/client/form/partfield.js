@@ -129,7 +129,7 @@ export class PartField extends React.Component {
         modalTitle={"Part " + this.state.objName}
         onSave={this.onSave}
         onShowModal={this.onShowModal}
-        options={this.props.formContext.codersList}
+        options={this.props.formContext.partsList}
         placeholder="Select a part..."
         defaultSelected={this.state.objName ? [this.state.objName] : []}
         newSelectionPrefix="Create new part:"
