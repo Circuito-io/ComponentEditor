@@ -10,27 +10,38 @@ export const svgSchema = {
             title: "Name"
         },
         width: {
+            title: "Width [mm]",
             type: "integer"
         },
         height: {
+            title: "Height [mm]",
             type: "integer"
         },
         color: {
-            type: "string"
+            title: "Color",
+            type: "string",
+            default: "Red",
+            enum: ['#CF2F27','#45925A', '#0B5597', '#000000','#338085' ],
+            enumNames: ['Red','Green', 'Blue','Black', 'Ocean']
         },
         pinTypes: {
+            title: "Pin Type",
             type: "string",
+            default: "pads",
             enum: ["pads", "headers"]
         },
         pins: {
             type: "array",
+            title: "Pins:",
             items: {
                 type: "object",
                 properties: {
                     name: {
+                        title: "Pin Name:",
                         type: "string"
                     },
                     type: {
+                        title: "Pin Type:",
                         type: "string",
                         enum: ["male", "female"]
                     }
