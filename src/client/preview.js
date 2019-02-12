@@ -64,7 +64,8 @@ export class Preview extends React.Component {
                 </Button>
               </React.Fragment>
             ),
-            type: toast.TYPE.SUCCESS
+            type: toast.TYPE.SUCCESS,
+            autoClose: 5000
           });
         } else {
           toast.update(toastId, {
