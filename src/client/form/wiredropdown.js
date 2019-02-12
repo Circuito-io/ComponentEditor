@@ -7,6 +7,11 @@ export function WireDropDown(props) {
   const circuitid = contextid.split("_")[2]; // like root_circuits_1_wires_2_from => 1
   const connectorsList = props.formContext.connectorsList;
 
+  const invalidValue =
+    connectorsList &&
+    connectorsList[circuitid] &&
+    !connectorsList[circuitid].includes(props.value);
+
   return (
     <FormGroup>
       <FormControl
@@ -14,6 +19,7 @@ export function WireDropDown(props) {
         value={props.value}
         required={props.required}
         onChange={event => props.onChange(event.target.value)}
+        class={invalidValue ? "form-control btn-warning" : "form-control"}
       >
         <option value="" />
         {connectorsList &&
@@ -28,6 +34,11 @@ export function WireDropDown(props) {
                 </option>
               )
           )}
+        {invalidValue && (
+          <option key={props.value} value={props.value}>
+            Missing {props.value}
+          </option>
+        )}
       </FormControl>
     </FormGroup>
   );

@@ -180,8 +180,11 @@ export class Block extends React.Component {
     if (this.state.formSrcData == {}) return;
 
     if (isEqual(data.formData.circuits, this.currentData.circuits) == false) {
+      //detect changes in the circuits
+
       this.setState({ formSrcData: data.formData });
       this.updateConnectors();
+
       ReactTooltip.rebuild();
     }
 
