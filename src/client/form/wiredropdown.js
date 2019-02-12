@@ -18,11 +18,16 @@ export function WireDropDown(props) {
         <option value="" />
         {connectorsList &&
           connectorsList[circuitid] &&
-          connectorsList[circuitid].map((connector, index) => (
-            <option key={connector} value={connector}>
-              {connector.indexOf(".") < 0 ? `${connector} (port)` : `${connector} (pin)`}
-            </option>
-          ))}
+          connectorsList[circuitid].map(
+            (connector, index) =>
+              connector && (
+                <option key={connector} value={connector}>
+                  {connector.indexOf(".") < 0
+                    ? `${connector} (port)`
+                    : `${connector} (pin)`}
+                </option>
+              )
+          )}
       </FormControl>
     </FormGroup>
   );
