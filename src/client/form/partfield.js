@@ -8,7 +8,8 @@ import {
   read_a_part,
   update_a_part,
   read_a_svgdata,
-  delete_a_part
+  delete_a_part,
+  gitpod_open
 } from "../controller.js";
 import { SVGCreator } from "../svg-creator";
 import ReactTooltip from "react-tooltip";
@@ -136,6 +137,9 @@ export class PartField extends React.Component {
         onSelect={this.onSelect}
         onSelectNew={this.onSelectNew}
         onDelete={this.onDelete}
+        onEdit={event => {
+          gitpod_open("Parts/" + this.state.objName + ".json");
+        }}
       >
         <React.Fragment>
           <SVGCreator />

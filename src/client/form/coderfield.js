@@ -4,7 +4,12 @@ import { toast } from "react-toastify";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { coderuiSchema } from "../schema/coderSchema.js";
-import { read_a_coder, update_a_coder, delete_a_coder } from "../controller.js";
+import {
+  read_a_coder,
+  update_a_coder,
+  delete_a_coder,
+  gitpod_open
+} from "../controller.js";
 import AceEditor from "react-ace";
 import "brace/mode/java";
 import "brace/theme/monokai";
@@ -145,6 +150,9 @@ export class CoderField extends React.Component {
         onSelect={this.onSelect}
         onSelectNew={this.onSelectNew}
         onDelete={this.onDelete}
+        onEdit={event => {
+          gitpod_open("Coders/" + this.state.objName + ".json");
+        }}
       >
         <React.Fragment>
           <EditorForm

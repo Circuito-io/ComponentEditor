@@ -93,6 +93,11 @@ export class InputGroupModalField extends React.Component {
           </Modal.Header>
           <Modal.Body>{this.props.children}</Modal.Body>
           <Modal.Footer>
+            {this.props.onEdit && (
+              <Button onClick={this.props.onEdit}>
+                Open file in code editor
+              </Button>
+            )}
             {this.props.onDelete && (
               <Button bsStyle="danger" onClick={this.props.onDelete}>
                 Delete

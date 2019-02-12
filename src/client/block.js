@@ -211,13 +211,6 @@ export class Block extends React.Component {
     return (
       <React.Fragment>
         <div className="container" style={{ "padding-bottom": "50px" }}>
-          <Button
-            onClick={event => {
-              gitpod_open("Blocks/" + this.props.block + ".json");
-            }}
-          >
-            Open file in code editor
-          </Button>
           <EditorForm
             schema={blockSchema.default}
             uiSchema={blockuiSchema(
@@ -240,6 +233,13 @@ export class Block extends React.Component {
             }}
           >
             <div className="fixed-bottom-footer modal-footer">
+              <Button
+                onClick={event => {
+                  gitpod_open("Blocks/" + this.props.block + ".json");
+                }}
+              >
+                Open file in code editor
+              </Button>
               <Button bsStyle="danger" onClick={this.delete}>
                 Delete
               </Button>
