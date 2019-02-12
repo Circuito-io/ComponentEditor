@@ -11,7 +11,6 @@ import {
   delete_a_part,
   gitpod_open
 } from "../controller.js";
-import { SVGCreator } from "../svg-creator";
 import ReactTooltip from "react-tooltip";
 
 import * as partSchema from "../../../circuito-schema/part.json";
@@ -146,7 +145,6 @@ export class PartField extends React.Component {
         }}
       >
         <React.Fragment>
-          <SVGCreator />
           <EditorForm
             schema={partSchema.default}
             uiSchema={partuiSchema(this.props.formContext.partsList)}

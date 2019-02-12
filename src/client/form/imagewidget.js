@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  FormGroup,
-  InputGroup,
-  Button,
-  FormControl,
-  Glyphicon
-} from "react-bootstrap";
+import { InputGroup, Button, FormControl } from "react-bootstrap";
 import ReactCloudinaryUploader from "@app-masters/react-cloudinary-uploader";
-import urlJoin from "proper-url-join";
+import { SVGCreator } from "./svg-creator";
 
 const CDN = "https://res.cloudinary.com/circuito/image/upload/";
 
@@ -23,6 +17,12 @@ const cloudinaryOptions = {
 export function ImageWidget(props) {
   return (
     <InputGroup>
+      {props.options && props.options.svgcreator && (
+        <InputGroup.Button>
+          <SVGCreator />
+        </InputGroup.Button>
+      )}
+
       <FormControl
         type="text"
         disabled={true}

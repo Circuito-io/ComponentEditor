@@ -44,8 +44,7 @@ export function blockuiSchema(blocksList, supportBlocksList) {
     },
     notes: {
       "ui:widget": "textarea",
-      "ui:placeholder": "Changelog",
-      "ui:help": "Describe any modification you made in a new line",
+      "ui:placeholder": "Describe any modification you made in a new line",
       "ui:options": {
         rows: 7
       }

@@ -184,10 +184,9 @@ export class Block extends React.Component {
 
       this.setState({ formSrcData: data.formData });
       this.updateConnectors();
-
-      ReactTooltip.rebuild();
     }
 
+    ReactTooltip.rebuild();
     this.modified = true;
     this.currentData = data.formData;
   }
@@ -210,7 +209,7 @@ export class Block extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="container" style={{ "padding-bottom": "50px" }}>
+        <div className="container" style={{ "paddingBottom": "50px" }}>
           <EditorForm
             schema={blockSchema.default}
             uiSchema={blockuiSchema(

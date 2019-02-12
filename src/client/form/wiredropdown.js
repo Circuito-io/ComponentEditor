@@ -19,7 +19,7 @@ export function WireDropDown(props) {
         value={props.value}
         required={props.required}
         onChange={event => props.onChange(event.target.value)}
-        class={invalidValue ? "form-control btn-warning" : "form-control"}
+        className={invalidValue ? "form-control btn-warning" : "form-control"}
       >
         <option value="" />
         {connectorsList &&
