@@ -32,7 +32,7 @@ export function ImageWidget(props) {
         onChange={event => props.onChange(event.target.value)}
       />
 
-      <InputGroup.Button>
+      <InputGroup.Append>
         <Button
           disabled={!props.value}
           onClick={event => {
@@ -54,7 +54,7 @@ export function ImageWidget(props) {
         >
           Upload...
         </Button>
-      </InputGroup.Button>
+      </InputGroup.Append>
     </InputGroup>
   );
 }

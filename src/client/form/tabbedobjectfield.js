@@ -1,5 +1,5 @@
 import React from "react";
-import { Well, Tab, Row, Col, Nav, NavItem, Button } from "react-bootstrap";
+import { Card, Tab, Row, Col, Nav, NavItem, Button } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import {
@@ -57,14 +57,14 @@ function TabbedObjectFieldTemplate(props) {
         />
       )}
 
-      <Well>
+      <Card body>
         <Tab.Container
           id={`${props.idSchema.$id}__tabs`}
           defaultActiveKey={tabsNames[0]}
         >
           <Row className="clearfix">
             <Col sm={2}>
-              <Nav bsStyle="pills">
+              <Nav variant="pills">
                 {tabsNames.map((tabName, index) => (
                   <NavItem eventKey={`${tabName}`} key={index}>
                     {tabName}
@@ -73,7 +73,7 @@ function TabbedObjectFieldTemplate(props) {
               </Nav>
             </Col>
             <Col sm={10}>
-              <Well>
+              <Card body>
                 <Tab.Content animation>
                   {tabsNames.map((tabName, index) => (
                     <Tab.Pane eventKey={`${tabName}`} key={index}>
@@ -81,11 +81,11 @@ function TabbedObjectFieldTemplate(props) {
                     </Tab.Pane>
                   ))}
                 </Tab.Content>
-              </Well>
+              </Card>
             </Col>
           </Row>
         </Tab.Container>
-      </Well>
+      </Card>
     </fieldset>
   );
 }

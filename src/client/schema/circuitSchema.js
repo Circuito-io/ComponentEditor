@@ -71,7 +71,7 @@ export function circuitsuiSchema(supportBlocksList) {
             orderable: false
           },
           items: {
-            classNames: "well",
+            classNames: "Card",
             interface: {
               requires: {
                 "ui:options": {

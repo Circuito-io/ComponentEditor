@@ -20,7 +20,7 @@ export function ListArrayField(props) {
                 <Col xs={8}>{element.children}</Col>
                 <Col xs={2}>
                   <Button
-                    bsStyle="info"
+                    variant="info"
                     //onClick={}
                   >
                     Edit
@@ -28,7 +28,7 @@ export function ListArrayField(props) {
                 </Col>
                 <Col xs={2}>
                   <Button
-                    bsStyle="danger"
+                    variant="danger"
                     onClick={element.onDropIndexClick(element.index)}
                   >
                     <span aria-hidden="true">&times;</span>

@@ -54,14 +54,14 @@ export class InputGroupModalField extends React.Component {
                 }
               }}
             />
-            <InputGroup.Button className="input-group-append">
+            <InputGroup.Prepend>
               <Button
                 className="btn-outline-secondary"
                 onClick={this.showModal}
               >
                 Edit
               </Button>
-            </InputGroup.Button>
+            </InputGroup.Prepend>
           </InputGroup>
         </FormGroup>
 
@@ -72,11 +72,11 @@ export class InputGroupModalField extends React.Component {
           <Modal.Body>{this.props.children}</Modal.Body>
           <Modal.Footer>
             {this.props.onDelete && (
-              <Button bsStyle="danger" onClick={this.props.onDelete}>
+              <Button variant="danger" onClick={this.props.onDelete}>
                 Delete
               </Button>
             )}
-            <Button bsStyle="primary" onClick={this.props.onSave}>
+            <Button variant="primary" onClick={this.props.onSave}>
               Save
             </Button>
             <Button onClick={this.hideModal}>Close</Button>

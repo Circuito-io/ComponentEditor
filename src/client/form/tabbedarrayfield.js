@@ -170,7 +170,7 @@ function TabbedArrayFieldTemplate(props) {
       >
         <Row className="clearfix">
           <Col sm={12}>
-            <Nav bsStyle="tabs">
+            <Nav variant="tabs">
               {props.items &&
                 props.items.map((p, index) => (
                   <TabbedArrayItemHeader

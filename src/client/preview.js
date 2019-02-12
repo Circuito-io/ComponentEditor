@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Button, NavItem, Glyphicon } from "react-bootstrap";
+import { Modal, Button, Nav, Glyphicon } from "react-bootstrap";
 import { invoke_upload } from "./controller.js";
 import { toast } from "react-toastify";
 
@@ -54,7 +54,7 @@ export class Preview extends React.Component {
                 <br />
                 Refresh your active preview or <br />
                 <Button
-                  bsStyle="success"
+                  variant="success"
                   style={{ width: "100%" }}
                   onClick={event =>
                     window.open(this.state.previewURL, "_blank")
@@ -108,10 +108,10 @@ export class Preview extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <NavItem onClick={this.onPreview}>
-          <Glyphicon glyph="glyphicon-refresh" />
+        <Nav.Link onClick={this.onPreview}>
+          {/* <Glyphicon glyph="glyphicon-refresh" /> */}
           Preview
-        </NavItem>
+        </Nav.Link>
       </React.Fragment>
     );
   }

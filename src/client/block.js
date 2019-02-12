@@ -235,10 +235,10 @@ export class Block extends React.Component {
             }}
           >
             <div className="fixed-bottom-footer modal-footer">
-              <Button bsStyle="danger" onClick={this.delete}>
+              <Button variant="danger" onClick={this.delete}>
                 Delete
               </Button>
-              <Button bsStyle="primary" type="submit">
+              <Button variant="primary" type="submit">
                 Save
               </Button>
             </div>

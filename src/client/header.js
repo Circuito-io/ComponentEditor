@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
+import { Navbar, Nav, Image } from "react-bootstrap";
 import { Preview } from "./preview";
 import { Publish } from "./publish";
 
@@ -19,13 +19,13 @@ export class Header extends React.Component {
             <Link to="/">Editor</Link>
           </Navbar.Brand>
           {this.props.activeBlock && (
-            <NavItem>{this.props.activeBlock}</NavItem>
+            <Nav.Link>{this.props.activeBlock}</Nav.Link>
           )}
         </Nav>
         <Nav pullRight>
-          <NavItem href="https://talk.circuito.io" target="_blank">
+          <Nav.Link href="https://talk.circuito.io" target="_blank">
             Help
-          </NavItem>
+          </Nav.Link>
           <Preview />
           <Publish />
         </Nav>

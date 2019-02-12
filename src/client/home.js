@@ -1,7 +1,6 @@
 import React from "react";
-import { Grid, Row, Col, Well, Image } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import { BlocksList } from "./blocks-list";
-import { NewComponent } from "./newcomponent";
 
 export class Home extends React.Component {
   constructor(props) {
@@ -16,10 +15,10 @@ export class Home extends React.Component {
 
   render() {
     return (
-      <Grid>
+      <Container>
         <Row>
           <Col>
-            <Well>
+            <Card body>
               <h2>Edit or create a block</h2>
               <br />
               <BlocksList
@@ -27,10 +26,10 @@ export class Home extends React.Component {
                 onBlockSelected={this.onBlockSelected}
                 refreshData={this.props.refreshData}
               />
-            </Well>
+            </Card>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

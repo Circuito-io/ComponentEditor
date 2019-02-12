@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, NavItem, Button } from "react-bootstrap";
+import { Modal, Nav, Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
 
 export class Publish extends React.Component {
@@ -41,7 +41,7 @@ export class Publish extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <NavItem onClick={this.handleShow}>Publish</NavItem>
+        <Nav.Link onClick={this.handleShow}>Publish</Nav.Link>
       </React.Fragment>
     );
   }

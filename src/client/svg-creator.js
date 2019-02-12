@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "react-jsonschema-form";
-import { Button, Modal, Well } from "react-bootstrap";
+import { Button, Modal, Card } from "react-bootstrap";
 import { TypeaheadField } from "./form/react-jsonschema-form-extras/TypeaheadField";
 import { svgSchema, svguiSchema } from "./schema/svg-creatorSchema.js";
 
@@ -116,7 +116,7 @@ export class SVGCreator extends React.Component {
     render() {
         return (
             <div>
-				<Button bsStyle="primary" onClick={this.handleShow}>
+				<Button variant="primary" onClick={this.handleShow}>
 					SVG Creator
 				</Button>
 
@@ -125,9 +125,9 @@ export class SVGCreator extends React.Component {
 						<Modal.Title>SVG Creator</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-					    <Well>
+					    <Card body>
 						 {this.state.resSVG}
-						</Well>
+						</Card>
 						<Form 
 							schema={svgSchema}
 							uiSchema={svguiSchema}
