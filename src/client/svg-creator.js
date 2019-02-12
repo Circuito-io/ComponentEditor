@@ -120,6 +120,7 @@ export class SVGCreator extends React.Component {
             viewBox = '0 0 ' +  formData.width * 72 /25.4 + ' ' + formData.height * 72 /25.4;
             
         }
+        // if headers was chosen, create the component body <rect>, viewBox and change the SVG height accordingly 
         else
         {
             rect = <rect width={formData.width * 72 /25.4} height={formData.height * 72 /25.4} style={{fill:formData.color}} />;
@@ -202,7 +203,7 @@ export class SVGCreator extends React.Component {
 					</Modal.Body>
 					<Modal.Footer>
 						<Button onClick={this.handleClose}>Close</Button>
-                        <button>Download txt</button>
+                        <button>Download</button>
 						
 						
 					</Modal.Footer>
@@ -211,6 +212,3 @@ export class SVGCreator extends React.Component {
         );
     }
 }
-
-
-// <Button>Download</Button>
