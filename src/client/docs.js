@@ -83,5 +83,9 @@ A port can either require or provide attributes. These attributes are used by th
   },
   "circuit.port.name": {
     text: `Port name should represent its function. In most cases, this name will be similar to the name of the pin it’s connected to.`
+  },
+  "circuit.part.includeInFirmware": {
+    text: `When generating code, create a variable for this port.
+    The variable's value will hold to codename of this port's provider.`
   }
 };
