@@ -86,7 +86,9 @@ export class Block extends React.Component {
           if (partName in this.partConnectorsCache) {
             // use part from cache
             connectorsByCircuit[circuitIndex].push(
-              ...this.partConnectorsCache[partName]
+              ...this.partConnectorsCache[partName].map(
+                connector => `${part.name}.${connector}`
+              )
             );
           } else {
             // part no in cache, retreive and cache for future use
@@ -117,7 +119,7 @@ export class Block extends React.Component {
                     connector => `${part.name}.${connector}`
                   );
 
-                  this.partConnectorsCache[partName] = svgConnectors;
+                  this.partConnectorsCache[partName] = svgdata.ConnectorsNames;
                   connectorsByCircuit[circuitIndex].push(...svgConnectors);
                 })
             );
