@@ -10,7 +10,7 @@ function createNewBlockData(blockName) {
     name: blockName,
     blockId: blockId.toString(),
     app: { appName: blockName, visible: true },
-    circuits: [{ name: "default", priority: 0 }]
+    circuits: [{ name: "default", cost: 0 }]
   };
 }
 

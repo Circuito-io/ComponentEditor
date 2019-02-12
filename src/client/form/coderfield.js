@@ -122,7 +122,7 @@ export class CoderField extends React.Component {
         if (!(res && res.ok)) toast.error("Delete coder failed");
         else {
           toast.success("Deleted " + this.state.objName, { autoClose: 2000 });
-          this.props.onChange("");
+          //this.props.onChange(""); // BUG: not updating form
           this.inputmodalRef.current.hideModal();
           this.setState({ objName: "" });
         }
