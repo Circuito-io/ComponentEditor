@@ -10,9 +10,9 @@ import {
   delete_a_coder,
   gitpod_open
 } from "../controller.js";
-import AceEditor from "react-ace";
-import "brace/mode/java";
-import "brace/theme/monokai";
+// import AceEditor from "react-ace";
+// import "brace/mode/java";
+// import "brace/theme/monokai";
 import ReactTooltip from "react-tooltip";
 
 import * as coderSchema from "../../../circuito-schema/coder.json";
@@ -34,7 +34,9 @@ export class CoderField extends React.Component {
   }
 
   onShowModal() {
-    if (!this.preventNextReload)
+    //prevent the reload only once
+    if (this.preventNextReload) this.preventNextReload = false;
+    else
       read_a_coder(this.state.objName).then(newCoderData => {
         if (newCoderData.error) {
           toast.error("Can't read coder:" + newCoderData.error);
@@ -44,7 +46,6 @@ export class CoderField extends React.Component {
         this.setState({ objData: newCoderData });
         ReactTooltip.rebuild();
       });
-    this.preventNextReload = false;
   }
 
   onSave() {
@@ -166,13 +167,13 @@ export class CoderField extends React.Component {
               Submit
             </Button>
           </EditorForm>
-          Preview
+          {/* Preview
           <AceEditor
             mode="java"
             theme="monokai"
             name="UNIQUE_ID_OF_DIV"
             editorProps={{ $blockScrolling: true }}
-          />
+          /> */}
         </React.Fragment>
       </InputGroupModalField>
     );

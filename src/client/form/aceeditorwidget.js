@@ -20,6 +20,7 @@ export function AceEditorWidget(props) {
       minLines={7}
       maxLines={7}
       editorProps={{$blockScrolling: true}}
+      width="100%"
     />
     </div>
   );
