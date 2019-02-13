@@ -10,9 +10,9 @@ import {
   delete_a_coder,
   gitpod_open
 } from "../controller.js";
-// import AceEditor from "react-ace";
-// import "brace/mode/java";
-// import "brace/theme/monokai";
+import AceEditor from "react-ace";
+import "brace/mode/c_cpp";
+import "brace/theme/monokai";
 import ReactTooltip from "react-tooltip";
 
 import * as coderSchema from "../../../circuito-schema/coder.json";
@@ -169,9 +169,10 @@ export class CoderField extends React.Component {
           </EditorForm>
           {/* Preview
           <AceEditor
-            mode="java"
+            mode="c_cpp"
             theme="monokai"
-            name="UNIQUE_ID_OF_DIV"
+            name="ace_preview"
+            width="100%"
             editorProps={{ $blockScrolling: true }}
           /> */}
         </React.Fragment>
