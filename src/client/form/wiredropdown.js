@@ -1,5 +1,5 @@
 import React from "react";
-import { FormGroup, FormControl } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 export function WireDropDown(props) {
   const contextid = props.id;
@@ -8,9 +8,9 @@ export function WireDropDown(props) {
   const connectorsList = props.formContext.connectorsList;
 
   return (
-    <FormGroup>
-      <FormControl
-        componentClass="select"
+    <Form.Group>
+      <Form.Control
+        as="select"
         value={props.value}
         required={props.required}
         onChange={event => props.onChange(event.target.value)}
@@ -23,7 +23,7 @@ export function WireDropDown(props) {
               {connector.indexOf(".") < 0 ? `${connector} (port)` : `${connector} (pin)`}
             </option>
           ))}
-      </FormControl>
-    </FormGroup>
+      </Form.Control>
+    </Form.Group>
   );
 }

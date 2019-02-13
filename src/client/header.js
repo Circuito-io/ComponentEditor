@@ -7,7 +7,7 @@ import { Publish } from "./publish";
 export class Header extends React.Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect>
+      <Navbar collapseOnSelect>
         <Nav>
           <Navbar.Brand>
             <Image
@@ -22,7 +22,7 @@ export class Header extends React.Component {
             <Nav.Link>{this.props.activeBlock}</Nav.Link>
           )}
         </Nav>
-        <Nav pullRight>
+        <Nav className="justify-content-end">
           <Nav.Link href="https://talk.circuito.io" target="_blank">
             Help
           </Nav.Link>
