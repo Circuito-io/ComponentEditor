@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Tab, Row, Col, Nav, NavItem, Button } from "react-bootstrap";
+import { Tabs, Tab, Card, Nav } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import {
@@ -8,6 +8,7 @@ import {
   getDefaultRegistry,
   getUiOptions
 } from "react-jsonschema-form/lib/utils";
+import NavbarToggle from "react-bootstrap/NavbarToggle";
 
 function TabbedObjectFieldTemplate(props) {
   const { formData, schema, uiSchema } = props;
@@ -48,7 +49,6 @@ function TabbedObjectFieldTemplate(props) {
           formContext={props.formContext}
         />
       )}
-
       {props.description && (
         <DescriptionField
           id={`${props.idSchema.$id}__description`}
@@ -56,36 +56,38 @@ function TabbedObjectFieldTemplate(props) {
           formContext={props.formContext}
         />
       )}
-
-      <Card body>
-        <Tab.Container
-          id={`${props.idSchema.$id}__tabs`}
-          defaultActiveKey={tabsNames[0]}
-        >
-          <Row className="clearfix">
-            <Col sm={2}>
-              <Nav variant="pills">
-                {tabsNames.map((tabName, index) => (
-                  <NavItem eventKey={`${tabName}`} key={index}>
-                    {tabName}
-                  </NavItem>
-                ))}
-              </Nav>
-            </Col>
-            <Col sm={10}>
-              <Card body>
-                <Tab.Content animation>
-                  {tabsNames.map((tabName, index) => (
-                    <Tab.Pane eventKey={`${tabName}`} key={index}>
-                      {tabsProperties[tabName].map(prop => prop.content)}
-                    </Tab.Pane>
-                  ))}
-                </Tab.Content>
-              </Card>
-            </Col>
-          </Row>
-        </Tab.Container>
-      </Card>
+      <Tab.Container defaultActiveKey={tabsNames[0]}>
+        <Card>
+          <Card.Header>
+            <Nav variant="tabs">
+              {tabsNames.map((tabName, index) => (
+                <Nav.Item>
+                  <Nav.Link eventKey={tabName}>{tabName}</Nav.Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+          </Card.Header>
+          <Card.Body>
+            <Tab.Content>
+              {tabsNames.map((tabName, index) => (
+                <Tab.Pane eventKey={tabName}>
+                  {tabsProperties[tabName].map(prop => prop.content)}
+                </Tab.Pane>
+              ))}
+            </Tab.Content>
+          </Card.Body>
+          {/* <Tabs
+            id={`${props.idSchema.$id}__tabs`}
+            defaultActiveKey={tabsNames[0]}
+          >
+            {tabsNames.map((tabName, index) => (
+              <Tab eventKey={tabName} title={tabName}>
+                {tabsProperties[tabName].map(prop => prop.content)}
+              </Tab>
+            ))}
+          </Tabs> */}
+        </Card>
+      </Tab.Container>
     </fieldset>
   );
 }
