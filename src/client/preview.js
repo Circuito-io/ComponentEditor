@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Button, Nav, Glyphicon } from "react-bootstrap";
+import { Modal, Button, Nav } from "react-bootstrap";
 import { invoke_upload } from "./controller.js";
 import { toast } from "react-toastify";
 
@@ -110,7 +110,6 @@ export class Preview extends React.Component {
         </Modal>
 
         <Nav.Link onClick={this.onPreview}>
-          {/* <Glyphicon glyph="glyphicon-refresh" /> */}
           Preview
         </Nav.Link>
       </React.Fragment>

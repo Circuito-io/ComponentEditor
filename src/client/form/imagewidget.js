@@ -34,6 +34,7 @@ export function ImageWidget(props) {
 
       <InputGroup.Append>
         <Button
+          variant="outline-secondary"
           disabled={!props.value}
           onClick={event => {
             if (props.value) window.open(props.value, "_blank");
@@ -42,6 +43,7 @@ export function ImageWidget(props) {
           Open
         </Button>
         <Button
+          variant="outline-secondary"
           onClick={event => {
             ReactCloudinaryUploader.open(cloudinaryOptions)
               .then(image => {

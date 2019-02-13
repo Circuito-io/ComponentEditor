@@ -8,37 +8,34 @@ export class Header extends React.Component {
   render() {
     return (
       <Navbar collapseOnSelect bg="dark" variant="dark">
-        
+        <Link to="/">
           <Navbar.Brand>
-            <Link to="/">
-              <img
-                src="https://www.circuito.io/static/images/cir_logo_white.svg"
-              />
-            </Link>
+            <img src="https://www.circuito.io/static/images/cir_logo_white.svg" />
+            &nbsp; Editor
           </Navbar.Brand>
-          <Navbar.Brand>
-            <Link to="/">Editor</Link>
-          </Navbar.Brand>
-          {this.props.activeBlock && (
-            <Nav>
+        </Link>
+
+        {this.props.activeBlock && (
+          <Nav>
             <Nav.Link>{this.props.activeBlock}</Nav.Link>
-            </Nav>
-          )}
-        
-        <Nav className="justify-content-end">
-          <Nav.Link href="https://talk.circuito.io" target="_blank">
-            Help
-          </Nav.Link>
-          <Preview />
-          <Publish />
-          <Navbar.Brand>
-            <a href="https://github.com/Circuito-io/ComponentEditor" target="_blank">
-              <img
-                src="GitHub-Mark-Light-32px.png"
-              />
-            </a>
-          </Navbar.Brand>
-        </Nav>
+          </Nav>
+        )}
+
+        <Navbar.Collapse className="justify-content-end">
+          <Nav className="justify-content-end">
+            <Nav.Link href="https://talk.circuito.io" target="_blank">
+              Help
+            </Nav.Link>
+            <Preview />
+            <Publish />
+            <Navbar.Brand
+              href="https://github.com/Circuito-io/ComponentEditor"
+              target="_blank"
+            >
+              <img src="GitHub-Mark-Light-32px.png" />
+            </Navbar.Brand>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }

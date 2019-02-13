@@ -3,6 +3,8 @@ import remark from "remark";
 //import { recommended } from "remark-preset-lint-recommended";
 import html from "remark-html";
 import { docs } from "../docs";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 var reDocsKey = new RegExp("{{(.*)}}");
 
@@ -28,9 +30,9 @@ export const TooltipDescriptionField = ({ id, description }) => {
     return (
       <div className="tooltip-hint" id={id} data-tip={`${docHTML}${imgTag}`}>
         <a>
-          <span className="glyphicon glyphicon-question-sign" aria-hidden="true" />
+          <FontAwesomeIcon icon={faQuestionCircle} />
         </a>
-        <br/>
+        <br />
       </div>
     );
   } else {

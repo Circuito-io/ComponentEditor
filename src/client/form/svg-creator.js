@@ -194,7 +194,7 @@ export class SVGCreator extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Button onClick={this.handleShow}>SVG Creator</Button>
+        <Button variant="outline-secondary" onClick={this.handleShow}>SVG Creator</Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>

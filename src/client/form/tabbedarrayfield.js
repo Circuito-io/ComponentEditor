@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Tabs,
-  Tab,
-  Row,
-  Col,
-  Nav,
-  MenuItem,
-  NavDropdown,
-  NavItem
-} from "react-bootstrap";
+import { Tab, Nav, Button } from "react-bootstrap";
 
 import {
   getDefaultFormState,
@@ -20,6 +11,8 @@ import {
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
+import { faTimesCircle, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
   if (!title) {
@@ -39,80 +32,27 @@ function ArrayFieldDescription({ DescriptionField, idSchema, description }) {
   return <DescriptionField id={id} description={description} />;
 }
 
-function IconBtn(props) {
-  const { type = "default", icon, className, ...otherProps } = props;
+function TabbedArrayItemHeader(props) {
   return (
-    <button
-      type="button"
-      className={`btn btn-${type} ${className}`}
-      {...otherProps}
-    >
-      <i className={`glyphicon glyphicon-${icon}`} />
-    </button>
+    <Nav.Item>
+      <Nav.Link eventKey={props.index}>
+        {props.tabName}&nbsp;&nbsp;
+        {props.hasRemove && (
+          <Button
+            variant="danger"
+            size="sm"
+            disabled={props.disabled || props.readonly}
+            onClick={props.onDropIndexClick(props.index)}
+          >
+            <FontAwesomeIcon icon={faTimesCircle} />
+          </Button>
+        )}
+      </Nav.Link>
+    </Nav.Item>
   );
 }
 
-class TabbedArrayItemHeader extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isOpen: false };
-
-    this.btnStyle = {
-      flex: 1,
-      paddingLeft: 6,
-      paddingRight: 6,
-      fontWeight: "bold"
-    };
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.isOpen && prevState.isOpen) {
-      this.setState({ isOpen: false });
-    }
-  }
-
-  render() {
-    let props = this.props;
-    return (
-      <NavItem
-        eventKey={props.index}
-        onClick={() => props.onSelect(props.index)}
-      >
-        <div
-          style={{ display: "flex" }}
-          className={"dropdown" + (this.state.isOpen ? " open" : "")}
-        >
-          {props.tabName}
-          {props.hasRemove && (
-            <div onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
-              <span className="caret" style={{ margin: "7px" }} />
-            </div>
-          )}
-          <div className="dropdown-menu" style={{ marginLeft: -15 }}>
-            <div
-              tabIndex="-1"
-              style={this.btnStyle}
-              disabled={props.disabled || props.readonly}
-              onClick={props.onDropIndexClick(props.index)}
-            >
-              Remove
-            </div>
-          </div>
-        </div>
-      </NavItem>
-    );
-  }
-}
-
 function TabbedArrayItemContent(props) {
-  const btnStyle = {
-    flex: 1,
-    paddingLeft: 6,
-    paddingRight: 6,
-    fontWeight: "bold"
-  };
-
   return (
     <Tab.Pane eventKey={props.index}>
       <div className={props.className}>
@@ -155,9 +95,9 @@ function TabbedArrayFieldTemplate(props) {
       )}
 
       <Tab.Container
+        id={`array-item-list-${props.idSchema.$id}`}
         defaultActiveKey={0}
         activeKey={props.activeKey}
-        id={`array-item-list-${props.idSchema.$id}`}
         onSelect={eventKey => {
           if (eventKey == "+") {
             props.onAddClick(document.createEvent("Event"));
@@ -166,38 +106,29 @@ function TabbedArrayFieldTemplate(props) {
           }
         }}
       >
-        <Row className="clearfix">
-          <Col sm={12}>
-            <Nav variant="tabs">
-              {props.items &&
-                props.items.map((p, index) => (
-                  <TabbedArrayItemHeader key={index} {...p} />
-                ))}
-              {props.canAdd && (
-                <NavItem
-                  eventKey="+"
-                  disabled={props.disabled || props.readonly}
-                >
-                  +
-                </NavItem>
-              )}
-            </Nav>
-          </Col>
-          <Col sm={12}>
-            <Tab.Content animation>
-              {props.items &&
-                props.items.map((p, index) => (
-                  <TabbedArrayItemContent key={index} {...p} />
-                ))}
-              {(props.items.length == 0) && (
-                <TabbedArrayItemContent key={-1} index={-1}>
-                  No elements. Click '+' to create a new one.
-                </TabbedArrayItemContent>
-              )}
-              <Tab.Pane eventKey="+">Adding...</Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
+        <Nav variant="pills">
+          {props.items &&
+            props.items.map((p, index) => (
+              <TabbedArrayItemHeader key={index} {...p} />
+            ))}
+          {props.canAdd && (
+            <Nav.Link eventKey="+" disabled={props.disabled || props.readonly}>
+              <FontAwesomeIcon icon={faPlusCircle} />
+            </Nav.Link>
+          )}
+        </Nav>
+        <Tab.Content>
+          {props.items &&
+            props.items.map((p, index) => (
+              <TabbedArrayItemContent key={index} {...p} />
+            ))}
+          {props.items.length == 0 && (
+            <TabbedArrayItemContent key={-1} index={-1}>
+              No elements. Click '+' to create a new one.
+            </TabbedArrayItemContent>
+          )}
+          <Tab.Pane eventKey="+">Adding...</Tab.Pane>
+        </Tab.Content>
       </Tab.Container>
     </fieldset>
   );
