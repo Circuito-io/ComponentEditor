@@ -8,6 +8,7 @@ export function WireDropDown(props) {
   const connectorsList = props.formContext.connectorsList;
 
   const invalidValue =
+    props.value &&
     connectorsList &&
     connectorsList[circuitid] &&
     !connectorsList[circuitid].includes(props.value);
