@@ -10,10 +10,11 @@ export class Header extends React.Component {
       <Navbar inverse collapseOnSelect>
         <Nav>
           <Navbar.Brand>
-            <Image
-              src="https://www.circuito.io/static/images/cir_logo_white.svg"
-              width="110"
-            />
+            <Link to="/">
+              <Image
+                src="https://www.circuito.io/static/images/cir_logo_white.svg"
+              />
+            </Link>
           </Navbar.Brand>
           <Navbar.Brand>
             <Link to="/">Editor</Link>
@@ -28,6 +29,13 @@ export class Header extends React.Component {
           </NavItem>
           <Preview />
           <Publish />
+          <Navbar.Brand>
+            <a href="https://github.com/Circuito-io/ComponentEditor" target="_blank">
+              <Image
+                src="GitHub-Mark-Light-32px.png"
+              />
+            </a>
+          </Navbar.Brand>
         </Nav>
       </Navbar>
     );
