@@ -86,7 +86,9 @@ export class Block extends React.Component {
           if (partName in this.partConnectorsCache) {
             // use part from cache
             connectorsByCircuit[circuitIndex].push(
-              ...this.partConnectorsCache[partName]
+              ...this.partConnectorsCache[partName].map(
+                connector => `${part.name}.${connector}`
+              )
             );
           } else {
             // part no in cache, retreive and cache for future use
@@ -117,7 +119,7 @@ export class Block extends React.Component {
                     connector => `${part.name}.${connector}`
                   );
 
-                  this.partConnectorsCache[partName] = svgConnectors;
+                  this.partConnectorsCache[partName] = svgdata.ConnectorsNames;
                   connectorsByCircuit[circuitIndex].push(...svgConnectors);
                 })
             );
@@ -178,11 +180,13 @@ export class Block extends React.Component {
     if (this.state.formSrcData == {}) return;
 
     if (isEqual(data.formData.circuits, this.currentData.circuits) == false) {
+      //detect changes in the circuits
+
       this.setState({ formSrcData: data.formData });
       this.updateConnectors();
-      ReactTooltip.rebuild();
     }
 
+    ReactTooltip.rebuild();
     this.modified = true;
     this.currentData = data.formData;
   }
@@ -205,14 +209,7 @@ export class Block extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="container">
-          <Button
-            onClick={event => {
-              gitpod_open("Blocks/" + this.props.block + ".json");
-            }}
-          >
-            Open file in code editor
-          </Button>
+        <div className="container" style={{ "paddingBottom": "50px" }}>
           <EditorForm
             schema={blockSchema.default}
             uiSchema={blockuiSchema(
@@ -235,6 +232,13 @@ export class Block extends React.Component {
             }}
           >
             <div className="fixed-bottom-footer modal-footer">
+              <Button
+                onClick={event => {
+                  gitpod_open("Blocks/" + this.props.block + ".json");
+                }}
+              >
+                Open file in code editor
+              </Button>
               <Button variant="danger" onClick={this.delete}>
                 Delete
               </Button>

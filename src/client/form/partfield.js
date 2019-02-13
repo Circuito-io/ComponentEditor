@@ -8,9 +8,9 @@ import {
   read_a_part,
   update_a_part,
   read_a_svgdata,
-  delete_a_part
+  delete_a_part,
+  gitpod_open
 } from "../controller.js";
-import { SVGCreator } from "../svg-creator";
 import ReactTooltip from "react-tooltip";
 
 import * as partSchema from "../../../circuito-schema/part.json";
@@ -32,7 +32,9 @@ export class PartField extends React.Component {
   }
 
   onShowModal() {
-    if (!this.preventNextReload)
+    //prevent the reload only once
+    if (this.preventNextReload) this.preventNextReload = false;
+    else
       read_a_part(this.state.objName).then(newPartData => {
         if (newPartData.error) {
           toast.error("Can't read part:" + newPartData.error);
@@ -55,7 +57,8 @@ export class PartField extends React.Component {
   }
 
   onSelectNew(newPartName) {
-    var newData = { name: newPartName };
+    var newData = { name: newPartName, bom: [{ name: "octopart" }] };
+
     this.preventNextReload = true; // don't reload file on modalShow, because it's not ready
     update_a_part(newPartName, newData).then(res => {
       if (!(res && res.ok))
@@ -105,6 +108,7 @@ export class PartField extends React.Component {
         });
     }
     this.lastData = formData;
+    ReactTooltip.rebuild();
   }
 
   onDelete() {
@@ -129,16 +133,18 @@ export class PartField extends React.Component {
         modalTitle={"Part " + this.state.objName}
         onSave={this.onSave}
         onShowModal={this.onShowModal}
-        options={this.props.formContext.codersList}
+        options={this.props.formContext.partsList}
         placeholder="Select a part..."
         defaultSelected={this.state.objName ? [this.state.objName] : []}
         newSelectionPrefix="Create new part:"
         onSelect={this.onSelect}
         onSelectNew={this.onSelectNew}
         onDelete={this.onDelete}
+        onEdit={event => {
+          gitpod_open("Parts/" + this.state.objName + ".json");
+        }}
       >
         <React.Fragment>
-          <SVGCreator />
           <EditorForm
             schema={partSchema.default}
             uiSchema={partuiSchema(this.props.formContext.partsList)}

@@ -20,7 +20,10 @@ export function partuiSchema(partsList) {
       }
     },
     symbol: {
-      "ui:widget": "imagewidget"
+      "ui:widget": "imagewidget",
+      "ui:options": {
+        svgcreator: true
+      }
     },
     category: {
       "ui:field": "typeahead",

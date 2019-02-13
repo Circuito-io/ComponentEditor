@@ -8,7 +8,7 @@ import { ListArrayField } from "./listarrayfield";
 import { TabbedArrayField } from "./tabbedarrayfield";
 import { TabbedObjectField } from "./tabbedobjectfield";
 import { WireDropDown } from "./wiredropdown";
-import { AceEditorWidget } from "./aceeditorwidget";
+import { AceEditorField } from "./aceeditorfield";
 import { FilesArrayField } from "./filesarray";
 import { TooltipDescriptionField } from "./tooltipdescriptionfield";
 import { CustomTitleField} from "./titlefield";
@@ -23,14 +23,14 @@ const editorFields = {
   tabbedobject: TabbedObjectField,
   partfield: PartField,
   coderfield: CoderField,
-  filesarray: FilesArrayField
+  filesarray: FilesArrayField,
+  aceeditor: AceEditorField
 };
 
 const editorWidgets = {
   checkbox: ModifiedCheckboxWidget,
   imagewidget: ImageWidget,
-  wiredropdown: WireDropDown,
-  aceeditor: AceEditorWidget
+  wiredropdown: WireDropDown
 };
 
 export const EditorForm = React.forwardRef((props, ref) => {

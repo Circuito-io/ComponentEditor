@@ -4,9 +4,14 @@ import { toast } from "react-toastify";
 import { InputGroupModalField } from "./inputgroupmodalfield";
 import { EditorForm } from "./editorform";
 import { coderuiSchema } from "../schema/coderSchema.js";
-import { read_a_coder, update_a_coder, delete_a_coder } from "../controller.js";
+import {
+  read_a_coder,
+  update_a_coder,
+  delete_a_coder,
+  gitpod_open
+} from "../controller.js";
 import AceEditor from "react-ace";
-import "brace/mode/java";
+import "brace/mode/c_cpp";
 import "brace/theme/monokai";
 import ReactTooltip from "react-tooltip";
 
@@ -29,7 +34,9 @@ export class CoderField extends React.Component {
   }
 
   onShowModal() {
-    if (!this.preventNextReload)
+    //prevent the reload only once
+    if (this.preventNextReload) this.preventNextReload = false;
+    else
       read_a_coder(this.state.objName).then(newCoderData => {
         if (newCoderData.error) {
           toast.error("Can't read coder:" + newCoderData.error);
@@ -39,7 +46,6 @@ export class CoderField extends React.Component {
         this.setState({ objData: newCoderData });
         ReactTooltip.rebuild();
       });
-    this.preventNextReload = false;
   }
 
   onSave() {
@@ -122,7 +128,7 @@ export class CoderField extends React.Component {
         if (!(res && res.ok)) toast.error("Delete coder failed");
         else {
           toast.success("Deleted " + this.state.objName, { autoClose: 2000 });
-          this.props.onChange("");
+          //this.props.onChange(""); // BUG: not updating form
           this.inputmodalRef.current.hideModal();
           this.setState({ objName: "" });
         }
@@ -145,6 +151,9 @@ export class CoderField extends React.Component {
         onSelect={this.onSelect}
         onSelectNew={this.onSelectNew}
         onDelete={this.onDelete}
+        onEdit={event => {
+          gitpod_open("Coders/" + this.state.objName + ".json");
+        }}
       >
         <React.Fragment>
           <EditorForm
@@ -158,13 +167,14 @@ export class CoderField extends React.Component {
               Submit
             </Button>
           </EditorForm>
-          Preview
+          {/* Preview
           <AceEditor
-            mode="java"
+            mode="c_cpp"
             theme="monokai"
-            name="UNIQUE_ID_OF_DIV"
+            name="ace_preview"
+            width="100%"
             editorProps={{ $blockScrolling: true }}
-          />
+          /> */}
         </React.Fragment>
       </InputGroupModalField>
     );

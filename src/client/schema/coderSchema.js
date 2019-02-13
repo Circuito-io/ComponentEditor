@@ -31,16 +31,16 @@ export const coderuiSchema = {
   },
   code: {
     global: {
-      "ui:widget": "aceeditor"
+      "ui:field": "aceeditor"
     },
     constructors: {
-      "ui:widget": "aceeditor"
+      "ui:field": "aceeditor"
     },
     setup: {
-      "ui:widget": "aceeditor"
+      "ui:field": "aceeditor"
     },
     snippetCode: {
-      "ui:widget": "aceeditor"
+      "ui:field": "aceeditor"
     }
   }
 };

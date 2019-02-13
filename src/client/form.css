@@ -16,6 +16,10 @@ fieldset .two-coloumn-field:nth-child(odd) {
   width: 50%;
 } */
 
+.navbar-brand>img {
+  height: 90%;
+}
+
 form > p {
   padding: 1em;
 }
@@ -50,6 +54,7 @@ form > p {
 .modal-body {
   max-height: calc(100vh - 150px);
   overflow-y: auto;
+  overflow-x: hidden
 }
 
 .fixed-bottom-footer.modal-footer {
