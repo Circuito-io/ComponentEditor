@@ -40,6 +40,12 @@ export class SVGCreator extends React.Component {
     var lastPinLocation = 0;
     if (formData.pins != null)
       pins = formData.pins.map((pin, index) => {
+        
+        if (pin.name)
+        {
+         
+        
+        
         var r = 2.05;
         var spacing = 7.2;
         var x = 3.5 + spacing * index;
@@ -106,7 +112,7 @@ export class SVGCreator extends React.Component {
             {pinShape}
           </g>
         );
-      });
+      }});
 
     var height = formData.height;
     var viewBox = "";

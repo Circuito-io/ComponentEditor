@@ -35,6 +35,10 @@ export const svgSchema = {
             title: "Pins:",
             items: {
                 type: "object",
+                required: [
+                "name",
+                "type"
+                ],
                 properties: {
                     name: {
                         title: "Pin Name:",
@@ -43,6 +47,7 @@ export const svgSchema = {
                     type: {
                         title: "Pin Type:",
                         type: "string",
+                        default: "male",
                         enum: ["male", "female"]
                     }
                 }
