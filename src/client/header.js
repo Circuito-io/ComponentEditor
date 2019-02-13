@@ -7,11 +7,11 @@ import { Publish } from "./publish";
 export class Header extends React.Component {
   render() {
     return (
-      <Navbar collapseOnSelect>
-        <Nav>
+      <Navbar collapseOnSelect bg="dark" variant="dark">
+        
           <Navbar.Brand>
             <Link to="/">
-              <Image
+              <img
                 src="https://www.circuito.io/static/images/cir_logo_white.svg"
               />
             </Link>
@@ -20,9 +20,11 @@ export class Header extends React.Component {
             <Link to="/">Editor</Link>
           </Navbar.Brand>
           {this.props.activeBlock && (
+            <Nav>
             <Nav.Link>{this.props.activeBlock}</Nav.Link>
+            </Nav>
           )}
-        </Nav>
+        
         <Nav className="justify-content-end">
           <Nav.Link href="https://talk.circuito.io" target="_blank">
             Help
@@ -31,7 +33,7 @@ export class Header extends React.Component {
           <Publish />
           <Navbar.Brand>
             <a href="https://github.com/Circuito-io/ComponentEditor" target="_blank">
-              <Image
+              <img
                 src="GitHub-Mark-Light-32px.png"
               />
             </a>

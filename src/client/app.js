@@ -11,6 +11,7 @@ import { Home } from "./home.js";
 import { cacheData } from "./controller.js";
 import ReactTooltip from "react-tooltip";
 
+import "bootstrap/dist/css/bootstrap.css";
 import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
 
