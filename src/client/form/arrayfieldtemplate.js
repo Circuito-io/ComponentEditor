@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import {
-  faTimesCircle,
+  faTrashAlt,
   faAngleUp,
   faAngleDown,
   faPlus
@@ -62,7 +62,7 @@ export function ArrayFieldTemplate(props) {
               variant="outline-danger"
               onClick={element.onDropIndexClick(element.index)}
             >
-              <FontAwesomeIcon icon={faTimesCircle} />
+              <FontAwesomeIcon icon={faTrashAlt} />
             </Button>
           </Card.Footer>
         </Card>

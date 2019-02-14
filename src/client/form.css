@@ -13,17 +13,24 @@ fieldset .two-coloumn-field {
 }
 
 .card {
-	margin: 2px
-}
-
-.modal-dialog {
-  margin: 10px;
-  max-width: unset;
+	margin: 2px 4px
 }
 
 .navbar-brand>img {
   height: 20px;
   vertical-align: baseline
+}
+
+.h4 {
+  font-size: 1.1rem
+}
+
+.nav-link {
+  padding: 0.5rem
+}
+
+.card-body > .form-group {
+  margin: 0px
 }
 
 form > p {
@@ -57,8 +64,13 @@ form > p {
   width: 300px;
 }
 
+.modal-dialog {
+  margin: 10px;
+  max-width: unset;
+}
+
 .modal-body {
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 200px);
   overflow-y: auto;
   overflow-x: hidden
 }

@@ -1,17 +1,15 @@
 import React from "react";
-import { Tabs, Tab, Card, Nav } from "react-bootstrap";
+import { Tab, Card, Nav } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import {
   orderProperties,
   retrieveSchema,
-  getDefaultRegistry,
-  getUiOptions
+  getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
-import NavbarToggle from "react-bootstrap/NavbarToggle";
 
 function TabbedObjectFieldTemplate(props) {
-  const { formData, schema, uiSchema } = props;
+  const { uiSchema } = props;
 
   var tabsSettings =
     (uiSchema["ui:options"] && uiSchema["ui:options"]["tabs"]) || {};
@@ -61,7 +59,7 @@ function TabbedObjectFieldTemplate(props) {
           <Card.Header>
             <Nav justify variant="pills">
               {tabsNames.map((tabName, index) => (
-                <Nav.Item>
+                <Nav.Item key={index}>
                   <Nav.Link eventKey={tabName}>{tabName}</Nav.Link>
                 </Nav.Item>
               ))}
@@ -70,7 +68,7 @@ function TabbedObjectFieldTemplate(props) {
           <Card.Body>
             <Tab.Content>
               {tabsNames.map((tabName, index) => (
-                <Tab.Pane eventKey={tabName}>
+                <Tab.Pane eventKey={tabName} key={index}>
                   {tabsProperties[tabName].map(prop => prop.content)}
                 </Tab.Pane>
               ))}

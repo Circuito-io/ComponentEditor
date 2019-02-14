@@ -11,7 +11,7 @@ import {
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
-import { faTimesCircle, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
@@ -44,7 +44,7 @@ function TabbedArrayItemHeader(props) {
             disabled={props.disabled || props.readonly}
             onClick={props.onDropIndexClick(props.index)}
           >
-            <FontAwesomeIcon icon={faTimesCircle} />
+            <FontAwesomeIcon icon={faTrashAlt} />
           </Button>
         )}
       </Nav.Link>

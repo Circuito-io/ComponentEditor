@@ -10,7 +10,7 @@ import {
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
@@ -53,7 +53,7 @@ function FileArrayItem(props) {
                 disabled={props.disabled || props.readonly}
                 onClick={props.onDropIndexClick(props.index)}
               >
-                <FontAwesomeIcon icon={faTimesCircle} />
+                <FontAwesomeIcon icon={faTrashAlt} />
               </Button>
             )}
           </div>
