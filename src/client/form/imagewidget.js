@@ -18,9 +18,9 @@ export function ImageWidget(props) {
   return (
     <InputGroup>
       {props.options && props.options.svgcreator && (
-        <InputGroup.Button>
+        <InputGroup.Prepend>
           <SVGCreator />
-        </InputGroup.Button>
+        </InputGroup.Prepend>
       )}
 
       <FormControl

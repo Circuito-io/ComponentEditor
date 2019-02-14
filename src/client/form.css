@@ -4,17 +4,22 @@ fieldset .two-coloumn-field {
   vertical-align: top;
 }
 
-/* fieldset .two-coloumn-field:nth-child(even) {
-  float: right;
-  padding-left: 1em;
-  width: 50%;
+.card-body {
+	padding: 0.5rem
 }
 
-fieldset .two-coloumn-field:nth-child(odd) {
-  float: left;
-  padding-right: 1em;
-  width: 50%;
-} */
+.card-footer {
+	padding: 0.5rem
+}
+
+.card {
+	margin: 2px
+}
+
+.modal-dialog {
+  margin: 10px;
+  max-width: unset;
+}
 
 .navbar-brand>img {
   height: 20px;

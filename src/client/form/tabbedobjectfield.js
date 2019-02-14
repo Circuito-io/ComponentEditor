@@ -59,7 +59,7 @@ function TabbedObjectFieldTemplate(props) {
       <Tab.Container defaultActiveKey={tabsNames[0]}>
         <Card>
           <Card.Header>
-            <Nav variant="tabs">
+            <Nav justify variant="pills">
               {tabsNames.map((tabName, index) => (
                 <Nav.Item>
                   <Nav.Link eventKey={tabName}>{tabName}</Nav.Link>

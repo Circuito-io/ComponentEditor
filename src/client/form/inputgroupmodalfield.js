@@ -77,7 +77,7 @@ export class InputGroupModalField extends React.Component {
             />
             <InputGroup.Prepend>
               <Button
-                className="btn-outline-secondary"
+                variant="outline-secondary"
                 onClick={this.showModal}
                 disabled={this.state.editDisabled}
               >
