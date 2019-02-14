@@ -68,6 +68,9 @@ Circuits with a lower cost will be tried first.`
   "circuit.part.part": {
     text: `Select the part you want to add from the dropdown menu or create a new part, by entering a name and clicking on the Edit button.`
   },
+  "circuit.part.rotation": {
+    text: "Specify part rotation (deg.) on canvas. Leave blank for auto-rotation"
+  },
   "circuit.supportBlocks": {
     text: `Some blocks require additional blocks in order to function. These may come in the form of power regulators, logic level converters etc. E.g servo motors require 5v power supply with a higher current than the Arduino Uno 5v pin. In this case, you’ll need to add a 5v regulator block that will be added automatically by the system.
       You can specify different combinations of single or multiple support blocks. These will be prioritized by their cost. (set a value 10-99)`

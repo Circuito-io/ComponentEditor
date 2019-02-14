@@ -9,7 +9,13 @@ function createNewBlockData(blockName) {
   return {
     name: blockName,
     blockId: blockId.toString(),
-    app: { appName: blockName, visible: true },
+    app: {
+      appName: blockName,
+      visible: true,
+      indicators: {
+        solder: false
+      }
+    },
     circuits: [{ name: "default", cost: 0 }]
   };
 }

@@ -78,12 +78,15 @@ export function circuitsuiSchema(supportBlocksList) {
                   orderable: false
                 },
                 items: {
+                  cost: {
+                    classNames: "three-coloumn-field"
+                  },
                   spec: {
-                    classNames: "two-coloumn-field",
+                    classNames: "three-coloumn-field",
                     "ui:emptyValue": ""
                   },
                   voltage: {
-                    classNames: "two-coloumn-field"
+                    classNames: "three-coloumn-field"
                   }
                 }
               },

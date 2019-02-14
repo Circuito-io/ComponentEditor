@@ -4,33 +4,45 @@ fieldset .two-coloumn-field {
   vertical-align: top;
 }
 
+fieldset .three-coloumn-field {
+  display: inline-block;
+  width: 33% !important;
+  vertical-align: top;
+}
+
+
 .card-body {
-	padding: 0.5rem
+  padding: 0.5rem;
 }
 
 .card-footer {
-	padding: 0.5rem
+  padding: 0.5rem;
 }
 
-.card {
-	margin: 2px 4px
-}
-
-.navbar-brand>img {
+.navbar-brand > img {
   height: 20px;
-  vertical-align: baseline
+  vertical-align: baseline;
 }
 
 .h4 {
-  font-size: 1.1rem
+  font-size: 1.1rem;
 }
 
 .nav-link {
-  padding: 0.5rem
+  padding: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  margin: 4px;
+  box-shadow: 2px 2px 10px lightgrey;
 }
 
 .card-body > .form-group {
-  margin: 0px
+  margin: 0px;
 }
 
 form > p {
@@ -57,6 +69,13 @@ form > p {
   opacity: 1 !important;
 }
 
+.form-control.rbt-input-multi {
+  height: unset;
+  min-height: calc(
+    1.5em + 0.75rem + 2px
+  ); /* as in other .form-control height */
+}
+
 .tooltip-img {
   display: block;
   margin-left: auto;
@@ -72,7 +91,7 @@ form > p {
 .modal-body {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .fixed-bottom-footer.modal-footer {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Nav, Button } from "react-bootstrap";
+import { Tab, Nav, Button, Badge } from "react-bootstrap";
 
 import {
   getDefaultFormState,
@@ -11,7 +11,7 @@ import {
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
-import { faTrashAlt, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
@@ -38,14 +38,14 @@ function TabbedArrayItemHeader(props) {
       <Nav.Link eventKey={props.index}>
         {props.tabName}&nbsp;&nbsp;
         {props.hasRemove && (
-          <Button
+          <Badge
             variant="danger"
             size="sm"
             disabled={props.disabled || props.readonly}
             onClick={props.onDropIndexClick(props.index)}
           >
             <FontAwesomeIcon icon={faTrashAlt} />
-          </Button>
+          </Badge>
         )}
       </Nav.Link>
     </Nav.Item>
@@ -112,8 +112,8 @@ function TabbedArrayFieldTemplate(props) {
               <TabbedArrayItemHeader key={index} {...p} />
             ))}
           {props.canAdd && (
-            <Nav.Link eventKey="+" disabled={props.disabled || props.readonly}>
-              <FontAwesomeIcon icon={faPlusCircle} />
+            <Nav.Link className="btn btn-outline-secondary" eventKey="+" disabled={props.disabled || props.readonly}>
+              <FontAwesomeIcon icon={faPlus} />
             </Nav.Link>
           )}
         </Nav>
