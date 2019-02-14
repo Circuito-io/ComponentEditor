@@ -13,6 +13,7 @@ import {
   delete_a_block
 } from "./controller.js";
 import ReactTooltip from "react-tooltip";
+import Loader from "react-loader";
 
 import * as blockSchema from "../../circuito-schema/block.json";
 export class Block extends React.Component {
@@ -24,7 +25,8 @@ export class Block extends React.Component {
       partsList: [],
       codersList: [],
       blocksList: [],
-      connectorsList: {}
+      connectorsList: {},
+      loaded: false
     };
 
     this.modified = false;
@@ -47,7 +49,7 @@ export class Block extends React.Component {
     }
 
     read_a_block(this.props.block).then(blockData => {
-      this.setState({ formSrcData: blockData });
+      this.setState({ formSrcData: blockData, loaded: true });
       ReactTooltip.rebuild();
       this.updateConnectors();
     });
@@ -206,47 +208,49 @@ export class Block extends React.Component {
       },
       []
     );
-
+    console.log(this.state.loaded);
     return (
       <React.Fragment>
-        <div className="container" style={{ "paddingBottom": "50px" }}>
-          <EditorForm
-            schema={blockSchema.default}
-            uiSchema={blockuiSchema(
-              this.props.cachedData.blocks,
-              supportBlocksList
-            )}
-            formData={this.state.formSrcData}
-            formContext={{
-              partsList: this.props.cachedData.parts,
-              codersList: this.props.cachedData.coders,
-              connectorsList: this.state.connectorsList
-            }}
-            onChange={this.onDataChange}
-            onSubmit={this.save}
-            onError={errors => {
-              toast.error(
-                "Validation errors: " +
-                  errors.map(error => error.stack).join(",")
-              );
-            }}
-          >
-            <div className="fixed-bottom-footer modal-footer">
-              <Button
-                onClick={event => {
-                  gitpod_open("Blocks/" + this.props.block + ".json");
-                }}
-              >
-                Open file in code editor
-              </Button>
-              <Button variant="danger" onClick={this.delete}>
-                Delete
-              </Button>
-              <Button variant="primary" type="submit">
-                Save
-              </Button>
-            </div>
-          </EditorForm>
+        <div className="container" style={{ paddingBottom: "50px" }}>
+          <Loader loaded={this.state.loaded}>
+            <EditorForm
+              schema={blockSchema.default}
+              uiSchema={blockuiSchema(
+                this.props.cachedData.blocks,
+                supportBlocksList
+              )}
+              formData={this.state.formSrcData}
+              formContext={{
+                partsList: this.props.cachedData.parts,
+                codersList: this.props.cachedData.coders,
+                connectorsList: this.state.connectorsList
+              }}
+              onChange={this.onDataChange}
+              onSubmit={this.save}
+              onError={errors => {
+                toast.error(
+                  "Validation errors: " +
+                    errors.map(error => error.stack).join(",")
+                );
+              }}
+            >
+              <div className="fixed-bottom-footer modal-footer">
+                <Button
+                  onClick={event => {
+                    gitpod_open("Blocks/" + this.props.block + ".json");
+                  }}
+                >
+                  Open file in code editor
+                </Button>
+                <Button variant="danger" onClick={this.delete}>
+                  Delete
+                </Button>
+                <Button variant="primary" type="submit">
+                  Save
+                </Button>
+              </div>
+            </EditorForm>
+          </Loader>
         </div>
       </React.Fragment>
     );
