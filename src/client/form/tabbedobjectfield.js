@@ -55,7 +55,7 @@ function TabbedObjectFieldTemplate(props) {
         />
       )}
       <Tab.Container defaultActiveKey={tabsNames[0]}>
-        <Card style={{ "box-shadow": "unset" }}>
+        <Card style={{ "boxShadow": "unset" }}>
           <Card.Header>
             <Nav justify variant="pills">
               {tabsNames.map((tabName, index) => (
