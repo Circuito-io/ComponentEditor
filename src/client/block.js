@@ -15,6 +15,8 @@ import {
 import ReactTooltip from "react-tooltip";
 
 import * as blockSchema from "../../circuito-schema/block.json";
+
+const UPDATE_CONNECTORS_TIMEOUT = 1000; // 1000 ms before calling updateConnectors on data change
 export class Block extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +34,7 @@ export class Block extends React.Component {
     this.cachedSVGData = {};
     this.updateCycle = 0;
     this.partConnectorsCache = {};
+    this.updateConnectorsTimeout = null;
 
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateConnectors = this.updateConnectors.bind(this);
@@ -211,7 +214,10 @@ export class Block extends React.Component {
       //detect changes in the circuits
 
       this.setState({ formSrcData: data.formData });
-      this.updateConnectors();
+
+      // don't update on every keypress, wait for a timeout before updating
+      clearTimeout(this.updateConnectorsTimeout);
+      this.updateConnectorsTimeout = setTimeout(this.updateConnectors, UPDATE_CONNECTORS_TIMEOUT);
     }
 
     ReactTooltip.rebuild();
