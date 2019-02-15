@@ -64,10 +64,11 @@ export class Block extends React.Component {
       connectorsByCircuit[index] = [];
     });
 
-    // if multiple updates are called simulataniously, one use the last one
+    // if multiple updates are called simulataniously, only use the lastest
     this.updateCycle += 1;
     var currentUpdateCycle = this.updateCycle;
 
+    // collect port names
     circuits.forEach(
       (circuit, index) =>
         circuit.ports &&
@@ -76,59 +77,86 @@ export class Block extends React.Component {
         )
     );
 
+    // collect pins: cache all parts, and update connectorsList
     var promises = [];
+    var partsNames = new Set();
 
     circuits.forEach((circuit, circuitIndex) => {
       circuit.parts &&
         circuit.parts.forEach(part => {
           const partName = part.part;
 
-          if (partName in this.partConnectorsCache) {
-            // use part from cache
-            connectorsByCircuit[circuitIndex].push(
-              ...this.partConnectorsCache[partName].map(
-                connector => `${part.name}.${connector}`
-              )
-            );
-          } else {
-            // part no in cache, retreive and cache for future use
-            promises.push(
-              read_a_part(part.part)
-                .then(partData => {
-                  var symbolurl = partData.symbol;
-
-                  if (symbolurl && typeof symbolurl === "string")
-                    var imgid = symbolurl
-                      .split("/")
-                      .slice(4)
-                      .join("/");
-                  else {
-                    return Promise.reject("Mising symbol for " + partName);
-                  }
-
-                  return imgid;
-                })
-                .then(read_a_svgdata)
-                .catch(ex => {
-                  console.log("Ignoring bad SVG", part.part);
-                })
-                .then(svgdata => {
-                  if (svgdata === undefined) return;
-
-                  const svgConnectors = svgdata.ConnectorsNames.map(
-                    connector => `${part.name}.${connector}`
-                  );
-
-                  this.partConnectorsCache[partName] = svgdata.ConnectorsNames;
-                  connectorsByCircuit[circuitIndex].push(...svgConnectors);
-                })
-            );
-          }
+          partName && partsNames.add(partName);
         });
     });
 
+
+    // cache all parts
+    partsNames.forEach(partName => {
+      if (!(partName in this.partConnectorsCache)) {
+        // part not in cache, retreive and cache for future use
+        promises.push(
+          read_a_part(partName)
+            .then(partData => {
+              if (currentUpdateCycle != this.updateCycle)
+                return Promise.reject("Stale update cycle");
+
+              var symbolurl = partData.symbol;
+
+              if (symbolurl && typeof symbolurl === "string")
+                var imgid = symbolurl
+                  .split("/")
+                  .slice(4)
+                  .join("/");
+              else {
+                return Promise.reject("Mising symbol for " + partName);
+              }
+
+              return imgid;
+            })
+            .then(read_a_svgdata)
+            .catch(ex => {
+              console.log("Ignoring bad SVG", partName);
+            })
+            .then(svgdata => {
+              if (currentUpdateCycle != this.updateCycle)
+                return Promise.reject("Stale update cycle");
+
+              if (svgdata === undefined) return;
+
+              this.partConnectorsCache[partName] = svgdata.ConnectorsNames;
+            })
+        );
+      }
+    });
+
+    // when cache is ready, update connectorsList
     Promise.all(promises).then(() => {
       if (currentUpdateCycle == this.updateCycle) {
+        circuits.forEach((circuit, circuitIndex) => {
+          circuit.parts &&
+            circuit.parts.forEach(part => {
+              const partName = part.part;
+
+              if (!partName) return;
+
+              if (partName in this.partConnectorsCache) {
+                // use part from cache
+                connectorsByCircuit[circuitIndex].push(
+                  ...this.partConnectorsCache[partName].map(
+                    connector => `${part.name}.${connector}`
+                  )
+                );
+              } else {
+                console.warn(
+                  "Part",
+                  partName,
+                  "expected in cache but not found"
+                );
+              }
+            });
+        });
+
         this.setState({ connectorsList: connectorsByCircuit });
       }
     });
@@ -209,7 +237,7 @@ export class Block extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="container" style={{ "paddingBottom": "50px" }}>
+        <div className="container" style={{ paddingBottom: "50px" }}>
           <EditorForm
             schema={blockSchema.default}
             uiSchema={blockuiSchema(
