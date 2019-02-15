@@ -4,5 +4,5 @@ ports:
   - port: 9856
     onOpen: ignore
 tasks:
-  - init: git submodule init && git submodule update && npm install
-    command: git submodule update && npm run dev
+  - init: git submodule init && git submodule update && npm install --only=prod
+    command: git submodule update && npm start
