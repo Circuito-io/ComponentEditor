@@ -31,7 +31,7 @@ export const docs = {
     img: "block_desc.png"
   },
   "block.alternativeBlock": {
-      text: "Alternative block to try if this one failed"
+    text: "Alternative block to try if this one failed"
   },
   "block.notes": {
     text:
@@ -69,7 +69,8 @@ Circuits with a lower cost will be tried first.`
     text: `Select the part you want to add from the dropdown menu or create a new part, by entering a name and clicking on the Edit button.`
   },
   "circuit.part.rotation": {
-    text: "Specify part rotation (deg.) on canvas. Leave blank for auto-rotation"
+    text:
+      "Specify part rotation (deg.) on canvas. Leave blank for auto-rotation"
   },
   "circuit.supportBlocks": {
     text: `Some blocks require additional blocks in order to function. These may come in the form of power regulators, logic level converters etc. E.g servo motors require 5v power supply with a higher current than the Arduino Uno 5v pin. In this case, you’ll need to add a 5v regulator block that will be added automatically by the system.
@@ -92,9 +93,22 @@ A port can either require or provide attributes. These attributes are used by th
     The variable's value will hold to codename of this port's provider.`
   },
   "part.row": {
-    text: "Place part on specific row on breadboard (leave blank for auto placing)"
+    text:
+      "Place part on specific row on breadboard (leave blank for auto placing)"
   },
   "part.rotation": {
     text: "Rotate part on breadboard"
+  },
+  "coder.code.global": {
+    text: "TBD Code to inject as global variables"
+  },
+  "coder.code.constructors": {
+    text: "TBD Code to inject to instantiate object"
+  },
+  "coder.code.setup": {
+    text: "TBD Code to inject setup section"
+  },
+  "coder.code.snippet": {
+    text: "TBD Code to inject as snippet"
   }
 };
