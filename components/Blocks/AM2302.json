@@ -5,17 +5,18 @@
   ],
   "blockId": "963780",
   "app": {
-    "appName": "AM2302 Digital Temperature and Humidity Sensor",
-    "image": "http://res.cloudinary.com/circuito/image/upload/nqhyrltgv1knwcztk3it",
+    "visible": true,
     "numericName": "AM2302",
     "shortName": "Temperature and Humidity Sensor",
+    "appName": "AM2302 Digital Temperature and Humidity Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/nqhyrltgv1knwcztk3it",
     "indicators": {
       "verified": false,
       "solder": true
     },
-    "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 2-5% humidity accuracy and 0.5C temperature accuracy.</p>",
-    "visible": true
+    "desc": "<p>Simple I2C Digital Humidity and Temperature sensor, 2-5% humidity accuracy and 0.5C temperature accuracy.</p>"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "5v",
