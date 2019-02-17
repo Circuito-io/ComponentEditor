@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedRGBWS2812_1",
           "part": "LedRGBWS2812"
         }
       ],
@@ -103,19 +103,19 @@
       ],
       "wires": [
         {
-          "from": "this.DIN",
+          "from": "LedRGBWS2812_1.DIN",
           "to": "DIN"
         },
         {
-          "from": "this.VDD",
+          "from": "LedRGBWS2812_1.VDD",
           "to": "VDD"
         },
         {
-          "from": "this.GND",
+          "from": "LedRGBWS2812_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.DOUT",
+          "from": "LedRGBWS2812_1.DOUT",
           "to": "DOUT"
         }
       ],

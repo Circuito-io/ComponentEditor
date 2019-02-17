@@ -40,9 +40,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "SurfaceTransducer",
-          "rotation": 90
+          "name": "SurfaceTransducer_1",
+          "part": "SurfaceTransducer"
         }
       ],
       "ports": [
@@ -82,11 +81,11 @@
       ],
       "wires": [
         {
-          "from": "this.pos",
+          "from": "SurfaceTransducer_1.pos",
           "to": "pos"
         },
         {
-          "from": "this.neg",
+          "from": "SurfaceTransducer_1.neg",
           "to": "neg"
         }
       ],

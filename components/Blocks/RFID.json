@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RFID_1",
           "part": "RFID"
         }
       ],
@@ -179,31 +179,31 @@
       ],
       "wires": [
         {
-          "from": "this.RST",
+          "from": "RFID_1.RST",
           "to": "RST"
         },
         {
-          "from": "this.MISO",
+          "from": "RFID_1.MISO",
           "to": "MISO"
         },
         {
-          "from": "this.SCK",
+          "from": "RFID_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.SDA",
+          "from": "RFID_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "RFID_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.3.3v",
+          "from": "RFID_1.3.3v",
           "to": "3.3v"
         },
         {
-          "from": "this.MOSI",
+          "from": "RFID_1.MOSI",
           "to": "MOSI"
         }
       ],

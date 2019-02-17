@@ -23,7 +23,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "DCMDriverL293D_1",
           "part": "DCMDriverL293D"
         }
       ],
@@ -307,67 +307,67 @@
       ],
       "wires": [
         {
-          "from": "this.Enable1",
+          "from": "DCMDriverL293D_1.Enable1",
           "to": "Enable1"
         },
         {
-          "from": "this.In1",
+          "from": "DCMDriverL293D_1.In1",
           "to": "In1"
         },
         {
-          "from": "this.GND1",
+          "from": "DCMDriverL293D_1.GND1",
           "to": "GND1"
         },
         {
-          "from": "this.GND2",
+          "from": "DCMDriverL293D_1.GND2",
           "to": "GND2"
         },
         {
-          "from": "this.In2",
+          "from": "DCMDriverL293D_1.In2",
           "to": "In2"
         },
         {
-          "from": "this.+Vmotor",
+          "from": "DCMDriverL293D_1.+Vmotor",
           "to": "+Vmotor"
         },
         {
-          "from": "this.Enable2",
+          "from": "DCMDriverL293D_1.Enable2",
           "to": "Enable2"
         },
         {
-          "from": "this.In3",
+          "from": "DCMDriverL293D_1.In3",
           "to": "In3"
         },
         {
-          "from": "this.GND3",
+          "from": "DCMDriverL293D_1.GND3",
           "to": "GND3"
         },
         {
-          "from": "this.GND4",
+          "from": "DCMDriverL293D_1.GND4",
           "to": "GND4"
         },
         {
-          "from": "this.In4",
+          "from": "DCMDriverL293D_1.In4",
           "to": "In4"
         },
         {
-          "from": "this.+V",
+          "from": "DCMDriverL293D_1.+V",
           "to": "+V"
         },
         {
-          "from": "this.Out1",
+          "from": "DCMDriverL293D_1.Out1",
           "to": "Out1"
         },
         {
-          "from": "this.Out2",
+          "from": "DCMDriverL293D_1.Out2",
           "to": "Out2"
         },
         {
-          "from": "this.Out3",
+          "from": "DCMDriverL293D_1.Out3",
           "to": "Out3"
         },
         {
-          "from": "this.Out4",
+          "from": "DCMDriverL293D_1.Out4",
           "to": "Out4"
         }
       ],

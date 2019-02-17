@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TMP102_1",
           "part": "TMP102"
         }
       ],
@@ -139,23 +139,23 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "TMP102_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.ADD0",
+          "from": "TMP102_1.ADD0",
           "to": "ADD0"
         },
         {
-          "from": "this.SDA",
+          "from": "TMP102_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "TMP102_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SCL",
+          "from": "TMP102_1.SCL",
           "to": "SCL"
         }
       ],

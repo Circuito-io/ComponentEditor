@@ -9,7 +9,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "LogicLevelConverter_1",
           "part": "LogicLevelConverter"
         }
       ],
@@ -120,31 +120,31 @@
       ],
       "wires": [
         {
-          "from": "this.LV",
+          "from": "LogicLevelConverter_1.LV",
           "to": "LV"
         },
         {
-          "from": "this.HV1",
+          "from": "LogicLevelConverter_1.HV1",
           "to": "HV1"
         },
         {
-          "from": "this.LV1",
+          "from": "LogicLevelConverter_1.LV1",
           "to": "LV1"
         },
         {
-          "from": "this.LV2",
+          "from": "LogicLevelConverter_1.LV2",
           "to": "LV2"
         },
         {
-          "from": "this.GND",
+          "from": "LogicLevelConverter_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.HV",
+          "from": "LogicLevelConverter_1.HV",
           "to": "HV"
         },
         {
-          "from": "this.HV2",
+          "from": "LogicLevelConverter_1.HV2",
           "to": "HV2"
         }
       ],

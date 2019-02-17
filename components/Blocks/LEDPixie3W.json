@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDPixie3W_1",
           "part": "LEDPixie3W"
         }
       ],
@@ -134,27 +134,27 @@
       ],
       "wires": [
         {
-          "from": "this.5V",
+          "from": "LEDPixie3W_1.5V",
           "to": "5V"
         },
         {
-          "from": "this.GND",
+          "from": "LEDPixie3W_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.IN",
+          "from": "LEDPixie3W_1.IN",
           "to": "IN"
         },
         {
-          "from": "this.OUT",
+          "from": "LEDPixie3W_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.5V_Ch",
+          "from": "LEDPixie3W_1.5V_Ch",
           "to": "5V_Ch"
         },
         {
-          "from": "this.GND_Ch",
+          "from": "LEDPixie3W_1.GND_Ch",
           "to": "GND_Ch"
         }
       ],

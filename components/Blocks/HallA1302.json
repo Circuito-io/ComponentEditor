@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HallA1302_1",
           "part": "HallA1302"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vout",
+          "from": "HallA1302_1.Vout",
           "to": "Vout"
         },
         {
-          "from": "this.Vcc",
+          "from": "HallA1302_1.Vcc",
           "to": "Vcc"
         },
         {
-          "from": "this.Gnd",
+          "from": "HallA1302_1.Gnd",
           "to": "Gnd"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HallA1302_1",
           "part": "HallA1302"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vout",
+          "from": "HallA1302_1.Vout",
           "to": "Vout"
         },
         {
-          "from": "this.Vcc",
+          "from": "HallA1302_1.Vcc",
           "to": "Vcc"
         },
         {
-          "from": "this.Gnd",
+          "from": "HallA1302_1.Gnd",
           "to": "Gnd"
         }
       ],

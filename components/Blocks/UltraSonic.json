@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UltraSonic_1",
           "part": "UltraSonic"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.PW",
+          "from": "UltraSonic_1.PW",
           "to": "PW"
         },
         {
-          "from": "this.GND",
+          "from": "UltraSonic_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.Vin",
+          "from": "UltraSonic_1.Vin",
           "to": "Vin"
         }
       ],
@@ -113,7 +113,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UltraSonic_1",
           "part": "UltraSonic"
         }
       ],
@@ -162,15 +162,15 @@
       ],
       "wires": [
         {
-          "from": "this.PW",
+          "from": "UltraSonic_1.PW",
           "to": "PW"
         },
         {
-          "from": "this.GND",
+          "from": "UltraSonic_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.Vin",
+          "from": "UltraSonic_1.Vin",
           "to": "Vin"
         }
       ],

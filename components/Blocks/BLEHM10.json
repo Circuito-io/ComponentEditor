@@ -38,33 +38,33 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BLEHM10_1",
           "part": "BLEHM10"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "BLEHM10_1.RX",
           "to": "TXD"
         },
         {
-          "from": "this.TX",
+          "from": "BLEHM10_1.TX",
           "to": "RXD"
         },
         {
-          "from": "this.GND",
+          "from": "BLEHM10_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "BLEHM10_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.TX",
+          "from": "BLEHM10_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.RX",
+          "from": "BLEHM10_1.RX",
           "to": "RX"
         }
       ],
@@ -158,25 +158,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BLEHM10_1",
           "part": "BLEHM10"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "BLEHM10_1.RX",
           "to": "TXD"
         },
         {
-          "from": "this.TX",
+          "from": "BLEHM10_1.TX",
           "to": "RXD"
         },
         {
-          "from": "this.GND",
+          "from": "BLEHM10_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "BLEHM10_1.VCC",
           "to": "VCC"
         }
       ],

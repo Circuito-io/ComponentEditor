@@ -9,9 +9,8 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
-          "part": "BarrelJack",
-          "rotation": 270
+          "name": "BarrelJack_1",
+          "part": "BarrelJack"
         }
       ],
       "ports": [
@@ -96,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.pos",
+          "from": "BarrelJack_1.pos",
           "to": "pos"
         },
         {
-          "from": "this.neg",
+          "from": "BarrelJack_1.neg",
           "to": "neg"
         },
         {
-          "from": "this.neg",
+          "from": "BarrelJack_1.neg",
           "to": "neg"
         },
         {
-          "from": "this.BARREL_JACK",
+          "from": "BarrelJack_1.BARREL_JACK",
           "to": "BARREL_JACK"
         }
       ],

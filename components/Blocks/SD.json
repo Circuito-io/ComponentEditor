@@ -38,41 +38,41 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SD_1",
           "part": "SD"
         },
         {
-          "name": "r1",
+          "name": "Res330O_1",
           "part": "Res330O"
         }
       ],
       "wires": [
         {
-          "from": "this.MISO",
-          "to": "r1.con1"
+          "from": "SD_1.MISO",
+          "to": "Res330O_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res330O_1.con0",
           "to": "MISOR"
         },
         {
-          "from": "this.CS",
+          "from": "SD_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.VCC",
+          "from": "SD_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCK",
+          "from": "SD_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.GND",
+          "from": "SD_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.MOSI",
+          "from": "SD_1.MOSI",
           "to": "MOSI"
         }
       ],

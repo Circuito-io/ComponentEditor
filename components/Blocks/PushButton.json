@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PushButton_1",
           "part": "PushButton"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.2",
-          "to": "r1.con0"
+          "from": "PushButton_1.2",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.2",
+          "from": "PushButton_1.2",
           "to": "2"
         },
         {
-          "from": "this.4",
+          "from": "PushButton_1.4",
           "to": "4"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PushButton_1",
           "part": "PushButton"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.2",
-          "to": "r1.con0"
+          "from": "PushButton_1.2",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.2",
+          "from": "PushButton_1.2",
           "to": "2"
         },
         {
-          "from": "this.4",
+          "from": "PushButton_1.4",
           "to": "4"
         }
       ],

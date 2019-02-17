@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDStripDotStar_1",
           "part": "LEDStripDotStar"
         }
       ],
@@ -165,35 +165,35 @@
       ],
       "wires": [
         {
-          "from": "this.VCC_IN",
+          "from": "LEDStripDotStar_1.VCC_IN",
           "to": "VCC_IN"
         },
         {
-          "from": "this.GND_IN",
+          "from": "LEDStripDotStar_1.GND_IN",
           "to": "GND_IN"
         },
         {
-          "from": "this.DI",
+          "from": "LEDStripDotStar_1.DI",
           "to": "DI"
         },
         {
-          "from": "this.CI",
+          "from": "LEDStripDotStar_1.CI",
           "to": "CI"
         },
         {
-          "from": "this.VCC_OUT",
+          "from": "LEDStripDotStar_1.VCC_OUT",
           "to": "VCC_OUT"
         },
         {
-          "from": "this.GND_OUT",
+          "from": "LEDStripDotStar_1.GND_OUT",
           "to": "GND_OUT"
         },
         {
-          "from": "this.DO",
+          "from": "LEDStripDotStar_1.DO",
           "to": "DO"
         },
         {
-          "from": "this.CO",
+          "from": "LEDStripDotStar_1.CO",
           "to": "CO"
         }
       ],

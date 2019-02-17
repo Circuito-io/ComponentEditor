@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCS230_1",
           "part": "TCS230"
         }
       ],
@@ -177,31 +177,31 @@
       ],
       "wires": [
         {
-          "from": "this.S1",
+          "from": "TCS230_1.S1",
           "to": "S1"
         },
         {
-          "from": "this.S0",
+          "from": "TCS230_1.S0",
           "to": "S0"
         },
         {
-          "from": "this.S3",
+          "from": "TCS230_1.S3",
           "to": "S3"
         },
         {
-          "from": "this.S2",
+          "from": "TCS230_1.S2",
           "to": "S2"
         },
         {
-          "from": "this.Out",
+          "from": "TCS230_1.Out",
           "to": "Out"
         },
         {
-          "from": "this.Gnd",
+          "from": "TCS230_1.Gnd",
           "to": "Gnd"
         },
         {
-          "from": "this.Vcc",
+          "from": "TCS230_1.Vcc",
           "to": "Vcc"
         }
       ],

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Speaker05W_1",
           "part": "Speaker05W"
         }
       ],
@@ -81,11 +81,11 @@
       ],
       "wires": [
         {
-          "from": "this.POS",
+          "from": "Speaker05W_1.POS",
           "to": "POS"
         },
         {
-          "from": "this.NEG",
+          "from": "Speaker05W_1.NEG",
           "to": "NEG"
         }
       ],

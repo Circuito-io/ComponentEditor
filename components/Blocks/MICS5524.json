@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MICS5524_1",
           "part": "MICS5524"
         }
       ],
@@ -95,15 +95,15 @@
       ],
       "wires": [
         {
-          "from": "this.5V",
+          "from": "MICS5524_1.5V",
           "to": "5V"
         },
         {
-          "from": "this.GND",
+          "from": "MICS5524_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.Ao",
+          "from": "MICS5524_1.Ao",
           "to": "Ao"
         }
       ],

@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PotentiometerSoft_1",
           "part": "PotentiometerSoft"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.leg2",
+          "from": "PotentiometerSoft_1.leg2",
           "to": "leg2"
         },
         {
-          "from": "this.wiper",
+          "from": "PotentiometerSoft_1.wiper",
           "to": "wiper"
         },
         {
-          "from": "this.leg1",
+          "from": "PotentiometerSoft_1.leg1",
           "to": "leg1"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PotentiometerSoft_1",
           "part": "PotentiometerSoft"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.leg2",
+          "from": "PotentiometerSoft_1.leg2",
           "to": "leg2"
         },
         {
-          "from": "this.wiper",
+          "from": "PotentiometerSoft_1.wiper",
           "to": "wiper"
         },
         {
-          "from": "this.leg1",
+          "from": "PotentiometerSoft_1.leg1",
           "to": "leg1"
         }
       ],

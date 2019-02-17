@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PIRMini_1",
           "part": "PIRMini"
         }
       ],
@@ -94,15 +94,15 @@
       ],
       "wires": [
         {
-          "from": "this.VDD",
+          "from": "PIRMini_1.VDD",
           "to": "VDD"
         },
         {
-          "from": "this.GND",
+          "from": "PIRMini_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.DQ",
+          "from": "PIRMini_1.DQ",
           "to": "DQ"
         }
       ],

@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MAX30105_1",
           "part": "MAX30105"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "MAX30105_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.5v",
+          "from": "MAX30105_1.5v",
           "to": "5v"
         },
         {
-          "from": "this.SCL",
+          "from": "MAX30105_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "MAX30105_1.SDA",
           "to": "SDA"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MAX30105_1",
           "part": "MAX30105"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "MAX30105_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.5v",
+          "from": "MAX30105_1.5v",
           "to": "5v"
         },
         {
-          "from": "this.SCL",
+          "from": "MAX30105_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "MAX30105_1.SDA",
           "to": "SDA"
         }
       ],

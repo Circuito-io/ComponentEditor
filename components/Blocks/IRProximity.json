@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRProximity_1",
           "part": "IRProximity"
         }
       ],
@@ -89,15 +89,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vout",
+          "from": "IRProximity_1.Vout",
           "to": "Vout"
         },
         {
-          "from": "this.GND",
+          "from": "IRProximity_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.Vcc",
+          "from": "IRProximity_1.Vcc",
           "to": "Vcc"
         }
       ],

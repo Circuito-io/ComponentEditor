@@ -31,9 +31,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "PowerBankUSB5v",
-          "rotation": 90
+          "name": "PowerBankUSB5v_1",
+          "part": "PowerBankUSB5v"
         }
       ],
       "ports": [
@@ -78,7 +77,7 @@
       ],
       "wires": [
         {
-          "from": "this.USB_MICRO",
+          "from": "PowerBankUSB5v_1.USB_MICRO",
           "to": "USB_MICRO"
         }
       ],

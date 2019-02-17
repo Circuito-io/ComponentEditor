@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "NRF24L01_1",
           "part": "NRF24L01"
         }
       ],
@@ -180,31 +180,31 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "NRF24L01_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "NRF24L01_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.CE",
+          "from": "NRF24L01_1.CE",
           "to": "CE"
         },
         {
-          "from": "this.CS",
+          "from": "NRF24L01_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.SCK",
+          "from": "NRF24L01_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.MOSI",
+          "from": "NRF24L01_1.MOSI",
           "to": "MOSI"
         },
         {
-          "from": "this.MISO",
+          "from": "NRF24L01_1.MISO",
           "to": "MISO"
         }
       ],

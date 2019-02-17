@@ -35,41 +35,41 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRBreak_1",
           "part": "IRBreak"
         },
         {
-          "name": "R_pullup",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.VCCR",
-          "to": "R_pullup.con0"
+          "from": "IRBreak_1.VCCR",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.SIG",
-          "to": "R_pullup.con1"
+          "from": "IRBreak_1.SIG",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "R_pullup.con1",
+          "from": "Res10KO_1.con1",
           "to": "sig"
         },
         {
-          "from": "this.VCCT",
+          "from": "IRBreak_1.VCCT",
           "to": "VCCT"
         },
         {
-          "from": "this.GNDR",
+          "from": "IRBreak_1.GNDR",
           "to": "GNDR"
         },
         {
-          "from": "this.GNDT",
+          "from": "IRBreak_1.GNDT",
           "to": "GNDT"
         },
         {
-          "from": "this.VCCR",
+          "from": "IRBreak_1.VCCR",
           "to": "VCCR"
         }
       ],
@@ -160,41 +160,41 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRBreak_1",
           "part": "IRBreak"
         },
         {
-          "name": "R_pullup",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.VCCR",
-          "to": "R_pullup.con0"
+          "from": "IRBreak_1.VCCR",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.SIG",
-          "to": "R_pullup.con1"
+          "from": "IRBreak_1.SIG",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "R_pullup.con1",
+          "from": "Res10KO_1.con1",
           "to": "sig"
         },
         {
-          "from": "this.VCCT",
+          "from": "IRBreak_1.VCCT",
           "to": "VCCT"
         },
         {
-          "from": "this.GNDR",
+          "from": "IRBreak_1.GNDR",
           "to": "GNDR"
         },
         {
-          "from": "this.GNDT",
+          "from": "IRBreak_1.GNDT",
           "to": "GNDT"
         },
         {
-          "from": "this.VCCR",
+          "from": "IRBreak_1.VCCR",
           "to": "VCCR"
         }
       ],

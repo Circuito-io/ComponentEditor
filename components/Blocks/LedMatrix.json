@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedMatrix_1",
           "part": "LedMatrix"
         }
       ],
@@ -199,43 +199,43 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "LedMatrix_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "LedMatrix_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.DIN",
+          "from": "LedMatrix_1.DIN",
           "to": "DIN"
         },
         {
-          "from": "this.CLK",
+          "from": "LedMatrix_1.CLK",
           "to": "CLK"
         },
         {
-          "from": "this.CS",
+          "from": "LedMatrix_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.VCC_PT",
+          "from": "LedMatrix_1.VCC_PT",
           "to": "VCC_PT"
         },
         {
-          "from": "this.GND_PT",
+          "from": "LedMatrix_1.GND_PT",
           "to": "GND_PT"
         },
         {
-          "from": "this.DIN_CHN",
+          "from": "LedMatrix_1.DIN_CHN",
           "to": "DIN_CHN"
         },
         {
-          "from": "this.CLK_PT",
+          "from": "LedMatrix_1.CLK_PT",
           "to": "CLK_PT"
         },
         {
-          "from": "this.CS_PT",
+          "from": "LedMatrix_1.CS_PT",
           "to": "CS_PT"
         }
       ],

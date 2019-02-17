@@ -32,7 +32,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSUltimateADA_1",
           "part": "GPSUltimateADA"
         }
       ],
@@ -110,19 +110,19 @@
       ],
       "wires": [
         {
-          "from": "this.VIN",
+          "from": "GPSUltimateADA_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "GPSUltimateADA_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.RX",
+          "from": "GPSUltimateADA_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.TX",
+          "from": "GPSUltimateADA_1.TX",
           "to": "TX"
         }
       ],
@@ -149,7 +149,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSUltimateADA_1",
           "part": "GPSUltimateADA"
         }
       ],
@@ -262,19 +262,19 @@
       ],
       "wires": [
         {
-          "from": "this.VIN",
+          "from": "GPSUltimateADA_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "GPSUltimateADA_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.RX",
+          "from": "GPSUltimateADA_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.TX",
+          "from": "GPSUltimateADA_1.TX",
           "to": "TX"
         }
       ],

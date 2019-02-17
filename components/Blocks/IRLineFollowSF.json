@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRLineFollowSF_1",
           "part": "IRLineFollowSF"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "IRLineFollowSF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "IRLineFollowSF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.OUT",
+          "from": "IRLineFollowSF_1.OUT",
           "to": "OUT"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRLineFollowSF_1",
           "part": "IRLineFollowSF"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "IRLineFollowSF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "IRLineFollowSF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.OUT",
+          "from": "IRLineFollowSF_1.OUT",
           "to": "OUT"
         }
       ],

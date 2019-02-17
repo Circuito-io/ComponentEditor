@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Battery4xAA_1",
           "part": "Battery4xAA"
         }
       ],
@@ -85,11 +85,11 @@
       ],
       "wires": [
         {
-          "from": "this.pos",
+          "from": "Battery4xAA_1.pos",
           "to": "pos"
         },
         {
-          "from": "this.neg",
+          "from": "Battery4xAA_1.neg",
           "to": "neg"
         }
       ],

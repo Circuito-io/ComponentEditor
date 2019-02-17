@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRObjAvoid_1",
           "part": "IRObjAvoid"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "IRObjAvoid_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "IRObjAvoid_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.OUT",
+          "from": "IRObjAvoid_1.OUT",
           "to": "OUT"
         }
       ],
@@ -114,41 +114,41 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRObjAvoid_1",
           "part": "IRObjAvoid"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "r2.con1"
+          "from": "IRObjAvoid_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r2.con0",
-          "to": "r1.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.OUT",
-          "to": "r1.con0"
+          "from": "IRObjAvoid_1.OUT",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "out"
         },
         {
-          "from": "this.GND",
+          "from": "IRObjAvoid_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "IRObjAvoid_1.VCC",
           "to": "VCC"
         }
       ],

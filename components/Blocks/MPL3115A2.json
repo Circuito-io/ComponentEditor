@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPL3115A2_1",
           "part": "MPL3115A2"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "MPL3115A2_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "MPL3115A2_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.SDA",
+          "from": "MPL3115A2_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "MPL3115A2_1.GND",
           "to": "GND"
         }
       ],
@@ -129,7 +129,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPL3115A2_1",
           "part": "MPL3115A2"
         }
       ],
@@ -189,19 +189,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "MPL3115A2_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "MPL3115A2_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.SDA",
+          "from": "MPL3115A2_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "MPL3115A2_1.GND",
           "to": "GND"
         }
       ],

@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MicroOLED_1",
           "part": "MicroOLED"
         }
       ],
@@ -189,35 +189,35 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "MicroOLED_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VDD",
+          "from": "MicroOLED_1.VDD",
           "to": "VDD"
         },
         {
-          "from": "this.D1_MOSI",
+          "from": "MicroOLED_1.D1_MOSI",
           "to": "D1_MOSI"
         },
         {
-          "from": "this.D0_SCK",
+          "from": "MicroOLED_1.D0_SCK",
           "to": "D0_SCK"
         },
         {
-          "from": "this.D2",
+          "from": "MicroOLED_1.D2",
           "to": "D2"
         },
         {
-          "from": "this.DC",
+          "from": "MicroOLED_1.DC",
           "to": "DC"
         },
         {
-          "from": "this.RESET",
+          "from": "MicroOLED_1.RESET",
           "to": "RESET"
         },
         {
-          "from": "this.CS",
+          "from": "MicroOLED_1.CS",
           "to": "CS"
         }
       ],

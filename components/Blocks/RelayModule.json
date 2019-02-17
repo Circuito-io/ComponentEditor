@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RelayModule_1",
           "part": "RelayModule"
         }
       ],
@@ -99,15 +99,15 @@
       ],
       "wires": [
         {
-          "from": "this.signal",
+          "from": "RelayModule_1.signal",
           "to": "signal"
         },
         {
-          "from": "this.ground",
+          "from": "RelayModule_1.ground",
           "to": "ground"
         },
         {
-          "from": "this.power",
+          "from": "RelayModule_1.power",
           "to": "power"
         }
       ],

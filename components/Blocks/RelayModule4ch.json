@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RelayModule4ch_1",
           "part": "RelayModule4ch"
         }
       ],
@@ -153,27 +153,27 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "RelayModule4ch_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "RelayModule4ch_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.IN1",
+          "from": "RelayModule4ch_1.IN1",
           "to": "IN1"
         },
         {
-          "from": "this.IN2",
+          "from": "RelayModule4ch_1.IN2",
           "to": "IN2"
         },
         {
-          "from": "this.IN4",
+          "from": "RelayModule4ch_1.IN4",
           "to": "IN4"
         },
         {
-          "from": "this.IN3",
+          "from": "RelayModule4ch_1.IN3",
           "to": "IN3"
         }
       ],

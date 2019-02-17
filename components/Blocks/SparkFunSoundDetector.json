@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SparkFunSoundDetector_1",
           "part": "SparkFunSoundDetector"
         }
       ],
@@ -139,23 +139,23 @@
       ],
       "wires": [
         {
-          "from": "this.GATE",
+          "from": "SparkFunSoundDetector_1.GATE",
           "to": "GATE"
         },
         {
-          "from": "this.AUDIO",
+          "from": "SparkFunSoundDetector_1.AUDIO",
           "to": "AUDIO"
         },
         {
-          "from": "this.ENVELOPE",
+          "from": "SparkFunSoundDetector_1.ENVELOPE",
           "to": "ENVELOPE"
         },
         {
-          "from": "this.GND",
+          "from": "SparkFunSoundDetector_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "SparkFunSoundDetector_1.VCC",
           "to": "VCC"
         }
       ],

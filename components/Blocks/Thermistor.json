@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Thermistor_1",
           "part": "Thermistor"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.con1",
-          "to": "r1.con0"
+          "from": "Thermistor_1.con1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "VCC"
         },
         {
-          "from": "this.con1",
+          "from": "Thermistor_1.con1",
           "to": "con1"
         },
         {
-          "from": "this.con0",
+          "from": "Thermistor_1.con0",
           "to": "con0"
         }
       ],
@@ -121,29 +121,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Thermistor_1",
           "part": "Thermistor"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.con1",
-          "to": "r1.con0"
+          "from": "Thermistor_1.con1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "VCC"
         },
         {
-          "from": "this.con1",
+          "from": "Thermistor_1.con1",
           "to": "con1"
         },
         {
-          "from": "this.con0",
+          "from": "Thermistor_1.con0",
           "to": "con0"
         }
       ],

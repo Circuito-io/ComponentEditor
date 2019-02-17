@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RelayModuleGravity_1",
           "part": "RelayModuleGravity"
         }
       ],
@@ -94,15 +94,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "RelayModuleGravity_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "RelayModuleGravity_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.Sig",
+          "from": "RelayModuleGravity_1.Sig",
           "to": "Sig"
         }
       ],

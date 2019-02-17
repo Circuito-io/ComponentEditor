@@ -33,21 +33,21 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "AM2302_1",
           "part": "AM2302"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "AM2302_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "AM2302_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SIG",
+          "from": "AM2302_1.SIG",
           "to": "SIG"
         }
       ],
@@ -111,21 +111,21 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "AM2302_1",
           "part": "AM2302"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "AM2302_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "AM2302_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SIG",
+          "from": "AM2302_1.SIG",
           "to": "SIG"
         }
       ],

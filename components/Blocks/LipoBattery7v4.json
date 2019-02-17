@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LipoBattery7v4_1",
           "part": "LipoBattery7v4"
         }
       ],
@@ -86,11 +86,11 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "LipoBattery7v4_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "LipoBattery7v4_1.VCC",
           "to": "VCC"
         }
       ],

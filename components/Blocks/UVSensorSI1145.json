@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UVSensorSI1145_1",
           "part": "UVSensorSI1145"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "UVSensorSI1145_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "UVSensorSI1145_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.GND",
+          "from": "UVSensorSI1145_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VIN",
+          "from": "UVSensorSI1145_1.VIN",
           "to": "VIN"
         }
       ],
@@ -126,7 +126,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UVSensorSI1145_1",
           "part": "UVSensorSI1145"
         }
       ],
@@ -186,19 +186,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "UVSensorSI1145_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "UVSensorSI1145_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.GND",
+          "from": "UVSensorSI1145_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VIN",
+          "from": "UVSensorSI1145_1.VIN",
           "to": "VIN"
         }
       ],

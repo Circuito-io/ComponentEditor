@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Gyro_1",
           "part": "Gyro"
         }
       ],
@@ -137,23 +137,23 @@
       ],
       "wires": [
         {
-          "from": "this.VLOGIC",
+          "from": "Gyro_1.VLOGIC",
           "to": "VLOGIC"
         },
         {
-          "from": "this.VCC",
+          "from": "Gyro_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SDA",
+          "from": "Gyro_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "Gyro_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SCL",
+          "from": "Gyro_1.SCL",
           "to": "SCL"
         }
       ],

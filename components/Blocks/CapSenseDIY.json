@@ -38,25 +38,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapSenseDIY_1",
           "part": "CapSenseDIY"
         },
         {
-          "name": "r1",
+          "name": "Res1MO_1",
           "part": "Res1MO"
         }
       ],
       "wires": [
         {
-          "from": "this.PinA",
-          "to": "r1.con1"
+          "from": "CapSenseDIY_1.PinA",
+          "to": "Res1MO_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res1MO_1.con0",
           "to": "SendPin"
         },
         {
-          "from": "r1.con1",
+          "from": "Res1MO_1.con1",
           "to": "RcevPin"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapSenseDIY_1",
           "part": "CapSenseDIY"
         }
       ],
@@ -137,7 +137,7 @@
       ],
       "wires": [
         {
-          "from": "this.PinA",
+          "from": "CapSenseDIY_1.PinA",
           "to": "PinA"
         }
       ],

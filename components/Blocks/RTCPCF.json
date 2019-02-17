@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RTCPCF_1",
           "part": "RTCPCF"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "RTCPCF_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VCC",
+          "from": "RTCPCF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "RTCPCF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "RTCPCF_1.SDA",
           "to": "SDA"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RTCPCF_1",
           "part": "RTCPCF"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "RTCPCF_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VCC",
+          "from": "RTCPCF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "RTCPCF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "RTCPCF_1.SDA",
           "to": "SDA"
         }
       ],

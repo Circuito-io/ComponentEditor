@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WheelEncoder_1",
           "part": "WheelEncoder"
         }
       ],
@@ -118,19 +118,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "WheelEncoder_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.CH_A",
+          "from": "WheelEncoder_1.CH_A",
           "to": "CH_A"
         },
         {
-          "from": "this.CH_B",
+          "from": "WheelEncoder_1.CH_B",
           "to": "CH_B"
         },
         {
-          "from": "this.VCC",
+          "from": "WheelEncoder_1.VCC",
           "to": "VCC"
         }
       ],
@@ -159,7 +159,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WheelEncoder_1",
           "part": "WheelEncoder"
         }
       ],
@@ -248,19 +248,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "WheelEncoder_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.CH_A",
+          "from": "WheelEncoder_1.CH_A",
           "to": "CH_A"
         },
         {
-          "from": "this.CH_B",
+          "from": "WheelEncoder_1.CH_B",
           "to": "CH_B"
         },
         {
-          "from": "this.VCC",
+          "from": "WheelEncoder_1.VCC",
           "to": "VCC"
         }
       ],

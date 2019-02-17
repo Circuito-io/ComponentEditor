@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TSL2591_1",
           "part": "TSL2591"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "TSL2591_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "TSL2591_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "TSL2591_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VIN",
+          "from": "TSL2591_1.VIN",
           "to": "VIN"
         }
       ],
@@ -126,7 +126,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TSL2591_1",
           "part": "TSL2591"
         }
       ],
@@ -186,19 +186,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "TSL2591_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "TSL2591_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "TSL2591_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VIN",
+          "from": "TSL2591_1.VIN",
           "to": "VIN"
         }
       ],

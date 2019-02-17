@@ -9,45 +9,45 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "LD11173.3v_1",
           "part": "LD11173.3v"
         },
         {
-          "name": "capin",
+          "name": "CapCeramic100nF_1",
           "part": "CapCeramic100nF"
         },
         {
-          "name": "capout",
+          "name": "CapElectro10uF_1",
           "part": "CapElectro10uF"
         }
       ],
       "wires": [
         {
-          "from": "this.Vin",
-          "to": "capin.con0"
+          "from": "LD11173.3v_1.Vin",
+          "to": "CapCeramic100nF_1.con0"
         },
         {
-          "from": "this.0",
-          "to": "capin.con1"
+          "from": "LD11173.3v_1.0",
+          "to": "CapCeramic100nF_1.con1"
         },
         {
-          "from": "this.Vout",
-          "to": "capout.pos"
+          "from": "LD11173.3v_1.Vout",
+          "to": "CapElectro10uF_1.pos"
         },
         {
-          "from": "this.0",
-          "to": "capout.neg"
+          "from": "LD11173.3v_1.0",
+          "to": "CapElectro10uF_1.neg"
         },
         {
-          "from": "this.Vout",
+          "from": "LD11173.3v_1.Vout",
           "to": "Vout"
         },
         {
-          "from": "this.0",
+          "from": "LD11173.3v_1.0",
           "to": "0"
         },
         {
-          "from": "this.Vin",
+          "from": "LD11173.3v_1.Vin",
           "to": "Vin"
         }
       ],

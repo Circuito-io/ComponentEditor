@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Keypad_1",
           "part": "Keypad"
         }
       ],
@@ -186,31 +186,31 @@
       ],
       "wires": [
         {
-          "from": "this.row3",
+          "from": "Keypad_1.row3",
           "to": "row3"
         },
         {
-          "from": "this.row1",
+          "from": "Keypad_1.row1",
           "to": "row1"
         },
         {
-          "from": "this.col2",
+          "from": "Keypad_1.col2",
           "to": "col2"
         },
         {
-          "from": "this.col3",
+          "from": "Keypad_1.col3",
           "to": "col3"
         },
         {
-          "from": "this.row2",
+          "from": "Keypad_1.row2",
           "to": "row2"
         },
         {
-          "from": "this.col1",
+          "from": "Keypad_1.col1",
           "to": "col1"
         },
         {
-          "from": "this.row4",
+          "from": "Keypad_1.row4",
           "to": "row4"
         }
       ],

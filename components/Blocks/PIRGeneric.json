@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PIRGeneric_1",
           "part": "PIRGeneric"
         }
       ],
@@ -94,15 +94,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "PIRGeneric_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VDD",
+          "from": "PIRGeneric_1.VDD",
           "to": "VDD"
         },
         {
-          "from": "this.SIG",
+          "from": "PIRGeneric_1.SIG",
           "to": "SIG"
         }
       ],

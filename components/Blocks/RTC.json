@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RTC_1",
           "part": "RTC"
         }
       ],
@@ -112,19 +112,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "RTC_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "RTC_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "RTC_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "RTC_1.SCL",
           "to": "SCL"
         }
       ],

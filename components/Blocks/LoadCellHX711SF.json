@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LoadCellHX711SF_1",
           "part": "LoadCellHX711SF"
         }
       ],
@@ -112,23 +112,23 @@
       ],
       "wires": [
         {
-          "from": "this.VDD",
+          "from": "LoadCellHX711SF_1.VDD",
           "to": "VDD"
         },
         {
-          "from": "this.VCC",
+          "from": "LoadCellHX711SF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.DAT",
+          "from": "LoadCellHX711SF_1.DAT",
           "to": "DAT"
         },
         {
-          "from": "this.CLK",
+          "from": "LoadCellHX711SF_1.CLK",
           "to": "CLK"
         },
         {
-          "from": "this.GND",
+          "from": "LoadCellHX711SF_1.GND",
           "to": "GND"
         }
       ],
@@ -150,7 +150,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LoadCellHX711SF_1",
           "part": "LoadCellHX711SF"
         }
       ],
@@ -227,23 +227,23 @@
       ],
       "wires": [
         {
-          "from": "this.VDD",
+          "from": "LoadCellHX711SF_1.VDD",
           "to": "VDD"
         },
         {
-          "from": "this.VCC",
+          "from": "LoadCellHX711SF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.DAT",
+          "from": "LoadCellHX711SF_1.DAT",
           "to": "DAT"
         },
         {
-          "from": "this.CLK",
+          "from": "LoadCellHX711SF_1.CLK",
           "to": "CLK"
         },
         {
-          "from": "this.GND",
+          "from": "LoadCellHX711SF_1.GND",
           "to": "GND"
         }
       ],

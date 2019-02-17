@@ -40,30 +40,29 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LedStripS",
-          "rotation": 90
+          "name": "LedStripS_1",
+          "part": "LedStripS"
         },
         {
-          "name": "t1",
+          "name": "TNMOSFETFQP_1",
           "part": "TNMOSFETFQP"
         }
       ],
       "wires": [
         {
-          "from": "this.SIG",
-          "to": "t1.D"
+          "from": "LedStripS_1.SIG",
+          "to": "TNMOSFETFQP_1.D"
         },
         {
-          "from": "t1.S",
+          "from": "TNMOSFETFQP_1.S",
           "to": "Gnd"
         },
         {
-          "from": "t1.G",
+          "from": "TNMOSFETFQP_1.G",
           "to": "Sig"
         },
         {
-          "from": "this.VDD",
+          "from": "LedStripS_1.VDD",
           "to": "VDD"
         }
       ],

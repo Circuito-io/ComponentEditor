@@ -39,53 +39,53 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegmentBare_Single_1",
           "part": "SevenSegmentBare_Single"
         },
         {
-          "name": "r1",
+          "name": "Res220O_1",
           "part": "Res220O"
         }
       ],
       "wires": [
         {
-          "from": "this.Com",
-          "to": "r1.con0"
+          "from": "SevenSegmentBare_Single_1.Com",
+          "to": "Res220O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res220O_1.con1",
           "to": "Common"
         },
         {
-          "from": "this.DP",
+          "from": "SevenSegmentBare_Single_1.DP",
           "to": "DP"
         },
         {
-          "from": "this.C",
+          "from": "SevenSegmentBare_Single_1.C",
           "to": "C"
         },
         {
-          "from": "this.D",
+          "from": "SevenSegmentBare_Single_1.D",
           "to": "D"
         },
         {
-          "from": "this.E",
+          "from": "SevenSegmentBare_Single_1.E",
           "to": "E"
         },
         {
-          "from": "this.B",
+          "from": "SevenSegmentBare_Single_1.B",
           "to": "B"
         },
         {
-          "from": "this.A",
+          "from": "SevenSegmentBare_Single_1.A",
           "to": "A"
         },
         {
-          "from": "this.F",
+          "from": "SevenSegmentBare_Single_1.F",
           "to": "F"
         },
         {
-          "from": "this.G",
+          "from": "SevenSegmentBare_Single_1.G",
           "to": "G"
         }
       ],

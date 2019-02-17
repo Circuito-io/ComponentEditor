@@ -39,9 +39,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "GraphicLCD",
-          "rotation": 180
+          "name": "GraphicLCD_1",
+          "part": "GraphicLCD"
         }
       ],
       "ports": [
@@ -129,19 +128,19 @@
       ],
       "wires": [
         {
-          "from": "this.Vin",
+          "from": "GraphicLCD_1.Vin",
           "to": "Vin"
         },
         {
-          "from": "this.TX",
+          "from": "GraphicLCD_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.RX",
+          "from": "GraphicLCD_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.Gnd",
+          "from": "GraphicLCD_1.Gnd",
           "to": "Gnd"
         }
       ],

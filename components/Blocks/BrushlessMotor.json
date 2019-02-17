@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BrushlessMotor_1",
           "part": "BrushlessMotor"
         }
       ],
@@ -115,19 +115,19 @@
       ],
       "wires": [
         {
-          "from": "this.+12V",
+          "from": "BrushlessMotor_1.+12V",
           "to": "+12V"
         },
         {
-          "from": "this.DATA",
+          "from": "BrushlessMotor_1.DATA",
           "to": "DATA"
         },
         {
-          "from": "this.GND",
+          "from": "BrushlessMotor_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.GROUND",
+          "from": "BrushlessMotor_1.GROUND",
           "to": "GROUND"
         }
       ],

@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LDR_1",
           "part": "LDR"
         },
         {
-          "name": "R1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.con1",
-          "to": "R1.con0"
+          "from": "LDR_1.con1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "R1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.con0",
+          "from": "LDR_1.con0",
           "to": "5v"
         },
         {
-          "from": "this.con1",
+          "from": "LDR_1.con1",
           "to": "Sig"
         }
       ],
@@ -121,29 +121,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LDR_1",
           "part": "LDR"
         },
         {
-          "name": "R1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.con1",
-          "to": "R1.con0"
+          "from": "LDR_1.con1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "R1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.con0",
+          "from": "LDR_1.con0",
           "to": "5v"
         },
         {
-          "from": "this.con1",
+          "from": "LDR_1.con1",
           "to": "Sig"
         }
       ],

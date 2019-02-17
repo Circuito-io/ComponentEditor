@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CurrentSensorINA219_1",
           "part": "CurrentSensorINA219"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "CurrentSensorINA219_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "CurrentSensorINA219_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "CurrentSensorINA219_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "CurrentSensorINA219_1.SCL",
           "to": "SCL"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CurrentSensorINA219_1",
           "part": "CurrentSensorINA219"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "CurrentSensorINA219_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "CurrentSensorINA219_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "CurrentSensorINA219_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "CurrentSensorINA219_1.SCL",
           "to": "SCL"
         }
       ],
