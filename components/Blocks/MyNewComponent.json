@@ -1,0 +1,30 @@
+{
+  "name": "MyNewComponent",
+  "category": [
+    "input"
+  ],
+  "blockId": "8485",
+  "app": {
+    "visible": true,
+    "appName": "MyNewComponent",
+    "indicators": {
+      "solder": false
+    }
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "parts": [
+        {
+          "name": "t",
+          "part": "ADXL335"
+        }
+      ],
+      "supportedControllers": [
+        "ATMega328P"
+      ]
+    }
+  ]
+}
