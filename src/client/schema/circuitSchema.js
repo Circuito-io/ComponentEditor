@@ -35,7 +35,8 @@ export function circuitsuiSchema(supportBlocksList) {
           },
           items: {
             name: {
-              classNames: "two-coloumn-field"
+              classNames: "two-coloumn-field",
+              "ui:disabled": "true"
             },
             part: {
               "ui:field": "partfield",
