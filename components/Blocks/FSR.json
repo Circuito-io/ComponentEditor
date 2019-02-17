@@ -5,17 +5,18 @@
   ],
   "blockId": "9375",
   "app": {
-    "appName": "Force Sensitive Resistor 0.5''",
-    "image": "http://res.cloudinary.com/circuito/image/upload/xinsrtgblhhqn4o1g2nj",
+    "visible": true,
     "numericName": "",
     "shortName": "Force Sensitive Resistor",
+    "appName": "Force Sensitive Resistor 0.5''",
+    "image": "http://res.cloudinary.com/circuito/image/upload/xinsrtgblhhqn4o1g2nj",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n",
-    "visible": true
+    "desc": "<p>A robust force sensitive resistor.<br><strong>Range</strong>:  Senses force anywhere from 100 grams to 10 kilograms.</p>\n<p><strong>Returned Values</strong>: 0 - no force applied, to 1023 - max force applied.</p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "5v",
