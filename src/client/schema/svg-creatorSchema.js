@@ -1,4 +1,15 @@
-export const svguiSchema = {};
+export const svguiSchema = {
+  pins: {
+    items: {
+      name: {
+        classNames: "two-coloumn-field"
+      },
+      type: {
+        classNames: "two-coloumn-field"
+      }
+    }
+  }
+};
 
 export const svgSchema = {
   type: "object",
