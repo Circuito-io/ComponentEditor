@@ -1,6 +1,5 @@
 <!--
-Thank you for your pull request. Please provide a description above and review
-the requirements below.
+Thank you for your pull request. Please provide a description and sign our CLA
 -->
 
 ### Description of change
