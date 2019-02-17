@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartRateGravity_1",
           "part": "HeartRateGravity"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vin",
+          "from": "HeartRateGravity_1.Vin",
           "to": "Vin"
         },
         {
-          "from": "this.Sig",
+          "from": "HeartRateGravity_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.GND",
+          "from": "HeartRateGravity_1.GND",
           "to": "GND"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartRateGravity_1",
           "part": "HeartRateGravity"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vin",
+          "from": "HeartRateGravity_1.Vin",
           "to": "Vin"
         },
         {
-          "from": "this.Sig",
+          "from": "HeartRateGravity_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.GND",
+          "from": "HeartRateGravity_1.GND",
           "to": "GND"
         }
       ],

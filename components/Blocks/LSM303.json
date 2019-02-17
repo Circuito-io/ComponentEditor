@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LSM303_1",
           "part": "LSM303"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "LSM303_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "LSM303_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "LSM303_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "LSM303_1.GND",
           "to": "GND"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LSM303_1",
           "part": "LSM303"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "LSM303_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "LSM303_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "LSM303_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "LSM303_1.GND",
           "to": "GND"
         }
       ],

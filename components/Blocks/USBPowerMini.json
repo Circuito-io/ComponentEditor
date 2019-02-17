@@ -29,7 +29,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerMiniWithFTDI_1",
           "part": "USBPowerMiniWithFTDI"
         }
       ],
@@ -75,7 +75,7 @@
       ],
       "wires": [
         {
-          "from": "this.FTDI",
+          "from": "USBPowerMiniWithFTDI_1.FTDI",
           "to": "FTDI"
         }
       ],
@@ -88,7 +88,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerMiniWithFTDI_1",
           "part": "USBPowerMiniWithFTDI"
         }
       ],
@@ -134,7 +134,7 @@
       ],
       "wires": [
         {
-          "from": "this.FTDI",
+          "from": "USBPowerMiniWithFTDI_1.FTDI",
           "to": "FTDI"
         }
       ],
@@ -147,7 +147,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerMini_1",
           "part": "USBPowerMini"
         }
       ],
@@ -193,7 +193,7 @@
       ],
       "wires": [
         {
-          "from": "this.USB_MINI",
+          "from": "USBPowerMini_1.USB_MINI",
           "to": "USB_MINI"
         }
       ],

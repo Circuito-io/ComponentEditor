@@ -40,9 +40,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LCD16X2I2C",
-          "rotation": 180
+          "name": "LCD16X2I2C_1",
+          "part": "LCD16X2I2C"
         }
       ],
       "ports": [
@@ -113,19 +112,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "LCD16X2I2C_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "LCD16X2I2C_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "LCD16X2I2C_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "LCD16X2I2C_1.SCL",
           "to": "SCL"
         }
       ],

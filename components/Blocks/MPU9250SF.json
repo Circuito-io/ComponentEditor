@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPU9250SF_1",
           "part": "MPU9250SF"
         }
       ],
@@ -108,19 +108,19 @@
       ],
       "wires": [
         {
-          "from": "this.3v3",
+          "from": "MPU9250SF_1.3v3",
           "to": "3v3"
         },
         {
-          "from": "this.SDA",
+          "from": "MPU9250SF_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "MPU9250SF_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.GND",
+          "from": "MPU9250SF_1.GND",
           "to": "GND"
         }
       ],

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BMP180_1",
           "part": "BMP180"
         }
       ],
@@ -126,19 +126,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "BMP180_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "BMP180_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "BMP180_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "BMP180_1.SCL",
           "to": "SCL"
         }
       ],

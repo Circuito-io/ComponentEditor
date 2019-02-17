@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RGBSensor_1",
           "part": "RGBSensor"
         }
       ],
@@ -124,19 +124,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "RGBSensor_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.Vcc",
+          "from": "RGBSensor_1.Vcc",
           "to": "Vcc"
         },
         {
-          "from": "this.SCL",
+          "from": "RGBSensor_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.Gnd",
+          "from": "RGBSensor_1.Gnd",
           "to": "Gnd"
         }
       ],

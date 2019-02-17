@@ -35,45 +35,45 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCRT5000L_1",
           "part": "TCRT5000L"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "r2",
+          "name": "Res220O_1",
           "part": "Res220O"
         }
       ],
       "wires": [
         {
-          "from": "this.Coll",
-          "to": "r1.con0"
+          "from": "TCRT5000L_1.Coll",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.A",
-          "to": "r2.con0"
+          "from": "TCRT5000L_1.A",
+          "to": "Res220O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "5v"
         },
         {
-          "from": "r2.con1",
+          "from": "Res220O_1.con1",
           "to": "5v1"
         },
         {
-          "from": "this.Coll",
+          "from": "TCRT5000L_1.Coll",
           "to": "Coll"
         },
         {
-          "from": "this.Cath",
+          "from": "TCRT5000L_1.Cath",
           "to": "Cath"
         },
         {
-          "from": "this.E",
+          "from": "TCRT5000L_1.E",
           "to": "E"
         }
       ],
@@ -163,45 +163,45 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCRT5000L_1",
           "part": "TCRT5000L"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "r2",
+          "name": "Res100O_1",
           "part": "Res100O"
         }
       ],
       "wires": [
         {
-          "from": "this.Coll",
-          "to": "r1.con0"
+          "from": "TCRT5000L_1.Coll",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.A",
-          "to": "r2.con0"
+          "from": "TCRT5000L_1.A",
+          "to": "Res100O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "5v"
         },
         {
-          "from": "r2.con1",
+          "from": "Res100O_1.con1",
           "to": "5v1"
         },
         {
-          "from": "this.Coll",
+          "from": "TCRT5000L_1.Coll",
           "to": "Coll"
         },
         {
-          "from": "this.Cath",
+          "from": "TCRT5000L_1.Cath",
           "to": "Cath"
         },
         {
-          "from": "this.E",
+          "from": "TCRT5000L_1.E",
           "to": "E"
         }
       ],

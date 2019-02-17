@@ -34,9 +34,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "AdafruitMiniThermalPrinter",
-          "rotation": 180
+          "name": "AdafruitMiniThermalPrinter_1",
+          "part": "AdafruitMiniThermalPrinter"
         }
       ],
       "ports": [
@@ -127,23 +126,23 @@
       ],
       "wires": [
         {
-          "from": "this.GND_COM",
+          "from": "AdafruitMiniThermalPrinter_1.GND_COM",
           "to": "GND_COM"
         },
         {
-          "from": "this.DIN",
+          "from": "AdafruitMiniThermalPrinter_1.DIN",
           "to": "DIN"
         },
         {
-          "from": "this.VCC",
+          "from": "AdafruitMiniThermalPrinter_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.DOUT",
+          "from": "AdafruitMiniThermalPrinter_1.DOUT",
           "to": "DOUT"
         },
         {
-          "from": "this.GND",
+          "from": "AdafruitMiniThermalPrinter_1.GND",
           "to": "GND"
         }
       ],

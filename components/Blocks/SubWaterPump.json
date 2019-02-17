@@ -39,9 +39,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "SubWaterPump",
-          "rotation": 90
+          "name": "SubWaterPump_1",
+          "part": "SubWaterPump"
         }
       ],
       "ports": [
@@ -86,11 +85,11 @@
       ],
       "wires": [
         {
-          "from": "this.Coil1",
+          "from": "SubWaterPump_1.Coil1",
           "to": "Coil1"
         },
         {
-          "from": "this.Coil2",
+          "from": "SubWaterPump_1.Coil2",
           "to": "Coil2"
         }
       ],

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouch_1",
           "part": "CapacitiveTouch"
         }
       ],
@@ -94,15 +94,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "CapacitiveTouch_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "CapacitiveTouch_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SIG",
+          "from": "CapacitiveTouch_1.SIG",
           "to": "SIG"
         }
       ],

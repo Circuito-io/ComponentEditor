@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MicroSwitch_1",
           "part": "MicroSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.COM",
-          "to": "r1.con0"
+          "from": "MicroSwitch_1.COM",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.NO",
+          "from": "MicroSwitch_1.NO",
           "to": "NO"
         },
         {
-          "from": "this.COM",
+          "from": "MicroSwitch_1.COM",
           "to": "COM"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MicroSwitch_1",
           "part": "MicroSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.COM",
-          "to": "r1.con0"
+          "from": "MicroSwitch_1.COM",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.NO",
+          "from": "MicroSwitch_1.NO",
           "to": "NO"
         },
         {
-          "from": "this.COM",
+          "from": "MicroSwitch_1.COM",
           "to": "COM"
         }
       ],

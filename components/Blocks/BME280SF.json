@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BME280SF_1",
           "part": "BME280SF"
         }
       ],
@@ -112,19 +112,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "BME280SF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.3.3V",
+          "from": "BME280SF_1.3.3V",
           "to": "3.3V"
         },
         {
-          "from": "this.SDI_SDA",
+          "from": "BME280SF_1.SDI_SDA",
           "to": "SDI_SDA"
         },
         {
-          "from": "this.SCK_SCL",
+          "from": "BME280SF_1.SCK_SCL",
           "to": "SCK_SCL"
         }
       ],

@@ -40,49 +40,49 @@
       ],
       "parts": [
         {
-          "name": "driver",
+          "name": "EasyDriver_1",
           "part": "EasyDriver"
         },
         {
-          "name": "this",
+          "name": "StepperMotorSmallGeared_1",
           "part": "StepperMotorSmallGeared"
         }
       ],
       "wires": [
         {
-          "from": "driver.OUT2A",
-          "to": "this.PINK"
+          "from": "EasyDriver_1.OUT2A",
+          "to": "StepperMotorSmallGeared_1.PINK"
         },
         {
-          "from": "driver.OUT2B",
-          "to": "this.YELLOW"
+          "from": "EasyDriver_1.OUT2B",
+          "to": "StepperMotorSmallGeared_1.YELLOW"
         },
         {
-          "from": "driver.OUT1A",
-          "to": "this.ORANGE"
+          "from": "EasyDriver_1.OUT1A",
+          "to": "StepperMotorSmallGeared_1.ORANGE"
         },
         {
-          "from": "driver.OUT1B",
-          "to": "this.BLUE"
+          "from": "EasyDriver_1.OUT1B",
+          "to": "StepperMotorSmallGeared_1.BLUE"
         },
         {
-          "from": "this.RED",
+          "from": "StepperMotorSmallGeared_1.RED",
           "to": "red"
         },
         {
-          "from": "driver.GND",
+          "from": "EasyDriver_1.GND",
           "to": "gnd"
         },
         {
-          "from": "driver.Dir",
+          "from": "EasyDriver_1.Dir",
           "to": "dir"
         },
         {
-          "from": "driver.Step",
+          "from": "EasyDriver_1.Step",
           "to": "step"
         },
         {
-          "from": "driver.V+",
+          "from": "EasyDriver_1.V+",
           "to": "v+"
         }
       ],

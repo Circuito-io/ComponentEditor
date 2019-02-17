@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PeristalticPump_1",
           "part": "PeristalticPump"
         }
       ],
@@ -85,11 +85,11 @@
       ],
       "wires": [
         {
-          "from": "this.Coil1",
+          "from": "PeristalticPump_1.Coil1",
           "to": "Coil1"
         },
         {
-          "from": "this.Coil2",
+          "from": "PeristalticPump_1.Coil2",
           "to": "Coil2"
         }
       ],

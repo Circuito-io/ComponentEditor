@@ -12,7 +12,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "MCP3008_1",
           "part": "MCP3008"
         }
       ],
@@ -235,67 +235,67 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "MCP3008_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.AGND",
+          "from": "MCP3008_1.AGND",
           "to": "AGND"
         },
         {
-          "from": "this.VREF",
+          "from": "MCP3008_1.VREF",
           "to": "VREF"
         },
         {
-          "from": "this.DGND",
+          "from": "MCP3008_1.DGND",
           "to": "DGND"
         },
         {
-          "from": "this.DOUT",
+          "from": "MCP3008_1.DOUT",
           "to": "DOUT"
         },
         {
-          "from": "this.DIN",
+          "from": "MCP3008_1.DIN",
           "to": "DIN"
         },
         {
-          "from": "this.CLK",
+          "from": "MCP3008_1.CLK",
           "to": "CLK"
         },
         {
-          "from": "this.CS",
+          "from": "MCP3008_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.CH0",
+          "from": "MCP3008_1.CH0",
           "to": "CH0"
         },
         {
-          "from": "this.CH1",
+          "from": "MCP3008_1.CH1",
           "to": "CH1"
         },
         {
-          "from": "this.CH2",
+          "from": "MCP3008_1.CH2",
           "to": "CH2"
         },
         {
-          "from": "this.CH3",
+          "from": "MCP3008_1.CH3",
           "to": "CH3"
         },
         {
-          "from": "this.CH4",
+          "from": "MCP3008_1.CH4",
           "to": "CH4"
         },
         {
-          "from": "this.CH5",
+          "from": "MCP3008_1.CH5",
           "to": "CH5"
         },
         {
-          "from": "this.CH6",
+          "from": "MCP3008_1.CH6",
           "to": "CH6"
         },
         {
-          "from": "this.CH7",
+          "from": "MCP3008_1.CH7",
           "to": "CH7"
         }
       ],

@@ -40,45 +40,45 @@
       ],
       "parts": [
         {
-          "name": "driver",
+          "name": "EasyDriver_1",
           "part": "EasyDriver"
         },
         {
-          "name": "this",
+          "name": "StepperMotor_1",
           "part": "StepperMotor"
         }
       ],
       "wires": [
         {
-          "from": "driver.OUT2A",
-          "to": "this.D"
+          "from": "EasyDriver_1.OUT2A",
+          "to": "StepperMotor_1.D"
         },
         {
-          "from": "driver.OUT2B",
-          "to": "this.B"
+          "from": "EasyDriver_1.OUT2B",
+          "to": "StepperMotor_1.B"
         },
         {
-          "from": "driver.OUT1A",
-          "to": "this.C"
+          "from": "EasyDriver_1.OUT1A",
+          "to": "StepperMotor_1.C"
         },
         {
-          "from": "driver.OUT1B",
-          "to": "this.A"
+          "from": "EasyDriver_1.OUT1B",
+          "to": "StepperMotor_1.A"
         },
         {
-          "from": "driver.GND",
+          "from": "EasyDriver_1.GND",
           "to": "gnd"
         },
         {
-          "from": "driver.Dir",
+          "from": "EasyDriver_1.Dir",
           "to": "dir"
         },
         {
-          "from": "driver.Step",
+          "from": "EasyDriver_1.Step",
           "to": "step"
         },
         {
-          "from": "driver.V+",
+          "from": "EasyDriver_1.V+",
           "to": "v+"
         }
       ],

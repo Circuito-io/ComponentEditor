@@ -9,29 +9,29 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "TSBC337_1",
           "part": "TSBC337"
         },
         {
-          "name": "r1",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.B",
-          "to": "r1.con1"
+          "from": "TSBC337_1.B",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "this.E",
+          "from": "TSBC337_1.E",
           "to": "GndIn"
         },
         {
-          "from": "r1.con0",
+          "from": "Res1KO_1.con0",
           "to": "Sig"
         },
         {
-          "from": "this.C",
+          "from": "TSBC337_1.C",
           "to": "GndOut"
         }
       ],

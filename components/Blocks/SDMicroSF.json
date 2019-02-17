@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SDMicroSF_1",
           "part": "SDMicroSF"
         }
       ],
@@ -181,31 +181,31 @@
       ],
       "wires": [
         {
-          "from": "this.CO",
+          "from": "SDMicroSF_1.CO",
           "to": "CO"
         },
         {
-          "from": "this.DO",
+          "from": "SDMicroSF_1.DO",
           "to": "DO"
         },
         {
-          "from": "this.SCK",
+          "from": "SDMicroSF_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.CS",
+          "from": "SDMicroSF_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.VCC",
+          "from": "SDMicroSF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.DI",
+          "from": "SDMicroSF_1.DI",
           "to": "DI"
         },
         {
-          "from": "this.GND",
+          "from": "SDMicroSF_1.GND",
           "to": "GND"
         }
       ],

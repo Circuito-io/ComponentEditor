@@ -37,7 +37,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRLineFollowArray_1",
           "part": "IRLineFollowArray"
         }
       ],
@@ -107,19 +107,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "IRLineFollowArray_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "IRLineFollowArray_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.5V",
+          "from": "IRLineFollowArray_1.5V",
           "to": "5V"
         },
         {
-          "from": "this.GND",
+          "from": "IRLineFollowArray_1.GND",
           "to": "GND"
         }
       ],

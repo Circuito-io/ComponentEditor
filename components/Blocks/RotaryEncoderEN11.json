@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RotaryEncoderEN11_1",
           "part": "RotaryEncoderEN11"
         }
       ],
@@ -133,23 +133,23 @@
       ],
       "wires": [
         {
-          "from": "this.A",
+          "from": "RotaryEncoderEN11_1.A",
           "to": "A"
         },
         {
-          "from": "this.GND",
+          "from": "RotaryEncoderEN11_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.B",
+          "from": "RotaryEncoderEN11_1.B",
           "to": "B"
         },
         {
-          "from": "this.SW",
+          "from": "RotaryEncoderEN11_1.SW",
           "to": "SW"
         },
         {
-          "from": "this.GND2",
+          "from": "RotaryEncoderEN11_1.GND2",
           "to": "GND2"
         }
       ],
@@ -177,7 +177,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RotaryEncoderEN11_1",
           "part": "RotaryEncoderEN11"
         }
       ],
@@ -281,23 +281,23 @@
       ],
       "wires": [
         {
-          "from": "this.A",
+          "from": "RotaryEncoderEN11_1.A",
           "to": "A"
         },
         {
-          "from": "this.GND",
+          "from": "RotaryEncoderEN11_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.B",
+          "from": "RotaryEncoderEN11_1.B",
           "to": "B"
         },
         {
-          "from": "this.SW",
+          "from": "RotaryEncoderEN11_1.SW",
           "to": "SW"
         },
         {
-          "from": "this.GND2",
+          "from": "RotaryEncoderEN11_1.GND2",
           "to": "GND2"
         }
       ],

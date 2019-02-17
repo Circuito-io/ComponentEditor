@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ADXL335_1",
           "part": "ADXL335"
         }
       ],
@@ -118,23 +118,23 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "ADXL335_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "ADXL335_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.XOUT",
+          "from": "ADXL335_1.XOUT",
           "to": "XOUT"
         },
         {
-          "from": "this.YOUT",
+          "from": "ADXL335_1.YOUT",
           "to": "YOUT"
         },
         {
-          "from": "this.ZOUT",
+          "from": "ADXL335_1.ZOUT",
           "to": "ZOUT"
         }
       ],

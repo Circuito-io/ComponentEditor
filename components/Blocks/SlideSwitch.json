@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SlideSwitch_1",
           "part": "SlideSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.2",
-          "to": "r1.con0"
+          "from": "SlideSwitch_1.2",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.1",
+          "from": "SlideSwitch_1.1",
           "to": "1"
         },
         {
-          "from": "this.2",
+          "from": "SlideSwitch_1.2",
           "to": "2"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SlideSwitch_1",
           "part": "SlideSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.2",
-          "to": "r1.con0"
+          "from": "SlideSwitch_1.2",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.1",
+          "from": "SlideSwitch_1.1",
           "to": "1"
         },
         {
-          "from": "this.2",
+          "from": "SlideSwitch_1.2",
           "to": "2"
         }
       ],

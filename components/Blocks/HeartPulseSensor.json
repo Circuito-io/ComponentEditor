@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartPulseSensor_1",
           "part": "HeartPulseSensor"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "HeartPulseSensor_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "HeartPulseSensor_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SIG",
+          "from": "HeartPulseSensor_1.SIG",
           "to": "SIG"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartPulseSensor_1",
           "part": "HeartPulseSensor"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "HeartPulseSensor_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "HeartPulseSensor_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SIG",
+          "from": "HeartPulseSensor_1.SIG",
           "to": "SIG"
         }
       ],

@@ -39,37 +39,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LIDARlitev3_1",
           "part": "LIDARlitev3"
         },
         {
-          "name": "Cap",
+          "name": "CapElectro470uF_1",
           "part": "CapElectro470uF"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "Cap.neg"
+          "from": "LIDARlitev3_1.GND",
+          "to": "CapElectro470uF_1.neg"
         },
         {
-          "from": "this.5V",
-          "to": "Cap.pos"
+          "from": "LIDARlitev3_1.5V",
+          "to": "CapElectro470uF_1.pos"
         },
         {
-          "from": "this.5V",
+          "from": "LIDARlitev3_1.5V",
           "to": "5V"
         },
         {
-          "from": "this.SCL",
+          "from": "LIDARlitev3_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "LIDARlitev3_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "LIDARlitev3_1.GND",
           "to": "GND"
         }
       ],

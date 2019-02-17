@@ -34,9 +34,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LEDBarI2C",
-          "rotation": 180
+          "name": "LEDBarI2C_1",
+          "part": "LEDBarI2C"
         }
       ],
       "ports": [
@@ -95,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "LEDBarI2C_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "LEDBarI2C_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "LEDBarI2C_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "LEDBarI2C_1.SCL",
           "to": "SCL"
         }
       ],
@@ -127,9 +126,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LEDBarI2C",
-          "rotation": 180
+          "name": "LEDBarI2C_1",
+          "part": "LEDBarI2C"
         }
       ],
       "ports": [
@@ -188,19 +186,19 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "LEDBarI2C_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "LEDBarI2C_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "LEDBarI2C_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "LEDBarI2C_1.SCL",
           "to": "SCL"
         }
       ],

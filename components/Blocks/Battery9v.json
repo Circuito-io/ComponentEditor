@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Battery9v_1",
           "part": "Battery9v"
         }
       ],
@@ -86,11 +86,11 @@
       ],
       "wires": [
         {
-          "from": "this.pos",
+          "from": "Battery9v_1.pos",
           "to": "pos"
         },
         {
-          "from": "this.neg",
+          "from": "Battery9v_1.neg",
           "to": "neg"
         }
       ],

@@ -39,33 +39,33 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "VoiceRecorder_1",
           "part": "VoiceRecorder"
         },
         {
-          "name": "SpeakerStereo3W",
+          "name": "SpeakerStereo3W_1",
           "part": "SpeakerStereo3W"
         }
       ],
       "wires": [
         {
-          "from": "this.SPK_0",
-          "to": "SpeakerStereo3W.NEG"
+          "from": "VoiceRecorder_1.SPK_0",
+          "to": "SpeakerStereo3W_1.NEG"
         },
         {
-          "from": "this.SPK_1",
-          "to": "SpeakerStereo3W.POS"
+          "from": "VoiceRecorder_1.SPK_1",
+          "to": "SpeakerStereo3W_1.POS"
         },
         {
-          "from": "this.Vin",
+          "from": "VoiceRecorder_1.Vin",
           "to": "Vin"
         },
         {
-          "from": "this.GND",
+          "from": "VoiceRecorder_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.Sig",
+          "from": "VoiceRecorder_1.Sig",
           "to": "Sig"
         }
       ],

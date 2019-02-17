@@ -36,25 +36,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSNeo6M_1",
           "part": "GPSNeo6M"
         }
       ],
       "wires": [
         {
-          "from": "this.TX",
+          "from": "GPSNeo6M_1.TX",
           "to": "Rx"
         },
         {
-          "from": "this.RX",
+          "from": "GPSNeo6M_1.RX",
           "to": "Tx"
         },
         {
-          "from": "this.GND",
+          "from": "GPSNeo6M_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "GPSNeo6M_1.VCC",
           "to": "VCC"
         }
       ],
@@ -164,25 +164,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSNeo6M_1",
           "part": "GPSNeo6M"
         }
       ],
       "wires": [
         {
-          "from": "this.TX",
+          "from": "GPSNeo6M_1.TX",
           "to": "Rx"
         },
         {
-          "from": "this.RX",
+          "from": "GPSNeo6M_1.RX",
           "to": "Tx"
         },
         {
-          "from": "this.GND",
+          "from": "GPSNeo6M_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "GPSNeo6M_1.VCC",
           "to": "VCC"
         }
       ],
@@ -282,25 +282,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSNeo6M_1",
           "part": "GPSNeo6M"
         }
       ],
       "wires": [
         {
-          "from": "this.TX",
+          "from": "GPSNeo6M_1.TX",
           "to": "Rx"
         },
         {
-          "from": "this.RX",
+          "from": "GPSNeo6M_1.RX",
           "to": "Tx"
         },
         {
-          "from": "this.VCC",
+          "from": "GPSNeo6M_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "GPSNeo6M_1.GND",
           "to": "GND"
         }
       ],

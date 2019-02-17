@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BME680_1",
           "part": "BME680"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCK",
+          "from": "BME680_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.VIN",
+          "from": "BME680_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "BME680_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDI",
+          "from": "BME680_1.SDI",
           "to": "SDI"
         }
       ],
@@ -127,7 +127,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BME680_1",
           "part": "BME680"
         }
       ],
@@ -187,19 +187,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCK",
+          "from": "BME680_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.VIN",
+          "from": "BME680_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "BME680_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDI",
+          "from": "BME680_1.SDI",
           "to": "SDI"
         }
       ],

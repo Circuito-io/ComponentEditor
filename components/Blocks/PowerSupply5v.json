@@ -24,7 +24,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PowerSupply5v2A_1",
           "part": "PowerSupply5v2A"
         }
       ],
@@ -79,7 +79,7 @@
       ],
       "wires": [
         {
-          "from": "this.BARREL_JACK",
+          "from": "PowerSupply5v2A_1.BARREL_JACK",
           "to": "BARREL_JACK"
         }
       ],
@@ -103,7 +103,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PowerSupply5v5A_1",
           "part": "PowerSupply5v5A"
         }
       ],
@@ -158,7 +158,7 @@
       ],
       "wires": [
         {
-          "from": "this.BARREL_JACK",
+          "from": "PowerSupply5v5A_1.BARREL_JACK",
           "to": "BARREL_JACK"
         }
       ],

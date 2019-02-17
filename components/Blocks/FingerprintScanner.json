@@ -35,45 +35,45 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FingerprintScanner_1",
           "part": "FingerprintScanner"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
-          "to": "r1.con0"
+          "from": "FingerprintScanner_1.RX",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con0",
-          "to": "r2.con0"
+          "from": "Res470O_1.con0",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "r2.con1",
-          "to": "this.GND"
+          "from": "Res1KO_1.con1",
+          "to": "FingerprintScanner_1.GND"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "Rx"
         },
         {
-          "from": "this.Tx",
+          "from": "FingerprintScanner_1.Tx",
           "to": "Tx"
         },
         {
-          "from": "this.GND",
+          "from": "FingerprintScanner_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "FingerprintScanner_1.VCC",
           "to": "VCC"
         }
       ],
@@ -187,25 +187,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FingerprintScanner_1",
           "part": "FingerprintScanner"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "FingerprintScanner_1.RX",
           "to": "Rx"
         },
         {
-          "from": "this.Tx",
+          "from": "FingerprintScanner_1.Tx",
           "to": "Tx"
         },
         {
-          "from": "this.GND",
+          "from": "FingerprintScanner_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "FingerprintScanner_1.VCC",
           "to": "VCC"
         }
       ],

@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedMatrixMini_1",
           "part": "LedMatrixMini"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.C",
+          "from": "LedMatrixMini_1.C",
           "to": "C"
         },
         {
-          "from": "this.GND",
+          "from": "LedMatrixMini_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "LedMatrixMini_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.D",
+          "from": "LedMatrixMini_1.D",
           "to": "D"
         }
       ],
@@ -126,7 +126,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedMatrixMini_1",
           "part": "LedMatrixMini"
         }
       ],
@@ -186,19 +186,19 @@
       ],
       "wires": [
         {
-          "from": "this.C",
+          "from": "LedMatrixMini_1.C",
           "to": "C"
         },
         {
-          "from": "this.GND",
+          "from": "LedMatrixMini_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "LedMatrixMini_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.D",
+          "from": "LedMatrixMini_1.D",
           "to": "D"
         }
       ],

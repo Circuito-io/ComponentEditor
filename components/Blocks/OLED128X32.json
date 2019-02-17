@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "OLED128X32_1",
           "part": "OLED128X32"
         }
       ],
@@ -110,23 +110,23 @@
       ],
       "wires": [
         {
-          "from": "this.VIN",
+          "from": "OLED128X32_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "OLED128X32_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SCL",
+          "from": "OLED128X32_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "OLED128X32_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.RST",
+          "from": "OLED128X32_1.RST",
           "to": "RST"
         }
       ],
@@ -147,7 +147,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "OLED128X32_1",
           "part": "OLED128X32"
         }
       ],
@@ -222,23 +222,23 @@
       ],
       "wires": [
         {
-          "from": "this.VIN",
+          "from": "OLED128X32_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "OLED128X32_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SCL",
+          "from": "OLED128X32_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "OLED128X32_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.RST",
+          "from": "OLED128X32_1.RST",
           "to": "RST"
         }
       ],

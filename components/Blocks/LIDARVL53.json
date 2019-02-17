@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LIDARVL53_1",
           "part": "LIDARVL53"
         }
       ],
@@ -114,19 +114,19 @@
       ],
       "wires": [
         {
-          "from": "this.VIN",
+          "from": "LIDARVL53_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "LIDARVL53_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SCL",
+          "from": "LIDARVL53_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "LIDARVL53_1.SDA",
           "to": "SDA"
         }
       ],

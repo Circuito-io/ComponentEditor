@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegment_1",
           "part": "SevenSegment"
         }
       ],
@@ -111,15 +111,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "SevenSegment_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "SevenSegment_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.RX",
+          "from": "SevenSegment_1.RX",
           "to": "RX"
         }
       ],
@@ -135,7 +135,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegment_1",
           "part": "SevenSegment"
         }
       ],
@@ -209,19 +209,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "SevenSegment_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "SevenSegment_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SDA",
+          "from": "SevenSegment_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "SevenSegment_1.SCL",
           "to": "SCL"
         }
       ],

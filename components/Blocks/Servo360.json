@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Servo360_1",
           "part": "Servo360"
         }
       ],
@@ -108,15 +108,15 @@
       ],
       "wires": [
         {
-          "from": "this.0",
+          "from": "Servo360_1.0",
           "to": "0"
         },
         {
-          "from": "this.Sig",
+          "from": "Servo360_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.Vin",
+          "from": "Servo360_1.Vin",
           "to": "Vin"
         }
       ],

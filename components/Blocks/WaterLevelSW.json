@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterLevelSW_1",
           "part": "WaterLevelSW"
         }
       ],
@@ -94,15 +94,15 @@
       ],
       "wires": [
         {
-          "from": "this.SIG",
+          "from": "WaterLevelSW_1.SIG",
           "to": "SIG"
         },
         {
-          "from": "this.GND",
+          "from": "WaterLevelSW_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "WaterLevelSW_1.VCC",
           "to": "VCC"
         }
       ],

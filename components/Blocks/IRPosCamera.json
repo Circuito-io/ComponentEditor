@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRPosCamera_1",
           "part": "IRPosCamera"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "IRPosCamera_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "IRPosCamera_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "IRPosCamera_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "IRPosCamera_1.SCL",
           "to": "SCL"
         }
       ],
@@ -126,7 +126,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRPosCamera_1",
           "part": "IRPosCamera"
         }
       ],
@@ -186,19 +186,19 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "IRPosCamera_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "IRPosCamera_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "IRPosCamera_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "IRPosCamera_1.SCL",
           "to": "SCL"
         }
       ],

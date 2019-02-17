@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Relay_1",
           "part": "Relay"
         }
       ],
@@ -71,11 +71,11 @@
       ],
       "wires": [
         {
-          "from": "this.Coil1",
+          "from": "Relay_1.Coil1",
           "to": "Coil1"
         },
         {
-          "from": "this.Coil2",
+          "from": "Relay_1.Coil2",
           "to": "Coil2"
         }
       ],
@@ -97,37 +97,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Relay_1",
           "part": "Relay"
         },
         {
-          "name": "BC337",
+          "name": "TSBC337_1",
           "part": "TSBC337"
         },
         {
-          "name": "r1",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.Coil1",
-          "to": "BC337.C"
+          "from": "Relay_1.Coil1",
+          "to": "TSBC337_1.C"
         },
         {
-          "from": "BC337.B",
-          "to": "r1.con1"
+          "from": "TSBC337_1.B",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "BC337.E",
+          "from": "TSBC337_1.E",
           "to": "gnd"
         },
         {
-          "from": "this.Coil2",
+          "from": "Relay_1.Coil2",
           "to": "Vcc"
         },
         {
-          "from": "r1.con0",
+          "from": "Res1KO_1.con0",
           "to": "Sig"
         }
       ],

@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "KeyPadMem1x4_1",
           "part": "KeyPadMem1x4"
         }
       ],
@@ -146,23 +146,23 @@
       ],
       "wires": [
         {
-          "from": "this.1",
+          "from": "KeyPadMem1x4_1.1",
           "to": "1"
         },
         {
-          "from": "this.2",
+          "from": "KeyPadMem1x4_1.2",
           "to": "2"
         },
         {
-          "from": "this.3",
+          "from": "KeyPadMem1x4_1.3",
           "to": "3"
         },
         {
-          "from": "this.4",
+          "from": "KeyPadMem1x4_1.4",
           "to": "4"
         },
         {
-          "from": "this.5",
+          "from": "KeyPadMem1x4_1.5",
           "to": "5"
         }
       ],

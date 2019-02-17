@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPU9255_1",
           "part": "MPU9255"
         }
       ],
@@ -111,19 +111,19 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "MPU9255_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "MPU9255_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SCL",
+          "from": "MPU9255_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "MPU9255_1.SDA",
           "to": "SDA"
         }
       ],

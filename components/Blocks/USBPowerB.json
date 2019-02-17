@@ -30,7 +30,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerB_1",
           "part": "USBPowerB"
         }
       ],
@@ -76,7 +76,7 @@
       ],
       "wires": [
         {
-          "from": "this.USB_B",
+          "from": "USBPowerB_1.USB_B",
           "to": "USB_B"
         }
       ],

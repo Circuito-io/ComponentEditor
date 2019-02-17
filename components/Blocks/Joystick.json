@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Joystick_1",
           "part": "Joystick"
         }
       ],
@@ -114,23 +114,23 @@
       ],
       "wires": [
         {
-          "from": "this.SW",
+          "from": "Joystick_1.SW",
           "to": "SW"
         },
         {
-          "from": "this.GND",
+          "from": "Joystick_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.5V",
+          "from": "Joystick_1.5V",
           "to": "5V"
         },
         {
-          "from": "this.VRX",
+          "from": "Joystick_1.VRX",
           "to": "VRX"
         },
         {
-          "from": "this.VRY",
+          "from": "Joystick_1.VRY",
           "to": "VRY"
         }
       ],
@@ -151,7 +151,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Joystick_1",
           "part": "Joystick"
         }
       ],
@@ -230,23 +230,23 @@
       ],
       "wires": [
         {
-          "from": "this.SW",
+          "from": "Joystick_1.SW",
           "to": "SW"
         },
         {
-          "from": "this.GND",
+          "from": "Joystick_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.5V",
+          "from": "Joystick_1.5V",
           "to": "5V"
         },
         {
-          "from": "this.VRX",
+          "from": "Joystick_1.VRX",
           "to": "VRX"
         },
         {
-          "from": "this.VRY",
+          "from": "Joystick_1.VRY",
           "to": "VRY"
         }
       ],

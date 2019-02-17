@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BMP280_1",
           "part": "BMP280"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDI",
+          "from": "BMP280_1.SDI",
           "to": "SDI"
         },
         {
-          "from": "this.SCK",
+          "from": "BMP280_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.VIN",
+          "from": "BMP280_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "BMP280_1.GND",
           "to": "GND"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BMP280_1",
           "part": "BMP280"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDI",
+          "from": "BMP280_1.SDI",
           "to": "SDI"
         },
         {
-          "from": "this.SCK",
+          "from": "BMP280_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.VIN",
+          "from": "BMP280_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "BMP280_1.GND",
           "to": "GND"
         }
       ],

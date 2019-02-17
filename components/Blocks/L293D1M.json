@@ -23,7 +23,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "DCMDriverL293D_1",
           "part": "DCMDriverL293D"
         }
       ],
@@ -200,39 +200,39 @@
       ],
       "wires": [
         {
-          "from": "this.Enable1",
+          "from": "DCMDriverL293D_1.Enable1",
           "to": "Enable1"
         },
         {
-          "from": "this.In1",
+          "from": "DCMDriverL293D_1.In1",
           "to": "In1"
         },
         {
-          "from": "this.GND1",
+          "from": "DCMDriverL293D_1.GND1",
           "to": "GND1"
         },
         {
-          "from": "this.GND2",
+          "from": "DCMDriverL293D_1.GND2",
           "to": "GND2"
         },
         {
-          "from": "this.In2",
+          "from": "DCMDriverL293D_1.In2",
           "to": "In2"
         },
         {
-          "from": "this.+Vmotor",
+          "from": "DCMDriverL293D_1.+Vmotor",
           "to": "+Vmotor"
         },
         {
-          "from": "this.+V",
+          "from": "DCMDriverL293D_1.+V",
           "to": "+V"
         },
         {
-          "from": "this.Out1",
+          "from": "DCMDriverL293D_1.Out1",
           "to": "Out1"
         },
         {
-          "from": "this.Out2",
+          "from": "DCMDriverL293D_1.Out2",
           "to": "Out2"
         }
       ],

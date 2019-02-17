@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PushButtonArcadeNoLED_1",
           "part": "PushButtonArcadeNoLED"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.NO",
-          "to": "r1.con1"
+          "from": "PushButtonArcadeNoLED_1.NO",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res10KO_1.con0",
           "to": "0"
         },
         {
-          "from": "this.COM",
+          "from": "PushButtonArcadeNoLED_1.COM",
           "to": "COM"
         },
         {
-          "from": "this.NO",
+          "from": "PushButtonArcadeNoLED_1.NO",
           "to": "NO"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PushButtonArcadeNoLED_1",
           "part": "PushButtonArcadeNoLED"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.NO",
-          "to": "r1.con1"
+          "from": "PushButtonArcadeNoLED_1.NO",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res10KO_1.con0",
           "to": "0"
         },
         {
-          "from": "this.COM",
+          "from": "PushButtonArcadeNoLED_1.COM",
           "to": "COM"
         },
         {
-          "from": "this.NO",
+          "from": "PushButtonArcadeNoLED_1.NO",
           "to": "NO"
         }
       ],

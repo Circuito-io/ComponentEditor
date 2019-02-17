@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GestureSensorZX_1",
           "part": "GestureSensorZX"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "GestureSensorZX_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "GestureSensorZX_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.DA",
+          "from": "GestureSensorZX_1.DA",
           "to": "DA"
         },
         {
-          "from": "this.CL",
+          "from": "GestureSensorZX_1.CL",
           "to": "CL"
         }
       ],
@@ -126,7 +126,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GestureSensorZX_1",
           "part": "GestureSensorZX"
         }
       ],
@@ -186,19 +186,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "GestureSensorZX_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "GestureSensorZX_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.DA",
+          "from": "GestureSensorZX_1.DA",
           "to": "DA"
         },
         {
-          "from": "this.CL",
+          "from": "GestureSensorZX_1.CL",
           "to": "CL"
         }
       ],

@@ -13,7 +13,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PowerSupply12v2A_1",
           "part": "PowerSupply12v2A"
         }
       ],
@@ -67,7 +67,7 @@
       ],
       "wires": [
         {
-          "from": "this.BARREL_JACK",
+          "from": "PowerSupply12v2A_1.BARREL_JACK",
           "to": "BARREL_JACK"
         }
       ],

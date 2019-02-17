@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HMC5883L_1",
           "part": "HMC5883L"
         }
       ],
@@ -112,19 +112,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "HMC5883L_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "HMC5883L_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "HMC5883L_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "HMC5883L_1.SCL",
           "to": "SCL"
         }
       ],

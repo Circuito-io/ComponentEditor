@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterLevelSensor_1",
           "part": "WaterLevelSensor"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.SIG",
+          "from": "WaterLevelSensor_1.SIG",
           "to": "SIG"
         },
         {
-          "from": "this.VCC",
+          "from": "WaterLevelSensor_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "WaterLevelSensor_1.GND",
           "to": "GND"
         }
       ],
@@ -113,7 +113,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterLevelSensor_1",
           "part": "WaterLevelSensor"
         }
       ],
@@ -162,15 +162,15 @@
       ],
       "wires": [
         {
-          "from": "this.SIG",
+          "from": "WaterLevelSensor_1.SIG",
           "to": "SIG"
         },
         {
-          "from": "this.VCC",
+          "from": "WaterLevelSensor_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "WaterLevelSensor_1.GND",
           "to": "GND"
         }
       ],

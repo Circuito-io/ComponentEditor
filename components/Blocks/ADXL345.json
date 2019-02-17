@@ -40,29 +40,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ADXL345_1",
           "part": "ADXL345"
         }
       ],
       "wires": [
         {
-          "from": "this.VCC",
-          "to": "this.CS"
+          "from": "ADXL345_1.VCC",
+          "to": "ADXL345_1.CS"
         },
         {
-          "from": "this.SDA",
+          "from": "ADXL345_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "ADXL345_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "ADXL345_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "ADXL345_1.SCL",
           "to": "SCL"
         }
       ],

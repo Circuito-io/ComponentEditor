@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ResistiveTouchScreen_1",
           "part": "ResistiveTouchScreen"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "ResistiveTouchScreen_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "ResistiveTouchScreen_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "ResistiveTouchScreen_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "ResistiveTouchScreen_1.GND",
           "to": "GND"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ResistiveTouchScreen_1",
           "part": "ResistiveTouchScreen"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "ResistiveTouchScreen_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "ResistiveTouchScreen_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "ResistiveTouchScreen_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "ResistiveTouchScreen_1.GND",
           "to": "GND"
         }
       ],
