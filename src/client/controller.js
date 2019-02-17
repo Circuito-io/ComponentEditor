@@ -27,7 +27,7 @@ export function cacheData() {
       cachedData.blocksData = blocksData;
       cachedData.blocks = blocksData.map(block => block.name);
       cachedData.controllers = blocksData
-        .filter(block => block.category.includes("controller"))
+        .filter(block => block.category && block.category.includes("controller"))
         .map(block => block.name);
       return list_all_parts();
     })
