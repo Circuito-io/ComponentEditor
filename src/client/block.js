@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { isEqual } from "underscore";
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
@@ -313,6 +314,9 @@ export class Block extends React.Component {
               <Button variant="primary" type="submit">
                 Save
               </Button>
+              <Link to="/">
+                <Button>Close</Button>
+              </Link>
             </div>
           </EditorForm>
         </div>
