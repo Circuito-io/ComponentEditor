@@ -283,12 +283,14 @@ export class Block extends React.Component {
             schema={blockSchema.default}
             uiSchema={blockuiSchema(
               this.props.cachedData.blocks,
+              this.props.cachedData.controllers,
               supportBlocksList
             )}
             formData={this.state.formSrcData}
             formContext={{
               partsList: this.props.cachedData.parts,
               codersList: this.props.cachedData.coders,
+              controllersList: this.props.cachedData.controllers,
               connectorsList: this.state.connectorsList
             }}
             onChange={this.onDataChange}

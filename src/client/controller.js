@@ -14,12 +14,21 @@ export const list_all_parts = list_all_factory("parts");
 export const list_all_coders = list_all_factory("coders");
 
 export function cacheData() {
-  let cachedData = { blocks: null, parts: null, coders: null, blocksData: null };
+  let cachedData = {
+    blocks: null,
+    parts: null,
+    coders: null,
+    blocksData: null,
+    controllers: null
+  };
   return list_all_blocks()
     .then(blocksData => {
       // blocks are fetched as objects with several fields
       cachedData.blocksData = blocksData;
       cachedData.blocks = blocksData.map(block => block.name);
+      cachedData.controllers = blocksData
+        .filter(block => block.category.includes("controller"))
+        .map(block => block.name);
       return list_all_parts();
     })
     .then(parts => {
@@ -67,17 +76,15 @@ export const update_a_coder = update_a_factory("coders");
 
 function delete_a_factory(objPrefix) {
   return name => {
-    return window
-      .fetch(urlJoin("/api", objPrefix, name), {
-        method: "delete"
-      })
+    return window.fetch(urlJoin("/api", objPrefix, name), {
+      method: "delete"
+    });
   };
 }
 
 export const delete_a_block = delete_a_factory("blocks");
 export const delete_a_part = delete_a_factory("parts");
 export const delete_a_coder = delete_a_factory("coders");
-
 
 export function invoke_upload() {
   return window
