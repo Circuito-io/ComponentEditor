@@ -35,37 +35,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LED_IR_1",
           "part": "LED_IR"
         },
         {
-          "name": "BJT",
+          "name": "TSBC337_1",
           "part": "TSBC337"
         },
         {
-          "name": "Res1",
+          "name": "Res470O_1",
           "part": "Res470O"
         }
       ],
       "wires": [
         {
-          "from": "BJT.B",
-          "to": "Res1.con0"
+          "from": "TSBC337_1.B",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "BJT.C",
-          "to": "this.Gnd"
+          "from": "TSBC337_1.C",
+          "to": "LED_IR_1.Gnd"
         },
         {
-          "from": "BJT.E",
+          "from": "TSBC337_1.E",
           "to": "0"
         },
         {
-          "from": "Res1.con1",
+          "from": "Res470O_1.con1",
           "to": "SIG"
         },
         {
-          "from": "this.Vin",
+          "from": "LED_IR_1.Vin",
           "to": "Vin"
         }
       ],
@@ -140,37 +140,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LED_IR_1",
           "part": "LED_IR"
         },
         {
-          "name": "BJT",
+          "name": "TSBC337_1",
           "part": "TSBC337"
         },
         {
-          "name": "Res1",
+          "name": "Res220O_1",
           "part": "Res220O"
         }
       ],
       "wires": [
         {
-          "from": "BJT.B",
-          "to": "Res1.con0"
+          "from": "TSBC337_1.B",
+          "to": "Res220O_1.con0"
         },
         {
-          "from": "BJT.C",
-          "to": "this.Gnd"
+          "from": "TSBC337_1.C",
+          "to": "LED_IR_1.Gnd"
         },
         {
-          "from": "BJT.E",
+          "from": "TSBC337_1.E",
           "to": "0"
         },
         {
-          "from": "Res1.con1",
+          "from": "Res220O_1.con1",
           "to": "SIG"
         },
         {
-          "from": "this.Vin",
+          "from": "LED_IR_1.Vin",
           "to": "Vin"
         }
       ],
@@ -243,37 +243,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LED_IR_1",
           "part": "LED_IR"
         },
         {
-          "name": "BJT",
+          "name": "TSBC337_1",
           "part": "TSBC337"
         },
         {
-          "name": "Res1",
+          "name": "Res220O_1",
           "part": "Res220O"
         }
       ],
       "wires": [
         {
-          "from": "BJT.B",
-          "to": "Res1.con0"
+          "from": "TSBC337_1.B",
+          "to": "Res220O_1.con0"
         },
         {
-          "from": "BJT.C",
-          "to": "this.Gnd"
+          "from": "TSBC337_1.C",
+          "to": "LED_IR_1.Gnd"
         },
         {
-          "from": "BJT.E",
+          "from": "TSBC337_1.E",
           "to": "0"
         },
         {
-          "from": "Res1.con1",
+          "from": "Res220O_1.con1",
           "to": "SIG"
         },
         {
-          "from": "this.Vin",
+          "from": "LED_IR_1.Vin",
           "to": "Vin"
         }
       ],

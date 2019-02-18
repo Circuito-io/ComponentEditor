@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCS34725_1",
           "part": "TCS34725"
         }
       ],
@@ -124,27 +124,27 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "TCS34725_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.LED",
+          "from": "TCS34725_1.LED",
           "to": "LED"
         },
         {
-          "from": "this.INT",
+          "from": "TCS34725_1.INT",
           "to": "INT"
         },
         {
-          "from": "this.VIN",
+          "from": "TCS34725_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.SDA",
+          "from": "TCS34725_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "TCS34725_1.GND",
           "to": "GND"
         }
       ],
@@ -164,7 +164,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCS34725_1",
           "part": "TCS34725"
         }
       ],
@@ -254,27 +254,27 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "TCS34725_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "TCS34725_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "TCS34725_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.LED",
+          "from": "TCS34725_1.LED",
           "to": "LED"
         },
         {
-          "from": "this.INT",
+          "from": "TCS34725_1.INT",
           "to": "INT"
         },
         {
-          "from": "this.GND",
+          "from": "TCS34725_1.GND",
           "to": "GND"
         }
       ],

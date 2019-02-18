@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedWS2812Breakout_1",
           "part": "LedWS2812Breakout"
         }
       ],
@@ -126,27 +126,27 @@
       ],
       "wires": [
         {
-          "from": "this.5v_I",
+          "from": "LedWS2812Breakout_1.5v_I",
           "to": "5v_I"
         },
         {
-          "from": "this.DI",
+          "from": "LedWS2812Breakout_1.DI",
           "to": "DI"
         },
         {
-          "from": "this.GND_I",
+          "from": "LedWS2812Breakout_1.GND_I",
           "to": "GND_I"
         },
         {
-          "from": "this.GND_O",
+          "from": "LedWS2812Breakout_1.GND_O",
           "to": "GND_O"
         },
         {
-          "from": "this.5v_O",
+          "from": "LedWS2812Breakout_1.5v_O",
           "to": "5v_O"
         },
         {
-          "from": "this.DO",
+          "from": "LedWS2812Breakout_1.DO",
           "to": "DO"
         }
       ],

@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Nokia5110LCD_1",
           "part": "Nokia5110LCD"
         }
       ],
@@ -184,31 +184,31 @@
       ],
       "wires": [
         {
-          "from": "this.CS",
+          "from": "Nokia5110LCD_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.DN",
+          "from": "Nokia5110LCD_1.DN",
           "to": "DN"
         },
         {
-          "from": "this.VCC",
+          "from": "Nokia5110LCD_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCLK",
+          "from": "Nokia5110LCD_1.SCLK",
           "to": "SCLK"
         },
         {
-          "from": "this.GND",
+          "from": "Nokia5110LCD_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.RST",
+          "from": "Nokia5110LCD_1.RST",
           "to": "RST"
         },
         {
-          "from": "this.DC",
+          "from": "Nokia5110LCD_1.DC",
           "to": "DC"
         }
       ],

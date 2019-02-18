@@ -40,29 +40,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPU6050_1",
           "part": "MPU6050"
         }
       ],
       "wires": [
         {
-          "from": "this.VIO",
-          "to": "this.VCC"
+          "from": "MPU6050_1.VIO",
+          "to": "MPU6050_1.VCC"
         },
         {
-          "from": "this.SDA",
+          "from": "MPU6050_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "MPU6050_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "MPU6050_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.SCL",
+          "from": "MPU6050_1.SCL",
           "to": "SCL"
         }
       ],

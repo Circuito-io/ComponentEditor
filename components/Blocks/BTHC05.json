@@ -34,33 +34,33 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BTHC05_1",
           "part": "BTHC05"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "BTHC05_1.RX",
           "to": "TXD"
         },
         {
-          "from": "this.TX",
+          "from": "BTHC05_1.TX",
           "to": "RXD"
         },
         {
-          "from": "this.GND",
+          "from": "BTHC05_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "BTHC05_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.TX",
+          "from": "BTHC05_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.RX",
+          "from": "BTHC05_1.RX",
           "to": "RX"
         }
       ],
@@ -153,25 +153,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BTHC05_1",
           "part": "BTHC05"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "BTHC05_1.RX",
           "to": "TXD"
         },
         {
-          "from": "this.TX",
+          "from": "BTHC05_1.TX",
           "to": "RXD"
         },
         {
-          "from": "this.GND",
+          "from": "BTHC05_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "BTHC05_1.VCC",
           "to": "VCC"
         }
       ],

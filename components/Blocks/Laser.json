@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Laser_1",
           "part": "Laser"
         }
       ],
@@ -81,11 +81,11 @@
       ],
       "wires": [
         {
-          "from": "this.S",
+          "from": "Laser_1.S",
           "to": "S"
         },
         {
-          "from": "this.GND",
+          "from": "Laser_1.GND",
           "to": "GND"
         }
       ],

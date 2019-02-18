@@ -158,7 +158,7 @@ export class CoderField extends React.Component {
         <React.Fragment>
           <EditorForm
             schema={coderSchema.default}
-            uiSchema={coderuiSchema}
+            uiSchema={coderuiSchema(this.props.formContext.controllersList)}
             formData={this.state.objData}
             onChange={this.onDataChange}
             formContext={{ targetFolder: this.state.objName }}

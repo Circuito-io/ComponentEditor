@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PotentiometerSlide_1",
           "part": "PotentiometerSlide"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.leg2",
+          "from": "PotentiometerSlide_1.leg2",
           "to": "leg2"
         },
         {
-          "from": "this.wiper",
+          "from": "PotentiometerSlide_1.wiper",
           "to": "wiper"
         },
         {
-          "from": "this.leg1",
+          "from": "PotentiometerSlide_1.leg1",
           "to": "leg1"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PotentiometerSlide_1",
           "part": "PotentiometerSlide"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.leg2",
+          "from": "PotentiometerSlide_1.leg2",
           "to": "leg2"
         },
         {
-          "from": "this.wiper",
+          "from": "PotentiometerSlide_1.wiper",
           "to": "wiper"
         },
         {
-          "from": "this.leg1",
+          "from": "PotentiometerSlide_1.leg1",
           "to": "leg1"
         }
       ],

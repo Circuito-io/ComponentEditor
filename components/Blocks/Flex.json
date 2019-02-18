@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Flex_1",
           "part": "Flex"
         },
         {
-          "name": "r1",
+          "name": "Res22KO_1",
           "part": "Res22KO"
         }
       ],
       "wires": [
         {
-          "from": "this.Sig",
-          "to": "r1.con0"
+          "from": "Flex_1.Sig",
+          "to": "Res22KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res22KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.Sig",
+          "from": "Flex_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.Vin",
+          "from": "Flex_1.Vin",
           "to": "Vin"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Flex_1",
           "part": "Flex"
         },
         {
-          "name": "r1",
+          "name": "Res22KO_1",
           "part": "Res22KO"
         }
       ],
       "wires": [
         {
-          "from": "this.Sig",
-          "to": "r1.con0"
+          "from": "Flex_1.Sig",
+          "to": "Res22KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res22KO_1.con1",
           "to": "0"
         },
         {
-          "from": "this.Sig",
+          "from": "Flex_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.Vin",
+          "from": "Flex_1.Vin",
           "to": "Vin"
         }
       ],

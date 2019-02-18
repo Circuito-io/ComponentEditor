@@ -7,7 +7,7 @@ const defaultData = {
   name: "ADXL335",
   width: 15.25,
   height: 17.75,
-  color: "#cf2f27",
+  color: "#CF2F27",
   pins: [
     { name: "ST", type: "male" },
     { name: "Z", type: "male" },
@@ -28,13 +28,16 @@ export class SVGCreator extends React.Component {
     this.state = {
       show: false,
       resSVG: "",
-      currentData: defaultData,
+      currentData: null,
       svgRef: null
     };
   }
 
   createSVG(form) {
     var formData = form.formData;
+
+    if (form.errors.length > 0) return;
+
     var pinsInRect = "";
     var pins = "";
     var lastPinLocation = 0;
@@ -111,39 +114,30 @@ export class SVGCreator extends React.Component {
       });
 
     var height = formData.height;
+    var width = Math.max(formData.width, (lastPinLocation * 25.4) / 72); //check board width includes all pins, if not extend board
+
     var viewBox = "";
     var rect = "";
     if (pinsInRect) {
       var rectPath =
-        `M 0 0 H ${(formData.width * 72) / 25.4} V ${(formData.height * 72) /
-          25.4}  H 0 ` +
+        `M 0 0 H ${(width * 72) / 25.4} V ${(height * 72) / 25.4}  H 0 ` +
         pinsInRect +
         "z";
       rect = <path d={rectPath} style={{ fill: formData.color }} />;
 
-      viewBox =
-        "0 0 " +
-        (formData.width * 72) / 25.4 +
-        " " +
-        (formData.height * 72) / 25.4;
+      viewBox = "0 0 " + (width * 72) / 25.4 + " " + (height * 72) / 25.4;
     }
     // if headers was chosen, create the component body <rect>, viewBox and change the SVG height accordingly
     else {
       rect = (
         <rect
-          width={(formData.width * 72) / 25.4}
-          height={(formData.height * 72) / 25.4}
+          width={(width * 72) / 25.4}
+          height={(height * 72) / 25.4}
           style={{ fill: formData.color }}
         />
       );
-      height = formData.height + 3.5;
-      viewBox =
-        "0 0 " + (formData.width * 72) / 25.4 + " " + (height * 72) / 25.4;
-    }
-
-    // check board width includes all pins, if not extend board
-    if (lastPinLocation > (formData.width * 72) / 25.4) {
-      formData.width = ((lastPinLocation * 25.4) / 72).toFixed(2);
+      height = height + 3.5;
+      viewBox = "0 0 " + (width * 72) / 25.4 + " " + (height * 72) / 25.4;
     }
 
     var res = (
@@ -151,7 +145,7 @@ export class SVGCreator extends React.Component {
         ref={ref => {
           this.setState({ svgRef: ref });
         }}
-        width={formData.width + "mm"}
+        width={width.toFixed(2) + "mm"}
         height={height + "mm"}
         viewBox={viewBox}
         xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +178,7 @@ export class SVGCreator extends React.Component {
   }
 
   handleShow() {
-    this.setState({ show: true });
+    this.setState({ currentData: defaultData, show: true });
   }
 
   render() {

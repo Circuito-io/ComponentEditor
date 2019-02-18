@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RGBGesture_1",
           "part": "RGBGesture"
         }
       ],
@@ -141,27 +141,27 @@
       ],
       "wires": [
         {
-          "from": "this.VL",
+          "from": "RGBGesture_1.VL",
           "to": "VL"
         },
         {
-          "from": "this.VCC",
+          "from": "RGBGesture_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "RGBGesture_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SDA",
+          "from": "RGBGesture_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "RGBGesture_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.INT",
+          "from": "RGBGesture_1.INT",
           "to": "INT"
         }
       ],

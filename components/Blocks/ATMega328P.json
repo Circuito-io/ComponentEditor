@@ -28,165 +28,165 @@
       ],
       "parts": [
         {
-          "name": "Cap3",
+          "name": "CapCeramic100nF_1",
           "part": "CapCeramic100nF"
         },
         {
-          "name": "Res1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "this",
+          "name": "ATMega328P_1",
           "part": "ATMega328P"
         },
         {
-          "name": "Cap2",
+          "name": "CapCeramic22pF_1",
           "part": "CapCeramic22pF"
         },
         {
-          "name": "C1",
+          "name": "CapCeramic22pF_2",
+          "part": "CapCeramic22pF"
+        },
+        {
+          "name": "Crystal16MHz_1",
           "part": "Crystal16MHz"
-        },
-        {
-          "name": "Cap1",
-          "part": "CapCeramic22pF"
         }
       ],
       "wires": [
         {
-          "from": "this.XTAL1",
-          "to": "C1.0"
+          "from": "ATMega328P_1.XTAL1",
+          "to": "Crystal16MHz_1.0"
         },
         {
-          "from": "this.XTAL2",
-          "to": "C1.1"
+          "from": "ATMega328P_1.XTAL2",
+          "to": "Crystal16MHz_1.1"
         },
         {
-          "from": "Cap1.con1",
-          "to": "C1.1"
+          "from": "CapCeramic22pF_2.con1",
+          "to": "Crystal16MHz_1.1"
         },
         {
-          "from": "Cap2.con0",
-          "to": "C1.0"
+          "from": "CapCeramic22pF_1.con0",
+          "to": "Crystal16MHz_1.0"
         },
         {
-          "from": "Cap1.con0",
-          "to": "this.GND"
+          "from": "CapCeramic22pF_2.con0",
+          "to": "ATMega328P_1.GND"
         },
         {
-          "from": "Cap2.con1",
-          "to": "this.GND"
+          "from": "CapCeramic22pF_1.con1",
+          "to": "ATMega328P_1.GND"
         },
         {
-          "from": "this.AVCC",
-          "to": "this.VCC"
+          "from": "ATMega328P_1.AVCC",
+          "to": "ATMega328P_1.VCC"
         },
         {
-          "from": "Res1.con0",
-          "to": "Cap3.con1"
+          "from": "Res10KO_1.con0",
+          "to": "CapCeramic100nF_1.con1"
         },
         {
-          "from": "this.RESET",
-          "to": "Cap3.con0"
+          "from": "ATMega328P_1.RESET",
+          "to": "CapCeramic100nF_1.con0"
         },
         {
-          "from": "this.VCC",
-          "to": "Res1.con1"
+          "from": "ATMega328P_1.VCC",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "Cap3.con1",
+          "from": "CapCeramic100nF_1.con1",
           "to": "DTR"
         },
         {
-          "from": "this.RXD",
+          "from": "ATMega328P_1.RXD",
           "to": "RXD"
         },
         {
-          "from": "this.TXD",
+          "from": "ATMega328P_1.TXD",
           "to": "TXD"
         },
         {
-          "from": "this.2",
+          "from": "ATMega328P_1.2",
           "to": "2"
         },
         {
-          "from": "this.3",
+          "from": "ATMega328P_1.3",
           "to": "3"
         },
         {
-          "from": "this.4",
+          "from": "ATMega328P_1.4",
           "to": "4"
         },
         {
-          "from": "this.5",
+          "from": "ATMega328P_1.5",
           "to": "5"
         },
         {
-          "from": "this.6",
+          "from": "ATMega328P_1.6",
           "to": "6"
         },
         {
-          "from": "this.7",
+          "from": "ATMega328P_1.7",
           "to": "7"
         },
         {
-          "from": "this.8",
+          "from": "ATMega328P_1.8",
           "to": "8"
         },
         {
-          "from": "this.10",
+          "from": "ATMega328P_1.10",
           "to": "10"
         },
         {
-          "from": "this.11",
+          "from": "ATMega328P_1.11",
           "to": "11"
         },
         {
-          "from": "this.12",
+          "from": "ATMega328P_1.12",
           "to": "12"
         },
         {
-          "from": "this.13",
+          "from": "ATMega328P_1.13",
           "to": "13"
         },
         {
-          "from": "this.GND",
+          "from": "ATMega328P_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "ATMega328P_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.AVCC",
+          "from": "ATMega328P_1.AVCC",
           "to": "AVCC"
         },
         {
-          "from": "this.9",
+          "from": "ATMega328P_1.9",
           "to": "9"
         },
         {
-          "from": "this.A0",
+          "from": "ATMega328P_1.A0",
           "to": "A0"
         },
         {
-          "from": "this.A1",
+          "from": "ATMega328P_1.A1",
           "to": "A1"
         },
         {
-          "from": "this.A2",
+          "from": "ATMega328P_1.A2",
           "to": "A2"
         },
         {
-          "from": "this.A3",
+          "from": "ATMega328P_1.A3",
           "to": "A3"
         },
         {
-          "from": "this.A4",
+          "from": "ATMega328P_1.A4",
           "to": "A4"
         },
         {
-          "from": "this.A5",
+          "from": "ATMega328P_1.A5",
           "to": "A5"
         }
       ],
@@ -774,165 +774,165 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ATMega328P_1",
           "part": "ATMega328P"
         },
         {
-          "name": "Cap3",
+          "name": "CapCeramic100nF_1",
           "part": "CapCeramic100nF"
         },
         {
-          "name": "Res1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "C1",
+          "name": "Crystal8MHz_1",
           "part": "Crystal8MHz"
         },
         {
-          "name": "Cap1",
+          "name": "CapCeramic22pF_1",
           "part": "CapCeramic22pF"
         },
         {
-          "name": "Cap2",
+          "name": "CapCeramic22pF_2",
           "part": "CapCeramic22pF"
         }
       ],
       "wires": [
         {
-          "from": "this.XTAL1",
-          "to": "C1.0"
+          "from": "ATMega328P_1.XTAL1",
+          "to": "Crystal8MHz_1.0"
         },
         {
-          "from": "this.XTAL2",
-          "to": "C1.1"
+          "from": "ATMega328P_1.XTAL2",
+          "to": "Crystal8MHz_1.1"
         },
         {
-          "from": "Cap1.con1",
-          "to": "C1.1"
+          "from": "CapCeramic22pF_1.con1",
+          "to": "Crystal8MHz_1.1"
         },
         {
-          "from": "Cap2.con0",
-          "to": "C1.0"
+          "from": "CapCeramic22pF_2.con0",
+          "to": "Crystal8MHz_1.0"
         },
         {
-          "from": "Cap1.con0",
-          "to": "this.GND"
+          "from": "CapCeramic22pF_1.con0",
+          "to": "ATMega328P_1.GND"
         },
         {
-          "from": "Cap2.con1",
-          "to": "this.GND"
+          "from": "CapCeramic22pF_2.con1",
+          "to": "ATMega328P_1.GND"
         },
         {
-          "from": "this.AVCC",
-          "to": "this.VCC"
+          "from": "ATMega328P_1.AVCC",
+          "to": "ATMega328P_1.VCC"
         },
         {
-          "from": "Res1.con0",
-          "to": "Cap3.con1"
+          "from": "Res10KO_1.con0",
+          "to": "CapCeramic100nF_1.con1"
         },
         {
-          "from": "this.RESET",
-          "to": "Cap3.con0"
+          "from": "ATMega328P_1.RESET",
+          "to": "CapCeramic100nF_1.con0"
         },
         {
-          "from": "this.VCC",
-          "to": "Res1.con1"
+          "from": "ATMega328P_1.VCC",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "Cap3.con1",
+          "from": "CapCeramic100nF_1.con1",
           "to": "DTR"
         },
         {
-          "from": "this.RXD",
+          "from": "ATMega328P_1.RXD",
           "to": "RXD"
         },
         {
-          "from": "this.TXD",
+          "from": "ATMega328P_1.TXD",
           "to": "TXD"
         },
         {
-          "from": "this.2",
+          "from": "ATMega328P_1.2",
           "to": "2"
         },
         {
-          "from": "this.3",
+          "from": "ATMega328P_1.3",
           "to": "3"
         },
         {
-          "from": "this.4",
+          "from": "ATMega328P_1.4",
           "to": "4"
         },
         {
-          "from": "this.5",
+          "from": "ATMega328P_1.5",
           "to": "5"
         },
         {
-          "from": "this.6",
+          "from": "ATMega328P_1.6",
           "to": "6"
         },
         {
-          "from": "this.7",
+          "from": "ATMega328P_1.7",
           "to": "7"
         },
         {
-          "from": "this.8",
+          "from": "ATMega328P_1.8",
           "to": "8"
         },
         {
-          "from": "this.10",
+          "from": "ATMega328P_1.10",
           "to": "10"
         },
         {
-          "from": "this.11",
+          "from": "ATMega328P_1.11",
           "to": "11"
         },
         {
-          "from": "this.12",
+          "from": "ATMega328P_1.12",
           "to": "12"
         },
         {
-          "from": "this.13",
+          "from": "ATMega328P_1.13",
           "to": "13"
         },
         {
-          "from": "this.GND",
+          "from": "ATMega328P_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "ATMega328P_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.AVCC",
+          "from": "ATMega328P_1.AVCC",
           "to": "AVCC"
         },
         {
-          "from": "this.9",
+          "from": "ATMega328P_1.9",
           "to": "9"
         },
         {
-          "from": "this.A0",
+          "from": "ATMega328P_1.A0",
           "to": "A0"
         },
         {
-          "from": "this.A1",
+          "from": "ATMega328P_1.A1",
           "to": "A1"
         },
         {
-          "from": "this.A2",
+          "from": "ATMega328P_1.A2",
           "to": "A2"
         },
         {
-          "from": "this.A3",
+          "from": "ATMega328P_1.A3",
           "to": "A3"
         },
         {
-          "from": "this.A4",
+          "from": "ATMega328P_1.A4",
           "to": "A4"
         },
         {
-          "from": "this.A5",
+          "from": "ATMega328P_1.A5",
           "to": "A5"
         }
       ],

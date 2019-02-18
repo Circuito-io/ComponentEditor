@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRCamera_1",
           "part": "IRCamera"
         }
       ],
@@ -122,27 +122,27 @@
       ],
       "wires": [
         {
-          "from": "this.INT",
+          "from": "IRCamera_1.INT",
           "to": "INT"
         },
         {
-          "from": "this.SCL",
+          "from": "IRCamera_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "IRCamera_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SDA",
+          "from": "IRCamera_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.VIN",
+          "from": "IRCamera_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "IRCamera_1.GND",
           "to": "GND"
         }
       ],
@@ -162,7 +162,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRCamera_1",
           "part": "IRCamera"
         }
       ],
@@ -250,27 +250,27 @@
       ],
       "wires": [
         {
-          "from": "this.INT",
+          "from": "IRCamera_1.INT",
           "to": "INT"
         },
         {
-          "from": "this.SCL",
+          "from": "IRCamera_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "IRCamera_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SDA",
+          "from": "IRCamera_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.VIN",
+          "from": "IRCamera_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "IRCamera_1.GND",
           "to": "GND"
         }
       ],

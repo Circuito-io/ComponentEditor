@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "serLCD_1",
           "part": "serLCD"
         }
       ],
@@ -118,15 +118,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "serLCD_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "serLCD_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.RX",
+          "from": "serLCD_1.RX",
           "to": "RX"
         }
       ],

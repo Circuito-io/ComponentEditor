@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SGP30_1",
           "part": "SGP30"
         }
       ],
@@ -95,19 +95,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "SGP30_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "SGP30_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "SGP30_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "SGP30_1.GND",
           "to": "GND"
         }
       ],
@@ -128,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SGP30_1",
           "part": "SGP30"
         }
       ],
@@ -188,19 +188,19 @@
       ],
       "wires": [
         {
-          "from": "this.SDA",
+          "from": "SGP30_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "SGP30_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "SGP30_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "SGP30_1.GND",
           "to": "GND"
         }
       ],

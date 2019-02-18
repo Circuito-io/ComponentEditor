@@ -9,7 +9,7 @@ export const docs = {
 - _Outputs:_ Actuators, lights, display
 - _Power_ supply: Wall adaptors, batteries
 - _Controllers:_ Arduino, Raspberry Pi
-- _IoT:_ Wifi, bluetooth, RF
+- _Connectivity:_ IoT, Wifi, bluetooth, RF
 - _Support:_ Regulators, capacitors, transistors, FTDI`
   },
   "block.appName": {
@@ -31,7 +31,12 @@ export const docs = {
     img: "block_desc.png"
   },
   "block.alternativeBlock": {
-    text: "Alternative block to try if this one failed"
+    text: `Alternative block to try if this one failed.
+    Relevant for controllers and power supplies.
+
+    For example:
+- ArduinoMega is an alternative for ArduinoUno because it has more pins.
+- 12 Power supply is an alternative for a 9v battery.`
   },
   "block.notes": {
     text:
@@ -63,7 +68,7 @@ Circuits with a lower cost will be tried first.`
     text: `Select the controllers that are able to interface with the circuit.`
   },
   "circuit.part.instanceName": {
-    text: `Label of the part in the circuit. For the main part, the instance name should be “this”. For support parts, use a meaningful abbreviation e.g. r# for resistors.`
+    text: `Label of the part in the circuit.`
   },
   "circuit.part.part": {
     text: `Select the part you want to add from the dropdown menu or create a new part, by entering a name and clicking on the Edit button.`
@@ -91,6 +96,12 @@ A port can either require or provide attributes. These attributes are used by th
   "circuit.part.includeInFirmware": {
     text: `When generating code, create a variable for this port.
     The variable's value will hold to codename of this port's provider.`
+  },
+  "part.description": {
+    text: "The name of the part as it appears in the datasheet or product page of the manufacturer or distributor. On the app, this name will appear in the part “view info” popup."
+  },
+  "part.placing.onBreadboard": {
+    text: "When enabled the system will try to place the part on the breadboard, otherwise it will be floating around the breadboard."
   },
   "part.row": {
     text:

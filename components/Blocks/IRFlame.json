@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRFlame_1",
           "part": "IRFlame"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "IRFlame_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.AOUT",
+          "from": "IRFlame_1.AOUT",
           "to": "AOUT"
         },
         {
-          "from": "this.5V",
+          "from": "IRFlame_1.5V",
           "to": "5V"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRFlame_1",
           "part": "IRFlame"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "IRFlame_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.AOUT",
+          "from": "IRFlame_1.AOUT",
           "to": "AOUT"
         },
         {
-          "from": "this.5V",
+          "from": "IRFlame_1.5V",
           "to": "5V"
         }
       ],

@@ -39,29 +39,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UVSensor_1",
           "part": "UVSensor"
         }
       ],
       "wires": [
         {
-          "from": "this.3.3V",
-          "to": "this.EN"
+          "from": "UVSensor_1.3.3V",
+          "to": "UVSensor_1.EN"
         },
         {
-          "from": "this.EN",
+          "from": "UVSensor_1.EN",
           "to": "EN"
         },
         {
-          "from": "this.OUT",
+          "from": "UVSensor_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.GND",
+          "from": "UVSensor_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.3.3V",
+          "from": "UVSensor_1.3.3V",
           "to": "3.3V"
         }
       ],

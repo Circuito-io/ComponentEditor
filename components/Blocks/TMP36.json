@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TMP36_1",
           "part": "TMP36"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vcc",
+          "from": "TMP36_1.Vcc",
           "to": "Vcc"
         },
         {
-          "from": "this.Gnd",
+          "from": "TMP36_1.Gnd",
           "to": "Gnd"
         },
         {
-          "from": "this.Vout",
+          "from": "TMP36_1.Vout",
           "to": "Vout"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TMP36_1",
           "part": "TMP36"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.Vcc",
+          "from": "TMP36_1.Vcc",
           "to": "Vcc"
         },
         {
-          "from": "this.Gnd",
+          "from": "TMP36_1.Gnd",
           "to": "Gnd"
         },
         {
-          "from": "this.Vout",
+          "from": "TMP36_1.Vout",
           "to": "Vout"
         }
       ],

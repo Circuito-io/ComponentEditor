@@ -40,31 +40,29 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "SolenoidValve",
-          "rotation": 180
+          "name": "SolenoidValve_1",
+          "part": "SolenoidValve"
         },
         {
-          "name": "d1",
-          "part": "DIRect1A50v",
-          "rotation": 180
+          "name": "DIRect1A50v_1",
+          "part": "DIRect1A50v"
         }
       ],
       "wires": [
         {
-          "from": "this.Coil2",
-          "to": "d1.neg"
+          "from": "SolenoidValve_1.Coil2",
+          "to": "DIRect1A50v_1.neg"
         },
         {
-          "from": "this.Coil1",
-          "to": "d1.pos"
+          "from": "SolenoidValve_1.Coil1",
+          "to": "DIRect1A50v_1.pos"
         },
         {
-          "from": "this.Coil1",
+          "from": "SolenoidValve_1.Coil1",
           "to": "Coil1"
         },
         {
-          "from": "this.Coil2",
+          "from": "SolenoidValve_1.Coil2",
           "to": "Coil2"
         }
       ],

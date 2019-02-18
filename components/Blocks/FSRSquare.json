@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FSRSquare_1",
           "part": "FSRSquare"
         },
         {
-          "name": "r1",
+          "name": "Res3K3O_1",
           "part": "Res3K3O"
         }
       ],
       "wires": [
         {
-          "from": "this.1",
-          "to": "r1.con1"
+          "from": "FSRSquare_1.1",
+          "to": "Res3K3O_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res3K3O_1.con0",
           "to": "0"
         },
         {
-          "from": "this.1",
+          "from": "FSRSquare_1.1",
           "to": "1"
         },
         {
-          "from": "this.2",
+          "from": "FSRSquare_1.2",
           "to": "2"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FSRSquare_1",
           "part": "FSRSquare"
         },
         {
-          "name": "r1",
+          "name": "Res3K3O_1",
           "part": "Res3K3O"
         }
       ],
       "wires": [
         {
-          "from": "this.1",
-          "to": "r1.con1"
+          "from": "FSRSquare_1.1",
+          "to": "Res3K3O_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res3K3O_1.con0",
           "to": "0"
         },
         {
-          "from": "this.1",
+          "from": "FSRSquare_1.1",
           "to": "1"
         },
         {
-          "from": "this.2",
+          "from": "FSRSquare_1.2",
           "to": "2"
         }
       ],

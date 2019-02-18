@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LSM9DS1_1",
           "part": "LSM9DS1"
         }
       ],
@@ -94,19 +94,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "LSM9DS1_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "LSM9DS1_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.SDA",
+          "from": "LSM9DS1_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "LSM9DS1_1.GND",
           "to": "GND"
         }
       ],
@@ -127,7 +127,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LSM9DS1_1",
           "part": "LSM9DS1"
         }
       ],
@@ -187,19 +187,19 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "LSM9DS1_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.VIN",
+          "from": "LSM9DS1_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.SDA",
+          "from": "LSM9DS1_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.GND",
+          "from": "LSM9DS1_1.GND",
           "to": "GND"
         }
       ],

@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BNO055_1",
           "part": "BNO055"
         }
       ],
@@ -109,23 +109,23 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "BNO055_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "BNO055_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.VIN",
+          "from": "BNO055_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "BNO055_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.INT",
+          "from": "BNO055_1.INT",
           "to": "INT"
         }
       ],
@@ -145,7 +145,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BNO055_1",
           "part": "BNO055"
         }
       ],
@@ -220,23 +220,23 @@
       ],
       "wires": [
         {
-          "from": "this.SCL",
+          "from": "BNO055_1.SCL",
           "to": "SCL"
         },
         {
-          "from": "this.SDA",
+          "from": "BNO055_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.VIN",
+          "from": "BNO055_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.GND",
+          "from": "BNO055_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.INT",
+          "from": "BNO055_1.INT",
           "to": "INT"
         }
       ],

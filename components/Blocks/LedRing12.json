@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedRing12_1",
           "part": "LedRing12"
         }
       ],
@@ -118,19 +118,19 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "LedRing12_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.IN",
+          "from": "LedRing12_1.IN",
           "to": "IN"
         },
         {
-          "from": "this.OUT",
+          "from": "LedRing12_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.GND",
+          "from": "LedRing12_1.GND",
           "to": "GND"
         }
       ],

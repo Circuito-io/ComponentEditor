@@ -32,45 +32,45 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HCSR04_1",
           "part": "HCSR04"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "r2.con1"
+          "from": "HCSR04_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r2.con0",
-          "to": "r1.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.ECHO",
-          "to": "r1.con0"
+          "from": "HCSR04_1.ECHO",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "Echo"
         },
         {
-          "from": "this.TRIG",
+          "from": "HCSR04_1.TRIG",
           "to": "TRIG"
         },
         {
-          "from": "this.VCC",
+          "from": "HCSR04_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "HCSR04_1.GND",
           "to": "GND"
         }
       ],
@@ -152,7 +152,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HCSR04_1",
           "part": "HCSR04"
         }
       ],
@@ -216,19 +216,19 @@
       ],
       "wires": [
         {
-          "from": "this.TRIG",
+          "from": "HCSR04_1.TRIG",
           "to": "TRIG"
         },
         {
-          "from": "this.VCC",
+          "from": "HCSR04_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.ECHO",
+          "from": "HCSR04_1.ECHO",
           "to": "ECHO"
         },
         {
-          "from": "this.GND",
+          "from": "HCSR04_1.GND",
           "to": "GND"
         }
       ],
@@ -246,37 +246,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HCSR04_1",
           "part": "HCSR04"
         },
         {
-          "name": "Res",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.TRIG",
-          "to": "Res.con0"
+          "from": "HCSR04_1.TRIG",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "this.GND",
-          "to": "Res.con1"
+          "from": "HCSR04_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "this.TRIG",
+          "from": "HCSR04_1.TRIG",
           "to": "TRIG"
         },
         {
-          "from": "this.VCC",
+          "from": "HCSR04_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.ECHO",
+          "from": "HCSR04_1.ECHO",
           "to": "ECHO"
         },
         {
-          "from": "this.GND",
+          "from": "HCSR04_1.GND",
           "to": "GND"
         }
       ],

@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickPSP_1",
           "part": "JoystickPSP"
         }
       ],
@@ -99,19 +99,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "JoystickPSP_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "JoystickPSP_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.X",
+          "from": "JoystickPSP_1.X",
           "to": "X"
         },
         {
-          "from": "this.Y",
+          "from": "JoystickPSP_1.Y",
           "to": "Y"
         }
       ],
@@ -132,7 +132,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickPSP_1",
           "part": "JoystickPSP"
         }
       ],
@@ -196,19 +196,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "JoystickPSP_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "JoystickPSP_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.X",
+          "from": "JoystickPSP_1.X",
           "to": "X"
         },
         {
-          "from": "this.Y",
+          "from": "JoystickPSP_1.Y",
           "to": "Y"
         }
       ],

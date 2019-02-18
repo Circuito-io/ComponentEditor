@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SpeakerStereo3W_1",
           "part": "SpeakerStereo3W"
         }
       ],
@@ -81,11 +81,11 @@
       ],
       "wires": [
         {
-          "from": "this.POS",
+          "from": "SpeakerStereo3W_1.POS",
           "to": "POS"
         },
         {
-          "from": "this.NEG",
+          "from": "SpeakerStereo3W_1.NEG",
           "to": "NEG"
         }
       ],

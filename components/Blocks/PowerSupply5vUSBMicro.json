@@ -25,7 +25,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerMicro_1",
           "part": "USBPowerMicro"
         }
       ],
@@ -71,7 +71,7 @@
       ],
       "wires": [
         {
-          "from": "this.USB_MICRO",
+          "from": "USBPowerMicro_1.USB_MICRO",
           "to": "USB_MICRO"
         }
       ],

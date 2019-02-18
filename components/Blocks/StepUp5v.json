@@ -9,29 +9,29 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "StepUp5v_1",
           "part": "StepUp5v"
         }
       ],
       "wires": [
         {
-          "from": "this.OUT5v-",
-          "to": "this.BAT-"
+          "from": "StepUp5v_1.OUT5v-",
+          "to": "StepUp5v_1.BAT-"
         },
         {
-          "from": "this.OUT5v-",
+          "from": "StepUp5v_1.OUT5v-",
           "to": "OUT5v-"
         },
         {
-          "from": "this.OUT5v+",
+          "from": "StepUp5v_1.OUT5v+",
           "to": "OUT5v+"
         },
         {
-          "from": "this.BAT+",
+          "from": "StepUp5v_1.BAT+",
           "to": "BAT+"
         },
         {
-          "from": "this.BAT-",
+          "from": "StepUp5v_1.BAT-",
           "to": "BAT-"
         }
       ],

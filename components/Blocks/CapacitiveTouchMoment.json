@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouchMoment_1",
           "part": "CapacitiveTouchMoment"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.OUT",
+          "from": "CapacitiveTouchMoment_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.GND",
+          "from": "CapacitiveTouchMoment_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VDD",
+          "from": "CapacitiveTouchMoment_1.VDD",
           "to": "VDD"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouchMoment_1",
           "part": "CapacitiveTouchMoment"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.OUT",
+          "from": "CapacitiveTouchMoment_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.GND",
+          "from": "CapacitiveTouchMoment_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VDD",
+          "from": "CapacitiveTouchMoment_1.VDD",
           "to": "VDD"
         }
       ],

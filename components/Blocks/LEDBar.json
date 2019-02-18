@@ -38,169 +38,169 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDBar_1",
           "part": "LEDBar"
         },
         {
-          "name": "rA",
+          "name": "Res100O_1",
           "part": "Res100O"
         },
         {
-          "name": "rB",
+          "name": "Res100O_2",
           "part": "Res100O"
         },
         {
-          "name": "rC",
+          "name": "Res100O_3",
           "part": "Res100O"
         },
         {
-          "name": "rD",
+          "name": "Res100O_4",
           "part": "Res100O"
         },
         {
-          "name": "rE",
+          "name": "Res100O_5",
           "part": "Res100O"
         },
         {
-          "name": "rF",
+          "name": "Res100O_6",
           "part": "Res100O"
         },
         {
-          "name": "rG",
+          "name": "Res100O_7",
           "part": "Res100O"
         },
         {
-          "name": "rH",
+          "name": "Res100O_8",
           "part": "Res100O"
         },
         {
-          "name": "rI",
+          "name": "Res100O_9",
           "part": "Res100O"
         },
         {
-          "name": "rJ",
+          "name": "Res100O_10",
           "part": "Res100O"
         }
       ],
       "wires": [
         {
-          "from": "this.JC",
-          "to": "rA.con0"
+          "from": "LEDBar_1.JC",
+          "to": "Res100O_1.con0"
         },
         {
-          "from": "this.IC",
-          "to": "rB.con0"
+          "from": "LEDBar_1.IC",
+          "to": "Res100O_2.con0"
         },
         {
-          "from": "this.HC",
-          "to": "rC.con0"
+          "from": "LEDBar_1.HC",
+          "to": "Res100O_3.con0"
         },
         {
-          "from": "this.GC",
-          "to": "rD.con0"
+          "from": "LEDBar_1.GC",
+          "to": "Res100O_4.con0"
         },
         {
-          "from": "this.FC",
-          "to": "rE.con0"
+          "from": "LEDBar_1.FC",
+          "to": "Res100O_5.con0"
         },
         {
-          "from": "this.EC",
-          "to": "rF.con0"
+          "from": "LEDBar_1.EC",
+          "to": "Res100O_6.con0"
         },
         {
-          "from": "this.DC",
-          "to": "rG.con0"
+          "from": "LEDBar_1.DC",
+          "to": "Res100O_7.con0"
         },
         {
-          "from": "this.CC",
-          "to": "rH.con0"
+          "from": "LEDBar_1.CC",
+          "to": "Res100O_8.con0"
         },
         {
-          "from": "this.BC",
-          "to": "rI.con0"
+          "from": "LEDBar_1.BC",
+          "to": "Res100O_9.con0"
         },
         {
-          "from": "this.AC",
-          "to": "rJ.con0"
+          "from": "LEDBar_1.AC",
+          "to": "Res100O_10.con0"
         },
         {
-          "from": "rA.con1",
-          "to": "rB.con1"
+          "from": "Res100O_1.con1",
+          "to": "Res100O_2.con1"
         },
         {
-          "from": "rB.con1",
-          "to": "rC.con1"
+          "from": "Res100O_2.con1",
+          "to": "Res100O_3.con1"
         },
         {
-          "from": "rC.con1",
-          "to": "rD.con1"
+          "from": "Res100O_3.con1",
+          "to": "Res100O_4.con1"
         },
         {
-          "from": "rD.con1",
-          "to": "rE.con1"
+          "from": "Res100O_4.con1",
+          "to": "Res100O_5.con1"
         },
         {
-          "from": "rE.con1",
-          "to": "rF.con1"
+          "from": "Res100O_5.con1",
+          "to": "Res100O_6.con1"
         },
         {
-          "from": "rF.con1",
-          "to": "rG.con1"
+          "from": "Res100O_6.con1",
+          "to": "Res100O_7.con1"
         },
         {
-          "from": "rG.con1",
-          "to": "rH.con1"
+          "from": "Res100O_7.con1",
+          "to": "Res100O_8.con1"
         },
         {
-          "from": "rH.con1",
-          "to": "rI.con1"
+          "from": "Res100O_8.con1",
+          "to": "Res100O_9.con1"
         },
         {
-          "from": "rI.con1",
-          "to": "rJ.con1"
+          "from": "Res100O_9.con1",
+          "to": "Res100O_10.con1"
         },
         {
-          "from": "rA.con1",
+          "from": "Res100O_1.con1",
           "to": "GND"
         },
         {
-          "from": "this.JA",
+          "from": "LEDBar_1.JA",
           "to": "JA"
         },
         {
-          "from": "this.IA",
+          "from": "LEDBar_1.IA",
           "to": "IA"
         },
         {
-          "from": "this.HA",
+          "from": "LEDBar_1.HA",
           "to": "HA"
         },
         {
-          "from": "this.GA",
+          "from": "LEDBar_1.GA",
           "to": "GA"
         },
         {
-          "from": "this.FA",
+          "from": "LEDBar_1.FA",
           "to": "FA"
         },
         {
-          "from": "this.EA",
+          "from": "LEDBar_1.EA",
           "to": "EA"
         },
         {
-          "from": "this.DA",
+          "from": "LEDBar_1.DA",
           "to": "DA"
         },
         {
-          "from": "this.CA",
+          "from": "LEDBar_1.CA",
           "to": "CA"
         },
         {
-          "from": "this.BA",
+          "from": "LEDBar_1.BA",
           "to": "BA"
         },
         {
-          "from": "this.AA",
+          "from": "LEDBar_1.AA",
           "to": "AA"
         }
       ],

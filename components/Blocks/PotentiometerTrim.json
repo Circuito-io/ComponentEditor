@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PotentiometerTrim_1",
           "part": "PotentiometerTrim"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "PotentiometerTrim_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SIG",
+          "from": "PotentiometerTrim_1.SIG",
           "to": "SIG"
         },
         {
-          "from": "this.VDD",
+          "from": "PotentiometerTrim_1.VDD",
           "to": "VDD"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PotentiometerTrim_1",
           "part": "PotentiometerTrim"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "PotentiometerTrim_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SIG",
+          "from": "PotentiometerTrim_1.SIG",
           "to": "SIG"
         },
         {
-          "from": "this.VDD",
+          "from": "PotentiometerTrim_1.VDD",
           "to": "VDD"
         }
       ],

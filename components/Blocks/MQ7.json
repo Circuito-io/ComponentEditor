@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MQ7_1",
           "part": "MQ7"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "MQ7_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.AOUT",
+          "from": "MQ7_1.AOUT",
           "to": "AOUT"
         },
         {
-          "from": "this.5V",
+          "from": "MQ7_1.5V",
           "to": "5V"
         }
       ],
@@ -114,41 +114,41 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MQ7_1",
           "part": "MQ7"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "r2.con1"
+          "from": "MQ7_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r2.con0",
-          "to": "r1.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.AOUT",
-          "to": "r1.con0"
+          "from": "MQ7_1.AOUT",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "Aout"
         },
         {
-          "from": "this.GND",
+          "from": "MQ7_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.5V",
+          "from": "MQ7_1.5V",
           "to": "5V"
         }
       ],

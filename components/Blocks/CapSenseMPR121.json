@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapSenseMPR121_1",
           "part": "CapSenseMPR121"
         }
       ],
@@ -116,19 +116,19 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "CapSenseMPR121_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VIN",
+          "from": "CapSenseMPR121_1.VIN",
           "to": "VIN"
         },
         {
-          "from": "this.SDA",
+          "from": "CapSenseMPR121_1.SDA",
           "to": "SDA"
         },
         {
-          "from": "this.SCL",
+          "from": "CapSenseMPR121_1.SCL",
           "to": "SCL"
         }
       ],

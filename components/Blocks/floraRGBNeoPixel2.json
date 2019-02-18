@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "floraRGBNeoPixel2_1",
           "part": "floraRGBNeoPixel2"
         }
       ],
@@ -92,19 +92,19 @@
       ],
       "wires": [
         {
-          "from": "this.DIN",
+          "from": "floraRGBNeoPixel2_1.DIN",
           "to": "DIN"
         },
         {
-          "from": "this.VCC",
+          "from": "floraRGBNeoPixel2_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "floraRGBNeoPixel2_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.DOUT",
+          "from": "floraRGBNeoPixel2_1.DOUT",
           "to": "DOUT"
         }
       ],

@@ -40,29 +40,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SolenoidLock_1",
           "part": "SolenoidLock"
         },
         {
-          "name": "d1",
+          "name": "DIRect1A50v_1",
           "part": "DIRect1A50v"
         }
       ],
       "wires": [
         {
-          "from": "this.VCC",
-          "to": "d1.neg"
+          "from": "SolenoidLock_1.VCC",
+          "to": "DIRect1A50v_1.neg"
         },
         {
-          "from": "this.GND",
-          "to": "d1.pos"
+          "from": "SolenoidLock_1.GND",
+          "to": "DIRect1A50v_1.pos"
         },
         {
-          "from": "this.GND",
+          "from": "SolenoidLock_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "SolenoidLock_1.VCC",
           "to": "VCC"
         }
       ],

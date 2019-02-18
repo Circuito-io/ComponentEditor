@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { isEqual } from "underscore";
 import { toast } from "react-toastify";
 import { Button } from "react-bootstrap";
@@ -38,6 +39,7 @@ export class Block extends React.Component {
 
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateConnectors = this.updateConnectors.bind(this);
+    this.updatePartsInstanceName = this.updatePartsInstanceName.bind(this);
     this.save = this.save.bind(this);
     this.onDataChange = this.onDataChange.bind(this);
     this.delete = this.delete.bind(this);
@@ -92,7 +94,6 @@ export class Block extends React.Component {
           partName && partsNames.add(partName);
         });
     });
-
 
     // cache all parts
     partsNames.forEach(partName => {
@@ -207,22 +208,56 @@ export class Block extends React.Component {
     }
   }
 
-  onDataChange(data) {
+  updatePartsInstanceName(formData) {
+    var circuits = formData.circuits && formData.circuits;
+
+    if (!circuits) return formData;
+
+    formData.circuits = formData.circuits.map(circuit => {
+      var partsCounter = {};
+
+      if (circuit.parts)
+        circuit.parts = circuit.parts.map(part => {
+          const partName = part.part;
+
+          if (!partName) return part;
+
+          if (!(partName in partsCounter)) partsCounter[partName] = 0;
+
+          partsCounter[partName] += 1;
+
+          part.name = `${partName}_${partsCounter[partName]}`;
+
+          return part;
+        });
+
+      return circuit;
+    });
+
+    return formData;
+  }
+
+  onDataChange(form) {
     if (this.state.formSrcData == {}) return;
 
-    if (isEqual(data.formData.circuits, this.currentData.circuits) == false) {
-      //detect changes in the circuits
+    var formData = form.formData;
+    //detect changes in the circuits
+    if (isEqual(formData.circuits, this.currentData.circuits) == false) {
+      formData = this.updatePartsInstanceName(formData);
 
-      this.setState({ formSrcData: data.formData });
+      this.setState({ formSrcData: formData });
 
       // don't update on every keypress, wait for a timeout before updating
       clearTimeout(this.updateConnectorsTimeout);
-      this.updateConnectorsTimeout = setTimeout(this.updateConnectors, UPDATE_CONNECTORS_TIMEOUT);
+      this.updateConnectorsTimeout = setTimeout(
+        this.updateConnectors,
+        UPDATE_CONNECTORS_TIMEOUT
+      );
     }
 
     ReactTooltip.rebuild();
     this.modified = true;
-    this.currentData = data.formData;
+    this.currentData = formData;
   }
 
   render() {
@@ -248,12 +283,14 @@ export class Block extends React.Component {
             schema={blockSchema.default}
             uiSchema={blockuiSchema(
               this.props.cachedData.blocks,
+              this.props.cachedData.controllers,
               supportBlocksList
             )}
             formData={this.state.formSrcData}
             formContext={{
               partsList: this.props.cachedData.parts,
               codersList: this.props.cachedData.coders,
+              controllersList: this.props.cachedData.controllers,
               connectorsList: this.state.connectorsList
             }}
             onChange={this.onDataChange}
@@ -279,6 +316,9 @@ export class Block extends React.Component {
               <Button variant="primary" type="submit">
                 Save
               </Button>
+              <Link to="/">
+                <Button>Close</Button>
+              </Link>
             </div>
           </EditorForm>
         </div>

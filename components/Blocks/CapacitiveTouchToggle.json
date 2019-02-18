@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouchToggle_1",
           "part": "CapacitiveTouchToggle"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.OUT",
+          "from": "CapacitiveTouchToggle_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.GND",
+          "from": "CapacitiveTouchToggle_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VDD",
+          "from": "CapacitiveTouchToggle_1.VDD",
           "to": "VDD"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouchToggle_1",
           "part": "CapacitiveTouchToggle"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.OUT",
+          "from": "CapacitiveTouchToggle_1.OUT",
           "to": "OUT"
         },
         {
-          "from": "this.GND",
+          "from": "CapacitiveTouchToggle_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VDD",
+          "from": "CapacitiveTouchToggle_1.VDD",
           "to": "VDD"
         }
       ],

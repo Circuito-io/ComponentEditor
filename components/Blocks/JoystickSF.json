@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickSF_1",
           "part": "JoystickSF"
         }
       ],
@@ -114,23 +114,23 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "JoystickSF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SEL",
+          "from": "JoystickSF_1.SEL",
           "to": "SEL"
         },
         {
-          "from": "this.VCC",
+          "from": "JoystickSF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.VERT",
+          "from": "JoystickSF_1.VERT",
           "to": "VERT"
         },
         {
-          "from": "this.HORZ",
+          "from": "JoystickSF_1.HORZ",
           "to": "HORZ"
         }
       ],
@@ -151,7 +151,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickSF_1",
           "part": "JoystickSF"
         }
       ],
@@ -230,23 +230,23 @@
       ],
       "wires": [
         {
-          "from": "this.SEL",
+          "from": "JoystickSF_1.SEL",
           "to": "SEL"
         },
         {
-          "from": "this.GND",
+          "from": "JoystickSF_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.VCC",
+          "from": "JoystickSF_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.VERT",
+          "from": "JoystickSF_1.VERT",
           "to": "VERT"
         },
         {
-          "from": "this.HORZ",
+          "from": "JoystickSF_1.HORZ",
           "to": "HORZ"
         }
       ],

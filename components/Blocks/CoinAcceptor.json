@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CoinAcceptor_1",
           "part": "CoinAcceptor"
         }
       ],
@@ -114,15 +114,15 @@
       ],
       "wires": [
         {
-          "from": "this.GND",
+          "from": "CoinAcceptor_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SIG",
+          "from": "CoinAcceptor_1.SIG",
           "to": "SIG"
         },
         {
-          "from": "this.12V",
+          "from": "CoinAcceptor_1.12V",
           "to": "12V"
         }
       ],

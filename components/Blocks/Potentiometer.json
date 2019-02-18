@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Potentiometer_1",
           "part": "Potentiometer"
         }
       ],
@@ -84,15 +84,15 @@
       ],
       "wires": [
         {
-          "from": "this.0",
+          "from": "Potentiometer_1.0",
           "to": "0"
         },
         {
-          "from": "this.Sig",
+          "from": "Potentiometer_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.Vin",
+          "from": "Potentiometer_1.Vin",
           "to": "Vin"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Potentiometer_1",
           "part": "Potentiometer"
         }
       ],
@@ -163,15 +163,15 @@
       ],
       "wires": [
         {
-          "from": "this.0",
+          "from": "Potentiometer_1.0",
           "to": "0"
         },
         {
-          "from": "this.Sig",
+          "from": "Potentiometer_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.Vin",
+          "from": "Potentiometer_1.Vin",
           "to": "Vin"
         }
       ],

@@ -16,7 +16,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FTDI5v_1",
           "part": "FTDI5v"
         }
       ],
@@ -85,23 +85,23 @@
       ],
       "wires": [
         {
-          "from": "this.CTS",
+          "from": "FTDI5v_1.CTS",
           "to": "CTS"
         },
         {
-          "from": "this.RX",
+          "from": "FTDI5v_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.TX",
+          "from": "FTDI5v_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.DTR",
+          "from": "FTDI5v_1.DTR",
           "to": "DTR"
         },
         {
-          "from": "this.GND",
+          "from": "FTDI5v_1.GND",
           "to": "GND"
         }
       ],
@@ -114,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FTDI3.3v_1",
           "part": "FTDI3.3v"
         }
       ],
@@ -183,23 +183,23 @@
       ],
       "wires": [
         {
-          "from": "this.CTS",
+          "from": "FTDI3.3v_1.CTS",
           "to": "CTS"
         },
         {
-          "from": "this.RX",
+          "from": "FTDI3.3v_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.TX",
+          "from": "FTDI3.3v_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.DTR",
+          "from": "FTDI3.3v_1.DTR",
           "to": "DTR"
         },
         {
-          "from": "this.GND",
+          "from": "FTDI3.3v_1.GND",
           "to": "GND"
         }
       ],

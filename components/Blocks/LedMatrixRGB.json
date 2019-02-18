@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedMatrixRGB_1",
           "part": "LedMatrixRGB"
         }
       ],
@@ -135,27 +135,27 @@
       ],
       "wires": [
         {
-          "from": "this.GND_IN",
+          "from": "LedMatrixRGB_1.GND_IN",
           "to": "GND_IN"
         },
         {
-          "from": "this.5V_IN",
+          "from": "LedMatrixRGB_1.5V_IN",
           "to": "5V_IN"
         },
         {
-          "from": "this.DIN",
+          "from": "LedMatrixRGB_1.DIN",
           "to": "DIN"
         },
         {
-          "from": "this.DOUT",
+          "from": "LedMatrixRGB_1.DOUT",
           "to": "DOUT"
         },
         {
-          "from": "this.5V_OUT",
+          "from": "LedMatrixRGB_1.5V_OUT",
           "to": "5V_OUT"
         },
         {
-          "from": "this.GND_OUT",
+          "from": "LedMatrixRGB_1.GND_OUT",
           "to": "GND_OUT"
         }
       ],

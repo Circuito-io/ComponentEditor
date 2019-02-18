@@ -36,7 +36,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "EthernetModule_1",
           "part": "EthernetModule"
         }
       ],
@@ -177,31 +177,31 @@
       ],
       "wires": [
         {
-          "from": "this.SCK",
+          "from": "EthernetModule_1.SCK",
           "to": "SCK"
         },
         {
-          "from": "this.SO",
+          "from": "EthernetModule_1.SO",
           "to": "SO"
         },
         {
-          "from": "this.VCC",
+          "from": "EthernetModule_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "EthernetModule_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.SI",
+          "from": "EthernetModule_1.SI",
           "to": "SI"
         },
         {
-          "from": "this.CS",
+          "from": "EthernetModule_1.CS",
           "to": "CS"
         },
         {
-          "from": "this.INT",
+          "from": "EthernetModule_1.INT",
           "to": "INT"
         }
       ],

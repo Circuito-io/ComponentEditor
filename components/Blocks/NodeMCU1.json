@@ -1,5 +1,5 @@
 {
-  "name": "NodeMCU1.0",
+  "name": "NodeMCU1",
   "category": [
     "controller"
   ],
@@ -24,8 +24,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "NodeMCU1.0"
+          "name": "NodeMCU1_1",
+          "part": "NodeMCU1"
         }
       ],
       "ports": [
@@ -505,7 +505,7 @@
         }
       ],
       "coders": [
-        "NodeMCU1.0"
+        "NodeMCU1"
       ],
       "requiredBlocks": [
         {
@@ -539,87 +539,87 @@
       ],
       "wires": [
         {
-          "from": "this.D1",
+          "from": "NodeMCU1_1.D1",
           "to": "D1"
         },
         {
-          "from": "this.D2",
+          "from": "NodeMCU1_1.D2",
           "to": "D2"
         },
         {
-          "from": "this.D3",
+          "from": "NodeMCU1_1.D3",
           "to": "D3"
         },
         {
-          "from": "this.D4",
+          "from": "NodeMCU1_1.D4",
           "to": "D4"
         },
         {
-          "from": "this.D5",
+          "from": "NodeMCU1_1.D5",
           "to": "D5"
         },
         {
-          "from": "this.D6",
+          "from": "NodeMCU1_1.D6",
           "to": "D6"
         },
         {
-          "from": "this.D7",
+          "from": "NodeMCU1_1.D7",
           "to": "D7"
         },
         {
-          "from": "this.D8",
+          "from": "NodeMCU1_1.D8",
           "to": "D8"
         },
         {
-          "from": "this.D0",
+          "from": "NodeMCU1_1.D0",
           "to": "D0"
         },
         {
-          "from": "this.RX",
+          "from": "NodeMCU1_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.TX",
+          "from": "NodeMCU1_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.SD2",
+          "from": "NodeMCU1_1.SD2",
           "to": "SD2"
         },
         {
-          "from": "this.SD3",
+          "from": "NodeMCU1_1.SD3",
           "to": "SD3"
         },
         {
-          "from": "this.A0",
+          "from": "NodeMCU1_1.A0",
           "to": "A0"
         },
         {
-          "from": "this.GND1",
+          "from": "NodeMCU1_1.GND1",
           "to": "GND1"
         },
         {
-          "from": "this.GND3",
+          "from": "NodeMCU1_1.GND3",
           "to": "GND3"
         },
         {
-          "from": "this.3V3",
+          "from": "NodeMCU1_1.3V3",
           "to": "3V3"
         },
         {
-          "from": "this.3V3_1",
+          "from": "NodeMCU1_1.3V3_1",
           "to": "3V3_1"
         },
         {
-          "from": "this.3V3_2",
+          "from": "NodeMCU1_1.3V3_2",
           "to": "3V3_2"
         },
         {
-          "from": "this.Vin",
+          "from": "NodeMCU1_1.Vin",
           "to": "Vin"
         },
         {
-          "from": "this.USB_MICRO",
+          "from": "NodeMCU1_1.USB_MICRO",
           "to": "USB_MICRO"
         }
       ],
@@ -632,8 +632,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "NodeMCU1.0"
+          "name": "NodeMCU1_1",
+          "part": "NodeMCU1"
         }
       ],
       "ports": [
@@ -1138,7 +1138,7 @@
         }
       ],
       "coders": [
-        "NodeMCU1.0"
+        "NodeMCU1"
       ],
       "requiredBlocks": [
         {
@@ -1150,95 +1150,95 @@
       ],
       "wires": [
         {
-          "from": "this.D1",
+          "from": "NodeMCU1_1.D1",
           "to": "D1"
         },
         {
-          "from": "this.D2",
+          "from": "NodeMCU1_1.D2",
           "to": "D2"
         },
         {
-          "from": "this.D3",
+          "from": "NodeMCU1_1.D3",
           "to": "D3"
         },
         {
-          "from": "this.D4",
+          "from": "NodeMCU1_1.D4",
           "to": "D4"
         },
         {
-          "from": "this.D5",
+          "from": "NodeMCU1_1.D5",
           "to": "D5"
         },
         {
-          "from": "this.D6",
+          "from": "NodeMCU1_1.D6",
           "to": "D6"
         },
         {
-          "from": "this.D7",
+          "from": "NodeMCU1_1.D7",
           "to": "D7"
         },
         {
-          "from": "this.D8",
+          "from": "NodeMCU1_1.D8",
           "to": "D8"
         },
         {
-          "from": "this.D0",
+          "from": "NodeMCU1_1.D0",
           "to": "D0"
         },
         {
-          "from": "this.GND",
+          "from": "NodeMCU1_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.GND1",
+          "from": "NodeMCU1_1.GND1",
           "to": "GND1"
         },
         {
-          "from": "this.GND2",
+          "from": "NodeMCU1_1.GND2",
           "to": "GND2"
         },
         {
-          "from": "this.GND3",
+          "from": "NodeMCU1_1.GND3",
           "to": "GND3"
         },
         {
-          "from": "this.3V3",
+          "from": "NodeMCU1_1.3V3",
           "to": "3V3"
         },
         {
-          "from": "this.3V3_1",
+          "from": "NodeMCU1_1.3V3_1",
           "to": "3V3_1"
         },
         {
-          "from": "this.3V3_2",
+          "from": "NodeMCU1_1.3V3_2",
           "to": "3V3_2"
         },
         {
-          "from": "this.RX",
+          "from": "NodeMCU1_1.RX",
           "to": "RX"
         },
         {
-          "from": "this.TX",
+          "from": "NodeMCU1_1.TX",
           "to": "TX"
         },
         {
-          "from": "this.Vin",
+          "from": "NodeMCU1_1.Vin",
           "to": "Vin"
         },
         {
-          "from": "this.SD2",
+          "from": "NodeMCU1_1.SD2",
           "to": "SD2"
         },
         {
-          "from": "this.SD3",
+          "from": "NodeMCU1_1.SD3",
           "to": "SD3"
         },
         {
-          "from": "this.A0",
+          "from": "NodeMCU1_1.A0",
           "to": "A0"
         },
         {
-          "from": "this.USB_MICRO",
+          "from": "NodeMCU1_1.USB_MICRO",
           "to": "USB_MICRO"
         }
       ],

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedStick_1",
           "part": "LedStick"
         }
       ],
@@ -136,27 +136,27 @@
       ],
       "wires": [
         {
-          "from": "this.+5VB",
+          "from": "LedStick_1.+5VB",
           "to": "+5VB"
         },
         {
-          "from": "this.DATAIN",
+          "from": "LedStick_1.DATAIN",
           "to": "DATAIN"
         },
         {
-          "from": "this.GNDC",
+          "from": "LedStick_1.GNDC",
           "to": "GNDC"
         },
         {
-          "from": "this.+5VA",
+          "from": "LedStick_1.+5VA",
           "to": "+5VA"
         },
         {
-          "from": "this.DATAOUT",
+          "from": "LedStick_1.DATAOUT",
           "to": "DATAOUT"
         },
         {
-          "from": "this.GNDA",
+          "from": "LedStick_1.GNDA",
           "to": "GNDA"
         }
       ],

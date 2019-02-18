@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Servo9g_1",
           "part": "Servo9g"
         }
       ],
@@ -113,15 +113,15 @@
       ],
       "wires": [
         {
-          "from": "this.0",
+          "from": "Servo9g_1.0",
           "to": "0"
         },
         {
-          "from": "this.Sig",
+          "from": "Servo9g_1.Sig",
           "to": "Sig"
         },
         {
-          "from": "this.Vin",
+          "from": "Servo9g_1.Vin",
           "to": "Vin"
         }
       ],

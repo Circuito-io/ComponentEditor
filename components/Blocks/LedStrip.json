@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedStrip_1",
           "part": "LedStrip"
         }
       ],
@@ -136,27 +136,27 @@
       ],
       "wires": [
         {
-          "from": "this.VCC",
+          "from": "LedStrip_1.VCC",
           "to": "VCC"
         },
         {
-          "from": "this.GND",
+          "from": "LedStrip_1.GND",
           "to": "GND"
         },
         {
-          "from": "this.DI",
+          "from": "LedStrip_1.DI",
           "to": "DI"
         },
         {
-          "from": "this.VCC_OUT",
+          "from": "LedStrip_1.VCC_OUT",
           "to": "VCC_OUT"
         },
         {
-          "from": "this.GND_OUT",
+          "from": "LedStrip_1.GND_OUT",
           "to": "GND_OUT"
         },
         {
-          "from": "this.DO",
+          "from": "LedStrip_1.DO",
           "to": "DO"
         }
       ],

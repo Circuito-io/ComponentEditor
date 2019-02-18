@@ -35,25 +35,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDRed_1",
           "part": "LEDRed"
         },
         {
-          "name": "Res1",
+          "name": "Res220O_1",
           "part": "Res220O"
         }
       ],
       "wires": [
         {
-          "from": "this.Gnd",
-          "to": "Res1.con1"
+          "from": "LEDRed_1.Gnd",
+          "to": "Res220O_1.con1"
         },
         {
-          "from": "Res1.con0",
+          "from": "Res220O_1.con0",
           "to": "GND"
         },
         {
-          "from": "this.Vin",
+          "from": "LEDRed_1.Vin",
           "to": "Vin"
         }
       ],
@@ -105,25 +105,25 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDRed_1",
           "part": "LEDRed"
         },
         {
-          "name": "Res1",
+          "name": "Res100O_1",
           "part": "Res100O"
         }
       ],
       "wires": [
         {
-          "from": "this.Gnd",
-          "to": "Res1.con0"
+          "from": "LEDRed_1.Gnd",
+          "to": "Res100O_1.con0"
         },
         {
-          "from": "Res1.con1",
+          "from": "Res100O_1.con1",
           "to": "GND"
         },
         {
-          "from": "this.Vin",
+          "from": "LEDRed_1.Vin",
           "to": "Vin"
         }
       ],

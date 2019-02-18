@@ -35,29 +35,29 @@
       ],
       "parts": [
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "this",
+          "name": "MagneticDoorSwitch_1",
           "part": "MagneticDoorSwitch"
         }
       ],
       "wires": [
         {
-          "from": "this.leg1",
-          "to": "r1.con0"
+          "from": "MagneticDoorSwitch_1.leg1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "r1.con0",
+          "from": "Res10KO_1.con0",
           "to": "Sig"
         },
         {
-          "from": "this.leg0",
+          "from": "MagneticDoorSwitch_1.leg0",
           "to": "leg0"
         }
       ],
@@ -122,29 +122,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MagneticDoorSwitch_1",
           "part": "MagneticDoorSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.leg1",
-          "to": "r1.con0"
+          "from": "MagneticDoorSwitch_1.leg1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
         },
         {
-          "from": "r1.con0",
+          "from": "Res10KO_1.con0",
           "to": "Sig"
         },
         {
-          "from": "this.leg0",
+          "from": "MagneticDoorSwitch_1.leg0",
           "to": "leg0"
         }
       ],
