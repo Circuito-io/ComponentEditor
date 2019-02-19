@@ -27,7 +27,8 @@ export const docs = {
   },
   "block.description": {
     text:
-      "A short paragraph in html describing the block, its features and uses. This description will appear in the block’s info pop up",
+      `A short paragraph in html describing the block, its features and uses. This description will appear in the block’s info pop up
+      always wrap you paragraphs in \`\`\`<p>text</p>\`\`\``,
     img: "block_desc.png"
   },
   "block.alternativeBlock": {
@@ -96,6 +97,12 @@ A port can either require or provide attributes. These attributes are used by th
   "circuit.part.includeInFirmware": {
     text: `When generating code, create a variable for this port.
     The variable's value will hold to codename of this port's provider.`
+  },
+  "circuit.port.unique" : {
+    text: "When enabled no other ports will be routed to this port's provider. Used for example in DigitalIn ports, where only one block is expected to be routed to."
+  },
+  "circuit.port.chainTo": {
+    text: "Chain to this port to another port when possible."
   },
   "part.description": {
     text: "The name of the part as it appears in the datasheet or product page of the manufacturer or distributor. On the app, this name will appear in the part “view info” popup."
