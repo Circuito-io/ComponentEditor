@@ -17,7 +17,10 @@
     "desc": "<p>The Atmel 8-bit AVR RISC-based microcontroller combines 8 kB ISP flash memory with read-while-write capabilities, 1 kB EEPROM, 512 Bytes SRAM, 6 general purpose I/O lines, 32 general purpose working registers, two flexible timer/counters with compare modes, internal and external interrupts, SPI serial port, 4-channel 10-bit A/D converter</p>"
   },
   "notes": "References used:\nhttps://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256\nhttp://highlowtech.org/?p=1695\nhttp://digistump.com/wiki/digispark/tutorials/connecting\nhttp://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf",
-  "altComp": {},
+  "altComp": {
+    "cost": 1000,
+    "block": "ArduinoUno"
+  },
   "circuits": [
     {
       "name": "3v3",
