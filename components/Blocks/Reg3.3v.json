@@ -1,5 +1,5 @@
 {
-  "name": "Reg3.3v",
+  "name": "Reg3v3",
   "category": [
     "support"
   ],
@@ -9,8 +9,8 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "LD11173.3v_1",
-          "part": "LD11173.3v"
+          "name": "LD11173v3_1",
+          "part": "LD11173v3"
         },
         {
           "name": "CapCeramic100nF_1",
@@ -23,31 +23,31 @@
       ],
       "wires": [
         {
-          "from": "LD11173.3v_1.Vin",
+          "from": "LD11173v3_1.Vin",
           "to": "CapCeramic100nF_1.con0"
         },
         {
-          "from": "LD11173.3v_1.0",
+          "from": "LD11173v3_1.0",
           "to": "CapCeramic100nF_1.con1"
         },
         {
-          "from": "LD11173.3v_1.Vout",
+          "from": "LD11173v3_1.Vout",
           "to": "CapElectro10uF_1.pos"
         },
         {
-          "from": "LD11173.3v_1.0",
+          "from": "LD11173v3_1.0",
           "to": "CapElectro10uF_1.neg"
         },
         {
-          "from": "LD11173.3v_1.Vout",
+          "from": "LD11173v3_1.Vout",
           "to": "Vout"
         },
         {
-          "from": "LD11173.3v_1.0",
+          "from": "LD11173v3_1.0",
           "to": "0"
         },
         {
-          "from": "LD11173.3v_1.Vin",
+          "from": "LD11173v3_1.Vin",
           "to": "Vin"
         }
       ],
