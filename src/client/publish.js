@@ -28,11 +28,16 @@ export class Publish extends React.Component {
             <Modal.Title>How to publish your work</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+            <h4>Video comming soon.</h4>
+            After you fork the repo and commit your changes using the git panel on the left,
+            create a pull request using the pull-request panel on the right,
+            or directly in github in your fork.
+{/*             
             <ReactPlayer
-              url="https://www.youtube.com/watch?v=dLYCeUOOsX0"
+              url="https://www.youtube.com/watch?v=i3CpeFhRLI4"
               width="90%"
               controls={true}
-            />
+            /> */}
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
