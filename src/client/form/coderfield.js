@@ -17,6 +17,10 @@ import ReactTooltip from "react-tooltip";
 
 import * as coderSchema from "../../../circuito-schema/coder.json";
 
+export function createNewCoder(coderName) {
+  return { name: coderName, instantiate: { varname: coderName.toLowerCase() } };
+}
+
 export class CoderField extends React.Component {
   constructor(props) {
     super(props);
@@ -86,7 +90,8 @@ export class CoderField extends React.Component {
   }
 
   onSelectNew(newCoderName) {
-    var newData = { name: newCoderName };
+    var newData = createNewCoder(newCoderName);
+
     this.preventNextReload = true; // don't reload file on modalShow, because it's not ready
     update_a_coder(newCoderName, newData).then(res => {
       if (!(res && res.ok))

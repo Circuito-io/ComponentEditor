@@ -1,7 +1,8 @@
 import React from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { toast } from "react-toastify";
-import { update_a_block } from "./controller.js";
+import { update_a_block, update_a_coder } from "./controller.js";
+import { createNewCoder } from "./form/coderfield.js";
 
 function createNewBlockData(blockName) {
   var blockId = Math.floor(Math.random() * 5000 + 5000);
@@ -14,9 +15,10 @@ function createNewBlockData(blockName) {
       visible: true,
       indicators: {
         solder: false
-      }
+      },
+      desc: "<p></p>"
     },
-    circuits: [{ name: "default", cost: 0 }]
+    circuits: [{ name: "default", cost: 0, coders: [blockName] }]
   };
 }
 
@@ -49,11 +51,24 @@ export class BlocksList extends React.Component {
             // clicked create new
             var newBlockName = selection[0].label;
 
-            update_a_block(newBlockName, createNewBlockData(newBlockName)).then(
-              res => {
+            update_a_block(newBlockName, createNewBlockData(newBlockName))
+              .then(res => {
                 if (!(res && res.ok))
                   toast.error(
                     "Create block failed:" +
+                      ((res && res.statusText) || "can't connect")
+                  );
+                else {
+                  return update_a_coder(
+                    newBlockName,
+                    createNewCoder(newBlockName)
+                  );
+                }
+              })
+              .then(res => {
+                if (!(res && res.ok))
+                  toast.error(
+                    "Create coder for block failed:" +
                       ((res && res.statusText) || "can't connect")
                   );
                 else {
@@ -63,8 +78,7 @@ export class BlocksList extends React.Component {
                   this.props.refreshData();
                   this.props.onBlockSelected(newBlockName);
                 }
-              }
-            );
+              });
           } else {
             this.props.onBlockSelected(selection[0].id);
           }
