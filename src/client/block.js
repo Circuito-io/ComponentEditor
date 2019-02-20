@@ -184,7 +184,7 @@ export class Block extends React.Component {
       console.log("unmodified, ignoring save");
       return;
     }
-
+    analytics.track("Block Saved", { name: this.props.block });
     update_a_block(this.props.block, this.currentData).then(res => {
       if (!(res && res.ok))
         toast.error(
@@ -197,6 +197,7 @@ export class Block extends React.Component {
 
   delete() {
     if (confirm("Really delete block?")) {
+      analytics.track("Block Deleted", { name: this.UNSAFE_componentWillMount.props.block });
       delete_a_block(this.props.block).then(res => {
         if (!(res && res.ok)) toast.error("Delete block failed");
         else {

@@ -21,7 +21,13 @@ export default class App extends React.Component {
 
     this.state = {
       activeBlock: null,
-      cachedData: { blocks: [], parts: [], coders: [], blocksData: [] , controllers: []}
+      cachedData: {
+        blocks: [],
+        parts: [],
+        coders: [],
+        blocksData: [],
+        controllers: []
+      }
     };
 
     this.refreshData = this.refreshData.bind(this);
@@ -39,7 +45,14 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Route exact path="/" render={props => <Header {...props} />} />
+          <Route
+            exact
+            path="/"
+            render={props => {
+              analytics.page();
+              return <Header {...props} />;
+            }}
+          />
           <Route
             exact
             path="/"
@@ -54,9 +67,12 @@ export default class App extends React.Component {
 
           <Route
             path="/:block"
-            render={props => (
-              <Header {...props} activeBlock={props.match.params.block} />
-            )}
+            render={props => {
+              analytics.page();
+              return (
+                <Header {...props} activeBlock={props.match.params.block} />
+              );
+            }}
           />
           <Route
             path="/:block"
@@ -75,7 +91,7 @@ export default class App extends React.Component {
             delayHide={1000}
             className="form-tooltip"
             effect="solid"
-            place="right" 
+            place="right"
           />
         </React.Fragment>
       </BrowserRouter>

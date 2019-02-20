@@ -3,11 +3,13 @@ import { Modal, Button, Nav } from "react-bootstrap";
 import { invoke_upload } from "./controller.js";
 import { toast } from "react-toastify";
 
+var previewURL = "";
+
 export class Preview extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { show: false, modalMsg: "", previewURL: "" };
+    this.state = { show: false, modalMsg: "", previewURL: previewURL };
 
     this.onPreview = this.onPreview.bind(this);
     this.handleClose = this.handleClose.bind(this);
@@ -16,14 +18,18 @@ export class Preview extends React.Component {
   }
 
   componentDidMount() {
-    this.getPreviewURL();
+    if (!this.state.previewURL) {
+      this.getPreviewURL();
+    }
   }
 
   getPreviewURL() {
     fetch("/api/preview")
       .then(res => {
-        res.text().then(data => {
-          this.setState({ previewURL: data });
+        res.json().then(data => {
+          analytics.identify(data.userid);
+          this.setState({ previewURL: data.endPoint });
+          previewURL = data.endPoint;
         });
       })
       .catch(ex => {
@@ -44,7 +50,7 @@ export class Preview extends React.Component {
       const toastId = toast.info("Upload in progress...", {
         autoClose: false
       });
-
+      analytics.track("Preview Clicked");
       invoke_upload().then(res => {
         if (res && res.ok) {
           toast.update(toastId, {
@@ -109,9 +115,7 @@ export class Preview extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <Nav.Link onClick={this.onPreview}>
-          Preview
-        </Nav.Link>
+        <Nav.Link onClick={this.onPreview}>Preview</Nav.Link>
       </React.Fragment>
     );
   }

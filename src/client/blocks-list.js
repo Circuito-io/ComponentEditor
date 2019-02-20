@@ -51,6 +51,9 @@ export class BlocksList extends React.Component {
             // clicked create new
             var newBlockName = selection[0].label;
 
+            analytics.track("Block Created", { name: newBlockName });
+            analytics.track("Block Opened", { name: newBlockName });
+
             update_a_block(newBlockName, createNewBlockData(newBlockName))
               .then(res => {
                 if (!(res && res.ok))
@@ -80,6 +83,7 @@ export class BlocksList extends React.Component {
                 }
               });
           } else {
+            analytics.track("Block Opened", { name: selection[0].id });
             this.props.onBlockSelected(selection[0].id);
           }
         }}
