@@ -23,7 +23,7 @@ export class Header extends React.Component {
 
         <Navbar.Collapse className="justify-content-end">
           <Nav className="justify-content-end">
-            <Nav.Link href="https://talk.circuito.io" target="_blank">
+            <Nav.Link href="https://talk.circuito.io/c/component-editor" target="_blank">
               Help
             </Nav.Link>
             <Preview />
