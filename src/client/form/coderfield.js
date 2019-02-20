@@ -8,12 +8,15 @@ import {
   read_a_coder,
   update_a_coder,
   delete_a_coder,
-  gitpod_open
+  gitpod_open,
+  preview_a_coder
 } from "../controller.js";
 import AceEditor from "react-ace";
 import "brace/mode/c_cpp";
 import "brace/theme/monokai";
 import ReactTooltip from "react-tooltip";
+import { faSync } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import * as coderSchema from "../../../circuito-schema/coder.json";
 
@@ -28,13 +31,18 @@ export class CoderField extends React.Component {
     this.inputmodalRef = React.createRef();
 
     this.preventNextReload = false;
-    this.state = { objName: props.formData, addHeaders: false };
+    this.state = {
+      objName: props.formData,
+      addHeaders: false,
+      coderPreview: ""
+    };
     this.onDataChange = this.onDataChange.bind(this);
     this.onSave = this.onSave.bind(this);
     this.onShowModal = this.onShowModal.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.onSelectNew = this.onSelectNew.bind(this);
     this.onDelete = this.onDelete.bind(this);
+    this.updatePreview = this.updatePreview.bind(this);
   }
 
   onShowModal() {
@@ -145,6 +153,21 @@ export class CoderField extends React.Component {
     }
   }
 
+  updatePreview() {
+    console.log("update");
+    this.setState({ coderPreview: "Updating..." })
+    preview_a_coder(this.state.objData).then(res => {
+      res
+        .json()
+        .then(data => {
+          this.setState({ coderPreview: data.preview });
+        })
+        .catch(ex => {
+          console.log("updatePreview failed", ex);
+        });
+    });
+  }
+
   render() {
     return (
       <InputGroupModalField
@@ -176,14 +199,20 @@ export class CoderField extends React.Component {
               Submit
             </Button>
           </EditorForm>
-          {/* Preview
+          <h4>
+            Preview&nbsp;
+            <Button onClick={this.updatePreview} variant="secondary">
+              <FontAwesomeIcon icon={faSync} />
+            </Button>
+          </h4>
           <AceEditor
             mode="c_cpp"
             theme="monokai"
             name="ace_preview"
             width="100%"
+            value={this.state.coderPreview}
             editorProps={{ $blockScrolling: true }}
-          /> */}
+          />
         </React.Fragment>
       </InputGroupModalField>
     );

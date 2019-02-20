@@ -1,6 +1,8 @@
 import "whatwg-fetch";
 import urlJoin from "proper-url-join";
 
+const CIRCUITO_API_ENDPOINT = "https://api.circuito.io/v1";
+
 function list_all_factory(objPrefix) {
   return () => {
     return fetch(urlJoin("/api", objPrefix))
@@ -27,7 +29,9 @@ export function cacheData() {
       cachedData.blocksData = blocksData;
       cachedData.blocks = blocksData.map(block => block.name);
       cachedData.controllers = blocksData
-        .filter(block => block.category && block.category.includes("controller"))
+        .filter(
+          block => block.category && block.category.includes("controller")
+        )
         .map(block => block.name);
       return list_all_parts();
     })
@@ -94,7 +98,7 @@ export function invoke_upload() {
 
 export function read_a_svgdata(img) {
   return window
-    .fetch(urlJoin("/api/svgdata", encodeURIComponent(img)))
+    .fetch(urlJoin(CIRCUITO_API_ENDPOINT, "svgdata", '?img=' + encodeURIComponent(img)))
     .then(response => response.json());
 }
 
@@ -111,5 +115,16 @@ export function delete_a_coder_file(name, filename) {
     .fetch(urlJoin("/api/coders", name, filename), { method: "delete" })
     .catch(ex => {
       console.log("delete_a_coder_file failed", ex);
+    });
+}
+
+export function preview_a_coder(data) {
+  return window
+    .fetch(urlJoin(CIRCUITO_API_ENDPOINT, "coderpreview"), {
+      method: "post",
+      body: JSON.stringify(data)
+    })
+    .catch(ex => {
+      console.log("preview_a_coder_file failed", ex);
     });
 }

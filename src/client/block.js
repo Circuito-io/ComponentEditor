@@ -120,7 +120,8 @@ export class Block extends React.Component {
             })
             .then(read_a_svgdata)
             .catch(ex => {
-              console.log("Ignoring bad SVG", partName);
+              if (ex != "Stale update cycle")
+                console.log("Ignoring bad SVG", partName, ex);
             })
             .then(svgdata => {
               if (currentUpdateCycle != this.updateCycle)
@@ -129,6 +130,10 @@ export class Block extends React.Component {
               if (svgdata === undefined) return;
 
               this.partConnectorsCache[partName] = svgdata.ConnectorsNames;
+            })
+            .catch(ex => {
+              if (ex != "Stale update cycle")
+                console.log("Error with SVG", partName, ex);
             })
         );
       }
