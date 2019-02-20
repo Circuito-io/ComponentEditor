@@ -4,7 +4,11 @@ const path = require('path');
 const fileUpload = require('express-fileupload');
 
 global.analytics.identify({
-	userId: global.userid
+	userId: global.userid,
+  traits: {
+    email: process.env.GITPOD_GIT_USER_EMAIL,
+    username: process.env.GITPOD_GIT_USER_NAME
+  }
 });
 global.analytics.track({
 	userId: global.userid,
