@@ -6,6 +6,9 @@ export function supportedControllersUISchema(controllersList) {
       placeholder: "Select controllers",
       multiple: true,
       minLength: 0
-    }
+    },
+    "ui:options": {
+      forceLabelDisplay: true
+    },
   };
 }
