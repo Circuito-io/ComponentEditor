@@ -154,7 +154,6 @@ export class CoderField extends React.Component {
   }
 
   updatePreview() {
-    console.log("update");
     this.setState({ coderPreview: "Updating..." })
     preview_a_coder(this.state.objData).then(res => {
       res
