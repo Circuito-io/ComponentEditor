@@ -13,7 +13,6 @@ exec("git rev-parse --short HEAD", (err, stdout, stderr) => {
   global.analytics.identify({
     userId: global.userid,
     traits: {
-      email: process.env.GITPOD_GIT_USER_EMAIL,
       username: process.env.GITPOD_GIT_USER_NAME,
       gitCommit: gitCommit
     }
