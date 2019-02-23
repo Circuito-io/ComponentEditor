@@ -13,13 +13,13 @@ exec("git rev-parse --short HEAD", (err, stdout, stderr) => {
   global.analytics.identify({
     userId: global.userid,
     traits: {
-      username: process.env.GITPOD_GIT_USER_NAME,
-      gitCommit: gitCommit
+      username: process.env.GITPOD_GIT_USER_NAME
     }
   });
   global.analytics.track({
     userId: global.userid,
-    event: "Server Started"
+    event: "Server Started",
+    properties: { gitCommit: gitCommit }
   });
 });
 
