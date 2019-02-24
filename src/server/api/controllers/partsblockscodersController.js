@@ -19,7 +19,7 @@ exports.list_all_blocks = filesController.list_all_files_factory(
 );
 exports.list_all_blocks_data = filesController.list_all_files_factory(
   blocksSubFolder,
-  ["category", "app.appName"]
+  ["category", "app.appName", "app.image"]
 );
 exports.create_a_block = filesController.create_a_file_factory(blocksSubFolder);
 exports.read_a_block = filesController.read_a_file_factory(blocksSubFolder);

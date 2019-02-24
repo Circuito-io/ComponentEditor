@@ -32,64 +32,92 @@ export class BlocksList extends React.Component {
       var appName = block["app.appName"];
       return {
         id: block.name,
-        label: (appName && `${block.name} - ${appName}`) || block.name
+        label: (appName && `${block.name} - ${appName}`) || block.name,
+        img: block["app.image"]
       };
     });
 
     return (
-      <Typeahead
-        options={blocksIdsLabels}
-        selectHintOnEnter={true}
-        allowNew={true}
-        newSelectionPrefix="Create new block:"
-        onChange={selection => {
-          if (
-            selection[0] &&
-            typeof selection[0] === "object" &&
-            "customOption" in selection[0]
-          ) {
-            // clicked create new
-            var newBlockName = selection[0].label;
+      <React.Fragment>
+        <Typeahead
+          options={blocksIdsLabels}
+          selectHintOnEnter={true}
+          allowNew={true}
+          newSelectionPrefix="Create new block:"
+          onChange={selection => {
+            if (
+              selection[0] &&
+              typeof selection[0] === "object" &&
+              "customOption" in selection[0]
+            ) {
+              // clicked create new
+              var newBlockName = selection[0].label;
 
-            analytics.track("Block Created", { name: newBlockName });
-            analytics.track("Block Opened", { name: newBlockName });
+              analytics.track("Block Created", { name: newBlockName });
+              analytics.track("Block Opened", { name: newBlockName });
 
-            update_a_block(newBlockName, createNewBlockData(newBlockName))
-              .then(res => {
-                if (!(res && res.ok))
-                  toast.error(
-                    "Create block failed:" +
-                      ((res && res.statusText) || "can't connect")
-                  );
-                else {
-                  return update_a_coder(
-                    newBlockName,
-                    createNewCoder(newBlockName)
-                  );
-                }
-              })
-              .then(res => {
-                if (!(res && res.ok))
-                  toast.error(
-                    "Create coder for block failed:" +
-                      ((res && res.statusText) || "can't connect")
-                  );
-                else {
-                  toast.success("Created " + newBlockName, {
-                    autoClose: 2000
-                  });
-                  this.props.refreshData();
-                  this.props.onBlockSelected(newBlockName);
-                }
-              });
-          } else {
-            analytics.track("Block Opened", { name: selection[0].id });
-            this.props.onBlockSelected(selection[0].id);
-          }
-        }}
-        bsSize={"small"}
-        placeholder="Choose a block to edit or enter name to create a new one..."
-      />
+              update_a_block(newBlockName, createNewBlockData(newBlockName))
+                .then(res => {
+                  if (!(res && res.ok))
+                    toast.error(
+                      "Create block failed:" +
+                        ((res && res.statusText) || "can't connect")
+                    );
+                  else {
+                    return update_a_coder(
+                      newBlockName,
+                      createNewCoder(newBlockName)
+                    );
+                  }
+                })
+                .then(res => {
+                  if (!(res && res.ok))
+                    toast.error(
+                      "Create coder for block failed:" +
+                        ((res && res.statusText) || "can't connect")
+                    );
+                  else {
+                    toast.success("Created " + newBlockName, {
+                      autoClose: 2000
+                    });
+                    this.props.refreshData();
+                    this.props.onBlockSelected(newBlockName);
+                  }
+                });
+            } else {
+              analytics.track("Block Opened", { name: selection[0].id });
+              this.props.onBlockSelected(selection[0].id);
+            }
+          }}
+          bsSize={"small"}
+          open
+          maxHeight="600px"
+          menuId="main-block-list"
+          placeholder="Choose a block to edit or enter name to create a new one..."
+          renderMenuItemChildren={(option, props, index) => (
+            <React.Fragment key={index}>
+              <div
+                style={{
+                  height: 45,
+                  verticalAlign: "middle"
+                }}
+              >
+                <span style={{ width: 45, display: "inline-block" }}>
+                  {option.img && (
+                    <img
+                      src={option.img.replace(
+                        "/image/upload/",
+                        "/image/upload/h_42/"
+                      )}
+                    />
+                  )}
+                </span>
+                {option.label}
+              </div>
+            </React.Fragment>
+          )}
+        />
+      </React.Fragment>
     );
   }
 }
