@@ -208,7 +208,7 @@ export class Block extends React.Component {
   delete() {
     if (confirm("Really delete block?")) {
       analytics.track("Block Deleted", {
-        name: this.UNSAFE_componentWillMount.props.block
+        name: this.props.block
       });
       delete_a_block(this.props.block).then(res => {
         if (!(res && res.ok)) toast.error("Delete block failed");
