@@ -35,11 +35,14 @@ function MenuOption(props) {
       key={props.id}
     >
       <span style={{ width: 45, display: "inline-block" }}>
-        {props.img && (
-          <img
-            src={props.img.replace("/image/upload/", "/image/upload/h_42/")}
-          />
-        )}
+        <img
+          src={
+            (props.img &&
+              props.img.replace("/image/upload/", "/image/upload/h_42/")) ||
+            "https://www.circuito.io/static/images/component-default-image-blue.svg"
+          }
+          height={42}
+        />
       </span>
       {props.label}
     </div>
