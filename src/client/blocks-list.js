@@ -78,7 +78,7 @@ export class BlocksList extends React.Component {
           }}
           bsSize={"small"}
           open
-          maxHeight="600px"
+          maxHeight="400px"
           menuId="main-block-list"
           placeholder="Choose a block to edit or enter name to create a new one..."
           renderMenuItemChildren={(option, props, index) => (
