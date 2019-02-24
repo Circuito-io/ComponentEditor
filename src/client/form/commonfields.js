@@ -9,6 +9,6 @@ export function supportedControllersUISchema(controllersList) {
     },
     "ui:options": {
       forceLabelDisplay: true
-    },
+    }
   };
 }

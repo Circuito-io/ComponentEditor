@@ -141,7 +141,12 @@ function TabbedArrayFieldTemplate(props) {
                 <FontAwesomeIcon icon={faFile} />
                 New Circuit
               </Dropdown.Item>
-              <Dropdown.Item disabled={props.disabled || props.readonly}>
+              <Dropdown.Item
+                disabled={props.disabled || props.readonly}
+                onClick={event => {
+                  props.duplicateIndex(Number(props.activeKey));
+                }}
+              >
                 <FontAwesomeIcon icon={faClone} />
                 Duplicate Circuit
               </Dropdown.Item>
@@ -151,8 +156,7 @@ function TabbedArrayFieldTemplate(props) {
                   props.items.length > 1 ? Math.max(props.activeKey - 1, 0) : -1
                 }
                 onClick={event => {
-                  console.log(props.activeKey);
-                  props.onDropIndex(props.activeKey);
+                  props.dropIndex(Number(props.activeKey));
                 }}
               >
                 <FontAwesomeIcon icon={faTrashAlt} />
@@ -249,7 +253,23 @@ export class TabbedArrayField extends React.Component {
     this.onSelect(formData.length);
   };
 
-  onDropIndex = index => {
+  duplicateIndex = index => {
+    const { formData, onChange } = this.props;
+
+    if (formData.length > 0) {
+      var newItem = Object.assign({}, formData[index]);
+      newItem.name = newItem.name + "_copy";
+
+      var newFormData = formData
+        .slice(0, index + 1)
+        .concat([newItem], formData.slice(index + 1));
+
+      onChange(newFormData);
+      this.onSelect(formData.length);
+    }
+  };
+
+  dropIndex = index => {
     const { formData, onChange } = this.props;
     // refs #195: revalidate to ensure properly reindexing errors
     let newErrorSchema;
@@ -265,16 +285,9 @@ export class TabbedArrayField extends React.Component {
         }
       }
     }
-    onChange(formData.filter((_, i) => i !== index), newErrorSchema);
-  };
+    const newFormData = formData.filter((_, i) => i !== index);
 
-  onDropIndexClick = index => {
-    return event => {
-      if (event) {
-        event.preventDefault();
-      }
-      this.onDropIndex(index);
-    };
+    onChange(newFormData, newErrorSchema);
   };
 
   onReorderClick = (index, newIndex) => {
@@ -343,7 +356,8 @@ export class TabbedArrayField extends React.Component {
     super(props);
 
     this.state = { activeKey: 0 };
-    this.onDropIndex = this.onDropIndex.bind(this);
+    this.dropIndex = this.dropIndex.bind(this);
+    this.duplicateIndex = this.duplicateIndex.bind(this);
   }
 
   onSelect = activeKey => {
@@ -406,7 +420,8 @@ export class TabbedArrayField extends React.Component {
       idSchema,
       uiSchema,
       onAddClick: this.onAddClick,
-      onDropIndex: this.onDropIndex,
+      dropIndex: this.dropIndex,
+      duplicateIndex: this.duplicateIndex,
       readonly,
       required,
       schema,
@@ -486,7 +501,6 @@ export class TabbedArrayField extends React.Component {
       hasToolbar: has.toolbar,
       hasRemove: has.remove,
       index,
-      onDropIndexClick: this.onDropIndexClick,
       onReorderClick: this.onReorderClick,
       readonly,
       tabName: tabName

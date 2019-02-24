@@ -27,6 +27,9 @@ export const TooltipDescriptionField = ({ id, description }) => {
       .use(html)
       .processSync(docText);
 
+    if (!(doc && doc.text))
+      console.warn("Missing doc key ", descText)
+
     return (
       <div className="tooltip-hint" id={id} data-tip={`${docHTML}${imgTag}`}>
         <a>

@@ -27,7 +27,8 @@ export class Block extends React.Component {
       partsList: [],
       codersList: [],
       blocksList: [],
-      connectorsList: {}
+      connectorsList: {},
+      disabled: true
     };
 
     this.modified = false;
@@ -62,7 +63,11 @@ export class Block extends React.Component {
     var circuits =
       this.state.formSrcData.circuits && this.state.formSrcData.circuits;
 
-    if (!circuits) return;
+    if (!circuits) {
+      if (this.state.disabled) this.setState({ disabled: false });
+
+      return;
+    }
 
     var connectorsByCircuit = {};
     circuits.forEach((circuit, index) => {
@@ -166,7 +171,7 @@ export class Block extends React.Component {
             });
         });
 
-        this.setState({ connectorsList: connectorsByCircuit });
+        this.setState({ connectorsList: connectorsByCircuit, disabled: false });
       }
     });
   }
@@ -202,7 +207,9 @@ export class Block extends React.Component {
 
   delete() {
     if (confirm("Really delete block?")) {
-      analytics.track("Block Deleted", { name: this.UNSAFE_componentWillMount.props.block });
+      analytics.track("Block Deleted", {
+        name: this.props.block
+      });
       delete_a_block(this.props.block).then(res => {
         if (!(res && res.ok)) toast.error("Delete block failed");
         else {
@@ -309,6 +316,7 @@ export class Block extends React.Component {
             }}
           >
             <div className="fixed-bottom-footer modal-footer">
+              {this.state.disabled && <div class="lds-dual-ring" />}
               <Button
                 onClick={event => {
                   gitpod_open("Blocks/" + this.props.block + ".json");
@@ -316,10 +324,18 @@ export class Block extends React.Component {
               >
                 Open file in code editor
               </Button>
-              <Button variant="danger" onClick={this.delete}>
+              <Button
+                variant="danger"
+                onClick={this.delete}
+                disabled={this.state.disabled}
+              >
                 Delete
               </Button>
-              <Button variant="primary" type="submit">
+              <Button
+                variant="primary"
+                type="submit"
+                disabled={this.state.disabled}
+              >
                 Save
               </Button>
               <Link to="/">
