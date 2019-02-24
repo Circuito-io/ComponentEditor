@@ -316,6 +316,7 @@ export class Block extends React.Component {
             }}
           >
             <div className="fixed-bottom-footer modal-footer">
+              {this.state.disabled && <div class="lds-dual-ring" />}
               <Button
                 onClick={event => {
                   gitpod_open("Blocks/" + this.props.block + ".json");
