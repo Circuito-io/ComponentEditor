@@ -133,9 +133,7 @@ export class BlocksList extends React.Component {
             <FontAwesomeIcon icon={faPlus} style={{ width: "45px" }} />
             Create new block: &nbsp;
             <span>
-              <mark class="rbt-highlight-text">
-                {this.state.input || "Enter name"}
-              </mark>
+              <b>{this.state.input || "Enter name"}</b>
             </span>
           </ListGroup.Item>
         </ListGroup>
