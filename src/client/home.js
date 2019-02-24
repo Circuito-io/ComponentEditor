@@ -15,7 +15,7 @@ export class Home extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{ maxWidth: "unset" }}>
         <Row>
           <Col>
             <Card>
@@ -35,6 +35,7 @@ export class Home extends React.Component {
                 <h3>How this works</h3>
               </Card.Header>
               <Card.Body>
+                Welcome to the <a href="www.circuito.io" target="_blank">circuito.io</a> Component Editor!
                 <ol>
                   <li>
                     Choose a block to <b>edit</b> or create a new one
@@ -50,6 +51,13 @@ export class Home extends React.Component {
                     it
                   </li>
                 </ol>
+                Need help? Visitr our{" "}
+                <a
+                  href="https://talk.circuito.io/c/component-editor"
+                  target="_blank"
+                >
+                  support forum
+                </a>
               </Card.Body>
             </Card>
           </Col>
