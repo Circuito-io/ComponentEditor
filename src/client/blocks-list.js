@@ -7,6 +7,7 @@ import { createNewCoder } from "./form/coderfield.js";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dialog from "react-bootstrap-dialog";
+import Joyride from "react-joyride";
 
 function createNewBlockData(blockName) {
   var blockId = Math.floor(Math.random() * 5000 + 5000);
@@ -54,7 +55,30 @@ export class BlocksList extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { input: "" };
+    this.state = {
+      input: "",
+      steps: [
+        {
+          target: ".rbt",
+          content: "Choose a component to edit it",
+          placement: "bottom-start"
+        },
+        {
+          target: "#btn-create-block",
+          content: "Or click to create a new component"
+        },
+        {
+          target: "#btn-preview",
+          content:
+            "When you're done save you changes and preview them on circuito"
+        },
+        {
+          target: "#btn-publish",
+          content:
+            "Don't forget to publish your work so others can enjoy it"
+        }
+      ]
+    };
 
     this.createBlock = this.createBlock.bind(this);
   }
@@ -116,7 +140,11 @@ export class BlocksList extends React.Component {
 
     return (
       <React.Fragment>
-        <Button style={{ width: "100%" }} onClick={this.createBlock}>
+        <Button
+          style={{ width: "100%" }}
+          id="btn-create-block"
+          onClick={this.createBlock}
+        >
           Create New Block
         </Button>
         <br />
@@ -146,6 +174,13 @@ export class BlocksList extends React.Component {
           ref={el => {
             this.dialog = el;
           }}
+        />
+        <Joyride
+          steps={this.state.steps}
+          styles={{ options: { zIndex: 10000 } }}
+          showProgress
+          showSkipButton
+          continuous 
         />
       </React.Fragment>
     );
