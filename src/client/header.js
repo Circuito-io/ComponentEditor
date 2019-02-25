@@ -7,7 +7,7 @@ import { Publish } from "./publish";
 export class Header extends React.Component {
   render() {
     return (
-      <Navbar collapseOnSelect bg="dark" variant="dark">
+      <Navbar collapseOnSelect bg="dark" variant="dark" fixed="top" >
         <Link to="/">
           <Navbar.Brand>
             <img src="https://www.circuito.io/static/images/cir_logo_white.svg" />

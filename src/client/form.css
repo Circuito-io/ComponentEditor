@@ -143,6 +143,10 @@ form > p {
   max-width: unset !important;
 }
 
+#app > .container {
+  padding-top: 60px;
+}
+
 /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
 .ace_text-input {
   position: absolute !important;
