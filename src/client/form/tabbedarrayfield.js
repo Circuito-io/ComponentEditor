@@ -96,7 +96,7 @@ function TabbedArrayFieldTemplate(props) {
               ))}
           </Nav>
 
-          <Dropdown>
+          <Dropdown drop="left">
             <Dropdown.Toggle variant="secondary">More</Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item

@@ -29,10 +29,10 @@ export class Publish extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <h4>Video comming soon.</h4>
-            After you fork the repo and commit your changes using the git panel on the left,
-            create a pull request using the pull-request panel on the right,
-            or directly in github in your fork.
-{/*             
+            After you fork the repo and commit your changes using the git panel
+            on the left, create a pull request using the pull-request panel on
+            the right, or directly in github in your fork.
+            {/*             
             <ReactPlayer
               url="https://www.youtube.com/watch?v=i3CpeFhRLI4"
               width="90%"
@@ -46,7 +46,9 @@ export class Publish extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <Nav.Link onClick={this.handleShow}>Publish</Nav.Link>
+        <Button variant="secondary" onClick={this.handleShow} style={{margin: "0px 2px"}}>
+          Publish
+        </Button>
       </React.Fragment>
     );
   }
