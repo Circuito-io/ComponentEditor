@@ -9,7 +9,7 @@
     "image": "https://res.cloudinary.com/circuito/image/upload/client/WeMosD1Mini_lq2ptx",
     "numericName": "",
     "shortName": "Wemos D1 Mini",
-    "visible": false,
+    "visible": true,
     "indicators": {
       "verified": false,
       "solder": false
@@ -29,6 +29,76 @@
           "part": "WemosD1Mini"
         }
       ],
+      "wires": [
+        {
+          "from": "WemosD1Mini_1.USB_MICRO",
+          "to": "USB_MICRO"
+        },
+        {
+          "from": "WemosD1Mini_1.D1",
+          "to": "D1"
+        },
+        {
+          "from": "WemosD1Mini_1.D2",
+          "to": "D2"
+        },
+        {
+          "from": "WemosD1Mini_1.D3",
+          "to": "D3"
+        },
+        {
+          "from": "WemosD1Mini_1.D4",
+          "to": "D4"
+        },
+        {
+          "from": "WemosD1Mini_1.D5",
+          "to": "D5"
+        },
+        {
+          "from": "WemosD1Mini_1.D6",
+          "to": "D6"
+        },
+        {
+          "from": "WemosD1Mini_1.D7",
+          "to": "D7"
+        },
+        {
+          "from": "WemosD1Mini_1.D8",
+          "to": "D8"
+        },
+        {
+          "from": "WemosD1Mini_1.D0",
+          "to": "D0"
+        },
+        {
+          "from": "WemosD1Mini_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "WemosD1Mini_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "WemosD1Mini_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "WemosD1Mini_1.G",
+          "to": "G"
+        },
+        {
+          "from": "WemosD1Mini_1.3V3",
+          "to": "3V3"
+        },
+        {
+          "from": "WemosD1Mini_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "WemosD1Mini_1.RX",
+          "to": "RX"
+        }
+        ],
       "ports": [
         {
           "name": "SerialType",
@@ -441,21 +511,21 @@
           ]
         },
         {
-          "cost": 30,
+          "cost": 20,
           "blocks": [
             "StepUp5v",
             "USBPowerMicro"
           ]
         },
         {
-          "cost": 20,
+          "cost": 10,
           "blocks": [
             "Reg5v",
             "USBPowerMicro"
           ]
         }
       ],
-      "cost": 2
+      "cost": 1
     },
     {
       "name": "USB",
@@ -464,10 +534,76 @@
       ],
       "parts": [
         {
-          "name": "NodeMCU1_1",
-          "part": "NodeMCU1"
+          "name": "WemosD1Mini_1",
+          "part": "WemosD1Mini"
         }
       ],
+      "wires": [
+        {
+          "from": "WemosD1Mini_1.USB_MICRO",
+          "to": "USB_MICRO"
+        },
+        {
+          "from": "WemosD1Mini_1.D1",
+          "to": "D1"
+        },
+        {
+          "from": "WemosD1Mini_1.D2",
+          "to": "D2"
+        },
+        {
+          "from": "WemosD1Mini_1.D3",
+          "to": "D3"
+        },
+        {
+          "from": "WemosD1Mini_1.D4",
+          "to": "D4"
+        },
+        {
+          "from": "WemosD1Mini_1.D5",
+          "to": "D5"
+        },
+        {
+          "from": "WemosD1Mini_1.D6",
+          "to": "D6"
+        },
+        {
+          "from": "WemosD1Mini_1.D7",
+          "to": "D7"
+        },
+        {
+          "from": "WemosD1Mini_1.D8",
+          "to": "D8"
+        },
+        {
+          "from": "WemosD1Mini_1.D0",
+          "to": "D0"
+        },
+        {
+          "from": "WemosD1Mini_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "WemosD1Mini_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "WemosD1Mini_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "WemosD1Mini_1.G",
+          "to": "G"
+        },
+        {
+          "from": "WemosD1Mini_1.3V3",
+          "to": "3V3"
+        },
+        {
+          "from": "WemosD1Mini_1.RX",
+          "to": "RX"
+        }
+        ],
       "ports": [
         {
           "name": "SerialType",
@@ -866,21 +1002,21 @@
           ]
         },
         {
-          "cost": 30,
+          "cost": 20,
           "blocks": [
             "StepUp5v",
             "USBPowerMicro"
           ]
         },
         {
-          "cost": 20,
+          "cost": 10,
           "blocks": [
             "Reg5v",
             "USBPowerMicro"
           ]
         }
       ],
-      "cost": 1
+      "cost": 11
     }
   ]
 }
