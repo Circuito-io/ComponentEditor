@@ -1,14 +1,7 @@
+import AddButton from "react-jsonschema-form/lib/components/AddButton";
+import IconButton from "react-jsonschema-form/lib/components/IconButton";
 import React from "react";
-import {
-  Tabs,
-  Tab,
-  Row,
-  Col,
-  Nav,
-  MenuItem,
-  NavDropdown,
-  NavItem
-} from "react-bootstrap";
+import Upload from "rc-upload";
 
 import {
   getDefaultFormState,
@@ -20,6 +13,7 @@ import {
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
+import { upload_a_file } from "../controller";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
   if (!title) {
@@ -39,112 +33,71 @@ function ArrayFieldDescription({ DescriptionField, idSchema, description }) {
   return <DescriptionField id={id} description={description} />;
 }
 
-function IconBtn(props) {
-  const { type = "default", icon, className, ...otherProps } = props;
-  return (
-    <button
-      type="button"
-      className={`btn btn-${type} ${className}`}
-      {...otherProps}
-    >
-      <i className={`glyphicon glyphicon-${icon}`} />
-    </button>
-  );
-}
-
-class TabbedArrayItemHeader extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isOpen: false };
-
-    this.btnStyle = {
-      flex: 1,
-      paddingLeft: 6,
-      paddingRight: 6,
-      fontWeight: "bold"
-    };
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.isOpen && prevState.isOpen) {
-      this.setState({ isOpen: false });
-    }
-  }
-
-  render() {
-    let props = this.props;
-    return (
-      <NavItem
-        eventKey={props.index}
-        onClick={() => props.onSelect(props.index)}
-      >
-        <div
-          style={{ display: "flex" }}
-          className={"dropdown" + (this.state.isOpen ? " open" : "")}
-        >
-          {props.tabName}
-          {props.hasRemove && (
-            <div onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
-              <span className="caret" style={{ margin: "7px" }} />
-            </div>
-          )}
-          <div className="dropdown-menu" style={{ marginLeft: -15 }}>
-            <div
-              tabIndex="-1"
-              style={this.btnStyle}
-              disabled={props.disabled || props.readonly}
-              onClick={props.onDropIndexClick(props.index)}
-            >
-              Remove
-            </div>
-          </div>
-        </div>
-      </NavItem>
-    );
-  }
-}
-
-function TabbedArrayItemContent(props) {
+function FileArrayItem(props) {
   const btnStyle = {
     flex: 1,
     paddingLeft: 6,
     paddingRight: 6,
     fontWeight: "bold"
   };
-<<<<<<< HEAD
-  
   return (
-    <Tab.Pane eventKey={props.index}>
-      <div className={props.className}>
-        <div className={props.hasToolbar ? "col-xs-9" : "col-xs-12"}>
-=======
-
-  return (
-    <Tab.Pane eventKey={props.index}>
-      <div className={props.className}>
-        <div className="col-xs-12">
->>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
-          {props.children}
-        </div>
-
-        {props.hasToolbar && (
-          <div className="col-xs-3 array-item-toolbox">
-            <div
-              className="btn-group"
-              style={{
-                display: "flex",
-                justifyContent: "space-around"
-              }}
-            />
-          </div>
-        )}
+    <div key={props.index} className={props.className}>
+      <div className={props.hasToolbar ? "col-xs-9" : "col-xs-12"}>
+        {props.children}
       </div>
-    </Tab.Pane>
+
+      {props.hasToolbar && (
+        <div className="col-xs-3 array-item-toolbox">
+          <div
+            className="btn-group"
+            style={{
+              display: "flex",
+              justifyContent: "space-around"
+            }}
+          >
+            {(props.hasMoveUp || props.hasMoveDown) && (
+              <IconButton
+                icon="arrow-up"
+                className="array-item-move-up"
+                tabIndex="-1"
+                style={btnStyle}
+                disabled={props.disabled || props.readonly || !props.hasMoveUp}
+                onClick={props.onReorderClick(props.index, props.index - 1)}
+              />
+            )}
+
+            {(props.hasMoveUp || props.hasMoveDown) && (
+              <IconButton
+                icon="arrow-down"
+                className="array-item-move-down"
+                tabIndex="-1"
+                style={btnStyle}
+                disabled={
+                  props.disabled || props.readonly || !props.hasMoveDown
+                }
+                onClick={props.onReorderClick(props.index, props.index + 1)}
+              />
+            )}
+
+            {props.hasRemove && (
+              <IconButton
+                type="danger"
+                icon="remove"
+                className="array-item-remove"
+                tabIndex="-1"
+                style={btnStyle}
+                disabled={props.disabled || props.readonly}
+                onClick={props.onDropIndexClick(props.index)}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
-function TabbedArrayFieldTemplate(props) {
+function FilesArrayFieldTemplate(props) {
   return (
     <fieldset className={props.className}>
       <ArrayFieldTitle
@@ -164,57 +117,27 @@ function TabbedArrayFieldTemplate(props) {
         />
       )}
 
-      <Tab.Container
-        defaultActiveKey={0}
-        activeKey={props.activeKey}
-        id={`array-item-list-${props.idSchema.$id}`}
-        onSelect={eventKey => {
-          if (eventKey == "+") {
-            props.onAddClick(document.createEvent("Event"));
-          } else {
-            props.onSelect(eventKey);
-          }
-        }}
+      <div
+        className="row array-item-list"
+        key={`array-item-list-${props.idSchema.$id}`}
       >
-        <Row className="clearfix">
-          <Col sm={12}>
-            <Nav bsStyle="tabs">
-              {props.items &&
-                props.items.map((p, index) => (
-                  <TabbedArrayItemHeader
-                    key={index}
-                    {...p}
-                  />
-                ))}
-              {props.canAdd && (
-                <NavItem
-                  eventKey="+"
-                  disabled={props.disabled || props.readonly}
-                >
-                  +
-                </NavItem>
-              )}
-            </Nav>
-          </Col>
-          <Col sm={12}>
-            <Tab.Content animation>
-              {props.items &&
-                props.items.map((p, index) => (
-                  <TabbedArrayItemContent
-                    key={index}
-                    {...p}
-                  />
-                ))}
-              <Tab.Pane eventKey="+">Adding...</Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
+        {props.items && props.items.map(p => FileArrayItem(p))}
+      </div>
+
+      {props.canAdd && (
+        <Upload 
+          action={"/api/coders-file/" + props.formContext.targetFolder}
+          onStart = {file => {
+            console.log('onStart', props, file.name)
+            props.addItem(file.name);
+          }}
+        ><a>Upload file...</a></Upload>
+      )}
     </fieldset>
   );
 }
 
-export class TabbedArrayField extends React.Component {
+export class FilesArrayField extends React.Component {
   static defaultProps = {
     uiSchema: {},
     formData: [],
@@ -255,21 +178,10 @@ export class TabbedArrayField extends React.Component {
     return addable;
   }
 
-  onAddClick = event => {
-    event.preventDefault();
-    const { schema, formData, registry = getDefaultRegistry() } = this.props;
-    const { definitions } = registry;
-    let itemSchema = schema.items;
-    if (isFixedItems(schema) && allowAdditionalItems(schema)) {
-      itemSchema = schema.additionalItems;
-    }
-    this.props.onChange([
-      ...formData,
-      getDefaultFormState(itemSchema, undefined, definitions)
-    ]);
+  addItem(item) {
+    this.props.onChange(this.props.formData.concat(item).sort());
+  }
 
-    this.onSelect(formData.length);
-  };
 
   onDropIndexClick = index => {
     return event => {
@@ -361,6 +273,8 @@ export class TabbedArrayField extends React.Component {
     super(props);
 
     this.state = { activeKey: 0 };
+
+    this.addItem = this.addItem.bind(this);
   }
 
   onSelect = activeKey => {
@@ -403,7 +317,7 @@ export class TabbedArrayField extends React.Component {
           item,
           idPrefix
         );
-        return this.renderArrayFieldItem({
+        return this.renderFilesArrayFieldItem({
           index,
           canMoveUp: index > 0,
           canMoveDown: index < formData.length - 1,
@@ -422,7 +336,7 @@ export class TabbedArrayField extends React.Component {
       disabled,
       idSchema,
       uiSchema,
-      onAddClick: this.onAddClick,
+      addItem: this.addItem,
       readonly,
       required,
       schema,
@@ -435,11 +349,10 @@ export class TabbedArrayField extends React.Component {
       activeKey: this.state.activeKey
     };
 
-    // Check if a custom render function was passed in
-    return <TabbedArrayFieldTemplate {...arrayProps} />;
+    return <FilesArrayFieldTemplate {...arrayProps} />;
   }
 
-  renderArrayFieldItem(props) {
+  renderFilesArrayFieldItem(props) {
     const {
       index,
       canRemove = true,
@@ -511,7 +424,7 @@ export class TabbedArrayField extends React.Component {
 }
 
 if (process.env.NODE_ENV !== "production") {
-  TabbedArrayField.propTypes = {
+  FilesArrayField.propTypes = {
     schema: PropTypes.object.isRequired,
     uiSchema: PropTypes.object,
     errorSchema: PropTypes.object,

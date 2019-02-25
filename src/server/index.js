@@ -1,6 +1,10 @@
 require('dotenv').config({silent: true});
 require('./settings.js');
 const path = require('path');
+<<<<<<< HEAD
+=======
+const fileUpload = require('express-fileupload');
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
 
 global.analytics.identify({
 	userId: global.userid
@@ -24,6 +28,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static('dist'))
+<<<<<<< HEAD
+=======
+app.use(fileUpload({}))
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
 
 
 var partsBlocksCodersController = require('./api/controllers/partsblockscodersController');

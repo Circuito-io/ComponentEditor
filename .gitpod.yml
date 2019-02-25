@@ -5,5 +5,9 @@ ports:
     onOpen: ignore
 tasks:
   - before: git submodule init
+<<<<<<< HEAD
     init: npm install
+=======
+    init: git submodule update && npm install
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
     command: npm run dev

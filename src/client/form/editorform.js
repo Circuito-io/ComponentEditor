@@ -9,7 +9,11 @@ import { TabbedArrayField } from "./tabbedarrayfield";
 import { TabbedObjectField } from "./tabbedobjectfield";
 import { WireDropDown } from "./wiredropdown";
 import { AceEditorWidget} from "./aceeditorwidget";
+<<<<<<< HEAD
 
+=======
+import { FilesArrayField } from "./filesarray";
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
 
 const editorFields = {
   typeahead: TypeaheadField,
@@ -17,7 +21,12 @@ const editorFields = {
   tabbedarray: TabbedArrayField,
   tabbedobject: TabbedObjectField,
   partfield: PartField,
+<<<<<<< HEAD
   coderfield: CoderField
+=======
+  coderfield: CoderField,
+  filesarray: FilesArrayField
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
 };
 
 const editorWidgets = {

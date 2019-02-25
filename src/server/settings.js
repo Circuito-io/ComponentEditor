@@ -3,10 +3,17 @@ const fs = require('fs');
 const uuidv4 = require('uuid/v4');
 
 global.dataFolder = path.join(__dirname, '../../components');
+<<<<<<< HEAD
 global.circuitoServer = process.env.CIRCUITO_SERVER || "https://circuito-ci-staging-pr-319.herokuapp.com/";
 global.uploadEndpoint = "save_components";
 global.previewEndpoint = "app?u=";
 global.svgdataServer = "https://gz1f13eb3m.execute-api.us-west-1.amazonaws.com/Prod/";
+=======
+global.circuitoServer = process.env.CIRCUITO_SERVER || "***REMOVED***
+global.uploadEndpoint = "save_components";
+global.previewEndpoint = "app?u=";
+global.svgdataServer = "***REMOVED***
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
 global.segmentWriteKey = "v7Pr4l9fyYqO9kng77jp4UF1KzDNW7TN";
 
 console.log("Circutio server - " + global.circuitoServer);

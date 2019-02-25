@@ -51,6 +51,10 @@ export class CoderField extends InputGroupModalField {
               uiSchema={coderuiSchema}
               formData={this.state.objData}
               onChange={form => (this.currentData = form.formData)}
+<<<<<<< HEAD
+=======
+              formContext={{'targetFolder': this.state.objName}}
+>>>>>>> cc7dd090a1952c1bd1884df39b0bbfc1a5e76a91
             >
               <Button type="submit" style={{ display: "none" }}>
                 Submit
