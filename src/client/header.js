@@ -7,7 +7,7 @@ import { Publish } from "./publish";
 export class Header extends React.Component {
   render() {
     return (
-      <Navbar collapseOnSelect bg="dark" variant="dark" fixed="top" >
+      <Navbar collapseOnSelect bg="dark" variant="dark" fixed="top">
         <Link to="/">
           <Navbar.Brand>
             <img src="https://www.circuito.io/static/images/cir_logo_white.svg" />
@@ -23,7 +23,11 @@ export class Header extends React.Component {
 
         <Navbar.Collapse className="justify-content-end">
           <Nav className="justify-content-end">
-            <Nav.Link href="https://talk.circuito.io/c/component-editor" target="_blank">
+            <Nav.Link
+              controlid="nav-help"
+              href="https://talk.circuito.io/c/component-editor"
+              target="_blank"
+            >
               Help
             </Nav.Link>
             <Preview />

@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dialog from "react-bootstrap-dialog";
 import Joyride from "react-joyride";
 
+var firstTimeHelp = true;
+
 function createNewBlockData(blockName) {
   var blockId = Math.floor(Math.random() * 5000 + 5000);
   console.log("Creating blockId", blockId, "for", blockName);
@@ -57,11 +59,18 @@ export class BlocksList extends React.Component {
 
     this.state = {
       input: "",
+      runHelp: firstTimeHelp,
       steps: [
         {
+          title: "Welcome to the Component Editor",
           target: ".rbt",
-          content: "Choose a component to edit it",
-          placement: "bottom-start"
+          content:
+            "This tutorial will show you how to use the editor in a few steps.",
+          placement: "center"
+        },
+        {
+          target: ".rbt",
+          content: "Choose a component to edit it"
         },
         {
           target: "#btn-create-block",
@@ -74,8 +83,11 @@ export class BlocksList extends React.Component {
         },
         {
           target: "#btn-publish",
-          content:
-            "Don't forget to publish your work so others can enjoy it"
+          content: "Don't forget to publish your work so others can enjoy it"
+        },
+        {
+          target: 'a[controlid="nav-help"]',
+          content: "Find out more or reach out for help"
         }
       ]
     };
@@ -145,7 +157,8 @@ export class BlocksList extends React.Component {
           id="btn-create-block"
           onClick={this.createBlock}
         >
-          Create New Block
+          <FontAwesomeIcon icon={faPlus} />
+          &nbsp;Create New Block
         </Button>
         <br />
         <br />
@@ -162,7 +175,7 @@ export class BlocksList extends React.Component {
           }}
           bsSize={"small"}
           open
-          maxHeight="400px"
+          maxHeight="600px"
           menuId="main-block-list"
           placeholder="Or choose a block to edit..."
           renderMenuItemChildren={(option, props, index) => (
@@ -177,10 +190,18 @@ export class BlocksList extends React.Component {
         />
         <Joyride
           steps={this.state.steps}
-          styles={{ options: { zIndex: 10000 } }}
+          styles={{ options: { zIndex: 10000, primaryColor: "#dc3545" } }}
           showProgress
           showSkipButton
-          continuous 
+          continuous
+          run={this.state.runHelp}
+          callback={data => {
+            console.log(data);
+            if (["stop", "skip", "close"].includes(data.action)) {
+              firstTimeHelp = false;
+              this.setState({ runHelp: false });
+            }
+          }}
         />
       </React.Fragment>
     );
