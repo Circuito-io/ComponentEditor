@@ -55,7 +55,6 @@ function TabbedArrayItemContent(props) {
 }
 
 function TabbedArrayFieldTemplate(props) {
-  console.log("arraytemplate", props.activeKey);
   return (
     <fieldset className={props.className}>
       <ArrayFieldTitle
@@ -80,7 +79,6 @@ function TabbedArrayFieldTemplate(props) {
         defaultActiveKey={0}
         activeKey={props.activeKey}
         onSelect={eventKey => {
-          console.log("tabcontainer onSelect", eventKey, typeof eventKey);
           if (eventKey == "+") {
             props.addItem();
           } else {
@@ -91,36 +89,11 @@ function TabbedArrayFieldTemplate(props) {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Nav variant="pills">
             {props.items &&
-              props.items.map((p, index) => {
-                console.log("item", index);
-                return (
-                  <Nav.Item key={index}>
-                    <Nav.Link eventKey={index}>
-                      {p.tabName}&nbsp;&nbsp;
-                      {/* {props.hasRemove && (
-                    <Badge
-                      variant="danger"
-                      size="sm"
-                      disabled={props.disabled || props.readonly}
-                      onClick={props.onDropIndexClick(props.index)}
-                    >
-                      <FontAwesomeIcon icon={faTrashAlt} />
-                    </Badge>
-                  )} */}
-                    </Nav.Link>
-                  </Nav.Item>
-                  // <TabbedArrayItemHeader key={index} {...p} />
-                );
-              })}
-            {/* {props.canAdd && (
-            <Nav.Link
-              className="btn btn-outline-secondary"
-              eventKey="+"
-              disabled={props.disabled || props.readonly}
-            >
-              <FontAwesomeIcon icon={faPlus} />
-            </Nav.Link>
-          )} */}
+              props.items.map((p, index) => (
+                <Nav.Item key={index}>
+                  <Nav.Link eventKey={index}>{p.tabName}&nbsp;&nbsp;</Nav.Link>
+                </Nav.Item>
+              ))}
           </Nav>
 
           <Dropdown>
@@ -193,7 +166,6 @@ export class TabbedArrayField extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log("didupdate", this.state.activeKey);
     if (this.state.activeKey != -1 && this.props.formData.length == 0) {
       // when no elements in data key should be null
       this.setState({ activeKey: -1 });
@@ -202,7 +174,6 @@ export class TabbedArrayField extends React.Component {
       this.state.activeKey >= this.props.formData.length
     ) {
       // invalid activeKey after tab remove - update it
-      console.log("didupdate reset");
       this.setState({ activeKey: 0 });
     }
   }
@@ -312,7 +283,6 @@ export class TabbedArrayField extends React.Component {
   }
 
   onSelect = activeKey => {
-    console.log("select", activeKey);
     if (activeKey != null) this.setState({ activeKey });
   };
 
