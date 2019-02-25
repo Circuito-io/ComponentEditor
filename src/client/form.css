@@ -135,6 +135,14 @@ form > p {
   }
 }
 
+.dropdown-item > .svg-inline--fa {
+  width: 20px;
+}
+
+.container {
+  max-width: unset !important;
+}
+
 /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
 .ace_text-input {
   position: absolute !important;
