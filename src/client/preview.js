@@ -115,7 +115,9 @@ export class Preview extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <Nav.Link onClick={this.onPreview}>Preview</Nav.Link>
+        <Button variant="secondary" onClick={this.onPreview} style={{margin: "0px 2px"}}>
+          Preview
+        </Button>
       </React.Fragment>
     );
   }

@@ -1,11 +1,12 @@
 import React from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { toast } from "react-toastify";
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Button } from "react-bootstrap";
 import { update_a_block, update_a_coder } from "./controller.js";
 import { createNewCoder } from "./form/coderfield.js";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Dialog from "react-bootstrap-dialog";
 
 function createNewBlockData(blockName) {
   var blockId = Math.floor(Math.random() * 5000 + 5000);
@@ -54,6 +55,53 @@ export class BlocksList extends React.Component {
     super(props);
 
     this.state = { input: "" };
+
+    this.createBlock = this.createBlock.bind(this);
+  }
+
+  createBlock() {
+    this.dialog.show({
+      body: "New block name",
+      prompt: Dialog.TextPrompt(),
+      actions: [
+        Dialog.CancelAction(),
+        Dialog.OKAction(dialog => {
+          const newBlockName = dialog.value;
+
+          analytics.track("Block Created", { name: newBlockName });
+          analytics.track("Block Opened", { name: newBlockName });
+
+          update_a_block(newBlockName, createNewBlockData(newBlockName))
+            .then(res => {
+              if (!(res && res.ok))
+                toast.error(
+                  "Create block failed:" +
+                    ((res && res.statusText) || "can't connect")
+                );
+              else {
+                return update_a_coder(
+                  newBlockName,
+                  createNewCoder(newBlockName)
+                );
+              }
+            })
+            .then(res => {
+              if (!(res && res.ok))
+                toast.error(
+                  "Create coder for block failed:" +
+                    ((res && res.statusText) || "can't connect")
+                );
+              else {
+                toast.success("Created " + newBlockName, {
+                  autoClose: 2000
+                });
+                this.props.refreshData();
+                this.props.onBlockSelected(newBlockName);
+              }
+            });
+        })
+      ]
+    });
   }
 
   render() {
@@ -68,6 +116,11 @@ export class BlocksList extends React.Component {
 
     return (
       <React.Fragment>
+        <Button style={{ width: "100%" }} onClick={this.createBlock}>
+          Create New Block
+        </Button>
+        <br />
+        <br />
         <Typeahead
           options={blocksIdsLabels}
           selectHintOnEnter={true}
@@ -83,63 +136,17 @@ export class BlocksList extends React.Component {
           open
           maxHeight="400px"
           menuId="main-block-list"
-          placeholder="Choose a block to edit or enter name to create a new one..."
+          placeholder="Or choose a block to edit..."
           renderMenuItemChildren={(option, props, index) => (
             <MenuOption {...option} />
           )}
         />
 
-        <ListGroup>
-          <ListGroup.Item
-            disabled={
-              this.state.input === "" ||
-              this.props.cachedData.blocks.includes(this.state.input)
-            }
-            action
-            onClick={event => {
-              // clicked create new
-              var newBlockName = this.state.input;
-
-              analytics.track("Block Created", { name: newBlockName });
-              analytics.track("Block Opened", { name: newBlockName });
-
-              update_a_block(newBlockName, createNewBlockData(newBlockName))
-                .then(res => {
-                  if (!(res && res.ok))
-                    toast.error(
-                      "Create block failed:" +
-                        ((res && res.statusText) || "can't connect")
-                    );
-                  else {
-                    return update_a_coder(
-                      newBlockName,
-                      createNewCoder(newBlockName)
-                    );
-                  }
-                })
-                .then(res => {
-                  if (!(res && res.ok))
-                    toast.error(
-                      "Create coder for block failed:" +
-                        ((res && res.statusText) || "can't connect")
-                    );
-                  else {
-                    toast.success("Created " + newBlockName, {
-                      autoClose: 2000
-                    });
-                    this.props.refreshData();
-                    this.props.onBlockSelected(newBlockName);
-                  }
-                });
-            }}
-          >
-            <FontAwesomeIcon icon={faPlus} style={{ width: "45px" }} />
-            Create new block: &nbsp;
-            <span>
-              <b>{this.state.input || "Enter name"}</b>
-            </span>
-          </ListGroup.Item>
-        </ListGroup>
+        <Dialog
+          ref={el => {
+            this.dialog = el;
+          }}
+        />
       </React.Fragment>
     );
   }
