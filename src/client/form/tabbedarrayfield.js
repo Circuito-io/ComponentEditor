@@ -11,12 +11,7 @@ import {
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
-import {
-  faTrashAlt,
-  faPlus,
-  faClone,
-  faFile
-} from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faClone, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
@@ -35,26 +30,6 @@ function ArrayFieldDescription({ DescriptionField, idSchema, description }) {
   }
   const id = `${idSchema.$id}__description`;
   return <DescriptionField id={id} description={description} />;
-}
-
-function TabbedArrayItemHeader(props) {
-  return (
-    <Nav.Item>
-      <Nav.Link eventKey={props.index}>
-        {props.tabName}&nbsp;&nbsp;
-        {/* {props.hasRemove && (
-          <Badge
-            variant="danger"
-            size="sm"
-            disabled={props.disabled || props.readonly}
-            onClick={props.onDropIndexClick(props.index)}
-          >
-            <FontAwesomeIcon icon={faTrashAlt} />
-          </Badge>
-        )} */}
-      </Nav.Link>
-    </Nav.Item>
-  );
 }
 
 function TabbedArrayItemContent(props) {
@@ -80,6 +55,7 @@ function TabbedArrayItemContent(props) {
 }
 
 function TabbedArrayFieldTemplate(props) {
+  console.log("arraytemplate", props.activeKey);
   return (
     <fieldset className={props.className}>
       <ArrayFieldTitle
@@ -104,8 +80,9 @@ function TabbedArrayFieldTemplate(props) {
         defaultActiveKey={0}
         activeKey={props.activeKey}
         onSelect={eventKey => {
+          console.log("tabcontainer onSelect", eventKey, typeof eventKey);
           if (eventKey == "+") {
-            props.onAddClick(document.createEvent("Event"));
+            props.addItem();
           } else {
             props.onSelect(eventKey);
           }
@@ -114,9 +91,27 @@ function TabbedArrayFieldTemplate(props) {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Nav variant="pills">
             {props.items &&
-              props.items.map((p, index) => (
-                <TabbedArrayItemHeader key={index} {...p} />
-              ))}
+              props.items.map((p, index) => {
+                console.log("item", index);
+                return (
+                  <Nav.Item key={index}>
+                    <Nav.Link eventKey={index}>
+                      {p.tabName}&nbsp;&nbsp;
+                      {/* {props.hasRemove && (
+                    <Badge
+                      variant="danger"
+                      size="sm"
+                      disabled={props.disabled || props.readonly}
+                      onClick={props.onDropIndexClick(props.index)}
+                    >
+                      <FontAwesomeIcon icon={faTrashAlt} />
+                    </Badge>
+                  )} */}
+                    </Nav.Link>
+                  </Nav.Item>
+                  // <TabbedArrayItemHeader key={index} {...p} />
+                );
+              })}
             {/* {props.canAdd && (
             <Nav.Link
               className="btn btn-outline-secondary"
@@ -129,13 +124,11 @@ function TabbedArrayFieldTemplate(props) {
           </Nav>
 
           <Dropdown>
-            <Dropdown.Toggle>More</Dropdown.Toggle>
+            <Dropdown.Toggle variant="secondary">More</Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item
                 disabled={props.disabled || props.readonly}
-                onClick={event => {
-                  props.onAddClick(event);
-                }}
+                onClick={props.addItem}
                 eventKey={props.items.length}
               >
                 <FontAwesomeIcon icon={faFile} />
@@ -173,7 +166,7 @@ function TabbedArrayFieldTemplate(props) {
             ))}
           {props.items.length == 0 && (
             <TabbedArrayItemContent key={-1} index={-1}>
-              No elements. Click '+' to create a new one.
+              No elements. Click 'More' to create a new one.
             </TabbedArrayItemContent>
           )}
           <Tab.Pane eventKey="+">Adding...</Tab.Pane>
@@ -200,6 +193,7 @@ export class TabbedArrayField extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    console.log("didupdate", this.state.activeKey);
     if (this.state.activeKey != -1 && this.props.formData.length == 0) {
       // when no elements in data key should be null
       this.setState({ activeKey: -1 });
@@ -208,6 +202,7 @@ export class TabbedArrayField extends React.Component {
       this.state.activeKey >= this.props.formData.length
     ) {
       // invalid activeKey after tab remove - update it
+      console.log("didupdate reset");
       this.setState({ activeKey: 0 });
     }
   }
@@ -237,8 +232,7 @@ export class TabbedArrayField extends React.Component {
     return addable;
   }
 
-  onAddClick = event => {
-    event.preventDefault();
+  addItem = () => {
     const { schema, formData, registry = getDefaultRegistry() } = this.props;
     const { definitions } = registry;
     let itemSchema = schema.items;
@@ -250,7 +244,7 @@ export class TabbedArrayField extends React.Component {
       getDefaultFormState(itemSchema, undefined, definitions)
     ]);
 
-    this.onSelect(formData.length);
+    //this.onSelect(formData.length);
   };
 
   duplicateIndex = index => {
@@ -265,7 +259,7 @@ export class TabbedArrayField extends React.Component {
         .concat([newItem], formData.slice(index + 1));
 
       onChange(newFormData);
-      this.onSelect(formData.length);
+      this.onSelect(index + 1);
     }
   };
 
@@ -290,44 +284,6 @@ export class TabbedArrayField extends React.Component {
     onChange(newFormData, newErrorSchema);
   };
 
-  onReorderClick = (index, newIndex) => {
-    return event => {
-      if (event) {
-        event.preventDefault();
-        event.target.blur();
-      }
-      const { formData, onChange } = this.props;
-      let newErrorSchema;
-      if (this.props.errorSchema) {
-        newErrorSchema = {};
-        const errorSchema = this.props.errorSchema;
-        for (let i in errorSchema) {
-          if (i == index) {
-            newErrorSchema[newIndex] = errorSchema[index];
-          } else if (i == newIndex) {
-            newErrorSchema[index] = errorSchema[newIndex];
-          } else {
-            newErrorSchema[i] = errorSchema[i];
-          }
-        }
-      }
-      onChange(
-        formData.map((item, i) => {
-          // i is string, index and newIndex are numbers,
-          // so using "==" to compare
-          if (i == newIndex) {
-            return formData[index];
-          } else if (i == index) {
-            return formData[newIndex];
-          } else {
-            return item;
-          }
-        }),
-        newErrorSchema
-      );
-    };
-  };
-
   onChangeForIndex = index => {
     return (value, errorSchema) => {
       const { formData, onChange } = this.props;
@@ -347,11 +303,6 @@ export class TabbedArrayField extends React.Component {
       );
     };
   };
-
-  onSelectChange = value => {
-    this.props.onChange(value);
-  };
-
   constructor(props) {
     super(props);
 
@@ -361,7 +312,8 @@ export class TabbedArrayField extends React.Component {
   }
 
   onSelect = activeKey => {
-    this.setState({ activeKey });
+    console.log("select", activeKey);
+    if (activeKey != null) this.setState({ activeKey });
   };
 
   render() {
@@ -419,7 +371,7 @@ export class TabbedArrayField extends React.Component {
       disabled,
       idSchema,
       uiSchema,
-      onAddClick: this.onAddClick,
+      addItem: this.addItem,
       dropIndex: this.dropIndex,
       duplicateIndex: this.duplicateIndex,
       readonly,
@@ -501,7 +453,6 @@ export class TabbedArrayField extends React.Component {
       hasToolbar: has.toolbar,
       hasRemove: has.remove,
       index,
-      onReorderClick: this.onReorderClick,
       readonly,
       tabName: tabName
     };
