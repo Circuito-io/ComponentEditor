@@ -103,8 +103,8 @@ export class Preview extends React.Component {
           </Modal.Header>
           <Modal.Body
             style={{
-              "max-height": "calc(100vh - 210px)",
-              "overflow-y": "auto"
+              "maxHeight": "calc(100vh - 210px)",
+              "overflowY": "auto"
             }}
             dangerouslySetInnerHTML={{ __html: this.state.modalMsg }}
           />
@@ -115,7 +115,7 @@ export class Preview extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <Button variant="secondary" onClick={this.onPreview} style={{margin: "0px 2px"}}>
+        <Button id="btn-preview" variant="secondary" onClick={this.onPreview} style={{margin: "0px 2px"}}>
           Preview
         </Button>
       </React.Fragment>

@@ -46,7 +46,7 @@ export class Publish extends React.Component {
           </Modal.Footer>
         </Modal>
 
-        <Button variant="secondary" onClick={this.handleShow} style={{margin: "0px 2px"}}>
+        <Button variant="secondary" id="btn-publish" onClick={this.handleShow} style={{margin: "0px 2px"}}>
           Publish
         </Button>
       </React.Fragment>
