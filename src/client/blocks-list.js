@@ -196,7 +196,6 @@ export class BlocksList extends React.Component {
           continuous
           run={this.state.runHelp}
           callback={data => {
-            console.log(data);
             if (["stop", "skip", "close"].includes(data.action)) {
               firstTimeHelp = false;
               this.setState({ runHelp: false });
