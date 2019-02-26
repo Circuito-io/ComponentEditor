@@ -1,0 +1,16 @@
+{
+  "name": "LEDWhite",
+  "supportedControllers": [
+    "ArduinoUno"
+  ],
+  "license": "LGPL",
+  "instantiate": {
+    "varname": "ledwhite"
+  },
+  "includeHeaders": [],
+  "code": {
+    "global": "int {{varname}}={{SIG}}",
+    "setup": "pinMode({{varname}}, OUTPUT);",
+    "snippetCode": "  digitalWrite({{varname}}, HIGH);   // turn the LED on (HIGH is the voltage level)\r\n  delay(1000);               // wait for a second\r\n  digitalWrite({{varname}}, LOW);    // turn the LED off by making the voltage LOW\r\n  delay(1000);               // wait for a second"
+  }
+}

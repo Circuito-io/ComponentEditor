@@ -1,0 +1,83 @@
+{
+  "name": "LEDWhite",
+  "category": [
+    "output"
+  ],
+  "blockId": "5214",
+  "app": {
+    "visible": true,
+    "appName": "Basic Bright White LED 5mm",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>This is a very basic, small 5mm, Bright White LED. Control the intensity of the brightness at a range of 0-255. Its Luminous Intensity is 5000mcd</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1551178985/client/white_led_z5izii.png"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "LEDWhite"
+      ],
+      "supportedControllers": [
+        "ArduinoUno"
+      ],
+      "parts": [
+        {
+          "name": "LEDWhite_1",
+          "part": "LEDWhite"
+        },
+        {
+          "name": "Res220O_1",
+          "part": "Res220O"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "SIG",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        }
+      ],
+      "wires": [
+        {
+          "from": "LEDWhite_1.VCC",
+          "to": "SIG"
+        },
+        {
+          "from": "LEDWhite_1.GND",
+          "to": "Res220O_1.con0"
+        },
+        {
+          "from": "Res220O_1.con1",
+          "to": "GND"
+        }
+      ]
+    }
+  ]
+}
