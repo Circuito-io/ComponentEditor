@@ -1,0 +1,78 @@
+{
+  "name": "CO2",
+  "category": [
+    "controller",
+    "output",
+    "input",
+    "connectivity"
+  ],
+  "blockId": "9524",
+  "app": {
+    "visible": true,
+    "appName": "Arduino Leonardo MQ135 Sensor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>CO2 Sensor</p>"
+  },
+  "notes": "CO2 sensor for Arduino",
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "Wired Sensor",
+      "cost": 30,
+      "coders": [],
+      "supportedControllers": [
+        "ArduinoLeonardo"
+      ],
+      "parts": [
+        {
+          "name": "ArduinoLeonardo_1",
+          "part": "ArduinoLeonardo",
+          "rotation": 0
+        },
+        {
+          "name": "LCD16X2I2C_1",
+          "part": "LCD16X2I2C",
+          "rotation": 0
+        },
+        {
+          "name": "MQ135_1",
+          "part": "MQ135",
+          "rotation": 0
+        }
+      ],
+      "ports": [],
+      "wires": [
+        {
+          "from": "LCD16X2I2C_1.GND",
+          "to": "ArduinoLeonardo_1.GND"
+        },
+        {
+          "from": "MQ135_1.GND",
+          "to": "ArduinoLeonardo_1.GND2"
+        },
+        {
+          "from": "LCD16X2I2C_1.SCL",
+          "to": "ArduinoLeonardo_1.3"
+        },
+        {
+          "from": "LCD16X2I2C_1.SDA",
+          "to": "ArduinoLeonardo_1.2"
+        },
+        {
+          "from": "LCD16X2I2C_1.VCC",
+          "to": "ArduinoLeonardo_1.3.3v"
+        },
+        {
+          "from": "MQ135_1.5V",
+          "to": "ArduinoLeonardo_1.5v"
+        },
+        {
+          "from": "MQ135_1.AOUT",
+          "to": "ArduinoLeonardo_1.A2"
+        }
+      ]
+    }
+  ]
+}
