@@ -1,0 +1,93 @@
+{
+  "name": "Elechouse_- Voice Recognition Module 3",
+  "category": [
+    "controller"
+  ],
+  "blockId": "5245",
+  "app": {
+    "visible": true,
+    "appName": "Elechouse - Voice Recognition Module 3",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>This is a module by Elechouse that is used for voice recognition on Arduino. For more details please refer to the VR3 Manual on http://www.elechouse.com/elechouse/images/product/VR3/VR3_manual.pdf  </p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1559543497/client/FZK3CW9J8KGUPV1.LARGE_p9nrm7.jpg"
+  },
+  "altComp": {
+    "cost": 4000
+  },
+  "circuits": [
+    {
+      "name": "VR3",
+      "cost": 2500,
+      "coders": [
+        "Elechouse_- Voice Recognition Module 3"
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "provides",
+            "provides": [
+              {
+                "spec": "Battery",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "provides",
+            "provides": [
+              {
+                "spec": "Battery",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Rx",
+          "interface": {
+            "portType": "provides",
+            "provides": [
+              {
+                "spec": "RX",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Tx",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "TX",
+                "voltage": "5v"
+              }
+            ]
+          }
+        }
+      ],
+      "supportedControllers": [
+        "ArduinoUno",
+        "ArduinoMega",
+        "ArduinoNano"
+      ],
+      "parts": [
+        {
+          "name": "Mic_1",
+          "part": "Mic",
+          "rotation": 0
+        }
+      ],
+      "wires": [],
+      "requiredBlocks": []
+    }
+  ]
+}
