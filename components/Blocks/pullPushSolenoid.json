@@ -40,52 +40,54 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "pullPushSolenoid",
-          "rotation": 0
+          "name": "pullPushSolenoid_1",
+          "part": "pullPushSolenoid"
         },
         {
-          "name": "nmos",
+          "name": "TNMOSFETFQP_1",
           "part": "TNMOSFETFQP"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "d1",
-          "part": "DIRect1A50v",
-          "rotation": 180
+          "name": "DIRect1A50v_1",
+          "part": "DIRect1A50v"
         }
       ],
       "wires": [
         {
-          "from": "this.pin2",
-          "to": "nmos.D"
+          "from": "pullPushSolenoid_1.pin2",
+          "to": "TNMOSFETFQP_1.D"
         },
         {
-          "from": "nmos.G",
-          "to": "r1.con0"
+          "from": "TNMOSFETFQP_1.G",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "nmos.S",
-          "to": "r1.con1"
+          "from": "TNMOSFETFQP_1.S",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.pin1",
-          "to": "d1.neg"
+          "from": "pullPushSolenoid_1.pin1",
+          "to": "DIRect1A50v_1.neg"
         },
         {
-          "from": "this.pin2",
-          "to": "d1.pos"
+          "from": "pullPushSolenoid_1.pin2",
+          "to": "DIRect1A50v_1.pos"
         },
         {
-          "from": "nmos.S",
+          "from": "TNMOSFETFQP_1.S",
           "to": "GND"
         },
         {
-          "from": "nmos.G",
+          "from": "TNMOSFETFQP_1.G",
           "to": "SIG"
+        },
+        {
+          "from": "pullPushSolenoid_1.pin1",
+          "to": "pin1"
         }
       ],
       "ports": [
@@ -99,7 +101,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 700
+            "requiresLoad": 700,
+            "portType": "requires"
           }
         },
         {
@@ -111,7 +114,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -129,7 +133,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
@@ -142,7 +147,7 @@
           ]
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Tabs,
-  Tab,
-  Row,
-  Col,
-  Nav,
-  MenuItem,
-  NavDropdown,
-  NavItem
-} from "react-bootstrap";
+import { Tab, Nav, Button, Badge, Dropdown } from "react-bootstrap";
 
 import {
   getDefaultFormState,
@@ -20,6 +11,8 @@ import {
   getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
+import { faTrashAlt, faClone, faFile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
   if (!title) {
@@ -39,86 +32,11 @@ function ArrayFieldDescription({ DescriptionField, idSchema, description }) {
   return <DescriptionField id={id} description={description} />;
 }
 
-function IconBtn(props) {
-  const { type = "default", icon, className, ...otherProps } = props;
-  return (
-    <button
-      type="button"
-      className={`btn btn-${type} ${className}`}
-      {...otherProps}
-    >
-      <i className={`glyphicon glyphicon-${icon}`} />
-    </button>
-  );
-}
-
-class TabbedArrayItemHeader extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isOpen: false };
-
-    this.btnStyle = {
-      flex: 1,
-      paddingLeft: 6,
-      paddingRight: 6,
-      fontWeight: "bold"
-    };
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.isOpen && prevState.isOpen) {
-      this.setState({ isOpen: false });
-    }
-  }
-
-  render() {
-    let props = this.props;
-    return (
-      <NavItem
-        eventKey={props.index}
-        onClick={() => props.onSelect(props.index)}
-      >
-        <div
-          style={{ display: "flex" }}
-          className={"dropdown" + (this.state.isOpen ? " open" : "")}
-        >
-          {props.tabName}
-          {props.hasRemove && (
-            <div onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
-              <span className="caret" style={{ margin: "7px" }} />
-            </div>
-          )}
-          <div className="dropdown-menu" style={{ marginLeft: -15 }}>
-            <div
-              tabIndex="-1"
-              style={this.btnStyle}
-              disabled={props.disabled || props.readonly}
-              onClick={props.onDropIndexClick(props.index)}
-            >
-              Remove
-            </div>
-          </div>
-        </div>
-      </NavItem>
-    );
-  }
-}
-
 function TabbedArrayItemContent(props) {
-  const btnStyle = {
-    flex: 1,
-    paddingLeft: 6,
-    paddingRight: 6,
-    fontWeight: "bold"
-  };
-
   return (
     <Tab.Pane eventKey={props.index}>
       <div className={props.className}>
-        <div className="col-xs-12">
-          {props.children}
-        </div>
+        <div className="col-xs-12">{props.children}</div>
 
         {props.hasToolbar && (
           <div className="col-xs-3 array-item-toolbox">
@@ -157,50 +75,75 @@ function TabbedArrayFieldTemplate(props) {
       )}
 
       <Tab.Container
+        id={`array-item-list-${props.idSchema.$id}`}
         defaultActiveKey={0}
         activeKey={props.activeKey}
-        id={`array-item-list-${props.idSchema.$id}`}
         onSelect={eventKey => {
           if (eventKey == "+") {
-            props.onAddClick(document.createEvent("Event"));
+            props.addItem();
           } else {
             props.onSelect(eventKey);
           }
         }}
       >
-        <Row className="clearfix">
-          <Col sm={12}>
-            <Nav bsStyle="tabs">
-              {props.items &&
-                props.items.map((p, index) => (
-                  <TabbedArrayItemHeader
-                    key={index}
-                    {...p}
-                  />
-                ))}
-              {props.canAdd && (
-                <NavItem
-                  eventKey="+"
-                  disabled={props.disabled || props.readonly}
-                >
-                  +
-                </NavItem>
-              )}
-            </Nav>
-          </Col>
-          <Col sm={12}>
-            <Tab.Content animation>
-              {props.items &&
-                props.items.map((p, index) => (
-                  <TabbedArrayItemContent
-                    key={index}
-                    {...p}
-                  />
-                ))}
-              <Tab.Pane eventKey="+">Adding...</Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Nav variant="pills">
+            {props.items &&
+              props.items.map((p, index) => (
+                <Nav.Item key={index}>
+                  <Nav.Link eventKey={index}>{p.tabName}&nbsp;&nbsp;</Nav.Link>
+                </Nav.Item>
+              ))}
+          </Nav>
+
+          <Dropdown drop="left">
+            <Dropdown.Toggle variant="secondary">More</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item
+                disabled={props.disabled || props.readonly}
+                onClick={props.addItem}
+                eventKey={props.items.length}
+              >
+                <FontAwesomeIcon icon={faFile} />
+                New Circuit
+              </Dropdown.Item>
+              <Dropdown.Item
+                disabled={props.disabled || props.readonly}
+                onClick={event => {
+                  props.duplicateIndex(Number(props.activeKey));
+                }}
+              >
+                <FontAwesomeIcon icon={faClone} />
+                Duplicate Circuit
+              </Dropdown.Item>
+              <Dropdown.Item
+                disabled={props.disabled || props.readonly}
+                eventKey={
+                  props.items.length > 1 ? Math.max(props.activeKey - 1, 0) : -1
+                }
+                onClick={event => {
+                  props.dropIndex(Number(props.activeKey));
+                }}
+              >
+                <FontAwesomeIcon icon={faTrashAlt} />
+                Delete Circuit
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+
+        <Tab.Content>
+          {props.items &&
+            props.items.map((p, index) => (
+              <TabbedArrayItemContent key={index} {...p} />
+            ))}
+          {props.items.length == 0 && (
+            <TabbedArrayItemContent key={-1} index={-1}>
+              No elements. Click 'More' to create a new one.
+            </TabbedArrayItemContent>
+          )}
+          <Tab.Pane eventKey="+">Adding...</Tab.Pane>
+        </Tab.Content>
       </Tab.Container>
     </fieldset>
   );
@@ -220,6 +163,19 @@ export class TabbedArrayField extends React.Component {
   get itemTitle() {
     const { schema } = this.props;
     return schema.items.title || schema.items.description || "Item";
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.state.activeKey != -1 && this.props.formData.length == 0) {
+      // when no elements in data key should be null
+      this.setState({ activeKey: -1 });
+    } else if (
+      this.props.formData.length &&
+      this.state.activeKey >= this.props.formData.length
+    ) {
+      // invalid activeKey after tab remove - update it
+      this.setState({ activeKey: 0 });
+    }
   }
 
   isItemRequired(itemSchema) {
@@ -247,8 +203,7 @@ export class TabbedArrayField extends React.Component {
     return addable;
   }
 
-  onAddClick = event => {
-    event.preventDefault();
+  addItem = () => {
     const { schema, formData, registry = getDefaultRegistry() } = this.props;
     const { definitions } = registry;
     let itemSchema = schema.items;
@@ -260,69 +215,44 @@ export class TabbedArrayField extends React.Component {
       getDefaultFormState(itemSchema, undefined, definitions)
     ]);
 
-    this.onSelect(formData.length);
+    //this.onSelect(formData.length);
   };
 
-  onDropIndexClick = index => {
-    return event => {
-      if (event) {
-        event.preventDefault();
-      }
-      const { formData, onChange } = this.props;
-      // refs #195: revalidate to ensure properly reindexing errors
-      let newErrorSchema;
-      if (this.props.errorSchema) {
-        newErrorSchema = {};
-        const errorSchema = this.props.errorSchema;
-        for (let i in errorSchema) {
-          i = parseInt(i);
-          if (i < index) {
-            newErrorSchema[i] = errorSchema[i];
-          } else if (i > index) {
-            newErrorSchema[i - 1] = errorSchema[i];
-          }
-        }
-      }
-      onChange(formData.filter((_, i) => i !== index), newErrorSchema);
-    };
+  duplicateIndex = index => {
+    const { formData, onChange } = this.props;
+
+    if (formData.length > 0) {
+      var newItem = Object.assign({}, formData[index]);
+      newItem.name = newItem.name + "_copy";
+
+      var newFormData = formData
+        .slice(0, index + 1)
+        .concat([newItem], formData.slice(index + 1));
+
+      onChange(newFormData);
+      this.onSelect(index + 1);
+    }
   };
 
-  onReorderClick = (index, newIndex) => {
-    return event => {
-      if (event) {
-        event.preventDefault();
-        event.target.blur();
-      }
-      const { formData, onChange } = this.props;
-      let newErrorSchema;
-      if (this.props.errorSchema) {
-        newErrorSchema = {};
-        const errorSchema = this.props.errorSchema;
-        for (let i in errorSchema) {
-          if (i == index) {
-            newErrorSchema[newIndex] = errorSchema[index];
-          } else if (i == newIndex) {
-            newErrorSchema[index] = errorSchema[newIndex];
-          } else {
-            newErrorSchema[i] = errorSchema[i];
-          }
+  dropIndex = index => {
+    const { formData, onChange } = this.props;
+    // refs #195: revalidate to ensure properly reindexing errors
+    let newErrorSchema;
+    if (this.props.errorSchema) {
+      newErrorSchema = {};
+      const errorSchema = this.props.errorSchema;
+      for (let i in errorSchema) {
+        i = parseInt(i);
+        if (i < index) {
+          newErrorSchema[i] = errorSchema[i];
+        } else if (i > index) {
+          newErrorSchema[i - 1] = errorSchema[i];
         }
       }
-      onChange(
-        formData.map((item, i) => {
-          // i is string, index and newIndex are numbers,
-          // so using "==" to compare
-          if (i == newIndex) {
-            return formData[index];
-          } else if (i == index) {
-            return formData[newIndex];
-          } else {
-            return item;
-          }
-        }),
-        newErrorSchema
-      );
-    };
+    }
+    const newFormData = formData.filter((_, i) => i !== index);
+
+    onChange(newFormData, newErrorSchema);
   };
 
   onChangeForIndex = index => {
@@ -344,19 +274,16 @@ export class TabbedArrayField extends React.Component {
       );
     };
   };
-
-  onSelectChange = value => {
-    this.props.onChange(value);
-  };
-
   constructor(props) {
     super(props);
 
     this.state = { activeKey: 0 };
+    this.dropIndex = this.dropIndex.bind(this);
+    this.duplicateIndex = this.duplicateIndex.bind(this);
   }
 
   onSelect = activeKey => {
-    this.setState({ activeKey });
+    if (activeKey != null) this.setState({ activeKey });
   };
 
   render() {
@@ -414,7 +341,9 @@ export class TabbedArrayField extends React.Component {
       disabled,
       idSchema,
       uiSchema,
-      onAddClick: this.onAddClick,
+      addItem: this.addItem,
+      dropIndex: this.dropIndex,
+      duplicateIndex: this.duplicateIndex,
       readonly,
       required,
       schema,
@@ -494,8 +423,6 @@ export class TabbedArrayField extends React.Component {
       hasToolbar: has.toolbar,
       hasRemove: has.remove,
       index,
-      onDropIndexClick: this.onDropIndexClick,
-      onReorderClick: this.onReorderClick,
       readonly,
       tabName: tabName
     };

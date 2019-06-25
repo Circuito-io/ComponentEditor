@@ -35,22 +35,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Thermistor_1",
           "part": "Thermistor"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.con1",
-          "to": "r1.con0"
+          "from": "Thermistor_1.con1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "VCC"
+        },
+        {
+          "from": "Thermistor_1.con1",
+          "to": "con1"
+        },
+        {
+          "from": "Thermistor_1.con0",
+          "to": "con0"
         }
       ],
       "ports": [
@@ -63,7 +71,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -76,7 +85,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -89,11 +99,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -110,22 +121,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Thermistor_1",
           "part": "Thermistor"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.con1",
-          "to": "r1.con0"
+          "from": "Thermistor_1.con1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "VCC"
+        },
+        {
+          "from": "Thermistor_1.con1",
+          "to": "con1"
+        },
+        {
+          "from": "Thermistor_1.con0",
+          "to": "con0"
         }
       ],
       "ports": [
@@ -138,7 +157,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -151,7 +171,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -164,11 +185,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }

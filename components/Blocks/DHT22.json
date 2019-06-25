@@ -35,22 +35,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "DHT22_1",
           "part": "DHT22"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.DATA",
-          "to": "r1.con0"
+          "from": "DHT22_1.DATA",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.VDD",
-          "to": "r1.con1"
+          "from": "DHT22_1.VDD",
+          "to": "Res10KO_1.con1"
+        },
+        {
+          "from": "DHT22_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "DHT22_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "DHT22_1.DATA",
+          "to": "DATA"
         }
       ],
       "ports": [
@@ -63,7 +75,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,7 +88,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -88,12 +102,13 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -111,22 +126,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "DHT22_1",
           "part": "DHT22"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.DATA",
-          "to": "r1.con0"
+          "from": "DHT22_1.DATA",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.VDD",
-          "to": "r1.con1"
+          "from": "DHT22_1.VDD",
+          "to": "Res10KO_1.con1"
+        },
+        {
+          "from": "DHT22_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "DHT22_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "DHT22_1.DATA",
+          "to": "DATA"
         }
       ],
       "ports": [
@@ -139,7 +166,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -151,7 +179,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -164,12 +193,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRProximity_1",
           "part": "IRProximity"
         }
       ],
@@ -55,7 +55,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -68,7 +69,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -80,11 +82,26 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "IRProximity_1.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "IRProximity_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "IRProximity_1.Vcc",
+          "to": "Vcc"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

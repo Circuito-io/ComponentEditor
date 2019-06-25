@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickPSP_1",
           "part": "JoystickPSP"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,7 +76,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -88,12 +91,31 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "JoystickPSP_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "JoystickPSP_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "JoystickPSP_1.X",
+          "to": "X"
+        },
+        {
+          "from": "JoystickPSP_1.Y",
+          "to": "Y"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -110,7 +132,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickPSP_1",
           "part": "JoystickPSP"
         }
       ],
@@ -124,7 +146,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -136,7 +159,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -149,7 +173,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -163,12 +188,31 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "JoystickPSP_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "JoystickPSP_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "JoystickPSP_1.X",
+          "to": "X"
+        },
+        {
+          "from": "JoystickPSP_1.Y",
+          "to": "Y"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

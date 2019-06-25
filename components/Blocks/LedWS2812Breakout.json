@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedWS2812Breakout_1",
           "part": "LedWS2812Breakout"
         }
       ],
@@ -60,7 +60,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -79,7 +80,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -93,29 +95,62 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
           "name": "GND_O",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "5v_O",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "DO",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LedWS2812Breakout_1.5v_I",
+          "to": "5v_I"
+        },
+        {
+          "from": "LedWS2812Breakout_1.DI",
+          "to": "DI"
+        },
+        {
+          "from": "LedWS2812Breakout_1.GND_I",
+          "to": "GND_I"
+        },
+        {
+          "from": "LedWS2812Breakout_1.GND_O",
+          "to": "GND_O"
+        },
+        {
+          "from": "LedWS2812Breakout_1.5v_O",
+          "to": "5v_O"
+        },
+        {
+          "from": "LedWS2812Breakout_1.DO",
+          "to": "DO"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

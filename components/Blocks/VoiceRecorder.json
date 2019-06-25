@@ -39,22 +39,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "VoiceRecorder_1",
           "part": "VoiceRecorder"
         },
         {
-          "name": "SpeakerStereo3W",
+          "name": "SpeakerStereo3W_1",
           "part": "SpeakerStereo3W"
         }
       ],
       "wires": [
         {
-          "from": "this.SPK_0",
-          "to": "SpeakerStereo3W.NEG"
+          "from": "VoiceRecorder_1.SPK_0",
+          "to": "SpeakerStereo3W_1.NEG"
         },
         {
-          "from": "this.SPK_1",
-          "to": "SpeakerStereo3W.POS"
+          "from": "VoiceRecorder_1.SPK_1",
+          "to": "SpeakerStereo3W_1.POS"
+        },
+        {
+          "from": "VoiceRecorder_1.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "VoiceRecorder_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "VoiceRecorder_1.Sig",
+          "to": "Sig"
         }
       ],
       "ports": [
@@ -67,7 +79,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -79,7 +92,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -92,12 +106,13 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

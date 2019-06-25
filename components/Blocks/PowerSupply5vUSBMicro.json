@@ -25,7 +25,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerMicro_1",
           "part": "USBPowerMicro"
         }
       ],
@@ -39,7 +39,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 2500
+            "providesLoad": 2500,
+            "portType": "provides"
           }
         },
         {
@@ -50,7 +51,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -62,11 +64,18 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "USBPowerMicro_1.USB_MICRO",
+          "to": "USB_MICRO"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

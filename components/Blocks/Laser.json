@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Laser_1",
           "part": "Laser"
         }
       ],
@@ -60,7 +60,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -73,11 +74,22 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Laser_1.S",
+          "to": "S"
+        },
+        {
+          "from": "Laser_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

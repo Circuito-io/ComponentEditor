@@ -5,23 +5,22 @@
   ],
   "blockId": "8300591",
   "app": {
-    "appName": "ATTiny85 IC",
-    "image": "http://res.cloudinary.com/circuito/image/upload/tgqgxog4euhcmarnn497",
+    "visible": true,
     "numericName": "",
     "shortName": "",
+    "appName": "ATTiny85 IC",
+    "image": "http://res.cloudinary.com/circuito/image/upload/tgqgxog4euhcmarnn497",
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>The Atmel 8-bit AVR RISC-based microcontroller combines 8 kB ISP flash memory with read-while-write capabilities, 1 kB EEPROM, 512 Bytes SRAM, 6 general purpose I/O lines, 32 general purpose working registers, two flexible timer/counters with compare modes, internal and external interrupts, SPI serial port, 4-channel 10-bit A/D converter</p>",
-    "visible": true
+    "desc": "<p>The Atmel 8-bit AVR RISC-based microcontroller combines 8 kB ISP flash memory with read-while-write capabilities, 1 kB EEPROM, 512 Bytes SRAM, 6 general purpose I/O lines, 32 general purpose working registers, two flexible timer/counters with compare modes, internal and external interrupts, SPI serial port, 4-channel 10-bit A/D converter.</p>\n\n<br><br><a href=https://www.circuito.io/blog/attiny85-bootloader/ class=\"text-app-info\" target=\"_blank\">See our tutorial for burning the bootloader & code</a></p>"
   },
-  "notes": [
-    "https://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256",
-    "http://highlowtech.org/?p=1695",
-    "http://digistump.com/wiki/digispark/tutorials/connecting",
-    "http://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf"
-  ],
+  "notes": "References used:\nhttps://learn.sparkfun.com/tutorials/tiny-avr-programmer-hookup-guide/?_ga=2.25883581.1299652423.1540716311-2111944866.1530523256\nhttp://highlowtech.org/?p=1695\nhttp://digistump.com/wiki/digispark/tutorials/connecting\nhttp://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf",
+  "altComp": {
+    "cost": 1000,
+    "block": "ArduinoUno"
+  },
   "circuits": [
     {
       "name": "3v3",
@@ -30,7 +29,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ATTiny85_1",
           "part": "ATTiny85"
         }
       ],
@@ -65,7 +64,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -94,7 +94,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -131,7 +132,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -160,7 +162,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -189,7 +192,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -200,7 +204,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -213,7 +218,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "requiresLoad": 200
+            "requiresLoad": 200,
+            "portType": "requires"
           }
         },
         {
@@ -224,7 +230,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -236,22 +243,22 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 512
+            "providesLoad": 512,
+            "portType": "provides"
           }
         }
       ],
-      "priority": 1,
       "requiredBlocks": [
         {
           "cost": 10,
           "blocks": [
-            "Reg3.3v"
+            "Reg3v3"
           ]
         },
         {
           "cost": 20,
           "blocks": [
-            "Reg3.3v",
+            "Reg3v3",
             "Reg5v"
           ]
         },
@@ -261,7 +268,38 @@
             "StepUp5v"
           ]
         }
-      ]
+      ],
+      "wires": [
+        {
+          "from": "ATTiny85_1.PB0",
+          "to": "PB0"
+        },
+        {
+          "from": "ATTiny85_1.PB1",
+          "to": "PB1"
+        },
+        {
+          "from": "ATTiny85_1.PB2",
+          "to": "PB2"
+        },
+        {
+          "from": "ATTiny85_1.PB3",
+          "to": "PB3"
+        },
+        {
+          "from": "ATTiny85_1.PB4",
+          "to": "PB4"
+        },
+        {
+          "from": "ATTiny85_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "ATTiny85_1.VCC",
+          "to": "VCC"
+        }
+      ],
+      "cost": 1
     },
     {
       "name": "5v",
@@ -270,7 +308,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ATTiny85_1",
           "part": "ATTiny85"
         }
       ],
@@ -305,7 +343,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -338,7 +377,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -379,7 +419,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -408,7 +449,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -437,7 +479,8 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 20
+            "providesLoad": 20,
+            "portType": "provides"
           }
         },
         {
@@ -448,7 +491,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -461,7 +505,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 200
+            "requiresLoad": 200,
+            "portType": "requires"
           }
         },
         {
@@ -472,7 +517,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -484,11 +530,11 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 512
+            "providesLoad": 512,
+            "portType": "provides"
           }
         }
       ],
-      "priority": 3,
       "requiredBlocks": [
         {
           "cost": 10,
@@ -500,7 +546,7 @@
           "cost": 20,
           "blocks": [
             "Reg5v",
-            "Reg3.3v"
+            "Reg3v3"
           ]
         },
         {
@@ -509,7 +555,38 @@
             "StepUp5v"
           ]
         }
-      ]
+      ],
+      "wires": [
+        {
+          "from": "ATTiny85_1.PB0",
+          "to": "PB0"
+        },
+        {
+          "from": "ATTiny85_1.PB1",
+          "to": "PB1"
+        },
+        {
+          "from": "ATTiny85_1.PB2",
+          "to": "PB2"
+        },
+        {
+          "from": "ATTiny85_1.PB3",
+          "to": "PB3"
+        },
+        {
+          "from": "ATTiny85_1.PB4",
+          "to": "PB4"
+        },
+        {
+          "from": "ATTiny85_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "ATTiny85_1.VCC",
+          "to": "VCC"
+        }
+      ],
+      "cost": 3
     }
   ]
 }

@@ -1,4 +1,4 @@
-const partCategoryEnum = ["output", "input", "support", "power"];
+import * as partSchema from "../../../circuito-schema/part.json";
 
 export function partuiSchema(partsList) {
   return {
@@ -20,12 +20,15 @@ export function partuiSchema(partsList) {
       }
     },
     symbol: {
-      "ui:widget": "imagewidget"
+      "ui:widget": "imagewidget",
+      "ui:options": {
+        svgcreator: true
+      }
     },
     category: {
       "ui:field": "typeahead",
       typeahead: {
-        options: partCategoryEnum,
+        options: partSchema.default.properties.category.items.enum,
         minLength: 0,
         multiple: true
       }
@@ -44,6 +47,9 @@ export function partuiSchema(partsList) {
     },
     bomAux: {
       "ui:field": "typeahead",
+      "ui:options": {
+        forceLabelDisplay: true
+      },
       typeahead: {
         options: partsList,
         minLength: 0,

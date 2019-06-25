@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RelayModule_1",
           "part": "RelayModule"
         }
       ],
@@ -60,7 +60,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -73,7 +74,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -90,11 +92,26 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "RelayModule_1.signal",
+          "to": "signal"
+        },
+        {
+          "from": "RelayModule_1.ground",
+          "to": "ground"
+        },
+        {
+          "from": "RelayModule_1.power",
+          "to": "power"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

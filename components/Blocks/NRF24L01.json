@@ -1,7 +1,7 @@
 {
   "name": "NRF24L01",
   "category": [
-    "input"
+    "input", "connectivity"
   ],
   "blockId": "748665",
   "app": {
@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "NRF24L01_1",
           "part": "NRF24L01"
         }
       ],
@@ -53,7 +53,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -65,7 +66,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -83,7 +85,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -112,7 +115,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -131,7 +135,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -149,7 +154,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -167,11 +173,42 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "NRF24L01_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "NRF24L01_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "NRF24L01_1.CE",
+          "to": "CE"
+        },
+        {
+          "from": "NRF24L01_1.CS",
+          "to": "CS"
+        },
+        {
+          "from": "NRF24L01_1.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "NRF24L01_1.MOSI",
+          "to": "MOSI"
+        },
+        {
+          "from": "NRF24L01_1.MISO",
+          "to": "MISO"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

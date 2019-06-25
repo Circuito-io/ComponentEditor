@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SDMicroSF_1",
           "part": "SDMicroSF"
         }
       ],
@@ -58,7 +58,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -76,7 +77,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -93,7 +95,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -121,7 +124,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -139,7 +143,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -156,7 +161,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -168,11 +174,42 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "SDMicroSF_1.CO",
+          "to": "CO"
+        },
+        {
+          "from": "SDMicroSF_1.DO",
+          "to": "DO"
+        },
+        {
+          "from": "SDMicroSF_1.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "SDMicroSF_1.CS",
+          "to": "CS"
+        },
+        {
+          "from": "SDMicroSF_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "SDMicroSF_1.DI",
+          "to": "DI"
+        },
+        {
+          "from": "SDMicroSF_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

@@ -32,7 +32,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSUltimateADA_1",
           "part": "GPSUltimateADA"
         }
       ],
@@ -52,7 +52,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 25
+            "requiresLoad": 25,
+            "portType": "requires"
           }
         },
         {
@@ -64,7 +65,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +84,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -100,11 +103,30 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "GPSUltimateADA_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "GPSUltimateADA_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "GPSUltimateADA_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "GPSUltimateADA_1.TX",
+          "to": "TX"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "SoftwareSerial",
@@ -127,7 +149,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "GPSUltimateADA_1",
           "part": "GPSUltimateADA"
         }
       ],
@@ -141,7 +163,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -159,7 +182,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 25
+            "requiresLoad": 25,
+            "portType": "requires"
           }
         },
         {
@@ -171,7 +195,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -199,7 +224,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -228,12 +254,31 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 100
+      "wires": [
+        {
+          "from": "GPSUltimateADA_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "GPSUltimateADA_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "GPSUltimateADA_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "GPSUltimateADA_1.TX",
+          "to": "TX"
+        }
+      ],
+      "cost": 100
     }
   ]
 }

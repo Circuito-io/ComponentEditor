@@ -32,34 +32,46 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HCSR04_1",
           "part": "HCSR04"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "r2.con1"
+          "from": "HCSR04_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r2.con0",
-          "to": "r1.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.ECHO",
-          "to": "r1.con0"
+          "from": "HCSR04_1.ECHO",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "Echo"
+        },
+        {
+          "from": "HCSR04_1.TRIG",
+          "to": "TRIG"
+        },
+        {
+          "from": "HCSR04_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "HCSR04_1.GND",
+          "to": "GND"
         }
       ],
       "ports": [
@@ -73,7 +85,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -86,7 +99,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -99,7 +113,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -112,11 +127,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     },
     {
       "name": "5v",
@@ -136,7 +152,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HCSR04_1",
           "part": "HCSR04"
         }
       ],
@@ -151,7 +167,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -164,7 +181,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -177,7 +195,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -190,11 +209,30 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "HCSR04_1.TRIG",
+          "to": "TRIG"
+        },
+        {
+          "from": "HCSR04_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "HCSR04_1.ECHO",
+          "to": "ECHO"
+        },
+        {
+          "from": "HCSR04_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
     },
     {
       "name": "Gemma",
@@ -208,22 +246,38 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HCSR04_1",
           "part": "HCSR04"
         },
         {
-          "name": "Res",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.TRIG",
-          "to": "Res.con0"
+          "from": "HCSR04_1.TRIG",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "this.GND",
-          "to": "Res.con1"
+          "from": "HCSR04_1.GND",
+          "to": "Res1KO_1.con1"
+        },
+        {
+          "from": "HCSR04_1.TRIG",
+          "to": "TRIG"
+        },
+        {
+          "from": "HCSR04_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "HCSR04_1.ECHO",
+          "to": "ECHO"
+        },
+        {
+          "from": "HCSR04_1.GND",
+          "to": "GND"
         }
       ],
       "ports": [
@@ -237,7 +291,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -250,7 +305,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -263,7 +319,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -276,11 +333,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 3
+      "cost": 3
     }
   ]
 }

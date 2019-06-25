@@ -39,34 +39,46 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "DFPlayer_1",
           "part": "DFPlayer"
         },
         {
-          "name": "res",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         },
         {
-          "name": "Speaker",
+          "name": "Speaker05W_1",
           "part": "Speaker05W"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
-          "to": "res.con0"
+          "from": "DFPlayer_1.RX",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "this.SPK_1",
-          "to": "Speaker.POS"
+          "from": "DFPlayer_1.SPK_1",
+          "to": "Speaker05W_1.POS"
         },
         {
-          "from": "this.SPK_2",
-          "to": "Speaker.NEG"
+          "from": "DFPlayer_1.SPK_2",
+          "to": "Speaker05W_1.NEG"
         },
         {
-          "from": "res.con1",
+          "from": "Res1KO_1.con1",
           "to": "Rx"
+        },
+        {
+          "from": "DFPlayer_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "DFPlayer_1.GND-1",
+          "to": "GND-1"
+        },
+        {
+          "from": "DFPlayer_1.TX",
+          "to": "TX"
         }
       ],
       "ports": [
@@ -85,7 +97,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "requiresLoad": 100
+            "requiresLoad": 100,
+            "portType": "requires"
           }
         },
         {
@@ -97,7 +110,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -135,7 +149,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -174,12 +189,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

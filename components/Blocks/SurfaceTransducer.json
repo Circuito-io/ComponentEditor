@@ -40,9 +40,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "SurfaceTransducer",
-          "rotation": 90
+          "name": "SurfaceTransducer_1",
+          "part": "SurfaceTransducer"
         }
       ],
       "ports": [
@@ -61,7 +60,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -74,11 +74,22 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "SurfaceTransducer_1.pos",
+          "to": "pos"
+        },
+        {
+          "from": "SurfaceTransducer_1.neg",
+          "to": "neg"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

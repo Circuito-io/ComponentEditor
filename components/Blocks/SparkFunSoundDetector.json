@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SparkFunSoundDetector_1",
           "part": "SparkFunSoundDetector"
         }
       ],
@@ -60,7 +60,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -79,7 +80,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -98,7 +100,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -111,7 +114,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -128,11 +132,34 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "SparkFunSoundDetector_1.GATE",
+          "to": "GATE"
+        },
+        {
+          "from": "SparkFunSoundDetector_1.AUDIO",
+          "to": "AUDIO"
+        },
+        {
+          "from": "SparkFunSoundDetector_1.ENVELOPE",
+          "to": "ENVELOPE"
+        },
+        {
+          "from": "SparkFunSoundDetector_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "SparkFunSoundDetector_1.VCC",
+          "to": "VCC"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

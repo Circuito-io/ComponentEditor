@@ -9,7 +9,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "LogicLevelConverter_1",
           "part": "LogicLevelConverter"
         }
       ],
@@ -23,7 +23,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -41,7 +42,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -53,7 +55,8 @@
                 "spec": "RX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -65,7 +68,8 @@
                 "spec": "TX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -77,7 +81,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -89,7 +94,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -107,11 +113,42 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LogicLevelConverter_1.LV",
+          "to": "LV"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV1",
+          "to": "HV1"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV1",
+          "to": "LV1"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV2",
+          "to": "LV2"
+        },
+        {
+          "from": "LogicLevelConverter_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV",
+          "to": "HV"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV2",
+          "to": "HV2"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

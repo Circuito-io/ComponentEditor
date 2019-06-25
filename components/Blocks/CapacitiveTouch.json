@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouch_1",
           "part": "CapacitiveTouch"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -66,7 +67,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -84,12 +86,27 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "CapacitiveTouch_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "CapacitiveTouch_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "CapacitiveTouch_1.SIG",
+          "to": "SIG"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

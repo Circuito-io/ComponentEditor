@@ -34,9 +34,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "AdafruitMiniThermalPrinter",
-          "rotation": 180
+          "name": "AdafruitMiniThermalPrinter_1",
+          "part": "AdafruitMiniThermalPrinter"
         }
       ],
       "ports": [
@@ -49,7 +48,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +62,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -76,7 +77,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 2000
+            "requiresLoad": 2000,
+            "portType": "requires"
           }
         },
         {
@@ -89,7 +91,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -102,7 +105,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
@@ -120,7 +124,29 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "AdafruitMiniThermalPrinter_1.GND_COM",
+          "to": "GND_COM"
+        },
+        {
+          "from": "AdafruitMiniThermalPrinter_1.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "AdafruitMiniThermalPrinter_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "AdafruitMiniThermalPrinter_1.DOUT",
+          "to": "DOUT"
+        },
+        {
+          "from": "AdafruitMiniThermalPrinter_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

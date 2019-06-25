@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickSF_1",
           "part": "JoystickSF"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +63,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -75,7 +77,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -88,7 +91,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -102,12 +106,35 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "JoystickSF_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "JoystickSF_1.SEL",
+          "to": "SEL"
+        },
+        {
+          "from": "JoystickSF_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "JoystickSF_1.VERT",
+          "to": "VERT"
+        },
+        {
+          "from": "JoystickSF_1.HORZ",
+          "to": "HORZ"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -124,7 +151,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "JoystickSF_1",
           "part": "JoystickSF"
         }
       ],
@@ -139,7 +166,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -152,7 +180,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -164,7 +193,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -177,7 +207,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -191,12 +222,35 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "JoystickSF_1.SEL",
+          "to": "SEL"
+        },
+        {
+          "from": "JoystickSF_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "JoystickSF_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "JoystickSF_1.VERT",
+          "to": "VERT"
+        },
+        {
+          "from": "JoystickSF_1.HORZ",
+          "to": "HORZ"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

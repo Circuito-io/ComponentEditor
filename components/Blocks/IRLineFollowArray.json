@@ -37,7 +37,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRLineFollowArray_1",
           "part": "IRLineFollowArray"
         }
       ],
@@ -56,7 +56,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +74,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,7 +87,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -97,11 +100,30 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "IRLineFollowArray_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "IRLineFollowArray_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "IRLineFollowArray_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "IRLineFollowArray_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

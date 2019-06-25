@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BME280SF_1",
           "part": "BME280SF"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -66,7 +67,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -84,7 +86,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -102,11 +105,30 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "BME280SF_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BME280SF_1.3.3V",
+          "to": "3.3V"
+        },
+        {
+          "from": "BME280SF_1.SDI_SDA",
+          "to": "SDI_SDA"
+        },
+        {
+          "from": "BME280SF_1.SCK_SCL",
+          "to": "SCK_SCL"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

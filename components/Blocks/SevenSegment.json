@@ -13,7 +13,7 @@
       "verified": true,
       "solder": true
     },
-    "desc": "<p>This 7 segment display is able to do show 4 digits, where each one can be controlled separately. It can display numbers, letters and some special characters.<br><strong>Requires</strong>: Soldering of 10 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
+    "desc": "<p>This Seven segment display is able to do show 4 digits, where each one can be controlled separately. It can display numbers, letters and some special characters.<br><strong>Requires</strong>: Soldering of 10 male header pins to fit onto a breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/Arduino-Project-in-5-Minutes/\">Arduino Project in 5 Minutes</a>.</p>\n",
     "visible": true
   },
   "circuits": [
@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegment_1",
           "part": "SevenSegment"
         }
       ],
@@ -52,7 +52,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -69,7 +70,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +84,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 131
+            "requiresLoad": 131,
+            "portType": "requires"
           }
         },
         {
@@ -100,12 +103,27 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "SevenSegment_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "SevenSegment_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "SevenSegment_1.RX",
+          "to": "RX"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "I2C",
@@ -117,7 +135,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegment_1",
           "part": "SevenSegment"
         }
       ],
@@ -131,7 +149,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -143,7 +162,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -156,7 +176,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 131
+            "requiresLoad": 131,
+            "portType": "requires"
           }
         },
         {
@@ -168,7 +189,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -180,11 +202,30 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "SevenSegment_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "SevenSegment_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "SevenSegment_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "SevenSegment_1.SCL",
+          "to": "SCL"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

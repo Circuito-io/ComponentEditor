@@ -34,9 +34,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LEDBarI2C",
-          "rotation": 180
+          "name": "LEDBarI2C_1",
+          "part": "LEDBarI2C"
         }
       ],
       "ports": [
@@ -49,7 +48,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +61,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +74,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,11 +87,30 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LEDBarI2C_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "LEDBarI2C_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LEDBarI2C_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "LEDBarI2C_1.SCL",
+          "to": "SCL"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -105,9 +126,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LEDBarI2C",
-          "rotation": 180
+          "name": "LEDBarI2C_1",
+          "part": "LEDBarI2C"
         }
       ],
       "ports": [
@@ -120,7 +140,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -132,7 +153,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -144,7 +166,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -156,11 +179,30 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "LEDBarI2C_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "LEDBarI2C_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LEDBarI2C_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "LEDBarI2C_1.SCL",
+          "to": "SCL"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

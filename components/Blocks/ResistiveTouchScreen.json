@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ResistiveTouchScreen_1",
           "part": "ResistiveTouchScreen"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +75,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,11 +88,30 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "ResistiveTouchScreen_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "ResistiveTouchScreen_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "ResistiveTouchScreen_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "ResistiveTouchScreen_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -106,7 +128,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ResistiveTouchScreen_1",
           "part": "ResistiveTouchScreen"
         }
       ],
@@ -120,7 +142,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -132,7 +155,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -144,7 +168,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -156,11 +181,30 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "ResistiveTouchScreen_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "ResistiveTouchScreen_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "ResistiveTouchScreen_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "ResistiveTouchScreen_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

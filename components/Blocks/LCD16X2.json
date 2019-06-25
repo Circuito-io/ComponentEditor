@@ -39,38 +39,78 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LCD16X2_1",
           "part": "LCD16X2"
         },
         {
-          "name": "Res1",
+          "name": "Res220O_1",
           "part": "Res220O"
         },
         {
-          "name": "Pot",
+          "name": "Potentiometer_1",
           "part": "Potentiometer"
         }
       ],
       "wires": [
         {
-          "from": "this.A",
-          "to": "Res1.con1"
+          "from": "LCD16X2_1.A",
+          "to": "Res220O_1.con1"
         },
         {
-          "from": "this.VO",
-          "to": "Pot.Sig"
+          "from": "LCD16X2_1.VO",
+          "to": "Potentiometer_1.Sig"
         },
         {
-          "from": "Res1.con0",
+          "from": "Res220O_1.con0",
           "to": "a"
         },
         {
-          "from": "Pot.0",
+          "from": "Potentiometer_1.0",
           "to": "PotGND"
         },
         {
-          "from": "Pot.Vin",
+          "from": "Potentiometer_1.Vin",
           "to": "PotVCC"
+        },
+        {
+          "from": "LCD16X2_1.VSS",
+          "to": "VSS"
+        },
+        {
+          "from": "LCD16X2_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "LCD16X2_1.RS",
+          "to": "RS"
+        },
+        {
+          "from": "LCD16X2_1.R_W",
+          "to": "R_W"
+        },
+        {
+          "from": "LCD16X2_1.E",
+          "to": "E"
+        },
+        {
+          "from": "LCD16X2_1.DB4",
+          "to": "DB4"
+        },
+        {
+          "from": "LCD16X2_1.DB5",
+          "to": "DB5"
+        },
+        {
+          "from": "LCD16X2_1.DB6",
+          "to": "DB6"
+        },
+        {
+          "from": "LCD16X2_1.DB7",
+          "to": "DB7"
+        },
+        {
+          "from": "LCD16X2_1.K",
+          "to": "K"
         }
       ],
       "ports": [
@@ -88,7 +128,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -100,7 +141,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -112,7 +154,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -129,7 +172,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -147,7 +191,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -160,7 +205,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -178,7 +224,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -197,7 +244,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -216,7 +264,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -235,7 +284,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -254,7 +304,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -272,7 +323,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -284,11 +336,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

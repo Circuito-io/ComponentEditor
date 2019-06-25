@@ -1,49 +1,40 @@
 import React from "react";
-import { Well, Tab, Row, Col, Nav, NavItem, Button } from "react-bootstrap";
+import { Tab, Card, Nav } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import {
   orderProperties,
   retrieveSchema,
-  getDefaultRegistry,
-  getUiOptions
+  getDefaultRegistry
 } from "react-jsonschema-form/lib/utils";
 
 function TabbedObjectFieldTemplate(props) {
-  const getTabsProperties = function getTabsProperties() {
-    const { formData, schema, uiSchema } = props;
+  const { uiSchema } = props;
 
-    var tabsSetting;
-    if (uiSchema["ui:options"] && uiSchema["ui:options"]["tabs"])
-      tabsSetting = uiSchema["ui:options"]["tabs"];
-    else tabsSetting = {};
+  var tabsSettings =
+    (uiSchema["ui:options"] && uiSchema["ui:options"]["tabs"]) || {};
 
-    var propsToTabs = {};
+  var tabsNames = tabsSettings.map(tabSetting => tabSetting.name);
 
-    Object.keys(tabsSetting).map(tabName => {
-      tabsSetting[tabName].map(prop => {
-        propsToTabs[prop] = tabName;
-      });
-    });
+  var propsToTabs = {};
 
-    var tabsProperties = {};
+  tabsSettings.forEach(tabSetting =>
+    tabSetting.props.forEach(prop => (propsToTabs[prop] = tabSetting.name))
+  );
 
-    props.properties.map(prop => {
-      var targetTab = propsToTabs[prop.name];
+  var tabsProperties = {};
 
-      if (targetTab == null) {
-        targetTab = "Undefined Tab";
-      }
+  props.properties.map(prop => {
+    var targetTab = propsToTabs[prop.name];
 
-      if (!(targetTab in tabsProperties)) tabsProperties[targetTab] = [];
+    if (targetTab == null) {
+      targetTab = "Undefined Tab";
+    }
 
-      tabsProperties[targetTab].push(prop);
-    });
+    if (!(targetTab in tabsProperties)) tabsProperties[targetTab] = [];
 
-    return tabsProperties;
-  };
-
-  const tabsProperties = getTabsProperties();
+    tabsProperties[targetTab].push(prop);
+  });
 
   const { TitleField, DescriptionField } = props;
   return (
@@ -56,7 +47,6 @@ function TabbedObjectFieldTemplate(props) {
           formContext={props.formContext}
         />
       )}
-
       {props.description && (
         <DescriptionField
           id={`${props.idSchema.$id}__description`}
@@ -64,36 +54,38 @@ function TabbedObjectFieldTemplate(props) {
           formContext={props.formContext}
         />
       )}
-
-      <Well>
-        <Tab.Container
-          id={`${props.idSchema.$id}__tabs`}
-          defaultActiveKey={Object.keys(tabsProperties)[0]}
-        >
-          <Row className="clearfix">
-            <Col sm={2}>
-              <Nav bsStyle="pills" stacked>
-                {Object.keys(tabsProperties).map((tabName, index) => (
-                  <NavItem eventKey={`${tabName}`} key={index}>
-                    {tabName}
-                  </NavItem>
-                ))}
-              </Nav>
-            </Col>
-            <Col sm={10}>
-              <Well>
-                <Tab.Content animation>
-                  {Object.keys(tabsProperties).map((tabName, index) => (
-                    <Tab.Pane eventKey={`${tabName}`} key={index}>
-                      {tabsProperties[tabName].map(prop => prop.content)}
-                    </Tab.Pane>
-                  ))}
-                </Tab.Content>
-              </Well>
-            </Col>
-          </Row>
-        </Tab.Container>
-      </Well>
+      <Tab.Container defaultActiveKey={tabsNames[0]}>
+        <Card style={{ "boxShadow": "unset" }}>
+          <Card.Header>
+            <Nav justify variant="pills">
+              {tabsNames.map((tabName, index) => (
+                <Nav.Item key={index}>
+                  <Nav.Link eventKey={tabName}>{tabName}</Nav.Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+          </Card.Header>
+          <Card.Body>
+            <Tab.Content>
+              {tabsNames.map((tabName, index) => (
+                <Tab.Pane eventKey={tabName} key={index}>
+                  {tabsProperties[tabName].map(prop => prop.content)}
+                </Tab.Pane>
+              ))}
+            </Tab.Content>
+          </Card.Body>
+          {/* <Tabs
+            id={`${props.idSchema.$id}__tabs`}
+            defaultActiveKey={tabsNames[0]}
+          >
+            {tabsNames.map((tabName, index) => (
+              <Tab eventKey={tabName} title={tabName}>
+                {tabsProperties[tabName].map(prop => prop.content)}
+              </Tab>
+            ))}
+          </Tabs> */}
+        </Card>
+      </Tab.Container>
     </fieldset>
   );
 }

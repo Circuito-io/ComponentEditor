@@ -35,22 +35,38 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PushButtonArcade_1",
           "part": "PushButtonArcade"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.BUTTON_SIG",
-          "to": "r1.con1"
+          "from": "PushButtonArcade_1.BUTTON_SIG",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res10KO_1.con0",
           "to": "0"
+        },
+        {
+          "from": "PushButtonArcade_1.BUTTON_SIG",
+          "to": "BUTTON_SIG"
+        },
+        {
+          "from": "PushButtonArcade_1.BUTTON_VCC",
+          "to": "BUTTON_VCC"
+        },
+        {
+          "from": "PushButtonArcade_1.LED_VCC",
+          "to": "LED_VCC"
+        },
+        {
+          "from": "PushButtonArcade_1.LED_GND",
+          "to": "LED_GND"
         }
       ],
       "ports": [
@@ -63,7 +79,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -76,7 +93,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -89,7 +107,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -107,7 +126,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -120,11 +140,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

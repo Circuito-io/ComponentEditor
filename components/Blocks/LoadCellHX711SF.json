@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LoadCellHX711SF_1",
           "part": "LoadCellHX711SF"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,7 +76,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -88,7 +91,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -101,11 +105,34 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LoadCellHX711SF_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "LoadCellHX711SF_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "LoadCellHX711SF_1.DAT",
+          "to": "DAT"
+        },
+        {
+          "from": "LoadCellHX711SF_1.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "LoadCellHX711SF_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -123,7 +150,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LoadCellHX711SF_1",
           "part": "LoadCellHX711SF"
         }
       ],
@@ -137,7 +164,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -149,7 +177,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -162,7 +191,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -176,7 +206,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -189,11 +220,34 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "LoadCellHX711SF_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "LoadCellHX711SF_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "LoadCellHX711SF_1.DAT",
+          "to": "DAT"
+        },
+        {
+          "from": "LoadCellHX711SF_1.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "LoadCellHX711SF_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

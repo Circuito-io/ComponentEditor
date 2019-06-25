@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouchToggle_1",
           "part": "CapacitiveTouchToggle"
         }
       ],
@@ -50,7 +50,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -63,7 +64,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,11 +77,26 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "CapacitiveTouchToggle_1.OUT",
+          "to": "OUT"
+        },
+        {
+          "from": "CapacitiveTouchToggle_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "CapacitiveTouchToggle_1.VDD",
+          "to": "VDD"
+        }
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -97,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CapacitiveTouchToggle_1",
           "part": "CapacitiveTouchToggle"
         }
       ],
@@ -112,7 +129,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -125,7 +143,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -137,11 +156,26 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 2
+      "wires": [
+        {
+          "from": "CapacitiveTouchToggle_1.OUT",
+          "to": "OUT"
+        },
+        {
+          "from": "CapacitiveTouchToggle_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "CapacitiveTouchToggle_1.VDD",
+          "to": "VDD"
+        }
+      ],
+      "cost": 2
     }
   ]
 }

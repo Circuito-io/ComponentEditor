@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Blower12v_1",
           "part": "Blower12v"
         }
       ],
@@ -55,7 +55,8 @@
               }
             ],
             "requiresLoad": 400,
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -69,7 +70,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 400
+            "requiresLoad": 400,
+            "portType": "requires"
           }
         }
       ],
@@ -81,7 +83,17 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Blower12v_1.Coil1",
+          "to": "Coil1"
+        },
+        {
+          "from": "Blower12v_1.Coil2",
+          "to": "Coil2"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

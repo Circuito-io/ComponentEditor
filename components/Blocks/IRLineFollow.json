@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRLineFollow_1",
           "part": "IRLineFollow"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,12 +76,27 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "IRLineFollow_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "IRLineFollow_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "IRLineFollow_1.OUT",
+          "to": "OUT"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -97,34 +114,42 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "IRLineFollow_1",
           "part": "IRLineFollow"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "r2.con1"
+          "from": "IRLineFollow_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r2.con0",
-          "to": "r1.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.OUT",
-          "to": "r1.con0"
+          "from": "IRLineFollow_1.OUT",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "out"
+        },
+        {
+          "from": "IRLineFollow_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "IRLineFollow_1.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [
@@ -137,7 +162,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -149,7 +175,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -162,12 +189,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }

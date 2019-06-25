@@ -23,7 +23,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PowerSupply5v2A_1",
           "part": "PowerSupply5v2A"
         }
       ],
@@ -37,7 +37,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 2000
+            "providesLoad": 2000,
+            "portType": "provides"
           }
         },
         {
@@ -48,7 +49,8 @@
                 "spec": "Barrel",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -61,11 +63,11 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -73,7 +75,14 @@
             "BarrelJack5v"
           ]
         }
-      ]
+      ],
+      "wires": [
+        {
+          "from": "PowerSupply5v2A_1.BARREL_JACK",
+          "to": "BARREL_JACK"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "5A",
@@ -93,7 +102,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PowerSupply5v5A_1",
           "part": "PowerSupply5v5A"
         }
       ],
@@ -107,7 +116,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 5000
+            "providesLoad": 5000,
+            "portType": "provides"
           }
         },
         {
@@ -118,7 +128,8 @@
                 "spec": "Barrel",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -131,11 +142,11 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 5,
       "requiredBlocks": [
         {
           "cost": 1,
@@ -143,7 +154,14 @@
             "BarrelJack5v"
           ]
         }
-      ]
+      ],
+      "wires": [
+        {
+          "from": "PowerSupply5v5A_1.BARREL_JACK",
+          "to": "BARREL_JACK"
+        }
+      ],
+      "cost": 5
     }
   ]
 }

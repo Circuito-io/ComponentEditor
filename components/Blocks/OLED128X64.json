@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "OLED128X64_1",
           "part": "OLED128X64"
         }
       ],
@@ -48,7 +48,8 @@
                 "spec": "MOSI",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -60,7 +61,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +75,8 @@
                 "spec": "SCK",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,7 +88,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -98,7 +102,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -112,7 +117,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -126,12 +132,43 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "OLED128X64_1.Data",
+          "to": "Data"
+        },
+        {
+          "from": "OLED128X64_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "OLED128X64_1.Clk",
+          "to": "Clk"
+        },
+        {
+          "from": "OLED128X64_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "OLED128X64_1.RST",
+          "to": "RST"
+        },
+        {
+          "from": "OLED128X64_1.DC",
+          "to": "DC"
+        },
+        {
+          "from": "OLED128X64_1.CS",
+          "to": "CS"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -147,7 +184,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "OLED128X64_1",
           "part": "OLED128X64"
         }
       ],
@@ -161,7 +198,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -173,7 +211,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -185,7 +224,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -197,7 +237,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -210,7 +251,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -224,7 +266,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -238,12 +281,43 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "OLED128X64_1.Data",
+          "to": "Data"
+        },
+        {
+          "from": "OLED128X64_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "OLED128X64_1.Clk",
+          "to": "Clk"
+        },
+        {
+          "from": "OLED128X64_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "OLED128X64_1.RST",
+          "to": "RST"
+        },
+        {
+          "from": "OLED128X64_1.DC",
+          "to": "DC"
+        },
+        {
+          "from": "OLED128X64_1.CS",
+          "to": "CS"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

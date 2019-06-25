@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BME680_1",
           "part": "BME680"
         }
       ],
@@ -48,7 +48,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -60,7 +61,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -72,7 +74,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -84,11 +87,30 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "BME680_1.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "BME680_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "BME680_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BME680_1.SDI",
+          "to": "SDI"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -105,7 +127,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BME680_1",
           "part": "BME680"
         }
       ],
@@ -119,7 +141,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -131,7 +154,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -143,7 +167,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -155,11 +180,30 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "BME680_1.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "BME680_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "BME680_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BME680_1.SDI",
+          "to": "SDI"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

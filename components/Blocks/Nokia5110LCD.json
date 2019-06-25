@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Nokia5110LCD_1",
           "part": "Nokia5110LCD"
         }
       ],
@@ -58,7 +58,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -77,7 +78,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -89,7 +91,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -107,7 +110,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -119,7 +123,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -137,7 +142,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -156,7 +162,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -170,11 +177,42 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 500
+            "requiresLoad": 500,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Nokia5110LCD_1.CS",
+          "to": "CS"
+        },
+        {
+          "from": "Nokia5110LCD_1.DN",
+          "to": "DN"
+        },
+        {
+          "from": "Nokia5110LCD_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "Nokia5110LCD_1.SCLK",
+          "to": "SCLK"
+        },
+        {
+          "from": "Nokia5110LCD_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "Nokia5110LCD_1.RST",
+          "to": "RST"
+        },
+        {
+          "from": "Nokia5110LCD_1.DC",
+          "to": "DC"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

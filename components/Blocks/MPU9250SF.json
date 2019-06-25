@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPU9250SF_1",
           "part": "MPU9250SF"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -66,7 +67,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -78,7 +80,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -90,7 +93,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
@@ -102,7 +106,25 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "MPU9250SF_1.3v3",
+          "to": "3v3"
+        },
+        {
+          "from": "MPU9250SF_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "MPU9250SF_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "MPU9250SF_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

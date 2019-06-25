@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TSOP38238_1",
           "part": "TSOP38238"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +63,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 227
+            "requiresLoad": 227,
+            "portType": "requires"
           }
         },
         {
@@ -75,7 +77,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -88,11 +91,26 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "TSOP38238_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "TSOP38238_1.Out",
+          "to": "Out"
+        },
+        {
+          "from": "TSOP38238_1.Gnd",
+          "to": "Gnd"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -109,7 +127,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TSOP38238_1",
           "part": "TSOP38238"
         }
       ],
@@ -123,7 +141,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -136,7 +155,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 227
+            "requiresLoad": 227,
+            "portType": "requires"
           }
         },
         {
@@ -149,7 +169,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -162,11 +183,26 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "TSOP38238_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "TSOP38238_1.Out",
+          "to": "Out"
+        },
+        {
+          "from": "TSOP38238_1.Gnd",
+          "to": "Gnd"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

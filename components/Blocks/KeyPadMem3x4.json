@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "KeyPadMem3x4_1",
           "part": "KeyPadMem3x4"
         }
       ],
@@ -58,7 +58,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -77,7 +78,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -96,7 +98,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -115,7 +118,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -134,7 +138,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -153,7 +158,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -172,12 +178,43 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "KeyPadMem3x4_1.row1",
+          "to": "row1"
+        },
+        {
+          "from": "KeyPadMem3x4_1.row2",
+          "to": "row2"
+        },
+        {
+          "from": "KeyPadMem3x4_1.row3",
+          "to": "row3"
+        },
+        {
+          "from": "KeyPadMem3x4_1.row4",
+          "to": "row4"
+        },
+        {
+          "from": "KeyPadMem3x4_1.col1",
+          "to": "col1"
+        },
+        {
+          "from": "KeyPadMem3x4_1.col2",
+          "to": "col2"
+        },
+        {
+          "from": "KeyPadMem3x4_1.col3",
+          "to": "col3"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

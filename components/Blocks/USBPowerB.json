@@ -30,7 +30,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "USBPowerB_1",
           "part": "USBPowerB"
         }
       ],
@@ -44,7 +44,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 400
+            "providesLoad": 400,
+            "portType": "provides"
           }
         },
         {
@@ -55,7 +56,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -67,11 +69,18 @@
                 "spec": "USB_B",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "USBPowerB_1.USB_B",
+          "to": "USB_B"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

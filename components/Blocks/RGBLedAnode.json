@@ -35,46 +35,50 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RGBLedCommonAnode_1",
           "part": "RGBLedCommonAnode"
         },
         {
-          "name": "Res_R",
+          "name": "Res220O_1",
           "part": "Res220O"
         },
         {
-          "name": "Res_G",
+          "name": "Res100O_1",
           "part": "Res100O"
         },
         {
-          "name": "Res_B",
+          "name": "Res100O_2",
           "part": "Res100O"
         }
       ],
       "wires": [
         {
-          "from": "this.R",
-          "to": "Res_R.con0"
+          "from": "RGBLedCommonAnode_1.R",
+          "to": "Res220O_1.con0"
         },
         {
-          "from": "this.G",
-          "to": "Res_G.con0"
+          "from": "RGBLedCommonAnode_1.G",
+          "to": "Res100O_1.con0"
         },
         {
-          "from": "this.B",
-          "to": "Res_B.con0"
+          "from": "RGBLedCommonAnode_1.B",
+          "to": "Res100O_2.con0"
         },
         {
-          "from": "Res_B.con1",
+          "from": "Res100O_2.con1",
           "to": "b"
         },
         {
-          "from": "Res_R.con1",
+          "from": "Res220O_1.con1",
           "to": "r"
         },
         {
-          "from": "Res_G.con1",
+          "from": "Res100O_1.con1",
           "to": "g"
+        },
+        {
+          "from": "RGBLedCommonAnode_1.Vin",
+          "to": "Vin"
         }
       ],
       "ports": [
@@ -88,7 +92,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -102,7 +107,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -116,7 +122,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -129,11 +136,12 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     },
     {
       "name": "3.3v",
@@ -150,46 +158,50 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RGBLedCommonAnode_1",
           "part": "RGBLedCommonAnode"
         },
         {
-          "name": "Res_R",
+          "name": "Res100O_1",
           "part": "Res100O"
         },
         {
-          "name": "Res_G",
+          "name": "Res47O_1",
           "part": "Res47O"
         },
         {
-          "name": "Res_B",
+          "name": "Res47O_2",
           "part": "Res47O"
         }
       ],
       "wires": [
         {
-          "from": "this.R",
-          "to": "Res_R.con0"
+          "from": "RGBLedCommonAnode_1.R",
+          "to": "Res100O_1.con0"
         },
         {
-          "from": "this.G",
-          "to": "Res_G.con0"
+          "from": "RGBLedCommonAnode_1.G",
+          "to": "Res47O_1.con0"
         },
         {
-          "from": "this.B",
-          "to": "Res_B.con0"
+          "from": "RGBLedCommonAnode_1.B",
+          "to": "Res47O_2.con0"
         },
         {
-          "from": "Res_B.con1",
+          "from": "Res47O_2.con1",
           "to": "b"
         },
         {
-          "from": "Res_R.con1",
+          "from": "Res100O_1.con1",
           "to": "r"
         },
         {
-          "from": "Res_G.con1",
+          "from": "Res47O_1.con1",
           "to": "g"
+        },
+        {
+          "from": "RGBLedCommonAnode_1.Vin",
+          "to": "Vin"
         }
       ],
       "ports": [
@@ -203,7 +215,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -217,7 +230,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -231,7 +245,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -244,11 +259,12 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }

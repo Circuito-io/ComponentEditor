@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   app
     .route("/api/blocks")
-    .get(controller.list_all_blocks)
+    .get(controller.list_all_blocks_data)
     .post(controller.create_a_block);
 
   app

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Battery9v_1",
           "part": "Battery9v"
         }
       ],
@@ -54,7 +54,8 @@
                 "voltage": "9v"
               }
             ],
-            "providesLoad": 1000
+            "providesLoad": 1000,
+            "portType": "provides"
           }
         },
         {
@@ -66,7 +67,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -77,11 +79,22 @@
                 "spec": "Battery",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Battery9v_1.pos",
+          "to": "pos"
+        },
+        {
+          "from": "Battery9v_1.neg",
+          "to": "neg"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

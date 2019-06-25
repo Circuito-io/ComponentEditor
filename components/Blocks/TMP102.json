@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TMP102_1",
           "part": "TMP102"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -66,7 +67,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -84,7 +86,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -96,7 +99,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -114,7 +118,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -127,11 +132,34 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 176
+            "requiresLoad": 176,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "TMP102_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "TMP102_1.ADD0",
+          "to": "ADD0"
+        },
+        {
+          "from": "TMP102_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "TMP102_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "TMP102_1.SCL",
+          "to": "SCL"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

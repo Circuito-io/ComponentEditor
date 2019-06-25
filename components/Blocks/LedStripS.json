@@ -40,27 +40,30 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LedStripS",
-          "rotation": 90
+          "name": "LedStripS_1",
+          "part": "LedStripS"
         },
         {
-          "name": "t1",
+          "name": "TNMOSFETFQP_1",
           "part": "TNMOSFETFQP"
         }
       ],
       "wires": [
         {
-          "from": "this.SIG",
-          "to": "t1.D"
+          "from": "LedStripS_1.SIG",
+          "to": "TNMOSFETFQP_1.D"
         },
         {
-          "from": "t1.S",
+          "from": "TNMOSFETFQP_1.S",
           "to": "Gnd"
         },
         {
-          "from": "t1.G",
+          "from": "TNMOSFETFQP_1.G",
           "to": "Sig"
+        },
+        {
+          "from": "LedStripS_1.VDD",
+          "to": "VDD"
         }
       ],
       "ports": [
@@ -74,7 +77,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 1200
+            "requiresLoad": 1200,
+            "portType": "requires"
           }
         },
         {
@@ -86,7 +90,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -104,12 +109,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedStick_1",
           "part": "LedStick"
         }
       ],
@@ -56,7 +56,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 200
+            "requiresLoad": 200,
+            "portType": "requires"
           }
         },
         {
@@ -75,7 +76,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -89,25 +91,32 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
           "name": "+5VA",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "DATAOUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "GNDA",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
@@ -125,7 +134,33 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LedStick_1.+5VB",
+          "to": "+5VB"
+        },
+        {
+          "from": "LedStick_1.DATAIN",
+          "to": "DATAIN"
+        },
+        {
+          "from": "LedStick_1.GNDC",
+          "to": "GNDC"
+        },
+        {
+          "from": "LedStick_1.+5VA",
+          "to": "+5VA"
+        },
+        {
+          "from": "LedStick_1.DATAOUT",
+          "to": "DATAOUT"
+        },
+        {
+          "from": "LedStick_1.GNDA",
+          "to": "GNDA"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

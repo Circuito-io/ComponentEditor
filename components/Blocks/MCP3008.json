@@ -12,7 +12,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "MCP3008_1",
           "part": "MCP3008"
         }
       ],
@@ -26,7 +26,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -38,7 +39,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -50,7 +52,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +65,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,7 +78,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -86,7 +91,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -98,7 +104,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -116,7 +123,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -129,7 +137,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -141,7 +150,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -153,7 +163,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -165,7 +176,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -177,7 +189,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -189,7 +202,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -201,7 +215,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -213,11 +228,78 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "MCP3008_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "MCP3008_1.AGND",
+          "to": "AGND"
+        },
+        {
+          "from": "MCP3008_1.VREF",
+          "to": "VREF"
+        },
+        {
+          "from": "MCP3008_1.DGND",
+          "to": "DGND"
+        },
+        {
+          "from": "MCP3008_1.DOUT",
+          "to": "DOUT"
+        },
+        {
+          "from": "MCP3008_1.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "MCP3008_1.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "MCP3008_1.CS",
+          "to": "CS"
+        },
+        {
+          "from": "MCP3008_1.CH0",
+          "to": "CH0"
+        },
+        {
+          "from": "MCP3008_1.CH1",
+          "to": "CH1"
+        },
+        {
+          "from": "MCP3008_1.CH2",
+          "to": "CH2"
+        },
+        {
+          "from": "MCP3008_1.CH3",
+          "to": "CH3"
+        },
+        {
+          "from": "MCP3008_1.CH4",
+          "to": "CH4"
+        },
+        {
+          "from": "MCP3008_1.CH5",
+          "to": "CH5"
+        },
+        {
+          "from": "MCP3008_1.CH6",
+          "to": "CH6"
+        },
+        {
+          "from": "MCP3008_1.CH7",
+          "to": "CH7"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

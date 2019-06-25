@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RGBGesture_1",
           "part": "RGBGesture"
         }
       ],
@@ -52,7 +52,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -64,7 +65,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -76,7 +78,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -89,7 +92,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -102,7 +106,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -120,7 +125,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
@@ -133,7 +139,33 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "RGBGesture_1.VL",
+          "to": "VL"
+        },
+        {
+          "from": "RGBGesture_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "RGBGesture_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "RGBGesture_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "RGBGesture_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "RGBGesture_1.INT",
+          "to": "INT"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

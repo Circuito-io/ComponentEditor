@@ -35,26 +35,38 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MQ7SF_1",
           "part": "MQ7SF"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.B1",
-          "to": "r1.con0"
+          "from": "MQ7SF_1.B1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.GND",
-          "to": "r1.con1"
+          "from": "MQ7SF_1.GND",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.A1",
-          "to": "this.H1"
+          "from": "MQ7SF_1.A1",
+          "to": "MQ7SF_1.H1"
+        },
+        {
+          "from": "MQ7SF_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "MQ7SF_1.B1",
+          "to": "B1"
+        },
+        {
+          "from": "MQ7SF_1.H1",
+          "to": "H1"
         }
       ],
       "ports": [
@@ -67,7 +79,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -80,7 +93,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -93,11 +107,12 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -115,50 +130,58 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MQ7SF_1",
           "part": "MQ7SF"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "r2",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r3",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.B1",
-          "to": "r1.con0"
+          "from": "MQ7SF_1.B1",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.GND",
-          "to": "r1.con1"
+          "from": "MQ7SF_1.GND",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.A1",
-          "to": "this.H1"
+          "from": "MQ7SF_1.A1",
+          "to": "MQ7SF_1.H1"
         },
         {
-          "from": "this.GND",
-          "to": "r3.con1"
+          "from": "MQ7SF_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r3.con0",
-          "to": "r2.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.B1",
-          "to": "r2.con0"
+          "from": "MQ7SF_1.B1",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r2.con1",
+          "from": "Res470O_1.con1",
           "to": "Aout"
+        },
+        {
+          "from": "MQ7SF_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "MQ7SF_1.H1",
+          "to": "H1"
         }
       ],
       "ports": [
@@ -171,7 +194,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -184,7 +208,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -197,11 +222,12 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }
