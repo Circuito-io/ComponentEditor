@@ -1,0 +1,32 @@
+{
+  "name": "GY521",
+  "category": [
+    "input"
+  ],
+  "blockId": "9142",
+  "app": {
+    "visible": true,
+    "appName": "GY521",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p></p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1563784981/client/download_k2h4i7.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "GY521"
+      ],
+      "parts": [
+        {
+          "name": "ArduinoUno_1",
+          "part": "ArduinoUno"
+        }
+      ]
+    }
+  ]
+}
