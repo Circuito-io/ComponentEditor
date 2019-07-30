@@ -1,0 +1,170 @@
+{
+  "name": "BNO055_Shuttle Board",
+  "category": [
+    "input"
+  ],
+  "blockId": "9570",
+  "app": {
+    "visible": true,
+    "appName": "Bosch Sensortec Absolute Orientation Sensor Shuttle Board for BNO055",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>Shuttle Board for BNO055 Absolute Orientation Sensor</p><p>The BNO055 Shuttle Board comes with a ready-mounted absolute orientation sensor. The sensor pins are easily accessible via a simple socket and the shuttle board footprint enables direct connection to the 0330.AB0.111 Sensor Development Application Board. The BMF055 is a System in Package (SiP), integrating a triaxial 14-bit Accelerometer, a triaxial 16-bit Gyroscope with a range of ±2000 degrees per second, a triaxial Geomagnetic sensor and a 32-bit ultra low-power Cortex M0+ microcontroller from Atmel.</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1564478620/client/Annotation_2019-07-30_105607_yqk7gt.png"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "3.3v",
+      "cost": 0,
+      "coders": [
+        "BNO055_Shuttle Board"
+      ],
+      "parts": [
+        {
+          "name": "BNO055_1",
+          "part": "BNO055"
+        }
+      ],
+      "ports": [
+        {
+          "name": "TX",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "TX",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RX",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "RX",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDD",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VDDIO",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PS0",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PS1",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RESET",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "BNO055_1.RST",
+          "to": "RESET"
+        },
+        {
+          "from": "BNO055_1.VIN",
+          "to": "VDD"
+        },
+        {
+          "from": "BNO055_1.VR",
+          "to": "VDDIO"
+        },
+        {
+          "from": "BNO055_1.SCL",
+          "to": "RX"
+        },
+        {
+          "from": "BNO055_1.SDA",
+          "to": "TX"
+        },
+        {
+          "from": "BNO055_1.PS0",
+          "to": "PS0"
+        },
+        {
+          "from": "BNO055_1.PS1",
+          "to": "BNO055_1.PS1"
+        },
+        {
+          "from": "BNO055_1.GND",
+          "to": "GND"
+        }
+      ]
+    }
+  ]
+}
