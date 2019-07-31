@@ -1,0 +1,81 @@
+{
+  "name": "Optocoupler",
+  "category": [
+    "input"
+  ],
+  "blockId": "7582",
+  "app": {
+    "visible": true,
+    "appName": "Optocoupler",
+    "indicators": {
+      "solder": true
+    },
+    "desc": "<p>Optocoupler is an electronic component that functions as a connector based on optical light. Basically the Optocoupler consists of 2 main parts namely Transmitter which functions as the sender of optical light and Receiver which serves as a detector of light sources.\nEach part of the Optocoupler (Transmitter and Receiver) does not have a direct conductive relationship but is made in such a way in a component package.</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1564546317/client/optocouple_hkgfv7.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "Optocoupler"
+      ],
+      "parts": [
+        {
+          "name": "RotaryEncoderEN11_1",
+          "part": "RotaryEncoderEN11"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "provides",
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "chain": true
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "provides",
+            "provides": [
+              {
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "portType": "provides",
+            "provides": [
+              {
+                "spec": "DigitalOut"
+              }
+            ]
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "GND",
+          "to": "GND"
+        },
+        {
+          "from": "VCC",
+          "to": "VCC"
+        }
+      ],
+      "requiredBlocks": []
+    }
+  ]
+}
