@@ -1,36 +1,28 @@
 {
   "name": "SIM800L",
   "category": [
-    "input", "connectivity"
+    "input",
+    "connectivity"
   ],
   "blockId": "316349",
   "app": {
-    "appName": "QuadBand GPRS-GSM SIM800L",
-    "image": "http://res.cloudinary.com/circuito/image/upload/kfv2ydvhe4yixh0ss38g",
+    "visible": true,
     "numericName": "SIM800L",
     "shortName": "GPRS-GSM",
+    "appName": "QuadBand GPRS-GSM SIM800L",
+    "image": "http://res.cloudinary.com/circuito/image/upload/kfv2ydvhe4yixh0ss38g",
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>SIM800L is a small quad-band GSM / GPRS module, equipped with quad-band antenna. Insert a valid SIM card and you can use it for voice calls, sending text messages and accessing the internet.</p>",
-    "visible": true
+    "desc": "<p>SIM800L is a small quad-band GSM / GPRS module, equipped with quad-band antenna. Insert a valid SIM card and you can use it for voice calls, sending text messages and accessing the internet.</p>"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "HardwareSerial",
       "coders": [
         "SIM800L_HardwareSerial"
-      ],
-      "supportedControllers": [
-        "ATMega328P",
-        "ArduinoLeonardo",
-        "ArduinoMega",
-        "ArduinoMicro",
-        "ArduinoNano",
-        "ArduinoProMini5v",
-        "ArduinoUno",
-        "Teensy32"
       ],
       "parts": [
         {
@@ -140,7 +132,18 @@
           "to": "RX"
         }
       ],
-      "cost": 0
+      "cost": 0,
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "Teensy32",
+        "ESP32DevKitC"
+      ]
     },
     {
       "name": "SoftwareSerial",
