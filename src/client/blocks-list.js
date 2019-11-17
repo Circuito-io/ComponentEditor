@@ -1,7 +1,7 @@
 import React from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { toast } from "react-toastify";
-import { ListGroup, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { update_a_block, update_a_coder } from "./controller.js";
 import { createNewCoder } from "./form/coderfield.js";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +18,7 @@ function createNewBlockData(blockName) {
     name: blockName,
     blockId: blockId.toString(),
     app: {
-      appName: blockName,
+      appName: blockName.replace("_", " "),
       visible: true,
       indicators: {
         solder: false
@@ -102,7 +102,7 @@ export class BlocksList extends React.Component {
       actions: [
         Dialog.CancelAction(),
         Dialog.OKAction(dialog => {
-          const newBlockName = dialog.value;
+          const newBlockName = dialog.value.replace(" ", "_");
 
           analytics.track("Block Created", { name: newBlockName });
           analytics.track("Block Opened", { name: newBlockName });
