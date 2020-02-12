@@ -1,0 +1,89 @@
+{
+  "name": "LM_393 Speed Sensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "9523",
+  "app": {
+    "visible": true,
+    "appName": "LM393 Speed Sensor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>This is a motor speed sensor module, the major goal is to check the rate of an electric motor. The module can be used in association with a microcontroller for motor speed detection, pulse count, position limit, etc. In principle, any rate meter simply measures the rate at which some event occurs. Usually this is done by counting the events for a given period of time (integration interval) and then simply dividing the number of events by the time to get the rate</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1581541538/client/lm393_jsarmz.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "motor speed",
+      "cost": 3,
+      "coders": [
+        "LM_393 Speed Sensor"
+      ],
+      "parts": [
+        {
+          "name": "ArduinoUno_1",
+          "part": "ArduinoUno"
+        }
+      ],
+      "ports": [
+        {
+          "name": "OUT",
+          "interface": {
+            "portType": "provides",
+            "providesLoad": 50,
+            "provides": [
+              {
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "requires",
+            "requiresLoad": 50,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "Battery",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requiresLoad": 50,
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "OUT",
+          "to": "ArduinoUno_1.4"
+        },
+        {
+          "from": "VCC",
+          "to": "ArduinoUno_1.5v"
+        },
+        {
+          "from": "GND",
+          "to": "ArduinoUno_1.GND"
+        }
+      ]
+    }
+  ]
+}
