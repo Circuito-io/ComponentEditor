@@ -1,0 +1,34 @@
+{
+  "name": "rain_sensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "5603",
+  "app": {
+    "visible": true,
+    "appName": "rain sensor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p></p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1583300166/client/rain-sensor_n9iznk.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "rain_sensor"
+      ],
+      "parts": [
+        {
+          "name": "ESP32DevKitC_1",
+          "part": "ESP32DevKitC"
+        }
+      ],
+      "ports": [],
+      "requiredBlocks": []
+    }
+  ]
+}
