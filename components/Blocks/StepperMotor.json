@@ -5,17 +5,18 @@
   ],
   "blockId": "9238",
   "app": {
-    "appName": "Stepper Motor with EasyDriver",
-    "image": "http://res.cloudinary.com/circuito/image/upload/phyvwbp42lgyvumbe0qq",
+    "visible": true,
     "numericName": "SM-42BYG011-25",
     "shortName": "12V Stepper Motor",
+    "appName": "Stepper Motor NEMA 23",
+    "image": "http://res.cloudinary.com/circuito/image/upload/phyvwbp42lgyvumbe0qq",
     "indicators": {
       "verified": true,
       "solder": true
     },
-    "desc": "<p>A stepper motor - rotates in steps of 1.8 degrees each (it does it very fast, you won\u2019t notice :)).<br><strong>Requires</strong>: You will need to strip the motor wires and solder them to the EasyDriver, also 9 male header pins should be soldered to the EasyDriver in order to fit it onto the  breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/How-to-Make-an-Office-Neighbor-Shield-With-Arduino-1/\">Neighbour Shield</a>.</p>\n",
-    "visible": true
+    "desc": "<p>A stepper motor - rotates in steps of 1.8 degrees each (it does it very fast, you won’t notice :)).<br><strong>Requires</strong>: You will need to strip the motor wires and solder them to the EasyDriver, also 9 male header pins should be soldered to the EasyDriver in order to fit it onto the  breadboard.<br><strong>Sample Applications</strong>: <a target=\"_blank\" href=\"http://www.instructables.com/id/How-to-Make-an-Office-Neighbor-Shield-With-Arduino-1/\">Neighbour Shield</a>.</p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "default",
@@ -40,128 +41,62 @@
       ],
       "parts": [
         {
-          "name": "EasyDriver_1",
-          "part": "EasyDriver"
-        },
-        {
           "name": "StepperMotor_1",
           "part": "StepperMotor"
         }
       ],
-      "wires": [
-        {
-          "from": "EasyDriver_1.OUT2A",
-          "to": "StepperMotor_1.D"
-        },
-        {
-          "from": "EasyDriver_1.OUT2B",
-          "to": "StepperMotor_1.B"
-        },
-        {
-          "from": "EasyDriver_1.OUT1A",
-          "to": "StepperMotor_1.C"
-        },
-        {
-          "from": "EasyDriver_1.OUT1B",
-          "to": "StepperMotor_1.A"
-        },
-        {
-          "from": "EasyDriver_1.GND",
-          "to": "gnd"
-        },
-        {
-          "from": "EasyDriver_1.Dir",
-          "to": "dir"
-        },
-        {
-          "from": "EasyDriver_1.Step",
-          "to": "step"
-        },
-        {
-          "from": "EasyDriver_1.V+",
-          "to": "v+"
-        }
-      ],
+      "wires": [],
       "ports": [
         {
-          "name": "step",
+          "name": "A+",
           "interface": {
+            "portType": "requires",
             "requires": [
               {
                 "cost": 0,
-                "spec": "DigitalOut",
-                "voltage": "5v"
-              },
-              {
-                "cost": 1,
-                "spec": "DigitalOut",
-                "voltage": "3.3v"
-              }
-            ],
-            "unique": true,
-            "portType": "requires"
-          },
-          "includeInFirmware": true
-        },
-        {
-          "name": "gnd",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
-                "voltage": "GND"
-              }
-            ],
-            "portType": "requires"
-          }
-        },
-        {
-          "name": "dir",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "DigitalOut",
-                "voltage": "5v"
-              },
-              {
-                "cost": 1,
-                "spec": "DigitalOut",
-                "voltage": "3.3v"
-              }
-            ],
-            "unique": true,
-            "portType": "requires"
-          },
-          "includeInFirmware": true
-        },
-        {
-          "name": "v+",
-          "interface": {
-            "requires": [
-              {
-                "cost": 0,
-                "spec": "",
+                "spec": "DigitalIn",
                 "voltage": "12v"
               }
-            ],
-            "requiresLoad": 330,
-            "portType": "requires"
+            ]
           }
         },
         {
-          "name": "MemOverLoad",
+          "name": "A-",
           "interface": {
+            "portType": "requires",
             "requires": [
               {
                 "cost": 0,
-                "spec": "SRAMLoad",
-                "voltage": ""
+                "spec": "DigitalIn",
+                "voltage": "12v"
               }
-            ],
-            "requiresLoad": 200,
-            "portType": "requires"
+            ]
+          }
+        },
+        {
+          "name": "B+",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "12v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "B-",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "12v"
+              }
+            ]
           }
         }
       ],
