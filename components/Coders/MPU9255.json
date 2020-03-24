@@ -1,9 +1,25 @@
 {
   "name": "MPU9255",
-  "supportedControllers": [],
+  "path": "Coders/MPU9255.json",
+  "supportedControllers": [
+    "ArduinoUno"
+  ],
+  "files": [
+    "MPU9250.cpp",
+    "MPU9250.h",
+    "README.md"
+  ],
   "license": "rapid",
   "instantiate": {
-    "classname": "",
-    "varname": ""
+    "classname": "MPU9250"
+  },
+  "includeHeaders": [
+    "MPU9250.h"
+  ],
+  "code": {
+    "global": "int status;",
+    "constructors": "// an MPU9250 object with the MPU-9250 sensor on I2C bus 0 with address 0x68\r\nMPU9250 IMU(Wire,0x68);",
+    "setup": "       // start communication with IMU \r\n  status = IMU.begin();\r\n  \r\n  if (status < 0) {\r\n    Serial.println(\"IMU initialization unsuccessful\");\r\n    Serial.println(\"Check IMU wiring or try cycling power\");\r\n    Serial.print(\"Status: \");\r\n    Serial.println(status);\r\n    while(1) {}\r\n  }",
+    "snippetCode": "  // read the sensor\r\n  IMU.readSensor();\r\n  // display the data\r\n  Serial.print(IMU.getAccelX_mss(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getAccelY_mss(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getAccelZ_mss(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getGyroX_rads(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getGyroY_rads(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getGyroZ_rads(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getMagX_uT(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getMagY_uT(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.print(IMU.getMagZ_uT(),6);\r\n  Serial.print(\"\\t\");\r\n  Serial.println(IMU.getTemperature_C(),6);\r\n  delay(100);"
   }
 }
