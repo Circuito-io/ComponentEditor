@@ -1,0 +1,35 @@
+{
+  "name": "433_MHz transmitter",
+  "category": [
+    "connectivity",
+    "output"
+  ],
+  "blockId": "5049",
+  "app": {
+    "visible": true,
+    "appName": "433 MHz transmitter",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p></p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1585500502/client/Senza_titolo_hyle8s.png"
+  },
+  "altComp": {
+    "block": "433_MHz transmitter"
+  },
+  "circuits": [
+    {
+      "name": "433mhz transmitter",
+      "cost": 3,
+      "coders": [
+        "433_MHz transmitter"
+      ],
+      "parts": [
+        {
+          "name": "433 mhz transmitter_1",
+          "part": "433 mhz transmitter"
+        }
+      ]
+    }
+  ]
+}
