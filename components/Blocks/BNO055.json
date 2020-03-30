@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BNO055_1",
           "part": "BNO055"
         }
       ],
@@ -48,7 +48,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -60,7 +61,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -72,7 +74,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -84,7 +87,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -97,12 +101,35 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "BNO055_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "BNO055_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "BNO055_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "BNO055_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BNO055_1.INT",
+          "to": "INT"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -118,7 +145,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BNO055_1",
           "part": "BNO055"
         }
       ],
@@ -132,7 +159,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -144,7 +172,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -156,7 +185,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -168,7 +198,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -181,12 +212,35 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "BNO055_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "BNO055_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "BNO055_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "BNO055_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BNO055_1.INT",
+          "to": "INT"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

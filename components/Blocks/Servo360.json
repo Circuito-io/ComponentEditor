@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Servo360_1",
           "part": "Servo360"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -72,7 +73,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -91,7 +93,8 @@
                 "voltage": "6v"
               }
             ],
-            "requiresLoad": 500
+            "requiresLoad": 500,
+            "portType": "requires"
           }
         }
       ],
@@ -103,7 +106,21 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Servo360_1.0",
+          "to": "0"
+        },
+        {
+          "from": "Servo360_1.Sig",
+          "to": "Sig"
+        },
+        {
+          "from": "Servo360_1.Vin",
+          "to": "Vin"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

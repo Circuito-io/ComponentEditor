@@ -35,22 +35,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SlideSwitch_1",
           "part": "SlideSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.2",
-          "to": "r1.con0"
+          "from": "SlideSwitch_1.2",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
+        },
+        {
+          "from": "SlideSwitch_1.1",
+          "to": "1"
+        },
+        {
+          "from": "SlideSwitch_1.2",
+          "to": "2"
         }
       ],
       "ports": [
@@ -63,7 +71,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,7 +84,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -88,12 +98,13 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -111,22 +122,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SlideSwitch_1",
           "part": "SlideSwitch"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.2",
-          "to": "r1.con0"
+          "from": "SlideSwitch_1.2",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res10KO_1.con1",
           "to": "0"
+        },
+        {
+          "from": "SlideSwitch_1.1",
+          "to": "1"
+        },
+        {
+          "from": "SlideSwitch_1.2",
+          "to": "2"
         }
       ],
       "ports": [
@@ -139,7 +158,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -151,7 +171,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -164,12 +185,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }

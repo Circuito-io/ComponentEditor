@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RotaryEncoder_1",
           "part": "RotaryEncoder"
         }
       ],
@@ -52,7 +52,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -69,7 +70,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -87,7 +89,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -106,7 +109,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -125,12 +129,35 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "RotaryEncoder_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "RotaryEncoder_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "RotaryEncoder_1.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "RotaryEncoder_1.D",
+          "to": "D"
+        },
+        {
+          "from": "RotaryEncoder_1.S1",
+          "to": "S1"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "Digital",
@@ -153,7 +180,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RotaryEncoder_1",
           "part": "RotaryEncoder"
         }
       ],
@@ -167,7 +194,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -184,7 +212,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -202,7 +231,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -231,7 +261,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -250,12 +281,35 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 100
+      "wires": [
+        {
+          "from": "RotaryEncoder_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "RotaryEncoder_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "RotaryEncoder_1.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "RotaryEncoder_1.D",
+          "to": "D"
+        },
+        {
+          "from": "RotaryEncoder_1.S1",
+          "to": "S1"
+        }
+      ],
+      "cost": 100
     },
     {
       "name": "Int3v3",
@@ -266,7 +320,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "RotaryEncoder_1",
           "part": "RotaryEncoder"
         }
       ],
@@ -280,7 +334,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -292,7 +347,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -305,7 +361,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -318,7 +375,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -331,11 +389,34 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 100
+      "wires": [
+        {
+          "from": "RotaryEncoder_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "RotaryEncoder_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "RotaryEncoder_1.CLK",
+          "to": "CLK"
+        },
+        {
+          "from": "RotaryEncoder_1.D",
+          "to": "D"
+        },
+        {
+          "from": "RotaryEncoder_1.S1",
+          "to": "S1"
+        }
+      ],
+      "cost": 100
     }
   ]
 }

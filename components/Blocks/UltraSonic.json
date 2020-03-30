@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UltraSonic_1",
           "part": "UltraSonic"
         }
       ],
@@ -50,7 +50,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -63,7 +64,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,11 +77,26 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "UltraSonic_1.PW",
+          "to": "PW"
+        },
+        {
+          "from": "UltraSonic_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "UltraSonic_1.Vin",
+          "to": "Vin"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -96,7 +113,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "UltraSonic_1",
           "part": "UltraSonic"
         }
       ],
@@ -111,7 +128,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -124,7 +142,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -136,11 +155,26 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "UltraSonic_1.PW",
+          "to": "PW"
+        },
+        {
+          "from": "UltraSonic_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "UltraSonic_1.Vin",
+          "to": "Vin"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

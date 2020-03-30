@@ -1,7 +1,7 @@
 {
   "name": "EthernetModule",
   "category": [
-    "input"
+    "input", "connectivity"
   ],
   "blockId": "299273",
   "app": {
@@ -36,7 +36,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "EthernetModule_1",
           "part": "EthernetModule"
         }
       ],
@@ -56,7 +56,8 @@
                 "spec": "SCK",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,7 +75,8 @@
                 "spec": "MISO",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -86,7 +88,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -98,7 +101,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -116,7 +120,8 @@
                 "spec": "MOSI",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -144,7 +149,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -163,12 +169,43 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "EthernetModule_1.SCK",
+          "to": "SCK"
+        },
+        {
+          "from": "EthernetModule_1.SO",
+          "to": "SO"
+        },
+        {
+          "from": "EthernetModule_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "EthernetModule_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "EthernetModule_1.SI",
+          "to": "SI"
+        },
+        {
+          "from": "EthernetModule_1.CS",
+          "to": "CS"
+        },
+        {
+          "from": "EthernetModule_1.INT",
+          "to": "INT"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

@@ -1,34 +1,164 @@
+fieldset .two-coloumn-field {
+  display: inline-block;
+  width: 50% !important;
+  vertical-align: top;
+}
 
-  fieldset .two-coloumn-field:nth-child(even) {
-    float: right;
-    padding-left: 1em;
-    width: 50%;
+fieldset .three-coloumn-field {
+  display: inline-block;
+  width: 33% !important;
+  vertical-align: top;
+}
+
+#main-block-list {
+  position: relative !important;
+  transform: unset !important;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-footer {
+  padding: 0.5rem;
+}
+
+.bg-dark {
+  background-color: rgb(46, 46, 46) !important;
+}
+
+.navbar-brand > img {
+  height: 20px;
+  vertical-align: baseline;
+}
+
+.h4 {
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  padding: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  margin: 4px;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.card-body > .form-group {
+  margin: 0px;
+}
+
+form > p {
+  padding: 1em;
+}
+
+.form-legend {
+  display: contents;
+}
+
+.tooltip-hint {
+  display: inline;
+  padding: 2px;
+}
+
+.form-tooltip {
+  z-index: 10000 !important;
+  max-width: 400px;
+  pointer-events: auto !important;
+}
+
+.form-tooltip:hover {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.form-control.rbt-input-multi {
+  height: unset;
+  min-height: calc(
+    1.5em + 0.75rem + 2px
+  ); /* as in other .form-control height */
+}
+
+.tooltip-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.modal-dialog {
+  margin: 10px;
+  max-width: unset;
+}
+
+.modal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.fixed-bottom-footer.modal-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+/* spinner */
+.lds-dual-ring {
+  display: inline-block;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
   }
-
-  fieldset .two-coloumn-field:nth-child(odd) {
-    float: left;
-    padding-right: 1em;
-    width: 50%;
+  100% {
+    transform: rotate(360deg);
   }
+}
 
+.dropdown-item > .svg-inline--fa {
+  width: 20px;
+}
 
-  form > p {
-    padding: 1em;
-  }
+.container {
+  max-width: unset !important;
+}
 
-  /* workaround see https://github.com/ajaxorg/ace/issues/2963 */
-  .ace_text-input {position:absolute!important}
+#app > .container {
+  padding-top: 60px;
+}
 
-
+/* workaround see https://github.com/ajaxorg/ace/issues/2963 */
+.ace_text-input {
+  position: absolute !important;
+}
 
 /*** MEDIA QUERIES ****/
 
 @media only screen and (max-width: 600px) {
-  .form-group.field.field-string.two-coloumn-field{
-    width:100%;
-    padding:0px;
+  .form-group.field.field-string.two-coloumn-field {
+    width: 100%;
+    padding: 0px;
   }
 }
-
 
 /*** MEDIA QUERIES ****/

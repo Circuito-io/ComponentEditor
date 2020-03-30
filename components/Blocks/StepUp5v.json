@@ -9,14 +9,30 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "StepUp5v_1",
           "part": "StepUp5v"
         }
       ],
       "wires": [
         {
-          "from": "this.OUT5v-",
-          "to": "this.BAT-"
+          "from": "StepUp5v_1.OUT5v-",
+          "to": "StepUp5v_1.BAT-"
+        },
+        {
+          "from": "StepUp5v_1.OUT5v-",
+          "to": "OUT5v-"
+        },
+        {
+          "from": "StepUp5v_1.OUT5v+",
+          "to": "OUT5v+"
+        },
+        {
+          "from": "StepUp5v_1.BAT+",
+          "to": "BAT+"
+        },
+        {
+          "from": "StepUp5v_1.BAT-",
+          "to": "BAT-"
         }
       ],
       "ports": [
@@ -29,7 +45,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -41,7 +58,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 1000
+            "providesLoad": 1000,
+            "portType": "provides"
           }
         },
         {
@@ -58,7 +76,8 @@
                 "spec": "",
                 "voltage": "3.7v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,7 +94,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -87,11 +107,12 @@
                 "spec": "Battery",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PeristalticPump_1",
           "part": "PeristalticPump"
         }
       ],
@@ -55,7 +55,8 @@
               }
             ],
             "requiresLoad": 300,
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -69,7 +70,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 300
+            "requiresLoad": 300,
+            "portType": "requires"
           }
         }
       ],
@@ -81,7 +83,17 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "PeristalticPump_1.Coil1",
+          "to": "Coil1"
+        },
+        {
+          "from": "PeristalticPump_1.Coil2",
+          "to": "Coil2"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

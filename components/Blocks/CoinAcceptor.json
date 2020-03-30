@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "CoinAcceptor_1",
           "part": "CoinAcceptor"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -92,7 +93,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -105,11 +107,26 @@
                 "spec": "",
                 "voltage": "12v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "CoinAcceptor_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "CoinAcceptor_1.SIG",
+          "to": "SIG"
+        },
+        {
+          "from": "CoinAcceptor_1.12V",
+          "to": "12V"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

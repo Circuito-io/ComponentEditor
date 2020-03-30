@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "KeyPadMem1x4_1",
           "part": "KeyPadMem1x4"
         }
       ],
@@ -58,7 +58,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -77,7 +78,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -96,7 +98,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -115,7 +118,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -134,12 +138,35 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "KeyPadMem1x4_1.1",
+          "to": "1"
+        },
+        {
+          "from": "KeyPadMem1x4_1.2",
+          "to": "2"
+        },
+        {
+          "from": "KeyPadMem1x4_1.3",
+          "to": "3"
+        },
+        {
+          "from": "KeyPadMem1x4_1.4",
+          "to": "4"
+        },
+        {
+          "from": "KeyPadMem1x4_1.5",
+          "to": "5"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

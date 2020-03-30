@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ACS712_1",
           "part": "ACS712"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,12 +76,27 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "ACS712_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "ACS712_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "ACS712_1.VO",
+          "to": "VO"
+        }
+      ],
+      "cost": 1
     },
     {
       "name": "3v3",
@@ -97,34 +114,42 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "ACS712_1",
           "part": "ACS712"
         },
         {
-          "name": "r1",
+          "name": "Res470O_1",
           "part": "Res470O"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "r2.con1"
+          "from": "ACS712_1.GND",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "r2.con0",
-          "to": "r1.con1"
+          "from": "Res1KO_1.con0",
+          "to": "Res470O_1.con1"
         },
         {
-          "from": "this.VO",
-          "to": "r1.con0"
+          "from": "ACS712_1.VO",
+          "to": "Res470O_1.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res470O_1.con1",
           "to": "Vo"
+        },
+        {
+          "from": "ACS712_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "ACS712_1.5V",
+          "to": "5V"
         }
       ],
       "ports": [
@@ -137,7 +162,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -149,7 +175,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -162,12 +189,13 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }

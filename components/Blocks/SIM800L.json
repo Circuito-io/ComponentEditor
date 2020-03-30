@@ -1,7 +1,7 @@
 {
   "name": "SIM800L",
   "category": [
-    "input"
+    "input", "connectivity"
   ],
   "blockId": "316349",
   "app": {
@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SIM800L_1",
           "part": "SIM800L"
         }
       ],
@@ -48,7 +48,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -79,7 +81,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -91,7 +94,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -109,11 +113,34 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "SIM800L_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "SIM800L_1.RST",
+          "to": "RST"
+        },
+        {
+          "from": "SIM800L_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "SIM800L_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "SIM800L_1.RX",
+          "to": "RX"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "SoftwareSerial",
@@ -131,7 +158,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SIM800L_1",
           "part": "SIM800L"
         }
       ],
@@ -146,7 +173,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -164,7 +192,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -183,7 +212,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -196,7 +226,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -208,7 +239,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -220,11 +252,34 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 100
+      "wires": [
+        {
+          "from": "SIM800L_1.RST",
+          "to": "RST"
+        },
+        {
+          "from": "SIM800L_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "SIM800L_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "SIM800L_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "SIM800L_1.5V",
+          "to": "5V"
+        }
+      ],
+      "cost": 100
     }
   ]
 }

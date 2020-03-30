@@ -40,23 +40,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "VibrationMotor_1",
           "part": "VibrationMotor"
         },
         {
-          "name": "d1",
-          "part": "DIRect1A50v",
-          "rotation": 180
+          "name": "DIRect1A50v_1",
+          "part": "DIRect1A50v"
         }
       ],
       "wires": [
         {
-          "from": "this.Coil1",
-          "to": "d1.pos"
+          "from": "VibrationMotor_1.Coil1",
+          "to": "DIRect1A50v_1.pos"
         },
         {
-          "from": "this.Coil2",
-          "to": "d1.neg"
+          "from": "VibrationMotor_1.Coil2",
+          "to": "DIRect1A50v_1.neg"
+        },
+        {
+          "from": "VibrationMotor_1.Coil1",
+          "to": "Coil1"
+        },
+        {
+          "from": "VibrationMotor_1.Coil2",
+          "to": "Coil2"
         }
       ],
       "ports": [
@@ -71,7 +78,8 @@
               }
             ],
             "requiresLoad": 85,
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -90,7 +98,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 85
+            "requiresLoad": 85,
+            "portType": "requires"
           }
         }
       ],
@@ -102,7 +111,7 @@
           ]
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

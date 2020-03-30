@@ -40,26 +40,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PiezoVibration_1",
           "part": "PiezoVibration"
         },
         {
-          "name": "r1",
+          "name": "Res1MO_1",
           "part": "Res1MO"
         }
       ],
       "wires": [
         {
-          "from": "this.+",
-          "to": "r1.con0"
+          "from": "PiezoVibration_1.+",
+          "to": "Res1MO_1.con0"
         },
         {
-          "from": "this.-",
-          "to": "r1.con1"
+          "from": "PiezoVibration_1.-",
+          "to": "Res1MO_1.con1"
         },
         {
-          "from": "r1.con0",
+          "from": "Res1MO_1.con0",
           "to": "neg"
+        },
+        {
+          "from": "PiezoVibration_1.-",
+          "to": "-"
         }
       ],
       "ports": [
@@ -73,7 +77,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -86,11 +91,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

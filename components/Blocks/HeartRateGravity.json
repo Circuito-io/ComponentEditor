@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartRateGravity_1",
           "part": "HeartRateGravity"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +63,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -75,11 +77,26 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "HeartRateGravity_1.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "HeartRateGravity_1.Sig",
+          "to": "Sig"
+        },
+        {
+          "from": "HeartRateGravity_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -97,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartRateGravity_1",
           "part": "HeartRateGravity"
         }
       ],
@@ -111,7 +128,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -124,7 +142,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -137,11 +156,26 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "HeartRateGravity_1.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "HeartRateGravity_1.Sig",
+          "to": "Sig"
+        },
+        {
+          "from": "HeartRateGravity_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
     }
   ]
 }
