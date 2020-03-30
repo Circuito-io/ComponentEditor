@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDStripDotStar_1",
           "part": "LEDStripDotStar"
         }
       ],
@@ -56,7 +56,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 1700
+            "requiresLoad": 1700,
+            "portType": "requires"
           }
         },
         {
@@ -69,7 +70,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -88,7 +90,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -108,32 +111,41 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
         {
           "name": "VCC_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "GND_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "DO",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "CO",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
@@ -151,7 +163,41 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LEDStripDotStar_1.VCC_IN",
+          "to": "VCC_IN"
+        },
+        {
+          "from": "LEDStripDotStar_1.GND_IN",
+          "to": "GND_IN"
+        },
+        {
+          "from": "LEDStripDotStar_1.DI",
+          "to": "DI"
+        },
+        {
+          "from": "LEDStripDotStar_1.CI",
+          "to": "CI"
+        },
+        {
+          "from": "LEDStripDotStar_1.VCC_OUT",
+          "to": "VCC_OUT"
+        },
+        {
+          "from": "LEDStripDotStar_1.GND_OUT",
+          "to": "GND_OUT"
+        },
+        {
+          "from": "LEDStripDotStar_1.DO",
+          "to": "DO"
+        },
+        {
+          "from": "LEDStripDotStar_1.CO",
+          "to": "CO"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

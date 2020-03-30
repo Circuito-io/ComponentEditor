@@ -35,23 +35,26 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LEDBlue",
-          "properties": "Blue (470nm)"
+          "name": "LEDBlue_1",
+          "part": "LEDBlue"
         },
         {
-          "name": "Res1",
+          "name": "Res100O_1",
           "part": "Res100O"
         }
       ],
       "wires": [
         {
-          "from": "this.Gnd",
-          "to": "Res1.con1"
+          "from": "LEDBlue_1.Gnd",
+          "to": "Res100O_1.con1"
         },
         {
-          "from": "Res1.con0",
+          "from": "Res100O_1.con0",
           "to": "GND"
+        },
+        {
+          "from": "LEDBlue_1.Vin",
+          "to": "Vin"
         }
       ],
       "ports": [
@@ -65,7 +68,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -78,11 +82,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     },
     {
       "name": "3.3v",
@@ -100,23 +105,26 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "LEDBlue",
-          "properties": "Blue (470nm)"
+          "name": "LEDBlue_1",
+          "part": "LEDBlue"
         },
         {
-          "name": "Res1",
+          "name": "Res47O_1",
           "part": "Res47O"
         }
       ],
       "wires": [
         {
-          "from": "this.Gnd",
-          "to": "Res1.con1"
+          "from": "LEDBlue_1.Gnd",
+          "to": "Res47O_1.con1"
         },
         {
-          "from": "Res1.con0",
+          "from": "Res47O_1.con0",
           "to": "GND"
+        },
+        {
+          "from": "LEDBlue_1.Vin",
+          "to": "Vin"
         }
       ],
       "ports": [
@@ -130,7 +138,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -143,11 +152,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 2
+      "cost": 2
     }
   ]
 }

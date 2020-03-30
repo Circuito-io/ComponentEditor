@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterLevelSW_1",
           "part": "WaterLevelSW"
         }
       ],
@@ -60,7 +60,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -73,7 +74,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,11 +87,26 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "WaterLevelSW_1.SIG",
+          "to": "SIG"
+        },
+        {
+          "from": "WaterLevelSW_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "WaterLevelSW_1.VCC",
+          "to": "VCC"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

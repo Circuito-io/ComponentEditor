@@ -38,35 +38,70 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "DCMDriverL298",
-          "rotation": 270
+          "name": "DCMDriverL298_1",
+          "part": "DCMDriverL298"
         },
         {
-          "name": "MotorA",
-          "part": "DCMotor"
+          "name": "DCMotorB_1",
+          "part": "DCMotorB"
         },
         {
-          "name": "MotorB",
-          "part": "DCMotor"
+          "name": "DCMotorB_2",
+          "part": "DCMotorB"
         }
       ],
       "wires": [
         {
-          "from": "this.OUT1",
-          "to": "MotorA.Coil2"
+          "from": "DCMDriverL298_1.OUT1",
+          "to": "DCMotorB_1.Coil2"
         },
         {
-          "from": "this.OUT2",
-          "to": "MotorA.Coil1"
+          "from": "DCMDriverL298_1.OUT2",
+          "to": "DCMotorB_1.Coil1"
         },
         {
-          "from": "this.OUT3",
-          "to": "MotorB.Coil2"
+          "from": "DCMDriverL298_1.OUT3",
+          "to": "DCMotorB_2.Coil2"
         },
         {
-          "from": "this.OUT4",
-          "to": "MotorB.Coil1"
+          "from": "DCMDriverL298_1.OUT4",
+          "to": "DCMotorB_2.Coil1"
+        },
+        {
+          "from": "DCMDriverL298_1.INT1",
+          "to": "INT1"
+        },
+        {
+          "from": "DCMDriverL298_1.ENB",
+          "to": "ENB"
+        },
+        {
+          "from": "DCMDriverL298_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "DCMDriverL298_1.12V",
+          "to": "12V"
+        },
+        {
+          "from": "DCMDriverL298_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "DCMDriverL298_1.INT2",
+          "to": "INT2"
+        },
+        {
+          "from": "DCMDriverL298_1.ENA",
+          "to": "ENA"
+        },
+        {
+          "from": "DCMDriverL298_1.INT3",
+          "to": "INT3"
+        },
+        {
+          "from": "DCMDriverL298_1.INT4",
+          "to": "INT4"
         }
       ],
       "ports": [
@@ -85,7 +120,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -104,7 +140,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -122,7 +159,8 @@
                 "spec": "Battery",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -150,7 +188,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 400
+            "requiresLoad": 400,
+            "portType": "requires"
           }
         },
         {
@@ -162,7 +201,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -180,7 +220,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -199,7 +240,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -218,7 +260,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -237,12 +280,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

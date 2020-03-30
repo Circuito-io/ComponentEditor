@@ -9,7 +9,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "LogicLevelConverter_1",
           "part": "LogicLevelConverter"
         }
       ],
@@ -23,7 +23,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -35,7 +36,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -46,7 +48,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -58,7 +61,8 @@
                 "spec": "MOSI",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -70,7 +74,8 @@
                 "spec": "SCK",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +87,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -93,7 +99,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -104,7 +111,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -116,7 +124,8 @@
                 "spec": "MISO",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -129,7 +138,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -141,11 +151,58 @@
                 "spec": "DigitalOut",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LogicLevelConverter_1.HV",
+          "to": "HV"
+        },
+        {
+          "from": "LogicLevelConverter_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV2",
+          "to": "LV2"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV2",
+          "to": "HV2"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV3",
+          "to": "HV3"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV",
+          "to": "LV"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV3",
+          "to": "LV3"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV1",
+          "to": "LV1"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV1",
+          "to": "HV1"
+        },
+        {
+          "from": "LogicLevelConverter_1.HV4",
+          "to": "HV4"
+        },
+        {
+          "from": "LogicLevelConverter_1.LV4",
+          "to": "LV4"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

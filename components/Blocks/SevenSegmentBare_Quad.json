@@ -38,58 +38,90 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegmentBare_Quad_1",
           "part": "SevenSegmentBare_Quad"
         },
         {
-          "name": "r1",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_2",
           "part": "Res1KO"
         },
         {
-          "name": "r3",
+          "name": "Res1KO_3",
           "part": "Res1KO"
         },
         {
-          "name": "r4",
+          "name": "Res1KO_4",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.DIG1",
-          "to": "r1.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG1",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "this.DIG2",
-          "to": "r2.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG2",
+          "to": "Res1KO_2.con0"
         },
         {
-          "from": "this.DIG3",
-          "to": "r3.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG3",
+          "to": "Res1KO_3.con0"
         },
         {
-          "from": "this.DIG4",
-          "to": "r4.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG4",
+          "to": "Res1KO_4.con0"
         },
         {
-          "from": "r1.con1",
+          "from": "Res1KO_1.con1",
           "to": "Dig1"
         },
         {
-          "from": "r2.con1",
+          "from": "Res1KO_2.con1",
           "to": "Dig2"
         },
         {
-          "from": "r3.con1",
+          "from": "Res1KO_3.con1",
           "to": "Dig3"
         },
         {
-          "from": "r4.con1",
+          "from": "Res1KO_4.con1",
           "to": "Dig4"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.A",
+          "to": "A"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.B",
+          "to": "B"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.C",
+          "to": "C"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.D",
+          "to": "D"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.E",
+          "to": "E"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.F",
+          "to": "F"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.G",
+          "to": "G"
+        },
+        {
+          "from": "SevenSegmentBare_Quad_1.DECIMAL",
+          "to": "DECIMAL"
         }
       ],
       "ports": [
@@ -108,7 +140,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -127,7 +160,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -146,7 +180,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -165,7 +200,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -184,7 +220,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -203,7 +240,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -222,7 +260,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -241,7 +280,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -260,7 +300,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -279,7 +320,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -298,7 +340,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -317,12 +360,13 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "withShiftReg",
@@ -345,127 +389,127 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "SevenSegmentBare_Quad_1",
           "part": "SevenSegmentBare_Quad"
         },
         {
-          "name": "shiftReg",
+          "name": "74HC595_1",
           "part": "74HC595"
         },
         {
-          "name": "r1",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         },
         {
-          "name": "r2",
+          "name": "Res1KO_2",
           "part": "Res1KO"
         },
         {
-          "name": "r3",
+          "name": "Res1KO_3",
           "part": "Res1KO"
         },
         {
-          "name": "r4",
+          "name": "Res1KO_4",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.DIG1",
-          "to": "r1.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG1",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "this.DIG2",
-          "to": "r2.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG2",
+          "to": "Res1KO_2.con0"
         },
         {
-          "from": "this.DIG3",
-          "to": "r3.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG3",
+          "to": "Res1KO_3.con0"
         },
         {
-          "from": "this.DIG4",
-          "to": "r4.con0"
+          "from": "SevenSegmentBare_Quad_1.DIG4",
+          "to": "Res1KO_4.con0"
         },
         {
-          "from": "this.B",
-          "to": "shiftReg.QA"
+          "from": "SevenSegmentBare_Quad_1.B",
+          "to": "74HC595_1.QA"
         },
         {
-          "from": "this.C",
-          "to": "shiftReg.QB"
+          "from": "SevenSegmentBare_Quad_1.C",
+          "to": "74HC595_1.QB"
         },
         {
-          "from": "this.D",
-          "to": "shiftReg.QC"
+          "from": "SevenSegmentBare_Quad_1.D",
+          "to": "74HC595_1.QC"
         },
         {
-          "from": "this.E",
-          "to": "shiftReg.QD"
+          "from": "SevenSegmentBare_Quad_1.E",
+          "to": "74HC595_1.QD"
         },
         {
-          "from": "this.F",
-          "to": "shiftReg.QE"
+          "from": "SevenSegmentBare_Quad_1.F",
+          "to": "74HC595_1.QE"
         },
         {
-          "from": "this.G",
-          "to": "shiftReg.QF"
+          "from": "SevenSegmentBare_Quad_1.G",
+          "to": "74HC595_1.QF"
         },
         {
-          "from": "this.G",
-          "to": "shiftReg.QG"
+          "from": "SevenSegmentBare_Quad_1.G",
+          "to": "74HC595_1.QG"
         },
         {
-          "from": "this.DECIMAL",
-          "to": "shiftReg.QH"
+          "from": "SevenSegmentBare_Quad_1.DECIMAL",
+          "to": "74HC595_1.QH"
         },
         {
-          "from": "shiftReg.SER",
+          "from": "74HC595_1.SER",
           "to": "SERDATA"
         },
         {
-          "from": "shiftReg.SRCLK",
+          "from": "74HC595_1.SRCLK",
           "to": "CLOCK"
         },
         {
-          "from": "shiftReg.RCLK",
+          "from": "74HC595_1.RCLK",
           "to": "LATCH"
         },
         {
-          "from": "shiftReg.VCC",
-          "to": "VCC"
+          "from": "74HC595_1.VCC",
+          "to": "Vcc"
         },
         {
-          "from": "shiftReg.GND",
-          "to": "GND"
+          "from": "74HC595_1.GND",
+          "to": "Gnd"
         },
         {
-          "from": "shiftReg.OEnot",
-          "to": "OEnot"
+          "from": "74HC595_1.OEnot",
+          "to": "OE_not"
         },
         {
-          "from": "shiftReg.SRCLRnot",
-          "to": "SRCLRnot"
+          "from": "74HC595_1.SRCLRnot",
+          "to": "SRCLR_not"
         },
         {
-          "from": "r1.con1",
+          "from": "Res1KO_1.con1",
           "to": "Dig1"
         },
         {
-          "from": "r2.con1",
+          "from": "Res1KO_2.con1",
           "to": "Dig2"
         },
         {
-          "from": "r3.con1",
+          "from": "Res1KO_3.con1",
           "to": "Dig3"
         },
         {
-          "from": "r4.con1",
+          "from": "Res1KO_4.con1",
           "to": "Dig4"
         }
       ],
       "ports": [
         {
-          "name": "VCC",
+          "name": "Vcc",
           "interface": {
             "requires": [
               {
@@ -478,11 +522,12 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
-          "name": "GND",
+          "name": "Gnd",
           "interface": {
             "requires": [
               {
@@ -490,11 +535,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
-          "name": "SRCLRnot",
+          "name": "SRCLR_not",
           "interface": {
             "requires": [
               {
@@ -507,11 +553,12 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
-          "name": "OEnot",
+          "name": "OE_not",
           "interface": {
             "requires": [
               {
@@ -519,7 +566,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -537,7 +585,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -556,7 +605,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -575,7 +625,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -594,7 +645,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -613,7 +665,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -632,7 +685,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -651,12 +705,13 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 100
+      "cost": 100
     }
   ]
 }

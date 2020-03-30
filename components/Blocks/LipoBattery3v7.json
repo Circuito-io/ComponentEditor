@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LipoBattery3v7_1",
           "part": "LipoBattery3v7"
         }
       ],
@@ -47,7 +47,8 @@
                 "spec": "Battery",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -59,7 +60,8 @@
                 "voltage": "3.7v"
               }
             ],
-            "providesLoad": 5000
+            "providesLoad": 5000,
+            "portType": "provides"
           }
         },
         {
@@ -70,11 +72,22 @@
                 "spec": "Battery",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LipoBattery3v7_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LipoBattery3v7_1.VCC",
+          "to": "VCC"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

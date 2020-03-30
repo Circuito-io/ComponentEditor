@@ -1,7 +1,7 @@
 {
   "name": "BLEHM10",
   "category": [
-    "input"
+    "input", "connectivity"
   ],
   "blockId": "395589",
   "app": {
@@ -38,18 +38,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BLEHM10_1",
           "part": "BLEHM10"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "BLEHM10_1.RX",
           "to": "TXD"
         },
         {
-          "from": "this.TX",
+          "from": "BLEHM10_1.TX",
           "to": "RXD"
+        },
+        {
+          "from": "BLEHM10_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BLEHM10_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "BLEHM10_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "BLEHM10_1.RX",
+          "to": "RX"
         }
       ],
       "ports": [
@@ -62,7 +78,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,7 +91,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -92,7 +110,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         },
         {
@@ -110,11 +129,12 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "SoftwareSerial",
@@ -138,18 +158,26 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BLEHM10_1",
           "part": "BLEHM10"
         }
       ],
       "wires": [
         {
-          "from": "this.RX",
+          "from": "BLEHM10_1.RX",
           "to": "TXD"
         },
         {
-          "from": "this.TX",
+          "from": "BLEHM10_1.TX",
           "to": "RXD"
+        },
+        {
+          "from": "BLEHM10_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BLEHM10_1.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [
@@ -162,7 +190,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -174,7 +203,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -186,7 +216,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -214,7 +245,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -243,12 +275,13 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 100
+      "cost": 100
     }
   ]
 }

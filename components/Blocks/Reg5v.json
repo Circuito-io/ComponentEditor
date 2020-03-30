@@ -9,36 +9,46 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "L7805_1",
           "part": "L7805"
         },
         {
-          "name": "capin",
-          "pos": "0,120",
+          "name": "CapCeramic100nF_1",
           "part": "CapCeramic100nF"
         },
         {
-          "name": "capout",
-          "pos": "20,80",
+          "name": "CapElectro1uF_1",
           "part": "CapElectro1uF"
         }
       ],
       "wires": [
         {
-          "from": "this.Vin",
-          "to": "capin.con0"
+          "from": "L7805_1.Vin",
+          "to": "CapCeramic100nF_1.con0"
         },
         {
-          "from": "this.0",
-          "to": "capin.con1"
+          "from": "L7805_1.0",
+          "to": "CapCeramic100nF_1.con1"
         },
         {
-          "from": "this.Vout",
-          "to": "capout.pos"
+          "from": "L7805_1.Vout",
+          "to": "CapElectro1uF_1.pos"
         },
         {
-          "from": "this.0",
-          "to": "capout.neg"
+          "from": "L7805_1.0",
+          "to": "CapElectro1uF_1.neg"
+        },
+        {
+          "from": "L7805_1.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "L7805_1.0",
+          "to": "0"
+        },
+        {
+          "from": "L7805_1.Vin",
+          "to": "Vin"
         }
       ],
       "ports": [
@@ -51,7 +61,8 @@
                 "voltage": "5v"
               }
             ],
-            "redirectLoad": "Vin"
+            "providesLoad": 1500,
+            "portType": "provides"
           }
         },
         {
@@ -63,7 +74,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,11 +97,12 @@
                 "spec": "",
                 "voltage": "7.4v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

@@ -40,14 +40,30 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MPU6050_1",
           "part": "MPU6050"
         }
       ],
       "wires": [
         {
-          "from": "this.VIO",
-          "to": "this.VCC"
+          "from": "MPU6050_1.VIO",
+          "to": "MPU6050_1.VCC"
+        },
+        {
+          "from": "MPU6050_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "MPU6050_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "MPU6050_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "MPU6050_1.SCL",
+          "to": "SCL"
         }
       ],
       "ports": [
@@ -66,7 +82,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -78,7 +95,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -90,7 +108,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -103,7 +122,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 235
+            "requiresLoad": 235,
+            "portType": "requires"
           }
         },
         {
@@ -121,11 +141,12 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

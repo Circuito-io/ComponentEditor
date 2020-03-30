@@ -39,9 +39,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "GraphicLCD",
-          "rotation": 180
+          "name": "GraphicLCD_1",
+          "part": "GraphicLCD"
         }
       ],
       "ports": [
@@ -55,7 +54,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 200
+            "requiresLoad": 200,
+            "portType": "requires"
           }
         },
         {
@@ -73,7 +73,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -87,7 +88,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 113
+            "requiresLoad": 113,
+            "portType": "requires"
           }
         },
         {
@@ -105,7 +107,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -118,11 +121,30 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "GraphicLCD_1.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "GraphicLCD_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "GraphicLCD_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "GraphicLCD_1.Gnd",
+          "to": "Gnd"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

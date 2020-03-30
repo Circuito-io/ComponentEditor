@@ -1,8 +1,6 @@
-import AddButton from "react-jsonschema-form/lib/components/AddButton";
-import IconButton from "react-jsonschema-form/lib/components/IconButton";
 import React from "react";
 import Upload from "rc-upload";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { delete_a_coder_file } from "../controller";
 import {
   getUiOptions,
@@ -12,6 +10,8 @@ import {
 } from "react-jsonschema-form/lib/utils";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
   if (!title) {
@@ -46,40 +46,15 @@ function FileArrayItem(props) {
               justifyContent: "space-around"
             }}
           >
-            {(props.hasMoveUp || props.hasMoveDown) && (
-              <IconButton
-                icon="arrow-up"
-                className="array-item-move-up"
-                tabIndex="-1"
-                style={btnStyle}
-                disabled={props.disabled || props.readonly || !props.hasMoveUp}
-                onClick={props.onReorderClick(props.index, props.index - 1)}
-              />
-            )}
-
-            {(props.hasMoveUp || props.hasMoveDown) && (
-              <IconButton
-                icon="arrow-down"
-                className="array-item-move-down"
-                tabIndex="-1"
-                style={btnStyle}
-                disabled={
-                  props.disabled || props.readonly || !props.hasMoveDown
-                }
-                onClick={props.onReorderClick(props.index, props.index + 1)}
-              />
-            )}
-
             {props.hasRemove && (
-              <IconButton
-                type="danger"
-                icon="remove"
-                className="array-item-remove"
-                tabIndex="-1"
-                style={btnStyle}
+              <Button
+                variant="outline-danger"
+                size="small"
                 disabled={props.disabled || props.readonly}
                 onClick={props.onDropIndexClick(props.index)}
-              />
+              >
+                <FontAwesomeIcon icon={faTrashAlt} />
+              </Button>
             )}
           </div>
         </Col>
@@ -109,29 +84,29 @@ function FilesArrayFieldTemplate(props) {
         />
       )}
 
-      <div
+      <Container
         className="container array-item-list"
         key={`array-item-list-${props.idSchema.$id}`}
       >
         {props.items && props.items.map(p => FileArrayItem(p))}
-      </div>
 
-      {props.canAdd && (
-        <Row>
-          <Col xs={1} />
-          <Col xs={11}>
-            <Upload
-              action={"/api/coders-file/" + props.formContext.targetFolder}
-              onStart={file => {
-                console.log("onStart", props, file.name);
-                props.addItem(file.name);
-              }}
-            >
-              <a>Upload file...</a>
-            </Upload>
-          </Col>
-        </Row>
-      )}
+        {props.canAdd && (
+          <Row>
+            <Col xs={1} />
+            <Col xs={11}>
+              <Upload
+                action={"/api/coders-file/" + props.formContext.targetFolder}
+                onStart={file => {
+                  props.addItem(file.name);
+                }}
+                className="btn btn-outline-primary"
+              >
+                <a>Upload file...</a>
+              </Upload>
+            </Col>
+          </Row>
+        )}
+      </Container>
     </fieldset>
   );
 }

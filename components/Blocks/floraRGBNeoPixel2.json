@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "floraRGBNeoPixel2_1",
           "part": "floraRGBNeoPixel2"
         }
       ],
@@ -50,7 +50,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -63,7 +64,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -75,17 +77,38 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
           "name": "DOUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "floraRGBNeoPixel2_1.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "floraRGBNeoPixel2_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "floraRGBNeoPixel2_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "floraRGBNeoPixel2_1.DOUT",
+          "to": "DOUT"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedMatrixRGB_1",
           "part": "LedMatrixRGB"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -68,7 +69,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 1000
+            "requiresLoad": 1000,
+            "portType": "requires"
           }
         },
         {
@@ -87,26 +89,33 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
         {
           "name": "DOUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "5V_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "GND_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
@@ -124,7 +133,33 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LedMatrixRGB_1.GND_IN",
+          "to": "GND_IN"
+        },
+        {
+          "from": "LedMatrixRGB_1.5V_IN",
+          "to": "5V_IN"
+        },
+        {
+          "from": "LedMatrixRGB_1.DIN",
+          "to": "DIN"
+        },
+        {
+          "from": "LedMatrixRGB_1.DOUT",
+          "to": "DOUT"
+        },
+        {
+          "from": "LedMatrixRGB_1.5V_OUT",
+          "to": "5V_OUT"
+        },
+        {
+          "from": "LedMatrixRGB_1.GND_OUT",
+          "to": "GND_OUT"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "NodeMCU1.0",
+  "name": "NodeMCU1",
   "category": [
-    "controller"
+    "controller", "connectivity"
   ],
   "blockId": "360216",
   "app": {
@@ -13,19 +13,9 @@
       "verified": false,
       "solder": false
     },
-    "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great from internet of things projects or just as an Arduino replacement.</p>",
+    "desc": "<p>NodeMCU is an Arduino compatible ESP8266 based micro controller with on-board WiFi. It is great for Internet of Things (IoT) projects or just as an Arduino replacement.</p>",
     "visible": true
   },
-  "requiresExpansion": [
-    [
-      0,
-      "NONE"
-    ],
-    [
-      10,
-      "74HC4051"
-    ]
-  ],
   "circuits": [
     {
       "name": "ExPower",
@@ -34,8 +24,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "NodeMCU1.0"
+          "name": "NodeMCU1_1",
+          "part": "NodeMCU1"
         }
       ],
       "ports": [
@@ -47,7 +37,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -75,7 +66,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -115,7 +107,8 @@
                 "spec": "SS",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -139,7 +132,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -167,7 +161,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -199,7 +194,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -235,7 +231,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -267,7 +264,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -295,7 +293,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -315,7 +314,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -326,7 +326,8 @@
                 "spec": "RX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -337,7 +338,8 @@
                 "spec": "TX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -353,7 +355,8 @@
                 "spec": "DigitalOut",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -369,7 +372,8 @@
                 "spec": "DigitalOut",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -380,24 +384,20 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
           "name": "GND1",
           "interface": {
-            "requires": [
+            "provides": [
               {
-                "cost": 0,
                 "spec": "",
                 "voltage": "GND"
-              },
-              {
-                "cost": 1,
-                "spec": "USB",
-                "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -408,7 +408,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -420,7 +421,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 800
+            "providesLoad": 800,
+            "portType": "provides"
           }
         },
         {
@@ -431,7 +433,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -442,7 +445,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -470,7 +474,8 @@
                 "voltage": "12v"
               }
             ],
-            "requiresLoad": 50
+            "requiresLoad": 50,
+            "portType": "requires"
           }
         },
         {
@@ -481,7 +486,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -493,13 +499,13 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 128000
+            "providesLoad": 128000,
+            "portType": "provides"
           }
         }
       ],
-      "priority": 1,
       "coders": [
-        "NodeMCU1.0"
+        "NodeMCU1"
       ],
       "requiredBlocks": [
         {
@@ -514,8 +520,110 @@
             "Reg5v",
             "USBPowerMicro"
           ]
+        },
+        {
+          "cost": 10,
+          "blocks": [
+            "USBPowerMicro",
+            "74HC4051"
+          ]
+        },
+        {
+          "cost": 40,
+          "blocks": [
+            "Reg5v",
+            "USBPowerMicro",
+            "74HC4051"
+          ]
         }
-      ]
+      ],
+      "wires": [
+        {
+          "from": "NodeMCU1_1.D1",
+          "to": "D1"
+        },
+        {
+          "from": "NodeMCU1_1.D2",
+          "to": "D2"
+        },
+        {
+          "from": "NodeMCU1_1.D3",
+          "to": "D3"
+        },
+        {
+          "from": "NodeMCU1_1.D4",
+          "to": "D4"
+        },
+        {
+          "from": "NodeMCU1_1.D5",
+          "to": "D5"
+        },
+        {
+          "from": "NodeMCU1_1.D6",
+          "to": "D6"
+        },
+        {
+          "from": "NodeMCU1_1.D7",
+          "to": "D7"
+        },
+        {
+          "from": "NodeMCU1_1.D8",
+          "to": "D8"
+        },
+        {
+          "from": "NodeMCU1_1.D0",
+          "to": "D0"
+        },
+        {
+          "from": "NodeMCU1_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "NodeMCU1_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "NodeMCU1_1.SD2",
+          "to": "SD2"
+        },
+        {
+          "from": "NodeMCU1_1.SD3",
+          "to": "SD3"
+        },
+        {
+          "from": "NodeMCU1_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "NodeMCU1_1.GND1",
+          "to": "GND1"
+        },
+        {
+          "from": "NodeMCU1_1.GND3",
+          "to": "GND3"
+        },
+        {
+          "from": "NodeMCU1_1.3V3",
+          "to": "3V3"
+        },
+        {
+          "from": "NodeMCU1_1.3V3_1",
+          "to": "3V3_1"
+        },
+        {
+          "from": "NodeMCU1_1.3V3_2",
+          "to": "3V3_2"
+        },
+        {
+          "from": "NodeMCU1_1.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "NodeMCU1_1.USB_MICRO",
+          "to": "USB_MICRO"
+        }
+      ],
+      "cost": 1
     },
     {
       "name": "USB",
@@ -524,8 +632,8 @@
       ],
       "parts": [
         {
-          "name": "this",
-          "part": "NodeMCU1.0"
+          "name": "NodeMCU1_1",
+          "part": "NodeMCU1"
         }
       ],
       "ports": [
@@ -537,7 +645,8 @@
                 "spec": "ESPSoftwareSerialTag",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -565,7 +674,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -605,7 +715,8 @@
                 "spec": "SS",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -629,7 +740,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -657,7 +769,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -689,7 +802,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -725,7 +839,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -757,7 +872,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -785,7 +901,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -805,7 +922,8 @@
                 "spec": "SoftwareSerial",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -816,7 +934,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -827,7 +946,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -839,7 +959,8 @@
                 "spec": "USB",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -850,7 +971,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -863,7 +985,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 50
+            "requiresLoad": 50,
+            "portType": "requires"
           }
         },
         {
@@ -875,7 +998,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "providesLoad": 800
+            "providesLoad": 800,
+            "portType": "provides"
           }
         },
         {
@@ -886,7 +1010,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -897,7 +1022,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -909,7 +1035,8 @@
                 "spec": "RX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -921,7 +1048,8 @@
                 "spec": "TX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -933,7 +1061,8 @@
                 "voltage": "5v"
               }
             ],
-            "providesLoad": 500
+            "providesLoad": 500,
+            "portType": "provides"
           }
         },
         {
@@ -949,7 +1078,8 @@
                 "spec": "DigitalOut",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -965,7 +1095,8 @@
                 "spec": "DigitalOut",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -976,7 +1107,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -987,7 +1119,8 @@
                 "spec": "USB_MICRO",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -999,14 +1132,117 @@
                 "voltage": ""
               }
             ],
-            "providesLoad": 128000
+            "providesLoad": 128000,
+            "portType": "provides"
           }
         }
       ],
-      "priority": 2,
       "coders": [
-        "NodeMCU1.0"
-      ]
+        "NodeMCU1"
+      ],
+      "requiredBlocks": [
+        {
+          "cost": 10,
+          "blocks": [
+            "74HC4051"
+          ]
+        }
+      ],
+      "wires": [
+        {
+          "from": "NodeMCU1_1.D1",
+          "to": "D1"
+        },
+        {
+          "from": "NodeMCU1_1.D2",
+          "to": "D2"
+        },
+        {
+          "from": "NodeMCU1_1.D3",
+          "to": "D3"
+        },
+        {
+          "from": "NodeMCU1_1.D4",
+          "to": "D4"
+        },
+        {
+          "from": "NodeMCU1_1.D5",
+          "to": "D5"
+        },
+        {
+          "from": "NodeMCU1_1.D6",
+          "to": "D6"
+        },
+        {
+          "from": "NodeMCU1_1.D7",
+          "to": "D7"
+        },
+        {
+          "from": "NodeMCU1_1.D8",
+          "to": "D8"
+        },
+        {
+          "from": "NodeMCU1_1.D0",
+          "to": "D0"
+        },
+        {
+          "from": "NodeMCU1_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "NodeMCU1_1.GND1",
+          "to": "GND1"
+        },
+        {
+          "from": "NodeMCU1_1.GND2",
+          "to": "GND2"
+        },
+        {
+          "from": "NodeMCU1_1.GND3",
+          "to": "GND3"
+        },
+        {
+          "from": "NodeMCU1_1.3V3",
+          "to": "3V3"
+        },
+        {
+          "from": "NodeMCU1_1.3V3_1",
+          "to": "3V3_1"
+        },
+        {
+          "from": "NodeMCU1_1.3V3_2",
+          "to": "3V3_2"
+        },
+        {
+          "from": "NodeMCU1_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "NodeMCU1_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "NodeMCU1_1.Vin",
+          "to": "Vin"
+        },
+        {
+          "from": "NodeMCU1_1.SD2",
+          "to": "SD2"
+        },
+        {
+          "from": "NodeMCU1_1.SD3",
+          "to": "SD3"
+        },
+        {
+          "from": "NodeMCU1_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "NodeMCU1_1.USB_MICRO",
+          "to": "USB_MICRO"
+        }
+      ],
+      "cost": 2
     }
   ]
 }

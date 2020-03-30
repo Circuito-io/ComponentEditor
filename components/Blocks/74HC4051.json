@@ -12,7 +12,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "74HC4051_1",
           "part": "74HC4051"
         }
       ],
@@ -26,7 +26,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -38,7 +39,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -50,7 +52,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -62,7 +65,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -80,7 +84,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -99,7 +104,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -118,7 +124,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -132,7 +139,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -145,7 +153,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -157,7 +166,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -169,7 +179,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -181,7 +192,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -193,7 +205,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -205,7 +218,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -217,7 +231,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -229,11 +244,78 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "74HC4051_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "74HC4051_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "74HC4051_1.VEE",
+          "to": "VEE"
+        },
+        {
+          "from": "74HC4051_1.Enot",
+          "to": "Enot"
+        },
+        {
+          "from": "74HC4051_1.S0",
+          "to": "S0"
+        },
+        {
+          "from": "74HC4051_1.S1",
+          "to": "S1"
+        },
+        {
+          "from": "74HC4051_1.S2",
+          "to": "S2"
+        },
+        {
+          "from": "74HC4051_1.A",
+          "to": "A"
+        },
+        {
+          "from": "74HC4051_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "74HC4051_1.A1",
+          "to": "A1"
+        },
+        {
+          "from": "74HC4051_1.A2",
+          "to": "A2"
+        },
+        {
+          "from": "74HC4051_1.A3",
+          "to": "A3"
+        },
+        {
+          "from": "74HC4051_1.A4",
+          "to": "A4"
+        },
+        {
+          "from": "74HC4051_1.A5",
+          "to": "A5"
+        },
+        {
+          "from": "74HC4051_1.A6",
+          "to": "A6"
+        },
+        {
+          "from": "74HC4051_1.A7",
+          "to": "A7"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "5v",
@@ -243,7 +325,7 @@
       "supportedControllers": [],
       "parts": [
         {
-          "name": "this",
+          "name": "74HC4051_1",
           "part": "74HC4051"
         }
       ],
@@ -257,7 +339,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -269,7 +352,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -281,7 +365,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -293,7 +378,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -306,7 +392,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -320,7 +407,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -334,7 +422,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -348,7 +437,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -361,7 +451,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -373,7 +464,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -385,7 +477,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -397,7 +490,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -409,7 +503,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -421,7 +516,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -433,7 +529,8 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -445,11 +542,78 @@
                 "spec": "ADC",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "provides"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "74HC4051_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "74HC4051_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "74HC4051_1.VEE",
+          "to": "VEE"
+        },
+        {
+          "from": "74HC4051_1.Enot",
+          "to": "Enot"
+        },
+        {
+          "from": "74HC4051_1.S0",
+          "to": "S0"
+        },
+        {
+          "from": "74HC4051_1.S1",
+          "to": "S1"
+        },
+        {
+          "from": "74HC4051_1.S2",
+          "to": "S2"
+        },
+        {
+          "from": "74HC4051_1.A",
+          "to": "A"
+        },
+        {
+          "from": "74HC4051_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "74HC4051_1.A1",
+          "to": "A1"
+        },
+        {
+          "from": "74HC4051_1.A2",
+          "to": "A2"
+        },
+        {
+          "from": "74HC4051_1.A3",
+          "to": "A3"
+        },
+        {
+          "from": "74HC4051_1.A4",
+          "to": "A4"
+        },
+        {
+          "from": "74HC4051_1.A5",
+          "to": "A5"
+        },
+        {
+          "from": "74HC4051_1.A6",
+          "to": "A6"
+        },
+        {
+          "from": "74HC4051_1.A7",
+          "to": "A7"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

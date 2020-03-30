@@ -17,6 +17,10 @@ exports.delete_a_part = filesController.delete_a_file_factory(partsSubFolder);
 exports.list_all_blocks = filesController.list_all_files_factory(
   blocksSubFolder
 );
+exports.list_all_blocks_data = filesController.list_all_files_factory(
+  blocksSubFolder,
+  ["category", "app.appName", "app.image"]
+);
 exports.create_a_block = filesController.create_a_file_factory(blocksSubFolder);
 exports.read_a_block = filesController.read_a_file_factory(blocksSubFolder);
 exports.update_a_block = filesController.update_a_file_factory(blocksSubFolder);
@@ -35,12 +39,21 @@ exports.delete_a_coder_file = filesController.delete_a_subdir_file_factory(
 );
 
 exports.upload_a_coder_file = function(req, res) {
+  console.log("Upload_a_coder_file");
   if (Object.keys(req.files).length == 0) {
+    console.log("No files to upload");
     return res.status(400).send("No files were uploaded.");
   }
 
   var file = req.files.file;
-  var targetPath = path.join(global.dataFolder, codersSubFolder, req.params.name, file.name);
+  var targetFolder = path.join(
+    global.dataFolder,
+    codersSubFolder,
+    req.params.name
+  );
+  var targetPath = path.join(targetFolder, file.name);
+
+  if (!fs.existsSync(targetFolder)) fs.mkdirSync(targetFolder);
 
   file.mv(targetPath, function(err) {
     if (err) {

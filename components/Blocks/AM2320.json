@@ -35,34 +35,50 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "AM2320_1",
           "part": "AM2320"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "r2",
+          "name": "Res10KO_2",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.SCL",
-          "to": "r1.con0"
+          "from": "AM2320_1.SCL",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.VDD",
-          "to": "r1.con1"
+          "from": "AM2320_1.VDD",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.SDA",
-          "to": "r2.con0"
+          "from": "AM2320_1.SDA",
+          "to": "Res10KO_2.con0"
         },
         {
-          "from": "this.VDD",
-          "to": "r2.con1"
+          "from": "AM2320_1.VDD",
+          "to": "Res10KO_2.con1"
+        },
+        {
+          "from": "AM2320_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "AM2320_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "AM2320_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "AM2320_1.SDA",
+          "to": "SDA"
         }
       ],
       "ports": [
@@ -75,7 +91,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -87,7 +104,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -99,7 +117,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -111,11 +130,12 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -133,34 +153,50 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "AM2320_1",
           "part": "AM2320"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "r2",
+          "name": "Res10KO_2",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.SCL",
-          "to": "r1.con0"
+          "from": "AM2320_1.SCL",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "this.VDD",
-          "to": "r1.con1"
+          "from": "AM2320_1.VDD",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.SDA",
-          "to": "r2.con0"
+          "from": "AM2320_1.SDA",
+          "to": "Res10KO_2.con0"
         },
         {
-          "from": "this.VDD",
-          "to": "r2.con1"
+          "from": "AM2320_1.VDD",
+          "to": "Res10KO_2.con1"
+        },
+        {
+          "from": "AM2320_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "AM2320_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "AM2320_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "AM2320_1.SDA",
+          "to": "SDA"
         }
       ],
       "ports": [
@@ -173,7 +209,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -185,7 +222,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -197,7 +235,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -209,11 +248,12 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }

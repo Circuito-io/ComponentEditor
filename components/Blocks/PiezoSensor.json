@@ -40,29 +40,29 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PiezoSensor_1",
           "part": "PiezoSensor"
         },
         {
-          "name": "r1",
+          "name": "Res1MO_1",
           "part": "Res1MO"
         }
       ],
       "wires": [
         {
-          "from": "this.neg",
-          "to": "r1.con0"
+          "from": "PiezoSensor_1.neg",
+          "to": "Res1MO_1.con0"
         },
         {
-          "from": "this.pos",
-          "to": "r1.con1"
+          "from": "PiezoSensor_1.pos",
+          "to": "Res1MO_1.con1"
         },
         {
-          "from": "this.pos",
+          "from": "PiezoSensor_1.pos",
           "to": "pos"
         },
         {
-          "from": "this.neg",
+          "from": "PiezoSensor_1.neg",
           "to": "neg"
         }
       ],
@@ -77,7 +77,8 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -90,11 +91,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

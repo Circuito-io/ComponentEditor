@@ -24,15 +24,12 @@
       ],
       "supportedControllers": [
         "ATMega328P",
-        "ArduinoGemma",
         "ArduinoLeonardo",
         "ArduinoMega",
         "ArduinoMicro",
         "ArduinoNano",
-        "ArduinoProMini3v3",
         "ArduinoProMini5v",
         "ArduinoUno",
-        "ESP32DevKitC",
         "NodeMCU",
         "RPI3B",
         "ATTiny85",
@@ -40,7 +37,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterLevelSNC_1",
           "part": "WaterLevelSNC"
         }
       ],
@@ -55,7 +52,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -68,7 +66,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -80,11 +79,26 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "WaterLevelSNC_1.SIG",
+          "to": "SIG"
+        },
+        {
+          "from": "WaterLevelSNC_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "WaterLevelSNC_1.VCC",
+          "to": "VCC"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

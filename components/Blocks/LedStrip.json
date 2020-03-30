@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LedStrip_1",
           "part": "LedStrip"
         }
       ],
@@ -56,7 +56,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 1200
+            "requiresLoad": 1200,
+            "portType": "requires"
           }
         },
         {
@@ -69,7 +70,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -88,26 +90,33 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
         {
           "name": "VCC_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "GND_OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "DO",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
@@ -125,7 +134,33 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LedStrip_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "LedStrip_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LedStrip_1.DI",
+          "to": "DI"
+        },
+        {
+          "from": "LedStrip_1.VCC_OUT",
+          "to": "VCC_OUT"
+        },
+        {
+          "from": "LedStrip_1.GND_OUT",
+          "to": "GND_OUT"
+        },
+        {
+          "from": "LedStrip_1.DO",
+          "to": "DO"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

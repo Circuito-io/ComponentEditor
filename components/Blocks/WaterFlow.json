@@ -35,26 +35,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterFlow_1",
           "part": "WaterFlow"
         },
         {
-          "name": "res_pullup",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.VCC",
-          "to": "res_pullup.con1"
+          "from": "WaterFlow_1.VCC",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.SIG",
-          "to": "res_pullup.con0"
+          "from": "WaterFlow_1.SIG",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "res_pullup.con0",
+          "from": "Res10KO_1.con0",
           "to": "Sig"
+        },
+        {
+          "from": "WaterFlow_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "WaterFlow_1.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [
@@ -68,7 +76,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -81,7 +90,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -93,11 +103,12 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -114,46 +125,54 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "WaterFlow_1",
           "part": "WaterFlow"
         },
         {
-          "name": "res2",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         },
         {
-          "name": "res1",
+          "name": "Res4K7O_1",
           "part": "Res4K7O"
         },
         {
-          "name": "res_pullup",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.VCC",
-          "to": "res_pullup.con1"
+          "from": "WaterFlow_1.VCC",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "this.SIG",
-          "to": "res_pullup.con0"
+          "from": "WaterFlow_1.SIG",
+          "to": "Res1KO_1.con0"
         },
         {
-          "from": "this.SIG",
-          "to": "res1.con1"
+          "from": "WaterFlow_1.SIG",
+          "to": "Res4K7O_1.con1"
         },
         {
-          "from": "res1.con0",
-          "to": "res2.con0"
+          "from": "Res4K7O_1.con0",
+          "to": "Res10KO_1.con0"
         },
         {
-          "from": "res2.con1",
-          "to": "this.GND"
+          "from": "Res10KO_1.con1",
+          "to": "WaterFlow_1.GND"
         },
         {
-          "from": "res2.con0",
+          "from": "Res10KO_1.con0",
           "to": "Sig"
+        },
+        {
+          "from": "WaterFlow_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "WaterFlow_1.VCC",
+          "to": "VCC"
         }
       ],
       "ports": [
@@ -167,7 +186,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -180,7 +200,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -192,11 +213,12 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }

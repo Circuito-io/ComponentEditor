@@ -35,7 +35,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartPulseSensor_1",
           "part": "HeartPulseSensor"
         }
       ],
@@ -49,7 +49,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -74,12 +76,27 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "HeartPulseSensor_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "HeartPulseSensor_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "HeartPulseSensor_1.SIG",
+          "to": "SIG"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -97,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HeartPulseSensor_1",
           "part": "HeartPulseSensor"
         }
       ],
@@ -111,7 +128,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -123,7 +141,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -136,12 +155,27 @@
                 "voltage": ""
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "HeartPulseSensor_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "HeartPulseSensor_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "HeartPulseSensor_1.SIG",
+          "to": "SIG"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

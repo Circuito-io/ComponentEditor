@@ -35,22 +35,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HallU1881_1",
           "part": "HallU1881"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.Vout",
-          "to": "r1.con1"
+          "from": "HallU1881_1.Vout",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.Vcc",
-          "to": "r1.con0"
+          "from": "HallU1881_1.Vcc",
+          "to": "Res10KO_1.con0"
+        },
+        {
+          "from": "HallU1881_1.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "HallU1881_1.Vcc",
+          "to": "Vcc"
+        },
+        {
+          "from": "HallU1881_1.Gnd",
+          "to": "Gnd"
         }
       ],
       "ports": [
@@ -64,7 +76,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -77,7 +90,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -89,11 +103,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -111,22 +126,34 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "HallU1881_1",
           "part": "HallU1881"
         },
         {
-          "name": "r1",
+          "name": "Res10KO_1",
           "part": "Res10KO"
         }
       ],
       "wires": [
         {
-          "from": "this.Vout",
-          "to": "r1.con1"
+          "from": "HallU1881_1.Vout",
+          "to": "Res10KO_1.con1"
         },
         {
-          "from": "this.Vcc",
-          "to": "r1.con0"
+          "from": "HallU1881_1.Vcc",
+          "to": "Res10KO_1.con0"
+        },
+        {
+          "from": "HallU1881_1.Vout",
+          "to": "Vout"
+        },
+        {
+          "from": "HallU1881_1.Vcc",
+          "to": "Vcc"
+        },
+        {
+          "from": "HallU1881_1.Gnd",
+          "to": "Gnd"
         }
       ],
       "ports": [
@@ -140,7 +167,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -153,7 +181,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -165,11 +194,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "cost": 1
     }
   ]
 }
