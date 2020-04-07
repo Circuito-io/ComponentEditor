@@ -1,0 +1,223 @@
+{
+  "name": "DriverL298OneMotor",
+  "category": [
+    "output"
+  ],
+  "blockId": "7654321",
+  "app": {
+    "appName": "L298N Motor Driver with One Hobby DC motors",
+    "image": "http://res.cloudinary.com/circuito/image/upload/ocylg1w2f5ec9sdzwf9x",
+    "numericName": "L298D",
+    "shortName": "DC Motor",
+    "indicators": {
+      "verified": true,
+      "solder": false
+    },
+    "desc": "<p>A DC motor driver with two DC motor. Enables speed and direction control for both DC motor.</p>\n",
+    "visible": true
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "DCMDriverL298"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "DCMDriverL298_1",
+          "part": "DCMDriverL298"
+        },
+        {
+          "name": "DCMotor_1",
+          "part": "DCMotor"
+        }
+      ],
+      "wires": [
+        {
+          "from": "DCMDriverL298_1.OUT1",
+          "to": "DCMotor_1.Coil2"
+        },
+        {
+          "from": "DCMDriverL298_1.OUT2",
+          "to": "DCMotor_1.Coil1"
+        },
+        {
+          "from": "DCMDriverL298_1.INT1",
+          "to": "INT1"
+        },
+        {
+          "from": "DCMDriverL298_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "DCMDriverL298_1.12V",
+          "to": "12V"
+        },
+        {
+          "from": "DCMDriverL298_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "DCMDriverL298_1.INT2",
+          "to": "INT2"
+        },
+        {
+          "from": "DCMDriverL298_1.ENA",
+          "to": "ENA"
+        }
+      ],
+      "ports": [
+        {
+          "name": "INT1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "12V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 8,
+                "spec": "",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 7,
+                "spec": "",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 9,
+                "spec": "Battery",
+                "voltage": "3.7v"
+              },
+              {
+                "cost": 6,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 5,
+                "spec": "",
+                "voltage": "6v"
+              },
+              {
+                "cost": 3,
+                "spec": "",
+                "voltage": "7.4v"
+              },
+              {
+                "cost": 2,
+                "spec": "",
+                "voltage": "9v"
+              },
+              {
+                "cost": 1,
+                "spec": "",
+                "voltage": "12v"
+              }
+            ],
+            "requiresLoad": 400,
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "5V",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "INT2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "ENA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 1,
+                "spec": "PWM",
+                "voltage": "5v"
+              },
+              {
+                "cost": 2,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        }
+      ],
+      "cost": 0
+    }
+  ]
+}
