@@ -1,0 +1,60 @@
+{
+  "name": "MCP4725",
+  "category": [
+    "output"
+  ],
+  "blockId": "8465",
+  "app": {
+    "visible": true,
+    "appName": "MCP4725",
+    "indicators": {
+      "solder": true
+    },
+    "desc": "<p>DAC for arduino</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1586777650/client/download_iidfzk.png"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "I2C DAC Breakout Board 12-Bit DAC w/I2C Interface",
+      "cost": 219,
+      "coders": [
+        "MCP4725"
+      ],
+      "supportedControllers": [
+        "ArduinoNano"
+      ],
+      "parts": [
+        {
+          "name": "ArduinoNano_1",
+          "part": "ArduinoNano",
+          "rotation": 0
+        },
+        {
+          "name": "mcp4725_1",
+          "part": "mcp4725",
+          "rotation": 0
+        }
+      ],
+      "ports": [],
+      "wires": [
+        {
+          "from": "mcp4725_1.SCL",
+          "to": "ArduinoNano_1.5"
+        },
+        {
+          "from": "mcp4725_1.SDA",
+          "to": "ArduinoNano_1.6"
+        },
+        {
+          "from": "mcp4725_1.VCC",
+          "to": "ArduinoNano_1.5v"
+        },
+        {
+          "from": "mcp4725_1.GND",
+          "to": "ArduinoNano_1.GND"
+        }
+      ]
+    }
+  ]
+}
