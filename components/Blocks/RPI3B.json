@@ -1,21 +1,23 @@
 {
   "name": "RPI3B",
   "category": [
-    "controller", "connectivity"
+    "controller",
+    "connectivity"
   ],
   "blockId": "200000",
   "app": {
-    "appName": "Raspberry Pi 3 - Model B - ARMv8 with 1G RAM",
-    "image": "http://res.cloudinary.com/circuito/image/upload/qocb8ymquqhzrtm7hjoe",
+    "visible": true,
     "numericName": "",
     "shortName": "Raspberry Pi 3",
+    "appName": "Raspberry Pi 3 - Model B - ARMv8 with 1G RAM",
+    "image": "http://res.cloudinary.com/circuito/image/upload/qocb8ymquqhzrtm7hjoe",
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>Raspberry Pi 3 model B</p>",
-    "visible": true
+    "desc": "<p>Raspberry Pi 3 model B</p>"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "USB",
