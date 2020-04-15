@@ -5,17 +5,18 @@
   ],
   "blockId": "97",
   "app": {
-    "appName": "Mini Pushbutton Switch",
-    "image": "http://res.cloudinary.com/circuito/image/upload/wg5igne96nassk12c8ga",
+    "visible": true,
     "numericName": "",
     "shortName": "Mini Pushbutton",
+    "appName": "Mini Pushbutton Switch",
+    "image": "http://res.cloudinary.com/circuito/image/upload/wg5igne96nassk12c8ga",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>This tiny button allows you to control your circuit with a simple push - push to turn on, push to turn off, or do any other operation :).<br><strong>Returned values</strong>: 0 for no press, 1 for press.</p>\n",
-    "visible": true
+    "desc": "<p>This tiny button allows you to control your circuit with a simple push - push to turn on, push to turn off, or do any other operation :).<br><strong>Returned values</strong>: 0 for no press, 1 for press.</p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "5v",
