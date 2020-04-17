@@ -1,0 +1,86 @@
+{
+  "name": "PH_sensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "7184",
+  "app": {
+    "visible": true,
+    "appName": "PH meter v2.0",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>A pH meter is a scientific instrument that measures the hydrogen-ion activity in water-based solutions, indicating its acidity or alkalinity expressed as pH.</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1587133579/client/s75-0249p01wl_yybp78.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "5v",
+      "cost": 0,
+      "coders": [
+        "PH_sensor"
+      ],
+      "parts": [
+        {
+          "name": "PH_sensor_1",
+          "part": "PH_sensor"
+        }
+      ],
+      "ports": [
+        {
+          "name": "analog",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "PH_sensor_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "PH_sensor_1.analog",
+          "to": "analog"
+        },
+        {
+          "from": "PH_sensor_1.VCC",
+          "to": "VCC"
+        }
+      ]
+    }
+  ]
+}
