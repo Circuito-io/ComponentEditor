@@ -1,0 +1,32 @@
+{
+  "name": "Agrumino",
+  "category": [
+    "controller"
+  ],
+  "blockId": "5864",
+  "app": {
+    "visible": true,
+    "appName": "Agrumino",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<h2>Agrumino OpenSource Temperature and Soil Moisture sensor</h2>\n\n<p>Agrumino not only a simple Temperature and Soil Moisture sensor, but is a very DevBoard.<br><br><b>Technical specifications</b></p>\n<br>Chip Esp8266 with Wifi 2,4 Ghz,Temperature sensor, Lux sensor, Soil Moisture sensor, I2C connector, Level sensor connector, connector for 2 GPIO, connector for water pump (3,7 V), 1 custom button, connector for external power battery (example 18650 3,7 V), battery Holder for Lir2450 Rechargeable (included).<br><br>For detail visit <b>https://bit.ly/2Ya3vK7</b>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1588255285/client/Interactive_ytieo5.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "Agrumino",
+      "cost": 36,
+      "coders": [
+        "Agrumino"
+      ],
+      "parts": [
+        {
+          "name": "Agrumino_1",
+          "part": "Agrumino"
+        }
+      ]
+    }
+  ]
+}
