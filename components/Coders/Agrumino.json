@@ -1,6 +1,16 @@
 {
   "name": "Agrumino",
+  "files": [
+    "Agrumino.zip"
+  ],
+  "license": "GPL3",
   "instantiate": {
     "varname": "agrumino"
+  },
+  "includeHeaders": [],
+  "code": {
+    "global": "\n#include <Agrumino.h>\n#define SLEEP_TIME_SEC 2",
+    "constructors": "Agrumino agrumino;",
+    "setup": "void setup() {\n  Serial.begin(115200);\n  agrumino.setup();"
   }
 }
