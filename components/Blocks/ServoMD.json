@@ -5,17 +5,18 @@
   ],
   "blockId": "10334",
   "app": {
-    "appName": "Standard Size - High Torque - Metal Gear Servo - MG995",
-    "image": "http://res.cloudinary.com/circuito/image/upload/uqdlbgo77ihzuikdqodi",
+    "visible": true,
     "numericName": "MG995",
     "shortName": "Servo",
+    "appName": "Standard Size - High Torque - Metal Gear Servo - MG995",
+    "image": "http://res.cloudinary.com/circuito/image/upload/uqdlbgo77ihzuikdqodi",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>Standard size high torque with metal gear servo. You can use to rotate an object, or move a robotic arm. <a href=\"https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard\"></p>\n",
-    "visible": true
+    "desc": "<p>Standard size high torque with metal gear servo. You can use to rotate an object, or move a robotic arm. <a href=\"https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard\"></p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "default",
@@ -52,7 +53,7 @@
               {
                 "cost": 0,
                 "spec": "",
-                "voltage": "GND"
+                "voltage": "6v"
               }
             ],
             "portType": "requires"
