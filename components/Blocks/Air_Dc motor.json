@@ -1,0 +1,32 @@
+{
+  "name": "Air_Dc motor",
+  "category": [
+    "output"
+  ],
+  "blockId": "9996",
+  "app": {
+    "visible": true,
+    "appName": "Air DC motor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>Air DC Motor pumps out air.</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1589551091/client/51j0t_xp1bL._SL1100__yvyr1r.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "Air_Dc motor"
+      ],
+      "parts": [
+        {
+          "name": "VaccumPump_1",
+          "part": "VaccumPump"
+        }
+      ]
+    }
+  ]
+}
