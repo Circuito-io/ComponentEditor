@@ -1,0 +1,86 @@
+{
+  "name": "AC_Light Dimmer",
+  "category": [
+    "power"
+  ],
+  "blockId": "9972",
+  "app": {
+    "visible": true,
+    "appName": "AC Light Dimmer",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>AC Light Dimmer Module, 1 Channel, 3.3V/5V logic, AC 50/60hz, 220V/110V</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1596009726/client/httprobotdyn.compubmedia0g-00005677mod-dimmer-5a-1lphotophototop0g-00005677mod-dimmer-5a-1l_hijab1.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "AC_Light Dimmer"
+      ],
+      "parts": [
+        {
+          "name": "ESP8266_1",
+          "part": "ESP8266"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ZC",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PWM",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "PWM",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
