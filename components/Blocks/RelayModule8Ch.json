@@ -1,0 +1,283 @@
+{
+  "name": "RelayModule8ch",
+  "category": [
+    "output"
+  ],
+  "blockId": "442979",
+  "app": {
+    "visible": true,
+    "numericName": "",
+    "shortName": "Relay Module 8-Ch",
+    "appName": "Relay Module 8-Ch",
+    "image": "http://res.cloudinary.com/circuito/image/upload/buubzdfet1iei6jxhdi4",
+    "indicators": {
+      "verified": true,
+      "solder": false
+    },
+    "desc": "<p>8 channel Relay module.</p>"
+  },
+  "altComp": {
+    "block": "RelayModule8Ch"
+  },
+  "circuits": [
+    {
+      "name": "default",
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "cost": 0,
+      "wires": [
+        {
+          "from": "RelayModule8ch_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "RelayModule8ch_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "IN1",
+          "to": "IN1"
+        },
+        {
+          "from": "IN2",
+          "to": "IN2"
+        },
+        {
+          "from": "IN3",
+          "to": "IN3"
+        },
+        {
+          "from": "IN4",
+          "to": "IN4"
+        },
+        {
+          "from": "IN5",
+          "to": "IN5"
+        },
+        {
+          "from": "IN6",
+          "to": "IN6"
+        },
+        {
+          "from": "IN7",
+          "to": "IN7"
+        },
+        {
+          "from": "IN8",
+          "to": "IN8"
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "IN1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN5",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN6",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN7",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "IN8",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalOut",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalOut",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        }
+      ],
+      "parts": [
+        {
+          "name": "RelayModule8ch_1",
+          "part": "RelayModule8ch",
+          "rotation": 0
+        }
+      ],
+      "coders": [
+        "RelayModule8ch"
+      ]
+    }
+  ]
+}
