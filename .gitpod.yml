@@ -1,8 +1,6 @@
-ports:
-  - port: 8080
-    onOpen: open-preview
-  - port: 9856
-    onOpen: ignore
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
-  - init: git submodule init && git submodule update && npm install --only=prod
-    command: git submodule update && npm start
+  - init: npm install && npm run build
+    command: npm run start
