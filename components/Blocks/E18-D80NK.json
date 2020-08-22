@@ -1,0 +1,95 @@
+{
+  "name": "E18-D80NK",
+  "category": [
+    "input"
+  ],
+  "blockId": "7316",
+  "app": {
+    "visible": true,
+    "appName": "E18-D80NK Infrared Photoelectric Sensor Switch ",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>The E18-D80NK digital proximity sensor uses an infrared LED and receiver to determine the presence of an object within a specific distance. These make great obstacle detectors and can also be used as an optical gate or in positioning applications where stopping at certain distance is needed</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1598030351/client/tunable-3-50cm-e18-d50nk-infrared-obstacle-avoidance-sensor_tdvdp3.png"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "5v",
+      "cost": 0,
+      "coders": [
+        "E18-D80NK"
+      ],
+      "supportedControllers": [
+        "ArduinoUno",
+        "ArduinoMega",
+        "ATMega328P"
+      ],
+      "parts": [
+        {
+          "name": "E18-D80NK_1",
+          "part": "E18-D80NK"
+        }
+      ],
+      "ports": [
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "requiresLoad": 100
+          }
+        },
+        {
+          "name": "OUT",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        }
+      ],
+      "wires": [
+        {
+          "from": "E18-D80NK_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "E18-D80NK_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "E18-D80NK_1.OUT",
+          "to": "OUT"
+        }
+      ]
+    }
+  ]
+}

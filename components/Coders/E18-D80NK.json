@@ -1,0 +1,16 @@
+{
+  "name": "E18-D80NK",
+  "supportedControllers": [
+    "ArduinoUno",
+    "ArduinoMega"
+  ],
+  "license": "ArduinoIDE",
+  "instantiate": {
+    "varname": "e18d80nk"
+  },
+  "includeHeaders": [],
+  "code": {
+    "setup": "pinMode({{OUT}}, INPUT_PULLUP);",
+    "snippetCode": "//Read E18-D80NK Sensor. {{varname}}Var will be LOW if an Obstacle was detected\n//Use the onboard trimmer to set the distance of alert\nint {{varname}}Var = digitalRead({{OUT}});\nSerial.print(F(\"e18d80nk: \"));\nif ({{varname}}Var == LOW) {\n  Serial.println(\"Obstacle Detected.\");  \n} else {\n  Serial.println(\"No Obstacle Detected.\");  \n}\n"
+  }
+}
