@@ -5,17 +5,18 @@
   ],
   "blockId": "11574",
   "app": {
-    "appName": "Heart Rate Pulse Sensor",
-    "image": "http://res.cloudinary.com/circuito/image/upload/bqqyujbhdcpmzrtpwk8h",
+    "visible": true,
     "numericName": "",
     "shortName": "Pulse Sensor",
+    "appName": "Heart Rate Pulse Sensor",
+    "image": "http://res.cloudinary.com/circuito/image/upload/bqqyujbhdcpmzrtpwk8h",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>An analog heart rate pulse sensor. It can be used to measure your heart bpm.<br><strong>Returned values</strong>: 0 to 1023 analog reading.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"https://www.dfrobot.com/index.php?route=product/product&product_id=1540\">Heart Rate Monitor Sensor For Arduino</a>.</p>\n",
-    "visible": true
+    "desc": "<p>An analog heart rate pulse sensor. It can be used to measure your heart bpm.<br><strong>Returned values</strong>: 0 to 1023 analog reading.<br><strong>Sample applications</strong>: <a target=\"_blank\" href=\"https://www.dfrobot.com/index.php?route=product/product&product_id=1540\">Heart Rate Monitor Sensor For Arduino</a>.</p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "5v",
@@ -104,13 +105,7 @@
         "HeartPulseSensor"
       ],
       "supportedControllers": [
-        "ArduinoGemma",
-        "ArduinoProMini3v3",
-        "ESP32DevKitC",
-        "NodeMCU",
-        "RPI3B",
-        "ATTiny85",
-        "Teensy32"
+        "ArduinoUno"
       ],
       "parts": [
         {
