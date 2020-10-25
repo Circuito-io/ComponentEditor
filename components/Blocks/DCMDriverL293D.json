@@ -5,17 +5,18 @@
   ],
   "blockId": "7654332",
   "app": {
-    "appName": "L293D Motor Driver with Dual Micro DC Motor (Geared)",
-    "image": "",
+    "visible": true,
     "numericName": "L293D",
     "shortName": "Micro DC Motors with Driver",
+    "appName": "L293D Motor Driver with Dual Micro DC Motor (Geared)",
+    "image": "",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>A DC motor driver with two Micro Gearmotor. Enables speed and direction control for both DC motor.</p>\n",
-    "visible": true
+    "desc": "<p>A DC motor driver with two Micro Gearmotor. Enables speed and direction control for both DC motor.</p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "default",
@@ -45,10 +46,6 @@
         {
           "name": "DCMotorB_1",
           "part": "DCMotorB"
-        },
-        {
-          "name": "DCMotorB_2",
-          "part": "DCMotorB"
         }
       ],
       "wires": [
@@ -59,14 +56,6 @@
         {
           "from": "DCMDriverL293D_1.Out2",
           "to": "DCMotorB_1.Coil2"
-        },
-        {
-          "from": "DCMDriverL293D_1.Out3",
-          "to": "DCMotorB_2.Coil1"
-        },
-        {
-          "from": "DCMDriverL293D_1.Out4",
-          "to": "DCMotorB_2.Coil2"
         },
         {
           "from": "DCMDriverL293D_1.Enable1",
@@ -93,24 +82,12 @@
           "to": "+Vmotor"
         },
         {
-          "from": "DCMDriverL293D_1.Enable2",
-          "to": "Enable2"
-        },
-        {
-          "from": "DCMDriverL293D_1.In3",
-          "to": "In3"
-        },
-        {
           "from": "DCMDriverL293D_1.GND3",
           "to": "GND3"
         },
         {
           "from": "DCMDriverL293D_1.GND4",
           "to": "GND4"
-        },
-        {
-          "from": "DCMDriverL293D_1.In4",
-          "to": "In4"
         },
         {
           "from": "DCMDriverL293D_1.+V",
