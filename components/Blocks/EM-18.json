@@ -1,0 +1,32 @@
+{
+  "name": "EM-18",
+  "category": [
+    "input"
+  ],
+  "blockId": "9330",
+  "app": {
+    "visible": true,
+    "appName": "EM-18",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p></p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1604249634/client/EM-18_EM18_RFID_Reader_Module__2__zddwa5.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "EM-18"
+      ],
+      "parts": [
+        {
+          "name": "Reader_1",
+          "part": "Reader"
+        }
+      ]
+    }
+  ]
+}
