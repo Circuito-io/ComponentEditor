@@ -1,0 +1,35 @@
+{
+  "name": "XBee_RF",
+  "category": [
+    "connectivity"
+  ],
+  "blockId": "9384",
+  "app": {
+    "visible": true,
+    "appName": "XBee RF",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p> Radio RF component</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1605521066/client/XBee_aoiuuc.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "XBee_RF"
+      ],
+      "supportedControllers": [
+        "ArduinoUno"
+      ],
+      "parts": [
+        {
+          "name": "Xbee_RF_1",
+          "part": "Xbee_RF"
+        }
+      ]
+    }
+  ]
+}
