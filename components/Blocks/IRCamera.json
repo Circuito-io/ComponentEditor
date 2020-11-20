@@ -5,17 +5,18 @@
   ],
   "blockId": "908638",
   "app": {
-    "appName": "AMG8833 IR Thermal Camera Breakout",
-    "image": "http://res.cloudinary.com/circuito/image/upload/idvgt23v69jfv9wwubzf",
+    "visible": true,
     "numericName": "AMG8833",
     "shortName": "IR Thermal Camera",
+    "appName": "AMG8833 IR Thermal Camera Breakout",
+    "image": "http://res.cloudinary.com/circuito/image/upload/idvgt23v69jfv9wwubzf",
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>This sensor from Panasonic is an 8x8 array of IR thermal sensors, it returns an array of 64 individual infrared temperature readings over I2C. It\u2019s like having compact thermal camera but in low resolution.</p>",
-    "visible": true
+    "desc": "<p>This sensor from Panasonic is an 8x8 array of IR thermal sensors, it returns an array of 64 individual infrared temperature readings over I2C. It’s like having compact thermal camera but in low resolution.</p>"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "5v",
