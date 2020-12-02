@@ -1,0 +1,245 @@
+{
+  "name": "KeyPadMem4x4",
+  "category": [
+    "input"
+  ],
+  "blockId": "8654",
+  "app": {
+    "visible": true,
+    "numericName": "",
+    "shortName": "4x4 Matrix Keypad",
+    "appName": "Membrane 4x4 Matrix Keypad",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1606939909/client/keypad_v9umyt.png",
+    "indicators": {
+      "verified": true,
+      "solder": false
+    },
+    "desc": "<p>A simple 4-by-4 membrane Keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed KeyPad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"http://www.vathsav.com/post/arduino_calculator.html\">Arduino Calculator</a></p>\n"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "coders": [
+        "KeyPadMem4x4"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "KeyPadMem4x4_1",
+          "part": "KeyPadMem4x4"
+        }
+      ],
+      "ports": [
+        {
+          "name": "row1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "row2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "row3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "row4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col1",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col2",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col3",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col4",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true,
+            "portType": "requires"
+          },
+          "includeInFirmware": true
+        }
+      ],
+      "wires": [
+        {
+          "from": "KeyPadMem4x4_1.row1",
+          "to": "row1"
+        },
+        {
+          "from": "KeyPadMem4x4_1.row2",
+          "to": "row2"
+        },
+        {
+          "from": "KeyPadMem4x4_1.row3",
+          "to": "row3"
+        },
+        {
+          "from": "KeyPadMem4x4_1.row4",
+          "to": "row4"
+        },
+        {
+          "from": "KeyPadMem4x4_1.col1",
+          "to": "col1"
+        },
+        {
+          "from": "KeyPadMem4x4_1.col2",
+          "to": "col2"
+        },
+        {
+          "from": "KeyPadMem4x4_1.col3",
+          "to": "col3"
+        },
+        {
+          "from": "KeyPadMem4x4_1.col4",
+          "to": "col4"
+        }
+      ],
+      "cost": 0
+    }
+  ]
+}
