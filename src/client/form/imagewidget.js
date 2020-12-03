@@ -26,7 +26,7 @@ export function ImageWidget(props) {
       <FormControl
         type="text"
         disabled={true}
-        value={props.value}
+        value={props.value || ""}
         required={props.required}
         placeholder="https://"
         onChange={event => props.onChange(event.target.value)}

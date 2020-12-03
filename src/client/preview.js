@@ -103,8 +103,8 @@ export class Preview extends React.Component {
           </Modal.Header>
           <Modal.Body
             style={{
-              "max-height": "calc(100vh - 210px)",
-              "overflow-y": "auto"
+              "maxHeight": "calc(100vh - 210px)",
+              "overflowY": "auto"
             }}
             dangerouslySetInnerHTML={{ __html: this.state.modalMsg }}
           />

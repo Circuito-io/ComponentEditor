@@ -10,8 +10,6 @@ var partSchema = require("../../../../circuito-schema/part.json");
 var blockSchema = require("../../../../circuito-schema/block.json");
 var coderSchema = require("../../../../circuito-schema/coder.json");
 
-var schema = { type: "number" };
-
 function setDifference(setA, setB) {
   var _difference = new Set(setA);
   for (var elem of setB) {
@@ -61,7 +59,7 @@ const walkDirSync = (
       // case json data file
 
       var data = JSON.parse(dataraw);
-      data.path=`${type}/${basename}`; // add file path to data
+      data.path = `${type}/${basename}`; // add file path to data
 
       if (type == "Coders" && data.name) {
         // for coder, find files under the relevant folder and compare to files field
@@ -139,7 +137,10 @@ exports.upload = function(req, res) {
   if (errorString) {
     global.analytics.track({
       userId: global.userid,
-      event: "Schema Failed"
+      event: "Schema Failed",
+      properties: {
+        error: errorString
+      }
     });
 
     console.log("Found schema errors, aborting");
