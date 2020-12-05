@@ -1,0 +1,37 @@
+{
+  "name": "Submersible_DC Water Pump",
+  "category": [
+    "output"
+  ],
+  "blockId": "5271",
+  "app": {
+    "visible": true,
+    "appName": "Submersible DC Water Pump",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>A simple 5V DC submersible water pump.<br>Use this pump to water your plants!<br>Specifications:<br><li>Rated voltage: 5V DC.<br><li>Max rated current: 0.1-0.2A.<br><li>Flow Rate 1.2-1.6 L/min.<br><li>Suction Distance: 0.8 meter (Max).<br><li>SLife of Pump: 500 Hour.<br><li>Size: 4.5x3.0x2.5 cm.<br><li>Submersible installation and entirely waterproof.</p>\n\n\n",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1606976560/client/dc_pump_umbcso.png"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "5v Dc Pump",
+      "cost": 0,
+      "coders": [
+        "Submersible_DC Water Pump"
+      ],
+      "parts": [
+        {
+          "name": "SubWaterPump_1",
+          "part": "SubWaterPump"
+        }
+      ],
+      "supportedControllers": [
+        "ArduinoNano",
+        "ArduinoUno",
+        "NodeMCU1"
+      ]
+    }
+  ]
+}
