@@ -1,0 +1,119 @@
+{
+  "name": "LDR_Sensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "7198",
+  "app": {
+    "visible": true,
+    "appName": "LDR Sensor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>Light intensity detection module with analog or digital output.</p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1608577064/client/LDR_Modules_500x_cum2ur.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "LDR_Sensor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoProMini3v3",
+        "ArduinoUno",
+        "ArduinoMega"
+      ],
+      "parts": [
+        {
+          "name": "LDR_SENSOR_1",
+          "part": "LDR_SENSOR",
+          "rotation": 0
+        }
+      ],
+      "ports": [
+        {
+          "name": "VCC",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              },
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "A0",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": false
+        },
+        {
+          "name": "D0",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn"
+              }
+            ],
+            "unique": true
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "LDR_SENSOR_1.A0",
+          "to": "A0"
+        },
+        {
+          "from": "LDR_SENSOR_1.D0",
+          "to": "D0"
+        },
+        {
+          "from": "LDR_SENSOR_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LDR_SENSOR_1.VCC",
+          "to": "VCC"
+        }
+      ]
+    }
+  ]
+}
