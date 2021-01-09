@@ -5,16 +5,16 @@
   ],
   "blockId": "11021",
   "app": {
-    "appName": "Arduino Uno - R3",
-    "image": "http://res.cloudinary.com/circuito/image/upload/rk0xnhbo7iiviyw1nwjx",
+    "visible": true,
     "numericName": "",
     "shortName": "Arduino Uno",
+    "appName": "Arduino Uno - R3",
+    "image": "http://res.cloudinary.com/circuito/image/upload/rk0xnhbo7iiviyw1nwjx",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>The UNO is the best board to get started with electronics and coding. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with.<br>The UNO is the most used and documented board of the whole Arduino &amp; Genuino family. Arduino/Genuino Uno is a microcontroller board based on the ATmega328P (datasheet).<br>It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset button.<br>It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.<br>You can tinker with your UNO without worring too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again - <a target=\"_blank\" href=\"https://www.arduino.cc/en/Main/ArduinoBoardUno\">More Info</a>.</p>\n<p>This text is provided under the <strong>Creative Commons Attribution ShareAlike 3.0</strong></p>\n",
-    "visible": true
+    "desc": "<p>The UNO is the best board to get started with electronics and coding. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with.<br>The UNO is the most used and documented board of the whole Arduino &amp; Genuino family. Arduino/Genuino Uno is a microcontroller board based on the ATmega328P (datasheet).<br>It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset button.<br>It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.<br>You can tinker with your UNO without worring too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again - <a target=\"_blank\" href=\"https://www.arduino.cc/en/Main/ArduinoBoardUno\">More Info</a>.</p>\n<p>This text is provided under the <strong>Creative Commons Attribution ShareAlike 3.0</strong></p>\n"
   },
   "altComp": {
     "cost": 1000,
@@ -358,10 +358,6 @@
           "interface": {
             "provides": [
               {
-                "spec": "ADC",
-                "voltage": ""
-              },
-              {
                 "spec": "DigitalIn",
                 "voltage": "5v"
               },
@@ -418,10 +414,6 @@
           "interface": {
             "provides": [
               {
-                "spec": "ADC",
-                "voltage": ""
-              },
-              {
                 "spec": "DigitalIn",
                 "voltage": "5v"
               },
@@ -442,10 +434,6 @@
           "interface": {
             "provides": [
               {
-                "spec": "ADC",
-                "voltage": ""
-              },
-              {
                 "spec": "DigitalIn",
                 "voltage": "5v"
               },
@@ -461,10 +449,6 @@
           "name": "A5",
           "interface": {
             "provides": [
-              {
-                "spec": "ADC",
-                "voltage": ""
-              },
               {
                 "spec": "DigitalIn",
                 "voltage": "5v"
@@ -536,10 +520,6 @@
           "interface": {
             "provides": [
               {
-                "spec": "ADC",
-                "voltage": ""
-              },
-              {
                 "spec": "DigitalIn",
                 "voltage": "5v"
               },
@@ -555,10 +535,6 @@
           "name": "A2",
           "interface": {
             "provides": [
-              {
-                "spec": "ADC",
-                "voltage": ""
-              },
               {
                 "spec": "DigitalIn",
                 "voltage": "5v"
