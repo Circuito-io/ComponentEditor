@@ -1,0 +1,32 @@
+{
+  "name": "PH_Sensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "8392",
+  "app": {
+    "visible": true,
+    "appName": "PH Sensor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p></p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1617408924/client/PH_Sensor_htauck.jpg"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "PH_Sensor"
+      ],
+      "parts": [
+        {
+          "name": "ArduinoUno_1",
+          "part": "ArduinoUno"
+        }
+      ]
+    }
+  ]
+}
