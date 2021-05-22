@@ -5,17 +5,18 @@
   ],
   "blockId": "7654323",
   "app": {
-    "appName": "L298N Motor Driver with Dual Micro DC Motors (Geared)",
-    "image": "http://res.cloudinary.com/circuito/image/upload/jhghjyuif8mxzclwx6tx",
+    "visible": true,
     "numericName": "L298D",
     "shortName": "Micro DC Motor",
+    "appName": "L298N Motor Driver with Dual Micro DC Motors (Geared)",
+    "image": "http://res.cloudinary.com/circuito/image/upload/jhghjyuif8mxzclwx6tx",
     "indicators": {
       "verified": true,
       "solder": false
     },
-    "desc": "<p>A DC motor driver with two Micro Gearmotor. Enables speed and direction control for both DC motor.</p>\n",
-    "visible": true
+    "desc": "<p>A DC motor driver with two Micro Gearmotor. Enables speed and direction control for both DC motor.</p>\n"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "default",
@@ -42,12 +43,20 @@
           "part": "DCMDriverL298"
         },
         {
-          "name": "DCMotorB_1",
-          "part": "DCMotorB"
+          "name": "DCMotorB1_1",
+          "part": "DCMotorB1"
         },
         {
-          "name": "DCMotorB_2",
-          "part": "DCMotorB"
+          "name": "DCMotorB2_1",
+          "part": "DCMotorB2"
+        },
+        {
+          "name": "DCMotorA1_1",
+          "part": "DCMotorA1"
+        },
+        {
+          "name": "DCMotorA2_1",
+          "part": "DCMotorA2"
         }
       ],
       "wires": [
@@ -66,6 +75,22 @@
         {
           "from": "DCMDriverL298_1.OUT4",
           "to": "DCMotorB_2.Coil1"
+        },
+        {
+          "from": "DCMDriverL298_1.OUT1",
+          "to": "DCMotorA_1.Coil2"
+        },
+        {
+          "from": "DCMDriverL298_1.OUT2",
+          "to": "DCMotorA_1.Coil1"
+        },
+        {
+          "from": "DCMDriverL298_1.OUT3",
+          "to": "DCMotorA_2.Coil2"
+        },
+        {
+          "from": "DCMDriverL298_1.OUT4",
+          "to": "DCMotorA_2.Coil1"
         },
         {
           "from": "DCMDriverL298_1.INT1",
