@@ -1,0 +1,238 @@
+{
+  "name": "Keypad_4x4",
+  "category": [
+    "input"
+  ],
+  "blockId": "9822",
+  "app": {
+    "visible": true,
+    "appName": "Keypad 4x4",
+    "indicators": {
+      "solder": true
+    },
+    "desc": "<p>A simple 4-by-4 keypad matrix. You can set the keys as you wish.</p>\n<p><strong>Return Value</strong>: Returns the pressed keypad.</p>\n<p><strong>Sample Application</strong>: <a target=\"_blank\" href=\"https://cdn-learn.adafruit.com/downloads/pdf/matrix-keypad.pdf\">Keypad 4x4 Matrix</a></p>",
+    "image": "https://res.cloudinary.com/circuito/image/upload/v1622220216/client/4x4_meh4nv.png"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "default",
+      "cost": 0,
+      "coders": [
+        "Keypad_4x4"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoUno",
+        "ArduinoNano",
+        "ArduinoProMini3v3",
+        "ArduinoProMini5v",
+        "ESP32DevKitC",
+        "NodeMCU1",
+        "RPI3B",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "Keypad_1",
+          "part": "Keypad"
+        }
+      ],
+      "ports": [
+        {
+          "name": "row1",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "row2",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "row3",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "row4",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col1",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col2",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col3",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        },
+        {
+          "name": "col4",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "DigitalIn",
+                "voltage": "3.3v"
+              },
+              {
+                "cost": 1,
+                "spec": "DigitalIn",
+                "voltage": "5v"
+              }
+            ],
+            "unique": true
+          },
+          "includeInFirmware": true
+        }
+      ],
+      "wires": [
+        {
+          "from": "Keypad_1.row1",
+          "to": "row1"
+        },
+        {
+          "from": "Keypad_1.row2",
+          "to": "row2"
+        },
+        {
+          "from": "Keypad_1.row3",
+          "to": "row3"
+        },
+        {
+          "from": "Keypad_1.row4",
+          "to": "row4"
+        },
+        {
+          "from": "Keypad_1.col1",
+          "to": "col1"
+        },
+        {
+          "from": "Keypad_1.col2",
+          "to": "col2"
+        },
+        {
+          "from": "Keypad_1.col3",
+          "to": "col3"
+        }
+      ]
+    }
+  ]
+}
