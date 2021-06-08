@@ -1,0 +1,26 @@
+{
+  "name": "voltage Sensor",
+  "displayName": "Voltage Sensor",
+  "desc": "This module is based on principle of resistive voltage divider design, can make the red terminal connector input voltage to 5 times smaller.\nArduino analog input voltages up to 5 v, the voltage detection module input voltage not greater than 5Vx5=25V (if using 3.3V systems, input voltage not greater than 3.3Vx5=16.5V).\nArduino AVR chips have 10-bit AD, so this module simulates a resolution of 0.00489V (5V/1023), so the minimum voltage of input voltage detection module is 0.00489Vx5=0.02445V.\nVoltage input range: DC0-25 V.\nVoltage detection range: DC0.02445 V-25 V.\nVoltage analog resolution: 0.00489 V.\nOutput interface: \"+ \"connected 5/3.3V, \"-\" connected GND, \"s\" connected Arduino AD pins.\nDC input interface: red terminal positive with VCC, negative with GND.",
+  "category": [
+    "input"
+  ],
+  "placing": {
+    "onBreadboard": false
+  },
+  "bom": [
+    {
+      "name": "other",
+      "link": "https://www.amazon.com/gp/product/B01HTC4XKY/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1",
+      "headers": {
+        "type": "MaleHeaders",
+        "qty": 3
+      },
+      "image": "https://res.cloudinary.com/circuito/image/upload/v1623176060/client/voltage_sensor_1_o1ayvc.jpg"
+    }
+  ],
+  "info": {
+    "setup": "Simple voltage divider. Reads DC 0-24v and outputs 0-5v",
+    "test": ""
+  }
+}
