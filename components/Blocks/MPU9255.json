@@ -5,17 +5,18 @@
   ],
   "blockId": "229604",
   "app": {
-    "appName": "MPU-9255 - Triple Axis Accelerometer ,Gyro and Magnetometer Breakout",
-    "image": "",
+    "visible": true,
     "numericName": "MPU9255",
     "shortName": "Triple-axis Accelerometer ,Gyro and Magnetometer",
+    "appName": "MPU-9255 - Triple Axis Accelerometer ,Gyro and Magnetometer Breakout",
+    "image": "",
     "indicators": {
       "verified": false,
       "solder": false
     },
-    "desc": "<p>The MPU-9255 is a triple axis accelerometer, gyro and magnetometer combined, allowing a very deep motion detection and analysis.</p>",
-    "visible": true
+    "desc": "<p>The MPU-9255 is a triple axis accelerometer, gyro and magnetometer combined, allowing a very deep motion detection and analysis.</p>"
   },
+  "altComp": {},
   "circuits": [
     {
       "name": "default",
@@ -51,7 +52,7 @@
               {
                 "cost": 0,
                 "spec": "",
-                "voltage": "3.3v"
+                "voltage": "5v"
               }
             ],
             "portType": "requires"
@@ -106,6 +107,19 @@
               }
             ],
             "portType": "requires"
+          }
+        },
+        {
+          "name": "INT",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ]
           }
         }
       ],
