@@ -1,0 +1,211 @@
+{
+  "app": {
+    "indicators": {
+      "verified": false,
+      "solder": false
+    },
+    "appName": "Grove - Laser PM2.5 Dust Sensor - Arduino Compatible - HM3301",
+    "image": "https://raw.githubusercontent.com/SeeedDocument/Grove-Laser_PM2.5_Sensor-HM3301/master/img/pin_out.jpg",
+    "numericName": "HM3301",
+    "shortName": "Grove - Laser PM2.5 Dust Sensor",
+    "desc": "<p>The Grove - Laser PM2.5 Sensor (HM3301) is a new generation of laser dust detection sensor,  which is used for continuous and real-time detection of dust in the air. With its stable output, low noise, and ultra-low power consumption, it is suitable for air conditioners, intelligent air purifiers, and other air quality-related IoT projects.</p>",
+    "visible": true
+  },
+  "altComp": {},
+  "name": "HM3301",
+  "category": [
+    "input"
+  ],
+  "blockId": "35288",
+  "circuits": [
+    {
+      "name": "5v",
+      "coders": [
+        "HM3301"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "HM3301_1",
+          "part": "HM3301"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "5v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "5v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "requires"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "HM3301_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "HM3301_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "HM3301_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "HM3301_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
+    },
+    {
+      "name": "3v3",
+      "coders": [
+        "HM3301"
+      ],
+      "supportedControllers": [
+        "ArduinoProMini3v3",
+        "ESP32DevKitC",
+        "NodeMCU",
+        "RPI3B",
+        "ATTiny85",
+        "Teensy32"
+      ],
+      "parts": [
+        {
+          "name": "HM3301_1",
+          "part": "HM3301"
+        }
+      ],
+      "ports": [
+        {
+          "name": "SDA",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SDA",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "SCL",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "SCL",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "VIN",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "3.3v"
+              }
+            ],
+            "portType": "requires"
+          }
+        },
+        {
+          "name": "GND",
+          "interface": {
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ],
+            "portType": "requires"
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "HM3301_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "HM3301_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "HM3301_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "HM3301_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
+    }
+  ]
+}
