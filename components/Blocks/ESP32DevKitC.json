@@ -1,21 +1,23 @@
 {
-  "name": "ESP32DevKitC",
-  "category": [
-    "controller", "connectivity"
-  ],
-  "blockId": "360217",
   "app": {
-    "appName": "ESP32 - DevKitC",
-    "image": "http://res.cloudinary.com/circuito/image/upload/pnyzx8n98v6tjfhydm0q",
-    "numericName": "",
-    "shortName": "ESP32 - DevKitC",
     "indicators": {
       "verified": false,
       "solder": false
     },
+    "appName": "ESP32 - DevKitC",
+    "image": "http://res.cloudinary.com/circuito/image/upload/pnyzx8n98v6tjfhydm0q",
+    "numericName": "",
+    "shortName": "ESP32 - DevKitC",
     "desc": "<p>ESP32-DevKitC is a small-sized ESP32-based development board. Built around the ESP-WROOM-32. It features a Wi-Fi and Bluetooth combo set, alongside optimized pinout to enable prototyping on a breadboard.</p>",
     "visible": true
   },
+  "altComp": {},
+  "name": "ESP32DevKitC",
+  "category": [
+    "controller",
+    "connectivity"
+  ],
+  "blockId": "360217",
   "circuits": [
     {
       "name": "USB",
@@ -1123,6 +1125,10 @@
         {
           "from": "ESP32DevKitC_1.USB_MICRO",
           "to": "USB_MICRO"
+        },
+        {
+          "from": "ESP32DevKitC_1.RDX0",
+          "to": "RXD0"
         }
       ],
       "cost": 1
@@ -2241,6 +2247,10 @@
         {
           "from": "ESP32DevKitC_1.USB_MICRO",
           "to": "USB_MICRO"
+        },
+        {
+          "from": "ESP32DevKitC_1.RDX0",
+          "to": "RXD0"
         }
       ],
       "cost": 3
