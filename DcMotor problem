@@ -1,0 +1,338 @@
+
+// Include Libraries
+#include "Arduino.h"
+#include "DCMotor.h"
+#include "Button.h"
+#include "Servo.h"
+#include "StepperMotor.h"
+
+
+// Pin Definitions
+#define dcMotor	5
+#define IROBJAVOID_1_PIN_OUT	2
+#define IROBJAVOID_2_PIN_OUT	3
+#define IROBJAVOID_3_PIN_OUT	4
+#define IROBJAVOID_4_PIN_OUT	6
+#define IROBJAVOID_5_PIN_OUT	7
+#define MICROSWITCH_PIN_COM	8
+#define SERVO9G1_1_PIN_SIG	9
+#define SERVO9G2_2_PIN_SIG	10
+#define SERVO9G3_3_PIN_SIG	11
+#define SERVO9G4_4_PIN_SIG	12
+#define SERVO9G5_5_PIN_SIG	13
+#define STEPPER_PIN_STEP	A4
+#define STEPPER_PIN_DIR	A3
+
+
+
+// Global variables and defines
+const int servo9g1_1RestPosition   = 20;  //Starting position
+const int servo9g1_1TargetPosition = 150; //Position when event is detected
+const int servo9g2_2RestPosition   = 20;  //Starting position
+const int servo9g2_2TargetPosition = 150; //Position when event is detected
+const int servo9g3_3RestPosition   = 20;  //Starting position
+const int servo9g3_3TargetPosition = 150; //Position when event is detected
+const int servo9g4_4RestPosition   = 20;  //Starting position
+const int servo9g4_4TargetPosition = 150; //Position when event is detected
+const int servo9g5_5RestPosition   = 20;  //Starting position
+const int servo9g5_5TargetPosition = 150; //Position when event is detected
+#define stepperDelayTime  1000
+// object initialization
+DCMotor dcMotor(DCMOTOR_PIN_COIL1);
+Button microSwitch(MICROSWITCH_PIN_COM);
+Servo servo9g1_1;
+Servo servo9g2_2;
+Servo servo9g3_3;
+Servo servo9g4_4;
+Servo servo9g5_5;
+StepperMotor stepper(STEPPER_PIN_STEP,STEPPER_PIN_DIR);
+
+
+// define vars for testing menu
+const int timeout = 10000;       //define timeout of 10 sec
+char menuOption = 0;
+long time0;
+
+// Setup the essentials for your circuit to work. It runs first every time your circuit is powered with electricity.
+void setup() 
+{
+    // Setup Serial which is useful for debugging
+    // Use the Serial Monitor to view printed messages
+    Serial.begin(9600);
+    while (!Serial) ; // wait for serial port to connect. Needed for native USB
+    Serial.println("start");
+    
+    pinMode(IROBJAVOID_1_PIN_OUT, INPUT);
+    pinMode(IROBJAVOID_2_PIN_OUT, INPUT);
+    pinMode(IROBJAVOID_3_PIN_OUT, INPUT);
+    pinMode(IROBJAVOID_4_PIN_OUT, INPUT);
+    pinMode(IROBJAVOID_5_PIN_OUT, INPUT);
+    microSwitch.init();
+    servo9g1_1.attach(SERVO9G1_1_PIN_SIG);
+    servo9g1_1.write(servo9g1_1RestPosition);
+    delay(100);
+    servo9g1_1.detach();
+    servo9g2_2.attach(SERVO9G2_2_PIN_SIG);
+    servo9g2_2.write(servo9g2_2RestPosition);
+    delay(100);
+    servo9g2_2.detach();
+    servo9g3_3.attach(SERVO9G3_3_PIN_SIG);
+    servo9g3_3.write(servo9g3_3RestPosition);
+    delay(100);
+    servo9g3_3.detach();
+    servo9g4_4.attach(SERVO9G4_4_PIN_SIG);
+    servo9g4_4.write(servo9g4_4RestPosition);
+    delay(100);
+    servo9g4_4.detach();
+    servo9g5_5.attach(SERVO9G5_5_PIN_SIG);
+    servo9g5_5.write(servo9g5_5RestPosition);
+    delay(100);
+    servo9g5_5.detach();
+    // enable the stepper motor, use .disable() to disable the motor
+    stepper.enable();
+    // set stepper motor speed by changing the delay value, the higher the delay the slower the motor will turn
+    stepper.setStepDelay(stepperDelayTime);
+    menuOption = menu();
+    
+}
+
+// Main logic of your circuit. It defines the interaction between the components you selected. After setup, it runs over and over again, in an eternal loop.
+void loop() 
+{
+    
+    
+    if(menuOption == '1') {
+    // Micro DC Motor (Geared) - 90 RPM (6-12V) - Test Code
+    // The DC motor will turn on and off for 4000ms (4 sec)
+    dcMotor.on(200);                        // 1. turns on
+    delay(4000);                             // 2. waits 4000 milliseconds (4 sec). change the value in the brackets (4000) for a longer or shorter delay.
+    dcMotor.off();                       // 3. turns off
+    delay(4000);                             // 4. waits 4000 milliseconds (4 sec). change the value in the brackets (4000) for a longer or shorter delay.
+
+    }
+    else if(menuOption == '2') {
+    // IR Obstacle Avoidance Sensor #1 - Test Code
+    //Read IR obstacle Sensor. irObjAvoid_1Var will be '1' if an Obstacle was detected
+    //Use the onboard trimmer to set the distance of alert
+    bool irObjAvoid_1Var = !digitalRead(IROBJAVOID_1_PIN_OUT);
+    Serial.print(F("ObjAvoid: ")); Serial.println(irObjAvoid_1Var);
+
+    }
+    else if(menuOption == '3') {
+    // IR Obstacle Avoidance Sensor #2 - Test Code
+    //Read IR obstacle Sensor. irObjAvoid_2Var will be '1' if an Obstacle was detected
+    //Use the onboard trimmer to set the distance of alert
+    bool irObjAvoid_2Var = !digitalRead(IROBJAVOID_2_PIN_OUT);
+    Serial.print(F("ObjAvoid: ")); Serial.println(irObjAvoid_2Var);
+
+    }
+    else if(menuOption == '4') {
+    // IR Obstacle Avoidance Sensor #3 - Test Code
+    //Read IR obstacle Sensor. irObjAvoid_3Var will be '1' if an Obstacle was detected
+    //Use the onboard trimmer to set the distance of alert
+    bool irObjAvoid_3Var = !digitalRead(IROBJAVOID_3_PIN_OUT);
+    Serial.print(F("ObjAvoid: ")); Serial.println(irObjAvoid_3Var);
+
+    }
+    else if(menuOption == '5') {
+    // IR Obstacle Avoidance Sensor #4 - Test Code
+    //Read IR obstacle Sensor. irObjAvoid_4Var will be '1' if an Obstacle was detected
+    //Use the onboard trimmer to set the distance of alert
+    bool irObjAvoid_4Var = !digitalRead(IROBJAVOID_4_PIN_OUT);
+    Serial.print(F("ObjAvoid: ")); Serial.println(irObjAvoid_4Var);
+
+    }
+    else if(menuOption == '6') {
+    // IR Obstacle Avoidance Sensor #5 - Test Code
+    //Read IR obstacle Sensor. irObjAvoid_5Var will be '1' if an Obstacle was detected
+    //Use the onboard trimmer to set the distance of alert
+    bool irObjAvoid_5Var = !digitalRead(IROBJAVOID_5_PIN_OUT);
+    Serial.print(F("ObjAvoid: ")); Serial.println(irObjAvoid_5Var);
+
+    }
+    else if(menuOption == '7') {
+    // Micro Switch - Test Code
+    //Read microSwitch state. 
+    //if microSwitch is pressed function will return HIGH (1). if not function will return LOW (0). 
+    //for debounce funtionality try also microSwitch.onPress(), .onRelease() and .onChange().
+    //if debounce is not working properly try changing 'debounceDelay' variable in Button.h
+    bool microSwitchVal = microSwitch.read();
+    Serial.print(F("Val: ")); Serial.println(microSwitchVal);
+    }
+    else if(menuOption == '8') {
+    // 9G Micro Servo #1 - Test Code
+    // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) 
+    servo9g1_1.attach(SERVO9G1_1_PIN_SIG);         // 1. attach the servo to correct pin to control it.
+    servo9g1_1.write(servo9g1_1TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.
+    delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g1_1.write(servo9g1_1RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.
+    delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g1_1.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress.
+    }
+    else if(menuOption == '9') {
+    // 9G Micro Servo #2 - Test Code
+    // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) 
+    servo9g2_2.attach(SERVO9G2_2_PIN_SIG);         // 1. attach the servo to correct pin to control it.
+    servo9g2_2.write(servo9g2_2TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.
+    delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g2_2.write(servo9g2_2RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.
+    delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g2_2.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress.
+    }
+    else if(menuOption == '10') {
+    // 9G Micro Servo #3 - Test Code
+    // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) 
+    servo9g3_3.attach(SERVO9G3_3_PIN_SIG);         // 1. attach the servo to correct pin to control it.
+    servo9g3_3.write(servo9g3_3TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.
+    delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g3_3.write(servo9g3_3RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.
+    delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g3_3.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress.
+    }
+    else if(menuOption == '11') {
+    // 9G Micro Servo #4 - Test Code
+    // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) 
+    servo9g4_4.attach(SERVO9G4_4_PIN_SIG);         // 1. attach the servo to correct pin to control it.
+    servo9g4_4.write(servo9g4_4TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.
+    delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g4_4.write(servo9g4_4RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.
+    delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g4_4.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress.
+    }
+    else if(menuOption == '12') {
+    // 9G Micro Servo #5 - Test Code
+    // The servo will rotate to target position and back to resting position with an interval of 500 milliseconds (0.5 seconds) 
+    servo9g5_5.attach(SERVO9G5_5_PIN_SIG);         // 1. attach the servo to correct pin to control it.
+    servo9g5_5.write(servo9g5_5TargetPosition);  // 2. turns servo to target position. Modify target position by modifying the 'ServoTargetPosition' definition above.
+    delay(500);                              // 3. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g5_5.write(servo9g5_5RestPosition);    // 4. turns servo back to rest position. Modify initial position by modifying the 'ServoRestPosition' definition above.
+    delay(500);                              // 5. waits 500 milliseconds (0.5 sec). change the value in the brackets (500) for a longer or shorter delay in milliseconds.
+    servo9g5_5.detach();                    // 6. release the servo to conserve power. When detached the servo will NOT hold it's position under stress.
+    }
+    else if(menuOption == '13') {
+    // Stepper Motor with EasyDriver - Test Code
+    // the higher the time value the slower the motor will run
+    stepper.step(1, 1000);  // move motor 1000 steps in one direction
+    delay(1000);            // short stop
+    stepper.step(0, 1000);  // move motor 1000 steps in the other dirction
+    delay(1000);            //short stop
+    }
+    
+    if (millis() - time0 > timeout)
+    {
+        menuOption = menu();
+    }
+    
+}
+
+
+
+// Menu function for selecting the components to be tested
+// Follow serial monitor for instrcutions
+char menu()
+{
+
+    Serial.println(F("\nWhich component would you like to test?"));
+    Serial.println(F("(1) Micro DC Motor (Geared) - 90 RPM (6-12V)"));
+    Serial.println(F("(2) IR Obstacle Avoidance Sensor #1"));
+    Serial.println(F("(3) IR Obstacle Avoidance Sensor #2"));
+    Serial.println(F("(4) IR Obstacle Avoidance Sensor #3"));
+    Serial.println(F("(5) IR Obstacle Avoidance Sensor #4"));
+    Serial.println(F("(6) IR Obstacle Avoidance Sensor #5"));
+    Serial.println(F("(7) Micro Switch"));
+    Serial.println(F("(8) 9G Micro Servo #1"));
+    Serial.println(F("(9) 9G Micro Servo #2"));
+    Serial.println(F("(10) 9G Micro Servo #3"));
+    Serial.println(F("(11) 9G Micro Servo #4"));
+    Serial.println(F("(12) 9G Micro Servo #5"));
+    Serial.println(F("(13) Stepper Motor with EasyDriver"));
+    Serial.println(F("(menu) send anything else or press on board reset button\n"));
+    while (!Serial.available());
+
+    // Read data from serial monitor if received
+    while (Serial.available()) 
+    {
+        char c = Serial.read();
+        if (isAlphaNumeric(c)) 
+        {   
+            
+            if(c == '1') 
+    			Serial.println(F("Now Testing Micro DC Motor (Geared) - 90 RPM (6-12V)"));
+    		else if(c == '2') 
+    			Serial.println(F("Now Testing IR Obstacle Avoidance Sensor #1"));
+    		else if(c == '3') 
+    			Serial.println(F("Now Testing IR Obstacle Avoidance Sensor #2"));
+    		else if(c == '4') 
+    			Serial.println(F("Now Testing IR Obstacle Avoidance Sensor #3"));
+    		else if(c == '5') 
+    			Serial.println(F("Now Testing IR Obstacle Avoidance Sensor #4"));
+    		else if(c == '6') 
+    			Serial.println(F("Now Testing IR Obstacle Avoidance Sensor #5"));
+    		else if(c == '7') 
+    			Serial.println(F("Now Testing Micro Switch"));
+    		else if(c == '8') 
+    			Serial.println(F("Now Testing 9G Micro Servo #1"));
+    		else if(c == '9') 
+    			Serial.println(F("Now Testing 9G Micro Servo #2"));
+    		else if(c == '10') 
+    			Serial.println(F("Now Testing 9G Micro Servo #3"));
+    		else if(c == '11') 
+    			Serial.println(F("Now Testing 9G Micro Servo #4"));
+    		else if(c == '12') 
+    			Serial.println(F("Now Testing 9G Micro Servo #5"));
+    		else if(c == '13') 
+    			Serial.println(F("Now Testing Stepper Motor with EasyDriver"));
+            else
+            {
+                Serial.println(F("illegal input!"));
+                return 0;
+            }
+            time0 = millis();
+            return c;
+        }
+    }
+}
+
+/*******************************************************
+
+*    Circuito.io is an automatic generator of schematics and code for off
+*    the shelf hardware combinations.
+
+*    Copyright (C) 2016 Roboplan Technologies Ltd.
+
+*    This program is free software: you can redistribute it and/or modify
+*    it under the terms of the GNU General Public License as published by
+*    the Free Software Foundation, either version 3 of the License, or
+*    (at your option) any later version.
+
+*    This program is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU General Public License for more details.
+
+*    You should have received a copy of the GNU General Public License
+*    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*    In addition, and without limitation, to the disclaimers of warranties 
+*    stated above and in the GNU General Public License version 3 (or any 
+*    later version), Roboplan Technologies Ltd. ("Roboplan") offers this 
+*    program subject to the following warranty disclaimers and by using 
+*    this program you acknowledge and agree to the following:
+*    THIS PROGRAM IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, AND 
+*    WITHOUT WARRANTIES OF ANY KIND EITHER EXPRESS OR IMPLIED.  ROBOPLAN 
+*    HEREBY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT 
+*    NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, TITLE, FITNESS 
+*    FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND THOSE ARISING BY 
+*    STATUTE OR FROM A COURSE OF DEALING OR USAGE OF TRADE. 
+*    YOUR RELIANCE ON, OR USE OF THIS PROGRAM IS AT YOUR SOLE RISK.
+*    ROBOPLAN DOES NOT GUARANTEE THAT THE PROGRAM WILL BE FREE OF, OR NOT 
+*    SUSCEPTIBLE TO, BUGS, SECURITY BREACHES, OR VIRUSES. ROBOPLAN DOES 
+*    NOT WARRANT THAT YOUR USE OF THE PROGRAM, INCLUDING PURSUANT TO 
+*    SCHEMATICS, INSTRUCTIONS OR RECOMMENDATIONS OF ROBOPLAN, WILL BE SAFE 
+*    FOR PERSONAL USE OR FOR PRODUCTION OR COMMERCIAL USE, WILL NOT 
+*    VIOLATE ANY THIRD PARTY RIGHTS, WILL PROVIDE THE INTENDED OR DESIRED
+*    RESULTS, OR OPERATE AS YOU INTENDED OR AS MAY BE INDICATED BY ROBOPLAN. 
+*    YOU HEREBY WAIVE, AGREE NOT TO ASSERT AGAINST, AND RELEASE ROBOPLAN, 
+*    ITS LICENSORS AND AFFILIATES FROM, ANY CLAIMS IN CONNECTION WITH ANY OF 
+*    THE ABOVE. 
+********************************************************/
