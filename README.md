@@ -20,7 +20,7 @@ git submodule update
 ```
 3. Run npm install
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 4. Run the dev web server
 ```bash
