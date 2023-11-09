@@ -1,6 +1,6 @@
 import React from "react";
 import { FormGroup, InputGroup, Modal, Button } from "react-bootstrap";
-import { DefaultLabel } from "react-jsonschema-form-extras/lib/Label";
+import { DefaultLabel } from "./react-jsonschema-form-extras/Label";
 import { Typeahead } from "react-bootstrap-typeahead";
 
 export class InputGroupModalField extends React.Component {
@@ -8,20 +8,35 @@ export class InputGroupModalField extends React.Component {
     super(props);
 
     this.state = {
-      showModal: false
+      showModal: false,
+      editDisabled: false,
+      input: this.props.defaultSelected ? this.props.defaultSelected[0] : ""
     };
 
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    this.delete;
   }
 
   showModal() {
-    this.props.onShowModal();
-    this.setState({ showModal: true });
+    if (this.state.input.length > 0) {
+      this.props.onShowModal();
+      this.setState({ showModal: true });
+    }
   }
 
   hideModal() {
     this.setState({ showModal: false });
+  }
+
+  delete() {}
+
+  componentDidUpdate(prevProps) {
+    if (this.props.options.includes(this.state.input)) {
+      if (this.state.editDisabled) this.setState({ editDisabled: false });
+    } else {
+      if (!this.state.editDisabled) this.setState({ editDisabled: true });
+    }
   }
 
   render() {
@@ -37,7 +52,14 @@ export class InputGroupModalField extends React.Component {
               selectHintOnEnter={true}
               allowNew={true}
               newSelectionPrefix={this.props.newSelectionPrefix}
+              onInputChange={text => {
+                this.props.onSelect(text);
+                this.setState({ input: text });
+              }}
               onChange={selection => {
+                // ignore unselect (handeled by onInputChange)
+                if (selection.length == 0) return;
+
                 if (
                   selection[0] &&
                   typeof selection[0] === "object" &&
@@ -45,20 +67,23 @@ export class InputGroupModalField extends React.Component {
                 ) {
                   // clicked create new
                   this.props.onSelectNew(selection[0].label);
+                  this.setState({ input: selection[0].label });
                   this.showModal();
                 } else {
                   this.props.onSelect(selection[0]);
+                  this.setState({ input: selection[0] });
                 }
               }}
             />
-            <InputGroup.Button className="input-group-append">
+            <InputGroup.Prepend>
               <Button
-                className="btn-outline-secondary"
+                variant="outline-secondary"
                 onClick={this.showModal}
+                disabled={this.state.editDisabled}
               >
                 Edit
               </Button>
-            </InputGroup.Button>
+            </InputGroup.Prepend>
           </InputGroup>
         </FormGroup>
 
@@ -68,7 +93,19 @@ export class InputGroupModalField extends React.Component {
           </Modal.Header>
           <Modal.Body>{this.props.children}</Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.props.onSave}>Save</Button>
+            {this.props.onEdit && (
+              <Button onClick={this.props.onEdit}>
+                Open file in code editor
+              </Button>
+            )}
+            {this.props.onDelete && (
+              <Button variant="danger" onClick={this.props.onDelete}>
+                Delete
+              </Button>
+            )}
+            <Button variant="primary" onClick={this.props.onSave}>
+              Save
+            </Button>
             <Button onClick={this.hideModal}>Close</Button>
           </Modal.Footer>
         </Modal>

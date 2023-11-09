@@ -39,7 +39,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LIDARVL53_1",
           "part": "LIDARVL53"
         }
       ],
@@ -58,7 +58,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -70,7 +71,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -87,7 +89,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -104,11 +107,30 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LIDARVL53_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "LIDARVL53_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LIDARVL53_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "LIDARVL53_1.SDA",
+          "to": "SDA"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

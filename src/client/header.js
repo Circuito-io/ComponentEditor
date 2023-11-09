@@ -1,34 +1,45 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import { Navbar, Nav, NavItem } from "react-bootstrap";
-import { Preview } from './preview';
-import { SaveUpload } from './saveupload';
-import { Publish } from './publish';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
+import { Preview } from "./preview";
+import { Publish } from "./publish";
 
 export class Header extends React.Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect>
-        <Nav>
-        <Navbar.Brand>
-          <Link to='/'>Components Editor</Link>
-        </Navbar.Brand>
-        {
-          this.props.activeBlock && (
-          <NavItem >
-            {this.props.activeBlock}
-          </NavItem>
-          )
-        }
-        </Nav>
-        <Nav pullRight>
-          <NavItem href="https://talk.circuito.io"  target="_blank">
-            Help
-          </NavItem>
-          <SaveUpload onSave={this.props.onSave}/>
-          <Preview />
-          <Publish />
-        </Nav>
+      <Navbar collapseOnSelect bg="dark" variant="dark" fixed="top">
+        <Link to="/">
+          <Navbar.Brand>
+            <img src="https://www.circuito.io/static/images/cir_logo_white.svg" />
+            &nbsp; Editor
+          </Navbar.Brand>
+        </Link>
+
+        {this.props.activeBlock && (
+          <Nav>
+            <Nav.Link>{this.props.activeBlock}</Nav.Link>
+          </Nav>
+        )}
+
+        <Navbar.Collapse className="justify-content-end">
+          <Nav className="justify-content-end">
+            <Nav.Link
+              controlid="nav-help"
+              href="https://talk.circuito.io/c/component-editor"
+              target="_blank"
+            >
+              Help
+            </Nav.Link>
+            <Preview />
+            <Publish />
+            <Navbar.Brand
+              href="https://github.com/Circuito-io/ComponentEditor"
+              target="_blank"
+            >
+              <img src="GitHub-Mark-Light-32px.png" />
+            </Navbar.Brand>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }
@@ -39,5 +50,5 @@ Header.displayName = "Header";
 }*/
 
 Header.defaultProps = {
-  activeBlock: null,
-}
+  activeBlock: null
+};

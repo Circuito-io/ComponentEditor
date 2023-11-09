@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MicroOLED_1",
           "part": "MicroOLED"
         }
       ],
@@ -52,7 +52,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -64,7 +65,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -82,7 +84,8 @@
                 "spec": "MOSI",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -100,7 +103,8 @@
                 "spec": "SCK",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -118,7 +122,8 @@
                 "spec": "MISO",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -136,7 +141,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -155,7 +161,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -174,12 +181,47 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "MicroOLED_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "MicroOLED_1.VDD",
+          "to": "VDD"
+        },
+        {
+          "from": "MicroOLED_1.D1_MOSI",
+          "to": "D1_MOSI"
+        },
+        {
+          "from": "MicroOLED_1.D0_SCK",
+          "to": "D0_SCK"
+        },
+        {
+          "from": "MicroOLED_1.D2",
+          "to": "D2"
+        },
+        {
+          "from": "MicroOLED_1.DC",
+          "to": "DC"
+        },
+        {
+          "from": "MicroOLED_1.RESET",
+          "to": "RESET"
+        },
+        {
+          "from": "MicroOLED_1.CS",
+          "to": "CS"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

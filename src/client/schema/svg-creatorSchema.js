@@ -1,42 +1,66 @@
 export const svguiSchema = {
-
+  pins: {
+    items: {
+      name: {
+        classNames: "two-coloumn-field"
+      },
+      type: {
+        classNames: "two-coloumn-field"
+      }
+    }
+  }
 };
 
 export const svgSchema = {
-    type: "object",
-    properties: {
-        name: {
-            type: "string",
-            title: "Name"
-        },
-        width: {
-            type: "integer"
-        },
-        height: {
-            type: "integer"
-        },
-        color: {
+  type: "object",
+  required: ["width", "height", "color"],
+  properties: {
+    name: {
+      type: "string",
+      title: "Name"
+    },
+    width: {
+      title: "Width [mm]",
+      default: 0,
+      type: "number"
+    },
+    height: {
+      title: "Height [mm]",
+      default: 0,
+      type: "number"
+    },
+    color: {
+      title: "Color",
+      type: "string",
+      default: "Red",
+      enum: ["#CF2F27", "#45925A", "#0B5597", "#000000", "#338085"],
+      enumNames: ["Red", "Green", "Blue", "Black", "Ocean"]
+    },
+    pinTypes: {
+      title: "Pin Type",
+      type: "string",
+      default: "pads",
+      enum: ["pads", "headers"]
+    },
+    pins: {
+      type: "array",
+      title: "Pins:",
+      items: {
+        type: "object",
+        required: ["name", "type"],
+        properties: {
+          name: {
+            title: "Pin Name:",
             type: "string"
-        },
-        pinTypes: {
+          },
+          type: {
+            title: "Pin Type:",
             type: "string",
-            enum: ["pads", "headers"]
-        },
-        pins: {
-            type: "array",
-            items: {
-                type: "object",
-                properties: {
-                    name: {
-                        type: "string"
-                    },
-                    type: {
-                        type: "string",
-                        enum: ["male", "female"]
-                    }
-                }
-            }
+            default: "male",
+            enum: ["male", "female"]
+          }
         }
-
+      }
     }
+  }
 };

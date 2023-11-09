@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Gyro_1",
           "part": "Gyro"
         }
       ],
@@ -54,7 +54,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -66,7 +67,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -79,7 +81,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -91,7 +94,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -104,7 +108,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -117,7 +122,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 209
+            "requiresLoad": 209,
+            "portType": "requires"
           }
         }
       ],
@@ -129,7 +135,29 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Gyro_1.VLOGIC",
+          "to": "VLOGIC"
+        },
+        {
+          "from": "Gyro_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "Gyro_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "Gyro_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "Gyro_1.SCL",
+          "to": "SCL"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

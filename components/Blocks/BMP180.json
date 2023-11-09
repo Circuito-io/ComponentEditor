@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "BMP180_1",
           "part": "BMP180"
         }
       ],
@@ -60,7 +60,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -72,7 +73,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -84,7 +86,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -97,7 +100,8 @@
                 "voltage": ""
               }
             ],
-            "requiresLoad": 500
+            "requiresLoad": 500,
+            "portType": "requires"
           }
         },
         {
@@ -115,11 +119,30 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "BMP180_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "BMP180_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "BMP180_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "BMP180_1.SCL",
+          "to": "SCL"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

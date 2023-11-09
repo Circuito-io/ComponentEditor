@@ -38,7 +38,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LEDPixie3W_1",
           "part": "LEDPixie3W"
         }
       ],
@@ -54,7 +54,8 @@
                 "voltage": "5v"
               }
             ],
-            "requiresLoad": 500
+            "requiresLoad": 500,
+            "portType": "requires"
           }
         },
         {
@@ -67,7 +68,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -86,26 +88,33 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
         {
           "name": "OUT",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "5V_Ch",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         },
         {
           "name": "GND_Ch",
           "interface": {
-            "chain": true
+            "chain": true,
+            "portType": "provides",
+            "provides": []
           }
         }
       ],
@@ -123,7 +132,33 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "LEDPixie3W_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "LEDPixie3W_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "LEDPixie3W_1.IN",
+          "to": "IN"
+        },
+        {
+          "from": "LEDPixie3W_1.OUT",
+          "to": "OUT"
+        },
+        {
+          "from": "LEDPixie3W_1.5V_Ch",
+          "to": "5V_Ch"
+        },
+        {
+          "from": "LEDPixie3W_1.GND_Ch",
+          "to": "GND_Ch"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

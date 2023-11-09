@@ -40,7 +40,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Speaker05W_1",
           "part": "Speaker05W"
         }
       ],
@@ -60,7 +60,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -73,11 +74,22 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "Speaker05W_1.POS",
+          "to": "POS"
+        },
+        {
+          "from": "Speaker05W_1.NEG",
+          "to": "NEG"
+        }
+      ],
+      "cost": 0
     }
   ]
 }

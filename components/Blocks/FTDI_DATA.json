@@ -5,19 +5,18 @@
   ],
   "blockId": "1514678",
   "altComp": {
-        "cost": 150,
-        "block": "PowerSupply12v2A"
-      },
+    "cost": 150,
+    "block": "PowerSupply12v2A"
+  },
   "circuits": [
     {
       "name": "5v",
-      
       "supportedControllers": [
         "ATMega328P"
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FTDI5v_1",
           "part": "FTDI5v"
         }
       ],
@@ -30,7 +29,8 @@
                 "spec": "CTS",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -41,7 +41,8 @@
                 "spec": "RX",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -52,7 +53,8 @@
                 "spec": "TX",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -63,7 +65,8 @@
                 "spec": "DTR",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -75,11 +78,34 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "FTDI5v_1.CTS",
+          "to": "CTS"
+        },
+        {
+          "from": "FTDI5v_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "FTDI5v_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "FTDI5v_1.DTR",
+          "to": "DTR"
+        },
+        {
+          "from": "FTDI5v_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -88,7 +114,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "FTDI3.3v_1",
           "part": "FTDI3.3v"
         }
       ],
@@ -101,7 +127,8 @@
                 "spec": "CTS",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -112,7 +139,8 @@
                 "spec": "RX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -123,7 +151,8 @@
                 "spec": "TX",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -134,7 +163,8 @@
                 "spec": "DTR",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -146,11 +176,34 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "FTDI3.3v_1.CTS",
+          "to": "CTS"
+        },
+        {
+          "from": "FTDI3.3v_1.RX",
+          "to": "RX"
+        },
+        {
+          "from": "FTDI3.3v_1.TX",
+          "to": "TX"
+        },
+        {
+          "from": "FTDI3.3v_1.DTR",
+          "to": "DTR"
+        },
+        {
+          "from": "FTDI3.3v_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

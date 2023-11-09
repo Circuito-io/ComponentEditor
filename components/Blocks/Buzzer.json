@@ -40,37 +40,37 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "Buzzer_1",
           "part": "Buzzer"
         },
         {
-          "name": "BC337",
+          "name": "TSBC337_1",
           "part": "TSBC337"
         },
         {
-          "name": "r1",
+          "name": "Res1KO_1",
           "part": "Res1KO"
         }
       ],
       "wires": [
         {
-          "from": "this.neg",
-          "to": "BC337.C"
+          "from": "Buzzer_1.neg",
+          "to": "TSBC337_1.C"
         },
         {
-          "from": "BC337.B",
-          "to": "r1.con1"
+          "from": "TSBC337_1.B",
+          "to": "Res1KO_1.con1"
         },
         {
-          "from": "BC337.E",
+          "from": "TSBC337_1.E",
           "to": "0"
         },
         {
-          "from": "r1.con0",
+          "from": "Res1KO_1.con0",
           "to": "Sig"
         },
         {
-          "from": "this.pos",
+          "from": "Buzzer_1.pos",
           "to": "Vin"
         }
       ],
@@ -84,7 +84,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -102,7 +103,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -120,11 +122,12 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

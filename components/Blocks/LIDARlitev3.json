@@ -39,22 +39,38 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "LIDARlitev3_1",
           "part": "LIDARlitev3"
         },
         {
-          "name": "Cap",
+          "name": "CapElectro470uF_1",
           "part": "CapElectro470uF"
         }
       ],
       "wires": [
         {
-          "from": "this.GND",
-          "to": "Cap.neg"
+          "from": "LIDARlitev3_1.GND",
+          "to": "CapElectro470uF_1.neg"
         },
         {
-          "from": "this.5V",
-          "to": "Cap.pos"
+          "from": "LIDARlitev3_1.5V",
+          "to": "CapElectro470uF_1.pos"
+        },
+        {
+          "from": "LIDARlitev3_1.5V",
+          "to": "5V"
+        },
+        {
+          "from": "LIDARlitev3_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "LIDARlitev3_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "LIDARlitev3_1.GND",
+          "to": "GND"
         }
       ],
       "ports": [
@@ -67,7 +83,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -85,7 +102,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -103,7 +121,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -115,11 +134,12 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

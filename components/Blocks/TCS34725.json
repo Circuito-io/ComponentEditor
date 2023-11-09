@@ -34,7 +34,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCS34725_1",
           "part": "TCS34725"
         }
       ],
@@ -48,7 +48,8 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -61,7 +62,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -75,7 +77,8 @@
                 "voltage": "5v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -88,7 +91,8 @@
                 "spec": "",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -100,7 +104,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -112,11 +117,38 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "TCS34725_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "TCS34725_1.LED",
+          "to": "LED"
+        },
+        {
+          "from": "TCS34725_1.INT",
+          "to": "INT"
+        },
+        {
+          "from": "TCS34725_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "TCS34725_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "TCS34725_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 0
     },
     {
       "name": "3v3",
@@ -132,7 +164,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "TCS34725_1",
           "part": "TCS34725"
         }
       ],
@@ -146,7 +178,8 @@
                 "spec": "SDA",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -158,7 +191,8 @@
                 "spec": "SCL",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -170,7 +204,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -183,7 +218,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -197,7 +233,8 @@
                 "voltage": "3.3v"
               }
             ],
-            "unique": true
+            "unique": true,
+            "portType": "requires"
           },
           "includeInFirmware": true
         },
@@ -210,11 +247,38 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 1
+      "wires": [
+        {
+          "from": "TCS34725_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "TCS34725_1.SCL",
+          "to": "SCL"
+        },
+        {
+          "from": "TCS34725_1.VIN",
+          "to": "VIN"
+        },
+        {
+          "from": "TCS34725_1.LED",
+          "to": "LED"
+        },
+        {
+          "from": "TCS34725_1.INT",
+          "to": "INT"
+        },
+        {
+          "from": "TCS34725_1.GND",
+          "to": "GND"
+        }
+      ],
+      "cost": 1
     }
   ]
 }

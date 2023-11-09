@@ -40,46 +40,62 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "MLX90614_1",
           "part": "MLX90614"
         },
         {
-          "name": "rSDA",
+          "name": "Res4K7O_1",
           "part": "Res4K7O"
         },
         {
-          "name": "rSCL",
+          "name": "Res4K7O_2",
           "part": "Res4K7O"
         },
         {
-          "name": "cap",
+          "name": "CapCeramic100nF_1",
           "part": "CapCeramic100nF"
         }
       ],
       "wires": [
         {
-          "from": "this.VCC",
-          "to": "cap.con0"
+          "from": "MLX90614_1.VCC",
+          "to": "CapCeramic100nF_1.con0"
         },
         {
-          "from": "this.GND",
-          "to": "cap.con1"
+          "from": "MLX90614_1.GND",
+          "to": "CapCeramic100nF_1.con1"
         },
         {
-          "from": "this.SDA",
-          "to": "rSDA.con0"
+          "from": "MLX90614_1.SDA",
+          "to": "Res4K7O_1.con0"
         },
         {
-          "from": "this.SCL",
-          "to": "rSCL.con0"
+          "from": "MLX90614_1.SCL",
+          "to": "Res4K7O_2.con0"
         },
         {
-          "from": "this.VCC",
-          "to": "rSDA.con1"
+          "from": "MLX90614_1.VCC",
+          "to": "Res4K7O_1.con1"
         },
         {
-          "from": "this.VCC",
-          "to": "rSCL.con1"
+          "from": "MLX90614_1.VCC",
+          "to": "Res4K7O_2.con1"
+        },
+        {
+          "from": "MLX90614_1.VCC",
+          "to": "VCC"
+        },
+        {
+          "from": "MLX90614_1.GND",
+          "to": "GND"
+        },
+        {
+          "from": "MLX90614_1.SDA",
+          "to": "SDA"
+        },
+        {
+          "from": "MLX90614_1.SCL",
+          "to": "SCL"
         }
       ],
       "ports": [
@@ -92,7 +108,8 @@
                 "spec": "",
                 "voltage": "3.3v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -104,7 +121,8 @@
                 "spec": "",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -122,7 +140,8 @@
                 "spec": "SDA",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         },
         {
@@ -140,11 +159,12 @@
                 "spec": "SCL",
                 "voltage": "5v"
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
-      "priority": 0
+      "cost": 0
     }
   ]
 }

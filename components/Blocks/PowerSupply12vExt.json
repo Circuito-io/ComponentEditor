@@ -13,7 +13,7 @@
       ],
       "parts": [
         {
-          "name": "this",
+          "name": "PowerSupply12v2A_1",
           "part": "PowerSupply12v2A"
         }
       ],
@@ -27,7 +27,8 @@
                 "voltage": "12v"
               }
             ],
-            "providesLoad": 2000
+            "providesLoad": 2000,
+            "portType": "provides"
           }
         },
         {
@@ -38,7 +39,8 @@
                 "spec": "Barrel",
                 "voltage": "GND"
               }
-            ]
+            ],
+            "portType": "provides"
           }
         },
         {
@@ -50,7 +52,8 @@
                 "spec": "BARREL_JACK",
                 "voltage": ""
               }
-            ]
+            ],
+            "portType": "requires"
           }
         }
       ],
@@ -62,7 +65,13 @@
           ]
         }
       ],
-      "priority": 0
+      "wires": [
+        {
+          "from": "PowerSupply12v2A_1.BARREL_JACK",
+          "to": "BARREL_JACK"
+        }
+      ],
+      "cost": 0
     }
   ]
 }
