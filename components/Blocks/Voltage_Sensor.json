@@ -1,0 +1,98 @@
+{
+  "name": "Voltage_Sensor",
+  "category": [
+    "input"
+  ],
+  "blockId": "9534",
+  "app": {
+    "visible": true,
+    "appName": "Voltage Sensor",
+    "indicators": {
+      "solder": false
+    },
+    "desc": "<p>This module is based on principle of resistive voltage divider design, can make the red terminal connector input voltage to 5 times smaller.\nArduino analog input voltages up to 5 v, the voltage detection module input voltage not greater than 5Vx5=25V (if using 3.3V systems, input voltage not greater than 3.3Vx5=16.5V).\nArduino AVR chips have 10-bit AD, so this module simulates a resolution of 0.00489V (5V/1023), so the minimum voltage of input voltage detection module is 0.00489Vx5=0.02445V.\nVoltage input range: DC0-25 V.\nVoltage detection range: DC0.02445 V-25 V.\nVoltage analog resolution: 0.00489 V.\nOutput interface: \"+ \"connected 5/3.3V, \"-\" connected GND, \"s\" connected Arduino AD pins.\nDC input interface: red terminal positive with VCC, negative with GND.</p>"
+  },
+  "altComp": {},
+  "circuits": [
+    {
+      "name": "5v",
+      "cost": 0,
+      "coders": [
+        "Voltage_Sensor"
+      ],
+      "supportedControllers": [
+        "ATMega328P",
+        "ATTiny85",
+        "ArduinoGemma",
+        "ArduinoLeonardo",
+        "ArduinoMega",
+        "ArduinoMicro",
+        "ArduinoNano",
+        "ArduinoProMini5v",
+        "ArduinoUno",
+        "RPI3B"
+      ],
+      "parts": [
+        {
+          "name": "voltage Sensor_1",
+          "part": "voltage Sensor",
+          "rotation": 0
+        }
+      ],
+      "ports": [
+        {
+          "name": "-",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "GND"
+              }
+            ]
+          }
+        },
+        {
+          "name": "+",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "",
+                "voltage": "5v"
+              }
+            ]
+          }
+        },
+        {
+          "name": "S",
+          "interface": {
+            "portType": "requires",
+            "requires": [
+              {
+                "cost": 0,
+                "spec": "ADC"
+              }
+            ]
+          }
+        }
+      ],
+      "wires": [
+        {
+          "from": "-",
+          "to": "-"
+        },
+        {
+          "from": "+",
+          "to": "+"
+        },
+        {
+          "from": "S",
+          "to": "S"
+        }
+      ]
+    }
+  ]
+}
